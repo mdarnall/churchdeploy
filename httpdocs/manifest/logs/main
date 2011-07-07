@@ -101,3 +101,4 @@ Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: parameter error
 17 May 2011 10:01 > UNKNOWN: Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 42 element choose
 Line: 158 - XSLTProcessor::transformToXml(): Variable 'parents-count' has not been declared.
 Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: parameter error in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 July 2011 11:58 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_sessions' doesn't exist in query "SELECT SQL_CACHE `session_data` FROM `sym_sessions` WHERE `session` = 'b7c6fe731f280ea20cbfdb0877017a3a' LIMIT 1" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715

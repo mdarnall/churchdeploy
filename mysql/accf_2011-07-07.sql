@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.1.44)
 # Database: accf
-# Generation Time: 2011-07-07 10:40:09 -0700
+# Generation Time: 2011-07-07 11:55:04 -0700
 # ************************************************************
 
 
@@ -47,7 +47,7 @@ LOCK TABLES `sym_authors` WRITE;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(1,'kirkstrobeck','3427dd423a4b996a614f13d7746cdaa28d200dae','Kirk','Strobeck','kirk@strobeck.com','2011-06-24 16:30:00','developer','yes','6','no',NULL),
+	(1,'kirkstrobeck','3427dd423a4b996a614f13d7746cdaa28d200dae','Kirk','Strobeck','kirk@strobeck.com','2011-07-07 11:29:32','developer','yes','6','no',NULL),
 	(2,'jonathansimcoe','0ba954d2c8ece66974376d106aca97dd','Jonathan','Simcoe','jdsimcoe@gmail.com',NULL,'developer','no','3','no',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
@@ -2088,65 +2088,65 @@ CREATE TABLE `sym_extensions_delegates` (
   KEY `extension_id` (`extension_id`),
   KEY `page` (`page`),
   KEY `delegate` (`delegate`)
-) ENGINE=MyISAM AUTO_INCREMENT=186 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=250 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sym_extensions_delegates` WRITE;
 /*!40000 ALTER TABLE `sym_extensions_delegates` DISABLE KEYS */;
 
 INSERT INTO `sym_extensions_delegates` (`id`, `extension_id`, `page`, `delegate`, `callback`)
 VALUES
-	(138,2,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
-	(137,2,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
-	(160,37,'/system/preferences/','Save','savePreferences'),
-	(159,37,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(168,5,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
-	(167,5,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
-	(158,37,'/backend/','AdminPagePreGenerate','appendAssets'),
-	(157,37,'/frontend/','EventPostSaveFilter','processPostSaveFilter'),
-	(177,9,'/blueprints/events/edit/','AppendEventFilterDocumentation','cbAppendEventFilterDocumentation'),
-	(176,9,'/blueprints/events/new/','AppendEventFilterDocumentation','cbAppendEventFilterDocumentation'),
-	(175,9,'/blueprints/events/edit/','AppendEventFilter','cbAddFilterToEventEditor'),
-	(174,9,'/blueprints/events/new/','AppendEventFilter','cbAddFilterToEventEditor'),
-	(173,9,'/system/preferences/','Save','cbSavePreferences'),
-	(166,26,'/backend/','AppendElementBelowView','appendOrderFieldId'),
-	(142,12,'/frontend/','EventPostSaveFilter','compileFrontendFields'),
-	(141,12,'/publish/edit/','EntryPostEdit','compileBackendFields'),
-	(140,12,'/publish/new/','EntryPostCreate','compileBackendFields'),
-	(156,37,'/frontend/','EventPreSaveFilter','checkEventPermissions'),
-	(170,19,'/system/preferences/','AddCustomPreferenceFieldsets','append_preferences'),
-	(169,19,'/frontend/','FrontendPrePageResolve','addPage'),
-	(165,26,'/backend/','InitaliseAdminPageHead','appendScriptToHead'),
-	(143,29,'/frontend/','FrontendOutputPostGenerate','parse_html'),
-	(135,30,'/blueprints/events/edit/','AppendEventFilter','appendEventFilter'),
-	(134,30,'/blueprints/events/new/','AppendEventFilter','appendEventFilter'),
-	(139,32,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(144,13,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(150,34,'/blueprints/pages/','AppendPageContent','__appendType'),
-	(149,34,'/backend/','AppendPageAlert','__appendAlert'),
-	(148,34,'/system/preferences/','CustomActions','__toggleMaintenanceMode'),
-	(147,34,'/system/preferences/','Save','__SavePreferences'),
-	(146,34,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(155,37,'/frontend/','FrontendProcessEvents','appendLoginStatusToEventXML'),
-	(164,24,'/system/preferences/','AddCustomPreferenceFieldsets','addCustomPreferenceFieldsets'),
-	(163,24,'/backend/','InitaliseAdminPageHead','initaliseAdminPageHead'),
-	(172,9,'/system/preferences/','AddCustomPreferenceFieldsets','cbAppendPreferences'),
-	(182,35,'/publish/','Delete','__deleteSortOrder'),
-	(181,35,'/publish/edit/','EntryPostEdit','__saveSortOrder'),
-	(180,35,'/publish/new/','EntryPostNew','__saveSortOrder'),
-	(179,35,'/administration/','AdminPagePreGenerate','__appendAssets'),
-	(185,36,'/backend/','InitaliseAdminPageHead','initializeAdmin'),
-	(154,37,'/frontend/','FrontendParamsResolve','addMemberDetailsToPageParams'),
-	(153,37,'/frontend/','FrontendPageResolved','checkFrontendPagePermissions'),
-	(136,30,'/frontend/','EventPreSaveFilter','eventPreSaveFilter'),
-	(145,13,'/system/preferences/','Save','__SavePreferences'),
-	(151,34,'/frontend/','FrontendPrePageResolve','__checkForMaintenanceMode'),
-	(152,34,'/frontend/','FrontendParamsResolve','__addParam'),
-	(161,37,'/blueprints/events/new/','AppendEventFilter','appendFilter'),
-	(162,37,'/blueprints/events/edit/','AppendEventFilter','appendFilter'),
-	(171,19,'/system/preferences/','Save','save_settings'),
-	(178,9,'/frontend/','EventPostSaveFilter','cbSendEmailSMTPFilter'),
-	(183,35,'/backend/','AppendPageAlert','__upgradeMediathek'),
-	(184,25,'/backend/','InitaliseAdminPageHead','addScriptToHead');
+	(202,2,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
+	(201,2,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
+	(225,37,'/blueprints/events/new/','AppendEventFilter','appendFilter'),
+	(224,37,'/system/preferences/','Save','savePreferences'),
+	(232,5,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
+	(231,5,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
+	(223,37,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(222,37,'/backend/','AdminPagePreGenerate','appendAssets'),
+	(241,9,'/blueprints/events/edit/','AppendEventFilterDocumentation','cbAppendEventFilterDocumentation'),
+	(240,9,'/blueprints/events/new/','AppendEventFilterDocumentation','cbAppendEventFilterDocumentation'),
+	(239,9,'/blueprints/events/edit/','AppendEventFilter','cbAddFilterToEventEditor'),
+	(238,9,'/blueprints/events/new/','AppendEventFilter','cbAddFilterToEventEditor'),
+	(237,9,'/system/preferences/','Save','cbSavePreferences'),
+	(230,26,'/backend/','AppendElementBelowView','appendOrderFieldId'),
+	(206,12,'/frontend/','EventPostSaveFilter','compileFrontendFields'),
+	(205,12,'/publish/edit/','EntryPostEdit','compileBackendFields'),
+	(204,12,'/publish/new/','EntryPostCreate','compileBackendFields'),
+	(208,13,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(221,37,'/frontend/','EventPostSaveFilter','processPostSaveFilter'),
+	(234,19,'/system/preferences/','AddCustomPreferenceFieldsets','append_preferences'),
+	(235,19,'/system/preferences/','Save','save_settings'),
+	(229,26,'/backend/','InitaliseAdminPageHead','appendScriptToHead'),
+	(207,29,'/frontend/','FrontendOutputPostGenerate','parse_html'),
+	(200,30,'/frontend/','EventPreSaveFilter','eventPreSaveFilter'),
+	(198,30,'/blueprints/events/new/','AppendEventFilter','appendEventFilter'),
+	(199,30,'/blueprints/events/edit/','AppendEventFilter','appendEventFilter'),
+	(203,32,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(216,34,'/frontend/','FrontendParamsResolve','__addParam'),
+	(215,34,'/frontend/','FrontendPrePageResolve','__checkForMaintenanceMode'),
+	(213,34,'/backend/','AppendPageAlert','__appendAlert'),
+	(214,34,'/blueprints/pages/','AppendPageContent','__appendType'),
+	(211,34,'/system/preferences/','Save','__SavePreferences'),
+	(212,34,'/system/preferences/','CustomActions','__toggleMaintenanceMode'),
+	(220,37,'/frontend/','EventPreSaveFilter','checkEventPermissions'),
+	(227,24,'/backend/','InitaliseAdminPageHead','initaliseAdminPageHead'),
+	(246,35,'/publish/','Delete','__deleteSortOrder'),
+	(247,35,'/backend/','AppendPageAlert','__upgradeMediathek'),
+	(245,35,'/publish/edit/','EntryPostEdit','__saveSortOrder'),
+	(244,35,'/publish/new/','EntryPostNew','__saveSortOrder'),
+	(249,36,'/backend/','InitaliseAdminPageHead','initializeAdmin'),
+	(219,37,'/frontend/','FrontendProcessEvents','appendLoginStatusToEventXML'),
+	(209,13,'/system/preferences/','Save','__SavePreferences'),
+	(210,34,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(218,37,'/frontend/','FrontendParamsResolve','addMemberDetailsToPageParams'),
+	(217,37,'/frontend/','FrontendPageResolved','checkFrontendPagePermissions'),
+	(228,24,'/system/preferences/','AddCustomPreferenceFieldsets','addCustomPreferenceFieldsets'),
+	(233,19,'/frontend/','FrontendPrePageResolve','addPage'),
+	(236,9,'/system/preferences/','AddCustomPreferenceFieldsets','cbAppendPreferences'),
+	(243,35,'/administration/','AdminPagePreGenerate','__appendAssets'),
+	(248,25,'/backend/','InitaliseAdminPageHead','addScriptToHead'),
+	(226,37,'/blueprints/events/edit/','AppendEventFilter','appendFilter'),
+	(242,9,'/frontend/','EventPostSaveFilter','cbSendEmailSMTPFilter');
 
 /*!40000 ALTER TABLE `sym_extensions_delegates` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2991,7 +2991,7 @@ LOCK TABLES `sym_sessions` WRITE;
 
 INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
-	('b7c6fe731f280ea20cbfdb0877017a3a',1308958202,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"3427dd423a4b996a614f13d7746cdaa28d200dae\";}');
+	('b7c6fe731f280ea20cbfdb0877017a3a',1310063374,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"3427dd423a4b996a614f13d7746cdaa28d200dae\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
