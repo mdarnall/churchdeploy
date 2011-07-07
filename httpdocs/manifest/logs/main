@@ -1,0 +1,103 @@
+============================================
+Log Created: 2011-05-17T08:04:55-07:00
+============================================
+Symphony Log
+Version: 2.0.7RC2
+--------------------------------------------
+2011/05/17 08:04:55 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:05:00 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:05:02 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:05:10 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:07:21 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:07:45 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:07:48 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:09:22 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:10:01 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:10:30 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:11:41 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:12:07 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:12:22 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:13:19 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+2011/05/17 08:15:34 > UNKNOWN: 8192 - Assigning the return value of new by reference is deprecated in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/members/extension.driver.php on line 1087
+17 May 2011 09:10 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.general.php on line 848
+17 May 2011 09:10 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.general.php on line 848
+17 May 2011 09:10 > UNKNOWN: Please make sure that the Stage submodule is initialised and available at <code>/Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/subsectionmanager/lib/stage/</code>.<br/><br/>It's available at <a href="https://github.com/nilshoerrmann/stage">github.com/nilshoerrmann/stage</a>. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/datetime/extension.driver.php on line 25
+17 May 2011 09:12 > UNKNOWN: Could not find extension at location /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/subsectionmanager/extension.driver.php in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 624
+17 May 2011 09:13 > UNKNOWN: Could not find extension at location /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/extensions/symphony/extension.driver.php in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 624
+17 May 2011 09:20 > UNKNOWN: Could not find Field <code>member</code> at <code>/field.member.php</code>. If the Field was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.fieldmanager.php on line 343
+17 May 2011 09:20 > UNKNOWN: Could not find Field <code>member</code> at <code>/field.member.php</code>. If the Field was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.fieldmanager.php on line 343
+17 May 2011 09:21 > UNKNOWN: Could not find Field <code>member</code> at <code>/field.member.php</code>. If the Field was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.fieldmanager.php on line 343
+17 May 2011 09:28 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_' doesn't exist in query "SELECT SQL_CACHE COUNT(*) AS `count` FROM `sym_entries_data_` WHERE `role_id` = '1'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:35 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:35 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:36 > UNKNOWN: MySQL Error (1146): Table 'accf.sym_entries_data_14' doesn't exist in query "SHOW COLUMNS FROM
+						`sym_entries_data_14`
+					WHERE
+						Field = 'value'" in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 715
+17 May 2011 09:38 > UNKNOWN: Could not find Field <code>member</code> at <code>/field.member.php</code>. If the Field was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.fieldmanager.php on line 343
+17 May 2011 09:38 > UNKNOWN: Could not find Field <code>member</code> at <code>/field.member.php</code>. If the Field was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.fieldmanager.php on line 343
+17 May 2011 09:50 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 46 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): The value '.' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:50 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 46 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): The value '@handle' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:50 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 43 element for-each
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:for-each : could not compile select expression '                     //data/tags/entry/parents/item/'
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 46 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): The value '@handle' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:50 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 43 element for-each
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:for-each : could not compile select expression '                     //data/tags/entry/'
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 46 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): The value '@handle' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:50 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 46 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): The value '@handle' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:52 > UNKNOWN: Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 44 element value-of
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:value-of : could not compile select expression '//data/tags/entry[$tag = @handle]parents/item/@handle'
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 09:57 > UNKNOWN: Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 38 element if
+Line: 158 - XSLTProcessor::transformToXml(): Variable 'parents-count' has not been declared.
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: parameter error in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+17 May 2011 10:01 > UNKNOWN: Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/atheycreek.com/www/httpdocs/workspace/utilities/nav.xsl line 42 element choose
+Line: 158 - XSLTProcessor::transformToXml(): Variable 'parents-count' has not been declared.
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: parameter error in file /Users/kirkstrobeck/Athey Creek/atheycreek.com/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
