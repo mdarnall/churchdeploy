@@ -1,0 +1,10 @@
+============================================
+Log Created: 2011-08-19T11:33:09-07:00
+============================================
+Symphony Log
+Version: 2.2.3
+--------------------------------------------
+19 August 2011 11:42 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/git/church-ensemble/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
+19 August 2011 11:42 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/git/church-ensemble/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
+19 August 2011 11:45 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/git/church-ensemble/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
+19 August 2011 11:51 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/git/church-ensemble/httpdocs/symphony/lib/toolkit/class.general.php on line 851
