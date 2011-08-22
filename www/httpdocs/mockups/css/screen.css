@@ -1,0 +1,345 @@
+@import "reset.css";
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #222;
+}
+p {
+  padding: 10px 0;
+}
+blockquote {
+  background: #ccc;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+  position: relative;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+blockquote:after {
+  content: "\00a0";
+  display: block;
+  /* FF 3.0 */
+
+  bottom: -30px;
+  right: 50px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-width: 15px 15px;
+  border-style: solid;
+  border-color: #ccc transparent transparent;
+}
+blockquote + p {
+  color: #c8b4b4;
+  font-size: .857em;
+  /* 12px */
+
+  font-style: italic;
+  margin: 0 15px 0 0;
+  text-align: right;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+  color: #336699;
+}
+hr {
+  height: 0;
+  border: none;
+}
+h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.clear {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.col {
+  width: 220px;
+  float: left;
+}
+.main {
+  width: 680px;
+  float: left;
+  margin-right: 20px;
+}
+.sidebar {
+  width: 260px;
+  float: left;
+  margin-top: 10px;
+}
+.sidebar p {
+  font-size: 12px;
+  line-height: 24px;
+}
+.sidebar .browse ul li {
+  width: 240px;
+}
+.browse ul li {
+  width: 160px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #C3D6E8;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+}
+.category ul {
+  list-style: disc;
+}
+.category ul li {
+  margin: 15px 0 15px 20px;
+}
+#masthead,
+#header h1,
+ul#sub-menu,
+#content,
+#footer,
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+/* end of #wrapper */
+#masthead {
+  margin: 30px auto;
+  /* end of a */
+
+  /* end of ul#menu */
+
+}
+#masthead a {
+  /* end of .logo */
+
+}
+#masthead a.logo {
+  color: #999;
+  font-weight: bold;
+  font-size: 24px;
+  float: left;
+  padding: 4px 0;
+  margin: 0;
+}
+#masthead ul#menu, #masthead ul#update-menu {
+  display: block;
+  float: right;
+  margin: 10px 0;
+  /* end of li */
+
+  /* end of a */
+
+}
+#masthead ul#menu li, #masthead ul#update-menu li {
+  display: inline;
+}
+#masthead ul#menu li.current a, #masthead ul#update-menu li.current a {
+  background: #ccc;
+}
+#masthead ul#menu a, #masthead ul#update-menu a {
+  color: #333;
+  font-weight: bold;
+  padding: 4px 6px;
+  -webkit-border-radius: 5px;
+  /* end of :hover */
+
+}
+#masthead ul#menu a:hover, #masthead ul#update-menu a:hover {
+  background: #eee;
+}
+#masthead ul#update-menu {
+  float: right;
+  margin: -20px 0 20px 0;
+}
+#masthead ul#update-menu li form {
+  display: inline;
+}
+#masthead ul#update-menu li input {
+  display: inline;
+  padding: 5px;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+  outline: none;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 5px;
+  width: 250px;
+  background: #efefef;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 0px 1px 1px #ffffff;
+}
+#masthead ul#update-menu li a {
+  background: #e0e0e0;
+  font-size: 14px;
+  font-weight: normal !important;
+  margin-left: 5px;
+  padding: 7px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+}
+#masthead ul#update-menu li a sub {
+  font-size: 10px;
+}
+/* end of #masthead */
+#header {
+  clear: both;
+  background: #444;
+  padding: 20px 0;
+  margin: 10px 0;
+}
+#header form {
+  width: 960px;
+  margin: 0 auto;
+}
+#header form input {
+  float: right;
+  padding: 7px;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+  outline: none;
+  border: 2px solid #555;
+  -webkit-border-radius: 5px;
+  width: 300px;
+  background: #353535;
+  color: #fff;
+}
+#header form#front input {
+  float: left;
+  width: 500px;
+}
+#header h1 a {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: bold;
+  color: #fff;
+}
+#header h3 {
+  color: #fff;
+  font-weight: bold;
+}
+#header p {
+  color: #fff;
+}
+#header ul#sub-menu {
+  text-align: right;
+  margin: 30px auto -28px auto;
+}
+#header ul#sub-menu li {
+  display: inline;
+  margin: 0 3px;
+}
+#header ul#sub-menu li a {
+  padding: 7px;
+  color: #fff;
+  background: #777;
+}
+#header ul#sub-menu li a:hover {
+  background: #555;
+}
+#header ul#sub-menu li.current a {
+  background: #fff;
+  color: #000;
+}
+#header ul#sub-menu li.current a:hover {
+  background: #fff;
+}
+#header ul#sub-menu h4 {
+  font-style: italic;
+  margin: 10px 340px 10px 0;
+}
+#announce {
+  position: relative;
+  background: rgba(255, 0, 0, 0.6);
+  margin: -40px 0 15px 0;
+  padding: 10px 10px 0 10px;
+}
+#content {
+  clear: both;
+  margin: 40px auto;
+}
+#content ul#ministry-list {
+  display: inline;
+  margin-bottom: 40px;
+}
+#content ul#ministry-list li {
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+#content ul#ministry-list li a {
+  display: block;
+  background: #f4faff;
+  width: 212px;
+  height: 117px;
+  padding-top: 95px;
+  text-align: center;
+  vertical-align: middle;
+  border: 4px solid #57a3d1;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 1px 1px #ffffff;
+}
+#content ul#ministry-list li a:hover {
+  background: #C3D6E8;
+}
+#content form {
+  margin: 30px 0;
+}
+#content label, #content input {
+  display: block;
+  width: 700px;
+  margin: 10px auto;
+}
+#content label {
+  font-style: italic;
+}
+#content input {
+  padding: 7px;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  outline: none;
+  border: 3px solid #bbb;
+}
+#content h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#content h3 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+#content h3.meta {
+  color: #555;
+}
+#content p {
+  font-size: 16px;
+  line-height: 24px;
+}
+/* end of #content */
+#footer {
+  margin: 30px auto 60px auto;
+  clear: both;
+  border-top: 2px solid #999;
+}
+#footer p {
+  color: #999;
+  margin-top: 20px;
+  font-weight: 300;
+}
+/* end of #footer */
+#content input.check {
+  display: inline !important;
+}
+#sort li {
+  margin: 20px 0;
+}
+#sort li a {
+  background: #f4faff url('http://cdn1.iconfinder.com/data/icons/uidesignicons/checkbox_yes.png') 5px 50% no-repeat;
+  padding: 5px 5px 5px 26px;
+}
