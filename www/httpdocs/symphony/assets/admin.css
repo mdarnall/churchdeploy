@@ -155,6 +155,10 @@ tr.selected a,
 tr.selected .inactive {
 	color: #fff;
 }
+tr.selected td a {
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgb(10,10,10);
+}
 
 /*--- Orderable ---*/
 
