@@ -13,7 +13,7 @@
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{-14, 1068}</string>
+		<string>{410, 944}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
 	<false/>
@@ -22,6 +22,7 @@
 		<key>ExpandedURLs</key>
 		<array>
 			<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/css</string>
+			<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/less</string>
 			<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/ministries</string>
 			<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/missions</string>
 			<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/teachings</string>
@@ -44,6 +45,22 @@
 				<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/teachings/teaching.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/css/reset.css</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/t-jsimcoe/Sites/ACCF/mockups/less/screen.less</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
 			</dict>
 		</array>
 	</dict>
