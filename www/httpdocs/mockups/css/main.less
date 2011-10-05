@@ -1,0 +1,368 @@
+/*@import "../bootstrap/lib/bootstrap.less";*/
+@import "normalize.css";
+@import "rounded.less";
+@import "gradient.less";
+@import "shadow.less";
+
+@color-1: hsl(212,49%,52%);
+@color-2: hsl(76,60%,52%);
+
+/*  Texture Library
+	--------------- */
+/*
+http://subtlepatterns.com/patterns/white_texture.png
+http://subtlepatterns.com/patterns/diagonal-noise.png
+http://subtlepatterns.com/patterns/dark_leather.png
+http://subtlepatterns.com/patterns/project_papper.png
+http://subtlepatterns.com/patterns/whitey.png
+http://subtlepatterns.com/patterns/darth_stripe.png
+http://subtlepatterns.com/patterns/bright_squares.png
+http://subtlepatterns.com/patterns/random_grey_variations.png
+http://subtlepatterns.com/patterns/old_mathematics.png
+http://subtlepatterns.com/patterns/45degreee_fabric.png
+*/
+
+/*  Typekit Fonts
+	--------------- */
+/*
+BODY FONTS
+==========
+ff-meta-web-pro
+ff-tisa-web-pro
+
+HEADLINE FONTS
+==============
+ff-speak-web
+din-condensed-web
+proxima-nova
+
+SPECIAL FONTS
+=============
+
+*/
+
+@font-face {
+    font-family: 'DemingEP';
+    src: url('../fonts/deming_ep-webfont.eot');
+    src: url('../fonts/deming_ep-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/deming_ep-webfont.woff') format('woff'),
+         url('../fonts/deming_ep-webfont.ttf') format('truetype'),
+         url('../fonts/deming_ep-webfont.svg#DemingEPRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*	Element presets
+	---------------	*/
+
+* {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 123px;
+	line-height: 132px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 76px;
+	line-height: 84px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 29px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+body {
+	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/white_texture.png') repeat;
+	font: 18px/1.4 ff-tisa-web-pro, "Palatino", Georgia, Times New Roman, Times, serif;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: futura-pt, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	color: #222;
+}
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+h3 a {
+	font-size: 36px;
+	line-height: 1.4;
+	color: #ff4900;
+	letter-spacing: 2px;
+	text-shadow: none;
+	font-family: "DemingEP";
+}
+
+/* CLASSES
+   ======= */
+header {
+	width: 100%;
+	background: #25221E;
+}
+header .wrapper {
+	padding-top: 0;
+}
+header h3 {
+	margin: 40px 0 0 0;
+}
+header h1, header h1 a {
+	color: #fff;
+	text-shadow: none;
+	font-size: 48px;
+	margin: 20px 0 40px 0;
+	text-align: center;
+	text-shadow: 0 3px 2px rgba(0,0,0,0.8);
+}
+.topnav {
+	background: #3B3730;
+	.rounded-btm(5px);
+	.box-shadow(e('inset 0 -3px 10px rgba(0,0,0,0.35)'));
+	border-bottom: 1px solid #302D27;
+}
+.topnav .logo {
+	float: left;
+	padding: 20px 0 0 0;
+	font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.topnav ul {
+	display: block;
+	float: right;
+	list-style: none;
+	list-style-type: none;
+	list-style-image: none;
+	font-family: proxima-nova;
+	font-weight: 700;
+	text-transform: uppercase;	
+}
+.topnav ul li {
+	display: inline;
+}
+.topnav ul li a {
+	padding: 0 10px;
+	color: #AAA397;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+}
+.sub-menu {
+  font-family: proxima-nova, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+.sub-menu li {
+  display: inline;
+  margin: 0 3px;
+}
+.sub-menu li a {
+  padding: 7px;
+  color: #222;
+  .rounded(7px);
+}
+.sub-menu li a:hover {
+	background: rgba(0,0,0,0.15);
+}
+.sub-menu li.active a {
+  background: rgba(0,0,0,0.35);
+  font-weight: 700;
+  .box-shadow(e('inset 0 1px 2px rgba(0,0,0,0.5)'));
+}
+.sub-menu li.active a:hover {
+  background: #fff;
+}
+.sub-menu h4 {
+  font-style: italic;
+  margin: 10px 340px 10px 0;
+}
+.content, footer {
+	width: 960px;
+	margin: 0 auto;
+}
+.content {
+	margin-top: 28px;
+}
+blockquote.scripture {
+	padding: 0;
+	margin: 0;
+	font-style: italic;
+	height: 230px;
+}
+blockquote.scripture a {
+	display: block;
+	margin: 20px 0;
+	float: right;
+}
+.divider {
+  background: #f5f5f5 url('../images/noise-sm-2.png') repeat;
+  .gradient6(e("url() repeat,"), #fff, #fff, #555, rgba(0,0,0,0.3), rgba(0,0,0,0.1), rgba(0,0,0,0), 0%, 3%, 5%, 7%, 40%, 50%);
+	-webkit-mask: -webkit-gradient(linear, left center, right center, 
+		color-stop(0%, transparent),
+		color-stop(5%, #ccc),
+		color-stop(80%, #ccc),
+		color-stop(100%, transparent)
+	);
+	height: 6px;
+	width: 960px;
+	margin: 15px 0;
+}
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+/*	padding: 72px 48px 84px;*/
+/*	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/diagonal-noise.png') repeat;*/
+/*	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/white_texture.png') repeat;*/
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+.col-1 {
+	width: 680px;
+	float: left;
+	padding: 0 24px 0 0;
+}
+.col-2 {
+	width: 256px;
+	float: left;
+}
+
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}
