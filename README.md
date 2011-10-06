@@ -14,3 +14,14 @@
     - **User:** admin  
     - **Password:** k42j3b42kjb
 - Be sure to set all files to read/write, we recommend using [BatChMod](http://www.lagentesoft.com/batchmod/index.html) (Check all checkboxes once you have the selected directory, see [example](http://see.weareinto.com/9Q73))
+- We recommend using [Espresso](http://macrabbit.com/espresso/) for code editing. `.esproj` files may be in some areas of the project, and this will help to have settings already in place.
+
+## Prerequisites
+
+### Required
+
+- Typekit account
+
+### Optional
+
+- UStream premium account
