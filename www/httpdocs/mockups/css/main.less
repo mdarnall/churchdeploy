@@ -4,7 +4,7 @@
 @import "gradient.less";
 @import "shadow.less";
 
-@color-1: hsl(212,49%,52%);
+@color-1: hsl(9,80%,95%);
 @color-2: hsl(76,60%,52%);
 
 /*  Texture Library
@@ -96,7 +96,7 @@ a {
 }
 
 body {
-	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/white_texture.png') repeat;
+	background: rgb(232,232,232) url('../img/noise-sm.png') repeat;
 	font: 18px/1.4 ff-tisa-web-pro, "Palatino", Georgia, Times New Roman, Times, serif;
 	margin: 0 auto;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
@@ -116,56 +116,65 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
 	text-transform: uppercase;
 }
-h3 a {
-	font-size: 36px;
-	line-height: 1.4;
-	color: #ff4900;
-	letter-spacing: 2px;
-	text-shadow: none;
-	font-family: "DemingEP";
-}
 
 /* CLASSES
    ======= */
 header {
 	width: 100%;
-	background: #25221E;
+	background: url('../img/header-bg.gif') 0 59px repeat-x;
+	height: 289px;
 }
 header .wrapper {
 	padding-top: 0;
 }
+header .lower {
+	padding: 40px 0;
+}
 header h3 {
-	margin: 40px 0 0 0;
+	margin: 30px 0 0 0;
 }
 header h1, header h1 a {
+	position: relative;
 	color: #fff;
 	text-shadow: none;
 	font-size: 48px;
-	margin: 20px 0 40px 0;
+	margin: 10px 0 10px 0;
 	text-align: center;
 	text-shadow: 0 3px 2px rgba(0,0,0,0.8);
+	left: -80px;
+}
+header h3 a {
+	font-family: "DemingEP";
+	color: #fff;
+	display: block;
+	text-align: center;
+	background: rgb(242,77,49);
+	font-size: 12px;
+	width: 180px;
+	margin: 0 auto;
+	letter-spacing: 2px;
+	text-shadow: none;
 }
 .topnav {
-	background: #3B3730;
-	.rounded-btm(5px);
+	background: url('../img/topnav-bg.gif') repeat-x;
 	.box-shadow(e('inset 0 -3px 10px rgba(0,0,0,0.35)'));
-	border-bottom: 1px solid #302D27;
+	height: 59px;
 }
 .topnav .logo {
-	float: left;
+	float: right;
 	padding: 20px 0 0 0;
-	font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: normal normal 400 16px/1.4 futura-pt, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #fff;
 	text-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 .topnav ul {
 	display: block;
-	float: right;
+	float: left;
 	list-style: none;
 	list-style-type: none;
 	list-style-image: none;
-	font-family: proxima-nova;
+	font-family: futura-pt;
 	font-weight: 700;
 	text-transform: uppercase;	
 }
@@ -174,11 +183,23 @@ header h1, header h1 a {
 }
 .topnav ul li a {
 	padding: 0 10px;
-	color: #AAA397;
+	margin-right: 10px;
+	color: #fff;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+	font-size: 14px;
+}
+.logomark {
+	text-indent: -9999px;
+	display: block;
+	height: 115px;
+	width: 116px;
+	background: url('../img/athey.png') no-repeat;
+	float: left;
+	clear: both;
+	margin-left: 50px;
 }
 .sub-menu {
-  font-family: proxima-nova, sans-serif;
+  font-family: futura-pt, sans-serif;
   font-weight: normal;
   text-align: center;
   margin: 0 auto 30px auto;
@@ -309,9 +330,9 @@ px      68    160    252    344    436    528    620    712    */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	
-	body {
+	.wrapper {
 		width: 712px;
-		padding: 48px 28px 60px;
+		padding: 48px;
 	}
 }
 
@@ -326,9 +347,9 @@ px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
 	
-	body {
+	.wrapper {
 		width: 252px;
-		padding: 48px 34px 60px;
+		padding: 48px;
 	}
 	
 }
@@ -344,9 +365,9 @@ px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
-	body {
+	.wrapper {
 		width: 436px;
-		padding: 36px 22px 48px;
+		padding: 48px;
 	}
 
 }
