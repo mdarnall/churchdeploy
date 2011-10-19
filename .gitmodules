@@ -1,0 +1,3 @@
+[submodule "www/httpdocs/extensions/jit_image_manipulation"]
+	path = www/httpdocs/extensions/jit_image_manipulation
+	url = git://github.com/symphonycms/jit_image_manipulation.git
