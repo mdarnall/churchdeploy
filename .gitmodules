@@ -25,3 +25,6 @@
 [submodule "www/httpdocs/extensions/members"]
 	path = www/httpdocs/extensions/members
 	url = https://github.com/symphonycms/members.git
+[submodule "www/httpdocs/workspace/bootstrap"]
+	path = www/httpdocs/workspace/bootstrap
+	url = git://github.com/twitter/bootstrap.git
