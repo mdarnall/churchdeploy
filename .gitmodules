@@ -1,3 +1,27 @@
 [submodule "www/httpdocs/extensions/jit_image_manipulation"]
 	path = www/httpdocs/extensions/jit_image_manipulation
 	url = git://github.com/symphonycms/jit_image_manipulation.git
+[submodule "www/httpdocs/extensions/debugdevkit"]
+	path = www/httpdocs/extensions/debugdevkit
+	url = git://github.com/symphonycms/debugdevkit.git
+[submodule "www/httpdocs/extensions/export_ensemble"]
+	path = www/httpdocs/extensions/export_ensemble
+	url = git://github.com/symphonycms/export_ensemble.git
+[submodule "www/httpdocs/extensions/maintenance_mode"]
+	path = www/httpdocs/extensions/maintenance_mode
+	url = git://github.com/symphonycms/maintenance_mode.git
+[submodule "www/httpdocs/extensions/markdown"]
+	path = www/httpdocs/extensions/markdown
+	url = git://github.com/symphonycms/markdown.git
+[submodule "www/httpdocs/extensions/profiledevkit"]
+	path = www/httpdocs/extensions/profiledevkit
+	url = git://github.com/symphonycms/profiledevkit.git
+[submodule "www/httpdocs/extensions/selectbox_link_field"]
+	path = www/httpdocs/extensions/selectbox_link_field
+	url = git://github.com/symphonycms/selectbox_link_field.git
+[submodule "www/httpdocs/extensions/xssfilter"]
+	path = www/httpdocs/extensions/xssfilter
+	url = git://github.com/symphonycms/xssfilter.git
+[submodule "www/httpdocs/extensions/members"]
+	path = www/httpdocs/extensions/members
+	url = https://github.com/symphonycms/members.git
