@@ -15,7 +15,7 @@
 			'allow_page_subscription' => '1',
 			'lang' => 'en',
 			'pages_table_nest_children' => 'no',
-			'version' => '2.2.3',
+			'version' => '2.2.4',
 			'cookie_prefix' => 'sym-',
 		),
 		########
@@ -61,7 +61,7 @@
 
 		###### GENERAL ######
 		'general' => array(
-			'useragent' => 'Symphony/2.2.3',
+			'useragent' => 'Symphony/2.2.4',
 			'sitename' => 'Church Deploy',
 		),
 		########
@@ -94,6 +94,13 @@
 		###### MAINTENANCE_MODE ######
 		'maintenance_mode' => array(
 			'enabled' => 'no',
+		),
+		########
+
+
+		###### MEMBERS ######
+		'members' => array(
+			'cookie-prefix' => 'sym-members',
 		),
 		########
 	);

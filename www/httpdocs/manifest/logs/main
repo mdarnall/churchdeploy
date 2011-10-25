@@ -37,3 +37,5 @@ Version: 2.2.3
 22 September 2011 16:57 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
 22 September 2011 18:26 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
 23 September 2011 15:28 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
+25 October 2011 16:04 > User Notice: The page you requested, <code></code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
+25 October 2011 16:04 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.general.php on line 855

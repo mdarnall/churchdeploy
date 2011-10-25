@@ -6,15 +6,13 @@ body {
 	background: #fff;
 	color: #222;
 }
-body:before {
-	border: 10px solid rgba(255,255,255,0.25);
-}
 h2 {
 	margin: 0;
 	padding: 0 0 0.5em;
-	border-bottom: 3px solid #ddc;
+	border-bottom: 1px solid #ddc;
 }
 h3 {
+	text-shadow: -1px 2px 2px #ddd;
 	font-weight: bold;
 }
 pre {
@@ -36,8 +34,8 @@ legend {
 	margin-bottom: -3em;
 	padding: 0;
 	color: #665;
+	text-shadow: -1px 2px 3px #ddd;
 	font-weight: bold;
-	font-size: 1.1em;
 }
 label {
 	display: block;
@@ -48,18 +46,7 @@ label > i {
 	right: 0;
 	top: 0;
 }
-a {
-	text-decoration: none;
-	color: #b20a4f;
-	text-shadow: 0 1px 1px rgb(255,255,255);
-	-webkit-transition: color 200ms linear, background 200ms linear, text-shadow 200ms linear;
-}
-a:hover {
-	color: #750634;
-}
-#header h1 a, #footer a {
-	text-shadow: 0 1px 2px rgb(10,10,10);
-}
+
 /*-----------------------------------------------------------------------------
 	Globals - Tables
 -----------------------------------------------------------------------------*/
@@ -154,10 +141,6 @@ tr.selected td,
 tr.selected a,
 tr.selected .inactive {
 	color: #fff;
-}
-tr.selected td a {
-	font-weight: bold;
-	text-shadow: 0 1px 1px rgb(10,10,10);
 }
 
 /*--- Orderable ---*/
@@ -443,15 +426,13 @@ button.button {
 	color: #fff;
 	padding: .5em 1em;
 	margin: 0;
-	font: 11px/12px Lucida Grande, Leelawadee, Tahoma, Verdana, sans-serif;
+	font: 10px/11px Lucida Grande, Leelawadee, Tahoma, Verdana, sans-serif;
 	text-decoration: none;
 	text-shadow: none;
 	cursor: pointer;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	text-shadow: 0 1px 1px rgb(10,10,10);
-	text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+	border-radius: 1em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
 }
 a.button.create,
 button.button.create {
@@ -482,11 +463,11 @@ button.button.delete:hover {
 	z-index: 2;
 	margin: 0;
 	border-top: 3px solid #979792;
-	border-bottom: 1px solid #555;
+	border-bottom: 2px solid #777;
 	padding: 0.5em 0.83em;
 	background-color: #e4e4e0;
 	color: #555;
-	font-size: 110%;
+	font-size: 90.91%;
 	line-height: 1.6;
 }
 #notice.error {
@@ -501,11 +482,11 @@ button.button.delete:hover {
 	background: #e4e4e0;
 	border-top-color: #979792;
 	border-bottom-color: #777;
-	color: #333;
+	color: #555;
 }
 #notice a,
 #notice button {
-	color: #656565;
+	color: #999;
 	margin-left: 0.5em;
 }
 #notice a:hover,
@@ -543,14 +524,13 @@ body, html {
 	min-height: 100%;
 }
 #header {
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
 	margin: 0 0 1.8em;
+	background: #353530;
 	color: #fff;
-	background-color: #1f292f;
 }
 #header h1 {
-	padding: 1.2em 19px 0.8em;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	padding: 1.64em 19px 0.74em;
+	text-shadow: -1px 2px 3px #111;
 	font-weight: bold;
 	line-height: 1;
 }
@@ -559,23 +539,20 @@ body, html {
 	text-decoration: none;
 }
 #header h1 a:hover {
-	color: #ddd;
+	color: #ccb;
 }
 #nav {
 	z-index: 3;
 	position: relative;
 	bottom: -5px;
 	margin: 0;
-	padding: 0 0 0 10px;
+	padding: 5px 19px;
+	background: url("images/navigation.png") 0 -60px repeat-x;
 	color: #646464;
 	white-space: nowrap;
 	list-style: none;
 	text-transform: uppercase;
-	font: bold 90.91%/0 Helvetica;
-	background-color: #e0e9ed;
-	border-top: 1px solid #111;
-	border-top: 1px solid rgba(0,0,0,0.8);
-	border-bottom: 2px solid #c5ced3;
+	font: bold 90.91%/0 Lucida Grande, Leelawadee, Tahoma, Verdana, sans-serif;
 }
 #nav:after {
 	content: "";
@@ -591,18 +568,15 @@ body, html {
 	height: 30px;
 	line-height: 32px;
 	cursor:pointer;
-	text-shadow: 0 1px 1px rgb(255,255,255);
 }
 #nav > li.active {
+	background: #517ca6 url("images/navigation.png") repeat-x;
 	color: #fff;
-	background: #c5ced3;
-	text-shadow: 0 1px 1px rgb(10,10,10);
 }
 #nav > li:hover,
 #nav > li.current {
-	background: #7e7e70;
+	background: #7e7e70 url("images/navigation.png") 0 -30px repeat-x;
 	color: #fff;
-	text-shadow: 0 1px 1px rgb(10,10,10);
 }
 #nav ul {
 	position: absolute;
@@ -623,10 +597,6 @@ body, html {
 	line-height: 2.5;
 	-moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-	text-shadow: 0 1px 1px rgb(255,255,255);
-}
-#nav ul li:hover {
-	text-shadow: 0 1px 1px rgb(10,10,10);
 }
 #nav li:hover ul,
 #nav li.current ul {
@@ -642,13 +612,9 @@ body, html {
 #nav a:focus {
 	background-color: #7e7e70;
 	color: #fff;
-	text-shadow: 0 1px 1px rgb(10,10,10);
 }
 #contents {
 	padding: 0 19px 5em;
-}
-#contents h2 {
-	font: normal normal 300 1.7em/1.4 "Helvetica Neue", Arial, Helvetica, sans;
 }
 #contents h2 span {
 	float: left;
@@ -674,12 +640,11 @@ body, html {
 	left: 0;
 	right: 0;
 	margin: 0;
-	padding: 1em 19px;
+	padding: 1.75em 19px;
+	background: #353530 url("images/navigation.png") 0 -95px repeat-x;
 	text-align: right;
 	text-shadow: -1px 2px 3px #111;
 	color: #fff;
-	border-top: 3px solid #b20a4f;
-	background-color: #252121;
 }
 #footer:after {
 	content: "";
@@ -831,7 +796,7 @@ ul.page a {
 }
 .single .actions {
 	clear: both;
-	border-top: 3px solid #ddc;
+	border-top: 1px solid #ddc;
 	padding: 1.75em 0 0;
 }
 .single .actions input {
@@ -860,7 +825,6 @@ ul.page a {
 #components h3 {
 	margin-top: 0.5em;
 	margin-bottom: 0.75em;
-	font-size: 1.2em;
 }
 #components h3:after {
 	content: "";
@@ -876,7 +840,7 @@ ul.page a {
 }
 #components ul {
 	margin: 0;
-	border-top: 3px solid #ddc;
+	border-top: 1px solid #ddc;
 	padding-top: 0.75em;
 	list-style: none;
 }
@@ -909,17 +873,12 @@ ul.page a {
 	background-color: #f5f5f4;
 }
 #utilities .selected {
-	font-weight: bold;
-	border-color: #b3b3af;
-	background-color: #cfcfcc;
-	text-shadow: 0 1px 1px rgb(10,10,10);
+	border-color: #617dc5;
+	background-color: #5273c0;
 }
 #utilities .selected.odd {
-	background-color: #c4c4c0;
+	background-color: #5677c3;
 }
 #utilities .selected:nth-child(odd) {
-	background-color: #c4c4c0;
-}
-#utilities .selected a {
-	color: #780435;
+	background-color: #5677c3;
 }
