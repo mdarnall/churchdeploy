@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 3348
+# Version 3408
 #
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
 # Host: localhost (MySQL 5.1.44)
-# Database: atheycreek
-# Generation Time: 2011-08-19 18:52:18 +0000
+# Database: churchdeploy
+# Generation Time: 2011-10-25 23:05:44 +0000
 # ************************************************************
 
 
@@ -40,14 +40,14 @@ CREATE TABLE `sym_authors` (
   `language` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sym_authors` WRITE;
 /*!40000 ALTER TABLE `sym_authors` DISABLE KEYS */;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-08-19 11:51:53','developer','yes',NULL,'no',NULL);
+	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-10-25 16:04:22','developer','yes',NULL,'no',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -103,21 +103,22 @@ CREATE TABLE `sym_extensions` (
   `version` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sym_extensions` WRITE;
 /*!40000 ALTER TABLE `sym_extensions` DISABLE KEYS */;
 
 INSERT INTO `sym_extensions` (`id`, `name`, `status`, `version`)
 VALUES
-	(1,'xssfilter','enabled','1.0'),
-	(2,'debugdevkit','enabled','1.1'),
-	(3,'export_ensemble','enabled','1.13'),
-	(4,'selectbox_link_field','enabled','1.19'),
-	(5,'jit_image_manipulation','enabled','1.10'),
-	(6,'maintenance_mode','enabled','1.4'),
+	(1,'xssfilter','enabled','1.1'),
+	(2,'debugdevkit','enabled','1.2.1'),
+	(3,'export_ensemble','enabled','1.16'),
+	(4,'selectbox_link_field','enabled','1.21'),
+	(5,'jit_image_manipulation','enabled','1.13'),
+	(6,'maintenance_mode','enabled','1.5'),
 	(7,'profiledevkit','enabled','1.0.4'),
-	(8,'markdown','enabled','1.13');
+	(8,'markdown','enabled','1.13'),
+	(9,'members','enabled','1.1.1');
 
 /*!40000 ALTER TABLE `sym_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -138,30 +139,40 @@ CREATE TABLE `sym_extensions_delegates` (
   KEY `extension_id` (`extension_id`),
   KEY `page` (`page`),
   KEY `delegate` (`delegate`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sym_extensions_delegates` WRITE;
 /*!40000 ALTER TABLE `sym_extensions_delegates` DISABLE KEYS */;
 
 INSERT INTO `sym_extensions_delegates` (`id`, `extension_id`, `page`, `delegate`, `callback`)
 VALUES
-	(1,1,'/blueprints/events/new/','AppendEventFilter','appendEventFilter'),
-	(2,1,'/blueprints/events/edit/','AppendEventFilter','appendEventFilter'),
-	(3,1,'/frontend/','EventPreSaveFilter','eventPreSaveFilter'),
-	(4,2,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
-	(5,2,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
-	(6,3,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(7,5,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(8,5,'/system/preferences/','Save','__SavePreferences'),
-	(9,6,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
-	(10,6,'/system/preferences/','Save','__SavePreferences'),
-	(11,6,'/system/preferences/','CustomActions','__toggleMaintenanceMode'),
-	(12,6,'/backend/','AppendPageAlert','__appendAlert'),
-	(13,6,'/blueprints/pages/','AppendPageContent','__appendType'),
-	(14,6,'/frontend/','FrontendPrePageResolve','__checkForMaintenanceMode'),
-	(15,6,'/frontend/','FrontendParamsResolve','__addParam'),
-	(16,7,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
-	(17,7,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation');
+	(19,1,'/blueprints/events/edit/','AppendEventFilter','appendEventFilter'),
+	(18,1,'/blueprints/events/new/','AppendEventFilter','appendEventFilter'),
+	(22,2,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
+	(21,2,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
+	(23,3,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(24,5,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(30,6,'/blueprints/pages/','AppendPageContent','__appendType'),
+	(29,6,'/backend/','AppendPageAlert','__appendAlert'),
+	(28,6,'/system/preferences/','CustomActions','__toggleMaintenanceMode'),
+	(27,6,'/system/preferences/','Save','__SavePreferences'),
+	(26,6,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(44,7,'/frontend/','ManipulateDevKitNavigation','manipulateDevKitNavigation'),
+	(43,7,'/frontend/','FrontendDevKitResolve','frontendDevKitResolve'),
+	(20,1,'/frontend/','EventPreSaveFilter','eventPreSaveFilter'),
+	(25,5,'/system/preferences/','Save','__SavePreferences'),
+	(31,6,'/frontend/','FrontendPrePageResolve','__checkForMaintenanceMode'),
+	(32,6,'/frontend/','FrontendParamsResolve','__addParam'),
+	(33,9,'/frontend/','FrontendPageResolved','checkFrontendPagePermissions'),
+	(34,9,'/frontend/','FrontendParamsResolve','addMemberDetailsToPageParams'),
+	(35,9,'/frontend/','FrontendProcessEvents','appendLoginStatusToEventXML'),
+	(36,9,'/frontend/','EventPreSaveFilter','checkEventPermissions'),
+	(37,9,'/frontend/','EventPostSaveFilter','processPostSaveFilter'),
+	(38,9,'/backend/','AdminPagePreGenerate','appendAssets'),
+	(39,9,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(40,9,'/system/preferences/','Save','savePreferences'),
+	(41,9,'/blueprints/events/new/','AppendEventFilter','appendFilter'),
+	(42,9,'/blueprints/events/edit/','AppendEventFilter','appendFilter');
 
 /*!40000 ALTER TABLE `sym_extensions_delegates` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -351,6 +362,62 @@ CREATE TABLE `sym_forgotpass` (
 
 
 
+# Dump of table sym_members_roles
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_members_roles`;
+
+CREATE TABLE `sym_members_roles` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `handle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `handle` (`handle`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `sym_members_roles` WRITE;
+/*!40000 ALTER TABLE `sym_members_roles` DISABLE KEYS */;
+
+INSERT INTO `sym_members_roles` (`id`, `name`, `handle`)
+VALUES
+	(1,'Public','public');
+
+/*!40000 ALTER TABLE `sym_members_roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_members_roles_event_permissions
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_members_roles_event_permissions`;
+
+CREATE TABLE `sym_members_roles_event_permissions` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) unsigned NOT NULL,
+  `event` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `action` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `level` smallint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `role_id` (`role_id`,`event`,`action`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+# Dump of table sym_members_roles_forbidden_pages
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_members_roles_forbidden_pages`;
+
+CREATE TABLE `sym_members_roles_forbidden_pages` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) unsigned NOT NULL,
+  `page_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `role_id` (`role_id`,`page_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
 # Dump of table sym_pages
 # ------------------------------------------------------------
 
@@ -443,7 +510,7 @@ LOCK TABLES `sym_sessions` WRITE;
 
 INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
-	('f99e2f0f3c6217cd018b76611c496bcb',1313779913,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}');
+	('67c9c2536fec8db7a11564d57f3cc52a',1319583862,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;

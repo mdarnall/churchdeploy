@@ -47,7 +47,7 @@ table {
 -----------------------------------------------------------------------------*/
 
 body {
-	font: 72%/1.4 Helvetica Neue, Arial, Helvetica, sans-serif;
+	font: 68.75%/1.5 Lucida Grande, Tahoma, Verdana, sans-serif;
 }
 a {
 	color: #5072bf;
@@ -61,7 +61,7 @@ a:active, a:focus {
 	color: #d42;
 }
 h1, h2 {
-	font: 127.28% Helvetica Neue, Arial, Helvetica, sans-serif;
+	font: 127.28% Lucida Grande, Leelawadee, Tahoma, Verdana, sans-serif;
 }
 p {
 	margin-bottom: 1.5em;
