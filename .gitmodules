@@ -70,3 +70,36 @@
 [submodule "www/httpdocs/extensionsimportcsv"]
 	path = www/httpdocs/extensionsimportcsv
 	url = https://github.com/kanduvisla/importcsv.git
+[submodule "www/httpdocs/extensions/uniqueuploadfield"]
+	path = www/httpdocs/extensions/uniqueuploadfield
+	url = https://github.com/michael-e/uniqueuploadfield.git
+[submodule "www/httpdocs/extensions/html5_doctype"]
+	path = www/httpdocs/extensions/html5_doctype
+	url = https://github.com/domain7/html5_doctype.git
+[submodule "www/httpdocs/extensions/subsectionmanager"]
+	path = www/httpdocs/extensions/subsectionmanager
+	url = https://github.com/nilshoerrmann/subsectionmanager.git
+[submodule "www/httpdocs/extensions/tweak_ui"]
+	path = www/httpdocs/extensions/tweak_ui
+	url = https://github.com/kanduvisla/tweak_ui.git
+[submodule "www/httpdocs/extensions/order_entries"]
+	path = www/httpdocs/extensions/order_entries
+	url = https://github.com/nickdunn/order_entries.git
+[submodule "www/httpdocs/extensions/jquery_date_picker"]
+	path = www/httpdocs/extensions/jquery_date_picker
+	url = https://github.com/makenosound/jquery_date_picker.git
+[submodule "www/httpdocs/extensions/massuploadutility"]
+	path = www/httpdocs/extensions/massuploadutility
+	url = https://github.com/scottkf/massuploadutility.git
+[submodule "www/httpdocs/extensions/root_page_params"]
+	path = www/httpdocs/extensions/root_page_params
+	url = https://github.com/creativedutchmen/Root-Page-Params.git
+[submodule "www/httpdocs/extensions/uniqueinputfield"]
+	path = www/httpdocs/extensions/uniqueinputfield
+	url = https://github.com/symphonycms/uniqueinputfield.git
+[submodule "www/httpdocs/extensions/language_redirect"]
+	path = www/httpdocs/extensions/language_redirect
+	url = https://github.com/klaftertief/language_redirect.git
+[submodule "www/httpdocs/extensions/multilingual_field"]
+	path = www/httpdocs/extensions/multilingual_field
+	url = https://github.com/6ui11em/multilingual_field.git
