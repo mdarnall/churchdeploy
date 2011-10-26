@@ -28,3 +28,45 @@
 [submodule "www/httpdocs/workspace/bootstrap"]
 	path = www/httpdocs/workspace/bootstrap
 	url = git://github.com/twitter/bootstrap.git
+[submodule "www/httpdocs/extensions/image_index_preview"]
+	path = www/httpdocs/extensions/image_index_preview
+	url = https://github.com/nilshoerrmann/image_index_preview.git
+[submodule "www/httpdocs/extensionsuniqueuploadfield"]
+	path = www/httpdocs/extensionsuniqueuploadfield
+	url = https://github.com/michael-e/uniqueuploadfield.git
+[submodule "www/httpdocs/extensionshtml5_doctype"]
+	path = www/httpdocs/extensionshtml5_doctype
+	url = https://github.com/domain7/html5_doctype.git
+[submodule "www/httpdocs/extensionssubsectionmanager"]
+	path = www/httpdocs/extensionssubsectionmanager
+	url = https://github.com/nilshoerrmann/subsectionmanager.git
+[submodule "www/httpdocs/extensionstweak_ui"]
+	path = www/httpdocs/extensionstweak_ui
+	url = https://github.com/kanduvisla/tweak_ui.git
+[submodule "www/httpdocs/extensionsorder_entries"]
+	path = www/httpdocs/extensionsorder_entries
+	url = https://github.com/nickdunn/order_entries.git
+[submodule "www/httpdocs/extensionsjquery_date_picker"]
+	path = www/httpdocs/extensionsjquery_date_picker
+	url = https://github.com/makenosound/jquery_date_picker.git
+[submodule "www/httpdocs/extensionsmassuploadutility"]
+	path = www/httpdocs/extensionsmassuploadutility
+	url = https://github.com/scottkf/massuploadutility.git
+[submodule "www/httpdocs/extensionsroot_page_params"]
+	path = www/httpdocs/extensionsroot_page_params
+	url = https://github.com/creativedutchmen/Root-Page-Params.git
+[submodule "www/httpdocs/extensionsemail_template_manager"]
+	path = www/httpdocs/extensionsemail_template_manager
+	url = https://github.com/creativedutchmen/email_template_manager.git
+[submodule "www/httpdocs/extensionslanguage_redirect"]
+	path = www/httpdocs/extensionslanguage_redirect
+	url = https://github.com/klaftertief/language_redirect.git
+[submodule "www/httpdocs/extensionsmultilingual_field"]
+	path = www/httpdocs/extensionsmultilingual_field
+	url = https://github.com/6ui11em/multilingual_field.git
+[submodule "www/httpdocs/extensionsuniqueinputfield"]
+	path = www/httpdocs/extensionsuniqueinputfield
+	url = https://github.com/symphonycms/uniqueinputfield.git
+[submodule "www/httpdocs/extensionsimportcsv"]
+	path = www/httpdocs/extensionsimportcsv
+	url = https://github.com/kanduvisla/importcsv.git
