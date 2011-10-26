@@ -101,6 +101,36 @@
 		###### MEMBERS ######
 		'members' => array(
 			'cookie-prefix' => 'sym-members',
+			'section' => '1',
+		),
+		########
+
+
+		###### EMAIL ######
+		'email' => array(
+			'default_gateway' => 'sendmail',
+		),
+		########
+
+
+		###### EMAIL_SENDMAIL ######
+		'email_sendmail' => array(
+			'from_name' => 'churchdeploy',
+			'from_address' => 'noreply@churchdeploy.com',
+		),
+		########
+
+
+		###### EMAIL_SMTP ######
+		'email_smtp' => array(
+			'from_name' => 'Symphony',
+			'from_address' => 'noreply@churchdeploy',
+			'host' => '127.0.0.1',
+			'port' => '25',
+			'secure' => 'no',
+			'auth' => '0',
+			'username' => 'admin',
+			'password' => 'k42j3b42kjb',
 		),
 		########
 	);
