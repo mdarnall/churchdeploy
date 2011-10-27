@@ -103,3 +103,6 @@
 [submodule "www/httpdocs/extensions/multilingual_field"]
 	path = www/httpdocs/extensions/multilingual_field
 	url = https://github.com/6ui11em/multilingual_field.git
+[submodule "www/httpdocs/workspace/utilities/members-forms"]
+	path = www/httpdocs/workspace/utilities/members-forms
+	url = git://github.com/michael-e/members-forms.git
