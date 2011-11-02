@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.1.44)
 # Database: churchdeploy
-# Generation Time: 2011-11-02 12:02:53 +0000
+# Generation Time: 2011-11-02 19:12:52 +0000
 # ************************************************************
 
 
@@ -47,7 +47,7 @@ LOCK TABLES `sym_authors` WRITE;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-11-02 05:00:47','developer','yes',NULL,'no',NULL);
+	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-11-02 12:12:27','developer','yes',NULL,'no',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1084,7 +1084,7 @@ LOCK TABLES `sym_sessions` WRITE;
 
 INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
-	('67c9c2536fec8db7a11564d57f3cc52a',1320235247,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}');
+	('67c9c2536fec8db7a11564d57f3cc52a',1320261147,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
