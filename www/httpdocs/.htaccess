@@ -21,9 +21,12 @@ Options +FollowSymlinks -Indexes
 	
 	
 	
+	
 	### IMAGE RULES
 	RewriteRule ^image\/(.+\.(jpg|gif|jpeg|png|bmp))$ extensions/jit_image_manipulation/lib/image.php?param=$1 [L,NC]
 
+
+	
 
 	
 
@@ -45,6 +48,10 @@ Options +FollowSymlinks -Indexes
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING}	[NC,L]
+
+	### LANGUAGE REDIRECT RULES start
+	### no language codes set
+	### LANGUAGE REDIRECT RULES end
 
 	### FRONTEND REWRITE - Will ignore files and folders
 	RewriteCond %{REQUEST_FILENAME} !-d
