@@ -5,10 +5,21 @@
 
 ## Local environment
 
-- Download [GitHub for Mac](http://mac.github.com/)
-- Go to the [church ensemble](https://github.com/atheycreek/church-ensemble) github project and click "Clone in Mac"
-- Use `http://churchdeploy/` as your local hosting environment - We recommend [MAMP PRO](http://www.shareit.com/programs.html?productid=300169372)
-- Setup a database called `churchdeploy` with the both the username and password set to `root`
+- Open *Terminal* from the *Applications > Utilities* folder ( or just use Spotlight to find it )
+- Create a folder to hold the project in *Finder*
+- In *Terminal* type `cd ` and then drag and drop the folder you just created into the *Terminal* window, hit return.
+- Run the following commands
+
+	git clone git@github.com:atheycreek/churchdeploy.git
+	cd churchdeploy
+	git submodule update --init
+	cd www/httpdocs/extensions/datetime
+	git submodule update --init
+
+- Use `http://churchdeploy/` as your local hosting environment 
+	- Have the root pointing to *httpdocs*
+    - We recommend [MAMP PRO](http://www.shareit.com/programs.html?productid=300169372)
+- Setup a database named `churchdeploy` with the both the username and password set to `root`
     - database encoding should be `UTF-8`
 - The default admin account credentials for `http://churchdeploy/symphony/`
     - **User:** admin  
@@ -20,16 +31,29 @@
 
 ### Required
 
-- Typekit account
+#### Server requirements
+
+- PHP 5.3.2 or later
+- PHP's LibXML module, with the XSLT extension enabled (--with-xsl)
+- MySQL 5.0 or later
+- Apache webserver with mod_rewrite
 
 ### Optional
 
+- Typekit account
 - UStream premium account
 
-### Membership
+## Membership
 
 There is a default user that is installed as a member, here are his credentials..
 
 - Name: John Doe
 - Email: john_doe@churchdeploy.com
 - Password: k12j$B11k
+
+## Keeping up to date
+
+At any time you can run these commands to keep up to date
+
+	git pull
+	git submodule foreach git pull origin master
