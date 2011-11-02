@@ -10,11 +10,11 @@
 - In *Terminal* type `cd ` and then drag and drop the folder you just created into the *Terminal* window, hit return.
 - Run the following commands
 
-	git clone git@github.com:atheycreek/churchdeploy.git
-	cd churchdeploy
-	git submodule update --init
-	cd www/httpdocs/extensions/datetime
-	git submodule update --init
+	   	git clone git@github.com:atheycreek/churchdeploy.git
+		cd churchdeploy
+		git submodule update --init
+		cd www/httpdocs/extensions/datetime
+		git submodule update --init
 
 - Use `http://churchdeploy/` as your local hosting environment 
 	- Have the root pointing to *httpdocs*
