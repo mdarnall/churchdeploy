@@ -25,3 +25,11 @@
 ### Optional
 
 - UStream premium account
+
+### Membership
+
+There is a default user that is installed as a member, here are his credentials..
+
+- Name: John Doe
+- Email: john_doe@churchdeploy.com
+- Password: k12j$B11k

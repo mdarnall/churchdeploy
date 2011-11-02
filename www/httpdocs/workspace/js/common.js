@@ -16,6 +16,53 @@ $(document).ready(
                 }
             }
         }
+        
+
+        if( $('#register-date-day').exists() )
+        {
+        	if( $('#register-date-day').val() ) { $('#register-date-day').val( $('#register-date-day-value').val() ); }
+        	if( $('#register-date-month').val() ) { $('#register-date-month').val( $('#register-date-month-value').val() ); }
+        	if( $('#register-date-year').val() ) { $('#register-date-year').val( $('#register-date-year-value').val() ); }
+        	
+        	$('#register-date-day, #register-date-month, #register-date-year').change(registerAssembleDate);
+			
+			$('form').submit( 
+				function()
+				{ 
+					if( 
+						$('#register-date-day').val() != -1 &&
+						$('#register-date-month').val() != -1 &&
+						$('#register-date-year').val() != -1 
+					)
+					{
+						return true;
+					}
+					
+					$('#register-date-fields').addClass('error');
+					alert('Birthday is a required field.');
+					
+					return false; 
+				} 
+			);
+			
+			function registerAssembleDate()
+			{
+	        	if( 
+	        		$('#register-date-day').val() != -1 &&
+	        		$('#register-date-month').val() != -1 &&
+	        		$('#register-date-year').val() != -1 
+	        	)
+	        	{
+	        		$('#register-date').val( 
+	        			$('#register-date-day').val() + ' ' + 
+	        			$('#register-date-month').val() + ' ' + 
+	        			$('#register-date-year').val() 
+	        		);
+	        	}
+	        }
+        	
+        }
+        
 
         // back to top
         $('.back_to_top').click( //↑
@@ -37,39 +84,6 @@ $(document).ready(
 
 
 
-$(window).load(
-    function() 
-    {
-
-		if( $('.page-home').exists() )
-		{
-			$('.slideshow-container').css('filter', 'alpha(opacity=40)');
-			
-			$(".slideshow").cycle(
-				{     
-					fx: 'fade',
-					speed: 1500,
-					timeout: 10000,
-					width: '100%',
-					slideResize: 0
-				}
-			);
-			
-			$('.slideshow-container').fadeIn(1500, 'easeInOutCubic');
-			
-			img1 = new Image();
-			img2 = new Image();
-			img3 = new Image();
-			img4 = new Image();
-			
-			img1.src = "/workspace/images/home/masthead/1.jpg";
-			img2.src = "/workspace/images/home/masthead/2.jpg";
-			img3.src = "/workspace/images/home/masthead/3.jpg";
-			img4.src = "/workspace/images/home/masthead/4.jpg";
-		}
-    
-    }
-);
 
 
 
@@ -96,9 +110,10 @@ jQuery.fn.exists = function() // test to see if an object exists
 
 
 
-// sea analytics
+// analytics
+/*
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-26440960-1']);
+_gaq.push(['_setAccount', '']);
 _gaq.push(['_trackPageview']);
 
 (function() {
@@ -106,3 +121,4 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+*/

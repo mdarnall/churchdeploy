@@ -106,3 +106,6 @@
 [submodule "www/httpdocs/workspace/utilities/members-forms"]
 	path = www/httpdocs/workspace/utilities/members-forms
 	url = git://github.com/michael-e/members-forms.git
+[submodule "www/httpdocs/extensions/datetime"]
+	path = www/httpdocs/extensions/datetime
+	url = git://github.com/nilshoerrmann/datetime.git

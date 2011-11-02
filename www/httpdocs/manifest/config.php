@@ -102,6 +102,7 @@
 		'members' => array(
 			'cookie-prefix' => 'sym-members',
 			'section' => '1',
+			'identity' => '5',
 		),
 		########
 

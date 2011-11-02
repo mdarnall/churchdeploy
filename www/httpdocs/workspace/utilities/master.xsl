@@ -21,6 +21,11 @@
 <xsl:include href="toolkit.xsl" />
 
 
+
+<xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
+
+
+
 <xsl:template match="/">
 
 	<html>
@@ -49,6 +54,7 @@
 				<link rel="stylesheet" type="text/css" href="{$workspace}/css/slideshow.css" />
 			</xsl:if>
 			
+			<link rel="stylesheet" href="{$workspace}/bootstrap/bootstrap.min.css" />
 			<link rel="stylesheet" type="text/css" href="{$workspace}/css/common.css" />
 			
             <xsl:comment><![CDATA[[if IE]><link rel="stylesheet" type="text/css" href="]]><xsl:value-of select="$workspace"/><![CDATA[/css/ie.css" media="screen" /><![endif]]]></xsl:comment>
@@ -57,7 +63,7 @@
 		
 		<body class="page-{$current-page}">
 
-            <div>
+            <div class="container">
 
                 <xsl:apply-templates />
             
@@ -80,26 +86,34 @@
                 <xsl:attribute name="src">
                 	
                     <xsl:value-of select="$workspace" />
-                    
                     <xsl:text>/min/f=</xsl:text>
                     
 					<xsl:text>workspace/js/jquery-1.4.4.min.js,</xsl:text>
 					<xsl:text>workspace/js/jquery-ui-1.8.7.custom.min.js,</xsl:text>
 					<xsl:text>workspace/js/jquery.prettyPhoto.js,</xsl:text>
 					<xsl:text>workspace/js/jquery.cycle.all.js,</xsl:text>
-					<!--      <xsl:text>workspace/js/jquery.cookie.js,</xsl:text>-->
-					<!-- <xsl:text>workspace/js/jquery.url.js,</xsl:text> -->
-					<!--    <xsl:text>workspace/js/jquery.widowFix-1.3.1.min.js,</xsl:text>-->
-					<!-- <xsl:text>workspace/js/jquery.animate-shadow-min.js,</xsl:text>
-					<xsl:text>workspace/js/jquery.timers.js,</xsl:text>-->
-					<!--  <xsl:text>workspace/js/slideshow.js,</xsl:text> -->
-					<!--   <xsl:text>workspace/js/jquery.animate.clip.1.0.0.js,</xsl:text>-->
-					<!-- <xsl:text>workspace/js/jquery.cycle.all.js,</xsl:text> -->
-					<xsl:text>workspace/js/html5.js</xsl:text>
+					<!--<xsl:text>workspace/js/jquery.cookie.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.url.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.widowFix-1.3.1.min.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.animate-shadow-min.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.timers.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/slideshow.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.animate.clip.1.0.0.js,</xsl:text>-->
+					<!--<xsl:text>workspace/js/jquery.cycle.all.js,</xsl:text> -->
+					<xsl:text>workspace/js/html5.js</xsl:text>	
                     
                 </xsl:attribute>
 			
 			</xsl:element>
+			
+			<!--
+			<script src="https://www.google.com/jsapi?key=ABQIAAAAeF7bVForzA_cqNUZNR1L2RRXhIxTuxlM4sHqZt4SzuM4PhOh6RSHYx4L7KSwlVE9MdL0ckWNr7HYkA" type="text/javascript"></script>
+			<script type="text/javascript">
+				<xsl:text>google.load('jquery', '1');</xsl:text>
+				<xsl:text>google.load('jqueryui', '1');</xsl:text>
+			</script>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			-->
 			
 			<script src="{$workspace}/js/common.js"></script>
             
