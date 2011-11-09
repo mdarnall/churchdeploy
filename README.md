@@ -1,7 +1,6 @@
 # Setup
 
 - *Instructions are for a Mac*
-- *In the future, the instructions will be abstracted to `church deploy`, instead of the `atheycreek` use-case* 
 
 ## Local environment
 
