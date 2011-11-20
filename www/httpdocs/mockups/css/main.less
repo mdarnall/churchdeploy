@@ -39,18 +39,6 @@ SPECIAL FONTS
 
 */
 
-@font-face {
-    font-family: 'DemingEP';
-    src: url('../fonts/deming_ep-webfont.eot');
-    src: url('../fonts/deming_ep-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/deming_ep-webfont.woff') format('woff'),
-         url('../fonts/deming_ep-webfont.ttf') format('truetype'),
-         url('../fonts/deming_ep-webfont.svg#DemingEPRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 /*	Element presets
 	---------------	*/
 
@@ -61,6 +49,7 @@ SPECIAL FONTS
 
 a {
 	text-decoration: none;
+	-webkit-transition: all 200ms ease-in-out;
 }
 a:hover {
 	text-decoration: none;
@@ -97,7 +86,7 @@ a:hover {
 }
 
 body {
-	background: #BAB9B3;
+	background: #e9ebeb;
 	font: normal normal 400 18px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
 	margin: 0 auto;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
@@ -117,50 +106,46 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3 {
 	text-transform: uppercase;
 }
+p {
+	font: normal normal 400 16px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	margin: 20px 0;
+}
 
 /* CLASSES
    ======= */
-header {
+.header {
 	width: 100%;
-	background: #999;
-	height: 400px;
-	margin-bottom: -90px;
+	background: #bbe4e2;
+	height: 330px;
+	margin-bottom: -70px;
 }
-header .wrapper {
+.header .wrapper {
 	padding-top: 0;
 }
-header .lower {
-	padding: 40px 0;
+.header .lower {
+	padding: 100px 0 0 0;
 }
-header h3 {
+.header h3 {
 	margin: 30px 0 0 0;
 }
-header h1, header h1 a {
+.header h1, .header h1 a {
 	position: relative;
 	color: #fff;
 	text-shadow: none;
 	font-size: 48px;
 	margin: 10px 0 10px 0;
 	text-align: center;
-	text-shadow: 0 3px 2px rgba(0,0,0,0.8);
+	text-shadow: 0 2px 4px rgba(0,0,0,0.35);
 	left: -80px;
 }
-header h3 a {
-	font-family: "DemingEP";
-	color: #fff;
-	display: block;
-	text-align: center;
-	background: rgb(242,77,49);
-	font-size: 12px;
-	width: 180px;
-	margin: 0 auto;
-	letter-spacing: 2px;
-	text-shadow: none;
-}
 .topnav {
-	background: url('../img/topnav-bg.gif') repeat-x;
-	.box-shadow(e('inset 0 -3px 10px rgba(0,0,0,0.35)'));
+	.box-shadow(e('0 4px 8px rgba(0,0,0,0.35)'));
 	height: 59px;
+	border-top: 4px solid hsl(10, 62%, 55%);
+	position: fixed;
+	width: 100%;
+	z-index: 4;
+	background: hsl(179, 0%, 27%);
 }
 .topnav .logo {
 	float: right;
@@ -176,19 +161,23 @@ header h3 a {
 	list-style: none;
 	list-style-type: none;
 	list-style-image: none;
-	font-family: futura-pt;
-	font-weight: 700;
-	text-transform: uppercase;	
+	text-transform: uppercase;
+	margin: 20px 0 0 0;
 }
 .topnav ul li {
 	display: inline;
 }
 .topnav ul li a {
-	padding: 0 10px;
+	padding: 5px 10px;
 	margin-right: 10px;
 	color: #fff;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.35);
 	font-size: 14px;
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 700 !important;
+}
+.topnav ul li.active a {
+	background: #2d2e2e;
 }
 .logomark {
 	text-indent: -9999px;
@@ -201,76 +190,79 @@ header h3 a {
 	margin-left: 50px;
 }
 .sub-menu {
-  padding: 20px;
+  padding: 25px 20px 5px 20px;
   margin-right: -20px;
-  font-family: proxima-nova, sans-serif;
-  font-weight: normal;
+  font-size: 14px;
+  font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 .sub-menu li {
   display: inline;
-  margin: 0 3px;
+  margin: 0 5px;
 }
 .sub-menu li a {
-  padding: 7px;
-  color: #222;
-  .rounded(7px);
+  padding: 5px 10px;
+  color: #595957;
+  font-weight: 700 !important;
 }
 .sub-menu li a:hover {
-	background: rgba(0,0,0,0.15);
+	background: #ededec;
 }
 .sub-menu li.active a {
-  background: rgba(0,0,0,0.35);
-  font-weight: 700;
-  .box-shadow(e('inset 0 1px 2px rgba(0,0,0,0.5)'));
+  background: #ccc;
 }
 .sub-menu li.active a:hover {
-  background: #fff;
+  background: #bbb;
 }
 .sub-menu h4 {
   font-style: italic;
   margin: 10px 340px 10px 0;
 }
-.content, footer {
+.content, .footer {
 	width: 960px;
 	margin: 0 auto;
 }
 .content {
 	background: #fff;
 	.box-shadow(e('0 0 10px rgba(0,0,0,0.5)'));
+	padding-bottom: 30px;
 }
 .feature {
 	padding: 20px;
 }
-.col-2 {
-	padding-left: 0;
-}
 blockquote.scripture {
+	display: block;
 	border: none;
-	padding: 0;
+	padding-top: 20px;
 	margin: 0;
-	font-style: italic;
-	height: 230px;
+	font: normal italic 400 18px/18px adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	text-align: center;
 }
-blockquote.scripture a {
+blockquote.scripture span {
 	display: block;
 	margin: 20px 0;
-	float: right;
+	font-size: 14px;
+	text-align: center;
+	font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
 }
-.divider {
-  background: #f5f5f5 url('../images/noise-sm-2.png') repeat;
-  .gradient6(e("url() repeat,"), #fff, #fff, #555, rgba(0,0,0,0.3), rgba(0,0,0,0.1), rgba(0,0,0,0), 0%, 3%, 5%, 7%, 40%, 50%);
-	-webkit-mask: -webkit-gradient(linear, left center, right center, 
-		color-stop(0%, transparent),
-		color-stop(5%, #ccc),
-		color-stop(80%, #ccc),
-		color-stop(100%, transparent)
-	);
-	height: 6px;
-	width: 960px;
-	margin: 15px 0;
+blockquote.scripture span a {
+	color: hsl(10, 62%, 55%);
+}
+blockquote.scripture span a:hover {
+	color: hsl(10, 62%, 45%);
+}
+
+.subtitle {
+	border-top: 5px dotted #ccc;
+	border-bottom: 5px dotted #ccc;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	font: normal normal 700 48px/50px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: none;
 }
 /* Selection colours (easy to forget) */
 
@@ -321,9 +313,9 @@ px      68    160    252    344    436    528    620    712    804    896    */
 }
 
 .col-1 {
-	width: 680px;
+	width: 580px;
 	float: left;
-	padding: 0 24px 0 0;
+	padding: 0 24px 0 24px;
 }
 .col-2 {
 	width: 256px;
@@ -398,4 +390,118 @@ px      68    160    252    344    436    */
 	
 	}
 	
+}
+
+/* Logos RefTagger Styles*/
+
+.lbsTooltip {
+	background: #e9ebeb;
+	border: 1px solid #777;
+	padding: 5px !important;
+	z-index: 99;
+	text-align: left;
+	text-indent: 0;
+}
+
+.lbsTooltip div {
+	text-align: left;
+}
+.lbsTooltip+div {
+	background: #fff;
+}
+
+.lbsTooltipHeader {
+	background: hsl(179, 0%, 27%);
+	color:#fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.95);
+	font-weight:bold;
+	font-size:14px;
+	line-height: 18px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	padding:4px;
+	position:relative;
+	border: 0;
+}
+
+.lbsTooltipBody 
+{
+	padding: 4px 8px 0 8px;
+	margin:0;
+	position:relative;
+	z-index: 2;
+	border: 0;
+	line-height:16px;
+}
+
+.lbsTooltipBody p, .lbsTooltipBody span
+{
+	display: inline;
+	color: black;
+	font-family: adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+	font-size: 14px;
+	line-height:16px;
+}
+
+.lbsTooltipFooter
+{
+	font-size:11px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	bottom:4px;
+	margin: 5px 0;
+	position:absolute;
+	text-align:right;
+	border: 0;
+}
+
+.lbsTooltipFooter a:link, .lbsTooltipFooter a:visited, .lbsTooltipFooter a:hover 
+{
+	background: hsl(10, 62%, 55%);
+	color: #fff;
+	font-weight: normal;
+	font-size:12px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 3px 6px;
+	text-shadow: none;
+}
+
+.lbsTooltipFooter div
+{
+	text-align:right;
+}
+
+
+.lbsTooltipBody .ch-ref, .lbsTooltipBody .verse-ref
+{
+	font-size: 85%;
+	top: -1px;
+	position: relative;
+}
+
+.lbsTooltipBody .ch-ref
+{
+	font-weight: bold;
+}
+
+.lbsTooltipBody .verse-ref
+{
+	color: dimgray;
+}
+
+.lbsTooltip, .lbsTooltipBody span, .lbsTooltip a, .lbsTooltipBody p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.lbsLibronix img
+{
+	float: none !important;
+}
+
+a[href="http://www.logos.com/reftagger"] {
+	display: none !important;
 }

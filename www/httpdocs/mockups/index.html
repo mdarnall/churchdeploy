@@ -30,7 +30,7 @@
  
 <body>
 
-	<header class="clearfix">
+	<div class="header clearfix">
 		<div class="topnav clearfix">
 			<div class="wrapper">
 				<!--<a href="/" class="logo">Athey Creek Christian Fellowship</a>-->
@@ -49,7 +49,7 @@
 			<a href="/" class="logomark">ACCF</a>
 			<h1>Grade School</h1>
 		</div>
-	</header>
+	</div>
 	
 	<div class="content clearfix" role="main">
 		<ul class="sub-menu">
@@ -61,33 +61,14 @@
 			<li><a href="#">High School</a></li>
 			<li><a href="#">College</a></li>
 		</ul>
-		<div class="divider">&nbsp;</div>
 		<div class="feature">
 			<img src="http://placehold.it/920x400/1A1A19/f4faff&text=Sweet+Picture" />
-			<blockquote class="scripture clearfix">I will therefore that men pray every where, lifting up holy hands, without wrath and doubting.<a href="#">1 Timothy 2:8</a></blockquote>
+			<blockquote class="scripture clearfix">I will therefore that men pray every where, lifting up holy hands, without wrath and doubting.<span class="verse">1 Timothy 2:8</span></blockquote>
 		</div>
 		<div class="col-1">
-			<p></p>
-			<h3>What We're About</h3>
-			<p>Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque.</p>
-			<p>Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla.</p>
-			<h3>Photo Gallery</h3>
-			<p>
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+1" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+2" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+3" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+4" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+5" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+6" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+7" />
-				<img src="http://placehold.it/165x165/83817C/1A1A19&text=Pic+8" />
-			</p>
-			<h3>Men's Group Tumblr</h3>
-			<p>
-				<img src="http://placehold.it/620x100/83817C/1A1A19&text=Post+1" />
-				<img src="http://placehold.it/620x100/83817C/1A1A19&text=Post+2" />
-				<img src="http://placehold.it/620x100/83817C/1A1A19&text=Post+3" />
-			</p>
+			<h3 class="subtitle">Kids of all ages have every opportunity to learn, grow and have fun at our fellowship.</h3>
+			<p>Thanks for checking out our Children’s Ministry web page. The Lord has blessed us with a great bunch of kids at Athey Creek. We enjoy sharing the love of Jesus with them in a safe and secure environment. Feel free to click on the links on this page to get a better understanding of children’s ministry at Athey Creek.</p>
+			<p>If you are looking for a way to plug into our Children’s Ministry, we ask that you sign up at the Children’s Ministry table in the Kid's Lobby. We will contact you about the process itself, and give you the information you will need as you pray through your involvement. If you simply want more information on our Children’s Ministry, please look through our Document Library.</p>
 		</div>
 		<div class="col-2">
 			<h3>Scripture</h3>
@@ -104,9 +85,9 @@
 		</div>
 	</div>
 	
-	<footer>
+	<div class="footer">
 		<p>&copy; 2011. Athey Creek Christian Fellowship. All rights reserved.</p>
-	</footer>
+	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
@@ -116,7 +97,6 @@
 	<script defer src="js/plugins.js"></script>
 	<script defer src="js/script.js"></script>
 	<!-- end scripts -->
-	
 	
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 	   mathiasbynens.be/notes/async-analytics-snippet -->
@@ -133,6 +113,17 @@
 	<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 	<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
+	
+	<script src="js/reftagger.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    Logos.ReferenceTagging.lbsBibleVersion = "KJV";
+	    Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
+	    Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
+	    Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+	    Logos.ReferenceTagging.lbsTargetSite = "biblia";
+	    Logos.ReferenceTagging.tag();
+	    Logos.ReferenceTagging.lbsCssOverride = true;
+	</script>
 
 </body>
 </html>
