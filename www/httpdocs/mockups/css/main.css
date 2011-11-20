@@ -22,7 +22,7 @@ header h3 a{font-family:"DemingEP";color:#fff;display:block;text-align:center;ba
 .topnav ul li{display:inline;}
 .topnav ul li a{padding:0 10px;margin-right:10px;color:#fff;text-shadow:0 1px 0 rgba(0, 0, 0, 0.35);font-size:14px;}
 .logomark{text-indent:-9999px;display:block;height:115px;width:116px;background:url('../img/athey.png') no-repeat;float:left;clear:both;margin-left:50px;}
-.sub-menu{padding:20px;margin-right:-20px;background:#2A5160;font-family:proxima-nova,sans-serif;font-weight:normal;text-align:center;margin:0 auto;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
+.sub-menu{padding:20px;margin-right:-20px;font-family:proxima-nova,sans-serif;font-weight:normal;text-align:center;margin:0 auto;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
 .sub-menu li{display:inline;margin:0 3px;}
 .sub-menu li a{padding:7px;color:#222;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;}
 .sub-menu li a:hover{background:rgba(0, 0, 0, 0.15);}
