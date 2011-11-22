@@ -15,7 +15,7 @@
 			'allow_page_subscription' => '1',
 			'lang' => 'en',
 			'pages_table_nest_children' => 'no',
-			'version' => '2.2.4',
+			'version' => '2.2.5',
 			'cookie_prefix' => 'sym-',
 		),
 		########
@@ -61,7 +61,7 @@
 
 		###### GENERAL ######
 		'general' => array(
-			'useragent' => 'Symphony/2.2.4',
+			'useragent' => 'Symphony/2.2.5',
 			'sitename' => 'Church Deploy',
 		),
 		########
@@ -106,6 +106,11 @@
 		),
 		########
 
+		###### LANGUAGE_REDIRECT ######
+		'language_redirect' => array(
+			'language_codes' => 'en',
+		),
+		########
 
 		###### EMAIL ######
 		'email' => array(

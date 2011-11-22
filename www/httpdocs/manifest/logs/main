@@ -226,3 +226,24 @@ Line: 158 - XSLTProcessor::transformToXml(): The called template 'members-form-g
 22 November 2011 00:50 > User Notice: The page you requested, <code>/workspace/css/slideshow.css/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
 22 November 2011 00:50 > User Notice: The page you requested, <code>/workspace/images/favicon.ico/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
 >>>>>>> Stashed changes
+22 November 2011 03:50 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.general.php on line 855
+22 November 2011 03:51 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.general.php on line 855
+22 November 2011 03:53 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1054): Unknown column 'f.handle-en' in 'where clause' in query "SELECT SQL_CACHE f.id
+				FROM
+					`sym_entries_data_17` AS f
+				WHERE
+					f.`handle-en` = 'about'
+					
+				LIMIT 1" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 718
+22 November 2011 03:53 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.general.php on line 855
+22 November 2011 03:55 > Warning: GenericErrorHandler 2 - chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.general.php on line 855
+22 November 2011 03:56 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1054): Unknown column 'f.handle-en' in 'where clause' in query "SELECT SQL_CACHE f.id
+				FROM
+					`sym_entries_data_19` AS f
+				WHERE
+					f.`handle-en` = 'test'
+					
+				LIMIT 1" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 718
+22 November 2011 03:59 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1054): Unknown column 'value-en' in 'field list' in query "INSERT INTO `sym_entries_data_19` (`entry_id`, `value`, `handle`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`) VALUES ('14', 'About', 'about', 'about', 'About', '1', 'About')" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 718
+22 November 2011 03:59 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1054): Unknown column 'word_count-en' in 'field list' in query "INSERT INTO `sym_entries_data_19` (`entry_id`, `value`, `handle`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`) VALUES ('15', 'About', 'about', 'about', 'About', '1', 'About')" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 718
+22 November 2011 04:00 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1054): Unknown column 'value_format-en' in 'field list' in query "INSERT INTO `sym_entries_data_19` (`entry_id`, `value`, `handle`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`) VALUES ('16', 'About', 'about', 'about', 'About', '1', 'About')" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 718
