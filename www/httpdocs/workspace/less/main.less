@@ -1,0 +1,568 @@
+@import "rounded.less";
+@import "gradient.less";
+@import "shadow.less";
+
+@color-1: hsl(9,80%,95%);
+@color-2: hsl(76,60%,52%);
+
+/*  Texture Library
+	--------------- */
+/*
+http://subtlepatterns.com/patterns/white_texture.png
+http://subtlepatterns.com/patterns/diagonal-noise.png
+http://subtlepatterns.com/patterns/dark_leather.png
+http://subtlepatterns.com/patterns/project_papper.png
+http://subtlepatterns.com/patterns/whitey.png
+http://subtlepatterns.com/patterns/darth_stripe.png
+http://subtlepatterns.com/patterns/bright_squares.png
+http://subtlepatterns.com/patterns/random_grey_variations.png
+http://subtlepatterns.com/patterns/old_mathematics.png
+http://subtlepatterns.com/patterns/45degreee_fabric.png
+*/
+
+/*  Typekit Fonts
+	--------------- */
+/*
+BODY FONTS
+==========
+ff-meta-web-pro
+ff-tisa-web-pro
+
+HEADLINE FONTS
+==============
+ff-speak-web
+din-condensed-web
+proxima-nova
+
+SPECIAL FONTS
+=============
+
+*/
+
+/*	Element presets
+	---------------	*/
+
+* {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 200ms ease-in-out;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 123px;
+	line-height: 132px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 76px;
+	line-height: 84px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 29px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+body {
+	background: #e9ebeb;
+	font: normal normal 400 18px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	color: #222;
+}
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+p {
+	font: normal normal 400 16px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	margin: 20px 0;
+}
+
+/* CLASSES
+   ======= */
+.header {
+	width: 100%;
+	background: #bbe4e2;
+	height: 330px;
+	margin-bottom: -70px;
+}
+.header .wrapper {
+	padding-top: 0;
+}
+.header .lower {
+	padding: 100px 0 0 0;
+}
+.header h3 {
+	margin: 30px 0 0 0;
+}
+.header h1, .header h1 a {
+	position: relative;
+	color: #fff;
+	text-shadow: none;
+	font-size: 48px;
+	margin: 10px 0 10px 0;
+	text-align: center;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+	left: -80px;
+}
+.topnav {
+	.box-shadow(e('0 3px 12px rgba(0,0,0,0.45)'));
+	height: 59px;
+	border-top: 4px solid hsl(10, 62%, 55%);
+	position: fixed;
+	width: 100%;
+	z-index: 4;
+	background: hsla(179, 0%, 24%, 0.95) url('../images/noise-sm.png') repeat;
+}
+.topnav .logo {
+	float: right;
+	padding: 20px 0 0 0;
+	font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.topnav ul {
+	display: block;
+	float: left;
+	list-style: none;
+	list-style-type: none;
+	list-style-image: none;
+	text-transform: uppercase;
+	margin: 20px 0 0 0;
+}
+.topnav ul li {
+	display: inline;
+}
+.topnav ul li a {
+	padding: 5px 10px;
+	margin-right: 10px;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+	font-size: 14px;
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 700 !important;
+}
+.topnav ul li.active a {
+	background: #2d2e2e;
+}
+.logomark {
+	text-indent: -9999px;
+	display: block;
+	height: 115px;
+	width: 116px;
+	background: url('../images/athey.png') no-repeat;
+	float: left;
+	clear: both;
+	margin-left: 50px;
+}
+.sub-menu {
+  padding: 25px 20px 5px 20px;
+  margin-right: -20px;
+  font-size: 14px;
+  font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+.sub-menu li {
+  display: inline;
+  margin: 0 5px;
+}
+.sub-menu li a {
+  padding: 5px 10px;
+  color: #595957;
+  font-weight: 700 !important;
+}
+.sub-menu li a:hover {
+	background: #ededec;
+}
+.sub-menu li.active a {
+  background: #ccc;
+}
+.sub-menu li.active a:hover {
+  background: #bbb;
+}
+.sub-menu h4 {
+  font-style: italic;
+  margin: 10px 340px 10px 0;
+}
+.content, .footer {
+	width: 960px;
+	margin: 0 auto;
+}
+.content {
+	background: #fff;
+	.box-shadow(e('0 0 10px rgba(0,0,0,0.5)'));
+	padding-bottom: 30px;
+}
+.feature {
+	padding: 20px;
+}
+blockquote.scripture {
+	display: block;
+	border: none;
+	padding-top: 20px;
+	margin: 0;
+	font: normal italic 400 18px/18px adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	text-align: center;
+}
+blockquote.scripture span {
+	display: block;
+	margin: 20px 0;
+	font-size: 14px;
+	text-align: center;
+	font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+blockquote.scripture span a {
+	color: hsl(10, 62%, 55%);
+}
+blockquote.scripture span a:hover {
+	color: hsl(10, 62%, 45%);
+}
+
+.subtitle {
+	border-top: 5px dotted #ccc;
+	border-bottom: 5px dotted #ccc;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	font: normal normal 700 48px/50px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: none;
+}
+
+.event-box {
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
+	background: #fff;
+	padding: 0;
+	margin: 0;
+}
+.event-box h3 {
+	.gradient3(e("url('../images/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding-left: 10px;
+	.rounded-top(2px);
+	border: 1px solid #babbbf;
+}
+.event-box li {
+	list-style: none;
+	list-style-image: none;
+	list-style-type: none;
+	text-indent: 0;
+	padding: 10px 0;
+}
+
+.event-box .date {
+	float: left;
+	display: block;
+	width: 42px;
+	.box-shadow(e('0 2px 0 rgba(0,0,0,0.15)'));
+	.rounded(3px);
+}
+
+.date .month {
+	.rounded-top(3px);
+	display: block;
+	width: 42px;
+	text-transform: uppercase;
+	padding: 0;
+	background: #aaa url('../images/noise-sm.png') repeat;
+	color: #fff;
+	font-size: 12px;
+	text-shadow: none;
+	text-align: center;
+	font-weight: 700;
+}
+.date .day {
+	background: #efefef;
+	padding: 5px 0;
+	display: block;
+	width: 42px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
+	color: #333;
+}
+
+.event-box .info {
+	padding-left: 50px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+/*	padding: 72px 48px 84px;*/
+/*	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/diagonal-noise.png') repeat;*/
+/*	background: rgb(232,232,232) url('http://subtlepatterns.com/patterns/white_texture.png') repeat;*/
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+.col-1 {
+	width: 580px;
+	float: left;
+	padding: 0 24px 0 24px;
+}
+.col-2 {
+	width: 310px;
+	float: left;
+}
+
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.wrapper {
+		width: 712px;
+		padding: 48px;
+	}
+}
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	.wrapper {
+		width: 252px;
+		padding: 48px;
+	}
+	
+}
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	.wrapper {
+		width: 436px;
+		padding: 48px;
+	}
+
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}
+
+/* Logos RefTagger Styles*/
+
+.lbsTooltip {
+	background: #e9ebeb;
+	border: 1px solid #777;
+	padding: 5px !important;
+	z-index: 99;
+	text-align: left;
+	text-indent: 0;
+}
+
+.lbsTooltip div {
+	text-align: left;
+}
+.lbsTooltip+div {
+	background: #fff;
+}
+
+.lbsTooltipHeader {
+	background: hsl(179, 0%, 27%);
+	color:#fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.95);
+	font-weight:bold;
+	font-size:14px;
+	line-height: 18px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	margin: 0;
+	padding:4px;
+	position:relative;
+	border: 0;
+}
+
+.lbsTooltipBody 
+{
+	padding: 4px 8px 0 8px;
+	margin:0;
+	position:relative;
+	z-index: 2;
+	border: 0;
+	line-height:16px;
+}
+
+.lbsTooltipBody p, .lbsTooltipBody span
+{
+	display: inline;
+	color: black;
+	font-family: adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+	font-size: 14px;
+	line-height:16px;
+}
+
+.lbsTooltipFooter
+{
+	font-size:11px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	bottom:4px;
+	margin: 5px 0;
+	position:absolute;
+	text-align:right;
+	border: 0;
+}
+
+.lbsTooltipFooter a:link, .lbsTooltipFooter a:visited, .lbsTooltipFooter a:hover 
+{
+	background: hsl(10, 62%, 55%);
+	color: #fff;
+	font-weight: normal;
+	font-size:12px;
+	font-family:proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 3px 6px;
+	text-shadow: none;
+}
+
+.lbsTooltipFooter div
+{
+	text-align:right;
+}
+
+
+.lbsTooltipBody .ch-ref, .lbsTooltipBody .verse-ref
+{
+	font-size: 85%;
+	top: -1px;
+	position: relative;
+}
+
+.lbsTooltipBody .ch-ref
+{
+	font-weight: bold;
+}
+
+.lbsTooltipBody .verse-ref
+{
+	color: dimgray;
+}
+
+.lbsTooltip, .lbsTooltipBody span, .lbsTooltip a, .lbsTooltipBody p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.lbsLibronix img
+{
+	float: none !important;
+}
+
+a[href="http://www.logos.com/reftagger"] {
+	display: none !important;
+}
