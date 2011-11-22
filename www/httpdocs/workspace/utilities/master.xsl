@@ -12,7 +12,7 @@
 	encoding="UTF-8"
     method="xml" 
     omit-xml-declaration="yes" 
-    indent="no" 
+    indent="yes" 
     />
 
 
@@ -27,10 +27,16 @@
 
 
 <xsl:template match="/">
-
-	<html>
+	
+	<xsl:comment><![CDATA[[if lt IE 7]> <html class="no-js ie6 oldie" lang="en" /> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 7]>    <html class="no-js ie7 oldie" lang="en" /> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if IE 8]>    <html class="no-js ie8 oldie" lang="en" /> <![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html class="no-js" lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 	
 		<head>
+            
+            <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+            <link rel="sitemap" type="application/xml" title="Sitemap" href="{$root}/sitemap.xml" />
             
             <title>
             
@@ -118,6 +124,7 @@
 			<script src="{$workspace}/js/common.js"></script>
             
 		</body>
+		
 		
 	</html>
 	
