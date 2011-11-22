@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.1.44)
 # Database: churchdeploy
-# Generation Time: 2011-11-22 11:38:52 +0000
+# Generation Time: 2011-11-22 16:21:17 +0000
 # ************************************************************
 
 
@@ -47,7 +47,7 @@ LOCK TABLES `sym_authors` WRITE;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-11-22 03:25:14','developer','yes',NULL,'no',NULL);
+	(1,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com','2011-11-22 06:39:38','developer','yes',NULL,'no',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -97,7 +97,14 @@ VALUES
 	(7,1,1,'2011-11-02 04:17:55','2011-11-02 11:17:55'),
 	(11,2,1,'2011-11-22 01:55:49','2011-11-22 09:55:49'),
 	(12,2,1,'2011-11-22 01:56:06','2011-11-22 09:56:06'),
-	(13,2,1,'2011-11-22 02:01:58','2011-11-22 10:01:58');
+	(13,2,1,'2011-11-22 02:01:58','2011-11-22 10:01:58'),
+	(21,3,1,'2011-11-22 04:02:12','2011-11-22 12:02:12'),
+	(20,3,1,'2011-11-22 04:02:06','2011-11-22 12:02:06'),
+	(19,3,1,'2011-11-22 04:02:00','2011-11-22 12:02:00'),
+	(18,3,1,'2011-11-22 04:01:53','2011-11-22 12:01:53'),
+	(22,3,1,'2011-11-22 04:02:18','2011-11-22 12:02:18'),
+	(23,3,1,'2011-11-22 04:02:23','2011-11-22 12:02:23'),
+	(24,3,1,'2011-11-22 04:02:29','2011-11-22 12:02:29');
 
 /*!40000 ALTER TABLE `sym_entries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -212,6 +219,41 @@ VALUES
 UNLOCK TABLES;
 
 
+# Dump of table sym_entries_data_19
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_19`;
+
+CREATE TABLE `sym_entries_data_19` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` text,
+  `handle-en` varchar(255) DEFAULT NULL,
+  `value-en` text,
+  `word_count-en` text,
+  `value_format-en` text,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+LOCK TABLES `sym_entries_data_19` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_19` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_19` (`id`, `entry_id`, `handle`, `value`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`)
+VALUES
+	(2,18,'about','About','about','About','1','About'),
+	(3,19,'services','Services','services','Services','1','Services'),
+	(4,20,'events','Events','events','Events','1','Events'),
+	(5,21,'teachings','Teachings','teachings','Teachings','1','Teachings'),
+	(6,22,'ministries','Ministries','ministries','Ministries','1','Ministries'),
+	(7,23,'missions','Missions','missions','Missions','1','Missions'),
+	(8,24,'give','Give','give','Give','1','Give');
+
+/*!40000 ALTER TABLE `sym_entries_data_19` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 # Dump of table sym_entries_data_2
 # ------------------------------------------------------------
 
@@ -236,6 +278,37 @@ VALUES
 	(8,7,'john','John');
 
 /*!40000 ALTER TABLE `sym_entries_data_2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_20
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_20`;
+
+CREATE TABLE `sym_entries_data_20` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `relation_id` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`),
+  KEY `relation_id` (`relation_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `sym_entries_data_20` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_20` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_20` (`id`, `entry_id`, `relation_id`)
+VALUES
+	(2,18,NULL),
+	(3,19,NULL),
+	(4,20,NULL),
+	(5,21,NULL),
+	(6,22,NULL),
+	(7,23,NULL),
+	(8,24,NULL);
+
+/*!40000 ALTER TABLE `sym_entries_data_20` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -395,13 +468,13 @@ VALUES
 	(8,'markdown','enabled','1.13'),
 	(9,'members','enabled','1.1.1'),
 	(10,'datetime','enabled','2.1.1'),
-	(11,'multilingual_field','enabled','1.4.1'),
+	(25,'language_redirect','enabled','1.0.3'),
 	(12,'uniqueuploadfield','enabled','1.4.2'),
 	(13,'uniqueinputfield','enabled','1.3'),
 	(14,'html5_doctype','enabled','1.2.5'),
 	(15,'image_index_preview','enabled','1.2.1'),
 	(16,'jquery_date_picker','enabled','1.3'),
-	(17,'language_redirect','enabled','1.0.3'),
+	(24,'multilingual_field','enabled','1.4.1'),
 	(18,'massuploadutility','enabled','0.9.8'),
 	(19,'order_entries','enabled','1.9.7'),
 	(20,'root_page_params','enabled','1.2'),
@@ -459,11 +532,11 @@ VALUES
 	(125,9,'/backend/','AdminPagePreGenerate','appendAssets'),
 	(123,9,'/frontend/','EventPreSaveFilter','checkEventPermissions'),
 	(122,9,'/frontend/','FrontendProcessEvents','appendLoginStatusToEventXML'),
-	(100,11,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(144,25,'/system/preferences/','Save','__SavePreferences'),
 	(102,14,'/frontend/','FrontendOutputPostGenerate','parse_html'),
 	(103,15,'/backend/','AdminPagePreGenerate','__appendAssets'),
 	(106,16,'/backend/','InitaliseAdminPageHead','initializeAdmin'),
-	(107,17,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(142,24,'/system/preferences/','Save','__SavePreferences'),
 	(109,6,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
 	(118,18,'/backend/','AdminPagePreGenerate','initaliseAdminPageHead'),
 	(117,18,'/system/preferences/','CustomActions','savePreferences'),
@@ -481,8 +554,8 @@ VALUES
 	(140,22,'/backend/','InitaliseAdminPageHead','addScriptToHead'),
 	(92,23,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
 	(93,23,'/system/preferences/','Save','__SavePreferences'),
-	(101,11,'/system/preferences/','Save','__SavePreferences'),
-	(108,17,'/system/preferences/','Save','__SavePreferences'),
+	(143,25,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
+	(141,24,'/system/preferences/','AddCustomPreferenceFieldsets','appendPreferences'),
 	(135,20,'/system/preferences/','Save','save_settings');
 
 /*!40000 ALTER TABLE `sym_extensions_delegates` ENABLE KEYS */;
@@ -522,7 +595,9 @@ VALUES
 	(7,'Activation','activation','memberactivation',1,'no',6,'sidebar','yes'),
 	(11,'Gender','gender','select',1,'yes',4,'sidebar','yes'),
 	(9,'Role','role','memberrole',1,'yes',7,'sidebar','yes'),
-	(16,'Content','content','textarea',2,'no',1,'main','yes');
+	(20,'Parent','parent','selectbox_link',3,'no',1,'main','yes'),
+	(16,'Content','content','textarea',2,'no',1,'main','yes'),
+	(19,'Tag','tag','multilingual',3,'no',0,'main','yes');
 
 /*!40000 ALTER TABLE `sym_fields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -747,6 +822,15 @@ CREATE TABLE `sym_fields_multilingual` (
   KEY `field_id` (`field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+LOCK TABLES `sym_fields_multilingual` WRITE;
+/*!40000 ALTER TABLE `sym_fields_multilingual` DISABLE KEYS */;
+
+INSERT INTO `sym_fields_multilingual` (`id`, `field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`)
+VALUES
+	(4,19,25,'single','none',NULL,0,'yes','yes');
+
+/*!40000 ALTER TABLE `sym_fields_multilingual` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table sym_fields_order_entries
@@ -809,6 +893,15 @@ CREATE TABLE `sym_fields_selectbox_link` (
   KEY `field_id` (`field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+LOCK TABLES `sym_fields_selectbox_link` WRITE;
+/*!40000 ALTER TABLE `sym_fields_selectbox_link` DISABLE KEYS */;
+
+INSERT INTO `sym_fields_selectbox_link` (`id`, `field_id`, `allow_multiple_selection`, `show_association`, `related_field_id`, `limit`)
+VALUES
+	(5,20,'yes','yes','19',20);
+
+/*!40000 ALTER TABLE `sym_fields_selectbox_link` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table sym_fields_stage
@@ -1117,8 +1210,9 @@ LOCK TABLES `sym_sections` WRITE;
 
 INSERT INTO `sym_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`)
 VALUES
-	(1,'Members','members',1,NULL,'asc','no','Members'),
-	(2,'Advanced: SEO','advanced-seo',2,NULL,'asc','no','Advanced');
+	(1,'Members','members',2,NULL,'asc','no','Members'),
+	(2,'Advanced: SEO','advanced-seo',3,NULL,'asc','no','Advanced'),
+	(3,'Content: Tags','content-tags',1,NULL,'asc','no','Content');
 
 /*!40000 ALTER TABLE `sym_sections` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1140,6 +1234,15 @@ CREATE TABLE `sym_sections_association` (
   KEY `parent_section_id` (`parent_section_id`,`child_section_id`,`child_section_field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+LOCK TABLES `sym_sections_association` WRITE;
+/*!40000 ALTER TABLE `sym_sections_association` DISABLE KEYS */;
+
+INSERT INTO `sym_sections_association` (`id`, `parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`)
+VALUES
+	(5,3,19,3,20,'no');
+
+/*!40000 ALTER TABLE `sym_sections_association` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table sym_sessions
@@ -1160,7 +1263,7 @@ LOCK TABLES `sym_sessions` WRITE;
 
 INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
-	('e0f1b01f74a48ea62ec9530cd0247e32',1321961114,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}'),
+	('e0f1b01f74a48ea62ec9530cd0247e32',1321972779,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}'),
 	('e2b30627a0150fa5ae2718a514d72ac2',1321246108,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
