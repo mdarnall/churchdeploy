@@ -269,36 +269,52 @@ blockquote.scripture span a:hover {
 	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
 	background: #fff;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 10px 0;
+	border: 1px solid #babbbf;
+	.rounded(2px);
 }
-.event-box h3 {
-	.gradient3(e("url('../images/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
+.side-header {
+	.gradient3(e("url('../img/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
 	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
 	padding-left: 10px;
 	.rounded-top(2px);
-	border: 1px solid #babbbf;
+	border-bottom: 1px solid #ccc;
+	
 }
-.event-box li {
+.event-box .event {
 	list-style: none;
 	list-style-image: none;
 	list-style-type: none;
 	text-indent: 0;
 	padding: 10px 0;
+	border-bottom: 1px solid #babbbf;
+	border-top: none;
+	padding-bottom: 12px !important;
 }
-
+.event.even {
+	background: #ededec;
+	border-top: 1px solid #fefefe;
+}
+.event.last {
+	border-bottom: none;
+}
+.event.grade-school {
+	border-left:  4px solid hsl(10, 62%, 55%);
+}
 .event-box .date {
 	float: left;
 	display: block;
 	width: 42px;
-	.box-shadow(e('0 2px 0 rgba(0,0,0,0.15)'));
+	height: 42px;
+	.box-shadow(e('0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1)'));
 	.rounded(3px);
+	margin: 0 10px;
+	border: 1px solid #ccc;
 }
-
 .date .month {
-	.rounded-top(3px);
 	display: block;
 	width: 42px;
 	text-transform: uppercase;
@@ -312,7 +328,7 @@ blockquote.scripture span a:hover {
 }
 .date .day {
 	background: #efefef;
-	padding: 5px 0;
+	padding: 3px 0;
 	display: block;
 	width: 42px;
 	text-align: center;
@@ -325,6 +341,20 @@ blockquote.scripture span a:hover {
 	padding-left: 50px;
 }
 
+.info .description {
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
+	color: #222;
+	font-weight: 700;
+	display: block;
+}
+
+.info .location {
+	background: url(../img/pin.png) 0 0 no-repeat;
+	display: block;
+	font: normal italic normal 14px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+	margin: 5px 0 0 15px;
+	padding-left: 15px;
+}
 /* Selection colours (easy to forget) */
 
 ::selection 	 	{background: rgb(255,255,158);}
