@@ -86,38 +86,89 @@
 				<div class="topnav clearfix">
 				
 					<div class="wrapper">
-					
+				
 						<!--<a href="/" class="logo">Athey Creek Christian Fellowship</a>-->
 						<ul id="nav">
-							<li><a href="../about/">About</a></li>
-							<li><a href="../services/">Services</a></li>
-							<li><a href="../events/">Events</a></li>
-							<li><a href="../teachings/">Teachings</a></li>
-							<li class="active"><a href="index.html">Ministries</a></li>
-							<li><a href="../missions/">Missions</a></li>
-							<li><a href="../give/">Give</a></li>
+							
+							<xsl:for-each select="//content-tags/entry">
+
+								<xsl:if test="not(parent/item)">
+
+									<li>
+										
+										<xsl:attribute name="class">
+											<xsl:if test="$pt1 = tag/@handle">
+												<xsl:text>active</xsl:text>
+											</xsl:if>
+										</xsl:attribute>
+										
+										<a href="{$root}/{$url-language}/{tag/@handle}/">
+										
+											<!--<xsl:attribute name="title">
+												<xsl:value-of select="description" />
+											</xsl:attribute>-->
+											
+											<xsl:value-of select="tag" />
+										
+										</a>
+									</li>
+
+								</xsl:if>
+							
+							</xsl:for-each>
+							
 						</ul>
+				
 					</div>
-					
+				
 				</div>
-			
+				
 				<div class="wrapper lower">
-					<a href="{$root}" class="logomark" title="Home">ACCF</a>
-					<h1>Grade School</h1>
+					<a href="{$root}" class="logomark" title="Home">
+						<xsl:value-of select="$website-name" />
+					</a>
+					<h1>
+						<xsl:choose>
+							<xsl:when test="$pt2">
+								<xsl:value-of select="//content-tags/entry/tag[ @handle = $pt2 ]/../description" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="//content-tags/entry/tag[ @handle = $pt1 ]/../description" />
+							</xsl:otherwise>
+						</xsl:choose>
+						
+					</h1>
 				</div>
-		
+				
 			</div>
 					
 			<div class="content clearfix" role="main">
 			
 				<ul class="sub-menu">
-					<li class="active"><a href="#">Men</a></li>
-					<li><a href="#">Women</a></li>
-					<li><a href="#">Children (0-K)</a></li>
-					<li><a href="#">Grade School</a></li>
-					<li><a href="#">Jr. High</a></li>
-					<li><a href="#">High School</a></li>
-					<li><a href="#">College</a></li>
+					
+					<xsl:for-each select="//content-tags/entry[ parent/item/@handle = $pt1 ]">
+						
+						<li>
+							
+							<xsl:attribute name="class">
+								<xsl:if test="$pt2 = tag/@handle">
+									<xsl:text>active</xsl:text>
+								</xsl:if>
+							</xsl:attribute>
+							
+							<a href="{$root}/{$url-language}/{$pt1}/{tag/@handle}/">
+							
+								<!--<xsl:attribute name="title">
+									<xsl:value-of select="description" />
+								</xsl:attribute>-->
+								
+								<xsl:value-of select="tag" />
+							
+							</a>
+						</li>
+					
+					</xsl:for-each>
+					
 				</ul>
 				
 				<div class="feature">
@@ -139,9 +190,8 @@
 				</div>
 				
 				<div class="col-2">
-				
-					<ul class="event-box"><h3>Upcoming Events</h3>
-						<li>
+					<ul class="event-box"><h3 class="side-header">Upcoming Events</h3>
+						<li class="event grade-school">
 							<div class="date">
 								<span class="month">Jun</span>
 								<span class="day">22</span>
@@ -151,18 +201,34 @@
 								<span class="location">Sanctuary, Church Building</span>
 							</div>
 						</li>
-						<li></li>
-						<li></li>
+						<li class="event grade-school even">
+							<div class="date">
+								<span class="month">Jul</span>
+								<span class="day">5</span>
+							</div>
+							<div class="info">
+								<span class="description">Snowshoe Adventure</span>
+								<span class="location">Mt. Hood National Forest</span>
+							</div>
+						</li>
+						<li class="event grade-school last">
+							<div class="date">
+								<span class="month">Dec</span>
+								<span class="day">25</span>
+							</div>
+							<div class="info">
+								<span class="description">Early Morning Worship</span>
+								<span class="location">Bryn's House</span>
+							</div>
+						</li>
 					</ul>
-					
-					<h3>Leader Contact</h3>
-					
-					<p><a href="../about/about.html"><img src="http://placehold.it/260x50/83817C/1A1A19&amp;text=Bryn+Ritchie" /></a></p>
-					
-					<h3>Servant Ministry</h3>
-					
-					<p><img src="http://placehold.it/260x50/83817C/1A1A19&amp;text=Download+Form" /></p>
-					
+					<div class="leader-contact">
+						<h3 class="side-header">Leader Contact</h3>
+					</div>
+					<div class="resources">
+						<h3 class="resources-header">Resources</h3>
+					</div>
+		
 				</div>
 			
 			</div>

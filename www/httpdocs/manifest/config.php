@@ -42,6 +42,7 @@
 			'character_set' => 'utf8',
 			'character_encoding' => 'utf8',
 			'runtime_character_set_alter' => '1',
+			'query_caching' => 'on',
 			'host' => 'localhost',
 			'port' => '3306',
 			'user' => 'root',
