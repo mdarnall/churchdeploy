@@ -5,9 +5,9 @@
 	Class datasourcedynamic_xml_apibibliacom extends Datasource{
 
 		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
-		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?passage=John+1&key=75a4b16582635a69f1194f670abfa9f0';
-		public $dsParamXPATH = '/';
-		public $dsParamCACHE = '30';
+		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-extras-verse:encoded}';
+		public $dsParamXPATH = '/response/text';
+		public $dsParamCACHE = '999999';
 		public $dsParamTIMEOUT = '6';
 
 		
@@ -16,7 +16,7 @@
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array();
+			$this->_dependencies = array('$ds-extras-verse');
 		}
 
 		public function about(){
@@ -27,7 +27,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-26T23:01:56+00:00'
+				'release-date' => '2011-11-28T02:06:22+00:00'
 			);
 		}
 

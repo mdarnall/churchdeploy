@@ -15,6 +15,8 @@
 			'allow_page_subscription' => '1',
 			'lang' => 'en',
 			'pages_table_nest_children' => 'no',
+			'strict_error_handling' => 'yes',
+			'session_gc_divisor' => '10',
 			'version' => '2.2.5',
 			'cookie_prefix' => 'sym-',
 		),

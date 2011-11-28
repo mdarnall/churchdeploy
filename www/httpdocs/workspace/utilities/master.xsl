@@ -174,8 +174,17 @@
 				<div class="feature">
 					
 					<img src="http://placehold.it/920x400/1A1A19/f4faff&amp;text=Sweet+Picture" width="920" height="400" />
-				
-					<blockquote class="scripture clearfix">I will therefore that men pray every where, lifting up holy hands, without wrath and doubting.<span class="verse">1 Timothy 2:8</span></blockquote>
+					
+					<xsl:if test="//extras-verse/entry">
+						
+						<blockquote class="scripture clearfix">
+							<xsl:value-of select="//dynamic-xml-apibibliacom/text" />
+							<span class="verse">
+								<xsl:value-of select="//extras-verse/entry/passage" />
+							</span>
+						</blockquote>
+							
+					</xsl:if>
 				
 				</div>
 				
