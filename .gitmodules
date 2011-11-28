@@ -112,3 +112,6 @@
 [submodule "www/httpdocs/extensions/configuration"]
 	path = www/httpdocs/extensions/configuration
 	url = http://github.com/bauhouse/configuration.git
+[submodule "www/httpdocs/extensions/health_check"]
+	path = www/httpdocs/extensions/health_check
+	url = https://github.com/pixelninja/health_check.git

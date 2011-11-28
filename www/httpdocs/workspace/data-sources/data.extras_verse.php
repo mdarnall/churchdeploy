@@ -35,7 +35,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-26T20:17:29+00:00'
+				'release-date' => '2011-11-28T01:43:44+00:00'
 			);
 		}
 
