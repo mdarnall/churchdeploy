@@ -2,23 +2,22 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceextras_verse extends Datasource{
+	Class datasourceseo_all_entries extends Datasource{
 
-		public $dsParamROOTELEMENT = 'extras-verse';
+		public $dsParamROOTELEMENT = 'seo-all-entries';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamPARAMOUTPUT = 'passage';
 		public $dsParamSORT = 'system:id';
-		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'passage'
+				'name',
+				'content'
 		);
 
 
@@ -29,18 +28,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Extras: Verse',
+				'name' => 'SEO: All entries',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-28T01:43:44+00:00'
+				'release-date' => '2011-11-28T16:09:52+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '4';
+			return '2';
 		}
 
 		public function allowEditorToParse(){

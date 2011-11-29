@@ -2,33 +2,26 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcemembers extends Datasource{
+	Class datasourceverses_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'members';
+		public $dsParamROOTELEMENT = 'verses-entries-by-tag';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$pt1';
+		public $dsParamPARAMOUTPUT = 'passage';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'25' => '{$pt1}',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'system:pagination',
-				'full-name',
-				'first-name',
-				'middle-name',
-				'last-name',
-				'email',
-				'password',
-				'activation',
-				'role',
-				'role: permissions',
-				'date-created',
-				'gender'
+				'passage'
 		);
 
 
@@ -39,18 +32,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Members',
+				'name' => 'Verses: Entries by tag',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
-				'version' => 'Symphony 2.2.4',
-				'release-date' => '2011-11-01T22:45:48+00:00'
+				'version' => 'Symphony 2.2.5',
+				'release-date' => '2011-11-29T00:49:03+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '1';
+			return '4';
 		}
 
 		public function allowEditorToParse(){

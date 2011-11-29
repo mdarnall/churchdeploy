@@ -2,37 +2,47 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedynamic_xml_apibibliacom extends Datasource{
+	Class datasourceimages_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
-		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-verses-entries-by-tag:encoded}';
-		public $dsParamXPATH = '/response/text';
-		public $dsParamCACHE = '1';
-		public $dsParamTIMEOUT = '6';
+		public $dsParamROOTELEMENT = 'images-entries-by-tag';
+		public $dsParamORDER = 'desc';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
+		public $dsParamSTARTPAGE = '1';
+		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$pt1';
+		public $dsParamSORT = 'system:id';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'44' => '{$pt1}',
+		);
 
-		
+		public $dsParamINCLUDEDELEMENTS = array(
+				'image',
+				'position'
+		);
+
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array('$ds-verses-entries-by-tag');
+			$this->_dependencies = array();
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Dynamic XML: api.biblia.com',
+				'name' => 'Images: Entries by tag',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T03:14:41+00:00'
+				'release-date' => '2011-11-29T04:46:51+00:00'
 			);
 		}
 
 		public function getSource(){
-			return 'dynamic_xml';
+			return '8';
 		}
 
 		public function allowEditorToParse(){
@@ -43,7 +53,7 @@
 			$result = new XMLElement($this->dsParamROOTELEMENT);
 
 			try{
-				include(TOOLKIT . '/data-sources/datasource.dynamic_xml.php');
+				include(TOOLKIT . '/data-sources/datasource.section.php');
 			}
 			catch(FrontendPageNotFoundException $e){
 				// Work around. This ensures the 404 page is displayed and

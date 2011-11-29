@@ -19,7 +19,7 @@
 
 
 
-<xsl:include href="date-time.xsl" />
+<xsl:include href="date-time-advanced.xsl" />
 <xsl:include href="toolkit.xsl" />
 
 
@@ -52,15 +52,15 @@
 				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 				<meta http-equiv="imagetoolbar" content="false" />
 				
-				<meta name="description" content="{//advanced-seo/entry[name='description']/content}" />
+				<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
 				<meta name="author" content="{$website-name}" />
 				<meta name="viewport" content="width=device-width,initial-scale=1" />
 				
 				<!-- Pinned Site Name for IE9/Windows 7+ -->
 				
 					<meta name="application-name" content="{$website-name}" />
-					<meta name="msapplication-tooltip" content="{//advanced-seo/entry[name='msapplication-tooltip']/content}" />
-					<meta name="msapplication-starturl" content="{//advanced-seo/entry[name='msapplication-starturl']/content}" />
+					<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
+					<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
 			
 			<!--stylesheets-->
 			
@@ -81,6 +81,8 @@
 				<xsl:value-of select="$current-page" />
 			</xsl:attribute>
 			
+			ff<xsl:value-of select="$pt1" disable-output-escaping="yes" />ff
+			
 			<div class="header clearfix">
 			
 				<div class="topnav clearfix">
@@ -90,19 +92,19 @@
 						<!--<a href="/" class="logo">Athey Creek Christian Fellowship</a>-->
 						<ul id="nav">
 							
-							<xsl:for-each select="//content-tags/entry">
+							<xsl:for-each select="//tags-all-entries/entry[ not( @id = 43 ) ]">
 
 								<xsl:if test="not(parent/item)">
 
 									<li>
 										
 										<xsl:attribute name="class">
-											<xsl:if test="$pt1 = tag/@handle">
+											<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
 												<xsl:text>active</xsl:text>
 											</xsl:if>
 										</xsl:attribute>
 										
-										<a href="{$root}/{$url-language}/{tag/@handle}/">
+										<a href="{$root}/{$url-language}/{@id}/{description/@handle}/">
 										
 											<!--<xsl:attribute name="title">
 												<xsl:value-of select="description" />
@@ -124,63 +126,86 @@
 				</div>
 				
 				<div class="wrapper lower">
+					
 					<a href="{$root}" class="logomark" title="Home">
 						<xsl:value-of select="$website-name" />
 					</a>
+					
 					<h1>
-						<xsl:choose>
-							<xsl:when test="$pt2">
-								<xsl:value-of select="//content-tags/entry/tag[ @handle = $pt2 ]/../description" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="//content-tags/entry/tag[ @handle = $pt1 ]/../description" />
-							</xsl:otherwise>
-						</xsl:choose>
-						
+						<xsl:value-of select="//tags-all-entries/entry[ @id = $pt1 ]/description" />
 					</h1>
+					
 				</div>
 				
 			</div>
 					
 			<div class="content clearfix" role="main">
-			
-				<ul class="sub-menu">
+				
+				<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
+				
+				<xsl:if test="
+					count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id ] ) or
+					count( //tags-all-entries/entry[ parent/item/@id = $pt1 ] )
+				">
 					
-					<xsl:for-each select="//content-tags/entry[ parent/item/@handle = $pt1 ]">
+					<ul class="sub-menu">
 						
-						<li>
-							
-							<xsl:attribute name="class">
-								<xsl:if test="$pt2 = tag/@handle">
-									<xsl:text>active</xsl:text>
-								</xsl:if>
-							</xsl:attribute>
-							
-							<a href="{$root}/{$url-language}/{$pt1}/{tag/@handle}/">
-							
-								<!--<xsl:attribute name="title">
-									<xsl:value-of select="description" />
-								</xsl:attribute>-->
-								
-								<xsl:value-of select="tag" />
-							
-							</a>
-						</li>
+						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
+							<xsl:call-template name="nav-submenu-item" />
+						</xsl:for-each>
+						
+						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
+							<xsl:call-template name="nav-submenu-item" />
+						</xsl:for-each>
+						
+					</ul>
 					
-					</xsl:for-each>
-					
-				</ul>
+				</xsl:if>
 				
 				<div class="feature">
 					
-					<img src="http://placehold.it/920x400/1A1A19/f4faff&amp;text=Sweet+Picture" width="920" height="400" />
+					<xsl:for-each select="//images-entries-by-tag/entry">
+											
+						<div class="image">
+							
+							<xsl:attribute name="style">
+								
+								<xsl:text>background-image: url('</xsl:text>
+								<xsl:value-of select="$root" />
+								<xsl:text>/image/2/920/400/</xsl:text>
+								
+								<xsl:choose>
+									<xsl:when test="position = 'Top left'">1</xsl:when>
+									<xsl:when test="position = 'Top center'">2</xsl:when>
+									<xsl:when test="position = 'Top right'">3</xsl:when>
+									<xsl:when test="position = 'Middle left'">4</xsl:when>
+									<xsl:when test="position = 'Middle center'">5</xsl:when>
+									<xsl:when test="position = 'Middle right'">6</xsl:when>
+									<xsl:when test="position = 'Bottom left'">7</xsl:when>
+									<xsl:when test="position = 'Bottom center'">8</xsl:when>
+									<xsl:when test="position = 'Bottom right'">9</xsl:when>
+									<xsl:otherwise>5</xsl:otherwise>
+								</xsl:choose>
+								
+								<xsl:text>/0</xsl:text>
+								<xsl:value-of select="image/@path" />
+								<xsl:text>/</xsl:text>
+								<xsl:value-of select="image/filename" />
+								<xsl:text>')</xsl:text>
+								
+							</xsl:attribute>
+							
+						</div>
+						
+					</xsl:for-each>
+
 					
-					<xsl:if test="//extras-verse/entry">
+					<xsl:if test="//verses-entries-by-tag/entry">
 						
 						<blockquote class="scripture clearfix">
 							<xsl:value-of select="//dynamic-xml-apibibliacom/text" />
 							<span class="verse">
-								<xsl:value-of select="//extras-verse/entry/passage" />
+								<xsl:value-of select="//verses-entries-by-tag/entry/passage" />
 							</span>
 						</blockquote>
 							
@@ -189,48 +214,17 @@
 				</div>
 				
 				<div class="col-1">
-					
-					<h3 class="subtitle">Kids of all ages have every opportunity to learn, grow and have fun at our fellowship.</h3>
 				
-					<p>Thanks for checking out our Children’s Ministry web page. The Lord has blessed us with a great bunch of kids at Athey Creek. We enjoy sharing the love of Jesus with them in a safe and secure environment. Feel free to click on the links on this page to get a better understanding of children’s ministry at Athey Creek.</p>
-				
-					<p>If you are looking for a way to plug into our Children’s Ministry, we ask that you sign up at the Children’s Ministry table in the Kid's Lobby. We will contact you about the process itself, and give you the information you will need as you pray through your involvement. If you simply want more information on our Children’s Ministry, please look through our Document Library.</p>
-					
+					<xsl:value-of select="//text-entries-by-tag/entry/content" disable-output-escaping="yes" />
+									
 				</div>
 				
 				<div class="col-2">
-					<ul class="event-box"><h3 class="side-header">Upcoming Events</h3>
-						<li class="event grade-school">
-							<div class="date">
-								<span class="month">Jun</span>
-								<span class="day">22</span>
-							</div>
-							<div class="info">
-								<span class="description">Men's Breakfast</span>
-								<span class="location">Sanctuary, Church Building</span>
-							</div>
-						</li>
-						<li class="event grade-school even">
-							<div class="date">
-								<span class="month">Jul</span>
-								<span class="day">5</span>
-							</div>
-							<div class="info">
-								<span class="description">Snowshoe Adventure</span>
-								<span class="location">Mt. Hood National Forest</span>
-							</div>
-						</li>
-						<li class="event grade-school last">
-							<div class="date">
-								<span class="month">Dec</span>
-								<span class="day">25</span>
-							</div>
-							<div class="info">
-								<span class="description">Early Morning Worship</span>
-								<span class="location">Bryn's House</span>
-							</div>
-						</li>
-					</ul>
+					
+					<xsl:if test="count( //events-entries-by-tag/entry )">
+						<xsl:call-template name="component-event" />
+					</xsl:if>
+					
 					<div class="leader-contact">
 						<h3 class="side-header">Leader Contact</h3>
 					</div>
@@ -296,5 +290,116 @@
 	</html>
 	
 </xsl:template>
+
+
+
+<xsl:template name="nav-submenu-item">
+
+	<li>
+		
+		<xsl:attribute name="class">
+			<xsl:if test="$pt1 = @id">
+				<xsl:text>active</xsl:text>
+			</xsl:if>
+		</xsl:attribute>
+		
+		<a href="{$root}/{$url-language}/{@id}/{description/@handle}/">
+		
+			<!--<xsl:attribute name="title">
+				<xsl:value-of select="description" />
+			</xsl:attribute>-->
+			
+			<xsl:value-of select="tag" />
+		
+		</a>
+		
+	</li>
+	
+</xsl:template>
+
+
+
+<xsl:template name="component-event">
+	
+	<ul class="event-box"><h3 class="side-header">Upcoming Events</h3>
+		
+		<xsl:for-each select="//events-entries-by-tag/entry">
+
+			<li>
+				
+				<xsl:attribute name="class">
+					<xsl:text>event</xsl:text>
+					
+					<xsl:if test="position() mod 2 = 0">
+						<xsl:text> even</xsl:text>
+					</xsl:if>
+					
+					<xsl:if test="position() &lt; last()">
+						<xsl:text> last</xsl:text>
+					</xsl:if>
+					
+					<xsl:for-each select="tags/item">
+						<xsl:text> category-</xsl:text>
+						<xsl:value-of select="@id" />
+					</xsl:for-each>
+					
+				</xsl:attribute>
+				
+				<div class="date">
+					
+					<span class="month">
+						<xsl:call-template name="format-date">
+							<xsl:with-param name="date" select="date/date/start/@iso" />
+							<xsl:with-param name="format" select="'%m-;'" />
+						</xsl:call-template>
+					</span>
+					
+					<span class="day">
+						<xsl:call-template name="format-date">
+							<xsl:with-param name="date" select="date/date/start/@iso" />
+							<xsl:with-param name="format" select="'%d;'" />
+						</xsl:call-template>
+					</span>
+				
+				</div>
+				
+				<div class="info">
+					<span class="description">
+						<xsl:value-of select="name" disable-output-escaping="yes" />
+					</span>
+					<span class="location">
+						<xsl:variable name="location-id" select="location/item/@id" />
+							
+						<xsl:for-each select="//events-entries-by-tag-locations/entry[ @id = $location-id ]">
+							<xsl:choose>
+								<xsl:when test="string-length(name-casual)">
+									<xsl:value-of select="name-casual" disable-output-escaping="yes" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="name-formal" disable-output-escaping="yes" />
+								</xsl:otherwise>
+							</xsl:choose>
+							
+						</xsl:for-each>
+						
+							
+					</span>
+				</div>
+				
+			</li>
+			
+		</xsl:for-each>
+		
+	</ul>
+
+</xsl:template>
+
+
+
+
+
+
+
+
 
 </xsl:stylesheet>
