@@ -115,3 +115,6 @@
 [submodule "www/httpdocs/extensions/health_check"]
 	path = www/httpdocs/extensions/health_check
 	url = https://github.com/pixelninja/health_check.git
+[submodule "www/httpdocs/extensions/systemidfield"]
+	path = www/httpdocs/extensions/systemidfield
+	url = http://github.com/rowan-lewis/systemidfield.git

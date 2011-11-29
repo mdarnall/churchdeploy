@@ -2,37 +2,53 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedynamic_xml_apibibliacom extends Datasource{
+	Class datasourceevents_entries_by_tag_locations extends Datasource{
 
-		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
-		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-verses-entries-by-tag:encoded}';
-		public $dsParamXPATH = '/response/text';
-		public $dsParamCACHE = '1';
-		public $dsParamTIMEOUT = '6';
+		public $dsParamROOTELEMENT = 'events-entries-by-tag-locations';
+		public $dsParamORDER = 'desc';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
+		public $dsParamSTARTPAGE = '1';
+		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$ds-events-entries-by-tag';
+		public $dsParamSORT = 'system:id';
+		public $dsParamHTMLENCODE = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'id' => '{$ds-events-entries-by-tag}',
+		);
 
-		
+		public $dsParamINCLUDEDELEMENTS = array(
+				'name-formal: raw',
+				'name-casual: raw',
+				'description',
+				'address',
+				'city',
+				'state',
+				'zip'
+		);
+
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array('$ds-verses-entries-by-tag');
+			$this->_dependencies = array('$ds-events-entries-by-tag');
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Dynamic XML: api.biblia.com',
+				'name' => 'Events: Entries by tag: Locations',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T03:14:41+00:00'
+				'release-date' => '2011-11-29T03:11:27+00:00'
 			);
 		}
 
 		public function getSource(){
-			return 'dynamic_xml';
+			return '5';
 		}
 
 		public function allowEditorToParse(){
@@ -43,7 +59,7 @@
 			$result = new XMLElement($this->dsParamROOTELEMENT);
 
 			try{
-				include(TOOLKIT . '/data-sources/datasource.dynamic_xml.php');
+				include(TOOLKIT . '/data-sources/datasource.section.php');
 			}
 			catch(FrontendPageNotFoundException $e){
 				// Work around. This ensures the 404 page is displayed and

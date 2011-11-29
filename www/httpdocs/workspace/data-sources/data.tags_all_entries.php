@@ -2,37 +2,45 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedynamic_xml_apibibliacom extends Datasource{
+	Class datasourcetags_all_entries extends Datasource{
 
-		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
-		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-verses-entries-by-tag:encoded}';
-		public $dsParamXPATH = '/response/text';
-		public $dsParamCACHE = '1';
-		public $dsParamTIMEOUT = '6';
+		public $dsParamROOTELEMENT = 'tags-all-entries';
+		public $dsParamORDER = 'asc';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
+		public $dsParamSTARTPAGE = '1';
+		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamSORT = 'order';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		
 
-		
+		public $dsParamINCLUDEDELEMENTS = array(
+				'tag: raw',
+				'description: raw',
+				'parent'
+		);
+
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array('$ds-verses-entries-by-tag');
+			$this->_dependencies = array();
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Dynamic XML: api.biblia.com',
+				'name' => 'Tags: All entries',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T03:14:41+00:00'
+				'release-date' => '2011-11-28T06:26:54+00:00'
 			);
 		}
 
 		public function getSource(){
-			return 'dynamic_xml';
+			return '3';
 		}
 
 		public function allowEditorToParse(){
@@ -43,7 +51,7 @@
 			$result = new XMLElement($this->dsParamROOTELEMENT);
 
 			try{
-				include(TOOLKIT . '/data-sources/datasource.dynamic_xml.php');
+				include(TOOLKIT . '/data-sources/datasource.section.php');
 			}
 			catch(FrontendPageNotFoundException $e){
 				// Work around. This ensures the 404 page is displayed and

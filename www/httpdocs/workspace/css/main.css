@@ -32,12 +32,12 @@ p{font:normal normal 400 16px/1.4 adelle,"Palatino",Georgia,Times New Roman,Time
 .sub-menu h4{font-style:italic;margin:10px 340px 10px 0;}
 .content,.footer{width:960px;margin:0 auto;}
 .content{background:#fff;-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);-o-box-shadow:0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);padding-bottom:30px;}
-.feature{padding:20px;}
+.feature{padding:20px;}.feature .image{width:920px;height:400px;}
 blockquote.scripture{display:block;border:none;padding-top:20px;margin:0;font:normal italic 400 18px/18px adelle,"Palatino",Georgia,Times New Roman,Times,serif !important;text-align:center;}
 blockquote.scripture span{display:block;margin:20px 0;font-size:14px;text-align:center;font:normal normal 700 16px/12px proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:uppercase;}
 blockquote.scripture span a{color:#d35d45;}
 blockquote.scripture span a:hover{color:#ba432c;}
-.subtitle{border-top:5px dotted #ccc;border-bottom:5px dotted #ccc;margin-bottom:20px;padding:20px 0;font:normal normal 700 48px/50px proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:none;}
+.col-1 h2{border-top:5px dotted #ccc;border-bottom:5px dotted #ccc;margin-bottom:20px;padding:20px 0;font:normal normal 700 48px/50px proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:none;}
 .event-box{font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif !important;background:#fff;padding:0;margin:0 0 10px 0;border:1px solid #babbbf;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
 .side-header{background:#f2f2f0 url('../images/noise-sm.png') repeat,;background:url('../images/noise-sm.png') repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(2%, #f2f2f0), color-stop(100%, #e5e5e4));background:url('../images/noise-sm.png') repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f0 2%, #e5e5e4 100%);font-size:12px;text-transform:uppercase;font-weight:700;letter-spacing:1px;padding-left:10px;-webkit-border-top-left-radius:2px;-moz-border-radius-topleft:2px;border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-moz-border-radius-topright:2px;border-top-right-radius:2px;border-bottom:1px solid #ccc;}
 .event-box .event{list-style:none;list-style-image:none;list-style-type:none;text-indent:0;padding:10px 0;border-bottom:1px solid #babbbf;border-top:none;padding-bottom:12px !important;}

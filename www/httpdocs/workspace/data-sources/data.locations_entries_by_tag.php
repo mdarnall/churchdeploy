@@ -2,23 +2,31 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcecontent_tags extends Datasource{
+	Class datasourcelocations_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'content-tags';
-		public $dsParamORDER = 'asc';
+		public $dsParamROOTELEMENT = 'locations-entries-by-tag';
+		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'order';
+		public $dsParamREQUIREDPARAM = '$pt1';
+		public $dsParamSORT = 'system:id';
+		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'37' => '{$pt1}',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'tag: raw',
-				'description: raw',
-				'parent'
+				'name-formal: raw',
+				'name-casual: raw',
+				'description',
+				'address',
+				'city',
+				'state',
+				'zip'
 		);
 
 
@@ -29,18 +37,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Content: Tags',
+				'name' => 'Locations: Entries by tag',
 				'author' => array(
 					'name' => 'Admin Admin',
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-26T17:52:02+00:00'
+				'release-date' => '2011-11-29T00:50:06+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '3';
+			return '5';
 		}
 
 		public function allowEditorToParse(){
