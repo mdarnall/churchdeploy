@@ -71,8 +71,8 @@ body{-webkit-tap-highlight-color:#ffff9e;}
 .lbsTooltip div{text-align:left;}
 .lbsTooltip+div{background:#fff;}
 .lbsTooltipHeader{background:#454545;color:#fff;text-shadow:0 1px 1px rgba(0, 0, 0, 0.95);font-weight:bold;font-size:14px;line-height:18px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:uppercase;margin:0;padding:4px;position:relative;border:0;}
-.lbsTooltipBody{padding:4px 8px 0 8px;margin:0;position:relative;z-index:2;border:0;line-height:16px;}
-.lbsTooltipBody p,.lbsTooltipBody span{display:inline;color:black;font-family:adelle,"Palatino",Georgia,Times New Roman,Times,serif;font-size:14px;line-height:16px;}
+.lbsTooltipBody{padding:4px 8px 0 8px;margin:0;position:relative;z-index:2;border:0;line-height:14px;}
+.lbsTooltipBody p,.lbsTooltipBody span{display:inline;color:black;font-family:adelle,"Palatino",Georgia,Times New Roman,Times,serif;font-size:13px !important;line-height:16px;}
 .lbsTooltipFooter{font-size:11px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;bottom:4px;margin:5px 0;position:absolute;text-align:right;border:0;}
 .lbsTooltipFooter a:link,.lbsTooltipFooter a:visited,.lbsTooltipFooter a:hover{background:#d35d45;color:#fff;font-weight:normal;font-size:12px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;font-weight:700;text-decoration:none;padding:3px 6px;text-shadow:none;}
 .lbsTooltipFooter div{text-align:right;}

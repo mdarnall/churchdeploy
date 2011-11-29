@@ -8,6 +8,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	>
 	
+<xsl:param name="url-language" />
+	
 <xsl:output
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
@@ -24,6 +26,7 @@
 
 
 
+<xsl:variable name="pt1" select="'43'" />
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
 
 
@@ -80,9 +83,7 @@
 				<xsl:text>page-</xsl:text>
 				<xsl:value-of select="$current-page" />
 			</xsl:attribute>
-			
-			ff<xsl:value-of select="$pt1" disable-output-escaping="yes" />ff
-			
+						
 			<div class="header clearfix">
 			
 				<div class="topnav clearfix">
@@ -132,7 +133,16 @@
 					</a>
 					
 					<h1>
-						<xsl:value-of select="//tags-all-entries/entry[ @id = $pt1 ]/description" />
+					
+						<xsl:choose>
+							<xsl:when test="$pt1">
+								<xsl:value-of select="//tags-all-entries/entry[ @id = $pt1 ]/description" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="//tags-all-entries/entry[ @id = 43 ]/description" />
+							</xsl:otherwise>
+						</xsl:choose>
+						
 					</h1>
 					
 				</div>
@@ -171,8 +181,21 @@
 							<xsl:attribute name="style">
 								
 								<xsl:text>background-image: url('</xsl:text>
+								
 								<xsl:value-of select="$root" />
-								<xsl:text>/image/2/920/400/</xsl:text>
+								
+								<xsl:text>/image/2/920/</xsl:text>
+								
+								<xsl:choose>
+									<xsl:when test="string-length(height)">
+										<xsl:value-of select="height" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:text>400</xsl:text>
+									</xsl:otherwise>
+								</xsl:choose>
+								
+								<xsl:text>/</xsl:text>
 								
 								<xsl:choose>
 									<xsl:when test="position = 'Top left'">1</xsl:when>
@@ -188,9 +211,13 @@
 								</xsl:choose>
 								
 								<xsl:text>/0</xsl:text>
+								
 								<xsl:value-of select="image/@path" />
+								
 								<xsl:text>/</xsl:text>
+								
 								<xsl:value-of select="image/filename" />
+								
 								<xsl:text>')</xsl:text>
 								
 							</xsl:attribute>
@@ -225,12 +252,13 @@
 						<xsl:call-template name="component-event" />
 					</xsl:if>
 					
-					<div class="leader-contact">
+					<!--<div class="leader-contact">
 						<h3 class="side-header">Leader Contact</h3>
 					</div>
+					
 					<div class="resources">
 						<h3 class="resources-header">Resources</h3>
-					</div>
+					</div>-->
 		
 				</div>
 			
