@@ -10,14 +10,14 @@
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1';
+		public $dsParamREQUIREDPARAM = '$pt1:43';
 		public $dsParamPARAMOUTPUT = 'location';
 		public $dsParamSORT = 'date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'38' => '{$pt1}',
+				'38' => '{$pt1:43}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -42,7 +42,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'noreply@churchdeploy.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T00:29:41+00:00'
+				'release-date' => '2011-11-29T05:28:31+00:00'
 			);
 		}
 
