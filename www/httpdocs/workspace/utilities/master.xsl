@@ -105,7 +105,7 @@
 											</xsl:if>
 										</xsl:attribute>
 										
-										<a href="{$root}/{$url-language}/{@id}/{description/@handle}/">
+										<a href="{$root}/{@id}/{description/@handle}/">
 										
 											<!--<xsl:attribute name="title">
 												<xsl:value-of select="description" />
@@ -266,7 +266,7 @@
 				
 			<div class="footer">
 			
-				<p>© <xsl:value-of select="$this-year" />. <xsl:value-of select="$website-name" />. All rights reserved.</p>
+				<p>© <xsl:value-of select="$this-year" />. <a href="{$root}"><xsl:value-of select="$website-name" /></a>. All rights reserved.</p>
 			
 			</div>
 				
@@ -331,7 +331,7 @@
 			</xsl:if>
 		</xsl:attribute>
 		
-		<a href="{$root}/{$url-language}/{@id}/{description/@handle}/">
+		<a href="{$root}/{@id}/{description/@handle}/">
 		
 			<!--<xsl:attribute name="title">
 				<xsl:value-of select="description" />
