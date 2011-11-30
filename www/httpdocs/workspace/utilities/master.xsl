@@ -252,13 +252,13 @@
 						<xsl:call-template name="component-event" />
 					</xsl:if>
 					
-					<!--<div class="leader-contact">
+					<div class="leader-contact">
 						<h3 class="side-header">Leader Contact</h3>
 					</div>
 					
 					<div class="resources">
 						<h3 class="resources-header">Resources</h3>
-					</div>-->
+					</div>
 		
 				</div>
 			
