@@ -362,7 +362,15 @@
 						<xsl:text> even</xsl:text>
 					</xsl:if>
 					
-					<xsl:if test="position() &lt; last()">
+					<xsl:if test="position() = 1">
+						<xsl:text> first</xsl:text>
+					</xsl:if>
+					
+					<xsl:if test="position() &gt; 1 and position() &lt; last()">
+						<xsl:text> middle</xsl:text>
+					</xsl:if>
+					
+					<xsl:if test="position() = last()">
 						<xsl:text> last</xsl:text>
 					</xsl:if>
 					
