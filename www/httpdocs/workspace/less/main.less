@@ -133,10 +133,12 @@ p {
 	color: #fff;
 	text-shadow: none;
 	font-size: 48px;
-	margin: 10px 0 10px 0;
+	margin: 10px 0 10px 240px;
 	text-align: center;
 	text-shadow: 0 2px 4px rgba(0,0,0,0.35);
 	left: -80px;
+	z-index: 90 !important;
+	width: 700px;
 }
 .topnav {
 	.box-shadow(e('0 3px 12px rgba(0,0,0,0.45)'));
@@ -188,6 +190,7 @@ p {
 	float: left;
 	clear: both;
 	margin-left: 50px;
+	z-index: 10 !important;
 }
 .sub-menu {
   padding: 25px 20px 5px 20px;
@@ -270,7 +273,7 @@ blockquote.scripture span a:hover {
 	text-transform: none;
 }
 
-.event-box {
+.event-box, .leader-contact {
 	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
 	background: #fff;
 	padding: 0;
