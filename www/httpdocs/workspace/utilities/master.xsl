@@ -358,9 +358,14 @@
 				<xsl:attribute name="class">
 					<xsl:text>event</xsl:text>
 					
-					<xsl:if test="position() mod 2 = 0">
-						<xsl:text> even</xsl:text>
-					</xsl:if>
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 0">
+							<xsl:text> even</xsl:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text> odd</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
 					
 					<xsl:if test="position() = 1">
 						<xsl:text> first</xsl:text>
