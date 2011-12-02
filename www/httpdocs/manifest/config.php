@@ -155,8 +155,8 @@
 
 		###### MAPTOFRONT ######
 		'maptofront' => array(
-			'fallback' => null,
-			'map_sub_to_front' => 'no',
+			'fallback' => 'home',
+			'map_sub_to_front' => 'yes',
 		),
 		########
 	);
