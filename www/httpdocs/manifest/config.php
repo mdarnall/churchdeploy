@@ -109,11 +109,13 @@
 		),
 		########
 
+
 		###### LANGUAGE_REDIRECT ######
 		'language_redirect' => array(
 			'language_codes' => 'en',
 		),
 		########
+
 
 		###### EMAIL ######
 		'email' => array(
@@ -138,8 +140,23 @@
 			'port' => '25',
 			'secure' => 'no',
 			'auth' => '0',
-			'username' => 'admin',
-			'password' => 'k42j3b42kjb',
+			'username' => 'kirkstrobeck',
+			'password' => 'c4angeblip4',
+		),
+		########
+
+
+		###### DB_SYNC ######
+		'db_sync' => array(
+			'enabled' => 'yes',
+		),
+		########
+
+
+		###### MAPTOFRONT ######
+		'maptofront' => array(
+			'fallback' => null,
+			'map_sub_to_front' => 'no',
 		),
 		########
 	);

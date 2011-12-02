@@ -118,3 +118,6 @@
 [submodule "www/httpdocs/extensions/systemidfield"]
 	path = www/httpdocs/extensions/systemidfield
 	url = http://github.com/rowan-lewis/systemidfield.git
+[submodule "www/httpdocs/extensions/db_sync"]
+	path = www/httpdocs/extensions/db_sync
+	url = http://github.com/nickdunn/db_sync.git

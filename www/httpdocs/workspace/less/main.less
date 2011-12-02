@@ -248,20 +248,23 @@ blockquote.scripture {
 	margin: 0;
 	font: normal italic 400 18px/18px adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
 	text-align: center;
+	
+	span {
+		display: block;
+		margin: 20px 0;
+		font-size: 14px;
+		text-align: center;
+		font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		text-transform: uppercase;
+	}
 }
-blockquote.scripture span {
-	display: block;
-	margin: 20px 0;
-	font-size: 14px;
-	text-align: center;
-	font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-}
+
 blockquote.scripture span a {
 	color: hsl(10, 62%, 55%);
-}
-blockquote.scripture span a:hover {
-	color: hsl(10, 62%, 45%);
+
+	&:hover {
+		color: hsl(10, 62%, 45%);
+	}
 }
 
 .col-1 h2 {
