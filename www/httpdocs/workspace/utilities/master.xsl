@@ -153,12 +153,17 @@
 				
 				<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
 				
+				dd<xsl:value-of select="$parents" disable-output-escaping="yes" />dd
+				
 				<xsl:if test="
 					count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id ] ) or
 					count( //tags-all-entries/entry[ parent/item/@id = $pt1 ] )
 				">
 					
-					<ul class="sub-menu">
+					
+					
+				</xsl:if>
+				<ul class="sub-menu">
 						
 						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
 							<xsl:call-template name="nav-submenu-item" />
@@ -169,9 +174,6 @@
 						</xsl:for-each>
 						
 					</ul>
-					
-				</xsl:if>
-				
 				<div class="feature">
 					
 					<xsl:for-each select="//images-entries-by-tag/entry">
