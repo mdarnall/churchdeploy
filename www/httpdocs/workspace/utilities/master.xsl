@@ -106,7 +106,9 @@
 										</xsl:attribute>
 										
 										<a href="{$root}/{@id}/{description/@handle}/">
-										
+											
+											<xsl:call-template name="tag-href" />
+											
 											<!--<xsl:attribute name="title">
 												<xsl:value-of select="description" />
 											</xsl:attribute>-->
@@ -333,8 +335,9 @@
 			</xsl:if>
 		</xsl:attribute>
 		
-		<a href="{$root}/{@id}/{description/@handle}/">
-		
+		<a>
+			<xsl:call-template name="tag-href" />
+			
 			<!--<xsl:attribute name="title">
 				<xsl:value-of select="description" />
 			</xsl:attribute>-->
@@ -437,6 +440,36 @@
 
 </xsl:template>
 
+
+
+
+
+<xsl:template name="tag-href">
+
+	<xsl:attribute name="href">
+	
+		<xsl:value-of select="$root" disable-output-escaping="yes" />
+		
+		<xsl:text>/</xsl:text>
+		
+		<xsl:value-of select="@id" disable-output-escaping="yes" />
+		
+		<xsl:text>/</xsl:text>
+		
+		
+		
+		<xsl:text>/</xsl:text>
+		
+		
+	<!--{$root}/{@id}/{description/@handle}/-->
+		
+		<xsl:text></xsl:text>
+		
+		
+		
+	</xsl:attribute>
+
+</xsl:template>
 
 
 
