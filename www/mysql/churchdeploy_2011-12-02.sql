@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.9)
 # Database: churchdeploy
-# Generation Time: 2011-12-03 03:28:25 +0000
+# Generation Time: 2011-12-03 04:01:12 +0000
 # ************************************************************
 
 
@@ -2606,7 +2606,7 @@ LOCK TABLES `sym_sessions` WRITE;
 
 INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
-	('e0f1b01f74a48ea62ec9530cd0247e32',1322574040,'sym-|a:2:{s:8:\"username\";s:5:\"admin\";s:4:\"pass\";s:40:\"7e523a069053bd727bf980a2eaef2913c8692c1e\";}sym-members|a:0:{}sym-language-redirect|a:2:{s:8:\"language\";s:2:\"en\";s:6:\"region\";s:0:\"\";}'),
+	('e0f1b01f74a48ea62ec9530cd0247e32',1322883384,'sym-members|a:0:{}sym-language-redirect|a:2:{s:8:\"language\";s:2:\"en\";s:6:\"region\";s:0:\"\";}sym-|a:0:{}'),
 	('2b4ee373c33fd3fd979057d73069206d',1322856656,'sym-members|a:0:{}sym-language-redirect|a:2:{s:8:\"language\";s:2:\"en\";s:6:\"region\";s:0:\"\";}sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
 	('q68lr0mouvlob0tpmbebi8g0h1',1322774369,'sym-members|a:0:{}sym-language-redirect|a:2:{s:8:\"language\";s:2:\"en\";s:6:\"region\";s:0:\"\";}sym-|a:2:{s:8:\"username\";s:7:\"jsimcoe\";s:4:\"pass\";s:40:\"7b10dfd8ecfb74eafd8778364f883ce41cb756f5\";}'),
 	('7p2btth40n1g5todkbt3nt5em5',1322586535,'sym-|a:0:{}sym-members|a:0:{}sym-language-redirect|a:2:{s:8:\"language\";s:2:\"en\";s:6:\"region\";s:0:\"\";}'),
