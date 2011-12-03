@@ -23,7 +23,7 @@ p{font:normal normal 400 16px/1.4 adelle,"Palatino",Georgia,Times New Roman,Time
 .topnav ul li{display:inline;}
 .topnav ul li a{padding:5px 10px;margin-right:10px;color:#fff;text-shadow:0 1px 0 rgba(0, 0, 0, 0.35);font-size:14px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;font-weight:700;}
 .topnav ul li.active a{background:#2d2e2e;}
-.logomark{text-indent:-9999px;display:block;height:115px;width:116px;background:url('../images/athey.png') no-repeat;float:left;clear:both;margin-left:50px;z-index:10;}
+.logomark{text-indent:-9999px;display:block;height:115px;width:116px;background:url('../images/sprite.png') no-repeat 0 0;float:left;clear:both;margin-left:50px;z-index:10;}
 .sub-menu{padding:25px 20px 5px 20px;margin-right:-20px;font-size:14px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:uppercase;text-align:center;margin:0 auto;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
 .sub-menu li{display:inline;margin:0 5px;}
 .sub-menu li a{padding:5px 10px;color:#595957;font-weight:700;}
@@ -79,8 +79,8 @@ a[href="http://www.logos.com/reftagger"]{display:none;}
 .component-member.column-right .entry .image{width:85px;height:85px;background-position:5px 5px;}
 .component-member.column-right .entry .info{float:left;margin-left:15px;}.component-member.column-right .entry .info .name{margin:5px 0;font-size:15px;line-height:15px;}
 .component-member.column-right .entry .info h4{color:#777;font-family:adelle,"Palatino",Georgia,Times New Roman,Times,serif;font-weight:normal;font-size:15px;line-height:15px;font-style:italic;margin:10px 0;}
-.component-member.column-right .entry .info .email{padding-left:20px;background:transparent url('../images/sprite.png') 0 5px no-repeat;}.component-member.column-right .entry .info .email a{font-size:12px;color:#222;font-style:italic;letter-spacing:1px;}
+.component-member.column-right .entry .info .email{padding-left:20px;background:transparent url('../images/sprite.png') -200px 5px no-repeat;}.component-member.column-right .entry .info .email a{font-size:12px;color:#222;font-style:italic;letter-spacing:1px;}
 .component-event .entry .date{float:left;display:block;width:42px;height:42px;-moz-box-shadow:0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1);-o-box-shadow:0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1);-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1);box-shadow:0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:0 10px;border:1px solid #ccc;}.component-event .entry .date .month{display:block;width:42px;text-transform:uppercase;padding:0;background:#aaaaaa url('../images/noise-sm.png') repeat;color:#fff;font-size:12px;text-shadow:none;text-align:center;font-weight:700;}
 .component-event .entry .date .day{background:#efefef;padding:3px 0;display:block;width:42px;text-align:center;font-weight:700;font-size:20px;color:#333;}
 .component-event .entry .info{padding-left:50px;}.component-event .entry .info .description{font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;color:#222;font-weight:700;display:block;}
-.component-event .entry .info .location{background:url('../images/pin.png') 0 0 no-repeat;display:block;font:normal italic normal 14px/1.4 adelle,"Palatino",Georgia,Times New Roman,Times,serif;margin:5px 0 0 15px;padding-left:15px;}
+.component-event .entry .info .location{background:transparent url('../images/sprite.png') -200px -50px no-repeat;display:block;font:normal italic normal 14px/1.4 adelle,"Palatino",Georgia,Times New Roman,Times,serif;margin:5px 0 0 15px;padding-left:15px;}
