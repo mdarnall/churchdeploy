@@ -1,3 +1,19 @@
+// kirk start
+
+.less-image {
+	text-indent: -999999px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+// kirk end
+
+
 @import "rounded.less";
 @import "gradient.less";
 @import "shadow.less";
@@ -237,6 +253,8 @@ p {
 	padding: 20px;
 	
 	.image {
+		.less-image;
+		
 		width: 920px;
 		height: 400px;
 	}
@@ -285,6 +303,7 @@ blockquote.scripture span a {
 	border: 1px solid #babbbf;
 	.rounded(2px);
 }
+
 .side-header {
 	.gradient3(e("url('../images/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
 	font-size: 12px;
@@ -296,77 +315,95 @@ blockquote.scripture span a {
 	border-bottom: 1px solid #ccc;
 	
 }
-.event-box .event {
-	list-style: none;
-	list-style-image: none;
-	list-style-type: none;
-	text-indent: 0;
-	padding: 10px 0;
-	border-bottom: 1px solid #babbbf;
-	border-top: none;
-	padding-bottom: 12px !important;
-}
-.event.even {
-	background: #ededec;
-	border-top: 1px solid #fefefe;
-}
-.event.last {
-	border-bottom: none;
-}
-.event.grade-school {
-	border-left:  4px solid hsl(10, 62%, 55%);
-}
-.event-box .date {
-	float: left;
-	display: block;
-	width: 42px;
-	height: 42px;
-	.box-shadow(e('0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1)'));
-	.rounded(3px);
-	margin: 0 10px;
-	border: 1px solid #ccc;
-}
-.date .month {
-	display: block;
-	width: 42px;
-	text-transform: uppercase;
-	padding: 0;
-	background: #aaa url(../images/noise-sm.png) repeat;
-	color: #fff;
-	font-size: 12px;
-	text-shadow: none;
-	text-align: center;
-	font-weight: 700;
-}
-.date .day {
-	background: #efefef;
-	padding: 3px 0;
-	display: block;
-	width: 42px;
-	text-align: center;
-	font-weight: 700;
-	font-size: 20px;
-	color: #333;
+
+.event-box {
+	
+	.entry {
+		list-style: none;
+		list-style-image: none;
+		list-style-type: none;
+		text-indent: 0;
+		padding: 10px 0;
+		border-bottom: 1px solid #babbbf;
+		border-top: none;
+		padding-bottom: 12px !important;
+		
+		&.even {
+			background: #ededec;
+			border-top: 1px solid #fefefe;
+		}
+		
+		&.last {
+			border-bottom: none;
+		}
+		
+		&.grade-school {
+			border-left:  4px solid hsl(10, 62%, 55%);
+		}
+		
+		.date {
+			float: left;
+			display: block;
+			width: 42px;
+			height: 42px;
+			.box-shadow(e('0 2px 0 rgba(0,0,0,0.15), 0 1px 0 rgba(255,255,255,1)'));
+			.rounded(3px);
+			margin: 0 10px;
+			border: 1px solid #ccc;
+			
+			.month {
+				display: block;
+				width: 42px;
+				text-transform: uppercase;
+				padding: 0;
+				background: #aaa url(../images/noise-sm.png) repeat;
+				color: #fff;
+				font-size: 12px;
+				text-shadow: none;
+				text-align: center;
+				font-weight: 700;
+			}
+			
+			.day {
+				background: #efefef;
+				padding: 3px 0;
+				display: block;
+				width: 42px;
+				text-align: center;
+				font-weight: 700;
+				font-size: 20px;
+				color: #333;
+			}
+		}
+		
+		.info {
+			padding-left: 50px;
+			
+			.description {
+				font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
+				color: #222;
+				font-weight: 700;
+				display: block;
+			}
+			
+			.location {
+				background: url(../images/pin.png) 0 0 no-repeat;
+				display: block;
+				font: normal italic normal 14px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
+				margin: 5px 0 0 15px;
+				padding-left: 15px;
+			}
+		}
+	}
 }
 
-.event-box .info {
-	padding-left: 50px;
-}
 
-.info .description {
-	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
-	color: #222;
-	font-weight: 700;
-	display: block;
-}
 
-.info .location {
-	background: url(../images/pin.png) 0 0 no-repeat;
-	display: block;
-	font: normal italic normal 14px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif !important;
-	margin: 5px 0 0 15px;
-	padding-left: 15px;
-}
+
+
+
+
+
 /* Selection colours (easy to forget) */
 
 ::selection 	 	{background: rgb(255,255,158);}
@@ -627,6 +664,8 @@ a[href="http://www.logos.com/reftagger"] {
 		margin: 0 0 20px;
 		
 		.image {
+			.less-image;
+			
 			width: 129px;
 			height: 151px;
 			float: left;
@@ -636,6 +675,69 @@ a[href="http://www.logos.com/reftagger"] {
 		.meta {
 			
 			float: left;
+		}
+	}
+}
+
+.leader-contact {
+	list-style: none;
+	
+	.entry {
+		border-bottom: 1px solid #BABBBF;
+		padding: 20px;
+		
+		&.last {
+			border-bottom: none;
+		}
+		
+		& * {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.image {
+			.less-image;
+			
+			float: left;
+			width: 85px;
+			height: 85px;
+			.box-shadow(e('0 0px 5px #888'));
+			background-repeat: no-repeat;
+			background-position: 5px 5px;
+			.rounded(3px);
+		}
+		
+		.info {
+			float: left;
+			margin-left: 15px;
+			
+			h3 {
+				margin: 5px 0;
+				font-size: 15px;
+				line-height: 15px;
+			}
+			
+			h4 {
+				color: #777;
+				font-family: adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+				font-weight: normal;
+				font-size: 15px;
+				line-height: 15px;
+				font-style: italic;
+				margin: 10px 0;
+			}
+			
+			.email {
+				padding-left: 20px;
+				background: transparent url('../images/sprite.png') 0 5px no-repeat;
+				
+				a {
+					font-size: 12px;
+					color: #222;
+					font-style: italic;
+					letter-spacing: 1px;
+				}
+			}
 		}
 	}
 }

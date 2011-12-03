@@ -155,3 +155,87 @@ Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this ob
 2011/12/02 19:33:01 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_brett-4ed9911671446.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_brett-4ed9911671446.jpeg
 2011/12/02 19:33:01 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
 2011/12/02 19:33:01 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg
+02 December 2011 23:26 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
+Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
+Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
+Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
+Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+02 December 2011 23:27 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
+Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
+Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
+Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
+Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+02 December 2011 23:28 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
+Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
+Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
+Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
+Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+02 December 2011 23:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:439: parser error : Opening and ending tag mismatch: a line 438 and p
+Line: 145 - XSLTProcessor::importStylesheet(): 						</p>
+Line: 145 - XSLTProcessor::importStylesheet(): 						    ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:441: parser error : Opening and ending tag mismatch: p line 437 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 					</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 					      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:443: parser error : Opening and ending tag mismatch: div line 425 and li
+Line: 145 - XSLTProcessor::importStylesheet(): 				</li>
+Line: 145 - XSLTProcessor::importStylesheet(): 				     ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:445: parser error : Opening and ending tag mismatch: li line 405 and xsl:for-each
+Line: 145 - XSLTProcessor::importStylesheet(): 			</xsl:for-each>
+Line: 145 - XSLTProcessor::importStylesheet(): 			               ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:447: parser error : Opening and ending tag mismatch: for-each line 403 and ul
+Line: 145 - XSLTProcessor::importStylesheet(): 		</ul>
+Line: 145 - XSLTProcessor::importStylesheet(): 		     ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:449: parser error : Opening and ending tag mismatch: ul line 399 and xsl:if
+Line: 145 - XSLTProcessor::importStylesheet(): 	</xsl:if>
+Line: 145 - XSLTProcessor::importStylesheet(): 	         ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:451: parser error : Opening and ending tag mismatch: if line 397 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:596: parser error : Opening and ending tag mismatch: template line 395 and stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
+Line: 145 - XSLTProcessor::importStylesheet():                  ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:596: parser error : Premature end of data in tag stylesheet line 6
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
+Line: 145 - XSLTProcessor::importStylesheet():                  ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
