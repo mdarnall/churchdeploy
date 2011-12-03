@@ -5,17 +5,24 @@
 
 <xsl:template name="component-event">
 	
+	<xsl:param name="position" />
+	
 	<xsl:if test="count( //events-entries-by-tag/entry )">
 	
-		<ul class="event-box">
-		
-			<h3 class="side-header">Upcoming Events</h3>
+		<div>
+			
+			<xsl:call-template name="class-position">
+				<xsl:with-param name="component" select="'event'" />
+				<xsl:with-param name="position" select="$position" />
+			</xsl:call-template>
+			
+			<h3 class="header">Upcoming Events</h3>
 			
 			<xsl:for-each select="//events-entries-by-tag/entry">
 	
-				<li>
+				<div>
 					
-					<xsl:call-template name="class-alternating-rows" />
+					<xsl:call-template name="class-rows" />
 					
 					<div class="date">
 						
@@ -36,10 +43,13 @@
 					</div>
 					
 					<div class="info">
+					
 						<span class="description">
 							<xsl:value-of select="name" disable-output-escaping="yes" />
 						</span>
+						
 						<span class="location">
+						
 							<xsl:variable name="location-id" select="location/item/@id" />
 								
 							<xsl:for-each select="//events-entries-by-tag-locations/entry[ @id = $location-id ]">
@@ -54,15 +64,15 @@
 								
 							</xsl:for-each>
 							
-								
 						</span>
+						
 					</div>
 					
-				</li>
+				</div>
 				
 			</xsl:for-each>
 			
-		</ul>
+		</div>
 
 	</xsl:if>
 
@@ -140,25 +150,43 @@
 
 <xsl:template name="component-member">
 	
+	<xsl:param name="position" />
+	
 	<xsl:if test="count( //members-entries-by-tag/entry )">
 		
-		<ul class="leader-contact">
-				
-			<h3 class="side-header">Leader Contact</h3>
+		<div>
+			
+			<xsl:call-template name="class-position">
+				<xsl:with-param name="component" select="'member'" />
+				<xsl:with-param name="position" select="$position" />
+			</xsl:call-template>
+			
+			<xsl:if test="$position = 'column-right'">
+				<h3 class="header">Leader Contact</h3>
+			</xsl:if>
 			
 			<xsl:for-each select="//members-entries-by-tag/entry">
-	
-				<li>
+				
+				<div>
 					
-					<xsl:call-template name="class-alternating-rows" />
+					<xsl:call-template name="class-rows" />
 					
 					<div class="image">
-						
+					
 						<xsl:attribute name="style">
 							
 							<xsl:text>background-image: url('</xsl:text>
 							<xsl:value-of select="$root" />
-							<xsl:text>/image/2/75/75/2/0</xsl:text>
+							
+							<xsl:choose>
+								<xsl:when test="$position = 'column-center'">
+									<xsl:text>/image/2/129/151/2/0</xsl:text>
+								</xsl:when>
+								<xsl:when test="$position = 'column-right'">
+									<xsl:text>/image/2/75/75/2/0</xsl:text>
+								</xsl:when>
+							</xsl:choose>
+							
 							<xsl:value-of select="photo/@path" />
 							<xsl:text>/</xsl:text>
 							<xsl:value-of select="photo/filename" />
@@ -176,7 +204,7 @@
 					
 					<div class="info">
 						
-						<h3>
+						<h3 class="name">
 							<xsl:value-of select="first-name" disable-output-escaping="yes" />
 							<xsl:text> </xsl:text>
 							<xsl:value-of select="last-name" disable-output-escaping="yes" />
@@ -186,24 +214,47 @@
 							<xsl:value-of select="job-title" disable-output-escaping="yes" />
 						</h4>
 						
-						<p class="email">
-							<a href="mailto:{email}">
-								<xsl:value-of select="email" disable-output-escaping="yes" />
-							</a>
-						</p>
+						<xsl:choose>
+							<xsl:when test="$position = 'column-center'">
+								<xsl:value-of select="about" disable-output-escaping="yes" />
+							</xsl:when>
+							<xsl:when test="$position = 'column-right'">
+								<p class="email">
+									<a href="mailto:{email}">
+										<xsl:value-of select="email" disable-output-escaping="yes" />
+									</a>
+								</p>
+							</xsl:when>
+						</xsl:choose>
 						
 					</div>
 					
-				</li>
+				</div>
 				
 			</xsl:for-each>
 			
-		</ul>
+		</div>
 	
 	</xsl:if>
 	
 </xsl:template>
 
+
+
+<xsl:template name="component-verse">
+	
+	<xsl:if test="//verses-entries-by-tag/entry">
+		
+		<blockquote class="scripture clearfix">
+			<xsl:value-of select="//dynamic-xml-apibibliacom/text" />
+			<span class="verse">
+				<xsl:value-of select="//verses-entries-by-tag/entry/passage" />
+			</span>
+		</blockquote>
+			
+	</xsl:if>
+	
+</xsl:template>
 
 
 </xsl:stylesheet>
