@@ -154,18 +154,13 @@
 			<div class="content clearfix" role="main">
 				
 				<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
-				
-				dd<xsl:value-of select="$parents" disable-output-escaping="yes" />dd
-				
+							
 				<xsl:if test="
 					count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id ] ) or
 					count( //tags-all-entries/entry[ parent/item/@id = $pt1 ] )
 				">
-					
-					
-					
-				</xsl:if>
-				<ul class="sub-menu">
+				
+					<ul class="sub-menu">
 						
 						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
 							<xsl:call-template name="nav-submenu-item" />
@@ -176,6 +171,9 @@
 						</xsl:for-each>
 						
 					</ul>
+					
+				</xsl:if>
+				
 				<div class="feature">
 					
 					<xsl:for-each select="//images-entries-by-tag/entry">
@@ -222,7 +220,13 @@
 								
 								<xsl:value-of select="image/filename" />
 								
-								<xsl:text>')</xsl:text>
+								<xsl:text>'); height: </xsl:text>
+								
+								<xsl:if test="string-length(height)">
+									<xsl:value-of select="height" />
+								</xsl:if>
+								
+								<xsl:text>px</xsl:text>
 								
 							</xsl:attribute>
 							
@@ -247,7 +251,47 @@
 				<div class="col-1">
 				
 					<xsl:value-of select="//text-entries-by-tag/entry/content" disable-output-escaping="yes" />
-									
+					
+					
+					<div class="member-profiles">
+					
+						<xsl:for-each select="//members-entries-by-tag/entry">
+							
+							<div class="entry clearfix">
+								
+								<div class="image">
+								
+									<xsl:attribute name="style">
+										
+										<xsl:text>background-image: url('</xsl:text>
+										<xsl:value-of select="$root" />
+										<xsl:text>/image/2/129/151/2/0</xsl:text>
+										<xsl:value-of select="photo/@path" />
+										<xsl:text>/</xsl:text>
+										<xsl:value-of select="photo/filename" />
+										<xsl:text>');</xsl:text>
+										
+									</xsl:attribute>
+								</div>
+								
+								<h3>
+									<xsl:value-of select="first-name" disable-output-escaping="yes" />
+									<xsl:text> </xsl:text>
+									<xsl:value-of select="last-name" disable-output-escaping="yes" />
+								</h3>
+								
+								<h4>
+									<xsl:value-of select="job-title" disable-output-escaping="yes" />
+								</h4>
+								
+								<xsl:value-of select="about" disable-output-escaping="yes" />
+								
+							</div>
+							
+						</xsl:for-each>
+						
+					</div>
+						
 				</div>
 				
 				<div class="col-2">
@@ -449,15 +493,24 @@
 	<xsl:attribute name="href">
 	
 		<xsl:value-of select="$root" disable-output-escaping="yes" />
-		
 		<xsl:text>/</xsl:text>
 		
 		<xsl:value-of select="@id" disable-output-escaping="yes" />
-		
 		<xsl:text>/</xsl:text>
 		
+		<xsl:if test="count(parent/item)">
+			<xsl:value-of select="parent/item/@handle" disable-output-escaping="yes" />
+			<xsl:text>/</xsl:text>
+		</xsl:if>
 		
-		
+		<xsl:choose>
+			<xsl:when test="string-length(slug)">
+				<xsl:value-of select="slug/@handle" disable-output-escaping="yes" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="tag/@handle" disable-output-escaping="yes" />
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:text>/</xsl:text>
 		
 		
