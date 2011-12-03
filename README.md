@@ -7,7 +7,11 @@
 - Open *Terminal* from the *Applications > Utilities* folder ( or just use Spotlight to find it )
 - Create a folder to hold the project in *Finder*
 - In *Terminal* type `cd ` and then drag and drop the folder you just created into the *Terminal* window, hit return.
-- Run the following commands
+- All you have to do is run this single command
+
+	    git clone --recursive https://github.com/atheycreek/churchdeploy.git
+
+- or if you have an older version of git, run the following
 
 	   	git clone https://github.com/atheycreek/churchdeploy.git
 		cd churchdeploy
