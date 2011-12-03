@@ -12,6 +12,7 @@
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamREQUIREDPARAM = '$pt1:43';
 		public $dsParamSORT = 'system:id';
+		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
@@ -20,6 +21,7 @@
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'image',
+				'caption',
 				'position',
 				'height'
 		);
@@ -34,11 +36,11 @@
 			return array(
 				'name' => 'Images: Entries by tag',
 				'author' => array(
-					'name' => 'Admin Admin',
+					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T05:32:37+00:00'
+				'release-date' => '2011-12-03T15:01:55+00:00'
 			);
 		}
 
