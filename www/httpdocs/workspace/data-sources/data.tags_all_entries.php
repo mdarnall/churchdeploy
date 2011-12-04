@@ -11,6 +11,7 @@
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'order';
+		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		
@@ -18,8 +19,11 @@
 		public $dsParamINCLUDEDELEMENTS = array(
 				'tag: raw',
 				'description: raw',
-				'parent',
 				'slug',
+				'parent',
+				'column-full-width',
+				'column-center',
+				'column-right',
 				'hidden'
 		);
 
@@ -37,7 +41,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-03T00:13:49+00:00'
+				'release-date' => '2011-12-03T19:18:55+00:00'
 			);
 		}
 
