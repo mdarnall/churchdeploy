@@ -142,9 +142,10 @@ p {
    ======= */
 .header {
 	width: 100%;
-	background: #bbe4e2;
 	height: 330px;
 	margin-bottom: -70px;
+	background: hsl(202, 13%, 25%) url('../images/noise-sm.png') repeat;
+	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 -1px 10px rgba(0,0,0,0.35)'));
 }
 .header .wrapper {
 	padding-top: 0;
@@ -160,21 +161,23 @@ p {
 	color: #fff;
 	text-shadow: none;
 	font-size: 48px;
+	text-transform: none;
+	font-weight: 300;
+	letter-spacing: 3px;
 	margin: 10px 0 10px 240px;
 	text-align: center;
-	text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
 	left: -80px;
-	z-index: 90;
 	width: 700px;
 }
 .topnav {
-	.box-shadow(e('0 3px 12px rgba(0,0,0,0.45)'));
+	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));
 	height: 59px;
 	border-top: 4px solid hsl(10, 62%, 55%);
 	position: fixed;
 	width: 100%;
 	z-index: 4;
-	background: hsla(179, 0%, 24%, 0.95) url('../images/noise-sm.png') repeat;
+	background: hsla(202, 13%, 15%, 0.95) url('../images/noise-sm.png') repeat;
 }
 .topnav .logo {
 	float: right;
@@ -206,7 +209,12 @@ p {
 	font-weight: 700;
 }
 .topnav ul li.active a {
-	background: #2d2e2e;
+	background: #000;
+	background: rgba(0,0,0,0.35);
+}
+.topnav ul li a:hover {
+	background: #fff;
+	background: rgba(255,255,255,0.1);
 }
 .logomark {
 	text-indent: -9999px;
