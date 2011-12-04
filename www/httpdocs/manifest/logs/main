@@ -318,3 +318,4 @@ Line: 145 - XSLTProcessor::importStylesheet(): 		     ^
 Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 27 element include
 Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 16:31 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/systemidfield/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
