@@ -318,4 +318,106 @@ Line: 145 - XSLTProcessor::importStylesheet(): 		     ^
 Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 27 element include
 Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 03 December 2011 16:31 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/systemidfield/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
+=======
+=======
+>>>>>>> Stashed changes
+03 December 2011 11:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
+Line: 145 - XSLTProcessor::importStylesheet(): The value 'concat( 'component-', @handle )' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:54 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:216: parser error : Opening and ending tag mismatch: for-each line 212 and call-template
+Line: 145 - XSLTProcessor::importStylesheet(): 							</xsl:call-template>
+Line: 145 - XSLTProcessor::importStylesheet(): 							                    ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:218: parser error : Opening and ending tag mismatch: div line 210 and xsl:for-each
+Line: 145 - XSLTProcessor::importStylesheet(): 					</xsl:for-each>
+Line: 145 - XSLTProcessor::importStylesheet(): 					               ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:227: parser error : Opening and ending tag mismatch: body line 82 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:286: parser error : Opening and ending tag mismatch: html line 41 and body
+Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
+Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:288: parser error : Opening and ending tag mismatch: template line 36 and html
+Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
+Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:290: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:294: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:55 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
+Line: 145 - XSLTProcessor::importStylesheet(): The value 'xsl:template[ @name = concat( 'component-', @handle ) ]' of the attribute 'name' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
+Line: 145 - XSLTProcessor::importStylesheet(): The attribute 'name' is missing.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:58 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:58 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 12:00 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
+Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
+Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 15:47 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): error
+Line: 145 - XSLTProcessor::importStylesheet(): xsltCompileLocationPathPattern : Name expected
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element template
+Line: 145 - XSLTProcessor::importStylesheet(): xsltCompilePattern : failed to compile '.'
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 15:48 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element apply-templates
+Line: 145 - XSLTProcessor::importStylesheet(): The value 'concat( 'component-', 'events' )' of the attribute 'mode' is not a valid QName.
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 16:00 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+03 December 2011 16:02 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
+Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes

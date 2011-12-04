@@ -177,35 +177,65 @@
 				
 				<div class="feature">
 					
-					<xsl:call-template name="component-image">
-						<xsl:with-param name="position" select="'full-width'" />
-					</xsl:call-template>
+					<xsl:for-each select="//column-full-width/item/label/@handle">
 					
-					<xsl:call-template name="component-verse">
-						<xsl:with-param name="position" select="'full-width'" />
-					</xsl:call-template>
-				
+						<xsl:if test=". = 'images'">
+							<xsl:call-template name="component-images">
+								<xsl:with-param name="position" select="'full-width'" />
+							</xsl:call-template>
+						</xsl:if>
+						
+						<xsl:if test=". = 'verses'">
+							<xsl:call-template name="component-verses">
+								<xsl:with-param name="position" select="'full-width'" />
+							</xsl:call-template>
+						</xsl:if>
+					
+					</xsl:for-each>
+					
 				</div>
 				
 				<div class="col-1">
-				
-					<xsl:value-of select="//text-entries-by-tag/entry/content" disable-output-escaping="yes" />
 					
-					<xsl:call-template name="component-member">
-						<xsl:with-param name="position" select="'column-center'" />
-					</xsl:call-template>
-
+					<xsl:for-each select="//column-center/item/label/@handle">
+					
+						<xsl:if test=". = 'text'">
+							<xsl:call-template name="component-text">
+								<xsl:with-param name="position" select="'column-center'" />
+							</xsl:call-template>
+						</xsl:if>
+						
+						<xsl:if test=". = 'members'">
+							<xsl:call-template name="component-members">
+								<xsl:with-param name="position" select="'column-center'" />
+							</xsl:call-template>
+						</xsl:if>
+						
+					</xsl:for-each>
+					
 				</div>
 				
 				<div class="col-2">
 					
-					<xsl:call-template name="component-event">
-						<xsl:with-param name="position" select="'column-right'" />
-					</xsl:call-template>
+					<xsl:for-each select="//column-right/item/label/@handle">
+						
+						<xsl:choose>
+							<xsl:when test=". = 'events'">
+								<xsl:call-template name="component-events">
+									<xsl:with-param name="position" select="'column-right'" />
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:when test=". = 'members'">
+								<xsl:call-template name="component-members">
+									<xsl:with-param name="position" select="'column-right'" />
+								</xsl:call-template>
+							</xsl:when>
+						</xsl:choose>
+						
+					</xsl:for-each>
 					
-					<xsl:call-template name="component-member">
-						<xsl:with-param name="position" select="'column-right'" />
-					</xsl:call-template>
+					
+					
 					
 					<div class="resources"><h3 class="resources-header">Resources</h3></div>
 		
