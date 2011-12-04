@@ -18,13 +18,12 @@ p{font:normal normal 400 16px/1.4 adelle,"Palatino",Georgia,Times New Roman,Time
 .header h3{margin:30px 0 0 0;}
 .header h1,.header h1 a{position:relative;color:#fff;text-shadow:none;font-size:48px;text-transform:none;font-weight:300;letter-spacing:3px;margin:10px 0 10px 240px;text-align:center;text-shadow:0 1px 2px rgba(0, 0, 0, 0.75);left:-80px;width:700px;}
 .topnav{-moz-box-shadow:0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35);-o-box-shadow:0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35);-webkit-box-shadow:0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35);box-shadow:0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35);height:65px;position:fixed;width:100%;z-index:4;background:rgba(33, 40, 43, 0.95) url('../images/noise-sm.png') repeat;}
-.topnav .logo{float:right;margin-top:7px;padding:0 0 0 0;font:normal normal 400 16px/1.4 proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;color:#fff;text-transform:uppercase;text-shadow:0 1px 2px rgba(0, 0, 0, 0.5);text-indent:-9999px;display:block;height:50px;width:52px;background:url('../images/sprite.png') no-repeat 0 -247px;}
+.topnav .logo{float:right;margin-top:7px;padding:0 0 0 0;font:normal normal 400 16px/1.4 proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;color:#fff;text-transform:uppercase;text-shadow:0 1px 2px rgba(0, 0, 0, 0.5);text-indent:-9999px;display:none;height:50px;width:52px;background:url('../images/sprite.png') no-repeat 0 -247px;}
 .topnav ul{display:block;float:left;list-style:none;list-style-type:none;list-style-image:none;text-transform:uppercase;margin:23px 0 0 0;}
 .topnav ul li{display:inline;}
 .topnav ul li a{padding:5px 10px;margin-right:10px;color:#fff;text-shadow:0 1px 0 rgba(0, 0, 0, 0.35);font-size:14px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;font-weight:700;}
 .topnav ul li.active a{background:#000;background:rgba(0, 0, 0, 0.35);}
 .topnav ul li a:hover{background:#fff;background:rgba(255, 255, 255, 0.1);}
-.topnav ul li.mini a{float:right;}
 .logomark{text-indent:-9999px;display:block;height:125px;width:116px;background:url('../images/sprite.png') no-repeat 0 0;float:left;clear:both;margin-left:50px;z-index:10;}
 .sub-menu{padding:25px 20px 5px 20px;margin-right:-20px;font-size:14px;font-family:proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:uppercase;text-align:center;margin:0 auto;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
 .sub-menu li{display:inline;margin:0 5px;}
