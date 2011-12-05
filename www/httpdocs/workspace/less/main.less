@@ -140,23 +140,23 @@ p {
 
 /* CLASSES
    ======= */
-.header {
+.page-header {
 	width: 100%;
 	height: 330px;
 	margin-bottom: -70px;
 	background: hsl(202, 13%, 25%) url('../images/noise-sm.png') repeat;
 	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 -1px 10px rgba(0,0,0,0.35)'));
 }
-.header .wrapper {
+.page-header .wrapper {
 	padding-top: 0;
 }
-.header .lower {
+.page-header .lower {
 	padding: 100px 0 0 0;
 }
-.header h3 {
+.page-header h3 {
 	margin: 30px 0 0 0;
 }
-.header h1, .header h1 a {
+.page-header h1, .page-header h1 a {
 	position: relative;
 	color: #fff;
 	text-shadow: none;
@@ -587,12 +587,12 @@ a[href="http://www.logos.com/reftagger"] {
 
 .component { // component defaults
 	
-	// coloumn specific settings
+	// column specific settings
 	
 	&.column-right {
 		
 		.header {
-			.gradient3(e("url('../images/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
+			.gradient3(e("url('../img/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
 			font-size: 12px;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -600,13 +600,15 @@ a[href="http://www.logos.com/reftagger"] {
 			padding-left: 10px;
 			.rounded-top(2px);
 			border-bottom: 1px solid #ccc;
-			height: 30px;
-			line-height: 30px;
-			float: left;
+			float: none;
 		}
 		
 		.entry {
-			border: 1px solid #babbbf;
+			text-indent: 0;
+			padding: 10px 0;
+			border-bottom: 1px solid #babbbf;
+			border-top: none;
+			padding-bottom: 12px !important;
 			
 			.info {
 				width: 190px;
@@ -617,11 +619,11 @@ a[href="http://www.logos.com/reftagger"] {
 	// column defaults
 	
 	.entry {	
-		margin: 0 0 20px;
+		text-indent: 0;
 		padding: 10px 0;
 		border-bottom: 1px solid #babbbf;
 		border-top: none;
-		padding-bottom: 12px;
+		padding-bottom: 12px !important;
 		
 		&.even {
 			background: #ededec;
@@ -708,8 +710,21 @@ a[href="http://www.logos.com/reftagger"] {
 }
 
 .component-event {
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	background: #fff;
+	padding: 0;
+	margin: 0 0 10px 0;
+	border: 1px solid #babbbf;
+	.rounded(2px);
+	
 	
 	.entry {
+		margin: 0;
+		text-indent: 0;
+		padding: 10px 0;
+		border-bottom: 1px solid #babbbf;
+		border-top: none;
+		padding-bottom: 12px !important;
 
 		.date {
 			float: left;
