@@ -27,8 +27,8 @@
 <xsl:include href="components.xsl" />
 
 
-
 <xsl:variable name="pt1" select="'43'" />
+
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
 
 
@@ -85,7 +85,7 @@
 				<xsl:text>page-</xsl:text>
 				<xsl:value-of select="$current-page" />
 			</xsl:attribute>
-						
+
 			<div class="page-header clearfix">
 			
 				<div class="topnav clearfix">
@@ -177,42 +177,84 @@
 					
 				</xsl:if>
 				
-				<div class="feature">
-					
-					<xsl:call-template name="component-image">
-						<xsl:with-param name="position" select="'full-width'" />
-					</xsl:call-template>
-					
-					<xsl:call-template name="component-verse">
-						<xsl:with-param name="position" select="'full-width'" />
-					</xsl:call-template>
 				
-				</div>
-				
-				<div class="col-1">
-				
-					<xsl:value-of select="//text-entries-by-tag/entry/content" disable-output-escaping="yes" />
+				<xsl:if test="count( //tags-entries-by-tag/entry/column-full-width/item )">
 					
-					<xsl:call-template name="component-member">
-						<xsl:with-param name="position" select="'column-center'" />
-					</xsl:call-template>
+					<div class="feature">
+						
+						<xsl:for-each select="//tags-entries-by-tag/entry/column-full-width/item/label/@handle">
+						
+							<xsl:if test=". = 'images'">
+								<xsl:call-template name="component-images">
+									<xsl:with-param name="position" select="'full-width'" />
+								</xsl:call-template>
+							</xsl:if>
+							
+							<xsl:if test=". = 'verses'">
+								<xsl:call-template name="component-verses">
+									<xsl:with-param name="position" select="'full-width'" />
+								</xsl:call-template>
+							</xsl:if>
+						
+						</xsl:for-each>
+						
+					</div>
+					
+				</xsl:if>
 
-				</div>
 				
-				<div class="col-2">
+				<xsl:if test="count( //tags-entries-by-tag/entry/column-center/item )">
 					
-					<xsl:call-template name="component-event">
-						<xsl:with-param name="position" select="'column-right'" />
-					</xsl:call-template>
+					<div class="col-1">
+						
+						<xsl:for-each select="//tags-entries-by-tag/entry/column-center/item/label/@handle">
+						
+							<xsl:if test=". = 'text'">
+								<xsl:call-template name="component-text">
+									<xsl:with-param name="position" select="'column-center'" />
+								</xsl:call-template>
+							</xsl:if>
+							
+							<xsl:if test=". = 'members'">
+								<xsl:call-template name="component-members">
+									<xsl:with-param name="position" select="'column-center'" />
+								</xsl:call-template>
+							</xsl:if>
+						
+						</xsl:for-each>
+						
+					</div>
 					
-					<xsl:call-template name="component-member">
-						<xsl:with-param name="position" select="'column-right'" />
-					</xsl:call-template>
+				</xsl:if>
+				
+				
+				<xsl:if test="count( //tags-entries-by-tag/entry/column-right/item )">
 					
-					<div class="resources"><h3 class="resources-header">Resources</h3></div>
+					<div class="col-2">
+						
+						<xsl:for-each select="//tags-entries-by-tag/entry/column-right/item/label/@handle">
+							
+							<xsl:if  test=". = 'events'">
+								<xsl:call-template name="component-events">
+									<xsl:with-param name="position" select="'column-right'" />
+								</xsl:call-template>
+							</xsl:if>
+								
+							<xsl:if  test=". = 'members'">
+								<xsl:call-template name="component-members">
+									<xsl:with-param name="position" select="'column-right'" />
+								</xsl:call-template>
+							</xsl:if>
+						
+						</xsl:for-each>
+						
+					</div>
+					
+				</xsl:if>
+				
+				
+				<div class="resources"><h3 class="resources-header">Resources</h3></div>
 		
-				</div>
-			
 			</div>
 				
 			<div class="footer">
