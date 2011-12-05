@@ -2,26 +2,27 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcetags_all_entries extends Datasource{
+	Class datasourcetags_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'tags-all-entries';
-		public $dsParamORDER = 'asc';
+		public $dsParamROOTELEMENT = 'tags-entries-by-tag';
+		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'order';
+		public $dsParamREQUIREDPARAM = '$pt1:43';
+		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'id' => '{$pt1:43}',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'tag: raw',
-				'description: raw',
-				'slug',
-				'parent',
-				'hidden'
+				'column-full-width',
+				'column-center',
+				'column-right'
 		);
 
 
@@ -32,13 +33,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Tags: All entries',
+				'name' => 'Tags: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-04T18:48:09+00:00'
+				'release-date' => '2011-12-05T00:01:18+00:00'
 			);
 		}
 
