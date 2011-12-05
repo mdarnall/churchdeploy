@@ -411,3 +411,42 @@ Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstro
 Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
 Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
 Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+04 December 2011 16:15 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():  ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():   ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():    ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():     ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:88: parser error : StartTag: invalid element name
+Line: 145 - XSLTProcessor::importStylesheet(): <<<<<<< HEAD
+Line: 145 - XSLTProcessor::importStylesheet():        ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:322: parser error : Opening and ending tag mismatch: div line 90 and body
+Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
+Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:324: parser error : Opening and ending tag mismatch: body line 82 and html
+Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
+Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:326: parser error : Opening and ending tag mismatch: html line 41 and xsl:template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:388: parser error : Opening and ending tag mismatch: template line 36 and stylesheet
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
+Line: 145 - XSLTProcessor::importStylesheet():                  ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:388: parser error : Premature end of data in tag stylesheet line 6
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
+Line: 145 - XSLTProcessor::importStylesheet():                  ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
