@@ -85,8 +85,13 @@
 				<xsl:text>page-</xsl:text>
 				<xsl:value-of select="$current-page" />
 			</xsl:attribute>
+<<<<<<< HEAD
 			
 			<div class="header clearfix">
+=======
+						
+			<div class="page-header clearfix">
+>>>>>>> ef3098d7abcb9e8a3c026b3edcaa49752c75f67c
 			
 				<div class="topnav clearfix">
 				
