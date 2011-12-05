@@ -3,7 +3,7 @@
 
 
 
-<xsl:template name="component-event">
+<xsl:template name="component-events">
 	
 	<xsl:param name="position" />
 	
@@ -80,7 +80,7 @@
 
 
 
-<xsl:template name="component-image">
+<xsl:template name="component-images">
 
 	<xsl:for-each select="//images-entries-by-tag/entry">
 							
@@ -148,7 +148,7 @@
 
 
 
-<xsl:template name="component-member">
+<xsl:template name="component-members">
 	
 	<xsl:param name="position" />
 	
@@ -241,7 +241,17 @@
 
 
 
-<xsl:template name="component-verse">
+<xsl:template name="component-text">
+	
+	<xsl:if test="count( //text-entries-by-tag/entry )">
+		<xsl:value-of select="//text-entries-by-tag/entry/content" disable-output-escaping="yes" />
+	</xsl:if>
+	
+</xsl:template>
+
+
+
+<xsl:template name="component-verses">
 	
 	<xsl:if test="//verses-entries-by-tag/entry">
 		
