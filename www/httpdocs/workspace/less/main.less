@@ -1,12 +1,8 @@
-
-
-
 //
 
 // We really need to steer clear of !important unless absolutely necessary
 
 //
-
 
 
 // kirk start
@@ -31,40 +27,6 @@
 
 @color-1: hsl(9,80%,95%);
 @color-2: hsl(76,60%,52%);
-
-/*  Texture Library
-	--------------- */
-/*
-http://subtlepatterns.com/patterns/white_texture.png
-http://subtlepatterns.com/patterns/diagonal-noise.png
-http://subtlepatterns.com/patterns/dark_leather.png
-http://subtlepatterns.com/patterns/project_papper.png
-http://subtlepatterns.com/patterns/whitey.png
-http://subtlepatterns.com/patterns/darth_stripe.png
-http://subtlepatterns.com/patterns/bright_squares.png
-http://subtlepatterns.com/patterns/random_grey_variations.png
-http://subtlepatterns.com/patterns/old_mathematics.png
-http://subtlepatterns.com/patterns/45degreee_fabric.png
-*/
-
-/*  Typekit Fonts
-	--------------- */
-/*
-BODY FONTS
-==========
-ff-meta-web-pro
-ff-tisa-web-pro
-
-HEADLINE FONTS
-==============
-ff-speak-web
-din-condensed-web
-proxima-nova
-
-SPECIAL FONTS
-=============
-
-*/
 
 /*	Element presets
 	---------------	*/
@@ -146,29 +108,32 @@ p {
 	margin-bottom: -70px;
 	background: hsl(202, 13%, 25%) url('../images/noise-sm.png') repeat;
 	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 -1px 10px rgba(0,0,0,0.35)'));
-}
-.page-header .wrapper {
-	padding-top: 0;
-}
-.page-header .lower {
-	padding: 100px 0 0 0;
-}
-.page-header h3 {
-	margin: 30px 0 0 0;
-}
-.page-header h1, .page-header h1 a {
-	position: relative;
-	color: #fff;
-	text-shadow: none;
-	font-size: 52px;
-	text-transform: none;
-	font-weight: 300;
-	letter-spacing: 3px;
-	margin: 20px 0 10px 240px;
-	text-align: center;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
-	left: -80px;
-	width: 700px;
+	
+	.wrapper {
+		padding-top: 0;
+	}
+	.lower {
+		padding: 100px 0 0 0;
+	}
+	
+	h3 {
+		margin: 30px 0 0 0;
+	}
+	h1, h1 a {
+		position: relative;
+		color: #fff;
+		text-shadow: none;
+		font-size: 52px;
+		text-transform: none;
+		font-weight: 300;
+		letter-spacing: 3px;
+		margin: 20px 0 10px 240px;
+		text-align: center;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.75);
+		left: -80px;
+		width: 700px;
+	}
+	
 }
 .topnav {
 	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));
@@ -178,51 +143,63 @@ p {
 	width: 100%;
 	z-index: 4;
 	background: hsla(202, 13%, 15%, 0.95) url('../images/noise-sm.png') repeat;
+	
+	.logo {
+		float: right;
+		margin-top: 7px;
+		padding: 0 0 0 0;
+		font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		color: #fff;
+		text-transform: uppercase;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+		text-indent: -9999px;
+		display: none;
+		height: 50px;
+		width: 52px;
+		background: url('../images/sprite.png') no-repeat 0 -247px;
+	}
+	
+	ul {
+		display: block;
+		float: left;
+		list-style: none;
+		list-style-type: none;
+		list-style-image: none;
+		text-transform: uppercase;
+		margin: 23px 0 0 0;
+	}
+	
+	ul li {
+		display: inline;
+		
+		a {
+			.rounded(3px);
+			padding: 5px 10px;
+			margin-right: 10px;
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+			font-size: 14px;
+			font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+			font-weight: 700;
+			
+			&:hover {
+				background: #fff;
+				background: rgba(255,255,255,0.1);
+			}
+		}
+		
+		&.active {
+			a {
+				background: #000;
+				background: rgba(0,0,0,0.35);
+				.box-shadow(e('inset 0 1px 7px rgba(0,0,0,0.35), 0 0 1px rgba(255,255,255,0.1)'));
+			}
+		}
+		
+	}
+	
 }
-.topnav .logo {
-	float: right;
-	margin-top: 7px;
-	padding: 0 0 0 0;
-	font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	text-indent: -9999px;
-	display: none;
-	height: 50px;
-	width: 52px;
-	background: url('../images/sprite.png') no-repeat 0 -247px;
-}
-.topnav ul {
-	display: block;
-	float: left;
-	list-style: none;
-	list-style-type: none;
-	list-style-image: none;
-	text-transform: uppercase;
-	margin: 23px 0 0 0;
-}
-.topnav ul li {
-	display: inline;
-}
-.topnav ul li a {
-	padding: 5px 10px;
-	margin-right: 10px;
-	color: #fff;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.35);
-	font-size: 14px;
-	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	font-weight: 700;
-}
-.topnav ul li.active a {
-	background: #000;
-	background: rgba(0,0,0,0.35);
-	.box-shadow(e('inset 0 1px 7px rgba(0,0,0,0.35), 0 0 1px rgba(255,255,255,0.1)'));
-}
-.topnav ul li a:hover {
-	background: #fff;
-	background: rgba(255,255,255,0.1);
-}
+
 .logomark {
 	text-indent: -9999px;
 	display: block;
@@ -243,36 +220,45 @@ p {
   text-align: center;
   margin: 0 auto;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  
+  li {
+  	display: inline;
+  	margin: 0 5px;
+  	
+  	a {
+  		.rounded(3px);
+  		padding: 5px 10px;
+  		color: #595957;
+  		font-weight: 700;
+  		
+  		&:hover { background: #ededec; }
+  	}
+  	
+  	&.active a {
+  		background: #ccc;
+  		
+  		&:hover { background: #bbb; }
+  	}
+  	
+  	
+  }
+  
+  h4 {
+  	font-style: italic;
+  	margin: 10px 340px 10px 0;
+  }
+  
 }
-.sub-menu li {
-  display: inline;
-  margin: 0 5px;
-}
-.sub-menu li a {
-  padding: 5px 10px;
-  color: #595957;
-  font-weight: 700;
-}
-.sub-menu li a:hover {
-	background: #ededec;
-}
-.sub-menu li.active a {
-  background: #ccc;
-}
-.sub-menu li.active a:hover {
-  background: #bbb;
-}
-.sub-menu h4 {
-  font-style: italic;
-  margin: 10px 340px 10px 0;
-}
+
+
 .content, .footer {
 	width: 960px;
 	margin: 0 auto;
 }
 .content {
+	.rounded(3px);
 	background: #fff;
-	.box-shadow(e('0 0 10px rgba(0,0,0,0.5)'));
+	.box-shadow(e('0 0 10px rgba(0,0,0,0.35)'));
 	padding-bottom: 30px;
 }
 .feature {
@@ -320,17 +306,6 @@ blockquote.scripture span a {
 	font: normal normal 700 48px/50px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: none;
 }
-
-/*
-.event-box, .leader-contact {
-	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	background: #fff;
-	padding: 0;
-	margin: 0 0 10px 0;
-	border: 1px solid #babbbf;
-	.rounded(2px);
-}
-*/
 
 
 
@@ -658,6 +633,12 @@ a[href="http://www.logos.com/reftagger"] {
 }
 
 .component-member {
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	background: #fff;
+	padding: 0;
+	margin: 0 0 20px 0;
+	border: 1px solid #babbbf;
+	.rounded(2px);
 
 	&.column-center {
 		
@@ -671,11 +652,12 @@ a[href="http://www.logos.com/reftagger"] {
 				width: 85px;
 				height: 85px;
 				background-position: 5px 5px;
+				margin: 5px 0 0 10px;
 			}
 			
 			.info {
 				float: left;
-				margin-left: 0px;
+				margin-left: 10px;
 				
 				.name {
 					margin: 5px 0;
@@ -713,7 +695,7 @@ a[href="http://www.logos.com/reftagger"] {
 	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	background: #fff;
 	padding: 0;
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 	border: 1px solid #babbbf;
 	.rounded(2px);
 	
