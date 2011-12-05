@@ -122,11 +122,13 @@
 								</xsl:if>
 							
 							</xsl:for-each>
-							
 						</ul>
-				
+						<a href="{$root}" class="logo" title="Home">
+							<xsl:value-of select="$website-name" />
+						</a>
+						
 					</div>
-				
+					
 				</div>
 				
 				<div class="wrapper lower">

@@ -76,7 +76,7 @@ SPECIAL FONTS
 
 a {
 	text-decoration: none;
-	-webkit-transition: all 200ms ease-in-out;
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 a:hover {
 	text-decoration: none;
@@ -160,11 +160,11 @@ p {
 	position: relative;
 	color: #fff;
 	text-shadow: none;
-	font-size: 48px;
+	font-size: 52px;
 	text-transform: none;
 	font-weight: 300;
 	letter-spacing: 3px;
-	margin: 10px 0 10px 240px;
+	margin: 20px 0 10px 240px;
 	text-align: center;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
 	left: -80px;
@@ -172,8 +172,8 @@ p {
 }
 .topnav {
 	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));
-	height: 59px;
-	border-top: 4px solid hsl(10, 62%, 55%);
+	height: 65px;
+	/*border-top: 4px solid hsl(10, 62%, 55%);*/
 	position: fixed;
 	width: 100%;
 	z-index: 4;
@@ -181,11 +181,17 @@ p {
 }
 .topnav .logo {
 	float: right;
-	padding: 20px 0 0 0;
+	margin-top: 7px;
+	padding: 0 0 0 0;
 	font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #fff;
 	text-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	text-indent: -9999px;
+	display: none;
+	height: 50px;
+	width: 52px;
+	background: url('../images/sprite.png') no-repeat 0 -247px;
 }
 .topnav ul {
 	display: block;
@@ -194,7 +200,7 @@ p {
 	list-style-type: none;
 	list-style-image: none;
 	text-transform: uppercase;
-	margin: 20px 0 0 0;
+	margin: 23px 0 0 0;
 }
 .topnav ul li {
 	display: inline;
@@ -211,6 +217,7 @@ p {
 .topnav ul li.active a {
 	background: #000;
 	background: rgba(0,0,0,0.35);
+	.box-shadow(e('inset 0 1px 7px rgba(0,0,0,0.35), 0 0 1px rgba(255,255,255,0.1)'));
 }
 .topnav ul li a:hover {
 	background: #fff;
@@ -219,7 +226,7 @@ p {
 .logomark {
 	text-indent: -9999px;
 	display: block;
-	height: 115px;
+	height: 125px;
 	width: 116px;
 	background: url('../images/sprite.png') no-repeat 0 0;
 	float: left;
@@ -306,8 +313,8 @@ blockquote.scripture span a {
 }
 
 .col-1 h2 {
-	border-top: 5px dotted #ccc;
-	border-bottom: 5px dotted #ccc;
+	border-top: 5px double #ccc;
+	border-bottom: 5px double #ccc;
 	margin-bottom: 20px;
 	padding: 20px 0;
 	font: normal normal 700 48px/50px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -324,12 +331,6 @@ blockquote.scripture span a {
 	.rounded(2px);
 }
 */
-
-
-
-
-
-
 
 
 
@@ -390,8 +391,6 @@ px      68    160    252    344    436    528    620    712    804    896    */
 	width: 310px;
 	float: left;
 }
-
-
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
