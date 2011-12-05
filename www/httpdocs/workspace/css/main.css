@@ -26,7 +26,7 @@ p{font:normal normal 400 16px/1.4 adelle,"Palatino",Georgia,Times New Roman,Time
 .sub-menu h4{font-style:italic;margin:10px 340px 10px 0;}
 .content,.footer{width:960px;margin:0 auto;}
 .content{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#fff;-moz-box-shadow:0 0 10px rgba(0,0,0,0.35);-o-box-shadow:0 0 10px rgba(0,0,0,0.35);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.35);box-shadow:0 0 10px rgba(0,0,0,0.35);padding-bottom:30px;}
-.feature{padding:20px;}.feature .image{text-indent:-999999px;overflow-x:hidden;overflow-y:hidden;line-height:0;font-size:0;padding:0;margin:0;width:920px;height:400px;}
+.feature{padding:20px;}.feature .image{text-indent:-999999px;overflow-x:hidden;overflow-y:hidden;line-height:0;font-size:0;padding:0;margin:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.3);-o-box-shadow:inset 0 0 10px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.3);box-shadow:inset 0 0 10px rgba(0,0,0,0.3);width:920px;height:400px;}
 blockquote.scripture{display:block;border:none;padding-top:20px;margin:0 auto;font:normal italic 400 18px/24px adelle,"Palatino",Georgia,Times New Roman,Times,serif;text-align:center;width:85%;}blockquote.scripture span{display:block;margin:20px 0;font-size:14px;text-align:center;font:normal normal 700 16px/12px proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:uppercase;}
 blockquote.scripture span a{color:#d35d45;}blockquote.scripture span a:hover{color:#ba432c;}
 .col-1 h2{border-top:5px double #ccc;border-bottom:5px double #ccc;margin-bottom:20px;padding:20px 0;font:normal normal 700 48px/50px proxima-nova,"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;text-transform:none;}
