@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.9)
 # Database: churchdeploy
-# Generation Time: 2011-12-07 23:24:47 +0000
+# Generation Time: 2011-12-07 23:39:06 +0000
 # ************************************************************
 
 
@@ -48,7 +48,7 @@ LOCK TABLES `sym_authors` WRITE;
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
 	(3,'dfrost','39abc98f9c11b7a1d8d2529cf39bb2090c9a8393','David','Frost','dfrost@atheycreek.com','2011-12-02 18:22:37','developer','no','3','no',NULL),
-	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2011-12-07 15:01:12','developer','no','3','no',NULL),
+	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2011-12-07 15:38:39','developer','no','3','no',NULL),
 	(4,'jsimcoe','7b10dfd8ecfb74eafd8778364f883ce41cb756f5','Jonathan','Simcoe','jdsimcoe@gmail.com','2011-12-01 13:19:29','developer','no','3','no',NULL),
 	(5,'jwheeler','6a0bf4be0400168e7453d876311667eda7068fe3','Jeff','Wheeler','jeff.wheelerpdx@gmail.com',NULL,'developer','no','3','no',NULL),
 	(6,'britchie','aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d','Bryn','Ritchie','britchie@atheycreek.com','2011-12-02 14:22:17','developer','no','3','no',NULL);
@@ -91,7 +91,7 @@ VALUES
 	(66,'624835e52f4f8b31508f55af8a9e8b2e',1322706460,NULL,'eJxlVkuOJDUQ3SNxB6vXSQ3sUHdPtxoEqNGAkAYJsXSmw5WectolfyqndlyDs7DgLlyAK8yLsOsHm/qk7XC8Fy9e5L9//f34/HHx6kApuxje3n21+fJOUZiicWH79q4W+8XXd89Pj4nyPoZMT4+FPpan90UHo6zORZWZEtmYSLnAf5R3I6VyVCsvrK7M6ts5OeycNX4v2pCqWdlENCiOMpIKseBSxNx6MkpvNULJSY53jDtS0aoxBqO3tFHf0By9GdSr+kVXr7I+qhpKxMY64IQuyll1JA48uTTVZXKZsL+nkWftvdqnaF3hM3z7DLQb9X1MCFooF2ePPQ3EJbBzROKhB8+3YeUh8sRzrQyNBVFwykTJfkWu4ESvm9P92DfSFBcBFRDeWprKFQQcyZEv5Q2coAa5Hypn5UDPeGw06/WBUfKiBSIK4DQuapv0RA3LStiZYt02It/vXQLkVePDcpJ4Nse95JHcdi4Uaw6UM19hsWtuYcDCj5RRsw4gkOOiX1iAcpQ+aOcJJdOB8wOfA8AlwLre9qDGWlpswHQTPmPa8TFc6eMBif9OyjijUoUEyPsHpkOeIKbBrUyIUA7seY7VG5FPHKnxUlIt87P6dQbPe8i6asmPCcc1stUi1tKCTMwcniPqRr1Au6VwuUgfwGf7oq7DXsm67DdQyYwlBA3WGbSLiL9lduH7XUwneSDX1UF1ovUAxpnAFfpRC6My98ILZ8+7C2KMp7S6XkfSSTGmD9VsFzTLtU5mFjvyRze9DmpMOJooDNwHr7i7QO2kQfZ1Kfj8kVXaduQKGSZhjKZasOGZQQSWK4OJWGacII//TilCJxNptADTsUohsIK+R9tzz4DzymTbXumOqlH9+WdQ1nWqYEgoHYkPclVMa4luJw8qBo9Gz80tTibDOkZjxmlqZS6t66ynPA9CaheWypTwyeTrIPQ3cTO3vZ0Yqq3eOrkcBeXNqxRR4Ii/ufwAbfWylBa6gEg0xXYeY0VEJuyYyVtYVT2bkSskdmfowLuuEoFGNCxuJjJntXRThMByXfBcRGMvqYu8X8X7uEqD+k373cmBW6M3d5UuYZAcrqFreOEnp2IKW42O81/ZIP3MNth8/ibwlaNcb5HD96cdufkTYJSkU2tQhtLLJGDuVY5n3JMOnGg3T/GRfGkhFtkNqdyq5gTjlF03RY5TxTJ6fTfq57i2Vobp5Bv0cgIW7yzcf+iK5WcC4kG9mOoLxsDAigtu0kVaCO4GkwhsmgOuyJM7uG6imE8mel34DGbZNE9JW4QGlsRj46CT0+goiGupXuLhzJowJAeVS0Im+Cbj+gpP0+wIv74LhyPzMqilJuDDDwO73FHPI0Gt3rcdXIdcgcW7Hd2fIDd4POogDPaYUSb4wNrt1qY9VwVzVtZZWA4Ta6+ZnWZS0usSCNWSO3q5LnpzAVm7Jowd1gzmE1L4IfYqCv2punJbQm5EbqxBfYhgbw/vwm8fEVxcSobLFh6IoSeItzGa9ktGy6B+Itq1B4UWeBoTfX/WaU+WfQo3YQSLOF5CNzCBx7Vv8+6fP/7M3e5TndoMvujm/JqiZYxzrYR0bp8MZ7Q8hb070H+bE/7O70HC8/q/5t2od22daYTMDWoP/xTRHvi9ZOsjKwuvMYfI1N4aCjWJ3Njd4xt5dXt8c36X+wT9cZMP'),
 	(67,'cba7ce9f1e67817a64858ebbd752f78b',1322706487,NULL,'eJw9jkESgjAMRa+S6VpBdy4KLDyCJyg2LR0hcdogcDYXHskr2LJwl0z+f3nf90d36zTCC2MKTI06VycFSHe2gXyjZnHHi+paHTE9mRK2WnCV9iaGLDiTBGTAiI4jQqCywBh6jLLBUg5LkAGuQww5OZg8T8YizAlcRDxAofQIxJKfZqYf0YLxJqP2ZuFt/EBgBz2TNR4rXe8Kuv47/QBi+EgN'),
 	(333,'ec3f88ca4c2b5e187564c9c22983e191',1323296681,NULL,'eJw9jkESgjAMRa+S6VpBdy4KLDyCJyg2LR0hcdogcDYXHskr2LJwl0z+f3nf90d36zTCC2MKTI06VycFSHe2gXyjZnHHi+paHTE9mRK2WnCV9iaGLDiTBGTAiI4jQqCywBh6jLLBUg5LkAGuQww5OZg8T8YizAlcRDxAofQIxJKfZqYf0YLxJqP2ZuFt/EBgBz2TNR4rXe8Kuv47/QBi+EgN'),
-	(338,'e4c2070ad42073fffac9f81ae9209b7a',1323298871,NULL,'eJxVzEEKwjAQRuGrDNnb6k4wTdceI6R/TMDOlMy09G4uPJJXUFwILh8Pvtfj6cd9vtOGplV4cKfu6AicZKp8G9xq+XB2Y/ANuggrgjfsFq5NmLTEtoBhheqnL6RCkeb4d6yAkqxs4MgJJJlKVcqtgqfO91/O9z//DZcsNZQ='),
+	(342,'e4c2070ad42073fffac9f81ae9209b7a',1323301104,NULL,'eJxVzEEKwjAQRuGrDNnb6k4wTdceI6R/TMDOlMy09G4uPJJXUFwILh8Pvtfj6cd9vtOGplV4cKfu6AicZKp8G9xq+XB2Y/ANuggrgjfsFq5NmLTEtoBhheqnL6RCkeb4d6yAkqxs4MgJJJlKVcqtgqfO91/O9z//DZcsNZQ='),
 	(187,'1be3cffe1ba63a7f6a574368a211ab30',1322875422,NULL,'eJw9jUEOgjAQRa8y6RpBd8YU2BhXJibeYKCDNClT0k4Rz+bCI3kFqwt37+fl572fL92uk4OFQrSea7UrtwqIe28s32qVZNjsVdvoQHH2HKnRQqs0J1x8CmAjGOrJypBcAcgGOsIkj69Y0PIBuiSAcPcTMsiIAgNhIBnzIDhfrscCYqY4onP5DHNAG8mUuvp1dPUPfwD1Tj0x'),
 	(159,'8055d67c91d15f81ccc3a3c755fefd3f',1322854218,NULL,'eJw9jTEOwjAQBL+ych0S6CgcRzwl4ANbxHdWzkb5GwVP4gtELihnd7T7fX/stKUFL1o1Co/m1B8NiG/iIz9GU8v9cDaTsytpFlZyttBW3IU9AqGIPFECJdSMyAhRMa9JO+RaGoWZve6tcPM67IzrQqrkW9LboS3a4X/xA+jpNXU='),
 	(107,'5fe73c7e62689fc1aeedcfe30cb515d5',1322787713,NULL,'eJxFjjEOwjAQBL+ych0S6CicpER8AGorvmALx4fsS5S8jYIn8QUsCuh3Zvb9fOl+nQIWStlzbNWh3itQHNj6eGvVLOPuqPpOJ8oPjpk6LbRKd6Hkw4YzstkwR2FsPFe4Os5MRYbsTAiILEg0kF8I4gj3IrU8gUec2MJkGAQvEgiD88FWKKM/SlGKqoCJfKx1803r5vflA/N3RLY='),
@@ -1794,7 +1794,7 @@ LOCK TABLES `sym_entries_data_67` WRITE;
 
 INSERT INTO `sym_entries_data_67` (`id`, `entry_id`, `handle`, `value`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`)
 VALUES
-	(1,113,'release-form-for-minors','Release form (for minors)','release-form-for-minors','Release form (for minors)',4,'Release form (for minors)');
+	(2,113,'release-form-for-minors','Release form (for minors)','release-form-for-minors','Release form (for minors)',4,'Release form (for minors)');
 
 /*!40000 ALTER TABLE `sym_entries_data_67` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1823,7 +1823,7 @@ LOCK TABLES `sym_entries_data_68` WRITE;
 
 INSERT INTO `sym_entries_data_68` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`)
 VALUES
-	(1,113,'/uploads/resources/medical_authorization_2011-4edfeae6d875a.pdf',13388,'application/pdf','a:1:{s:8:\"creation\";s:25:\"2011-12-07T14:38:30-08:00\";}');
+	(2,113,'/uploads/downloads/medical_authorization_2011-4edff8e0c4a92.pdf',13388,'application/pdf','a:1:{s:8:\"creation\";s:25:\"2011-12-07T15:38:08-08:00\";}');
 
 /*!40000 ALTER TABLE `sym_entries_data_68` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1848,10 +1848,10 @@ LOCK TABLES `sym_entries_data_69` WRITE;
 
 INSERT INTO `sym_entries_data_69` (`id`, `entry_id`, `relation_id`)
 VALUES
-	(1,113,25),
-	(2,113,28),
-	(3,113,29),
-	(4,113,30);
+	(8,113,30),
+	(7,113,29),
+	(6,113,28),
+	(5,113,25);
 
 /*!40000 ALTER TABLE `sym_entries_data_69` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2376,7 +2376,7 @@ VALUES
 	(121,54,25,'medium','markdown_extra_with_smartypants',NULL,0,'yes','yes'),
 	(120,52,25,'single','none',NULL,0,'yes','yes'),
 	(130,59,25,'small','markdown_extra_with_smartypants',NULL,0,'yes','yes'),
-	(157,67,25,'single','none',NULL,0,'yes','yes');
+	(158,67,25,'single','none',NULL,0,'yes','yes');
 
 /*!40000 ALTER TABLE `sym_fields_multilingual` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2466,7 +2466,7 @@ VALUES
 	(63,42,'yes','yes','21',9999),
 	(87,44,'yes','yes','21',9999),
 	(82,55,'yes','yes','21',9999),
-	(106,69,'yes','yes','21',9999);
+	(107,69,'yes','yes','21',9999);
 
 /*!40000 ALTER TABLE `sym_fields_selectbox_link` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2663,7 +2663,7 @@ INSERT INTO `sym_fields_uniqueupload` (`id`, `field_id`, `destination`, `validat
 VALUES
 	(33,43,'/workspace/uploads/images/leaderboards','/\\.(?:jpe?g)$/i'),
 	(32,50,'/workspace/uploads/members/photos','/\\.(?:jpe?g)$/i'),
-	(38,68,'/workspace/uploads/resources',NULL);
+	(39,68,'/workspace/uploads/downloads',NULL);
 
 /*!40000 ALTER TABLE `sym_fields_uniqueupload` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2893,7 +2893,7 @@ VALUES
 	(131,3,66,9,66,'yes'),
 	(130,3,65,9,65,'yes'),
 	(129,3,64,9,64,'yes'),
-	(133,3,21,10,69,'no');
+	(134,3,21,10,69,'no');
 
 /*!40000 ALTER TABLE `sym_sections_association` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2931,7 +2931,7 @@ VALUES
 	('6a86b45e79c83b9a56ea41b0e97a8760',1322869228,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('qa16460io03toa0bdcsvnt1oi3',1322864537,'sym-|a:2:{s:8:\"username\";s:8:\"britchie\";s:4:\"pass\";s:40:\"aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d\";}'),
 	('3b4c624fb5b7fd17d469301aa1aacedd',1322881782,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('0008a2a356ae7bde27af424dda709613',1323298873,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
+	('0008a2a356ae7bde27af424dda709613',1323301119,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
