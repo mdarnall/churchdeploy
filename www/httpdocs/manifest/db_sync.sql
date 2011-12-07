@@ -32,3 +32,21 @@ DELETE FROM `sym_fields_stage_sorting` WHERE `entry_id` = '43';
 INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '64', '112,108');
 INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '65', '0');
 INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '66', '0');
+
+-- 2011-12-07 12:47:19, Jonathan Simcoe, http://churchdeploy/symphony/publish/tags/edit/43/
+DELETE FROM `sym_fields_stage_sorting` WHERE `entry_id` = '43';
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '64', '112,108');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '65', '0');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('43', '66', '0');
+
+-- 2011-12-07 13:05:45, Jonathan Simcoe, http://churchdeploy/symphony/publish/tags/edit/75/
+DELETE FROM `sym_fields_stage_sorting` WHERE `entry_id` = '75';
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('75', '64', '0');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('75', '65', '0');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('75', '66', '0');
+
+-- 2011-12-07 13:05:51, Jonathan Simcoe, http://churchdeploy/symphony/publish/tags/edit/78/
+DELETE FROM `sym_fields_stage_sorting` WHERE `entry_id` = '78';
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('78', '64', '0');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('78', '65', '0');
+INSERT INTO `sym_fields_stage_sorting` (`entry_id`, `field_id`, `order`) VALUES ('78', '66', '0');

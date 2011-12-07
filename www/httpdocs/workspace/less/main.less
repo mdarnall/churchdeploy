@@ -75,7 +75,7 @@ a:hover {
 }
 
 body {
-	background: #e9ebeb;
+	background: hsl(202, 13%, 90%);
 	font: normal normal 400 18px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif;
 	margin: 0 auto;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
@@ -107,14 +107,14 @@ p {
 	height: 330px;
 	margin-bottom: -70px;
 	background: hsl(202, 13%, 25%) url('../images/noise-sm.png') repeat;
-	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 -1px 10px rgba(0,0,0,0.35)'));
+	.box-shadow(e('inset 0 -1px 10px rgba(0,0,0,0.35)'));
 	
 	h1, 
 	h1 a {
 		position: relative;
 		color: #fff;
 		text-shadow: none;
-		font-size: 52px;
+		font-size: 44px;
 		text-transform: none;
 		font-weight: 300;
 		letter-spacing: 3px;
@@ -139,8 +139,8 @@ p {
 }
 
 .nav {
-	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));
-	
+/*	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));*/
+	.box-shadow(e('0 1px 0 rgba(255,255,255,0.05), inset 0 1px 4px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.15)'));
 	height: 65px;
 	/*border-top: 4px solid hsl(10, 62%, 55%);*/
 	position: fixed;
@@ -157,19 +157,26 @@ p {
 		text-transform: uppercase;
 		text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 		text-indent: -9999px;
-		display: none;
 		height: 50px;
-		width: 52px;
-		background: url('../images/sprite.png') no-repeat 0 -247px;
+		width: 120px;
+		background: url('../images/sprite.png') no-repeat 0 -204px;
+		opacity: 0.5;
+		-webkit-transition: none;
+		
+		&.scroll {
+			background-position: 0 -152px;
+			opacity: 1;
+		}
 	}
+	
 }
 
 .logomark {
 	text-indent: -9999px;
 	display: block;
 	height: 125px;
-	width: 116px;
-	background: url('../images/sprite.png') no-repeat 0 0;
+	width: 150px;
+	background: url('../images/sprite.png') no-repeat 0 5px;
 	float: left;
 	clear: both;
 	margin-left: 50px;
@@ -259,7 +266,7 @@ p {
 .footer {
 	width: 100%;
 	background: hsl(202, 13%, 60%) url('../images/noise-sm.png') repeat;
-	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 1px 10px rgba(0,0,0,0.35)'));
+	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.75), inset 0 2px 8px rgba(0,0,0,0.2)'));
 	margin: 60px 0 0 0;
 	padding: 20px 0;
 	.nav-1 {
@@ -299,11 +306,12 @@ p {
 				float: none;
 				border: none;
 				width: inherit;
+				margin: 10px 0;
 				
 				a {
 					color: #333;
 					font-weight: 300;
-					margin: 10px 0;
+					
 				}
 			}
 		}
@@ -316,8 +324,8 @@ p {
 	}
 }
 .smallprint {
-	background: hsl(202, 13%, 75%) url('../images/noise-sm.png') repeat;
-	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.35)'));
+	background: hsl(202, 13%, 90%);
+	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.85)'));
 	padding: 20px 0;
 	font-size: 16px;
 	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
