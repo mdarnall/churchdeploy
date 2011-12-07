@@ -220,13 +220,16 @@
 		
 			</div>
 				
-			<div class="footer">
-				
-				<xsl:call-template name="nav-1">
-					<xsl:with-param name="show-nested" select="1" />
-				</xsl:call-template>
+			<div class="footer clearfix">
+				<div class="wrapper">
+					<xsl:call-template name="nav-1">
+						<xsl:with-param name="show-nested" select="1" />
+					</xsl:call-template>
+				</div>
+			</div>
 			
-				<div class="smallprint">
+			<div class="smallprint">
+				<div class="wrapper">
 					<xsl:text>© </xsl:text>
 					<xsl:value-of select="$this-year" />
 					<xsl:text>. </xsl:text>
@@ -235,7 +238,6 @@
 					</a>
 					<xsl:text>. All rights reserved.</xsl:text>
 				</div>
-			
 			</div>
 				
 			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>

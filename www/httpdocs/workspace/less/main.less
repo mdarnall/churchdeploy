@@ -257,7 +257,11 @@ p {
 }
 
 .footer {
-	
+	width: 100%;
+	background: hsl(202, 13%, 60%) url('../images/noise-sm.png') repeat;
+	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 1px 10px rgba(0,0,0,0.35)'));
+	margin: 60px 0 0 0;
+	padding: 20px 0;
 	.nav-1 {
 		width: 100%;
 		padding: 50px 0;
@@ -274,16 +278,18 @@ p {
 		}
 		
 		.entry {
+			text-transform: uppercase;
 			float: left;
-			border: 1px solid #333;
 			width: 100px;
 			display: block;
 			text-align: left;
-			font-weight: normal;
+			font-weight: 700;
 			
 			a {
-				color: blue;
+				color: hsl(8, 50%, 45%);
+				text-shadow: 0 1px 0 rgba(255,255,255,0.25) !important;
 			}
+			
 		}
 			
 		
@@ -295,7 +301,9 @@ p {
 				width: inherit;
 				
 				a {
-					color: #555;
+					color: #333;
+					font-weight: 300;
+					margin: 10px 0;
 				}
 			}
 		}
@@ -307,13 +315,22 @@ p {
 		}
 	}
 }
-
-
-.content, .footer {
-	width: 960px;
-	margin: 0 auto;
+.smallprint {
+	background: hsl(202, 13%, 75%) url('../images/noise-sm.png') repeat;
+	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.35)'));
+	padding: 20px 0;
+	font-size: 16px;
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+	
+	a {
+		color: hsl(8, 50%, 45%);
+		font-weight: 700;
+	}
 }
 .content {
+	width: 960px;
+	margin: 0 auto;
 	.rounded(3px);
 	background: #fff;
 	.box-shadow(e('0 0 10px rgba(0,0,0,0.35)'));
