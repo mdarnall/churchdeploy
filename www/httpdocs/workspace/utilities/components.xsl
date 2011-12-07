@@ -3,6 +3,77 @@
 
 
 
+<xsl:template name="component-downloads">
+	
+	<xsl:param name="position" />
+	
+	<xsl:if test="count( //downloads-entries-by-tag/entry )">
+	
+		<div>
+			
+			<xsl:call-template name="class-position">
+				<xsl:with-param name="component" select="'downloads'" />
+				<xsl:with-param name="position" select="$position" />
+			</xsl:call-template>
+			
+			<h3 class="header">Downloads</h3>
+			
+			<xsl:for-each select="//downloads-entries-by-tag/entry">
+	
+				<div>
+					
+					<xsl:call-template name="class-rows" />
+					
+					<div>
+						
+						<xsl:attribute name="class">
+							
+							<xsl:text>icon</xsl:text>
+							
+						</xsl:attribute>
+					
+					</div>
+					
+					<div class="description">
+					
+						<span class="name">
+							<xsl:value-of select="name" disable-output-escaping="yes" />
+						</span>
+						
+						<span class="meta">
+							
+							<span class="filename">
+								<xsl:value-of select="file/filename" disable-output-escaping="yes" />
+							</span>
+							
+							<span class="filesize">
+								<xsl:value-of select="file/@size" disable-output-escaping="yes" />
+							</span>
+							
+							<span class="filetype">
+								<xsl:value-of select="file/@type" disable-output-escaping="yes" />
+							</span>
+							
+							<span class="creation-date">
+								<xsl:value-of select="file/meta/@creation" disable-output-escaping="yes" />
+							</span>
+							
+						</span>
+						
+					</div>
+					
+				</div>
+				
+			</xsl:for-each>
+			
+		</div>
+
+	</xsl:if>
+
+</xsl:template>
+
+
+
 <xsl:template name="component-events">
 	
 	<xsl:param name="position" />

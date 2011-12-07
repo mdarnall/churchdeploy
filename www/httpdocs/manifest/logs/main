@@ -475,3 +475,24 @@ Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' exp
 Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 3 objects left on the stack.
 Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 374 element for-each
 Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 December 2011 14:58 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:80: parser error : Opening and ending tag mismatch: for-each line 21 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 				</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 				      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:82: parser error : Opening and ending tag mismatch: div line 12 and xsl:for-each
+Line: 145 - XSLTProcessor::importStylesheet(): 			</xsl:for-each>
+Line: 145 - XSLTProcessor::importStylesheet(): 			               ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:84: parser error : Opening and ending tag mismatch: if line 10 and div
+Line: 145 - XSLTProcessor::importStylesheet(): 		</div>
+Line: 145 - XSLTProcessor::importStylesheet(): 		      ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:86: parser error : Opening and ending tag mismatch: template line 6 and if
+Line: 145 - XSLTProcessor::importStylesheet(): 	</xsl:if>
+Line: 145 - XSLTProcessor::importStylesheet(): 	         ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:88: parser error : Opening and ending tag mismatch: stylesheet line 2 and template
+Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
+Line: 145 - XSLTProcessor::importStylesheet():                ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:92: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="component-events">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 27 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272

@@ -57,6 +57,19 @@
 			<xsl:value-of select="@id" />
 		</xsl:for-each>
 		
+		<xsl:if test="file">
+		
+			<xsl:choose>
+				<xsl:when test="file/@type = 'application/pdf'">
+					<xsl:text> pdf</xsl:text>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text> unknown</xsl:text>
+				</xsl:otherwise>
+			</xsl:choose>
+			
+		</xsl:if>
+		
 	</xsl:attribute>
 
 </xsl:template>
