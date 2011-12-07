@@ -34,8 +34,17 @@
 					
 					</div>
 					
-					<div class="description">
-					
+					<a class="description">
+						
+						<xsl:attribute name="href">
+							
+							<xsl:value-of select="$workspace" />
+							<xsl:value-of select="file/@path" />
+							<xsl:text>/</xsl:text>
+							<xsl:value-of select="file/filename" />
+							
+						</xsl:attribute>
+						
 						<span class="name">
 							<xsl:value-of select="name" disable-output-escaping="yes" />
 						</span>
@@ -60,7 +69,7 @@
 							
 						</span>
 						
-					</div>
+					</a>
 					
 				</div>
 				
