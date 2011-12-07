@@ -88,41 +88,12 @@
 
 			<div class="page-header clearfix">
 			
-				<div class="topnav clearfix">
+				<div class="nav clearfix">
 				
 					<div class="wrapper">
 				
-						<ul id="nav">
-							
-							<xsl:for-each select="//tags-all-entries/entry[ not( @id = 43 ) ]">
-
-								<xsl:if test="not(parent/item)">
-
-									<li>
-										
-										<xsl:attribute name="class">
-											<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
-												<xsl:text>active</xsl:text>
-											</xsl:if>
-										</xsl:attribute>
-										
-										<a href="{$root}/{@id}/{description/@handle}/">
-											
-											<xsl:call-template name="tag-href" />
-											
-											<!--<xsl:attribute name="title">
-												<xsl:value-of select="description" />
-											</xsl:attribute>-->
-											
-											<xsl:value-of select="tag" />
-										
-										</a>
-									</li>
-
-								</xsl:if>
-							
-							</xsl:for-each>
-						</ul>
+						<xsl:call-template name="nav-1" />
+						
 						<a href="{$root}" class="logo" title="Home">
 							<xsl:value-of select="$website-name" />
 						</a>
@@ -163,17 +134,9 @@
 					count( //tags-all-entries/entry[ parent/item/@id = $pt1 ] )
 				">
 				
-					<ul class="sub-menu">
-						
-						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
-							<xsl:call-template name="nav-submenu-item" />
-						</xsl:for-each>
-						
-						<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
-							<xsl:call-template name="nav-submenu-item" />
-						</xsl:for-each>
-						
-					</ul>
+					<xsl:call-template name="nav-2">
+						<xsl:with-param name="parents" select="$parents" />
+					</xsl:call-template>
 					
 				</xsl:if>
 				
@@ -258,8 +221,12 @@
 			</div>
 				
 			<div class="footer">
+				
+				<xsl:call-template name="nav-1">
+					<xsl:with-param name="show-nested" select="1" />
+				</xsl:call-template>
 			
-				<p>
+				<div class="smallprint">
 					<xsl:text>© </xsl:text>
 					<xsl:value-of select="$this-year" />
 					<xsl:text>. </xsl:text>
@@ -267,7 +234,7 @@
 						<xsl:value-of select="$website-name" />
 					</a>
 					<xsl:text>. All rights reserved.</xsl:text>
-				</p>
+				</div>
 			
 			</div>
 				
@@ -322,33 +289,6 @@
 
 
 
-<xsl:template name="nav-submenu-item">
-
-	<li>
-		
-		<xsl:attribute name="class">
-			<xsl:if test="$pt1 = @id">
-				<xsl:text>active</xsl:text>
-			</xsl:if>
-		</xsl:attribute>
-		
-		<a>
-			<xsl:call-template name="tag-href" />
-			
-			<!--<xsl:attribute name="title">
-				<xsl:value-of select="description" />
-			</xsl:attribute>-->
-			
-			<xsl:value-of select="tag" />
-		
-		</a>
-		
-	</li>
-	
-</xsl:template>
-
-
-
 <xsl:template name="tag-href">
 
 	<xsl:attribute name="href">
@@ -377,6 +317,112 @@
 	</xsl:attribute>
 
 </xsl:template>
+
+
+
+
+<xsl:template name="nav-1">
+
+	<xsl:param name="show-nested" />
+
+	<ul class="nav-1">
+		
+		<xsl:for-each select="//tags-all-entries/entry[ not( @id = 43 ) ]">
+			
+			<xsl:if test="not(parent/item)">
+				
+				<xsl:variable name="entry-id" select="@id" />
+				
+				<li>
+					
+					<xsl:attribute name="class">
+						
+						<xsl:text>entry </xsl:text>
+					
+						<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
+							<xsl:text>active</xsl:text>
+						</xsl:if>
+						
+					</xsl:attribute>
+					
+					<a href="{$root}/{@id}/{description/@handle}/">
+						<xsl:call-template name="tag-href" />
+						<xsl:value-of select="tag" />
+					</a>
+					
+					<xsl:if test="$show-nested">
+											
+						<xsl:call-template name="nav-2">
+							<xsl:with-param name="parents" select="@id" />
+						</xsl:call-template>
+						
+					</xsl:if>
+					
+				</li>
+
+			</xsl:if>
+		
+		</xsl:for-each>
+		
+	</ul>
+
+</xsl:template>
+
+
+<xsl:template name="nav-2">
+	
+	<xsl:param name="parents" />
+	
+	<ul class="nav-2">
+
+		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
+			<xsl:call-template name="nav-2-entry" />
+		</xsl:for-each>
+		
+		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
+			<xsl:call-template name="nav-2-entry" />
+		</xsl:for-each>
+		
+		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents and not( @id = 43 ) ]">
+			<xsl:call-template name="nav-2-entry" />
+		</xsl:for-each>
+		
+	</ul>
+
+</xsl:template>
+
+
+
+<xsl:template name="nav-2-entry">
+
+	<li>
+		
+		<xsl:attribute name="class">
+			
+			<xsl:text>entry </xsl:text>
+			
+			<xsl:if test="$pt1 = @id">
+				<xsl:text>active</xsl:text>
+			</xsl:if>
+			
+		</xsl:attribute>
+		
+		<a>
+			<xsl:call-template name="tag-href" />
+			
+			<!--<xsl:attribute name="title">
+				<xsl:value-of select="description" />
+			</xsl:attribute>-->
+			
+			<xsl:value-of select="tag" />
+		
+		</a>
+		
+	</li>
+	
+</xsl:template>
+
+
 
 
 
