@@ -245,6 +245,7 @@
 			<!--<script type="text/javascript"><![CDATA[window.jQuery || document.write(']]><script type="text/javascript" src="{$workspace}/js/libs/jquery-1.6.4.min.js"></script><![CDATA[')]]></script>-->
 			
 			<script type="text/javascript" src="{$workspace}/js/libs/jquery-1.6.4.min.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/libs/jquery-ui.custom.min.js"></script>
 				
 			<!-- scripts concatenated and minified via build script -->
 			

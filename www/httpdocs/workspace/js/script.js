@@ -4,10 +4,10 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 	  if ($(window).scrollTop() >= 50) {
-	  	 $('.logo').fadeIn(1000);
+	  	 $('.logo').addClass('scroll');
 	  }
 	  if ($(window).scrollTop() == 0) {
-	  	$('.logo').fadeOut(1000);
+	  	$('.logo').removeClass('scroll');
 	  };
 	});
 	
