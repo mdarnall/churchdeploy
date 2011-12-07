@@ -450,3 +450,28 @@ Line: 145 - XSLTProcessor::importStylesheet():                  ^
 Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
 Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+2011/12/05 09:48:05 > Warning: 2 - touch() [function.touch]: Utime failed: Permission denied in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 217
+2011/12/05 09:48:05 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/men-4ed81234ad602.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/men-4ed81234ad602.jpg
+06 December 2011 21:08 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 233 element for-each
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:for-each : could not compile select expression ''
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+2011/12/06 21:32:56 > Warning: 2 - touch() [function.touch]: Utime failed: Permission denied in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 217
+2011/12/06 21:32:56 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/men-4ed81234ad602.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/men-4ed81234ad602.jpg
+06 December 2011 21:44 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 370 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Variable 'parents' has not been declared.
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 2 objects left on the stack.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 370 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+06 December 2011 21:46 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): Invalid type
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 3 objects left on the stack.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 374 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+06 December 2011 21:46 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): Invalid type
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 3 objects left on the stack.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 374 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+06 December 2011 21:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): Invalid type
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 3 objects left on the stack.
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 374 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272

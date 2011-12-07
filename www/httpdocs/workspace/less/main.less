@@ -109,17 +109,8 @@ p {
 	background: hsl(202, 13%, 25%) url('../images/noise-sm.png') repeat;
 	.box-shadow(e('0 1px 0 rgba(255,255,255,1), inset 0 -1px 10px rgba(0,0,0,0.35)'));
 	
-	.wrapper {
-		padding-top: 0;
-	}
-	.lower {
-		padding: 100px 0 0 0;
-	}
-	
-	h3 {
-		margin: 30px 0 0 0;
-	}
-	h1, h1 a {
+	h1, 
+	h1 a {
 		position: relative;
 		color: #fff;
 		text-shadow: none;
@@ -134,9 +125,22 @@ p {
 		width: 700px;
 	}
 	
+	h3 {
+		margin: 30px 0 0 0;
+	}
+	
+	.wrapper {
+		padding-top: 0;
+	}
+	
+	.lower {
+		padding: 100px 0 0 0;
+	}
 }
-.topnav {
+
+.nav {
 	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));
+	
 	height: 65px;
 	/*border-top: 4px solid hsl(10, 62%, 55%);*/
 	position: fixed;
@@ -158,19 +162,32 @@ p {
 		width: 52px;
 		background: url('../images/sprite.png') no-repeat 0 -247px;
 	}
-	
-	ul {
-		display: block;
-		float: left;
-		list-style: none;
-		list-style-type: none;
-		list-style-image: none;
-		text-transform: uppercase;
-		margin: 23px 0 0 0;
-	}
-	
-	ul li {
+}
+
+.logomark {
+	text-indent: -9999px;
+	display: block;
+	height: 125px;
+	width: 116px;
+	background: url('../images/sprite.png') no-repeat 0 0;
+	float: left;
+	clear: both;
+	margin-left: 50px;
+	z-index: 10;
+}
+
+.nav-1 {
+	display: block;
+	float: left;
+	list-style: none;
+	list-style-type: none;
+	list-style-image: none;
+	text-transform: uppercase;
+	margin: 23px 0 0 0;
+
+	.entry {
 		display: inline;
+		float: left;
 		
 		a {
 			.rounded(3px);
@@ -189,65 +206,106 @@ p {
 		}
 		
 		&.active {
+		
 			a {
 				background: #000;
 				background: rgba(0,0,0,0.35);
 				.box-shadow(e('inset 0 1px 7px rgba(0,0,0,0.35), 0 0 1px rgba(255,255,255,0.1)'));
 			}
 		}
-		
 	}
-	
 }
 
-.logomark {
-	text-indent: -9999px;
-	display: block;
-	height: 125px;
-	width: 116px;
-	background: url('../images/sprite.png') no-repeat 0 0;
-	float: left;
-	clear: both;
-	margin-left: 50px;
-	z-index: 10;
+.nav-2 {
+	padding: 25px 20px 5px 20px;
+	margin-right: -20px;
+	font-size: 14px;
+	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+	.entry {
+		display: inline;
+		margin: 0 5px;
+		
+		a {
+			.rounded(3px);
+			padding: 5px 10px;
+			color: #595957;
+			font-weight: 700;
+			
+			&:hover { 
+				background: #ededec; 
+			}
+		}
+			
+		&.active a {
+			background: #ccc;
+		
+			&:hover { 
+				background: #bbb; 
+			}
+		}
+	}
+  
+	h4 {
+		font-style: italic;
+		margin: 10px 340px 10px 0;
+	}
 }
-.sub-menu {
-  padding: 25px 20px 5px 20px;
-  margin-right: -20px;
-  font-size: 14px;
-  font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-  
-  li {
-  	display: inline;
-  	margin: 0 5px;
-  	
-  	a {
-  		.rounded(3px);
-  		padding: 5px 10px;
-  		color: #595957;
-  		font-weight: 700;
-  		
-  		&:hover { background: #ededec; }
-  	}
-  	
-  	&.active a {
-  		background: #ccc;
-  		
-  		&:hover { background: #bbb; }
-  	}
-  	
-  	
-  }
-  
-  h4 {
-  	font-style: italic;
-  	margin: 10px 340px 10px 0;
-  }
-  
+
+.footer {
+	
+	.nav-1 {
+		width: 100%;
+		padding: 50px 0;
+		
+		&,
+		& * {
+			padding: 0 !important;
+			margin: 0 !important;
+			text-transform: none !important;
+			-webkit-box-shadow: none !important;
+			box-shadow: none !important;
+			text-shadow: none !important;
+			background: none !important;
+		}
+		
+		.entry {
+			float: left;
+			border: 1px solid #333;
+			width: 100px;
+			display: block;
+			text-align: left;
+			font-weight: normal;
+			
+			a {
+				color: blue;
+			}
+		}
+			
+		
+		.nav-2 {
+			
+			.entry {
+				float: none;
+				border: none;
+				width: inherit;
+				
+				a {
+					color: #555;
+				}
+			}
+		}
+		
+		
+		
+		a {
+			color: #333;
+		}
+	}
 }
 
 
@@ -700,7 +758,6 @@ a[href="http://www.logos.com/reftagger"] {
 	margin: 0 0 20px 0;
 	border: 1px solid #babbbf;
 	.rounded(2px);
-	
 	
 	.entry {
 		margin: 0;
