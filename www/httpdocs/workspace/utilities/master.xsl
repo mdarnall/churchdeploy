@@ -353,6 +353,7 @@
 					<xsl:if test="$show-nested">
 											
 						<xsl:call-template name="nav-2">
+							<xsl:with-param name="instance" select="'footer'" />
 							<xsl:with-param name="parents" select="@id" />
 						</xsl:call-template>
 						
@@ -371,21 +372,31 @@
 
 <xsl:template name="nav-2">
 	
+	<xsl:param name="instance" />
 	<xsl:param name="parents" />
 	
 	<ul class="nav-2">
-
-		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
-			<xsl:call-template name="nav-2-entry" />
-		</xsl:for-each>
 		
-		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
-			<xsl:call-template name="nav-2-entry" />
-		</xsl:for-each>
-		
-		<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents and not( @id = 43 ) ]">
-			<xsl:call-template name="nav-2-entry" />
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$instance = 'footer'">
+			
+				<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents and not( @id = 43 ) ]">
+					<xsl:call-template name="nav-2-entry" />
+				</xsl:for-each>
+				
+			</xsl:when>
+			<xsl:otherwise>
+			
+				<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
+					<xsl:call-template name="nav-2-entry" />
+				</xsl:for-each>
+				
+				<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
+					<xsl:call-template name="nav-2-entry" />
+				</xsl:for-each>
+				
+			</xsl:otherwise>
+		</xsl:choose>
 		
 	</ul>
 
