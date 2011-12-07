@@ -197,6 +197,12 @@
 						
 						<xsl:for-each select="//tags-entries-by-tag/entry/column-right/item/label/@handle">
 							
+							<xsl:if  test=". = 'downloads'">
+								<xsl:call-template name="component-downloads">
+									<xsl:with-param name="position" select="'column-right'" />
+								</xsl:call-template>
+							</xsl:if>
+
 							<xsl:if  test=". = 'events'">
 								<xsl:call-template name="component-events">
 									<xsl:with-param name="position" select="'column-right'" />
@@ -214,10 +220,7 @@
 					</div>
 					
 				</xsl:if>
-				
-				
-				<div class="resources"><h3 class="resources-header">Resources</h3></div>
-		
+						
 			</div>
 				
 			<div class="footer clearfix">
