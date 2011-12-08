@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.9)
 # Database: churchdeploy
-# Generation Time: 2011-12-08 16:49:30 +0000
+# Generation Time: 2011-12-08 20:59:42 +0000
 # ************************************************************
 
 
@@ -47,7 +47,7 @@ LOCK TABLES `sym_authors` WRITE;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2011-12-08 08:48:23','developer','no','3','no',NULL),
+	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2011-12-08 12:59:21','developer','no','3','no',NULL),
 	(7,'admin','7e523a069053bd727bf980a2eaef2913c8692c1e','Admin','Admin','noreply@churchdeploy.com',NULL,'author','no','3','no',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
@@ -88,8 +88,8 @@ VALUES
 	(66,'624835e52f4f8b31508f55af8a9e8b2e',1322706460,NULL,'eJxlVkuOJDUQ3SNxB6vXSQ3sUHdPtxoEqNGAkAYJsXSmw5WectolfyqndlyDs7DgLlyAK8yLsOsHm/qk7XC8Fy9e5L9//f34/HHx6kApuxje3n21+fJOUZiicWH79q4W+8XXd89Pj4nyPoZMT4+FPpan90UHo6zORZWZEtmYSLnAf5R3I6VyVCsvrK7M6ts5OeycNX4v2pCqWdlENCiOMpIKseBSxNx6MkpvNULJSY53jDtS0aoxBqO3tFHf0By9GdSr+kVXr7I+qhpKxMY64IQuyll1JA48uTTVZXKZsL+nkWftvdqnaF3hM3z7DLQb9X1MCFooF2ePPQ3EJbBzROKhB8+3YeUh8sRzrQyNBVFwykTJfkWu4ESvm9P92DfSFBcBFRDeWprKFQQcyZEv5Q2coAa5Hypn5UDPeGw06/WBUfKiBSIK4DQuapv0RA3LStiZYt02It/vXQLkVePDcpJ4Nse95JHcdi4Uaw6UM19hsWtuYcDCj5RRsw4gkOOiX1iAcpQ+aOcJJdOB8wOfA8AlwLre9qDGWlpswHQTPmPa8TFc6eMBif9OyjijUoUEyPsHpkOeIKbBrUyIUA7seY7VG5FPHKnxUlIt87P6dQbPe8i6asmPCcc1stUi1tKCTMwcniPqRr1Au6VwuUgfwGf7oq7DXsm67DdQyYwlBA3WGbSLiL9lduH7XUwneSDX1UF1ovUAxpnAFfpRC6My98ILZ8+7C2KMp7S6XkfSSTGmD9VsFzTLtU5mFjvyRze9DmpMOJooDNwHr7i7QO2kQfZ1Kfj8kVXaduQKGSZhjKZasOGZQQSWK4OJWGacII//TilCJxNptADTsUohsIK+R9tzz4DzymTbXumOqlH9+WdQ1nWqYEgoHYkPclVMa4luJw8qBo9Gz80tTibDOkZjxmlqZS6t66ynPA9CaheWypTwyeTrIPQ3cTO3vZ0Yqq3eOrkcBeXNqxRR4Ii/ufwAbfWylBa6gEg0xXYeY0VEJuyYyVtYVT2bkSskdmfowLuuEoFGNCxuJjJntXRThMByXfBcRGMvqYu8X8X7uEqD+k373cmBW6M3d5UuYZAcrqFreOEnp2IKW42O81/ZIP3MNth8/ibwlaNcb5HD96cdufkTYJSkU2tQhtLLJGDuVY5n3JMOnGg3T/GRfGkhFtkNqdyq5gTjlF03RY5TxTJ6fTfq57i2Vobp5Bv0cgIW7yzcf+iK5WcC4kG9mOoLxsDAigtu0kVaCO4GkwhsmgOuyJM7uG6imE8mel34DGbZNE9JW4QGlsRj46CT0+goiGupXuLhzJowJAeVS0Im+Cbj+gpP0+wIv74LhyPzMqilJuDDDwO73FHPI0Gt3rcdXIdcgcW7Hd2fIDd4POogDPaYUSb4wNrt1qY9VwVzVtZZWA4Ta6+ZnWZS0usSCNWSO3q5LnpzAVm7Jowd1gzmE1L4IfYqCv2punJbQm5EbqxBfYhgbw/vwm8fEVxcSobLFh6IoSeItzGa9ktGy6B+Itq1B4UWeBoTfX/WaU+WfQo3YQSLOF5CNzCBx7Vv8+6fP/7M3e5TndoMvujm/JqiZYxzrYR0bp8MZ7Q8hb070H+bE/7O70HC8/q/5t2od22daYTMDWoP/xTRHvi9ZOsjKwuvMYfI1N4aCjWJ3Njd4xt5dXt8c36X+wT9cZMP'),
 	(67,'cba7ce9f1e67817a64858ebbd752f78b',1322706487,NULL,'eJw9jkESgjAMRa+S6VpBdy4KLDyCJyg2LR0hcdogcDYXHskr2LJwl0z+f3nf90d36zTCC2MKTI06VycFSHe2gXyjZnHHi+paHTE9mRK2WnCV9iaGLDiTBGTAiI4jQqCywBh6jLLBUg5LkAGuQww5OZg8T8YizAlcRDxAofQIxJKfZqYf0YLxJqP2ZuFt/EBgBz2TNR4rXe8Kuv47/QBi+EgN'),
 	(363,'ec3f88ca4c2b5e187564c9c22983e191',1323302346,NULL,'eJw9jkESgjAMRa+S6VpBdy4KLDyCJyg2LR0hcdogcDYXHskr2LJwl0z+f3nf90d36zTCC2MKTI06VycFSHe2gXyjZnHHi+paHTE9mRK2WnCV9iaGLDiTBGTAiI4jQqCywBh6jLLBUg5LkAGuQww5OZg8T8YizAlcRDxAofQIxJKfZqYf0YLxJqP2ZuFt/EBgBz2TNR4rXe8Kuv47/QBi+EgN'),
-	(398,'e4c2070ad42073fffac9f81ae9209b7a',1323362277,NULL,'eJxVzEEKwjAQRuGrDNnb6k4wTdceI6R/TMDOlMy09G4uPJJXUFwILh8Pvtfj6cd9vtOGplV4cKfu6AicZKp8G9xq+XB2Y/ANuggrgjfsFq5NmLTEtoBhheqnL6RCkeb4d6yAkqxs4MgJJJlKVcqtgqfO91/O9z//DZcsNZQ='),
-	(381,'1be3cffe1ba63a7f6a574368a211ab30',1323333672,NULL,'eJw9jUEOgjAQRa8y6RpBd8YU2BhXJibeYKCDNClT0k4Rz+bCI3kFqwt37+fl572fL92uk4OFQrSea7UrtwqIe28s32qVZNjsVdvoQHH2HKnRQqs0J1x8CmAjGOrJypBcAcgGOsIkj69Y0PIBuiSAcPcTMsiIAgNhIBnzIDhfrscCYqY4onP5DHNAG8mUuvp1dPUPfwD1Tj0x'),
+	(403,'e4c2070ad42073fffac9f81ae9209b7a',1323377252,NULL,'eJxVzEEKwjAQRuGrDNnb6k4wTdceI6R/TMDOlMy09G4uPJJXUFwILh8Pvtfj6cd9vtOGplV4cKfu6AicZKp8G9xq+XB2Y/ANuggrgjfsFq5NmLTEtoBhheqnL6RCkeb4d6yAkqxs4MgJJJlKVcqtgqfO91/O9z//DZcsNZQ='),
+	(406,'1be3cffe1ba63a7f6a574368a211ab30',1323377959,NULL,'eJw9jUEOgjAQRa8y6RpBd8YU2BhXJibeYKCDNClT0k4Rz+bCI3kFqwt37+fl572fL92uk4OFQrSea7UrtwqIe28s32qVZNjsVdvoQHH2HKnRQqs0J1x8CmAjGOrJypBcAcgGOsIkj69Y0PIBuiSAcPcTMsiIAgNhIBnzIDhfrscCYqY4onP5DHNAG8mUuvp1dPUPfwD1Tj0x'),
 	(386,'8055d67c91d15f81ccc3a3c755fefd3f',1323335178,NULL,'eJw9jTEOwjAQBL+ych0S6CgcRzwl4ANbxHdWzkb5GwVP4gtELihnd7T7fX/stKUFL1o1Co/m1B8NiG/iIz9GU8v9cDaTsytpFlZyttBW3IU9AqGIPFECJdSMyAhRMa9JO+RaGoWZve6tcPM67IzrQqrkW9LboS3a4X/xA+jpNXU='),
 	(107,'5fe73c7e62689fc1aeedcfe30cb515d5',1322787713,NULL,'eJxFjjEOwjAQBL+ych0S6CicpER8AGorvmALx4fsS5S8jYIn8QUsCuh3Zvb9fOl+nQIWStlzbNWh3itQHNj6eGvVLOPuqPpOJ8oPjpk6LbRKd6Hkw4YzstkwR2FsPFe4Os5MRYbsTAiILEg0kF8I4gj3IrU8gUec2MJkGAQvEgiD88FWKKM/SlGKqoCJfKx1803r5vflA/N3RLY='),
 	(387,'d47ded1e8a8cc651b91c93c0b2ca1db3',1323335411,NULL,'eJw9jUEOgjAURK8y6VpBd8YUvIQXaOiH/qT8T9oieDYXHskrCC5czZu3mPm83va2jhEPSplVGnOuTgYknXqWoTFz6Y8Xc2ttojypZGptobW09+RYME9w6AJHj62VQFjcE1vkoPMmB73CiccSSHbNGRr9YceFY4RogafJpYI+6Qgula1/+7b+H34B3TA53g=='),
@@ -99,7 +99,7 @@ VALUES
 	(123,'d8c99d261d41207e13d5523d63d037e2',1322788241,NULL,'eJw9jkEOgjAURK8y6VpBdy4KxJXnaOinNKH/m/6KeDYXHskrCCzcvnkzme/7Y7slTZgpaxRuzLk6GRD34iOHxjzKcLyYrrWZ9C6s1NpCS2mvClo7LyTHGF0ZkamnOJNHGQkhDuWwGQwVpMhRC+U9UpcIwoQicCwrygc4RRDxWK2ny14hwy6v63GQySNk19NGb+IrW+8fbP0/9QNjd0e+'),
 	(388,'47086d6619a1fd4338ba59f2f7ef5448',1323335648,NULL,'eJw9jkEOgjAURK8y6VpBdy4KxJXnaOinNKH/m/6KeDYXHskrCCzcvnkzme/7Y7slTZgpaxRuzLk6GRD34iOHxjzKcLyYrrWZ9C6s1NpCS2mvClo7LyTHGF0ZkamnOJNHGQkhDuWwGQwVpMhRC+U9UpcIwoQicCwrygc4RRDxWK2ny14hwy6v63GQySNk19NGb+IrW+8fbP0/9QNjd0e+'),
 	(380,'9185d6c990ba8d7a6721fcf4469a9fa9',1323333483,NULL,'eJxFT0tSwzAMvcqbrGkLu05x0+EC3MGNlc8kljKWHdKzseBIXAHbzMBOT+8nfX9+mdvuF2wUdBK+Ni/H5wbEnbiJh2uTYn84N7fWBNJVWKk1kfbYvrHDQhFJ0eX15ChAmGBZ4pjnKFiDbDITEmewyFZIV4hBxOFDwqwXvEtEL0HtnOuQrbCq5O9LgdJDUlBaNtJsHKhEP2VFFXrLXFp7qHjCpK+4pwjaRwmx2v/vudRuFfjUjb9uCVSjHgQlqjtnH7Brvtt2Yw44mlP91Zz+nv8BBCZuJw=='),
-	(400,'3a53d0d30b28a66e2ff3a59be3ca0249',1323362901,NULL,'eJw9j0tSwzAMhq+iybq0dMciTXdwDk+sxIJUMrKclLOx4EhcATvusNT/+CT9fv/01/ttgRU1kfClOx+fO0AexRPPly7b9PTSXYdeMUXhhENveLfhVRQsIGyiHmSCN/FACT4zjR8HcOwhyoY65aVNKTiNWDuOi/AFtgn6GYtTEQeIhDqWlYArMpjsdE8r1TvApcy+1MumJHlpyEhK1vBFr/l3Iba0KzenKltzy2GusNKIyg1SwxYkz+ERLz2s1YcX0Kkd+9P+a3/6f/4PN71tXg==');
+	(407,'3a53d0d30b28a66e2ff3a59be3ca0249',1323377961,NULL,'eJw9j0tSwzAMhq+iybq0dMciTXdwDk+sxIJUMrKclLOx4EhcATvusNT/+CT9fv/01/ttgRU1kfClOx+fO0AexRPPly7b9PTSXYdeMUXhhENveLfhVRQsIGyiHmSCN/FACT4zjR8HcOwhyoY65aVNKTiNWDuOi/AFtgn6GYtTEQeIhDqWlYArMpjsdE8r1TvApcy+1MumJHlpyEhK1vBFr/l3Iba0KzenKltzy2GusNKIyg1SwxYkz+ERLz2s1YcX0Kkd+9P+a3/6f/4PN71tXg==');
 
 /*!40000 ALTER TABLE `sym_cache` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -229,7 +229,8 @@ VALUES
 	(116,7,3,'2011-12-07 18:24:24','2011-12-08 02:24:24'),
 	(115,10,2,'2011-12-07 15:34:13','2011-12-07 23:34:13'),
 	(117,11,2,'2011-12-08 07:32:35','2011-12-08 15:32:35'),
-	(118,11,2,'2011-12-08 08:39:01','2011-12-08 16:39:01');
+	(118,11,2,'2011-12-08 08:39:01','2011-12-08 16:39:01'),
+	(119,11,2,'2011-12-08 12:48:54','2011-12-08 20:48:54');
 
 /*!40000 ALTER TABLE `sym_entries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1837,7 +1838,8 @@ LOCK TABLES `sym_entries_data_73` WRITE;
 INSERT INTO `sym_entries_data_73` (`id`, `entry_id`, `handle`, `value`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`)
 VALUES
 	(7,117,'ministry','Ministry','ministry','Ministry',1,'Ministry'),
-	(8,118,'home','Home','home','Home',1,'Home');
+	(8,118,'home','Home','home','Home',1,'Home'),
+	(10,119,'default','Default','default','Default',1,'Default');
 
 /*!40000 ALTER TABLE `sym_entries_data_73` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1865,7 +1867,9 @@ VALUES
 	(14,117,111),
 	(13,117,107),
 	(15,118,107),
-	(16,118,111);
+	(16,118,111),
+	(17,119,107),
+	(18,119,111);
 
 /*!40000 ALTER TABLE `sym_entries_data_74` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1891,7 +1895,8 @@ LOCK TABLES `sym_entries_data_75` WRITE;
 INSERT INTO `sym_entries_data_75` (`id`, `entry_id`, `relation_id`)
 VALUES
 	(7,117,108),
-	(8,118,108);
+	(8,118,108),
+	(9,119,108);
 
 /*!40000 ALTER TABLE `sym_entries_data_75` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -1920,7 +1925,11 @@ VALUES
 	(27,117,110),
 	(26,117,109),
 	(25,117,113),
-	(29,118,109);
+	(29,118,109),
+	(30,119,109),
+	(31,119,112),
+	(32,119,113),
+	(33,119,110);
 
 /*!40000 ALTER TABLE `sym_entries_data_76` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2633,7 +2642,10 @@ VALUES
 	(93,115,73,'0',NULL),
 	(110,117,75,'0',NULL),
 	(111,117,76,'109,110,112,113',NULL),
-	(109,117,74,'107,111',NULL);
+	(109,117,74,'107,111',NULL),
+	(112,119,74,'0',NULL),
+	(113,119,75,'0',NULL),
+	(114,119,76,'109,112,110,113',NULL);
 
 /*!40000 ALTER TABLE `sym_fields_stage_sorting` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2895,7 +2907,7 @@ LOCK TABLES `sym_pages` WRITE;
 
 INSERT INTO `sym_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`)
 VALUES
-	(1,NULL,'Home','home',NULL,'pt1/pt1-handle/pt2/pt3/pt4/pt5/pt6','downloads_entries_by_tag,dynamic_xml_apibibliacom,events_entries_by_tag,events_entries_by_tag_locations,images_entries_by_tag,locations_entries_by_tag,members_entries_by_tag,seo_all_entries,tags_all_entries,tags_entries_by_tag,tags_entries_by_tag_layouts,text_entries_by_tag,verses_entries_by_tag',NULL,1),
+	(1,NULL,'Home','home',NULL,'pt1/pt1-handle/pt2/pt3/pt4/pt5/pt6','downloads_entries_by_tag,dynamic_xml_apibibliacom,events_entries_by_tag,events_entries_by_tag_locations,images_entries_by_tag,layouts_default_entry,locations_entries_by_tag,members_entries_by_tag,seo_all_entries,tags_all_entries,tags_entries_by_tag,tags_entries_by_tag_layouts,text_entries_by_tag,verses_entries_by_tag',NULL,1),
 	(2,NULL,'Member','member',NULL,'pt1/pt2/pt3/pt4/pt5/pt6',NULL,'members_activate_account,members_create,members_generate_recovery_code,members_regenerate_activation_code,members_reset_password',2);
 
 /*!40000 ALTER TABLE `sym_pages` ENABLE KEYS */;
@@ -2920,7 +2932,7 @@ LOCK TABLES `sym_pages_types` WRITE;
 
 INSERT INTO `sym_pages_types` (`id`, `page_id`, `type`)
 VALUES
-	(42,1,'index');
+	(43,1,'index');
 
 /*!40000 ALTER TABLE `sym_pages_types` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -3042,7 +3054,7 @@ VALUES
 	('16378943caabb4740cb9ad9ab36b973c',1323301733,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('l95e9o27dv57kg84o0b6l383n5',1323311127,'sym-|a:2:{s:8:\"username\";s:6:\"dfrost\";s:4:\"pass\";s:40:\"39abc98f9c11b7a1d8d2529cf39bb2090c9a8393\";}sym-members|a:0:{}'),
 	('f4b7a98ee38a8c980ae850cd504b995e',1323362506,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('0008a2a356ae7bde27af424dda709613',1323362903,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
+	('0008a2a356ae7bde27af424dda709613',1323377962,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;

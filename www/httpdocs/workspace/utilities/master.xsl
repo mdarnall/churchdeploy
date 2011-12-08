@@ -140,17 +140,43 @@
 					
 				</xsl:if>
 				
-				<xsl:call-template name="component">
-					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-full-width" />
-				</xsl:call-template>
+				<xsl:choose>
+					
+					<xsl:when test="count(//tags-entries-by-tag-layouts/entry)">
+					
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-full-width" />
+						</xsl:call-template>
+						
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
+						</xsl:call-template>
+						
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
+						</xsl:call-template>
+						
+					</xsl:when>
+					
+					<xsl:otherwise>
+					
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-full-width" />
+						</xsl:call-template>
+						
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-center" />
+						</xsl:call-template>
+						
+						<xsl:call-template name="component">
+							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-right" />
+						</xsl:call-template>
+						
+					</xsl:otherwise>
+					
+				</xsl:choose>
 				
-				<xsl:call-template name="component">
-					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
-				</xsl:call-template>
 				
-				<xsl:call-template name="component">
-					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
-				</xsl:call-template>
 							
 			</div>
 				
