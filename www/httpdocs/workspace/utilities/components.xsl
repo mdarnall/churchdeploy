@@ -3,6 +3,62 @@
 
 
 
+<xsl:template name="component">
+	
+	<xsl:param name="xpath" />
+	
+	<xsl:if test="count($xpath/item)">
+		
+		<div class="{name($xpath)}">
+		
+			<xsl:for-each select="$xpath/item/label/@handle">
+			
+				<xsl:if  test=". = 'downloads'">
+					<xsl:call-template name="component-downloads">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+			
+				<xsl:if  test=". = 'events'">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+			
+				<xsl:if test=". = 'images'">
+					<xsl:call-template name="component-images">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+			
+				<xsl:if  test=". = 'members'">
+					<xsl:call-template name="component-members">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+				
+				<xsl:if test=". = 'text'">
+					<xsl:call-template name="component-text">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+				
+				<xsl:if test=". = 'verses'">
+					<xsl:call-template name="component-verses">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+			
+			</xsl:for-each>
+			
+		</div>
+	
+	</xsl:if>
+	
+</xsl:template>
+
+
+
 <xsl:template name="component-downloads">
 	
 	<xsl:param name="position" />

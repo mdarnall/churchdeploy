@@ -140,87 +140,18 @@
 					
 				</xsl:if>
 				
+				<xsl:call-template name="component">
+					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-full-width" />
+				</xsl:call-template>
 				
-				<xsl:if test="count( //tags-entries-by-tag/entry/column-full-width/item )">
-					
-					<div class="feature">
-						
-						<xsl:for-each select="//tags-entries-by-tag/entry/column-full-width/item/label/@handle">
-						
-							<xsl:if test=". = 'images'">
-								<xsl:call-template name="component-images">
-									<xsl:with-param name="position" select="'full-width'" />
-								</xsl:call-template>
-							</xsl:if>
+				<xsl:call-template name="component">
+					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
+				</xsl:call-template>
+				
+				<xsl:call-template name="component">
+					<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
+				</xsl:call-template>
 							
-							<xsl:if test=". = 'verses'">
-								<xsl:call-template name="component-verses">
-									<xsl:with-param name="position" select="'full-width'" />
-								</xsl:call-template>
-							</xsl:if>
-						
-						</xsl:for-each>
-						
-					</div>
-					
-				</xsl:if>
-
-				
-				<xsl:if test="count( //tags-entries-by-tag/entry/column-center/item )">
-					
-					<div class="col-1">
-						
-						<xsl:for-each select="//tags-entries-by-tag/entry/column-center/item/label/@handle">
-						
-							<xsl:if test=". = 'text'">
-								<xsl:call-template name="component-text">
-									<xsl:with-param name="position" select="'column-center'" />
-								</xsl:call-template>
-							</xsl:if>
-							
-							<xsl:if test=". = 'members'">
-								<xsl:call-template name="component-members">
-									<xsl:with-param name="position" select="'column-center'" />
-								</xsl:call-template>
-							</xsl:if>
-						
-						</xsl:for-each>
-						
-					</div>
-					
-				</xsl:if>
-				
-				
-				<xsl:if test="count( //tags-entries-by-tag/entry/column-right/item )">
-					
-					<div class="col-2">
-						
-						<xsl:for-each select="//tags-entries-by-tag/entry/column-right/item/label/@handle">
-							
-							<xsl:if  test=". = 'downloads'">
-								<xsl:call-template name="component-downloads">
-									<xsl:with-param name="position" select="'column-right'" />
-								</xsl:call-template>
-							</xsl:if>
-
-							<xsl:if  test=". = 'events'">
-								<xsl:call-template name="component-events">
-									<xsl:with-param name="position" select="'column-right'" />
-								</xsl:call-template>
-							</xsl:if>
-								
-							<xsl:if  test=". = 'members'">
-								<xsl:call-template name="component-members">
-									<xsl:with-param name="position" select="'column-right'" />
-								</xsl:call-template>
-							</xsl:if>
-						
-						</xsl:for-each>
-						
-					</div>
-					
-				</xsl:if>
-						
 			</div>
 				
 			<div class="footer clearfix">

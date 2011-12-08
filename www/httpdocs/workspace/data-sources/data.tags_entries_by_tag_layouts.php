@@ -2,48 +2,49 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedownloads_entries_by_tag extends Datasource{
+	Class datasourcetags_entries_by_tag_layouts extends Datasource{
 
-		public $dsParamROOTELEMENT = 'downloads-entries-by-tag';
+		public $dsParamROOTELEMENT = 'tags-entries-by-tag-layouts';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
+		public $dsParamREQUIREDPARAM = '$ds-tags-entries-by-tag';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'69' => '{$pt1:43}',
+				'id' => '{$ds-tags-entries-by-tag}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
-				'file'
+				'column-full-width',
+				'column-center',
+				'column-right'
 		);
 
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array();
+			$this->_dependencies = array('$ds-tags-entries-by-tag');
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Downloads: Entries by tag',
+				'name' => 'Tags: Entries by tag: Layouts',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-07T22:36:07+00:00'
+				'release-date' => '2011-12-08T15:23:07+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '10';
+			return '11';
 		}
 
 		public function allowEditorToParse(){
