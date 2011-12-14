@@ -1,3 +1,4 @@
-www/httpdocs/manifest/logs/main
+www/httpdocs/manifest/logs
+www/httpdocs/manifest/cache
+www/httpdocs/manifest/tmp
 *.DS_Store
-www/httpdocs/workspace/bootstrap
