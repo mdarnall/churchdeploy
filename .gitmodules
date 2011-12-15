@@ -121,3 +121,6 @@
 [submodule "www/httpdocs/extensions/db_sync"]
 	path = www/httpdocs/extensions/db_sync
 	url = http://github.com/nickdunn/db_sync.git
+[submodule "www/httpdocs/extensions/importcsv"]
+	path = www/httpdocs/extensions/importcsv
+	url = http://github.com/kanduvisla/importcsv.git
