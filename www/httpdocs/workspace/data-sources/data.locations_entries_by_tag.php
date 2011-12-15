@@ -26,7 +26,9 @@
 				'address',
 				'city',
 				'state',
-				'zip'
+				'zip',
+				'latitude',
+				'longitude'
 		);
 
 
@@ -39,11 +41,11 @@
 			return array(
 				'name' => 'Locations: Entries by tag',
 				'author' => array(
-					'name' => 'Admin Admin',
+					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T05:28:15+00:00'
+				'release-date' => '2011-12-14T20:40:20+00:00'
 			);
 		}
 

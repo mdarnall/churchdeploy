@@ -36,10 +36,10 @@
 				'name' => 'Tags: Entries by tag: Layouts',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T15:23:07+00:00'
+				'release-date' => '2011-12-08T15:35:25+00:00'
 			);
 		}
 

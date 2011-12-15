@@ -35,10 +35,10 @@
 				'name' => 'Layouts: Default entry',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T20:48:41+00:00'
+				'release-date' => '2011-12-08T20:52:06+00:00'
 			);
 		}
 

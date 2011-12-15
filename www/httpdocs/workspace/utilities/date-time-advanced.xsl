@@ -10,6 +10,9 @@
 	2. format - [optional] takes a format string.
 	
 	
+	
+	
+	
 	Date formats:
 	
 	%ds;	Day suffix, lower case: st, nd, rd, th.
