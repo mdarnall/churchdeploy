@@ -30,7 +30,7 @@
 	url = http://github.com/twitter/bootstrap.git
 [submodule "www/httpdocs/extensions/image_index_preview"]
 	path = www/httpdocs/extensions/image_index_preview
-	url = https://github.com/nilshoerrmann/image_index_preview.git
+	url = https://github.com/symphonists/image_index_preview.git
 [submodule "www/httpdocs/extensionsuniqueuploadfield"]
 	path = www/httpdocs/extensionsuniqueuploadfield
 	url = https://github.com/michael-e/uniqueuploadfield.git
