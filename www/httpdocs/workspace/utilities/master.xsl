@@ -52,12 +52,18 @@
             <!--link-->
             
 	            <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+	            <!--
+	            This is in the HTML5 boilerplate, but breaks validation
 	            <link rel="sitemap" type="application/xml" title="Sitemap" href="{$root}/sitemap.xml" />
+	            -->
 	
 			<!--meta-->
 			
+				<!--
+				This is in the HTML5 boilerplate, but breaks validation
 				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 				<meta http-equiv="imagetoolbar" content="false" />
+				-->
 				
 				<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
 				<meta name="author" content="{$website-name}" />
@@ -190,7 +196,7 @@
 			<div class="footer clearfix">
 				<div class="wrapper">
 					<xsl:call-template name="nav-1">
-						<xsl:with-param name="show-nested" select="1" />
+						<xsl:with-param name="show-nested" select="0" />
 					</xsl:call-template>
 				</div>
 			</div>
