@@ -9,3 +9,8 @@ Line: 158 - XSLTProcessor::transformToXml(): Variable 'position' has not been de
 Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
 Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 425 element with-param
 Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the expression of variable 'position'. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+15 December 2011 05:18 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
+15 December 2011 05:19 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
+15 December 2011 05:19 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
+15 December 2011 05:21 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
+15 December 2011 05:21 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542

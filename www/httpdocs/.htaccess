@@ -19,9 +19,12 @@ Options +FollowSymlinks -Indexes
 	RewriteRule .* - [S=14]
 
 	
+	
 	### IMAGE RULES
 	RewriteRule ^image\/(.+\.(jpg|gif|jpeg|png|bmp))$ extensions/jit_image_manipulation/lib/image.php?param=$1 [L,NC]
 
+
+	
 
 		
 	### CHECK FOR TRAILING SLASH - Will ignore files
