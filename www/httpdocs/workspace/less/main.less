@@ -261,17 +261,19 @@ p {
 .footer {
 	width: 100%;
 	background: hsl(202, 13%, 60%) url('../images/noise-sm.png') repeat;
-	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.75), inset 0 2px 8px rgba(0,0,0,0.2)'));
 	margin: 60px 0 0 0;
 	padding: 20px 0;
+	
+	.box-shadow(e('0 -1px 0 rgba(255,255,255,0.75), inset 0 2px 8px rgba(0,0,0,0.2)'));
+	
 	.nav-1 {
-		width: 100%;
+		width: 100%;  
 		padding: 50px 0;
 		
 		&,
 		& * {
-			padding: 0 !important;
-			margin: 0 !important;
+			padding: 0;
+			margin: 0;
 			text-transform: none !important;
 			-webkit-box-shadow: none !important;
 			box-shadow: none !important;
@@ -282,16 +284,16 @@ p {
 		.entry {
 			text-transform: uppercase;
 			float: left;
-			width: 100px;
 			display: block;
 			text-align: left;
 			font-weight: 700;
 			
 			a {
-				color: hsl(8, 50%, 45%);
+				display: block;
+				padding: 5px 10px;
+				color: #444;//hsl(8, 50%, 45%);
 				text-shadow: 0 1px 0 rgba(255,255,255,0.25) !important;
 			}
-			
 		}
 			
 		.nav-2 {
@@ -351,7 +353,7 @@ p {
 	}
 }
 
-blockquote.scripture {
+.verses {
 	display: block;
 	border: none;
 	padding-top: 20px;
@@ -370,7 +372,7 @@ blockquote.scripture {
 	}
 }
 
-blockquote.scripture span a {
+.verses span a {
 	color: hsl(10, 62%, 55%);
 
 	&:hover {

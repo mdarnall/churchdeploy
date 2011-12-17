@@ -6,7 +6,6 @@
 <xsl:template name="class-position">
 	
 	<xsl:param name="component" />
-	<xsl:param name="position" />
 	
 	<xsl:attribute name="class">
 		
@@ -15,10 +14,6 @@
 		<xsl:text>component-</xsl:text>
 		<xsl:value-of select="$component" disable-output-escaping="yes" />
 		
-		<xsl:text> </xsl:text>
-		
-		<xsl:value-of select="$position" disable-output-escaping="yes" />
-	
 	</xsl:attribute>
 	
 </xsl:template>
