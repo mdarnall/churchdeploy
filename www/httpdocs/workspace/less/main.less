@@ -139,18 +139,17 @@ p {
 }
 
 .nav {
-/*	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 8px rgba(0,0,0,0.35)'));*/
-	.box-shadow(e('0 1px 0 rgba(255,255,255,0.05), inset 0 1px 4px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.15)'));
+	.box-shadow(e('0 1px 0 rgba(255,255,255,0.15), inset 0 -5px 12px rgba(0,0,0,0.25)'));
 	height: 65px;
-	/*border-top: 4px solid hsl(10, 62%, 55%);*/
+	border-top: 4px solid hsl(10, 62%, 55%);
 	position: fixed;
 	width: 100%;
 	z-index: 4;
-	background: hsla(202, 13%, 17%, 0.95) url('../images/noise-sm.png') repeat;
+	background: hsla(202, 13%, 25%, 0.95) url('../images/noise-sm.png') repeat;
 	
 	.logo {
 		float: right;
-		margin-top: 7px;
+		margin-top: 15px;
 		padding: 0 0 0 0;
 		font: normal normal 400 16px/1.4 proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 		color: #fff;
@@ -194,12 +193,14 @@ p {
 		a {
 			.rounded(3px);
 			padding: 5px 10px;
-			margin-right: 10px;
+			margin-right: 7px;
 			color: #fff;
 			text-shadow: 0 1px 0 rgba(0,0,0,0.35);
-			font-size: 14px;
+			font-size: 13px;
 			font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-shadow: 0 1px 0 rgba(0,0,0,1);
 			
 			&:hover {
 				background: #fff;
@@ -339,45 +340,6 @@ p {
 	background: #fff;
 	.box-shadow(e('0 0 10px rgba(0,0,0,0.35)'));
 	padding-bottom: 30px;
-}
-
-.column-full-width {
-	padding: 20px;
-	
-	.image {
-		.less-image;
-		.rounded(3px);
-		.box-shadow(e('inset 0 0 10px rgba(0,0,0,0.3)'));
-		width: 920px;
-		height: 400px;
-	}
-}
-
-.verses {
-	display: block;
-	border: none;
-	padding-top: 20px;
-	margin: 0 auto;
-	font: normal italic 400 18px/24px adelle, "Palatino", Georgia, Times New Roman, Times, serif;
-	text-align: center;
-	width: 85%;
-	
-	span {
-		display: block;
-		margin: 20px 0;
-		font-size: 14px;
-		text-align: center;
-		font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-		text-transform: uppercase;
-	}
-}
-
-.verses span a {
-	color: hsl(10, 62%, 55%);
-
-	&:hover {
-		color: hsl(10, 62%, 45%);
-	}
 }
 
 .column-center h2 {
@@ -641,14 +603,10 @@ a[href="http://www.logos.com/reftagger"] {
 
 
 // kirk start
-
-
-.component { // component defaults
-	
-	// column specific settings
-	
-	&.column-right {
+.column-right {
+	.component {
 		
+	
 		.header {
 			.gradient3(e("url('../img/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
 			font-size: 12px;
@@ -661,6 +619,237 @@ a[href="http://www.logos.com/reftagger"] {
 			float: none;
 		}
 		
+		.entry {	
+			text-indent: 0;
+			padding: 10px 0;
+			border-bottom: 1px solid #babbbf;
+			border-top: none;
+			padding-bottom: 12px !important;
+			
+			&.even {
+				background: #ededec;
+				border-top: 1px solid #fefefe;
+			}
+			
+			&.last {
+				border-bottom: none;
+			}
+			
+			&.grade-school {
+				border-left:  4px solid hsl(10, 62%, 55%);
+			}
+			
+			.image {
+				.less-image;
+				.box-shadow(e('0 0px 5px #888'));
+				.rounded(3px);
+				
+				width: 129px;
+				height: 151px;
+				float: left;
+				margin-right: 10px;
+				background-repeat: no-repeat;
+			}	
+			
+			.info {
+				float: left;
+			}
+		}
+		&.component-event {
+			font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+			background: #fff;
+			padding: 0;
+			margin: 0 0 20px 0;
+			border: 1px solid #babbbf;
+			.rounded(2px);
+			
+			.entry {
+				margin: 0;
+				text-indent: 0;
+				padding: 10px 0;
+				border-bottom: 1px solid #babbbf;
+				border-top: none;
+				padding-bottom: 12px !important;
+				
+				&.last { border-bottom: none; }
+		
+				.date {
+					float: left;
+					display: block;
+					.rounded(3px);
+					margin: 0 10px;
+					border: 1px solid #aaa;
+					.box-shadow(e('0 1px 0 rgba(255,255,255,0.5)'));
+					.month {
+						display: block;
+						width: 42px;
+						text-transform: uppercase;
+						padding: 0;
+						background: #aaa url('../images/noise-sm.png') repeat;
+						color: #fff;
+						font-size: 12px;
+						text-shadow: none;
+						text-align: center;
+						font-weight: 700;
+					}
+					
+					.day {
+						background: #efefef;
+						padding: 0;
+						display: block;
+						width: 42px;
+						text-align: center;
+						font-weight: 700;
+						font-size: 20px;
+						color: #333;
+					}
+				}
+				
+				.info {
+					float: left;
+					padding-left: 5px;
+					
+					.description {
+						font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+						color: #222;
+						font-weight: 700;
+						display: block;
+					}
+					
+					.location {
+						background: transparent url('../images/sprite.png') -200px -50px no-repeat;
+						display: block;
+						font: normal italic normal 14px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+						margin: 5px 0 0 5	px;
+						padding-left: 15px;
+					}
+				}
+			}
+		} /* end of .component-event */
+		
+		&.component-member {
+			font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+			background: #fff;
+			padding: 0;
+			margin: 0 0 20px 0;
+			border: 1px solid #babbbf;
+			.rounded(2px);
+			
+			.entry {
+					
+				.image {
+					width: 85px;
+					height: 85px;
+					background-position: 5px 5px;
+					margin: 5px 0 0 10px;
+				}
+				
+				.info {
+					float: left;
+					margin-left: 10px;
+					
+					.name {
+						margin: 5px 0;
+						font-size: 15px;
+						line-height: 15px;
+					}
+					
+					h4 {
+						color: #777;
+						font-family: adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+						font-weight: normal;
+						font-size: 15px;
+						line-height: 15px;
+						font-style: italic;
+						margin: 10px 0;
+					}
+					
+					.email {
+						padding-left: 20px;
+						background: transparent url('../images/sprite.png') -200px 5px no-repeat;
+						
+						a {
+							font-size: 12px;
+							color: #222;
+							font-style: italic;
+							letter-spacing: 1px;
+						}
+					}
+				}
+			}
+		} /* end of .component-member */
+
+	}
+}
+
+.column-center {
+	h2 {
+	
+	}
+	.component {
+		.entry {
+			border-bottom: none;
+		}
+	}
+}
+
+.column-full-width {
+	.component {
+		.entry {
+			border-bottom: none;
+		}
+		
+		&.component-images {
+			padding: 20px;
+			
+			.entry {
+				background-repeat: no-repeat;
+				.less-image;
+				.rounded(3px);
+				.box-shadow(e('inset 0 0 10px rgba(0,0,0,0.3)'));
+				width: 920px;
+				height: 385px;
+			}
+			
+			
+		}
+		&.component-verses {
+			.entry {
+				display: block;
+				border: none;
+				padding-top: 20px;
+				margin: 0 auto;
+				font: normal italic 400 18px/24px adelle, "Palatino", Georgia, Times New Roman, Times, serif;
+				text-align: center;
+				width: 85%;
+				
+				span {
+					display: block;
+					margin: 20px 0;
+					font-size: 14px;
+					text-align: center;
+					font: normal normal 700 16px/12px proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+					text-transform: uppercase;
+				}
+			}
+			
+			.verses span a {
+				color: hsl(10, 62%, 55%);
+			
+				&:hover {
+					color: hsl(10, 62%, 45%);
+				}
+			}
+			
+		}
+	}
+}
+
+.component { // component defaults
+	
+	// column specific settings
+
+		
 		.entry {
 			text-indent: 0;
 			padding: 10px 0;
@@ -672,175 +861,12 @@ a[href="http://www.logos.com/reftagger"] {
 				width: 190px;
 			}
 		}
-	}
+		
+		
+	
 	
 	// column defaults
 	
-	.entry {	
-		text-indent: 0;
-		padding: 10px 0;
-		border-bottom: 1px solid #babbbf;
-		border-top: none;
-		padding-bottom: 12px !important;
-		
-		&.even {
-			background: #ededec;
-			border-top: 1px solid #fefefe;
-		}
-		
-		&.last {
-			border-bottom: none;
-		}
-		
-		&.grade-school {
-			border-left:  4px solid hsl(10, 62%, 55%);
-		}
-		
-		.image {
-			.less-image;
-			.box-shadow(e('0 0px 5px #888'));
-			.rounded(3px);
-			
-			width: 129px;
-			height: 151px;
-			float: left;
-			margin-right: 10px;
-			background-repeat: no-repeat;
-		}	
-		
-		.info {
-			width: 400px;
-			float: left;
-		}
-	}
-}
-
-.component-member {
-	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	background: #fff;
-	padding: 0;
-	margin: 0 0 20px 0;
-	border: 1px solid #babbbf;
-	.rounded(2px);
-
-	&.column-center {
-		
-	}
-	
-	&.column-right {
-		
-		.entry {
-				
-			.image {
-				width: 85px;
-				height: 85px;
-				background-position: 5px 5px;
-				margin: 5px 0 0 10px;
-			}
-			
-			.info {
-				float: left;
-				margin-left: 10px;
-				
-				.name {
-					margin: 5px 0;
-					font-size: 15px;
-					line-height: 15px;
-				}
-				
-				h4 {
-					color: #777;
-					font-family: adelle, "Palatino", Georgia, Times New Roman, Times, serif;
-					font-weight: normal;
-					font-size: 15px;
-					line-height: 15px;
-					font-style: italic;
-					margin: 10px 0;
-				}
-				
-				.email {
-					padding-left: 20px;
-					background: transparent url('../images/sprite.png') -200px 5px no-repeat;
-					
-					a {
-						font-size: 12px;
-						color: #222;
-						font-style: italic;
-						letter-spacing: 1px;
-					}
-				}
-			}
-		}
-	}
-}
-
-.component-event {
-	font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	background: #fff;
-	padding: 0;
-	margin: 0 0 20px 0;
-	border: 1px solid #babbbf;
-	.rounded(2px);
-	
-	.entry {
-		margin: 0;
-		text-indent: 0;
-		padding: 10px 0;
-		border-bottom: 1px solid #babbbf;
-		border-top: none;
-		padding-bottom: 12px !important;
-
-		.date {
-			float: left;
-			display: block;
-			.rounded(3px);
-			margin: 0 10px;
-			border: 1px solid #aaa;
-			.box-shadow(e('0 1px 0 rgba(255,255,255,0.5)'));
-			.month {
-				display: block;
-				width: 42px;
-				text-transform: uppercase;
-				padding: 0;
-				background: #aaa url('../images/noise-sm.png') repeat;
-				color: #fff;
-				font-size: 12px;
-				text-shadow: none;
-				text-align: center;
-				font-weight: 700;
-			}
-			
-			.day {
-				background: #efefef;
-				padding: 0;
-				display: block;
-				width: 42px;
-				text-align: center;
-				font-weight: 700;
-				font-size: 20px;
-				color: #333;
-			}
-		}
-		
-		.info {
-			padding-left: 5px;
-			
-			.description {
-				font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-				color: #222;
-				font-weight: 700;
-				display: block;
-			}
-			
-			.location {
-				background: transparent url('../images/sprite.png') -200px -50px no-repeat;
-				display: block;
-				font: normal italic normal 14px/1.4 adelle, "Palatino", Georgia, Times New Roman, Times, serif;
-				margin: 5px 0 0 5	px;
-				padding-left: 15px;
-			}
-		}
-	}
 }
 
 
