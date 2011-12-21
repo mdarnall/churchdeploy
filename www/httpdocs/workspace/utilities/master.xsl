@@ -137,7 +137,7 @@
 					
 			<div class="content clearfix" role="main">
 				
-				<xsl:if test="$current-page = 'teachings'">
+				<xsl:if test="$pt2 = 'teachings'">
 					<xsl:call-template name="teachings" />
 				</xsl:if>
 				
@@ -298,7 +298,6 @@
 
 
 
-
 <xsl:template name="nav-1">
 
 	<xsl:param name="show-nested" />
@@ -346,6 +345,7 @@
 	</ul>
 
 </xsl:template>
+
 
 
 <xsl:template name="nav-2">
@@ -410,18 +410,6 @@
 	</li>
 	
 </xsl:template>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

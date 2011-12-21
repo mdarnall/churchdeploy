@@ -21,7 +21,9 @@
 
 
 <xsl:template name="class-rows">
-
+	
+	<xsl:param name="class" />
+	
 	<xsl:attribute name="class">
 	
 		<xsl:text>entry clearfix</xsl:text>
@@ -64,6 +66,8 @@
 			</xsl:choose>
 			
 		</xsl:if>
+		
+		<xsl:value-of select="$class" disable-output-escaping="yes" />
 		
 	</xsl:attribute>
 
