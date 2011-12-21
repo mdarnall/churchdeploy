@@ -126,4 +126,4 @@
 	url = http://github.com/kanduvisla/importcsv.git
 [submodule "www/httpdocs/extensions/filterfield"]
 	path = www/httpdocs/extensions/filterfield
-	url = http://github.com/ahwayakchih/filterfield.git
+	url = http://github.com/kirkstrobeck/filterfield.git

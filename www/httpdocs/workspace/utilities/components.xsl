@@ -236,8 +236,10 @@
 									
 				<div>
 					
-					<xsl:call-template name="class-rows" />
-					
+					<xsl:call-template name="class-rows">
+						<xsl:with-param name="class" select="' image'" />
+					</xsl:call-template>
+										
 					<xsl:attribute name="style">
 						
 						<xsl:text>background-image: url('</xsl:text>
@@ -291,7 +293,7 @@
 					<div class="caption">
 						<xsl:value-of select="caption" disable-output-escaping="yes" />
 					</div>
-					
+				
 				</div>
 				
 			</xsl:for-each>

@@ -7,17 +7,17 @@
 	<div class="teachings">
 		
 		<xsl:choose>
-			<xsl:when test="$pt2 = 'date' and $pt3 = 'latest'">
+			<xsl:when test="$pt3 = 'date' and $pt4 = 'latest'">
 				
 				<xsl:call-template name="search-results">
-					<xsl:with-param name="results" select="//teachings-all-entries" />
+					<xsl:with-param name="results" select="//teachings-all-entries-filtered" />
 				</xsl:call-template>
 				
 			</xsl:when>
 			<xsl:otherwise>	
 			
 				<xsl:call-template name="search-results">
-					<xsl:with-param name="results" select="//teachings-all-entries" />
+					<xsl:with-param name="results" select="//teachings-all-entries-filtered" />
 				</xsl:call-template>
 				
 			</xsl:otherwise>
@@ -61,7 +61,6 @@
 			
 		</div>
 		
-		
 	</div>
 
 </xsl:template>
@@ -77,7 +76,7 @@
 	<div class="search-results">
 	
 		<xsl:if test="$results/pagination/@total-entries = 0">
-			No entries here, try <a href="{$root}/teachings/{$pt1}/{$pt2}/1/{$pt4}/">page 1</a>.
+			No entries here, try <a href="{$root}/{$pt1}/{$pt2}/{$pt3}/1/{$pt5}/">page 1</a>.
 		</xsl:if>
 		
 		<xsl:call-template name="element-page-navigation">
@@ -141,7 +140,7 @@
 		
 		<p>
 			Showing 
-			<xsl:value-of select="$pt4" disable-output-escaping="yes" /> 
+			<xsl:value-of select="$pt5" disable-output-escaping="yes" /> 
 			of 
 			<xsl:value-of select="$results/pagination/@total-entries" disable-output-escaping="yes" /> 
 			entries
@@ -152,7 +151,7 @@
 			<xsl:call-template name="pagination">
 			
 				<xsl:with-param name="pagination" select="$results/pagination" />
-				<xsl:with-param name="pagination-url" select="concat( $root, '/', $current-page, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4 )" />
+				<xsl:with-param name="pagination-url" select="concat( $root, '/', $current-page, '/', $pt2, '/', $pt3, '/', '$', '/', $pt5 )" />
 				<xsl:with-param name="show-range" select="5" />
 				
 				<xsl:with-param name="label-previous" select="'← Previous'" />
@@ -175,44 +174,44 @@
 						<a href="">Show</a>
 					</li>
 					<li>
-						<xsl:if test="$pt4 = 5">
+						<xsl:if test="$pt5 = 5">
 							<xsl:attribute name="class">
 								<xsl:text>active</xsl:text>
 							</xsl:attribute>
 						</xsl:if>
-						<a class="" href="{$root}/teachings/{$pt1}/{$pt2}/{$pt3}/5/">5</a>
+						<a class="" href="{$root}/{$pt1}/{$pt2}/{$pt3}/{$pt4}/5/">5</a>
 					</li>
 					<li>
-						<xsl:if test="$pt4 = 10">
+						<xsl:if test="$pt5 = 10">
 							<xsl:attribute name="class">
 								<xsl:text>active</xsl:text>
 							</xsl:attribute>
 						</xsl:if>
-						<a class="" href="{$root}/teachings/{$pt1}/{$pt2}/{$pt3}/10/">10</a>
+						<a class="" href="{$root}/{$pt1}/{$pt2}/{$pt3}/{$pt4}/10/">10</a>
 					</li>
 					<li>
-						<xsl:if test="$pt4 = 25">
+						<xsl:if test="$pt5 = 25">
 							<xsl:attribute name="class">
 								<xsl:text>active</xsl:text>
 							</xsl:attribute>
 						</xsl:if>
-						<a class="" href="{$root}/teachings/{$pt1}/{$pt2}/{$pt3}/25/">25</a>
+						<a class="" href="{$root}/{$pt1}/{$pt2}/{$pt3}/{$pt4}/25/">25</a>
 					</li>
 					<li>
-						<xsl:if test="$pt4 = 50">
+						<xsl:if test="$pt5 = 50">
 							<xsl:attribute name="class">
 								<xsl:text>active</xsl:text>
 							</xsl:attribute>
 						</xsl:if>
-						<a class="" href="{$root}/teachings/{$pt1}/{$pt2}/{$pt3}/50/">50</a>
+						<a class="" href="{$root}/{$pt1}/{$pt2}/{$pt3}/{$pt4}/50/">50</a>
 					</li>
 					<li class="next">
-						<xsl:if test="$pt4 = 100">
+						<xsl:if test="$pt5 = 100">
 							<xsl:attribute name="class">
 								<xsl:text>active</xsl:text>
 							</xsl:attribute>
 						</xsl:if>
-						<a class="" href="{$root}/teachings/{$pt1}/{$pt2}/{$pt3}/100/">100</a>
+						<a class="" href="{$root}/{$pt1}/{$pt2}/{$pt3}/{$pt4}/100/">100</a>
 					</li>
 				</ul>
 			</div>

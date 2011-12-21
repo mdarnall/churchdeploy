@@ -35,10 +35,10 @@
 				'name' => 'Downloads: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T15:39:01+00:00'
+				'release-date' => '2011-12-17T03:21:57+00:00'
 			);
 		}
 
