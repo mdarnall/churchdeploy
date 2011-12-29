@@ -2,26 +2,40 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcetags_all_entries extends Datasource{
+	Class datasourceteachings_all_entries_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'tags-all-entries';
-		public $dsParamORDER = 'asc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamROOTELEMENT = 'teachings-all-entries-filtered';
+		public $dsParamORDER = 'desc';
+		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamLIMIT = '{$pt4}';
+		public $dsParamSTARTPAGE = '{$pt3}';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'order';
+		public $dsParamSORT = 'msg-date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'118' => '(if value of ({$pt2}) is (teachings))',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'tag: raw',
-				'description: raw',
-				'slug',
-				'parent',
-				'hidden'
+				'system:pagination',
+				'msg-id',
+				'msg-number',
+				'title',
+				'title: raw',
+				'msg-title',
+				'date',
+				'msg-date',
+				'msg-chapter',
+				'msg-type',
+				'day',
+				'dayname',
+				'book',
+				'bookname',
+				'description',
+				'msg-description: formatted',
+				'status'
 		);
 
 
@@ -32,18 +46,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Tags: All entries',
+				'name' => 'Teachings: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-29T03:03:49+00:00'
+				'release-date' => '2011-12-17T03:42:13+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '3';
+			return '13';
 		}
 
 		public function allowEditorToParse(){

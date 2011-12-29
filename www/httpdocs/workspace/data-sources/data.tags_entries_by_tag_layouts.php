@@ -20,6 +20,7 @@
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'name: raw',
 				'column-full-width',
 				'column-center',
 				'column-right'
@@ -36,10 +37,10 @@
 				'name' => 'Tags: Entries by tag: Layouts',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T15:35:25+00:00'
+				'release-date' => '2011-12-29T03:04:32+00:00'
 			);
 		}
 

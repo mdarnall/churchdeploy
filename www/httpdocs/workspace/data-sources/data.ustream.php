@@ -2,28 +2,17 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcetags_all_entries extends Datasource{
+	Class datasourceustream extends Datasource{
 
-		public $dsParamROOTELEMENT = 'tags-all-entries';
-		public $dsParamORDER = 'asc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
-		public $dsParamSTARTPAGE = '1';
-		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'order';
-		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+		public $dsParamROOTELEMENT = 'ustream';
+		public $dsParamURL = 'http://api.ustream.tv/xml/channel/atheycreek/getInfo/?key=4E23272206B10532FEC6335E3D79977E';
+		public $dsParamXPATH = '/';
+		public $dsParamCACHE = '10';
+		public $dsParamTIMEOUT = '6';
 
 		
 
-		public $dsParamINCLUDEDELEMENTS = array(
-				'tag: raw',
-				'description: raw',
-				'slug',
-				'parent',
-				'hidden'
-		);
-
+		
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
@@ -32,18 +21,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Tags: All entries',
+				'name' => 'UStream',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-29T03:03:49+00:00'
+				'release-date' => '2011-12-29T02:42:17+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '3';
+			return 'dynamic_xml';
 		}
 
 		public function allowEditorToParse(){
@@ -54,7 +43,7 @@
 			$result = new XMLElement($this->dsParamROOTELEMENT);
 
 			try{
-				include(TOOLKIT . '/data-sources/datasource.section.php');
+				include(TOOLKIT . '/data-sources/datasource.dynamic_xml.php');
 			}
 			catch(FrontendPageNotFoundException $e){
 				// Work around. This ensures the 404 page is displayed and
