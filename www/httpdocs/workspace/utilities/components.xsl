@@ -49,6 +49,12 @@
 					</xsl:call-template>
 				</xsl:if>
 				
+				<xsl:if test=". = 'ustream'">
+					<xsl:call-template name="component-ustream">
+						<xsl:with-param name="position" select="name($xpath)" />
+					</xsl:call-template>
+				</xsl:if>
+				
 				<xsl:if test=". = 'verses'">
 					<xsl:call-template name="component-verses">
 						<xsl:with-param name="position" select="name($xpath)" />
@@ -472,6 +478,32 @@
 
 
 
+<xsl:template name="component-ustream">
+	
+	<xsl:param name="position" />
+	
+	<div>
+		
+		<xsl:call-template name="class-position">
+			<xsl:with-param name="component" select="'ustream'" />
+		</xsl:call-template>
+		
+		<xsl:for-each select="//ustream/xml/results">
+			
+			<div class="ustream-embed">
+				
+				<iframe src="http://www.ustream.tv/embed/{id}/?autoplay=true" width="864" height="512" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
+			
+			</div>
+		
+		</xsl:for-each>
+		
+	</div>
+	
+</xsl:template>
+
+
+
 <xsl:template name="component-verses">
 	
 	<xsl:param name="position" />
@@ -484,7 +516,7 @@
 				<xsl:with-param name="component" select="'verses'" />
 			</xsl:call-template>
 			
-			<xsl:for-each select="//members-entries-by-tag/entry">
+			<xsl:for-each select="//verses-entries-by-tag/entry">
 			
 				<div>
 					

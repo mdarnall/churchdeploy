@@ -18,3 +18,27 @@ window.log = function(){
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
+
+
+// exists
+
+jQuery.fn.exists = function() // test to see if an object exists
+{
+    return jQuery(this).length > 0;
+}
+
+
+// scroll to
+
+function scrollTo( obj, offset )
+{
+    $('html, body').animate(
+        {
+            scrollTop: $(obj).offset().top + offset
+        }, 
+        1000, 
+        'easeInOutCubic'
+    );
+    
+    return false;
+}  

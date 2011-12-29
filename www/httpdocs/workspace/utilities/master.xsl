@@ -92,8 +92,15 @@
 		<body>
 			
 			<xsl:attribute name="class">
+			
 				<xsl:text>page-</xsl:text>
 				<xsl:value-of select="$current-page" />
+				
+				<xsl:text> </xsl:text>
+				
+				<xsl:text>layout-</xsl:text>
+				<xsl:value-of select="//tags-entries-by-tag-layouts/entry/name/@handle" />
+				
 			</xsl:attribute>
 
 			<div class="page-header clearfix">
@@ -107,6 +114,8 @@
 						<a href="{$root}" class="logo" title="Home">
 							<xsl:value-of select="$website-name" />
 						</a>
+						
+						<xsl:call-template name="live-icon" />
 						
 					</div>
 					
@@ -136,11 +145,6 @@
 			</div>
 					
 			<div class="content clearfix" role="main">
-				
-				<xsl:if test="$pt2 = 'teachings'">
-					<xsl:call-template name="teachings" />
-				</xsl:if>
-				
 				
 				<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
 							
@@ -191,7 +195,9 @@
 					
 				</xsl:choose>
 				
-				
+				<xsl:if test="$pt2 = 'teachings'">
+					<xsl:call-template name="teachings" />
+				</xsl:if>
 							
 			</div>
 				
@@ -221,6 +227,7 @@
 			
 			<script type="text/javascript" src="{$workspace}/js/libs/jquery-1.6.4.min.js"></script>
 			<script type="text/javascript" src="{$workspace}/js/libs/jquery-ui.custom.min.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/libs/jquery.color.js"></script>
 				
 			<!-- scripts concatenated and minified via build script -->
 			
@@ -277,10 +284,10 @@
 		<xsl:value-of select="@id" disable-output-escaping="yes" />
 		<xsl:text>/</xsl:text>
 		
-		<xsl:if test="count(parent/item)">
+		<!--<xsl:if test="count(parent/item)">
 			<xsl:value-of select="parent/item/@handle" disable-output-escaping="yes" />
 			<xsl:text>/</xsl:text>
-		</xsl:if>
+		</xsl:if>-->
 		
 		<xsl:choose>
 			<xsl:when test="string-length(slug)">
@@ -409,6 +416,51 @@
 		
 	</li>
 	
+</xsl:template>
+
+
+<xsl:template name="live-icon">
+
+	<div>
+		
+		<xsl:attribute name="class">
+			
+			<xsl:text>live-icon</xsl:text>
+			
+			<xsl:choose>
+			
+				<xsl:when test="//ustream/xml/results/status = 'live'">
+					<xsl:text> online</xsl:text>
+				</xsl:when>
+			
+				<xsl:otherwise>
+					<xsl:text> offline</xsl:text>
+				</xsl:otherwise>
+			
+			</xsl:choose>
+			
+		</xsl:attribute>
+		
+		<h4 class="header">Live streaming video</h4>
+		
+		<a href="/12475/live/" class="icon">
+		
+			<xsl:choose>
+			
+				<xsl:when test="//ustream/xml/results/status = 'live'">
+					<xsl:text>Online</xsl:text>
+				</xsl:when>
+			
+				<xsl:otherwise>
+					<xsl:text>Offline</xsl:text>
+				</xsl:otherwise>
+			
+			</xsl:choose>
+		
+		</a>
+		
+	</div>
+
 </xsl:template>
 
 

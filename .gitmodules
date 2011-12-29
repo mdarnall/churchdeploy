@@ -127,3 +127,6 @@
 [submodule "www/httpdocs/extensions/filterfield"]
 	path = www/httpdocs/extensions/filterfield
 	url = http://github.com/kirkstrobeck/filterfield.git
+[submodule "www/httpdocs/extensions/xmlimporter"]
+	path = www/httpdocs/extensions/xmlimporter
+	url = http://github.com/symphonists/xmlimporter

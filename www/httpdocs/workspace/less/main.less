@@ -603,9 +603,11 @@ a[href="http://www.logos.com/reftagger"] {
 
 
 // kirk start
+
+
 .column-right {
+
 	.component {
-		
 	
 		.header {
 			.gradient3(e("url('../img/noise-sm.png') repeat,"), rgba(255,255,255,1.0), #f2f2f0, #e5e5e4, 0%, 2%,100%);
@@ -794,7 +796,9 @@ a[href="http://www.logos.com/reftagger"] {
 }
 
 .column-full-width {
+
 	.component {
+	
 		.entry {
 			border-bottom: none;
 		}
@@ -813,6 +817,7 @@ a[href="http://www.logos.com/reftagger"] {
 			
 			
 		}
+		
 		&.component-verses {
 			.entry {
 				display: block;
@@ -862,6 +867,17 @@ a[href="http://www.logos.com/reftagger"] {
 			}
 		}
 		
+		&.component-ustream {
+			text-align: center;
+			position: relative;
+			z-index: 100;
+			
+			iframe {
+				margin: 30px auto 0 auto;
+				//width: 264px;
+				//height: 512px;
+			}
+		}
 		
 	
 	
@@ -869,6 +885,48 @@ a[href="http://www.logos.com/reftagger"] {
 	
 }
 
+
+
+.live-icon {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 100px;
+	height: 30px;
+	display: block;
+	
+	&,
+	& * {
+		font-size: 12px;
+		line-height: normal;
+		font-family: helvetica;
+	}
+	
+	&.online {
+		background: #eee;
+	}
+	
+	&.offline {
+		background: #555;
+	}
+	
+	h4 {
+		font-size: 9px;
+		color: #fff;
+		background: red;
+	}
+}
+
+.theatre-dimmer {
+	position: absolute;
+	background: #000;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+}
 
 
 // kirk end
