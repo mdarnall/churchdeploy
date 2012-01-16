@@ -111,9 +111,9 @@
 				
 						<xsl:call-template name="nav-1" />
 						
-						<a href="{$root}" class="logo" title="Home">
+						<!--<a href="{$root}" class="logo" title="Home">
 							<xsl:value-of select="$website-name" />
-						</a>
+						</a>-->
 						
 						<xsl:call-template name="live-icon" />
 						
