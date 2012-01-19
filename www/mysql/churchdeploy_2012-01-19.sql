@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.9)
 # Database: churchdeploy
-# Generation Time: 2012-01-17 18:12:25 +0000
+# Generation Time: 2012-01-19 19:14:49 +0000
 # ************************************************************
 
 
@@ -48,7 +48,7 @@ LOCK TABLES `sym_authors` WRITE;
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
 	(3,'dfrost','39abc98f9c11b7a1d8d2529cf39bb2090c9a8393','David','Frost','dfrost@atheycreek.com','2012-01-16 15:05:48','developer','no','3','no',NULL),
-	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-01-17 10:07:05','developer','no','3','no',NULL),
+	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-01-18 07:46:55','developer','no','3','no',NULL),
 	(4,'jsimcoe','7b10dfd8ecfb74eafd8778364f883ce41cb756f5','Jonathan','Simcoe','jdsimcoe@gmail.com','2012-01-13 14:20:09','developer','no','3','no',NULL),
 	(5,'jwheeler','6a0bf4be0400168e7453d876311667eda7068fe3','Jeff','Wheeler','jeff.wheelerpdx@gmail.com',NULL,'developer','no','3','no',NULL),
 	(6,'britchie','aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d','Bryn','Ritchie','britchie@atheycreek.com','2011-12-04 09:40:15','developer','no','3','no',NULL),
@@ -72,7 +72,7 @@ CREATE TABLE `sym_cache` (
   PRIMARY KEY (`id`),
   KEY `expiry` (`expiry`),
   KEY `hash` (`hash`)
-) ENGINE=MyISAM AUTO_INCREMENT=1517 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1518 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sym_cache` WRITE;
 /*!40000 ALTER TABLE `sym_cache` DISABLE KEYS */;
@@ -114,7 +114,7 @@ VALUES
 	(1439,'4e21df2b59138745319463618f13087e',1326672891,NULL,'eJw9jkEOgjAQRa/yw1pBd0YLrIznaMrQNikdMi0EzubCI3kFgYXbl/9f3vf9Ue0yBMwkyXOsi2t5KUDRcOejrYsp9+db0TZKKI0cEzUq05Kb53ZYMegIbQzLPoZOcIRxkpETZQcf4fzOtOQTEiNQ3sgA62d6IHKGlamz2zesJ7CAe0QylJLP6x39Rl7cIfC86zSMI5J+CodASlUdKar6t/0AevpKog=='),
 	(1488,'51de4a3fcb66ffaf1f267f0eef3aaac1',1326735131,NULL,'eJw9jTsOwjAQRK+ycg0JdBSO08E5jL3Bqzhe5E8IZ6PgSFyBFQXdzNPozef11uO2RFgxF+I0qGN3UIDJsad0G1Sr0/6kRqMzljungkZX3Ko5c4aAEJln9DBJs+CoPuERyAUItgahLXlbRVt2wrkgXBtFjzJOHhY7S6ICF/ad7n9a3f9/viXuN8g='),
 	(1435,'8b421bd1873009a0a3f0b46bd9528718',1326672396,NULL,'eJw9jkESgjAMRa+S6VpBdy4K3sA7lBJoZjDttBHo2Vx4JK9gwdFd/vt/8v/7+dLX9T7BjDGR50adq5MCZOt74rFRDxmOF3VtdcQUPCdsteAq7Q3HCa0AewFxCCMN22EEKAHxxvAAiyPrYDGp+DN+KXQZQvTBoc0lQeL2B5PJpRA8gx924Az36SdCqe+yYMyVrvcBuv4v+gCEl0b0'),
-	(1516,'db9a5f611ae7995b7af083a701879d6f',1326823551,NULL,'eJytV0tv4zYQPq9/BasCOa1MSX7kAdmLNG2KLdrdonGwh8XCoCXa4oYiBZKy1v++Q0q2aSd2feghkTTzzXDeQ6cffpQcranSTIpJEPejAFGRyZyJ1SR4nj2GN8GHaS8FFPxXVNfc6GnvXcry6XCQjMbjJMXwDpRaUwVPx0rGw2g0ijtWy/tESjpNf/r68Ov97P7r/cPD47dv0xTvWA6n+B5SGFPdYdw0Tb/WRlFS9s3a4fFeGgTgbNwdnhpmuH+KKegGPShKX9BDoZg2jAj0SDmXjS5Y5XS0MiCcU50pVhkIxeUqENOIoIXMN0gu0YJyRm04ERPoC+NaijXjnKLPiq6kQHAEUxBbZCR6EbJBoB39KVVu8aDXyoZMZOCttrASnrWiffSFIqLgDwkpQlAjZMkEsaYSjpZ7a4jWMmPAAOGGmQIRzlFTSCcNZ9jzfumMbd3po95nsJXmguqcbNAntioM+GSQc/09aigylGQFOClfwsUmtE9QpGS9KlqFbMHBRlDzVAuro5RKgAX6vWM7aWtQrWswZ4MKOIJ3x6CKKMOymhPl6pAiqZCmmXUNLZUsnYq6yqzDEBCWNzYV2tT5pu/y56et52poZjN6WG/E+pLZLG7rZg/qXVR4WUGEoBy/1mQVaENMrfc65HLJmaAO0vEAZfNqaH5v9sAkiqMwGoXJCMXJ3XB4F4+d0B4Kcpxo8+QseSWchFEcxmMUR1Z4cO2Ej/C2X0uyos/OVjC2hDS88teaybIwy0Xs+607x+cVywzUIh7iAU7wCHf9j7EpsNOok3mcRPOOPneB4nIlDfCAcz28SeJB/3u1aqPijLDmgJGsLv9Xe1qVYFAyvNigzgw7Trxopco10zTqR1GU4u4L6LRc0HxGVnu7U7n4DoWLMgi/ZvkkyDg87vLkOssXYxoSOs7DOM6W4e14cRMOh8PRaDAagl6Yug3LTTEJBgm8F9Q2xyRIxvBhFdVmnUTXSZQE0xT6hZRIQGonwRJOKtZE6QCtCa+BQmojK042kyXhml4tFBH5xJl6lYGmLhQBPtRD7PxY1pBCW9hip82omr6JbTuOZBnV3tm8IRt9jC/lmtEd5u3ecn5gwDVU9XWztDqc0Wjn4cWunY7kkZede+iVQztPjmLfOQSEuZjHsOASoGmVXewVMpvKxqmqOMvc8MY/Ql3I7KUhaxo6fIDAd9xW0tTV5a7QvKJ7krXKXIX+x9RqbeBsTXG87ZADrXtNoL4gGkh6Ovvn+bcUb7+AIWqAq89L168wiksq4B4A/bB7t4y2ORx9+2rJS7KWihnqGPsPy7LB0dPBze31KMXthyUbe2x8C7u5Ox97BqQd8V1KlIJl80I3kyAKjla2c9IBjqGxB3Wb6zQ08aGKGnMaOvCgD4RDyZ4xYeiDC1JRfho7OsDajX0aOz7AQmKL09hrH7tbZ29Cbzzo0eXpTfyth/9d5mdS4aftD7hd6jNYP29/UZJLdQbsZ669e50B+7n7WyrDYbKcgfvZe7Kptp18Bu9ncNbdhc7A/STO2lvWGbSfRu/CeUbCzyZ0ygFy33HuGsnbS4RTAdOgMP66+3l3C9+yrPyRXArb2jj5N/ZlO+K7eT0aD/x5Pb5wWnoLwm2Ej/kkvuquCB93W+GKy4xwOqFi/vwUoIrXKyZ0BVv+YHhDUS1oH2YaXkm8osYptzuHqgsmPVNZO+ZPLBr8ep7jNjwwL7c/rdJSeyFqLyZA6aVUKamOOC2tl1ZK2sU1Y3CbbWe3T+ml3Q+8vXQJ9lK1CVUcOUVbAFhif+r9C12flT4='),
+	(1517,'db9a5f611ae7995b7af083a701879d6f',1326901421,NULL,'eJytV19z4jYQfz4+herO5OmMsDGQZAw3adp0rtPedRoy93BzwwhbYF1kySPJ+Pj2XckOCBIoD31IbGt/u9r/u6QffpQcbajSTIppEPUHAaIikzkT62nwNH8Ir4MPs14KKPivqK650bPeu5Tls2QYj8bjOMXwDie1pgqejhSPk8FoFHWklvaJlHSW/vT1/te7+d3Xu/v7h2/fZinekRxO8T2kMKa6xbhpmn6tjaKk7JuNw+M9NzDA3bi7PDXMcP8WU9AtuleUPqP7QjFtGBHogXIuG12wysloeYA5pzpTrDLgistFIKYRQUuZb5FcoSXljFp3IibQF8a1FBvGOUWfFV1LgeAKpsC3yEj0LGSDQDr6U6rc4kGu5Q2ZyMBabWElPGtF++gLRUTBHxJShCBGyJIJYlUlHK322hCtZcaAAMwNMwUinKOmkI4b7rD3/dIp25rTR73PoCvNBdU52aJPbF0YsMkgZ/p71FBkKMkKMFI+h8ttaJ8gSMl6XbQC2ZKDjiDmsRZWRimVAA30e0d23FahWtegzhYVcAXvrkEVUYZlNSfK5SFFUiFNM2saWilZOhF1lVmDwSEsb2wotKnzbd/Fzw9bz+XQ3Eb0MN+ItSWzUXzJmz2od1HiZQURgnL8WpIVoA0xtd7LkKsVZ4I6SEcDlI2rofmd2QPjQTQIB6MwHqEovk2S22jsmPZQ4ONEm0enySvmOBxEYTRG0cAyDyeO+Qhv67Uka/rkdAVlSwjDK3utmiwLs1xEvt26M3xRscxALuIED3GMR7irf4xNgZ1EHS+ieLDozhfOUVyupQEaUCbJdRwN+9+rdesVp4RVB5Rkdfm/6tOKBIXi5GKFOjVsO/G8lSpXTLNBfzAYpLj7gnNaLmk+J+u93qlcfofERRm4X7N8GmQcHrd5PMny5ZiGhI7zMIqyVXgzXl6HSZKMRsNRAnKh6zYsN8U0GMbwXlBbHNMgHsOHFVSbTXQTjZJglkK5kBIJiOw0WMFFxYYoHaAN4TWckNrIipPtdEW4pldLRUQ+dZpeZSCo80SAD+UQ2z5WNUTQ5rXYSTOqpm9i24IjWUa1dzdvyFYf40u5YXSHebu0nB0YcA1Vfd2srAynNNpZeLFppx15ZGVnHnpl0M6SQ9d39sD3QiyGyeR6MgyQVtnFRiGzraybqoqzzLVu/CPUhcyeG7KhocMHCEzHbR7NXFbu0sxLuUdZq8zl53/0rFYHzjYURy/1cSB1LwnEF0TDkZ7N/3n6LcUvX0AQNcDV55WrVmjEJRWwBUA17N4toS0Nd/7yao9XZCMVM9QR9h+WZJ2jZ8Prm8koxe2HPTb22ugGJnN3P/YUSLvDdylRCkbNM91Og0FwNLCdkQ5wDI08qJtbp6GxD1XUmNPQoQe9Jxwy9owKiQ8uSEX5aezoAGvn9Wns+AALgS1OYyc+djfM3oRee9Cj1elN/I2H/13mZ0Lhh+0P2C31Gawft78oyaU6A/Yj125eZ8B+7P6WynBoLGfgfvQebahtJZ/B+xGcd5vQGbgfxHm7Y51B+2H01s0zHH40oVIOkPuKc0skb1cIJwK6QWH8Yffzbgd/IVn+I74UZrVx/G9My7bDd+16NB767Xp8Ybf05oMbCB/zaXTVLQgfd0PhisuMcDqlYvH0GKCK12smdAUz/qB5Q1ItaR96Gl5LvKbGCbcjh6oLOj1TWdvmT8wZ/Lqf49Y90C9fflilpfZc1K4lcNJLqVJSHVHas15aKWnn1pzBLtv2bv+kl3Y/7/bcJehL1TZU0cAJegGAJvaH3r8gI5T9'),
 	(1508,'8aea1bb7e2b472ec526a9defd5f87ff6',1326757864,NULL,'eJw9jT0SgjAUBq/yTWoF7SxC6PQcQF5IZsh7ThJ+7mbhkbyCSGG7O7P7eb11u8UJC6UchBt1rS4KxIPYwGOj5uLON9UanSg/hTMZXWgr5i4JxRP6RJ2FODzEImTsaPVh8BgkUvGwsjJckribbiE+oWOLMSw/OQVHmLnIkVolTbbS9dHX9X/4Bf83Oqo='),
 	(1457,'c73d86c8f0888f13b4a5e1b4bf270444',1326694383,NULL,'eJw9jk0OgjAQha8yYa2iO6MFb+AdKjyESDtkpiV4NhceyStYauJufr735X1eb3NZ3EgzRAf2VXHY7QuCb7gd/L0qYui2x+JSG4FO7BW1CVhCfeVAHYvaR8Io9CCrCncb15U74iiKcYZS4DvSXzaJyKCz3kNWSNmBBj3TLQbC0rOEHPfJ5nkNndLQJo5cbPpfmgVZ9QQpkG+tfZKdJmHb9EmwM2XuaMp/6S+aJVQJ'),
 	(1500,'6eef12461630cddb8a38f06c17080983',1326749384,NULL,'eJw9jTEOwjAUQ69iZYYWNoa0lVg4A+OHuDSiJNVPCuVsDByJK9AysFiy9Wx/Xm/bTLced2ryMVRmW2wMGM7R+XCpzJjb9c40tVWmIYbE2mZOud6PGR2RxLsVjhSo5I66wqlnSnQQJebkOYssqOhi8YjqEFsc4tyT4HAlB/hc2PK3a8v/0RcXzzbp'),
@@ -30504,8 +30504,7 @@ VALUES
 	('ih6uo2drm5hgj86dbg6p524bi0',1326315943,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('ju8lgqbq1tmjl56nqfgqeumjq4',1326757864,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('igvcl0tgc1ntu8e7rrhj9n9fn0',1325695794,'sym-|a:2:{s:8:\"username\";s:7:\"jsimcoe\";s:4:\"pass\";s:40:\"7b10dfd8ecfb74eafd8778364f883ce41cb756f5\";}sym-members|a:0:{}'),
-	('vffrqkmjvla7i3183ov3c18g26',1325635958,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('9a007adf1a95f2851dc5b7451f65cf80',1326823625,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
+	('9a007adf1a95f2851dc5b7451f65cf80',1326901615,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
