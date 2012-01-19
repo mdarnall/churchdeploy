@@ -429,7 +429,7 @@
 			
 			<xsl:choose>
 			
-				<xsl:when test="//ustream/xml/results/status = 'live'">
+				<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
 					<xsl:text> online</xsl:text>
 				</xsl:when>
 			
@@ -443,11 +443,19 @@
 		
 		<h4 class="header">Live streaming video</h4>
 		
-		<a href="/12475/live/" class="icon">
+		<a>
 		
+			<xsl:attribute name="class">
+				<xsl:text>icon</xsl:text>
+			</xsl:attribute>
+			
+			<xsl:for-each select="//tags-all-entries/entry[ tag/@handle-en = 'live' ]">
+				<xsl:call-template name="tag-href" />
+			</xsl:for-each>
+			
 			<xsl:choose>
 			
-				<xsl:when test="//ustream/xml/results/status = 'live'">
+				<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
 					<xsl:text>Online</xsl:text>
 				</xsl:when>
 			
