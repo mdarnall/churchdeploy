@@ -488,7 +488,7 @@
 			<xsl:with-param name="component" select="'ustream'" />
 		</xsl:call-template>
 		
-		<xsl:for-each select="//ustream/xml/results">
+		<xsl:for-each select="//dynamic-xml-ustreamcom/xml/results">
 			
 			<div class="ustream-embed">
 				

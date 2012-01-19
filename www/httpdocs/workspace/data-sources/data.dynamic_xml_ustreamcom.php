@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceustream extends Datasource{
+	Class datasourcedynamic_xml_ustreamcom extends Datasource{
 
-		public $dsParamROOTELEMENT = 'ustream';
+		public $dsParamROOTELEMENT = 'dynamic-xml-ustreamcom';
 		public $dsParamURL = 'http://api.ustream.tv/xml/channel/atheycreek/getInfo/?key=4E23272206B10532FEC6335E3D79977E';
 		public $dsParamXPATH = '/';
 		public $dsParamCACHE = '10';
@@ -21,13 +21,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'UStream',
+				'name' => 'Dynamic XML: ustream.com',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-29T02:42:17+00:00'
+				'release-date' => '2011-12-29T19:12:19+00:00'
 			);
 		}
 

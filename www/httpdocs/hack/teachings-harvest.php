@@ -27,7 +27,7 @@ while($result = mysql_fetch_array($query))
 	
 	$b = $_GET['a'] + 1;
 	
-	$redirect = '<html><head><meta http-equiv="REFRESH" content=".25;url=http://churchdeploy/hack/?a=' . $b . '"></HEAD><body>' . $_GET['a'] . '</body></HTML>';
+	$redirect = '<html><head><meta http-equiv="REFRESH" content=".25;url=http://churchdeploy/hack/teachings-harvest.php?a=' . $b . '"></HEAD><body>' . $_GET['a'] . '</body></HTML>';
 	
 	if ( trimmer($content, '<span id="txtChapter" class="text" style="Z-INDEX: 113; LEFT: 88px; POSITION: absolute; TOP: 165px">', '</span>') == 'Verse')
 	{
@@ -59,7 +59,7 @@ while($result = mysql_fetch_array($query))
 		
 		foreach ($llama as $key => $value) 
 		{
-			$sql .= "'" . addslashes($value);
+			$sql .= "'" . mysql_real_escape_string($value);
 			
 			if($key < count($llama) - 1)
 			{
@@ -85,9 +85,12 @@ while($result = mysql_fetch_array($query))
 	
 	//echo $sql;
 
-
-	
-	
+/*
+	if($_GET['a'] < 1760)
+	{
+		echo $redirect;	
+	}
+*/	
 	
 	if($_GET['a'] < 1800)
 	{
