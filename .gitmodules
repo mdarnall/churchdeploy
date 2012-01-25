@@ -3,7 +3,7 @@
 	url = git://github.com/symphonycms/jit_image_manipulation.git
 [submodule "www/httpdocs/extensions/debugdevkit"]
 	path = www/httpdocs/extensions/debugdevkit
-	url = git://github.com/symphonycms/debugdevkit.git
+	url = http://github.com/symphonycms/debugdevkit.git
 [submodule "www/httpdocs/extensions/export_ensemble"]
 	path = www/httpdocs/extensions/export_ensemble
 	url = git://github.com/symphonycms/export_ensemble.git
