@@ -1,4 +1,4 @@
-www/httpdocs/manifest/logs
-www/httpdocs/manifest/cache
-www/httpdocs/manifest/tmp
+www/httpdocs/manifest/*
 *.DS_Store
+
+www/httpdocs/manifest/logs/main
