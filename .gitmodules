@@ -78,7 +78,7 @@
 	url = https://github.com/domain7/html5_doctype.git
 [submodule "www/httpdocs/extensions/subsectionmanager"]
 	path = www/httpdocs/extensions/subsectionmanager
-	url = https://github.com/nilshoerrmann/subsectionmanager.git
+	url = https://github.com/hananils/subsectionmanager.git
 [submodule "www/httpdocs/extensions/tweak_ui"]
 	path = www/httpdocs/extensions/tweak_ui
 	url = https://github.com/kanduvisla/tweak_ui.git
@@ -108,7 +108,7 @@
 	url = git://github.com/michael-e/members-forms.git
 [submodule "www/httpdocs/extensions/datetime"]
 	path = www/httpdocs/extensions/datetime
-	url = git://github.com/nilshoerrmann/datetime.git
+	url = https://github.com/hananils/datetime.git
 [submodule "www/httpdocs/extensions/configuration"]
 	path = www/httpdocs/extensions/configuration
 	url = http://github.com/bauhouse/configuration.git
