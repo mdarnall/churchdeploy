@@ -130,3 +130,6 @@
 [submodule "www/httpdocs/extensions/xmlimporter"]
 	path = www/httpdocs/extensions/xmlimporter
 	url = http://github.com/symphonists/xmlimporter
+[submodule "www/httpdocs/extensions/repeating_date_field"]
+	path = www/httpdocs/extensions/repeating_date_field
+	url = http://github.com/rowan-lewis/repeating_date_field
