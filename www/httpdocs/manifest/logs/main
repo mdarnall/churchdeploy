@@ -131,3 +131,17 @@ Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this ob
 15 January 2012 15:47 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/importcsv/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
 15 January 2012 15:47 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/importcsv/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
 >>>>>>> 19d6e762652b3cd0afa7efb18477390a3067f405
+26 January 2012 16:23 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND d.value >= 1327564800
+				ORDER BY
+					d.value ASC
+				LIMIT
+					1' at line 6 in query "SELECT SQL_CACHE d.value
+				FROM
+					`sym_entries_data_131_dates` as d
+				WHERE
+					d.link_id = 
+					AND d.value >= 1327564800
+				ORDER BY
+					d.value ASC
+				LIMIT
+					1" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 727
