@@ -27,7 +27,7 @@
 	url = http://github.com/symphonycms/members.git
 [submodule "www/httpdocs/workspace/bootstrap"]
 	path = www/httpdocs/workspace/bootstrap
-	url = http://kirkstrobeck:c4angeblip4@github.com/twitter/bootstrap.git
+	url = http://github.com/twitter/bootstrap.git
 [submodule "www/httpdocs/extensions/image_index_preview"]
 	path = www/httpdocs/extensions/image_index_preview
 	url = http://github.com/symphonists/image_index_preview.git
