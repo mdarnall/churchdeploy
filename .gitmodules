@@ -133,3 +133,6 @@
 [submodule "www/httpdocs/extensions/repeating_date_field"]
 	path = www/httpdocs/extensions/repeating_date_field
 	url = http://github.com/rowan-lewis/repeating_date_field
+[submodule "www/httpdocs/extensions/save_and_return"]
+	path = www/httpdocs/extensions/save_and_return
+	url = http://github.com/Solutions-Nitriques/save_and_return.git
