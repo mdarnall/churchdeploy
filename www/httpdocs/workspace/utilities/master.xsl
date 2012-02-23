@@ -26,13 +26,11 @@
 <xsl:include href="classes.xsl" />
 <xsl:include href="components.xsl" />
 <xsl:include href="pagination.xsl" />
-
 <xsl:include href="teachings.xsl" />
 
 
 
 <xsl:variable name="pt1" select="'43'" />
-
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
 
 
@@ -47,44 +45,33 @@
 		<head>
             
             <title>
-            	<!--Ministries | -->
             	<xsl:value-of select="$website-name" />
             </title>
+                        
+            <link rel="dns-prefetch" href="//ajax.googleapis.com" />
             
-            <!--link-->
+            <!-- This is in the HTML5 boilerplate, but breaks validation
             
-	            <link rel="dns-prefetch" href="//ajax.googleapis.com" />
-	            <!--
-	            This is in the HTML5 boilerplate, but breaks validation
-	            <link rel="sitemap" type="application/xml" title="Sitemap" href="{$root}/sitemap.xml" />
-	            -->
-	
-			<!--meta-->
-			
-				<!--
-				This is in the HTML5 boilerplate, but breaks validation
-				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-				<meta http-equiv="imagetoolbar" content="false" />
-				-->
+            <link rel="sitemap" type="application/xml" title="Sitemap" href="{$root}/sitemap.xml" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+			<meta http-equiv="imagetoolbar" content="false" />
+			-->
 				
-				<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
-				<meta name="author" content="{$website-name}" />
-				<meta name="viewport" content="width=device-width,initial-scale=1" />
-				
-				<!-- Pinned Site Name for IE9/Windows 7+ -->
-				
-					<meta name="application-name" content="{$website-name}" />
-					<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
-					<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
+			<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
+			<meta name="author" content="{$website-name}" />
+			<meta name="viewport" content="width=device-width,initial-scale=1" />
+							
+			<meta name="application-name" content="{$website-name}" />
+			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
+			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
+						
+			<link rel="stylesheet" href="{$workspace}/themes/atheycreek/css/common.css" />
+							
+			<!-- Typekit
 			
-			<!--stylesheets-->
-			
-				<link rel="stylesheet" href="{$workspace}/themes/css/common.css" />
-			
-			<!--javascript-->
-				
-				<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
-				<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+			<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
+			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+			-->
 
 		</head>
 		
@@ -110,26 +97,20 @@
 					
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						
-							<span class="i-bar"></span>
-							<span class="i-bar"></span>
-							<span class="i-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
 							
 						</a>
 						
-						<a class="brand" href="#">Project name</a>
+						<a class="brand" href="#">
+							<xsl:value-of select="$website-name" disable-output-escaping="yes" />
+						</a>
 						
 						<div class="nav-collapse">
 							
-							<ul class="nav">
-							
-								<li class="active"><a href="#">Home</a></li>
-							
-								<li><a href="#about">About</a></li>
-							
-								<li><a href="#contact">Contact</a></li>
-							
-							</ul>
-							
+							<xsl:call-template name="nav-1" />
+										
 						</div>
 						
 					</div>
@@ -152,13 +133,8 @@
 				
 					<div class="wrapper">
 				
-						<xsl:call-template name="nav-1" />
+			
 						
-						<!--<a href="{$root}" class="logo" title="Home">
-							<xsl:value-of select="$website-name" />
-						</a>-->
-						
-						<xsl:call-template name="live-icon" />
 						
 					</div>
 					
@@ -263,32 +239,27 @@
 					<xsl:text>. All rights reserved.</xsl:text>
 				</div>
 			</div>
-				
-			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 			
-			<!--<script type="text/javascript"><![CDATA[window.jQuery || document.write(']]><script type="text/javascript" src="{$workspace}/js/libs/jquery-1.6.4.min.js"></script><![CDATA[')]]></script>-->
+			<script type="text/javascript" src="{$workspace}/js/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/jquery-ui.custom.min.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/jquery.color.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/plugins.js"></script>
 			
-			<script type="text/javascript" src="{$workspace}/js/libs/jquery-1.6.4.min.js"></script>
-			<script type="text/javascript" src="{$workspace}/js/libs/jquery-ui.custom.min.js"></script>
-			<script type="text/javascript" src="{$workspace}/js/libs/jquery.color.js"></script>
-				
-			<!-- scripts concatenated and minified via build script -->
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-alert.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-button.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-carousel.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-collapse.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-dropdown.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-modal.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-scrollspy.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-tab.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-tooltip.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-transition.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-typeahead.js"></script>
+			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-popover.js"></script>
 			
-				<script type="text/javascript" defer="defer" src="{$workspace}/js/plugins.js"></script>
-				<script type="text/javascript" defer="defer" src="{$workspace}/js/script.js"></script>
-		
-			<!-- end scripts -->
-			
-			<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-			mathiasbynens.be/notes/async-analytics-snippet -->
-			
-			<script type="text/javascript">
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
-			</script>
-			
+			<script type="text/javascript" src="{$workspace}/themes/atheycreek/js/common.js"></script>
+
 			<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 			chromium.org/developers/how-tos/chrome-frame-getting-started -->
 			
@@ -297,6 +268,10 @@
 			<script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 			<![endif]]]></xsl:comment>
 				
+			<!--
+			
+			Throwing error => see http://stackoverflow.com/questions/1386312/resource-interpreted-as-other-but-transferred-with-mime-type-text-javascript
+			
 			<script type="text/javascript" src="{$workspace}/js/reftagger.js"></script>
 			
 			<script type="text/javascript">
@@ -308,6 +283,8 @@
 				Logos.ReferenceTagging.tag();
 				Logos.ReferenceTagging.lbsCssOverride = true;
 			</script>
+			
+			-->
             
 		</body>
 		
@@ -352,7 +329,7 @@
 
 	<xsl:param name="show-nested" />
 
-	<ul class="nav-1">
+	<ul class="nav">
 		
 		<xsl:for-each select="//tags-all-entries/entry[ not( @id = 43 ) ]">
 			
@@ -392,6 +369,12 @@
 		
 		</xsl:for-each>
 		
+		<xsl:call-template name="live-icon" />
+		
+	</ul>
+	
+	<ul class="nav pull-right">
+		<li>dsf</li>
 	</ul>
 
 </xsl:template>
@@ -464,11 +447,11 @@
 
 <xsl:template name="live-icon">
 
-	<div>
+	<li>
 		
 		<xsl:attribute name="class">
 			
-			<xsl:text>live-icon</xsl:text>
+			<xsl:text>live</xsl:text>
 			
 			<xsl:choose>
 			
@@ -483,34 +466,44 @@
 			</xsl:choose>
 			
 		</xsl:attribute>
+				
+		<a data-toggle="modal">
 		
-		<h4 class="header">Live streaming video</h4>
-		
-		<a>
-		
-			<xsl:attribute name="class">
-				<xsl:text>icon</xsl:text>
-			</xsl:attribute>
-			
 			<xsl:for-each select="//tags-all-entries/entry[ tag/@handle-en = 'live' ]">
 				<xsl:call-template name="tag-href" />
 			</xsl:for-each>
 			
+			<xsl:text>Live </xsl:text>
+			
 			<xsl:choose>
 			
 				<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
-					<xsl:text>Online</xsl:text>
+					<xsl:text>(online)</xsl:text>
 				</xsl:when>
 			
 				<xsl:otherwise>
-					<xsl:text>Offline</xsl:text>
+					<xsl:text>(offline)</xsl:text>
 				</xsl:otherwise>
 			
 			</xsl:choose>
 		
 		</a>
 		
-	</div>
+		<div class="modal">
+			<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>Modal header</h3>
+			</div>
+			<div class="modal-body">
+			<p>One fine body…</p>
+			</div>
+			<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Save changes</a>
+			<a href="#" class="btn">Close</a>
+			</div>
+		</div>
+		
+	</li>
 
 </xsl:template>
 
