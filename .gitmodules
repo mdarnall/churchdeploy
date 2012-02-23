@@ -136,3 +136,6 @@
 [submodule "www/httpdocs/extensions/save_and_return"]
 	path = www/httpdocs/extensions/save_and_return
 	url = http://github.com/Solutions-Nitriques/save_and_return.git
+[submodule "www/httpdocs/extensions/duplicate_entry"]
+	path = www/httpdocs/extensions/duplicate_entry
+	url = https://github.com/nickdunn/duplicate_entry.git
