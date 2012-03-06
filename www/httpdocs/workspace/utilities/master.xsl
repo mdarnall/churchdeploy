@@ -431,7 +431,7 @@
 
 			<a href="{$root}/{@id}/{description/@handle}/">
 				<xsl:call-template name="tag-href" />
-				dd<xsl:value-of select="tag" />
+				<xsl:value-of select="tag" />
 			</a>
 
 		</li>
