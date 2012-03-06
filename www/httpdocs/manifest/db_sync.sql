@@ -3533,3 +3533,545 @@ DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '130' LIMIT 1;
 INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('130', '1', '1', '1', '0', '{$first-name} {$last-name}', NULL, '0', '2,4,50,5,52,52:raw,11,12,9,9:permissions,54,55,58,129');
 DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '130';
 INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '130', '1', '130', 'yes');
+
+-- 2012-03-06 15:15:28, Kirk Strobeck, http://churchdeploy/symphony/system/extensions/
+UPDATE sym_extensions SET  `name` = 'subsectionmanager',  `status` = 'enabled',  `version` = '2.1.2' WHERE  `id` = '21 ';
+DELETE FROM sym_extensions_delegates WHERE  `extension_id` = '21 ';
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/backend/', 'AdminPagePreGenerate', '__appendAssets');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/blueprints/datasources/', 'DatasourcePostCreate', '__clearSubsectionCache');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/blueprints/datasources/', 'DatasourcePostEdit', '__clearSubsectionCache');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/blueprints/datasources/', 'DatasourcePreDelete', '__clearSubsectionCache');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/publish/', 'Delete', '__deleteTabs');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('21', '/backend/', 'AppendPageAlert', '__upgradeMediathek');
+
+-- 2012-03-06 15:15:54, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/3/
+UPDATE sym_sections SET  `name` = 'Tags',  `navigation_group` = 'Content',  `handle` = 'tags',  `hidden` = 'no' WHERE  `id` = 3;
+UPDATE sym_fields SET  `element_name` = 'tag',  `label` = 'Tag',  `parent_section` = '3',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '19';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '19'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('19', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'description',  `label` = 'Description',  `parent_section` = '3',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'no',  `sortorder` = '1' WHERE  `id` = '21';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '21'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('21', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'slug',  `label` = 'Slug',  `parent_section` = '3',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'no',  `sortorder` = '2' WHERE  `id` = '56';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '56' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('56', NULL);
+UPDATE sym_fields SET  `element_name` = 'layout',  `label` = 'Layout',  `parent_section` = '3',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '140';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '140' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (140, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '140' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('140', '11', '1', '1', '0', '{$name}', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '140';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('3', '140', '11', '140', 'yes');
+UPDATE sym_fields SET  `element_name` = 'parent',  `label` = 'Parent',  `parent_section` = '3',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '141';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '141' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (141, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '141' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('141', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '141';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('3', '141', '3', '141', 'yes');
+UPDATE sym_fields SET  `element_name` = 'hidden',  `label` = 'Hidden',  `parent_section` = '3',  `location` = 'sidebar',  `required` = 'no',  `type` = 'checkbox',  `show_column` = 'no',  `sortorder` = '6' WHERE  `id` = '57';
+DELETE FROM `sym_fields_checkbox` WHERE `field_id` = '57' LIMIT 1;
+INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('57', 'off');
+UPDATE sym_fields SET  `element_name` = 'hide-from-header',  `label` = 'Hide from header',  `parent_section` = '3',  `location` = 'sidebar',  `required` = 'no',  `type` = 'checkbox',  `show_column` = 'yes',  `sortorder` = '7' WHERE  `id` = '168';
+DELETE FROM `sym_fields_checkbox` WHERE `field_id` = '168' LIMIT 1;
+INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('168', 'off');
+UPDATE sym_fields SET  `element_name` = 'hide-from-footer',  `label` = 'Hide from footer',  `parent_section` = '3',  `location` = 'sidebar',  `required` = 'no',  `type` = 'checkbox',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '167';
+DELETE FROM `sym_fields_checkbox` WHERE `field_id` = '167' LIMIT 1;
+INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('167', 'off');
+
+-- 2012-03-06 15:16:47, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/10/
+UPDATE sym_sections SET  `name` = 'Downloads',  `navigation_group` = 'Content',  `handle` = 'downloads',  `hidden` = 'no' WHERE  `id` = 10;
+UPDATE sym_fields SET  `element_name` = 'name',  `label` = 'Name',  `parent_section` = '10',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '71';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '71'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('71', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'file',  `label` = 'File',  `parent_section` = '10',  `location` = 'sidebar',  `required` = 'no',  `type` = 'uniqueupload',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '72';
+DELETE FROM `sym_fields_uniqueupload` WHERE `field_id` = '72' LIMIT 1;
+INSERT INTO `sym_fields_uniqueupload` (`field_id`, `destination`, `validator`) VALUES ('72', '/workspace/uploads/downloads', NULL);
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '10',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '131';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '131' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (131, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '131' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('131', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', '19:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '131';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('10', '131', '3', '131', 'yes');
+
+-- 2012-03-06 15:16:56, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/8/
+UPDATE sym_sections SET  `name` = 'Images',  `navigation_group` = 'Content',  `handle` = 'images',  `hidden` = 'no' WHERE  `id` = 8;
+UPDATE sym_fields SET  `element_name` = 'id',  `label` = 'ID',  `parent_section` = '8',  `location` = 'main',  `required` = 'no',  `type` = 'systemid',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '46';
+UPDATE sym_fields SET  `element_name` = 'image',  `label` = 'Image',  `parent_section` = '8',  `location` = 'main',  `required` = 'yes',  `type` = 'uniqueupload',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '43';
+DELETE FROM `sym_fields_uniqueupload` WHERE `field_id` = '43' LIMIT 1;
+INSERT INTO `sym_fields_uniqueupload` (`field_id`, `destination`, `validator`) VALUES ('43', '/workspace/uploads/images/leaderboards', '/\\.(?:jpe?g)$/i');
+UPDATE sym_fields SET  `element_name` = 'caption',  `label` = 'Caption',  `parent_section` = '8',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '59';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '59'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('59', '25', 'small', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'position',  `label` = 'Position',  `parent_section` = '8',  `location` = 'sidebar',  `required` = 'no',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '45';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '45' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('45', 'Top left, Top center, Top right, Middle left, Middle center, Middle right, Bottom left, Bottom center, Bottom right', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '45';
+UPDATE sym_fields SET  `element_name` = 'height',  `label` = 'Height',  `parent_section` = '8',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '47';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '47' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('47', '/^-?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$/i');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '8',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '5' WHERE  `id` = '139';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '139' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (139, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '139' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('139', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '139';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('8', '139', '3', '139', 'yes');
+
+-- 2012-03-06 15:17:08, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/5/
+UPDATE sym_sections SET  `name` = 'Locations',  `navigation_group` = 'Content',  `handle` = 'locations',  `hidden` = 'no' WHERE  `id` = 5;
+UPDATE sym_fields SET  `element_name` = 'name-formal',  `label` = 'Name - Formal',  `parent_section` = '5',  `location` = 'main',  `required` = 'yes',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '27';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '27'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('27', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'name-casual',  `label` = 'Name - Casual',  `parent_section` = '5',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '26';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '26'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('26', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'description',  `label` = 'Description',  `parent_section` = '5',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '28';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '28'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('28', '25', 'medium', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'address',  `label` = 'Address',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '29';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '29' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('29', NULL);
+UPDATE sym_fields SET  `element_name` = 'city',  `label` = 'City',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '30';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '30' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('30', NULL);
+UPDATE sym_fields SET  `element_name` = 'state',  `label` = 'State',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '5' WHERE  `id` = '31';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '31' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('31', NULL);
+UPDATE sym_fields SET  `element_name` = 'zip',  `label` = 'Zip',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '6' WHERE  `id` = '32';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '32' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('32', NULL);
+UPDATE sym_fields SET  `element_name` = 'latitude',  `label` = 'Latitude',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '7' WHERE  `id` = '117';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '117' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('117', '/^-?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$/i');
+UPDATE sym_fields SET  `element_name` = 'longitude',  `label` = 'Longitude',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '53';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '53' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('53', '/^-?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$/i');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '5',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '9' WHERE  `id` = '142';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '142' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (142, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '142' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('142', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '142';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('5', '142', '3', '142', 'yes');
+
+-- 2012-03-06 15:17:30, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/7/
+UPDATE sym_sections SET  `name` = 'Text',  `navigation_group` = 'Content',  `handle` = 'text',  `hidden` = 'no' WHERE  `id` = 7;
+UPDATE sym_fields SET  `element_name` = 'content',  `label` = 'Content',  `parent_section` = '7',  `location` = 'main',  `required` = 'yes',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '40';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '40'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('40', '25', 'large', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '7',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '148';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '148' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (148, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '148' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('148', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '148';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('7', '148', '3', '148', 'yes');
+
+-- 2012-03-06 15:17:38, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/4/
+UPDATE sym_sections SET  `name` = 'Verses',  `navigation_group` = 'Content',  `handle` = 'verses',  `hidden` = 'no' WHERE  `id` = 4;
+UPDATE sym_fields SET  `element_name` = 'passage',  `label` = 'Passage',  `parent_section` = '4',  `location` = 'main',  `required` = 'yes',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '24';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '24' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('24', NULL);
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '4',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '149';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (149, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('149', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '149';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('4', '149', '3', '149', 'yes');
+
+-- 2012-03-06 15:17:52, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/4/saved/
+UPDATE sym_sections SET  `name` = 'Verses',  `navigation_group` = 'Content',  `handle` = 'verses',  `hidden` = 'no' WHERE  `id` = 4;
+UPDATE sym_fields SET  `element_name` = 'passage',  `label` = 'Passage',  `parent_section` = '4',  `location` = 'main',  `required` = 'yes',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '24';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '24' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('24', NULL);
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '4',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '149';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (149, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('149', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '149';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('4', '149', '3', '149', 'yes');
+
+-- 2012-03-06 15:27:14, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/4/saved/
+UPDATE sym_sections SET  `name` = 'Verses',  `navigation_group` = 'Content',  `handle` = 'verses',  `hidden` = 'no' WHERE  `id` = 4;
+UPDATE sym_fields SET  `element_name` = 'passage',  `label` = 'Passage',  `parent_section` = '4',  `location` = 'main',  `required` = 'yes',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '24';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '24' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('24', NULL);
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '4',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '149';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (149, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '149' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('149', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '149';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('4', '149', '3', '149', 'yes');
+
+-- 2012-03-06 15:35:37, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/6/
+UPDATE sym_sections SET  `name` = 'Events',  `navigation_group` = 'Events',  `handle` = 'events',  `hidden` = 'no' WHERE  `id` = 6;
+UPDATE sym_fields SET  `element_name` = 'name',  `label` = 'Name',  `parent_section` = '6',  `location` = 'main',  `required` = 'yes',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '33';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '33'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('33', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'date',  `label` = 'Date',  `parent_section` = '6',  `location` = 'main',  `required` = 'no',  `type` = 'datetime',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '35';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '35' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, draggable, destructable, `context`) VALUES (35, 1, 1, 1, 'datetime');
+DELETE FROM `sym_fields_datetime` WHERE `field_id` = '35' LIMIT 1;
+INSERT INTO `sym_fields_datetime` (`field_id`, `time`, `range`, `prepopulate`) VALUES ('35', '1', '1', '1');
+UPDATE sym_fields SET  `element_name` = 'description',  `label` = 'Description',  `parent_section` = '6',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '34';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '34'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('34', '25', 'medium', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'location',  `label` = 'Location',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '136';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '136' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (136, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '136' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('136', '5', '0', '1', '0', '{$name-formal}', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '136';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '136', '5', '136', 'yes');
+UPDATE sym_fields SET  `element_name` = 'member-role',  `label` = 'Member/Role',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '138';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '138' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (138, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '138' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('138', '18', '1', '1', '0', '{$member} - {$role}', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '138';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '138', '18', '138', 'yes');
+UPDATE sym_fields SET  `element_name` = 'members',  `label` = 'Members',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'no',  `sortorder` = '5' WHERE  `id` = '130';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '130' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (130, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '130' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('130', '1', '1', '1', '0', '{$first-name} {$last-name}', NULL, '1', '2,4,50,5,52,52:raw,11,12,9,9:permissions,54,55,58,129');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '130';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '130', '1', '130', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '6' WHERE  `id` = '137';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '137' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (137, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '137' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('137', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '137';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '137', '3', '137', 'yes');
+UPDATE sym_fields SET  `element_name` = 'type',  `label` = 'Type',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '7' WHERE  `id` = '145';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '145' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (145, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '145' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('145', '19', '0', '1', '0', '{$type}', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '145';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('6', '145', '19', '145', 'yes');
+UPDATE sym_fields SET  `element_name` = 'childcare',  `label` = 'Childcare',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'checkbox',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '154';
+DELETE FROM `sym_fields_checkbox` WHERE `field_id` = '154' LIMIT 1;
+INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('154', 'off');
+UPDATE sym_fields SET  `element_name` = 'hidden',  `label` = 'Hidden',  `parent_section` = '6',  `location` = 'sidebar',  `required` = 'no',  `type` = 'checkbox',  `show_column` = 'yes',  `sortorder` = '9' WHERE  `id` = '146';
+DELETE FROM `sym_fields_checkbox` WHERE `field_id` = '146' LIMIT 1;
+INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('146', 'off');
+
+-- 2012-03-06 15:37:32, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/13/
+UPDATE sym_sections SET  `name` = 'Teachings',  `navigation_group` = 'Teachings',  `handle` = 'teachings',  `hidden` = 'no' WHERE  `id` = 13;
+UPDATE sym_fields SET  `element_name` = 'filename',  `label` = 'Filename',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '100';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '100' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('100', NULL);
+UPDATE sym_fields SET  `element_name` = 'date',  `label` = 'Date',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'datetime',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '109';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '109' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, draggable, destructable, `context`) VALUES (109, 1, 1, 1, 'datetime');
+DELETE FROM `sym_fields_datetime` WHERE `field_id` = '109' LIMIT 1;
+INSERT INTO `sym_fields_datetime` (`field_id`, `time`, `range`, `prepopulate`) VALUES ('109', '1', '1', '1');
+UPDATE sym_fields SET  `element_name` = 'current-id',  `label` = 'Current ID',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'no',  `sortorder` = '2' WHERE  `id` = '123';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '123' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('123', NULL);
+UPDATE sym_fields SET  `element_name` = 'title',  `label` = 'Title',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '108';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '108'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('108', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'chapter',  `label` = 'Chapter',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '103';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '103' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('103', NULL);
+UPDATE sym_fields SET  `element_name` = 'day',  `label` = 'Day',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '5' WHERE  `id` = '110';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '110' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('110', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '110';
+UPDATE sym_fields SET  `element_name` = 'book',  `label` = 'Book',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '6' WHERE  `id` = '111';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '111' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('111', 'Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther, Job, Psalm, Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel, Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi, Matthew, Mark, Luke, John, Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy, Titus, Philemon, Hebrews, James, 1 Peter, 2 Peter, 1 John, 2 John, 3 John, Jude, Revelation', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '111';
+UPDATE sym_fields SET  `element_name` = 'description',  `label` = 'Description',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '7' WHERE  `id` = '112';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '112'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('112', '25', 'medium', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '124';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '124' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (124, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '124' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('124', '15', '1', '1', '0', '{$tag}', NULL, '0', '127:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '124';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('13', '124', '15', '124', 'yes');
+UPDATE sym_fields SET  `element_name` = 'keywords-old',  `label` = 'Keywords - old',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'taglist',  `show_column` = 'no',  `sortorder` = '9' WHERE  `id` = '119';
+DELETE FROM `sym_fields_taglist` WHERE `field_id` = '119' LIMIT 1;
+INSERT INTO `sym_fields_taglist` (`field_id`, `pre_populate_source`, `validator`) VALUES ('119', NULL, NULL);
+UPDATE sym_fields SET  `element_name` = 'speaker',  `label` = 'Speaker',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '10' WHERE  `id` = '125';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '125' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (125, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '125' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('125', '1', '1', '1', '0', '{$first-name} {$last-name}', NULL, '1', '2,4');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '125';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('13', '125', '1', '125', 'yes');
+UPDATE sym_fields SET  `element_name` = 'speaker-old',  `label` = 'Speaker - old',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'no',  `sortorder` = '11' WHERE  `id` = '120';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '120' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('120', NULL);
+UPDATE sym_fields SET  `element_name` = 'filter',  `label` = 'Filter',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'filter',  `show_column` = 'no',  `sortorder` = '12' WHERE  `id` = '118';
+DELETE FROM `sym_fields_filter` WHERE `field_id` = '118';
+INSERT INTO `sym_fields_filter` (`field_id`, `filter_publish`, `filter_publish_errors`, `filter_datasource`) VALUES ('118', NULL, 'no', 'yes');
+
+-- 2012-03-06 15:37:55, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/1/
+UPDATE sym_sections SET  `name` = 'Members',  `navigation_group` = 'Members',  `handle` = 'members',  `hidden` = 'no' WHERE  `id` = 1;
+UPDATE sym_fields SET  `element_name` = 'first-name',  `label` = 'First name',  `parent_section` = '1',  `location` = 'main',  `required` = 'yes',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '2';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '2' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('2', NULL);
+UPDATE sym_fields SET  `element_name` = 'last-name',  `label` = 'Last name',  `parent_section` = '1',  `location` = 'main',  `required` = 'yes',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '4';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '4' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('4', NULL);
+UPDATE sym_fields SET  `element_name` = 'photo',  `label` = 'Photo',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'no',  `type` = 'uniqueupload',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '50';
+DELETE FROM `sym_fields_uniqueupload` WHERE `field_id` = '50' LIMIT 1;
+INSERT INTO `sym_fields_uniqueupload` (`field_id`, `destination`, `validator`) VALUES ('50', '/workspace/uploads/members/photos', '/\\.(?:jpe?g)$/i');
+UPDATE sym_fields SET  `element_name` = 'email',  `label` = 'Email',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'no',  `type` = 'memberemail',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '5';
+CREATE TABLE IF NOT EXISTS `sym_fields_memberemail` (
+				  `id` int(11) unsigned NOT NULL auto_increment,
+				  `field_id` int(11) unsigned NOT NULL,
+				  PRIMARY KEY  (`id`),
+				  UNIQUE KEY `field_id` (`field_id`)
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DELETE FROM `sym_fields_memberemail` WHERE `field_id` = '5' LIMIT 1;
+INSERT INTO `sym_fields_memberemail` (`field_id`) VALUES ('5');
+UPDATE sym_fields SET  `element_name` = 'job-title',  `label` = 'Job title',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '52';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '52'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('52', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'gender',  `label` = 'Gender',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'yes',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '5' WHERE  `id` = '11';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '11' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('11', 'Male, Female', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '11';
+UPDATE sym_fields SET  `element_name` = 'birthday',  `label` = 'Birthday',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'yes',  `type` = 'datetime',  `show_column` = 'yes',  `sortorder` = '6' WHERE  `id` = '12';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '12' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, `context`) VALUES (12, 1, 1, 'datetime');
+DELETE FROM `sym_fields_datetime` WHERE `field_id` = '12' LIMIT 1;
+INSERT INTO `sym_fields_datetime` (`field_id`, `time`, `range`, `prepopulate`) VALUES ('12', '0', '0', '0');
+UPDATE sym_fields SET  `element_name` = 'password',  `label` = 'Password',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'no',  `type` = 'memberpassword',  `show_column` = 'no',  `sortorder` = '7' WHERE  `id` = '6';
+CREATE TABLE IF NOT EXISTS `sym_fields_memberpassword` (
+				  `id` int(11) unsigned NOT NULL auto_increment,
+				  `field_id` int(11) unsigned NOT NULL,
+				  `length` tinyint(2) NOT NULL,
+				  `strength` enum('weak', 'good', 'strong') NOT NULL,
+				  `salt` varchar(255) default NULL,
+				  `code_expiry` varchar(50) NOT NULL,
+				  PRIMARY KEY  (`id`),
+				  UNIQUE KEY `field_id` (`field_id`)
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DELETE FROM `sym_fields_memberpassword` WHERE `field_id` = '6' LIMIT 1;
+INSERT INTO `sym_fields_memberpassword` (`field_id`, `length`, `strength`, `salt`, `code_expiry`) VALUES ('6', '8', 'good', 'kv235l2KL@JV#Rkj3v253kv55662f3@$}{', '24 hours');
+UPDATE sym_fields SET  `element_name` = 'activation',  `label` = 'Activation',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'no',  `type` = 'memberactivation',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '7';
+CREATE TABLE IF NOT EXISTS `sym_fields_memberactivation` (
+				  `id` int(11) unsigned NOT NULL auto_increment,
+				  `field_id` int(11) unsigned NOT NULL,
+				  `code_expiry` varchar(50) NOT NULL,
+				  `activation_role_id` int(11) unsigned NOT NULL,
+				  `deny_login` enum('yes','no') NOT NULL default 'yes',
+				  PRIMARY KEY  (`id`),
+				  UNIQUE KEY `field_id` (`field_id`)
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DELETE FROM `sym_fields_memberactivation` WHERE `field_id` = '7' LIMIT 1;
+INSERT INTO `sym_fields_memberactivation` (`field_id`, `code_expiry`, `activation_role_id`, `deny_login`) VALUES ('7', '3 hours', '1', 'no');
+UPDATE sym_fields SET  `element_name` = 'role',  `label` = 'Role',  `parent_section` = '1',  `location` = 'sidebar',  `required` = 'yes',  `type` = 'memberrole',  `show_column` = 'yes',  `sortorder` = '9' WHERE  `id` = '9';
+CREATE TABLE IF NOT EXISTS `sym_fields_memberrole` (
+				  `id` int(11) unsigned NOT NULL auto_increment,
+				  `field_id` int(11) unsigned NOT NULL,
+				  `default_role` int(11) unsigned NOT NULL,
+				  PRIMARY KEY (`id`),
+				  UNIQUE KEY `field_id` (`field_id`)
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DELETE FROM `sym_fields_memberrole` WHERE `field_id` = '9' LIMIT 1;
+INSERT INTO `sym_fields_memberrole` (`field_id`, `default_role`) VALUES ('9', '1');
+UPDATE sym_fields SET  `element_name` = 'about',  `label` = 'About',  `parent_section` = '1',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '10' WHERE  `id` = '54';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '54'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('54', '25', 'small', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '1',  `location` = 'main',  `required` = 'no',  `type` = 'selectbox_link',  `show_column` = 'yes',  `sortorder` = '11' WHERE  `id` = '55';
+DELETE FROM `sym_fields_selectbox_link` WHERE `field_id` = '55';
+INSERT INTO `sym_fields_selectbox_link` (`field_id`, `related_field_id`, `allow_multiple_selection`, `show_association`, `limit`) VALUES ('55', '21', 'yes', 'yes', '9999');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '55';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('3', '21', '1', '55', 'no');
+UPDATE sym_fields SET  `element_name` = 'tags2',  `label` = 'Tags2',  `parent_section` = '1',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '12' WHERE  `id` = '151';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '151' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (151, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '151' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('151', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '151';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('1', '151', '3', '151', 'yes');
+UPDATE sym_fields SET  `element_name` = 'phone-number',  `label` = 'Phone number',  `parent_section` = '1',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '14' WHERE  `id` = '129';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '129' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('129', NULL);
+
+-- 2012-03-06 15:40:54, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/18/
+UPDATE sym_sections SET  `name` = 'Members: Roles',  `navigation_group` = 'Members',  `handle` = 'members-roles',  `hidden` = 'no' WHERE  `id` = 18;
+UPDATE sym_fields SET  `element_name` = 'member',  `label` = 'Member',  `parent_section` = '18',  `location` = 'main',  `required` = 'yes',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '135';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '135' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (135, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '135' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('135', '1', '0', '1', '0', '{$first-name} {$last-name}', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '135';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('18', '135', '1', '135', 'yes');
+UPDATE sym_fields SET  `element_name` = 'role',  `label` = 'Role',  `parent_section` = '18',  `location` = 'main',  `required` = 'yes',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '134';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '134' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (134, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '134' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('134', '17', '0', '1', '0', '{$role} ({$context})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '134';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('18', '134', '17', '134', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '18',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '152';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '152' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (152, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '152' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('152', '3', '1', '1', '0', '{$tag} ({$description})', NULL, '1', NULL);
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '152';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('18', '152', '3', '152', 'yes');
+
+-- 2012-03-06 15:41:14, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/11/
+UPDATE sym_sections SET  `name` = 'Layouts',  `navigation_group` = 'Structure',  `handle` = 'layouts',  `hidden` = 'no' WHERE  `id` = 11;
+UPDATE sym_fields SET  `element_name` = 'name',  `label` = 'Name',  `parent_section` = '11',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '73';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '73'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('73', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'column-full-width',  `label` = 'Column - Full width',  `parent_section` = '11',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '74';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '74' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, destructable, searchable, draggable, `context`) VALUES (74, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '74' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('74', '9', '1', '1', '1', '{$label}', NULL, '1', '115:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '74';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('11', '74', '9', '74', 'yes');
+UPDATE sym_fields SET  `element_name` = 'column-center',  `label` = 'Column - Center',  `parent_section` = '11',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '2' WHERE  `id` = '75';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '75' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, destructable, searchable, draggable, `context`) VALUES (75, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '75' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('75', '9', '1', '1', '1', '{$label}', NULL, '1', '115:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '75';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('11', '75', '9', '75', 'yes');
+UPDATE sym_fields SET  `element_name` = 'column-right',  `label` = 'Column - Right',  `parent_section` = '11',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '76';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '76' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, destructable, searchable, draggable, `context`) VALUES (76, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '76' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('76', '9', '1', '1', '1', '{$label}', NULL, '1', '115:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '76';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('11', '76', '9', '76', 'yes');
+
+-- 2012-03-06 15:41:57, Kirk Strobeck, http://churchdeploy/symphony/blueprints/sections/edit/13/saved/
+UPDATE sym_sections SET  `name` = 'Teachings',  `navigation_group` = 'Teachings',  `handle` = 'teachings',  `hidden` = 'no' WHERE  `id` = 13;
+UPDATE sym_fields SET  `element_name` = 'filename',  `label` = 'Filename',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '0' WHERE  `id` = '100';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '100' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('100', NULL);
+UPDATE sym_fields SET  `element_name` = 'date',  `label` = 'Date',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'datetime',  `show_column` = 'yes',  `sortorder` = '1' WHERE  `id` = '109';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '109' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, draggable, destructable, `context`) VALUES (109, 1, 1, 1, 'datetime');
+DELETE FROM `sym_fields_datetime` WHERE `field_id` = '109' LIMIT 1;
+INSERT INTO `sym_fields_datetime` (`field_id`, `time`, `range`, `prepopulate`) VALUES ('109', '1', '1', '1');
+UPDATE sym_fields SET  `element_name` = 'current-id',  `label` = 'Current ID',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'no',  `sortorder` = '2' WHERE  `id` = '123';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '123' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('123', NULL);
+UPDATE sym_fields SET  `element_name` = 'title',  `label` = 'Title',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '3' WHERE  `id` = '108';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '108'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('108', '25', 'single', 'none', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'chapter',  `label` = 'Chapter',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'yes',  `sortorder` = '4' WHERE  `id` = '103';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '103' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('103', NULL);
+UPDATE sym_fields SET  `element_name` = 'day',  `label` = 'Day',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '5' WHERE  `id` = '110';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '110' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('110', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '110';
+UPDATE sym_fields SET  `element_name` = 'book',  `label` = 'Book',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'select',  `show_column` = 'yes',  `sortorder` = '6' WHERE  `id` = '111';
+DELETE FROM `sym_fields_select` WHERE `field_id` = '111' LIMIT 1;
+INSERT INTO `sym_fields_select` (`field_id`, `static_options`, `allow_multiple_selection`, `sort_options`, `show_association`) VALUES ('111', 'Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther, Job, Psalm, Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel, Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi, Matthew, Mark, Luke, John, Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy, Titus, Philemon, Hebrews, James, 1 Peter, 2 Peter, 1 John, 2 John, 3 John, Jude, Revelation', 'no', 'no', 'yes');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '111';
+UPDATE sym_fields SET  `element_name` = 'description',  `label` = 'Description',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'multilingual',  `show_column` = 'yes',  `sortorder` = '7' WHERE  `id` = '112';
+DELETE FROM
+				`sym_fields_multilingual`
+			WHERE
+				`field_id` = '112'
+			LIMIT 1;
+INSERT INTO `sym_fields_multilingual` (`field_id`, `column_length`, `text_size`, `formatter`, `text_validator`, `text_length`, `unique_handle`, `use_def_lang_vals`) VALUES ('112', '25', 'medium', 'markdown_extra_with_smartypants', NULL, '0', 'yes', 'yes');
+UPDATE sym_fields SET  `element_name` = 'tags',  `label` = 'Tags',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '8' WHERE  `id` = '124';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '124' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, `context`) VALUES (124, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '124' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('124', '15', '1', '1', '0', '{$tag}', NULL, '1', '127:raw');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '124';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('13', '124', '15', '124', 'yes');
+UPDATE sym_fields SET  `element_name` = 'keywords-old',  `label` = 'Keywords - old',  `parent_section` = '13',  `location` = 'sidebar',  `required` = 'no',  `type` = 'taglist',  `show_column` = 'no',  `sortorder` = '9' WHERE  `id` = '119';
+DELETE FROM `sym_fields_taglist` WHERE `field_id` = '119' LIMIT 1;
+INSERT INTO `sym_fields_taglist` (`field_id`, `pre_populate_source`, `validator`) VALUES ('119', NULL, NULL);
+UPDATE sym_fields SET  `element_name` = 'speaker',  `label` = 'Speaker',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'subsectionmanager',  `show_column` = 'yes',  `sortorder` = '10' WHERE  `id` = '125';
+DELETE FROM `sym_fields_stage` WHERE `field_id` = '125' LIMIT 1;
+INSERT INTO `sym_fields_stage` (`field_id`, constructable, destructable, searchable, draggable, `context`) VALUES (125, 1, 1, 1, 1, 'subsectionmanager');
+DELETE FROM `sym_fields_subsectionmanager` WHERE `field_id` = '125' LIMIT 1;
+INSERT INTO `sym_fields_subsectionmanager` (`field_id`, `subsection_id`, `allow_multiple`, `show_preview`, `lock`, `caption`, `droptext`, `recursion_levels`, `included_fields`) VALUES ('125', '1', '1', '1', '0', '{$first-name} {$last-name}', NULL, '1', '2,4');
+DELETE FROM sym_sections_association WHERE  `child_section_field_id` = '125';
+INSERT INTO `sym_sections_association` (`parent_section_id`, `parent_section_field_id`, `child_section_id`, `child_section_field_id`, `hide_association`) VALUES ('13', '125', '1', '125', 'yes');
+UPDATE sym_fields SET  `element_name` = 'speaker-old',  `label` = 'Speaker - old',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'input',  `show_column` = 'no',  `sortorder` = '11' WHERE  `id` = '120';
+DELETE FROM `sym_fields_input` WHERE `field_id` = '120' LIMIT 1;
+INSERT INTO `sym_fields_input` (`field_id`, `validator`) VALUES ('120', NULL);
+UPDATE sym_fields SET  `element_name` = 'filter',  `label` = 'Filter',  `parent_section` = '13',  `location` = 'main',  `required` = 'no',  `type` = 'filter',  `show_column` = 'no',  `sortorder` = '12' WHERE  `id` = '118';
+DELETE FROM `sym_fields_filter` WHERE `field_id` = '118';
+INSERT INTO `sym_fields_filter` (`field_id`, `filter_publish`, `filter_publish_errors`, `filter_datasource`) VALUES ('118', NULL, 'no', 'yes');
