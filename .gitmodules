@@ -39,7 +39,7 @@
 	url = http://github.com/domain7/html5_doctype.git
 [submodule "www/httpdocs/extensionssubsectionmanager"]
 	path = www/httpdocs/extensionssubsectionmanager
-	url = http://github.com/nilshoerrmann/subsectionmanager.git
+	url = http://github.com/hananils/subsectionmanager.git
 [submodule "www/httpdocs/extensionstweak_ui"]
 	path = www/httpdocs/extensionstweak_ui
 	url = http://github.com/kanduvisla/tweak_ui.git
