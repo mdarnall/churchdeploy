@@ -21,7 +21,9 @@
 				'description: raw',
 				'slug',
 				'parent',
-				'hidden'
+				'hidden',
+				'hide-from-header',
+				'hide-from-footer'
 		);
 
 
@@ -38,7 +40,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-29T03:03:49+00:00'
+				'release-date' => '2012-03-06T23:05:35+00:00'
 			);
 		}
 
