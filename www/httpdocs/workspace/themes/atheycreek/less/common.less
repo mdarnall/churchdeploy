@@ -1,4 +1,27 @@
 
+@import 'import.less'; // For importing CSS documents
 @import '../../../bootstrap/less/bootstrap.less';
 @import '../../../bootstrap/less/responsive.less';
+
+// Quick overrides
+
+[class^="icon-"] {
+	background-image: url(../../../bootstrap/img/glyphicons-halflings.png);
+}
+
+.icon-white {
+	background-image: url(../../../bootstrap/img/glyphicons-halflings-white.png);
+}
+
+
+
+// Styles
+
+.modalLive {
+	width: 630px !important;
+	
+	.modal-body {
+		background: #000;
+	}
+}
 

@@ -7,92 +7,61 @@ $(document).ready(
 		
 		// Reveal mini logo when scrolling down
 		
-		$(window).scroll(
-			function() 
-			{
-				if ( $(window).scrollTop() >= 300 ) 
-				{
-					$('.logo').fadeIn();
-				}
-				
-				if ( $(window).scrollTop() <= 200 ) 
-				{
-					$('.logo').fadeOut();
-				}
-			}
-		);
+//		$(window).scroll(
+//			function() 
+//			{
+//				if ( $(window).scrollTop() >= 300 ) 
+//				{
+//					$('.logo').fadeIn();
+//				}
+//				
+//				if ( $(window).scrollTop() <= 200 ) 
+//				{
+//					$('.logo').fadeOut();
+//				}
+//			}
+//		);
 
 		
-		// Shade website when viewing live
+		$('.modalLiveLink').click(
+			function(e)
+			{
+				e.preventDefault();
+				
+				$('.modalLive').modal('show');
+				
+				return false;
+			}
+		);
 		
-		if( $('body.layout-live').exists() )
-		{
-//			setTimeout(
-//				function()
-//				{
-//				    scrollTo( '.content', -100 );
-//				}, 
-//				3000
-//			);
-			
-			$('body').append('<div class="theatre-dimmer"></div>');
-			
-			$('.theatre-dimmer').delay(3000).fadeTo( 2000, .8 );
-			
-			$('.content').delay(3000).animate(
-			    {
-			        'backgroundColor': '#333333'
-			    }, 
-			    1000
-			);
-			
-//			$(window).scroll(
-//				function()
-//				{
-//					var windowOffset = $(window).offset;
-//					
-//					console.log(windowOffset.top);
-//					
-//					$('.theatre-dimmer').css(
-//						{
-//							top: windowOffset.top + 'px'
-//						}
-//					);
-//				}
-//			);
-			
-			$('.live-icon').click(
-				function(e)
-				{
-					e.preventDefault();
-					
-					$('.theatre-dimmer').fadeTo( 2000, .8 );
-					
-					$('.content').animate(
-					    {
-					        'backgroundColor': '#333333'
-					    }, 
-					    1000
-					);
-					
-					return false;
-				}
-			);
-			
-			$('.theatre-dimmer').click(
-				function()
-				{
-					$(this).fadeOut();
-					
-					$('.content').animate(
-					    {
-					        'backgroundColor': '#ffffff'
-					    }, 
-					    1000
-					);
-				}
-			);
-		}
+		$('.modalLive .close').click(
+			function(e)
+			{
+				e.preventDefault();
+				
+				$('.modalLive').modal('hide');
+							
+				return false;
+			}
+		);
+		
+		$('.modalLive').on(
+			'show', 
+			function () 
+			{
+				var url = $('.modalLive .modal-body .url').html();
+				
+				$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="356" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+			}
+		);
+		
+		$('.modalLive').on(
+			'hidden', 
+			function () 
+			{
+				$('.modalLive .modal-body .ustream-embed').html('#');
+			}
+		);
 	}
 );
 
