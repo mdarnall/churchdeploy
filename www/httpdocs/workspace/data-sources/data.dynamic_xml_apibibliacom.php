@@ -7,7 +7,7 @@
 		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
 		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-verses-entries-by-tag:encoded}';
 		public $dsParamXPATH = '/response/text';
-		public $dsParamCACHE = '1';
+		public $dsParamCACHE = '999999';
 		public $dsParamTIMEOUT = '6';
 
 		
@@ -23,11 +23,11 @@
 			return array(
 				'name' => 'Dynamic XML: api.biblia.com',
 				'author' => array(
-					'name' => 'Admin Admin',
+					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T03:14:41+00:00'
+				'release-date' => '2012-03-07T17:49:05+00:00'
 			);
 		}
 

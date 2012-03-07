@@ -19,9 +19,10 @@
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'column-full-width',
-				'column-center',
-				'column-right'
+				'name: raw',
+				'column-full-width: label: raw',
+				'column-center: label: raw',
+				'column-right: label: raw'
 		);
 
 
@@ -35,10 +36,10 @@
 				'name' => 'Layouts: Default entry',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T20:52:06+00:00'
+				'release-date' => '2012-03-07T18:31:09+00:00'
 			);
 		}
 

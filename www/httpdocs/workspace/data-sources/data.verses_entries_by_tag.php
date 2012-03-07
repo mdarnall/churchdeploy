@@ -6,8 +6,8 @@
 
 		public $dsParamROOTELEMENT = 'verses-entries-by-tag';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
+		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamREQUIREDPARAM = '$pt1:43';
@@ -17,7 +17,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'25' => '{$pt1:43}',
+				'149' => '{$pt1}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -34,11 +34,11 @@
 			return array(
 				'name' => 'Verses: Entries by tag',
 				'author' => array(
-					'name' => 'Admin Admin',
+					'name' => 'Kirk Strobeck',
 					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T05:28:05+00:00'
+				'release-date' => '2012-03-07T17:45:27+00:00'
 			);
 		}
 

@@ -145,3 +145,143 @@ Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this ob
 					d.value ASC
 				LIMIT
 					1" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 727
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 5 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 5 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element text
+Line: 145 - XSLTProcessor::importStylesheet(): misplaced text node: 'components/
+'
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element text
+Line: 145 - XSLTProcessor::importStylesheet(): misplaced text node: 'components/
+'
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl
+Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
