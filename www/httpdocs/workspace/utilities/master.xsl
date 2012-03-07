@@ -18,8 +18,7 @@
     omit-xml-declaration="yes"
     indent="yes"
     />
-
-
+    
 
 <xsl:include href="date-time-advanced.xsl" />
 <xsl:include href="toolkit.xsl" />
@@ -65,7 +64,7 @@
 			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
 			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
 
-			<link rel="stylesheet" href="{$workspace}/themes/atheycreek/css/common.css" />
+			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
 
 			<!-- Typekit
 
@@ -213,7 +212,7 @@
 
 						<div class="span10">
 							<h1>
-								<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" />
+								<xsl:value-of select="xxxxx//tags-all-entries/entry[@id = $pt1]/tag" />
 							</h1>
 						</div>
 
@@ -349,7 +348,7 @@
 			<script type="text/javascript" src="{$workspace}/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
 			<script type="text/javascript" src="{$workspace}/bootstrap/docs/assets/js/application.js"></script>
 
-			<script type="text/javascript" src="{$workspace}/themes/atheycreek/js/common.js"></script>
+			<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
 
 			<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 			chromium.org/developers/how-tos/chrome-frame-getting-started -->

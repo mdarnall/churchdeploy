@@ -7,7 +7,7 @@
 		public $dsParamROOTELEMENT = 'dynamic-xml-ustreamcom';
 		public $dsParamURL = 'http://api.ustream.tv/xml/channel/atheycreek/getInfo/?key=4E23272206B10532FEC6335E3D79977E';
 		public $dsParamXPATH = '/';
-		public $dsParamCACHE = '10';
+		public $dsParamCACHE = '999999';
 		public $dsParamTIMEOUT = '6';
 
 		
@@ -27,7 +27,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-29T19:12:19+00:00'
+				'release-date' => '2012-03-07T17:49:18+00:00'
 			);
 		}
 
