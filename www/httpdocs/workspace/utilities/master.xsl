@@ -245,14 +245,18 @@
 							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-full-width" />
 						</xsl:call-template>
 
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
-						</xsl:call-template>
+						<div class="row">
 
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
-						</xsl:call-template>
+							<xsl:call-template name="component">
+								<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
+							</xsl:call-template>
 
+							<xsl:call-template name="component">
+								<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
+							</xsl:call-template>
+
+						</div>
+						
 					</xsl:when>
 
 					<xsl:otherwise>
@@ -261,13 +265,17 @@
 							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-full-width" />
 						</xsl:call-template>
 
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-center" />
-						</xsl:call-template>
+						<div class="row">
 
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-right" />
-						</xsl:call-template>
+							<xsl:call-template name="component">
+								<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-center" />
+							</xsl:call-template>
+
+							<xsl:call-template name="component">
+								<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-right" />
+							</xsl:call-template>
+
+						</div>
 
 					</xsl:otherwise>
 
