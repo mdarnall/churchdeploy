@@ -212,7 +212,7 @@
 
 						<div class="span10">
 							<h1>
-								<xsl:value-of select="xxxxx//tags-all-entries/entry[@id = $pt1]/tag" />
+								<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" />
 							</h1>
 						</div>
 
@@ -256,7 +256,7 @@
 							</xsl:call-template>
 
 						</div>
-						
+
 					</xsl:when>
 
 					<xsl:otherwise>
