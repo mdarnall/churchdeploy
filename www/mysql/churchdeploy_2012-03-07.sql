@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.9)
 # Database: churchdeploy
-# Generation Time: 2012-03-07 19:32:03 +0000
+# Generation Time: 2012-03-07 20:51:15 +0000
 # ************************************************************
 
 
@@ -48,7 +48,7 @@ LOCK TABLES `sym_authors` WRITE;
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
 	(3,'dfrost','39abc98f9c11b7a1d8d2529cf39bb2090c9a8393','David','Frost','dfrost@atheycreek.com','2012-02-29 18:30:22','developer','no','3','no',NULL),
-	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-03-07 11:11:59','developer','no','3','no',NULL),
+	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-03-07 12:46:00','developer','no','3','no',NULL),
 	(4,'jsimcoe','7b10dfd8ecfb74eafd8778364f883ce41cb756f5','Jonathan','Simcoe','jdsimcoe@gmail.com','2012-03-01 13:49:18','developer','no','3','no',NULL),
 	(5,'jwheeler','6a0bf4be0400168e7453d876311667eda7068fe3','Jeff','Wheeler','jeff.wheelerpdx@gmail.com',NULL,'author','no','3','no',NULL),
 	(6,'britchie','aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d','Bryn','Ritchie','britchie@atheycreek.com','2011-12-04 09:40:15','developer','no','3','no',NULL),
@@ -39080,7 +39080,7 @@ VALUES
 	('qlidurbiotboqtrf7c2ghvco41',1330986291,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('uga15cttgt02t24v2far13ict3',1330569464,'sym-|a:2:{s:8:\"username\";s:7:\"csimcoe\";s:4:\"pass\";s:40:\"bb28b5a369216776354b2c859eec5e50eac7fcda\";}sym-members|a:0:{}'),
 	('jk1okm4cvljcv0gmls7tp2ha54',1330757245,'sym-|a:2:{s:8:\"username\";s:9:\"gguerrero\";s:4:\"pass\";s:40:\"940e8b8e68b06b49239fd0864d2dc09688a4472e\";}'),
-	('1281863fae67b602c538c4e37ea577ef',1331147519,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('1281863fae67b602c538c4e37ea577ef',1331153161,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('mersgrettng2nlbjubc43den57',1330569024,'sym-|a:2:{s:8:\"username\";s:6:\"dfrost\";s:4:\"pass\";s:40:\"39abc98f9c11b7a1d8d2529cf39bb2090c9a8393\";}sym-members|a:0:{}'),
 	('d457gpf5brr044uqa0puuds8f4',1330638558,'sym-|a:2:{s:8:\"username\";s:7:\"jsimcoe\";s:4:\"pass\";s:40:\"7b10dfd8ecfb74eafd8778364f883ce41cb756f5\";}sym-members|a:0:{}'),
 	('q7oatjqbuej1vc6vvfg7c00r13',1330816190,'sym-|a:2:{s:8:\"username\";s:8:\"lallphin\";s:4:\"pass\";s:40:\"b5fdfaf4bbdecbbb9605ba04feefd77bfb78f440\";}'),

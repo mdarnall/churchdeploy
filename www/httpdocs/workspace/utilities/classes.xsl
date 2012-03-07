@@ -5,6 +5,15 @@
 
 <xsl:template name="class-position">
 	
+	<!-- 
+	
+	Call on the component container
+
+	<xsl:call-template name="class-position">
+		<xsl:with-param name="component" select="'events'" />
+	</xsl:call-template>
+
+	-->
 	<xsl:param name="component" />
 	
 	<xsl:attribute name="class">
@@ -21,6 +30,12 @@
 
 
 <xsl:template name="class-rows">
+	
+	<!-- 
+	
+	Call on the component rows
+
+	-->
 	
 	<xsl:param name="class" />
 	

@@ -23,7 +23,8 @@
 		public $dsParamINCLUDEDELEMENTS = array(
 				'name: raw',
 				'date',
-				'description'
+				'description',
+				'location: name-formal: raw'
 		);
 
 
@@ -40,7 +41,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T17:53:16+00:00'
+				'release-date' => '2012-03-07T20:40:19+00:00'
 			);
 		}
 
