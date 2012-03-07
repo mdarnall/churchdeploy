@@ -1,441 +1,304 @@
 ============================================
-Log Created: 2011-11-26T14:15:40-08:00
+Log Created: 2012-01-18T07:45:06-08:00
 ============================================
 Symphony Log
 Version: 2.2.5
 --------------------------------------------
-26 November 2011 15:19 > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested, <code>/ministries/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
-26 November 2011 15:19 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-26 November 2011 15:19 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-26 November 2011 15:19 > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested, <code>/test/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
-27 November 2011 15:48 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl"
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/ line 3 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-27 November 2011 16:29 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
-27 November 2011 16:29 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
-27 November 2011 16:30 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
-27 November 2011 16:30 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
-27 November 2011 16:30 > UNKNOWN: SymphonyErrorPageHandler 0 - The page you requested does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/core/class.symphony.php on line 542
-27 November 2011 21:06 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 221 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): XSLT-with-param: Failed to compile select expression '%d'
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-27 November 2011 21:50 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:260: parser error : Opening and ending tag mismatch: a line 244 and span
-Line: 145 - XSLTProcessor::importStylesheet(): 									</span>
-Line: 145 - XSLTProcessor::importStylesheet(): 									       ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:10 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>members</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
-28 November 2011 08:14 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:14 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:14 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:14 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:14 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 131 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 08:17 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 146 element if
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'pt2' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 19:43 > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested, <code>/image/2/920/400/5/0/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
-28 November 2011 19:48 > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested, <code>/image/2/920/400/5/0/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
-28 November 2011 19:49 > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested, <code>/image/2/920/400/5/0/</code>, does not exist. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 315
-2011/11/28 20:00:53 > User Error: 256 - Image /workspace/5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/28 20:00:53 > Notice: Image class param dump - mode: 0, width: 0, height: 0, position: 0, background: 0, file: 5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg, external: 0, raw input: 5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg
-2011/11/28 20:00:57 > User Error: 256 - Image /workspace/5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/28 20:00:57 > Notice: Image class param dump - mode: 0, width: 0, height: 0, position: 0, background: 0, file: 5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg, external: 0, raw input: 5/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4572c97223.jpg
-28 November 2011 20:41 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 80 element attribute
-Line: 158 - XSLTProcessor::transformToXml(): xsl:attribute: Cannot add attributes to an element if children have been already added to the element. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 20:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 34 element param
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'pt1:43' of the attribute 'name' is not a valid QName.
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 20:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 31 element param
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'pt1:43' of the attribute 'name' is not a valid QName.
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 31 element param
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:param : missing name attribute
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 20:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 9 element param
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'pt1:43' of the attribute 'name' is not a valid QName.
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 9 element param
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:param : missing name attribute
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 21:39 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 136 element when
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:when : could not compile test expression ''
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-28 November 2011 21:39 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 136 element when
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:when : could not compile test expression ''
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-29 November 2011 05:36 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 106 element a
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'url-language' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-29 November 2011 05:36 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 106 element a
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'url-language' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-30 November 2011 13:41 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: function first not found
-Line: 158 - XSLTProcessor::transformToXml(): Unregistered function
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 1 objects left on the stack. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-30 November 2011 13:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompOpEval: function first not found
-Line: 158 - XSLTProcessor::transformToXml(): Unregistered function
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: 1 objects left on the stack. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-2011/11/30 13:42:28 > User Error: 256 - Image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/30 13:42:28 > Notice: Image class param dump - mode: 0, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg
-2011/11/30 13:42:35 > User Error: 256 - Image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/30 13:42:35 > Notice: Image class param dump - mode: 0, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg
-2011/11/30 13:43:23 > User Error: 256 - Image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/30 13:43:23 > Notice: Image class param dump - mode: 0, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg
-2011/11/30 13:44:49 > User Error: 256 - Image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/30 13:44:49 > Notice: Image class param dump - mode: 0, width: 40, height: 40, position: 5, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg, external: 0, raw input: 2/40/40/5/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg
-2011/11/30 13:44:51 > User Error: 256 - Image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg could not be found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 134
-2011/11/30 13:44:51 > Notice: Image class param dump - mode: 0, width: 0, height: 150, position: 5, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg, external: 0, raw input: 2/0/150/5/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed4598dcb1e6.jpg
-2011/12/02 11:34:04 > User Error: 256 - Error loading image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 11:34:04 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg
-2011/12/02 11:34:09 > User Error: 256 - Error loading image /workspace/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 11:34:09 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/4870479764_4c6c8bae69_o-4ed6a3dfbff6d.jpg
-2011/12/02 12:37:00 > User Error: 256 - Error loading image /workspace/uploads/images/leaderboards/men-4ed81234ad602.jpg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 12:37:00 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 2, background: 0, file: uploads/images/leaderboards/men-4ed81234ad602.jpg, external: 0, raw input: 2/920/400/2/0/uploads/images/leaderboards/men-4ed81234ad602.jpg
-02 December 2011 15:52 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 110 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'nav-href' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-02 December 2011 18:30 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:280: parser error : Opening and ending tag mismatch: h3 line 277 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 							</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 							      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:282: parser error : Opening and ending tag mismatch: div line 260 and xsl:for-each
-Line: 145 - XSLTProcessor::importStylesheet(): 						</xsl:for-each>
-Line: 145 - XSLTProcessor::importStylesheet(): 						               ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:284: parser error : Opening and ending tag mismatch: for-each line 258 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 					</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 					      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:355: parser error : Opening and ending tag mismatch: div line 154 and body
-Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
-Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:357: parser error : Opening and ending tag mismatch: body line 80 and html
-Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
-Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:359: parser error : Opening and ending tag mismatch: html line 39 and xsl:template
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
-Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:525: parser error : Opening and ending tag mismatch: template line 34 and stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
-Line: 145 - XSLTProcessor::importStylesheet():                  ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:525: parser error : Premature end of data in tag stylesheet line 6
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
-Line: 145 - XSLTProcessor::importStylesheet():                  ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-2011/12/02 19:28:50 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_brett-4ed9911671446.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:28:50 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_brett-4ed9911671446.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_brett-4ed9911671446.jpeg
-2011/12/02 19:28:50 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:28:50 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg
-2011/12/02 19:32:59 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:33:00 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg
-2011/12/02 19:33:00 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_brett-4ed9911671446.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:33:00 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_brett-4ed9911671446.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_brett-4ed9911671446.jpeg
-2011/12/02 19:33:01 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_brett-4ed9911671446.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:33:01 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_brett-4ed9911671446.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_brett-4ed9911671446.jpeg
-2011/12/02 19:33:01 > User Error: 256 - Error loading image /workspace/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
-2011/12/02 19:33:01 > Notice: Image class param dump - mode: 2, width: 129, height: 151, position: 2, background: 0, file: uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg, external: 0, raw input: 2/129/151/2/0/uploads/members/photos/staff_jeff-4ed9914aeec3b.jpeg
-02 December 2011 23:26 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
-Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
-Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
-Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
-Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
-Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
-Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
-Line: 145 - XSLTProcessor::importStylesheet(): ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-02 December 2011 23:27 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
-Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
-Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
-Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
-Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
-Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
-Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
-Line: 145 - XSLTProcessor::importStylesheet(): ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-02 December 2011 23:28 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:315: parser error : Opening and ending tag mismatch: body line 80 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:366: parser error : Opening and ending tag mismatch: html line 39 and body
-Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
-Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:368: parser error : Opening and ending tag mismatch: template line 34 and html
-Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
-Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:370: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
-Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:374: parser error : Extra content at the end of the document
-Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
-Line: 145 - XSLTProcessor::importStylesheet(): ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-02 December 2011 23:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:439: parser error : Opening and ending tag mismatch: a line 438 and p
-Line: 145 - XSLTProcessor::importStylesheet(): 						</p>
-Line: 145 - XSLTProcessor::importStylesheet(): 						    ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:441: parser error : Opening and ending tag mismatch: p line 437 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 					</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 					      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:443: parser error : Opening and ending tag mismatch: div line 425 and li
-Line: 145 - XSLTProcessor::importStylesheet(): 				</li>
-Line: 145 - XSLTProcessor::importStylesheet(): 				     ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:445: parser error : Opening and ending tag mismatch: li line 405 and xsl:for-each
-Line: 145 - XSLTProcessor::importStylesheet(): 			</xsl:for-each>
-Line: 145 - XSLTProcessor::importStylesheet(): 			               ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:447: parser error : Opening and ending tag mismatch: for-each line 403 and ul
-Line: 145 - XSLTProcessor::importStylesheet(): 		</ul>
-Line: 145 - XSLTProcessor::importStylesheet(): 		     ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:449: parser error : Opening and ending tag mismatch: ul line 399 and xsl:if
+<<<<<<< HEAD
+=======
+19 December 2011 10:42 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:42 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:42 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:43 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:43 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:43 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:44 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:46 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:46 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:48 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:48 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:48 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:49 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:51 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:52 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:53 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:54 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 10:55 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+19 December 2011 11:01 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+20 December 2011 11:24 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+20 December 2011 11:24 > UNKNOWN: GenericExceptionHandler 0 - Could not find Data Source <code>teachings_all_entries_filtered</code>. If the Data Source was provided by an Extension, ensure that it is installed, and enabled. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.datasourcemanager.php on line 169
+28 December 2011 18:19 > UNKNOWN: GenericExceptionHandler 0 - Invalid argument supplied for foreach() in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/xmlimporter/lib/class.xmlimporter.php on line 142
+28 December 2011 18:21 > UNKNOWN: GenericExceptionHandler 0 - Invalid argument supplied for foreach() in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/xmlimporter/lib/class.xmlimporter.php on line 142
+28 December 2011 18:50 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:497: parser error : Opening and ending tag mismatch: template line 475 and if
 Line: 145 - XSLTProcessor::importStylesheet(): 	</xsl:if>
 Line: 145 - XSLTProcessor::importStylesheet(): 	         ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:451: parser error : Opening and ending tag mismatch: if line 397 and template
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:499: parser error : Opening and ending tag mismatch: stylesheet line 2 and template
 Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
 Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:596: parser error : Opening and ending tag mismatch: template line 395 and stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
-Line: 145 - XSLTProcessor::importStylesheet():                  ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:596: parser error : Premature end of data in tag stylesheet line 6
-Line: 145 - XSLTProcessor::importStylesheet(): </xsl:stylesheet>
-Line: 145 - XSLTProcessor::importStylesheet():                  ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:35 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 178 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-image' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 199 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 208 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-event' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 212 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:36 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 178 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-image' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 199 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 208 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-event' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 212 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:39 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 178 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-image' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 179 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-verse' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 187 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 194 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-event' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 195 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:41 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 178 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-image' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 179 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-verse' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 187 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 194 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-event' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 195 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-member' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:41 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 164 element choose
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'position' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:48 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 146 element param
-Line: 158 - XSLTProcessor::transformToXml(): Unexpected XSLT element 'param'.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 152 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'class-position' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 154 element if
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'position' has not been declared. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:49 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 152 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'class-position' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 152 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'class-position' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:53 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'component' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): XPath evaluation returned no result. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:54 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'component' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): XPath evaluation returned no result. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'component' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 11 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): XPath evaluation returned no result. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:57 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 13 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'component' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 13 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): XPath evaluation returned no result. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 09:57 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 17 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): Variable 'position' has not been declared.
-Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/classes.xsl line 17 element value-of
-Line: 158 - XSLTProcessor::transformToXml(): XPath evaluation returned no result. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 10:07 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:70: parser error : Opening and ending tag mismatch: div line 12 and ul
-Line: 145 - XSLTProcessor::importStylesheet(): 		</ul>
-Line: 145 - XSLTProcessor::importStylesheet(): 		     ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:503: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="component-verses">
+Line: 145 - XSLTProcessor::importStylesheet(): ^
 Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 27 element include
 Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-03 December 2011 16:31 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/systemidfield/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-03 December 2011 11:42 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'concat( 'component-', @handle )' of the attribute 'name' is not a valid QName.
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:54 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:216: parser error : Opening and ending tag mismatch: for-each line 212 and call-template
-Line: 145 - XSLTProcessor::importStylesheet(): 							</xsl:call-template>
-Line: 145 - XSLTProcessor::importStylesheet(): 							                    ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:218: parser error : Opening and ending tag mismatch: div line 210 and xsl:for-each
-Line: 145 - XSLTProcessor::importStylesheet(): 					</xsl:for-each>
-Line: 145 - XSLTProcessor::importStylesheet(): 					               ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:227: parser error : Opening and ending tag mismatch: body line 82 and div
-Line: 145 - XSLTProcessor::importStylesheet(): 			</div>
-Line: 145 - XSLTProcessor::importStylesheet(): 			      ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:286: parser error : Opening and ending tag mismatch: html line 41 and body
-Line: 145 - XSLTProcessor::importStylesheet(): 		</body>
-Line: 145 - XSLTProcessor::importStylesheet(): 		       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:288: parser error : Opening and ending tag mismatch: template line 36 and html
-Line: 145 - XSLTProcessor::importStylesheet(): 	</html>
-Line: 145 - XSLTProcessor::importStylesheet(): 	       ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:290: parser error : Opening and ending tag mismatch: stylesheet line 6 and template
+28 December 2011 18:50 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:497: parser error : Opening and ending tag mismatch: template line 475 and if
+Line: 145 - XSLTProcessor::importStylesheet(): 	</xsl:if>
+Line: 145 - XSLTProcessor::importStylesheet(): 	         ^
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:499: parser error : Opening and ending tag mismatch: stylesheet line 2 and template
 Line: 145 - XSLTProcessor::importStylesheet(): </xsl:template>
 Line: 145 - XSLTProcessor::importStylesheet():                ^
-Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl:294: parser error : Extra content at the end of the document
-Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="nav-submenu-item">
+Line: 145 - XSLTProcessor::importStylesheet(): /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl:503: parser error : Extra content at the end of the document
+Line: 145 - XSLTProcessor::importStylesheet(): <xsl:template name="component-verses">
 Line: 145 - XSLTProcessor::importStylesheet(): ^
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/pages/home.xsl line 6 element import
-Line: 145 - XSLTProcessor::importStylesheet(): xsl:import : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 27 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:55 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'xsl:template[ @name = concat( 'component-', @handle ) ]' of the attribute 'name' is not a valid QName.
+28 December 2011 18:50 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 485 element for-each
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:for-each : could not compile select expression '//usteam/xml/results/'
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element call-template
-Line: 145 - XSLTProcessor::importStylesheet(): The attribute 'name' is missing.
+28 December 2011 18:50 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): Invalid expression
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 485 element for-each
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:for-each : could not compile select expression '//usteam/xml/results/'
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+15 January 2012 15:47 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/importcsv/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
+15 January 2012 15:47 > UNKNOWN: GenericExceptionHandler 0 - Could not find extension at location /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/extensions/importcsv/extension.driver.php in file /Users/thesimcoes/Sites/ACCF/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.extensionmanager.php on line 617
+>>>>>>> 19d6e762652b3cd0afa7efb18477390a3067f405
+26 January 2012 16:23 > UNKNOWN: DatabaseExceptionHandler 0 - MySQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND d.value >= 1327564800
+				ORDER BY
+					d.value ASC
+				LIMIT
+					1' at line 6 in query "SELECT SQL_CACHE d.value
+				FROM
+					`sym_entries_data_131_dates` as d
+				WHERE
+					d.link_id = 
+					AND d.value >= 1327564800
+				ORDER BY
+					d.value ASC
+				LIMIT
+					1" in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.mysql.php on line 727
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 5 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 5 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:58 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element text
+Line: 145 - XSLTProcessor::importStylesheet(): misplaced text node: 'components/
+'
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:58 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 10:56 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element text
+Line: 145 - XSLTProcessor::importStylesheet(): misplaced text node: 'components/
+'
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/themes/atheycreek/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 11:59 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 12:00 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element template
-Line: 145 - XSLTProcessor::importStylesheet(): element template only allowed as child of stylesheet
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 215 element with-param
-Line: 145 - XSLTProcessor::importStylesheet(): element with-param is not allowed within that context
+07 March 2012 11:01 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/downloads.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 7 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/events.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 8 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/images.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 9 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/locations.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 10 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/members.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 11 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/text.xsl
+Line: 145 - XSLTProcessor::importStylesheet(): I/O warning : failed to load external entity "/Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl"
+Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 12 element include
+Line: 145 - XSLTProcessor::importStylesheet(): xsl:include : unable to load /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/themes/atheycreek/verses.xsl
 Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 15:47 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): error
-Line: 145 - XSLTProcessor::importStylesheet(): xsltCompileLocationPathPattern : Name expected
-Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 6 element template
-Line: 145 - XSLTProcessor::importStylesheet(): xsltCompilePattern : failed to compile '.'
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 15:48 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 145 - XSLTProcessor::importStylesheet(): compilation error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 214 element apply-templates
-Line: 145 - XSLTProcessor::importStylesheet(): The value 'concat( 'component-', 'events' )' of the attribute 'mode' is not a valid QName.
-Line: 158 - XSLTProcessor::transformToXml(): No stylesheet associated to this object in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 16:00 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 222 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-03 December 2011 16:02 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found.
-Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/master.xsl line 223 element call-template
-Line: 158 - XSLTProcessor::transformToXml(): The called template 'component-events' was not found. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
+<<<<<<< HEAD
+07 March 2012 11:57 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 62 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Variable 'xpath' has not been declared.
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 62 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+07 March 2012 11:57 > UNKNOWN: SymphonyErrorPageHandler 0 - Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 62 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Variable 'xpath' has not been declared.
+Line: 158 - XSLTProcessor::transformToXml(): xmlXPathCompiledEval: evaluation failed
+Line: 158 - XSLTProcessor::transformToXml(): runtime error: file /Users/kirkstrobeck/Athey%20Creek/_git/churchdeploy/www/httpdocs/workspace/utilities/components.xsl line 62 element for-each
+Line: 158 - XSLTProcessor::transformToXml(): Failed to evaluate the 'select' expression. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/symphony/lib/toolkit/class.frontendpage.php on line 272
+2012/03/07 12:45:52 > User Error: 256 - Error loading image /workspace/uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg. Check it exists and is readable. in file /Users/kirkstrobeck/Athey Creek/_git/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
+2012/03/07 12:45:52 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 5, background: 0, file: uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg, external: 0, raw input: 2/920/400/5/0/uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg
 =======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+2012/03/07 11:56:11 > User Error: 256 - Error loading image /workspace/uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg. Check it exists and is readable. in file /Users/jsimcoe/Sites/ACCF/churchdeploy/www/httpdocs/extensions/jit_image_manipulation/lib/image.php on line 252
+2012/03/07 11:56:11 > Notice: Image class param dump - mode: 2, width: 920, height: 400, position: 5, background: 0, file: uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg, external: 0, raw input: 2/920/400/5/0/uploads/images/leaderboards/nlb1920-mod-4f20bb1b6b5e1.jpg
+>>>>>>> a6da90f61a32f5ada3423d5d862497659658feb2
