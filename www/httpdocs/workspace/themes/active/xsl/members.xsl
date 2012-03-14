@@ -6,86 +6,85 @@
 <xsl:template name="component-members">
 	
 	<xsl:param name="position" />
-	
-	<xsl:if test="count( //members-entries-by-tag/entry )">
+	<xsl:param name="entries" />
+
+	<xsl:if test="count($entries)">
 		
-		<div>
+		<!-- <div> -->
 			
-			<xsl:call-template name="class-position">
+			<!-- <xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'member'" />
-			</xsl:call-template>
+			</xsl:call-template> -->
 			
 			<h3 class="header">Leader Contact</h3>
+			
+			<ul class="contacts nav nav-tabs nav-stacked">
+
+				<xsl:for-each select="//members-entries-by-tag/entry">
+					
+					<li>
 						
-			<xsl:for-each select="//members-entries-by-tag/entry">
-				
-				<div>
-					
-					<xsl:call-template name="class-rows" />
-					
-					<div class="image">
-					
-						<xsl:attribute name="style">
-							
-							<xsl:text>background-image: url('</xsl:text>
-							<xsl:value-of select="$root" />
-							
-							<xsl:choose>
-								<xsl:when test="$position = 'column-center'">
-									<xsl:text>/image/2/129/151/2/0</xsl:text>
-								</xsl:when>
-								<xsl:when test="$position = 'column-right'">
-									<xsl:text>/image/2/75/75/2/0</xsl:text>
-								</xsl:when>
-							</xsl:choose>
-							
-							<xsl:value-of select="photo/@path" />
-							<xsl:text>/</xsl:text>
-							<xsl:value-of select="photo/filename" />
-							<xsl:text>');</xsl:text>
-							
-						</xsl:attribute>
+						<!-- <xsl:call-template name="class-rows" /> -->
 						
-						<div class="caption">
-							<xsl:value-of select="first-name" disable-output-escaping="yes" />
-							<xsl:text> </xsl:text>
-							<xsl:value-of select="last-name" disable-output-escaping="yes" />
+						<div class="pull-left">
+						
+							<img>
+
+								<xsl:attribute name="src">
+									
+									<xsl:value-of select="$root" />
+									
+									<xsl:choose>
+										<xsl:when test="$position = 'column-center'">
+											<xsl:text>/image/2/129/151/2/0</xsl:text>
+										</xsl:when>
+										<xsl:when test="$position = 'column-right'">
+											<xsl:text>/image/2/44/44/2/0</xsl:text>
+										</xsl:when>
+									</xsl:choose>
+									
+									<xsl:value-of select="photo/@path" />
+									<xsl:text>/</xsl:text>
+									<xsl:value-of select="photo/filename" />
+									
+								</xsl:attribute>
+							
+							</img>
+
 						</div>
 						
-					</div>
+						<div>
+							
+							<h4>
+								<xsl:text>&#160;&#160;</xsl:text>
+								<xsl:value-of select="first-name" disable-output-escaping="yes" />
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="last-name" disable-output-escaping="yes" />
+							</h4>
+							
+							<p>
+								<xsl:text>&#160;&#160;</xsl:text>
+								<i class="icon-envelope"></i>
+								
+								<xsl:text>&#160;&#160;</xsl:text>
+								<a href="maito:{email}">
+									<xsl:value-of select="email" />
+								</a>
+							</p>
+							
+						</div>
+						
+						<xsl:if test="position() &lt; last()">
+							<hr />
+						</xsl:if>
+
+					</li>
 					
-					<div class="info">
-						
-						<h3 class="name">
-							<xsl:value-of select="first-name" disable-output-escaping="yes" />
-							<xsl:text> </xsl:text>
-							<xsl:value-of select="last-name" disable-output-escaping="yes" />
-						</h3>
-						
-						<h4>
-							<xsl:value-of select="job-title" disable-output-escaping="yes" />
-						</h4>
-						
-						<xsl:choose>
-							<xsl:when test="$position = 'column-center'">
-								<xsl:value-of select="about" disable-output-escaping="yes" />
-							</xsl:when>
-							<xsl:when test="$position = 'column-right'">
-								<p class="email">
-									<a href="mailto:{email}">
-										<xsl:value-of select="email" disable-output-escaping="yes" />
-									</a>
-								</p>
-							</xsl:when>
-						</xsl:choose>
-						
-					</div>
-					
-				</div>
-				
-			</xsl:for-each>
+				</xsl:for-each>
 			
-		</div>
+			</ul>
+
+		<!-- </div> -->
 	
 	</xsl:if>
 	

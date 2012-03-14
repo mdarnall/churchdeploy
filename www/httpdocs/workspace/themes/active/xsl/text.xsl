@@ -6,28 +6,29 @@
 <xsl:template name="component-text">
 	
 	<xsl:param name="position" />
+	<xsl:param name="entries" />
+
+	<xsl:if test="count($entries)">
 	
-	<xsl:if test="count( //text-entries-by-tag/entry )">
-	
-		<div>
+		<!-- <div>
 			
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'text'" />
-			</xsl:call-template>
+			</xsl:call-template> -->
 			
-			<xsl:for-each select="//text-entries-by-tag/entry">
+			<xsl:for-each select="$entries">
 				
-				<div>
+				<!-- <div> -->
 					
-					<xsl:call-template name="class-rows" />
+					<!-- <xsl:call-template name="class-rows" /> -->
 			
-					<xsl:value-of select="content" disable-output-escaping="yes" />
+					<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 				
-				</div>
+				<!-- </div> -->
 			
 			</xsl:for-each>
 			
-		</div>
+		<!-- </div> -->
 	
 	</xsl:if>
 	

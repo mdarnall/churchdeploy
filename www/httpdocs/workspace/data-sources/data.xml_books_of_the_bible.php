@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcestatic_xml_books_of_the_bible extends Datasource{
+	Class datasourcexml_books_of_the_bible extends Datasource{
 
-		public $dsParamROOTELEMENT = 'static-xml-books-of-the-bible';
+		public $dsParamROOTELEMENT = 'xml-books-of-the-bible';
 
 		
 
@@ -17,13 +17,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Static XML: Books of the Bible',
+				'name' => 'XML: Books of the Bible',
 				'author' => array(
-					'name' => 'Admin Admin',
-					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'name' => 'Kirk Strobeck',
+					'website' => 'http://72.10.33.203',
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T00:30:02+00:00'
+				'release-date' => '2012-03-14T03:49:19+00:00'
 			);
 		}
 

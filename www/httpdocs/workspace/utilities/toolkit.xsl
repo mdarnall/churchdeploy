@@ -23,6 +23,37 @@ Global date formatting
 
 <!-- 
 
+Count items to check for pluralization
+
+USAGE:
+    
+    <xsl:call-template name="pluralize">
+        <xsl:with-param name="singular" select="'Location'"/>
+        <xsl:with-param name="plural" select="'Locations'"/>
+        <xsl:with-param name="xpath" select="//locations-entries-by-tag/entry"/>
+    </xsl:call-template>
+
+-->
+<xsl:template name="pluralize">
+    
+    <xsl:param name="singular"/>
+    <xsl:param name="plural"/>
+    <xsl:param name="xpath"/>
+
+    <xsl:choose>
+        <xsl:when test="count($xpath) &gt; 1">
+            <xsl:value-of select="$plural" disable-output-escaping="yes" />
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="$singular" disable-output-escaping="yes" />
+        </xsl:otherwise>
+    </xsl:choose>
+
+</xsl:template>
+
+
+<!-- 
+
 How to start a URL when using multi-lingual
 
 -->
@@ -47,7 +78,9 @@ Removes HTML tags
 
 -->
 <xsl:template name="remove-html">
+    
     <xsl:param name="text"/>
+    
     <xsl:choose>
         <xsl:when test="contains($text, '&lt;')">
             <xsl:value-of select="normalize-space(substring-before($text, '&lt;'))"/>
@@ -60,6 +93,7 @@ Removes HTML tags
             <xsl:value-of select="normalize-space($text)"/>
         </xsl:otherwise>
     </xsl:choose>
+
 </xsl:template>
 
 
@@ -109,6 +143,9 @@ Search and replace
         </xsl:otherwise>
     </xsl:choose>
 </xsl:template>
+
+
+
 
 
 

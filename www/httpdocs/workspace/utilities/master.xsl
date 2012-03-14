@@ -84,7 +84,7 @@
 				<xsl:text> </xsl:text>
 
 				<xsl:text>layout-</xsl:text>
-				<xsl:value-of select="//tags-entries-by-tag-layouts/entry/name/@handle" />
+				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
 
 			</xsl:attribute>
 
@@ -212,73 +212,48 @@
 
 						<div class="span10">
 							<h1>
-								<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" />
+								<xsl:value-of select="x//tags-all-entries/entry[@id = $pt1]/tag" />
 							</h1>
 						</div>
 
 					</div>
 
-					<div class="subnav">
+					<xsl:if test="
+						count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header)] ) or
+						count( //tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header)] )
+					">
 
-						<ul class="nav nav-pills">
-						
-							<xsl:if test="
-								count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id ] ) or
-								count( //tags-all-entries/entry[ parent/item/@id = $pt1 ] )
-							">
+						<div class="subnav">
+
+							<ul class="nav nav-pills">
+							
 								<xsl:call-template name="subnav">
 									<xsl:with-param name="parents" select="$parents" />
 								</xsl:call-template>
-							</xsl:if>
-						
-						</ul>
+							
+							</ul>
 
-					</div>
+						</div>
+
+					</xsl:if>
 
 				</header>
 
 				<xsl:choose>
+					<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
 
-					<xsl:when test="count(//tags-entries-by-tag-layouts/entry)">
-
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-full-width" />
+						<xsl:call-template name="call-components">
+							<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
 						</xsl:call-template>
-
-						<div class="row">
-
-							<xsl:call-template name="component">
-								<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-center" />
-							</xsl:call-template>
-
-							<xsl:call-template name="component">
-								<xsl:with-param name="xpath" select="//tags-entries-by-tag-layouts/entry/column-right" />
-							</xsl:call-template>
-
-						</div>
 
 					</xsl:when>
-
 					<xsl:otherwise>
 
-						<xsl:call-template name="component">
-							<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-full-width" />
+						<xsl:call-template name="call-components">
+							<xsl:with-param name="xpath" select="//layouts-default/entry"/>
 						</xsl:call-template>
 
-						<div class="row">
-
-							<xsl:call-template name="component">
-								<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-center" />
-							</xsl:call-template>
-
-							<xsl:call-template name="component">
-								<xsl:with-param name="xpath" select="//layouts-default-entry/entry/column-right" />
-							</xsl:call-template>
-
-						</div>
-
 					</xsl:otherwise>
-
 				</xsl:choose>
 
 				<xsl:if test="$pt2 = 'teachings'">
@@ -330,8 +305,6 @@
 					</div>
 					
 				</footer>
-
-				
 
 			</div>
 
@@ -389,6 +362,31 @@
 	</html>
 
 </xsl:template>
+
+
+
+
+<xsl:template name="call-components">
+	
+	<xsl:param name="xpath" />
+
+	<xsl:call-template name="component">
+		<xsl:with-param name="xpath" select="$xpath/column-full-width" />
+	</xsl:call-template>
+
+	<div class="row">
+
+		<xsl:call-template name="component">
+			<xsl:with-param name="xpath" select="$xpath/column-center" />
+		</xsl:call-template>
+
+		<xsl:call-template name="component">
+			<xsl:with-param name="xpath" select="$xpath/column-right" />
+		</xsl:call-template>
+
+	</div>
+
+</xsl:template>		
 
 
 
@@ -498,7 +496,7 @@
 				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
 
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) ]">
+			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) and not(hide-from-header) ]">
 				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
 

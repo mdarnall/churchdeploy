@@ -10,7 +10,7 @@
 		public $dsParamLIMIT = '{$pt4}';
 		public $dsParamSTARTPAGE = '{$pt3}';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'msg-date';
+		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -18,22 +18,12 @@
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'system:pagination',
-				'msg-id',
-				'msg-number',
+				'date',
 				'title',
 				'title: raw',
-				'msg-title',
-				'date',
-				'msg-date',
-				'msg-chapter',
-				'msg-type',
 				'day',
-				'dayname',
 				'book',
-				'bookname',
-				'description',
-				'msg-description: formatted',
-				'status'
+				'description'
 		);
 
 
@@ -47,10 +37,10 @@
 				'name' => 'Teachings: All entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-12T15:54:22+00:00'
+				'release-date' => '2012-03-14T03:40:19+00:00'
 			);
 		}
 

@@ -2,50 +2,53 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcetags_entries_by_tag_layouts extends Datasource{
+	Class datasourcelocations_ds_events_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'tags-entries-by-tag-layouts';
+		public $dsParamROOTELEMENT = 'locations-ds-events-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$ds-tags-entries-by-tag';
+		public $dsParamREQUIREDPARAM = '$ds-events-entries-by-tag';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'id' => '{$ds-tags-entries-by-tag}',
+				'id' => '{$ds-events-entries-by-tag}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
-				'column-full-width: label: raw',
-				'column-center: label: raw',
-				'column-right: label: raw'
+				'name-formal: raw',
+				'name-casual: raw',
+				'description',
+				'address',
+				'city',
+				'state',
+				'zip'
 		);
 
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array('$ds-tags-entries-by-tag');
+			$this->_dependencies = array('$ds-events-entries-by-tag');
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Tags: Entries by tag: Layouts',
+				'name' => 'Locations: DS events entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T18:30:09+00:00'
+				'release-date' => '2012-03-14T03:46:52+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '11';
+			return '5';
 		}
 
 		public function allowEditorToParse(){

@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedynamic_xml_apibibliacom extends Datasource{
+	Class datasourcexml_apibibliacom extends Datasource{
 
-		public $dsParamROOTELEMENT = 'dynamic-xml-apibibliacom';
+		public $dsParamROOTELEMENT = 'xml-apibibliacom';
 		public $dsParamURL = 'http://api.biblia.com/v1/bible/content/kjv.xml?key=75a4b16582635a69f1194f670abfa9f0&passage={$ds-verses-entries-by-tag:encoded}';
 		public $dsParamXPATH = '/response/text';
 		public $dsParamCACHE = '999999';
@@ -21,13 +21,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Dynamic XML: api.biblia.com',
+				'name' => 'XML: api.biblia.com',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T17:49:05+00:00'
+				'release-date' => '2012-03-14T03:49:32+00:00'
 			);
 		}
 
