@@ -2,53 +2,50 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceevents_entries_by_tag_locations extends Datasource{
+	Class datasourcelayouts_ds_tags_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'events-entries-by-tag-locations';
+		public $dsParamROOTELEMENT = 'layouts-ds-tags-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$ds-events-entries-by-tag';
+		public $dsParamREQUIREDPARAM = '$ds-tags-entries-by-tag';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'id' => '{$ds-events-entries-by-tag}',
+				'id' => '{$ds-tags-entries-by-tag}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name-formal: raw',
-				'name-casual: raw',
-				'description',
-				'address',
-				'city',
-				'state',
-				'zip'
+				'name: raw',
+				'column-full-width: label: raw',
+				'column-center: label: raw',
+				'column-right: label: raw'
 		);
 
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
-			$this->_dependencies = array('$ds-events-entries-by-tag');
+			$this->_dependencies = array('$ds-tags-entries-by-tag');
 		}
 
 		public function about(){
 			return array(
-				'name' => 'Events: Entries by tag: Locations',
+				'name' => 'Layouts: DS tags entries by tag',
 				'author' => array(
-					'name' => 'Admin Admin',
-					'website' => 'http://churchdeploy',
-					'email' => 'noreply@churchdeploy.com'),
+					'name' => 'Kirk Strobeck',
+					'website' => 'http://72.10.33.203',
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-11-29T03:11:27+00:00'
+				'release-date' => '2012-03-14T03:48:04+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '5';
+			return '11';
 		}
 
 		public function allowEditorToParse(){

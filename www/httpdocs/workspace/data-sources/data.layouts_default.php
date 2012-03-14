@@ -2,17 +2,29 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcedynamic_xml_ustreamcom extends Datasource{
+	Class datasourcelayouts_default extends Datasource{
 
-		public $dsParamROOTELEMENT = 'dynamic-xml-ustreamcom';
-		public $dsParamURL = 'http://api.ustream.tv/xml/channel/atheycreek/getInfo/?key=4E23272206B10532FEC6335E3D79977E';
-		public $dsParamXPATH = '/';
-		public $dsParamCACHE = '999999';
-		public $dsParamTIMEOUT = '6';
+		public $dsParamROOTELEMENT = 'layouts-default';
+		public $dsParamORDER = 'desc';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
+		public $dsParamSTARTPAGE = '1';
+		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamSORT = 'system:id';
+		public $dsParamHTMLENCODE = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'73' => 'Default',
+		);
 
-		
+		public $dsParamINCLUDEDELEMENTS = array(
+				'name: raw',
+				'column-full-width: label: raw',
+				'column-center: label: raw',
+				'column-right: label: raw'
+		);
+
 
 		public function __construct(&$parent, $env=NULL, $process_params=true){
 			parent::__construct($parent, $env, $process_params);
@@ -21,18 +33,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Dynamic XML: ustream.com',
+				'name' => 'Layouts: Default',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T17:49:18+00:00'
+				'release-date' => '2012-03-14T03:50:00+00:00'
 			);
 		}
 
 		public function getSource(){
-			return 'dynamic_xml';
+			return '11';
 		}
 
 		public function allowEditorToParse(){
@@ -43,7 +55,7 @@
 			$result = new XMLElement($this->dsParamROOTELEMENT);
 
 			try{
-				include(TOOLKIT . '/data-sources/datasource.dynamic_xml.php');
+				include(TOOLKIT . '/data-sources/datasource.section.php');
 			}
 			catch(FrontendPageNotFoundException $e){
 				// Work around. This ensures the 404 page is displayed and

@@ -6,8 +6,9 @@
 <xsl:template name="component-images">
 	
 	<xsl:param name="position" />
-	
-	<xsl:if test="count( //images-entries-by-tag/entry )">
+	<xsl:param name="entries" />
+
+	<xsl:if test="count($entries)">
 	
 		<div>
 			
@@ -17,15 +18,13 @@
 			
 			<xsl:for-each select="//images-entries-by-tag/entry">
 									
-				<div>
+				<img>
 					
 					<xsl:call-template name="class-rows">
 						<xsl:with-param name="class" select="' image'" />
 					</xsl:call-template>
 										
-					<xsl:attribute name="style">
-						
-						<xsl:text>background-image: url('</xsl:text>
+					<xsl:attribute name="src">
 						
 						<xsl:value-of select="$root" />
 						
@@ -63,26 +62,32 @@
 						
 						<xsl:value-of select="image/filename" />
 						
-						<xsl:text>'); height: </xsl:text>
-						
-						<xsl:if test="string-length(height)">
-							<xsl:value-of select="height" />
-						</xsl:if>
-						
-						<xsl:text>px</xsl:text>
-						
 					</xsl:attribute>
-					
-					<div class="caption">
-						<xsl:value-of select="caption" disable-output-escaping="yes" />
-					</div>
+
+					<xsl:if test="string-length(height)">
+
+						<xsl:attribute name="style">
+
+							<xsl:text>height: </xsl:text>
+							<xsl:value-of select="height" />
+							<xsl:text>px</xsl:text>
+
+						</xsl:attribute>
+						
+					</xsl:if>
 				
-				</div>
+				</img>
+				
+				<!-- <div class="caption">
+					<xsl:value-of select="caption" disable-output-escaping="yes" />
+				</div> -->
 				
 			</xsl:for-each>
 		
+			<hr class="soften" />
+
 		</div>
-	
+		
 	</xsl:if>
 	
 </xsl:template>
