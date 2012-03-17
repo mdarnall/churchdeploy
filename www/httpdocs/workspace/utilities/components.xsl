@@ -22,11 +22,12 @@
 		<xsl:choose>
 			<xsl:when test="name($xpath) = 'column-full-width'">
 
-				<!-- No container defaults for full width -->
-				<xsl:call-template name="component-populate">
-					<xsl:with-param name="xpath" select="$xpath"/>
-				</xsl:call-template>
-
+				<div class="well">
+					<xsl:call-template name="component-populate">
+						<xsl:with-param name="xpath" select="$xpath"/>
+					</xsl:call-template>
+				</div>
+				
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-center'">
 				

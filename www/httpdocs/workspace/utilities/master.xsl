@@ -126,7 +126,7 @@
 										<xsl:attribute name="class">
 											<xsl:text>modalLiveLink</xsl:text>
 											<xsl:choose>
-												<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
+												<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
 													<xsl:text> online</xsl:text>
 												</xsl:when>
 												<xsl:otherwise>
@@ -140,7 +140,7 @@
 										<xsl:text>&#160;&#160;Live</xsl:text>
 
 										<xsl:choose>
-											<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
+											<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
 												<span class="status">&#160;(online)</span>
 											</xsl:when>
 											<xsl:otherwise>
@@ -175,7 +175,7 @@
 							<xsl:text> — Live broadcast</xsl:text>
 							
 							<xsl:choose>
-								<xsl:when test="//dynamic-xml-ustreamcom/xml/results/status = 'live'">
+								<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
 									<span class="status">&#160;(online)</span>
 								</xsl:when>
 								<xsl:otherwise>
@@ -187,7 +187,7 @@
 					</div>
 					<div class="modal-body">
 
-						<xsl:for-each select="//dynamic-xml-ustreamcom/xml/results">
+						<xsl:for-each select="//xml-ustreamcom/xml/results">
 
 							<div class="ustream-embed"></div>
 
@@ -212,15 +212,15 @@
 
 						<div class="span10">
 							<h1>
-								<xsl:value-of select="x//tags-all-entries/entry[@id = $pt1]/tag" />
+								<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" />
 							</h1>
 						</div>
 
 					</div>
 
 					<xsl:if test="
-						count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header)] ) or
-						count( //tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header)] )
+						count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header = 'Yes')] ) or
+						count( //tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header = 'Yes')] )
 					">
 
 						<div class="subnav">
@@ -238,6 +238,18 @@
 					</xsl:if>
 
 				</header>
+
+				<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
+					
+					<div class="alert alert-success alertLive hidden">
+						<a class="close" data-dismiss="alert">×</a>
+						<strong>We're broadcasting live right now!</strong>
+						<a class="btn btn-success modalLiveLink">
+							<xsl:text> Watch the broadcast »</xsl:text>		
+						</a>
+					</div>
+
+				</xsl:if>
 
 				<xsl:choose>
 					<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
@@ -312,6 +324,7 @@
 			<script type="text/javascript" src="{$workspace}/js/jquery-ui.custom.min.js"></script>
 			<script type="text/javascript" src="{$workspace}/js/jquery.color.js"></script>
 			<script type="text/javascript" src="{$workspace}/js/plugins.js"></script>
+			<script type="text/javascript" src="{$workspace}/js/jquery.cookie.js"></script>
 
 			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-alert.js"></script>
 			<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-button.js"></script>
@@ -418,7 +431,7 @@
 
 <xsl:template name="topnav">
 
-	<xsl:for-each select="//tags-all-entries/entry[not(parent/item) and not(hide-from-header)]">
+	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 
 		<xsl:variable name="entry-id" select="@id" />
 
@@ -448,7 +461,7 @@
 
 <xsl:template name="nav-footer">
 
-	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer) ]">
+	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
 
 		<xsl:variable name="entry-id" select="@id" />
 
@@ -485,18 +498,18 @@
 	<xsl:choose>
 		<xsl:when test="$instance = 'footer'">
 
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents and not( @id = 43 ) ]">
+			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents ]">
 				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
 
 		</xsl:when>
 		<xsl:otherwise>
 
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not( @id = 43 ) ]">
+			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id ]">
 				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
 
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not( @id = 43 ) and not(hide-from-header) ]">
+			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header = 'Yes') ]">
 				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
 

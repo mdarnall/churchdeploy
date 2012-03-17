@@ -62,6 +62,20 @@ $(document).ready(
 				$('.modalLive .modal-body .ustream-embed').html('#');
 			}
 		);
+
+		alertLiveCookie = $.cookie('alertLive');
+
+		if(alertLiveCookie != 'hidden')
+		{
+			$('.alertLive').removeClass('hidden');
+
+			$('.alertLive .close').click(
+				function()
+				{
+					$.cookie('alertLive', 'hidden', { expires: 1, path: '/' });
+				}
+			);
+		}
 	}
 );
 

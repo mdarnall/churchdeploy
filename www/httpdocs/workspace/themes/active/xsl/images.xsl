@@ -10,12 +10,12 @@
 
 	<xsl:if test="count($entries)">
 	
-		<div>
+		<!-- <div>
 			
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'images'" />
 			</xsl:call-template>
-			
+			 -->
 			<xsl:for-each select="//images-entries-by-tag/entry">
 									
 				<img>
@@ -28,14 +28,14 @@
 						
 						<xsl:value-of select="$root" />
 						
-						<xsl:text>/image/2/920/</xsl:text>
+						<xsl:text>/image/2/1170/</xsl:text>
 						
 						<xsl:choose>
 							<xsl:when test="string-length(height)">
 								<xsl:value-of select="height" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:text>400</xsl:text>
+								<xsl:text>360</xsl:text>
 							</xsl:otherwise>
 						</xsl:choose>
 						
@@ -86,7 +86,7 @@
 		
 			<hr class="soften" />
 
-		</div>
+		<!-- </div> -->
 		
 	</xsl:if>
 	
