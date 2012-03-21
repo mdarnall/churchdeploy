@@ -14,9 +14,56 @@
 }
 
 
+@base: 10px;
 
 // Styles
 
 .modalLive {
 	width: 630px !important;
 }
+
+// Components
+
+.component-events {
+
+	.entry {
+		padding: 20px;
+
+		&.even {
+			background-color: #eee;
+		}
+
+		.header {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.component-locations {
+
+	.google-map {
+		height: 300px;
+		margin: @base * 3 0;
+	}
+}
+
+// Columns
+
+.column-full-width {
+
+}
+
+.column-center {
+
+}
+
+.column-right {
+
+	.component-locations {
+
+		.google-map {
+			
+		}
+	}
+}
+

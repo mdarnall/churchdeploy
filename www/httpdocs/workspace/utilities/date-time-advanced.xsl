@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" extension-element-prefixes="date">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" 
+extension-element-prefixes="date">
 <!--
 	
 	Description:
 	
 	This is a date formatting utility. The named template "format-date" takes 2 parameters:
 	
-	1. date - [required] takes an ISO date (2005-12-01)
+	1. date - [required] takes an ISO date (2005-12-01T13:45:00)
 	2. format - [optional] takes a format string.
-	
-	
-	
 	
 	
 	Date formats:
@@ -548,11 +546,11 @@
 		<xsl:param name="date" />
 		<xsl:param name="case" select="'lower'" />
 		
-		<xsl:variable name="hour" select="number(substring-before($date/@time, ':'))" />
+		<xsl:variable name="hour" select="number(substring-before(substring-after($date, 'T'), ':'))" />
 		<xsl:variable name="suffix">
 			<xsl:choose>
-				<xsl:when test="$hour &lt;= 11">a.m.</xsl:when>
-				<xsl:otherwise>p.m.</xsl:otherwise>
+				<xsl:when test="$hour &lt; 12">am</xsl:when>
+				<xsl:otherwise>pm</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		
@@ -570,7 +568,7 @@
 		<xsl:param name="date" />
 		<xsl:param name="prefix" select="''" />
 		
-		<xsl:variable name="second-raw" select="number(substring-after(substring-after($date/@time, ':'), ':'))" />
+		<xsl:variable name="second-raw" select="number(substring-after(substring-after(substring-after($date, 'T'), ':'), ':'))" />
 		<xsl:variable name="second">
 			<xsl:choose>
 				<xsl:when test="$second-raw">
@@ -589,11 +587,11 @@
 		
 		<xsl:variable name="minute-raw">
 			<xsl:choose>
-				<xsl:when test="substring-before(substring-after($date/@time, ':'), ':')">
-					<xsl:value-of select="substring-before(substring-after($date/@time, ':'), ':')" />
+				<xsl:when test="substring-before(substring-after(substring-after($date, 'T'), ':'), ':')">
+					<xsl:value-of select="substring-before(substring-after(substring-after($date, 'T'), ':'), ':')" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="substring-after($date/@time, ':')" />
+					<xsl:value-of select="substring-after(substring-after($date, 'T'), ':')" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -614,14 +612,17 @@
 		<xsl:param name="prefix" select="''" />
 		<xsl:param name="mode" />
 		
-		<xsl:variable name="hour-raw" select="number(substring-before($date/@time, ':'))" />
+		<xsl:variable name="hour-raw" select="number(substring-before(substring-after($date, 'T'), ':'))" />
 		<xsl:variable name="hour">
 			<xsl:choose>
 				<xsl:when test="$mode = 12">
-					<xsl:choose>
-						<xsl:when test="$hour-raw mod 12 = 0">12</xsl:when>
-						<xsl:otherwise><xsl:value-of select="$hour-raw mod 12" /></xsl:otherwise>
-					</xsl:choose>
+                    <xsl:choose>
+                        <!-- don't output noon as 0 -->
+                        <xsl:when test="$hour-raw = 12 or $hour-raw = 00">12</xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$hour-raw mod 12" />
+                        </xsl:otherwise>
+                    </xsl:choose>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="$hour-raw" />

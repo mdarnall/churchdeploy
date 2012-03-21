@@ -10,25 +10,25 @@
 
 	<xsl:if test="count($entries)">
 	
-		<!-- <div>
+		<div>
 			
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'text'" />
-			</xsl:call-template> -->
+			</xsl:call-template>
 			
 			<xsl:for-each select="$entries">
 				
-				<!-- <div> -->
+				<div>
 					
-					<!-- <xsl:call-template name="class-rows" /> -->
+					<xsl:call-template name="class-rows" />
 			
 					<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 				
-				<!-- </div> -->
+				</div>
 			
 			</xsl:for-each>
 			
-		<!-- </div> -->
+		</div>
 	
 	</xsl:if>
 	

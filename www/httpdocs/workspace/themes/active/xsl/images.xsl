@@ -83,8 +83,6 @@
 				</div> -->
 				
 			</xsl:for-each>
-		
-			<hr class="soften" />
 
 		<!-- </div> -->
 		

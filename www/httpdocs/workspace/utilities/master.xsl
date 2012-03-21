@@ -21,6 +21,7 @@
     
 
 <xsl:include href="date-time-advanced.xsl" />
+<xsl:include href="date-utilities.xsl" />
 <xsl:include href="toolkit.xsl" />
 <xsl:include href="classes.xsl" />
 <xsl:include href="components.xsl" />
@@ -30,9 +31,8 @@
 
 
 <xsl:variable name="pt1" select="'43'" />
+
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
-
-
 
 <xsl:template match="/">
 
@@ -87,8 +87,6 @@
 				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
 
 			</xsl:attribute>
-
-
 
 			<div class="navbar navbar-fixed-top">
 
@@ -378,7 +376,6 @@
 
 
 
-
 <xsl:template name="call-components">
 	
 	<xsl:param name="xpath" />
@@ -459,6 +456,7 @@
 </xsl:template>
 
 
+
 <xsl:template name="nav-footer">
 
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
@@ -488,6 +486,7 @@
 	</xsl:for-each>
 
 </xsl:template>
+
 
 
 <xsl:template name="subnav">
@@ -546,7 +545,6 @@
 
 
 </xsl:stylesheet>
-
 
 <!--
 			<div class="container">

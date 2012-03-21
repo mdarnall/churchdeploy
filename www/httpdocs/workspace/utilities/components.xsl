@@ -22,27 +22,25 @@
 		<xsl:choose>
 			<xsl:when test="name($xpath) = 'column-full-width'">
 
-				<div class="well">
+				<div class="column-full-width">
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath"/>
 					</xsl:call-template>
 				</div>
-				
+
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-center'">
-				
-				<section id="main-content" class="span8">
-					<div class="page-header">
-						<xsl:call-template name="component-populate">
-							<xsl:with-param name="xpath" select="$xpath"/>
-						</xsl:call-template>
-					</div>
+
+				<section id="main-content" class="span8 column-center">
+					<xsl:call-template name="component-populate">
+						<xsl:with-param name="xpath" select="$xpath"/>
+					</xsl:call-template>
 				</section>
 
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-right'">
 				
-				<section id="sidebar" class="span4">
+				<section id="sidebar" class="span4 column-right">
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath"/>
 					</xsl:call-template>
@@ -71,11 +69,44 @@
 		</xsl:if>
 	
 		<xsl:if  test=". = 'events'">
-			<xsl:call-template name="component-events">
-				<xsl:with-param name="position" select="name($xpath)" />
-				<xsl:with-param name="entries" select="//events-entries-by-tag/entry" />
 
-			</xsl:call-template>
+			<xsl:choose>
+
+				<!-- Single ID -->
+				<xsl:when test="count(//events-entry-by-id/entry)"> 
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-entry-by-id/entry" />
+						<xsl:with-param name="single" select="true()" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<!-- Past entries -->
+				<xsl:when test="count(//events-all-entries-past-filtered/entry) and $pt5 = 'past'">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-all-entries-past-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<!-- Current entries -->
+				<xsl:when test="count(//events-all-entries-filtered/entry)">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-all-entries-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<!-- Tagged entries -->
+				<xsl:otherwise>
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-entries-by-tag/entry" />
+					</xsl:call-template>
+				</xsl:otherwise>
+
+			</xsl:choose>
+
 		</xsl:if>
 	
 		<xsl:if test=". = 'images'">
@@ -87,10 +118,26 @@
 		</xsl:if>
 		
 		<xsl:if  test=". = 'locations'">
-			<xsl:call-template name="component-locations">
-				<xsl:with-param name="position" select="name($xpath)" />
-				<xsl:with-param name="entries" select="//locations-entries-by-tag/entry" />
-			</xsl:call-template>
+
+			<xsl:choose>
+
+				<xsl:when test="count(//events-entry-by-id/entry)"> <!-- if there are events, show associated locations -->
+					<xsl:call-template name="component-locations">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-entry-by-id/entry/location/item" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<xsl:otherwise>
+					<xsl:call-template name="component-locations">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//locations-entries-by-tag/entry" />
+					</xsl:call-template>
+				</xsl:otherwise>
+
+			</xsl:choose>
+
+			
 		</xsl:if>
 		
 		<xsl:if  test=". = 'members'">
@@ -99,7 +146,27 @@
 				<xsl:with-param name="entries" select="//members-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
-		
+
+		<xsl:if  test=". = 'teachings'">
+			<xsl:choose>
+
+				<xsl:when test="count(//events-all-entries-filtered/entry)">
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-all-entries-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<xsl:otherwise>
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-entries-by-tag/entry" />
+					</xsl:call-template>
+				</xsl:otherwise>
+
+			</xsl:choose>
+		</xsl:if>
+
 		<xsl:if test=". = 'text'">
 			<xsl:call-template name="component-text">
 				<xsl:with-param name="position" select="name($xpath)" />
