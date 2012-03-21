@@ -5,8 +5,8 @@
 
 <xsl:template name="component-locations">
 	
-	<xsl:param name="position" />
 	<xsl:param name="entries" />
+	<xsl:param name="position" />
 
 	<xsl:if test="count($entries)">
 
@@ -18,13 +18,13 @@
 			
 			<h3 class="header">
 				<xsl:call-template name="pluralize">
-					<xsl:with-param name="singular" select="'Location'"/>
-					<xsl:with-param name="plural" select="'Locations'"/>
-					<xsl:with-param name="xpath" select="$entries"/>
+					<xsl:with-param name="singular" select="'Location'"  />
+					<xsl:with-param name="plural"   select="'Locations'" />
+					<xsl:with-param name="xpath"    select="$entries"    />
 				</xsl:call-template>
 			</h3>
 			
-			<xsl:for-each select="//locations-entries-by-tag/entry">
+			<xsl:for-each select="$entries">
 				
 				<div>
 					

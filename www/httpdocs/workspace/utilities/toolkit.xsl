@@ -21,6 +21,33 @@ Global date formatting
 
 
 
+<xsl:template name="cd-pagination">
+    
+    <xsl:param name="pagination"     select="$pagination" />
+    <xsl:param name="pagination-url" select="$pagination-url" />
+
+    <xsl:call-template name="pagination">
+
+        <xsl:with-param name="pagination" select="$pagination" />
+        <xsl:with-param name="pagination-url" select="$pagination-url" />
+        <xsl:with-param name="show-range" select="5" />
+        
+        <xsl:with-param name="label-previous" select="'← Previous'" />
+        <xsl:with-param name="label-next" select="'Next →'" />
+        
+        <xsl:with-param name="class-pagination" select="'pagination'" />
+        <xsl:with-param name="class-page" select="''" />
+        <xsl:with-param name="class-next" select="'next'" />
+        <xsl:with-param name="class-previous" select="'prev'" />
+        <xsl:with-param name="class-selected" select="'active'" />
+        <xsl:with-param name="class-disabled" select="'disabled'" />
+        <xsl:with-param name="class-ellipsis" select="'disabled'" />
+        
+    </xsl:call-template>
+
+</xsl:template>
+
+
 <!-- 
 
 Count items to check for pluralization

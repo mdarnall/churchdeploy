@@ -73,10 +73,6 @@
 							</p>
 							
 						</div>
-						
-						<xsl:if test="position() &lt; last()">
-							<hr />
-						</xsl:if>
 
 					</li>
 					

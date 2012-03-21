@@ -15,7 +15,8 @@
 
 	-->
 	<xsl:param name="component" />
-	
+	<xsl:param name="classes" />
+
 	<xsl:attribute name="class">
 		
 		<xsl:text>component </xsl:text>
@@ -23,6 +24,11 @@
 		<xsl:text>component-</xsl:text>
 		<xsl:value-of select="$component" disable-output-escaping="yes" />
 		
+		<xsl:if test="string-length($classes)">
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="$classes" />
+		</xsl:if>
+
 	</xsl:attribute>
 	
 </xsl:template>
