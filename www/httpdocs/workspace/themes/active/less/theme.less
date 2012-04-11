@@ -1,10 +1,11 @@
-@import '../../../bootstrap/lib/mixins.less';
+@import '../../../bootstrap/less/mixins.less';
 
 // Bootstrap Cleanup
 
 body {
 	background-image: none;
 	background: #f3f3f0;
+	font-family: "proxima-nova", "Gill Sans", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -16,17 +17,108 @@ body {
 	display: none;
 }
 
-.masthead {
+.mast {
 	background: #8EBDCC;
+	padding: 40px 0;
+	margin-top: -50px;
 }
 
-.wide-wrap {
+.mast .row {
+	margin: 0 auto;
+}
+
+/* NAVBAR OVERRIDES */
+
+.navbar-inner {
+	background-image: none;
+	background-color: #81AEBA;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.navbar-inner ul.nav li a {
+	color: #fff;
+}
+
+.navbar-inner ul.nav li a:hover {
+	color: #eee;
+}
+
+.navbar-inner ul.nav li a .status {
+	display: none;
+}
+
+
+
+.logo {
+	float: left;
+}
+
+.main.nav {
+	float: right;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin-top: 45px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.main.nav li a {
+	color: #ffffff;
+}
+
+.main.nav li a:hover {
+	background: none;
+	color: #ddd;
+}
+
+.main.nav li.active a {
+	background: none;
+	color: #CF1E18;
+}
+
+#main-content .description, p, blockquote {
+	font-family: "skolar", Georgia, Times, serif;
+}
+
+footer {
+	background: #D6D6D6;
+	position: absolute;
+	margin: 40px 0;
+	padding: 20px 0 60px 0;
+	left: 0;
+	width: 100%
+}
+
+footer a {
+	color: #333;
+}
+
+footer a.btn.btn-primary.give {
+	background-image: none;
+	background: none;
+	color: #CF1E18;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	margin-left: -10px;
+}
+
+.finish {
+	background: #f3f3f0;
 	position: absolute;
 	left: 0;
-	width: 100%;	
+	bottom: 0;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 15px 0 5px 0;
+	font-size: 18px;
 }
 
-.masthead .row {
-	margin: 0 auto;
+.finish .row {
+	text-indent: 30px;
 }
 
