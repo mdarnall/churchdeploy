@@ -6,6 +6,16 @@ body {
 	background-image: none;
 	background: #f3f3f0;
 	font-family: "proxima-nova", "Gill Sans", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #303030;
+}
+
+[data-icon]:before {
+	content: attr(data-icon);
+	font-family: 'Pictos Custom', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
 }
 
 .logo {
@@ -34,10 +44,13 @@ body {
 	background-color: #81AEBA;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	font-weight: bold;
+	.box-shadow(none);
 }
 
 .navbar-inner ul.nav li a {
 	color: #fff;
+	text-shadow: none;
 }
 
 .navbar-inner ul.nav li a:hover {
@@ -48,6 +61,9 @@ body {
 	display: none;
 }
 
+.masthead {
+	margin-bottom: 20px;
+}
 
 
 .logo {
@@ -57,10 +73,15 @@ body {
 .main.nav {
 	float: right;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 18px;
 	margin-top: 45px;
+	padding-right: 17px;
 	font-weight: 300;
 	letter-spacing: 1px;
+}
+
+.main.nav li {
+	margin-right: 10px;
 }
 
 .main.nav li a {
@@ -78,8 +99,32 @@ body {
 }
 
 #main-content .description, p, blockquote {
-	font-family: "skolar", Georgia, Times, serif;
+	font: normal normal normal 16px/1.6 "skolar", Georgia, Times, serif;
+	color: #303030;
 }
+
+#main h1 {
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	font-weight: 900;
+}
+
+#main h3 {
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#main h2 {
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
 
 footer {
 	background: #D6D6D6;
@@ -120,5 +165,49 @@ footer a.btn.btn-primary.give {
 
 .finish .row {
 	text-indent: 30px;
+}
+
+/* EVENTS COMPONENTS*/
+
+.component-events {
+	
+	.entry {
+		border: 10px solid #ddd;
+		margin: 20px 0;
+		background: #fff;
+
+		&.even { background: #fff; }
+
+		.header {
+			text-transform: none;
+			font-size: 26px;
+			margin-bottom: 0;
+			a {
+				text-transform: none;
+				text-decoration: none;
+				color: #303030;
+
+				&:hover { color: #555; }
+			}
+		}
+
+		.label {
+			line-height: 12px;
+			float: right;
+			padding: 3px 6px;
+			.border-radius(0);
+			text-shadow: none;
+		}
+
+		.help-block {
+			clear: both;
+			margin-bottom: 10px;
+			font-size: 16px;
+			.date {
+				margin-right: 20px;
+			}
+		}
+	}
+
 }
 

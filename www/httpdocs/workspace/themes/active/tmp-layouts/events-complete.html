@@ -17,6 +17,7 @@
     <meta name="msapplication-starturl" content="http://churchdeploy.com/" />
     <link rel="stylesheet" href="http://72.10.33.203/workspace/themes/active/css/common.css" />
     <link rel="stylesheet" href="../css/theme.css" />
+    <link href="//get.pictos.cc/fonts/1414/1" rel="stylesheet" type="text/css">
   </head>
   <body data-spy="scroll" data-target=".subnav" data-offset="50" class="page-home layout-events">
     <div class="navbar navbar-fixed-top">
@@ -38,10 +39,10 @@
             </ul>
             <ul class="nav pull-right">
               <li>
-                <a href="#"><i class="icon-time icon-white"></i>  6:30am</a>
+                <a href="#" data-icon="t"> 6:30am</a>
               </li>
               <li>
-                <a href="#" class="modalLiveLink offline"><i class="icon-facetime-video icon-white"></i>  Live<span class="status"> (offline)</span></a>
+                <a href="#" class="modalLiveLink offline" data-icon="v"> Live<span class="status"> (offline)</span></a>
               </li>
             </ul>
           </div>
@@ -64,9 +65,9 @@
 	        <div class="span12">
 	         <div class="logo"><img src="../img/logo.png" /></div>
 	          <ul class="main nav nav-pills">
-              <li class="active"><a href="#">Meetings</a></li>
+              <li><a href="#">Meetings</a></li>
               <li><a href="#">Teachings</a></li>
-              <li><a href="#">Events</a></li>
+              <li class="active"><a href="#">Events</a></li>
               <li><a href="#">Ministries</a></li>
               <li><a href="#">Give</a></li>
               <li><a href="#">About</a></li>
@@ -75,15 +76,19 @@
 	      </div>
       </div>
     </header>
-    <div class="container">
+    <div id="main" class="container">
+      <div class="jumbotron masthead">
+          <h1>Seeing Jesus glorified<br /> from house to house</h1>
+      </div>
       <div class="row">
         <section id="main-content" class="span8 column-center">
           <div class="component component-events">
+            <h3>Upcoming Events</h3>
             <div class="entry clearfix odd first">
               <div class="events-header">
                 <h2 class="header"><a href="http://72.10.33.203/20/events/12777/forts-and-floats/">Forts and Floats</a> <span class="label label-warning">This occured in the past</span></h2>
                 <div class="help-block clearfix">
-                  <span class="pull-left"><span class="date"><i class="icon-calendar"></i> Tue, April 3, 2012</span>  <span class="time"><i class="icon-time"></i> 9:00 AM - 2:00 PM</span></span>
+                  <span class="pull-left" data-icon="c"><span class="date"> Tue, April 3, 2012</span>  <span class="time" data-icon="t"> 9:00 AM - 2:00 PM</span></span>
                   <span class="pull-right">
                     <a href="http://72.10.33.203/symphony/publish/events/edit/12777/">Edit this event »</a>
                   </span>
@@ -96,7 +101,7 @@
                 <h2 class="header"><a href="http://72.10.33.203/20/events/12779/safari-sams-all-nighter/">Safari Sam's All-Nighter</a> <span class="label label-warning">This occured in the past</span></h2>
                 <div class="help-block clearfix">
                   <span class="pull-left">
-                    <span class="date-range"><i class="icon-calendar"></i> <span class="start"><span class="date">Fri, February 10, 2012</span> <span class="time">9:30 PM</span></span><span class="divider"> - </span><span class="end"><span class="date">Sat, February 11, 2012</span> <span class="time">8:00 AM</span></span></span>
+                    <span class="date-range" data-icon="c"> <span class="start"><span class="date">Fri, February 10, 2012</span> <span class="time" data-icon="t">9:30 PM</span></span><span class="divider"> - </span><span class="end"><span class="date">Sat, February 11, 2012</span> <span class="time">8:00 AM</span></span></span>
                   </span>
                   <span class="pull-right">
                     <a href="http://72.10.33.203/symphony/publish/events/edit/12779/">Edit this event »</a>
@@ -109,7 +114,7 @@
               <div class="events-header">
                 <h2 class="header"><a href="http://72.10.33.203/20/events/12611/pizza-and-puzzles/">Pizza and Puzzles</a> <span class="label label-warning">This occured in the past</span></h2>
                 <div class="help-block clearfix">
-                  <span class="pull-left"><span class="date"><i class="icon-calendar"></i> Sat, January 28, 2012</span>  <span class="time"><i class="icon-time"></i> 11:00 AM - 2:00 PM</span></span>
+                  <span class="pull-left"><span class="date" data-icon="c"> Sat, January 28, 2012</span>  <span class="time" data-icon="t"> 11:00 AM - 2:00 PM</span></span>
                   <span class="pull-right">
                     <a href="http://72.10.33.203/symphony/publish/events/edit/12611/">Edit this event »</a>
                   </span>
@@ -121,7 +126,7 @@
               <div class="events-header">
                 <h2 class="header"><a href="http://72.10.33.203/20/events/12780/snowboarding-trip/">Snowboarding Trip</a> <span class="label label-warning">This occured in the past</span></h2>
                 <div class="help-block clearfix">
-                  <span class="pull-left"><span class="date"><i class="icon-calendar"></i> Fri, January 20, 2012</span>  <span class="time"><i class="icon-time"></i> 1:02 PM</span></span>
+                  <span class="pull-left"><span class="date" data-icon="c"> Fri, January 20, 2012</span>  <span class="time" data-icon="t"> 1:02 PM</span></span>
                   <span class="pull-right">
                     <a href="http://72.10.33.203/symphony/publish/events/edit/12780/">Edit this event »</a>
                   </span>
@@ -133,7 +138,7 @@
               <div class="events-header">
                 <h2 class="header"><a href="http://72.10.33.203/20/events/12774/morning-worship/">Morning Worship</a> <span class="label label-warning">This occured in the past</span></h2>
                 <div class="help-block clearfix">
-                  <span class="pull-left"><span class="date"><i class="icon-calendar"></i> Thu, January 19, 2012</span>  <span class="time"><i class="icon-time"></i> 6:30 AM</span></span>
+                  <span class="pull-left"><span class="date" data-icon="c"> Thu, January 19, 2012</span>  <span class="time" data-icon="t"> 6:30 AM</span></span>
                   <span class="pull-right">
                     <a href="http://72.10.33.203/symphony/publish/events/edit/12774/">Edit this event »</a>
                   </span>
@@ -180,6 +185,7 @@
           </div>
         </section>
         <section id="sidebar" class="span4 column-right">
+          <h3>Filter</h3>
           <img src="http://placehold.it/370x500/ededec/ccc&text=Sidebar+Item" />
         </section>
       </div>
