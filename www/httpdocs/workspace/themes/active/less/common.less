@@ -1,16 +1,18 @@
+// These are being added to HEAD, but should be added here to compile
 
-/*
+// @import 'import.less'; // For importing CSS documents
+// @import '../../../bootstrap/less/bootstrap.less';
+// @import '../../../bootstrap/less/responsive.less';
 
-These are being added to HEAD, but should be added here to compile
-
-@import 'import.less'; // For importing CSS documents
-@import '../../../bootstrap/less/bootstrap.less';
-@import '../../../bootstrap/less/responsive.less';
-
-*/
 
 @import '../../../bootstrap/less/mixins.less';
 @import 'pictos.css';
+
+
+// LESS Color Variables
+
+@mast-color: #9fc9d4; // Mast Color (Aqua)
+@accent-color: #d83629; // Logo/Accent/Link Color (Red/Orange)
 
 // Bootstrap Cleanup
 
@@ -24,7 +26,7 @@ These are being added to HEAD, but should be added here to compile
 
 body {
 	background-image: none;
-	background: #f3f3f0;
+	background: #fdfdfd;
 	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	color: #303030;
 }
@@ -49,7 +51,7 @@ body {
 }
 
 .mast {
-	background: #8EBDCC;
+	background: @mast-color;
 	padding: 40px 0;
 	margin-top: 40px;
 }
@@ -72,7 +74,7 @@ body {
 
 	.navbar-inner {
 		background-image: none;
-		background-color: #81AEBA;
+		background-color: darken(desaturate(@mast-color, 10%), 10%);
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -95,9 +97,11 @@ body {
 }
 
 .subnav {
-	background: #f3f3f0;
+	background: #fdfdfd;
 	border: none;
 	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 18px;
 
 	&.subnav-fixed {
 		top: 0;
@@ -105,17 +109,40 @@ body {
 
 	ul {
 		text-align: center;
+		border-bottom: 1px solid #303030;
 	}
 
 	li {
+		padding: 10px 0;
 		float: none;
 		display: inline-block;
 	}
 
 	li.active a {
-		background: #f3f3f0;
+		color: @accent-color;
+		background: #fdfdfd;
 		background-image: none;
 		.box-shadow(none);
+
+		&:hover {
+			background: #E9E9E9;
+			color: @accent-color;
+		}
+	}
+
+	a {
+		color: #303030;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: normal;
+	}
+}
+
+.nav-pills li a {
+	.border-radius(0);
+
+	&:hover {
+		background: #E9E9E9;
 	}
 }
 
@@ -153,7 +180,7 @@ body {
 
 .main.nav li.active a {
 	background: none;
-	color: #CF1E18;
+	color: @accent-color;
 }
 
 #main-content .description, p, blockquote {
@@ -162,6 +189,9 @@ body {
 }
 
 #main {
+	blockquote h3 {
+		text-transform: none;
+	}
 	h1 {
 		font-weight: bold;
 		font-size: 64px;
@@ -187,12 +217,13 @@ body {
 	}
 } 
 
-
-
-
-
-
-
+blockquote {
+	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	margin: 40px 0;
+	padding: 0;
+	text-align: center;
+	border: none;
+}
 
 footer {
 	background: #D6D6D6;
