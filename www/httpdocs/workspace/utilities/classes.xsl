@@ -44,6 +44,7 @@
 	-->
 	
 	<xsl:param name="class" />
+	<xsl:param name="nav" />
 	
 	<xsl:attribute name="class">
 	
@@ -86,6 +87,15 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			
+		</xsl:if>
+		
+		<xsl:if test="$nav">
+			<xsl:if test="
+				$pt1 = @id or 
+				//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id
+			">
+				<xsl:text> active</xsl:text>
+			</xsl:if>
 		</xsl:if>
 		
 		<xsl:value-of select="$class" disable-output-escaping="yes" />

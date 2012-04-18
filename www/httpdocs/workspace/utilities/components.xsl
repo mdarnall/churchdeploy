@@ -81,6 +81,22 @@
 					</xsl:call-template>
 				</xsl:when>
 
+				<!-- Related entried -->
+				<xsl:when test="count(//events-entries-by-tag-related/entry) and $pt5 = 'related'">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-entries-by-tag-related/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<!-- Related entried (past) -->
+				<xsl:when test="count(//events-entries-by-tag-related/entry) and $pt5 = 'related'">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-entries-by-tag-related/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
 				<!-- Past entries -->
 				<xsl:when test="count(//events-all-entries-past-filtered/entry) and $pt5 = 'past'">
 					<xsl:call-template name="component-events">

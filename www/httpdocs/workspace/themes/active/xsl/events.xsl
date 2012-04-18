@@ -36,80 +36,19 @@
 							<xsl:with-param name="classes" select="'events nav nav-tabs nav-stacked'"/>
 						</xsl:call-template>
 
-						<xsl:for-each select="$entries">
+						<xsl:for-each select="$entries[ position() &lt; 4 ]">
 
-							<li>
-
-								<xsl:call-template name="class-rows" />
-
-								<a href="#">
-
-									<div class="btn disabled pull-left">
-
-										<div class="month">
-											<span class="label label-important">
-												<xsl:call-template name="format-date">
-													<xsl:with-param name="date" select="date/date/start/@iso" />
-													<xsl:with-param name="format" select="'%m-;'" />
-												</xsl:call-template>
-											</span>
-										</div>
-
-										<div class="day">
-											<xsl:call-template name="format-date">
-												<xsl:with-param name="date" select="date/date/start/@iso" />
-												<xsl:with-param name="format" select="'%d;'" />
-											</xsl:call-template>
-										</div>
-
-									</div>
-
-									<div class="info">
-
-										<h4>
-											<xsl:text> </xsl:text>
-											<xsl:value-of select="name" disable-output-escaping="yes" />
-										</h4>
-
-										<p>
-
-											<xsl:text> &#160;</xsl:text>
-
-											<i class="icon-map-marker"></i>
-
-											<xsl:text> </xsl:text>
-
-											<em>
-
-												<xsl:variable name="location-id" select="location/item/@id" />
-
-												<xsl:for-each select="//events-entries-by-tag-locations/entry[ @id = $location-id ]">
-
-													<xsl:choose>
-
-														<xsl:when test="string-length(name-casual)">
-															<xsl:value-of select="name-casual" disable-output-escaping="yes" />
-														</xsl:when>
-
-														<xsl:otherwise>
-															<xsl:value-of select="name-formal" disable-output-escaping="yes" />
-														</xsl:otherwise>
-
-													</xsl:choose>
-
-												</xsl:for-each>
-
-											</em>
-
-										</p>
-
-									</div>
-
-								</a>
-
-							</li>
+							<xsl:call-template name="column-right-events-entry"/>
 
 						</xsl:for-each>
+
+						<p><a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="btn btn-mini show-all">Show all</a></p>
+
+						<div class="more hidden">
+
+							<xsl:call-template name="column-right-events-entry"/>
+
+						</div>
 
 					</ul>
 
@@ -117,10 +56,25 @@
 
 				<xsl:otherwise>
 
-					<xsl:call-template name="cd-pagination">
-						<xsl:with-param name="pagination" select="$entries/../pagination" />
-						<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5 )" />
-					</xsl:call-template>
+					<div class="component-header">
+
+						<xsl:choose>
+
+							<xsl:when test="$single">
+								<p><a href="{$root}/{$pt1}/{$pt2}/">« Back to all events</a></p>
+							</xsl:when>
+
+							<xsl:otherwise>
+								<xsl:call-template name="cd-pagination">
+									<xsl:with-param name="pagination" select="$entries/../pagination" />
+									<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5, '/', $pt6, '/' )" />
+								</xsl:call-template>
+							</xsl:otherwise>
+
+						</xsl:choose>
+						
+
+					</div>
 
 					<xsl:for-each select="$entries">
 
@@ -166,9 +120,9 @@
 
 							<xsl:call-template name="class-rows" />
 
-							<div class="header">
+							<div class="events-header">
 
-								<h2>
+								<h2 class="header">
 									<xsl:choose>
 										<xsl:when test="$single">
 											<xsl:value-of select="name" disable-output-escaping="no" />
@@ -252,6 +206,14 @@
 							
 									</span>
 
+									<xsl:if test="$cookie-username">
+										<span class="pull-right">
+											<a href="{$root}/symphony/publish/events/edit/{@id}/">
+												<xsl:text>Edit this event »</xsl:text>
+											</a>
+										</span>
+									</xsl:if>
+
 									<!-- <span class="pull-right"> -->
 
 										<!-- <span class="location">
@@ -301,7 +263,15 @@
 							</div>
 
 							<xsl:if test="$single">
-								<p><a href="{$current-url}"><i class="icon-lock"></i> Permalink</a></p>
+								<p>
+									<i class="icon-lock"></i>
+									<xsl:text> Paste link in </xsl:text>
+									<strong>email</strong>
+									<xsl:text> or </xsl:text>
+									<strong>IM</strong>
+									<br />
+									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="selectAllText($(this))" />
+								</p>
 							</xsl:if>
 
 						</div>
@@ -312,25 +282,116 @@
 
 			</xsl:choose>
 
-			<xsl:call-template name="cd-pagination">
-				<xsl:with-param name="pagination" select="$entries/../pagination" />
-				<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5 )" />
-			</xsl:call-template>
+			<xsl:if test="$pt2 = 'events'">
 
-			<xsl:if test="not($single)">
-				<xsl:choose>
-					<xsl:when test="$pt2 = 'events' and not($pt5 = 'past')">
-						<p><a href="{$root}/{$pt1}/{$pt2}/1/5/past/">« View past events</a></p>
-					</xsl:when>
-					<xsl:otherwise>
-						<p><a href="{$root}/{$pt1}/{$pt2}/">View current events »</a></p>
-					</xsl:otherwise>
-				</xsl:choose>
+				<div class="component-footer">
+					<xsl:call-template name="cd-pagination">
+						<xsl:with-param name="pagination" select="$entries/../pagination" />
+						<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5 )" />
+					</xsl:call-template>
+
+					<xsl:if test="not($single)">
+						<xsl:choose>
+							<xsl:when test="$pt2 = 'events' and not($pt5 = 'past')">
+								<p>
+									<xsl:choose>
+										<xsl:when test="$pt5 = 'related'">
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/">« View past events</a>
+										</xsl:when>
+										<xsl:otherwise>
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/past/">« View past events</a>
+										</xsl:otherwise>
+									</xsl:choose>
+								</p>
+							</xsl:when>
+							<xsl:otherwise>
+								<p><a href="{$root}/{$pt1}/{$pt2}/">View current events »</a></p>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:if>
+				</div>
+
 			</xsl:if>
 
 		</div>
 
 	</xsl:if>
+
+</xsl:template>
+
+
+<xsl:template name="column-right-events-entry">
+
+	<li class="clearfix">
+
+		<xsl:call-template name="class-rows" />
+
+		<a href="#">
+
+			<div class="btn disabled pull-left">
+
+				<div class="month">
+					<span class="label label-important">
+						<xsl:call-template name="format-date">
+							<xsl:with-param name="date" select="date/date/start/@iso" />
+							<xsl:with-param name="format" select="'%m-;'" />
+						</xsl:call-template>
+					</span>
+				</div>
+
+				<div class="day">
+					<xsl:call-template name="format-date">
+						<xsl:with-param name="date" select="date/date/start/@iso" />
+						<xsl:with-param name="format" select="'%d;'" />
+					</xsl:call-template>
+				</div>
+
+			</div>
+
+			<div class="info">
+
+				<h4>
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="name" disable-output-escaping="yes" />
+				</h4>
+
+				<p>
+
+					<xsl:text> &#160;</xsl:text>
+
+					<i class="icon-map-marker"></i>
+
+					<xsl:text> </xsl:text>
+
+					<em>
+
+						<xsl:variable name="location-id" select="location/item/@id" />
+
+						<xsl:for-each select="//events-entries-by-tag-locations/entry[ @id = $location-id ]">
+
+							<xsl:choose>
+
+								<xsl:when test="string-length(name-casual)">
+									<xsl:value-of select="name-casual" disable-output-escaping="yes" />
+								</xsl:when>
+
+								<xsl:otherwise>
+									<xsl:value-of select="name-formal" disable-output-escaping="yes" />
+								</xsl:otherwise>
+
+							</xsl:choose>
+
+						</xsl:for-each>
+
+					</em>
+
+				</p>
+
+			</div>
+
+		</a>
+
+	</li>
 
 </xsl:template>
 

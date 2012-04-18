@@ -79,6 +79,14 @@ $(document).ready(
 	}
 );
 
+
+
+function selectAllText(obj) 
+{
+	obj.focus();
+	obj.select();
+}
+
 // analytics
 
 /*
