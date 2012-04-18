@@ -10,7 +10,7 @@ These are being added to HEAD, but should be added here to compile
 */
 
 @import '../../../bootstrap/less/mixins.less';
-
+@import 'pictos.css';
 
 // Bootstrap Cleanup
 
@@ -25,13 +25,13 @@ These are being added to HEAD, but should be added here to compile
 body {
 	background-image: none;
 	background: #f3f3f0;
-	font-family: "proxima-nova", "Gill Sans", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	color: #303030;
 }
 
 [data-icon]:before {
 	content: attr(data-icon);
-	font-family: 'Pictos Custom', sans-serif;
+	font-family: 'Pictos', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	text-transform: none;
@@ -51,7 +51,7 @@ body {
 .mast {
 	background: #8EBDCC;
 	padding: 40px 0;
-	margin-top: -50px;
+	margin-top: 40px;
 }
 
 .mast .row {
@@ -65,27 +65,58 @@ body {
 }
 
 /* NAVBAR OVERRIDES */
+.navbar {
+	&.navbar-fixed-top {
+		position: absolute;
+	}
 
-.navbar-inner {
-	background-image: none;
-	background-color: #81AEBA;
+	.navbar-inner {
+		background-image: none;
+		background-color: #81AEBA;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: bold;
+		.box-shadow(none);
+	}
+
+	.navbar-inner ul.nav li a {
+		color: #fff;
+		text-shadow: none;
+	}
+
+	.navbar-inner ul.nav li a:hover {
+		color: #eee;
+	}
+
+	.navbar-inner ul.nav li a .status {
+		display: none;
+	}
+
+}
+
+.subnav {
+	background: #f3f3f0;
+	border: none;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: bold;
-	.box-shadow(none);
-}
 
-.navbar-inner ul.nav li a {
-	color: #fff;
-	text-shadow: none;
-}
+	&.subnav-fixed {
+		top: 0;
+	}
 
-.navbar-inner ul.nav li a:hover {
-	color: #eee;
-}
+	ul {
+		text-align: center;
+	}
 
-.navbar-inner ul.nav li a .status {
-	display: none;
+	li {
+		float: none;
+		display: inline-block;
+	}
+
+	li.active a {
+		background: #f3f3f0;
+		background-image: none;
+		.box-shadow(none);
+	}
 }
 
 .masthead {
@@ -130,37 +161,53 @@ body {
 	color: #303030;
 }
 
-#main h1 {
-	font-weight: bold;
-	font-size: 64px;
-	line-height: 1.1;
-	letter-spacing: 1px;
-	font-weight: 900;
-}
+#main {
+	h1 {
+		font-weight: bold;
+		font-size: 64px;
+		line-height: 1.1;
+		letter-spacing: 1px;
+		font-weight: 900;
+	}
+	h2 {
+		font-weight: bold;
+		font-size: 28px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	h3 {
+		font-weight: bold;
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
 
-#main h3 {
-	font-weight: bold;
-	font-size: 20px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
+	.jumbotron h1 {
+		display: none;
+	}
+} 
 
-#main h2 {
-	font-weight: bold;
-	font-size: 28px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
+
+
+
+
+
 
 
 footer {
 	background: #D6D6D6;
 	position: absolute;
-	margin: 40px 0;
+	margin: 40px 0 80px 0;
 	padding: 20px 0 60px 0;
 	left: 0;
 	width: 100%;
 	
+	h4 {
+		font-size: 11px;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+
 	a {
 		color: #333;
 	
@@ -218,12 +265,14 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	margin: 0 0 0 0;
-	padding: 15px 0 5px 0;
+	margin: 40px 0 0 0;
+	padding: 5px 0 5px 0;
 	font-size: 18px;
 
 	.row { text-indent: 30px; }
-
+	p {
+		font-size: 16px;
+	}
 	p, a { color: #aaa }
 
 }
