@@ -1,9 +1,18 @@
 
+/*
+
+These are being added to HEAD, but should be added here to compile
+
 @import 'import.less'; // For importing CSS documents
 @import '../../../bootstrap/less/bootstrap.less';
 @import '../../../bootstrap/less/responsive.less';
 
-// Quick overrides
+*/
+
+@import '../../../bootstrap/less/mixins.less';
+
+
+// Bootstrap Cleanup
 
 [class^="icon-"] {
 	background-image: url(../../../bootstrap/img/glyphicons-halflings.png);
@@ -13,31 +22,264 @@
 	background-image: url(../../../bootstrap/img/glyphicons-halflings-white.png);
 }
 
+body {
+	background-image: none;
+	background: #f3f3f0;
+	font-family: "proxima-nova", "Gill Sans", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: #303030;
+}
 
-@base: 10px;
+[data-icon]:before {
+	content: attr(data-icon);
+	font-family: 'Pictos Custom', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
 
-// Styles
+.logo {
+	background: url(../img/logo.png) 0 0 no-repeat;
+	height: 120px;
+	width: 120px;
+ 	
+ 	img {
+		display: none;
+	}
+}
+
+.mast {
+	background: #8EBDCC;
+	padding: 40px 0;
+	margin-top: -50px;
+}
+
+.mast .row {
+	margin: 0 auto;
+}
+
+/* Live modal */
 
 .modalLive {
 	width: 630px !important;
 }
 
-// Components
+/* NAVBAR OVERRIDES */
+
+.navbar-inner {
+	background-image: none;
+	background-color: #81AEBA;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	.box-shadow(none);
+}
+
+.navbar-inner ul.nav li a {
+	color: #fff;
+	text-shadow: none;
+}
+
+.navbar-inner ul.nav li a:hover {
+	color: #eee;
+}
+
+.navbar-inner ul.nav li a .status {
+	display: none;
+}
+
+.masthead {
+	margin-bottom: 20px;
+}
+
+
+.logo {
+	float: left;
+}
+
+.main.nav {
+	float: right;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: 45px;
+	padding-right: 17px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.main.nav li {
+	margin-right: 10px;
+}
+
+.main.nav li a {
+	color: #ffffff;
+}
+
+.main.nav li a:hover {
+	background: none;
+	color: #ddd;
+}
+
+.main.nav li.active a {
+	background: none;
+	color: #CF1E18;
+}
+
+#main-content .description, p, blockquote {
+	font: normal normal normal 16px/1.6 "skolar", Georgia, Times, serif;
+	color: #303030;
+}
+
+#main h1 {
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	font-weight: 900;
+}
+
+#main h3 {
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#main h2 {
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+footer {
+	background: #D6D6D6;
+	position: absolute;
+	margin: 40px 0;
+	padding: 20px 0 60px 0;
+	left: 0;
+	width: 100%;
+	
+	a {
+		color: #333;
+	
+		&.btn.btn-primary.give {
+			background-image: none;
+			background: none;
+			color: #CF1E18;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			border: none;
+			text-transform: uppercase;
+			text-shadow: none;
+			margin-left: -10px;
+		}
+	}
+
+	address,
+	p {
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+
+		margin: 15px 0;
+		/*
+		margin-bottom: 0px;
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-top: 0px;
+		padding-bottom: 3px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 3px;
+		text-align: -webkit-auto;
+		text-decoration: none;
+		text-shadow: rgba(255, 255, 255, 0.496094) 0px 1px 0px;
+		width: 112px;
+*/
+	}
+
+	.container {
+
+		.row {
+			
+		}
+	}
+	
+	padding-bottom: 20px;
+}
+
+.finish {
+	background: #f3f3f0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 15px 0 5px 0;
+	font-size: 18px;
+
+	.row { text-indent: 30px; }
+
+	p, a { color: #aaa }
+
+}
+
+/* EVENTS COMPONENTS*/
 
 .component-events {
-
+	
 	.entry {
 		padding: 20px;
+		border: 10px solid #ddd;
+		margin: 20px 0;
+		background: #fff;
 
-		&.even {
-			background-color: #eee;
+		&.even { 
+			background: #fff; 
 		}
 
 		.header {
-			margin-bottom: 20px;
+			text-transform: none;
+			font-size: 26px;
+
+			a {
+				text-transform: none;
+				text-decoration: none;
+				color: #303030;
+
+				&:hover { 
+					color: #555; 
+				}
+			}
+		}
+
+		.label {
+			line-height: 12px;
+			float: right;
+			padding: 3px 6px;
+			.border-radius(0);
+			text-shadow: none;
+		}
+
+		.help-block {
+			clear: both;
+			margin-bottom: 10px;
+			font-size: 16px;
+			.date {
+				margin-right: 20px;
+			}
 		}
 	}
+
 }
+
+/*
+
+jon, please integrate this or delete it..
 
 .component-locations {
 
@@ -46,24 +288,18 @@
 		margin: @base * 3 0;
 	}
 }
+*/
 
-// Columns
+.component-locations {
+	.map {
+		padding-top: 18px;
 
-.column-full-width {
-
-}
-
-.column-center {
-
-}
-
-.column-right {
-
-	.component-locations {
-
-		.google-map {
-			
+		iframe {
+			margin-top: 0;
+			border: 10px solid #ddd;
 		}
 	}
 }
+
+
 

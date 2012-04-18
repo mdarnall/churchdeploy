@@ -3,12 +3,18 @@
     encoding="UTF-8"
     ?>
 
+
+
 <xsl:stylesheet
     version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	>
 
+
+
 <xsl:param name="url-language" />
+
+
 
 <xsl:output
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -20,19 +26,30 @@
     />
     
 
-<xsl:include href="date-time-advanced.xsl" />
-<xsl:include href="date-utilities.xsl" />
-<xsl:include href="toolkit.xsl" />
+
+<xsl:include href="alerts.xsl" />
 <xsl:include href="classes.xsl" />
 <xsl:include href="components.xsl" />
+<xsl:include href="date-time-advanced.xsl" />
+<xsl:include href="date-utilities.xsl" />
 <xsl:include href="pagination.xsl" />
 <xsl:include href="teachings.xsl" />
+<xsl:include href="toolkit.xsl" />
 
 
 
-<xsl:variable name="pt1" select="'43'" />
+<xsl:param name="cookie-username" />
+
+
+<!-- Defaults:start -->
+<xsl:variable name="events-entries-per-page" select="'5'" />
+<!-- Defaults:end -->
+
+
 
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
+
+
 
 <xsl:template match="/">
 
@@ -59,11 +76,12 @@
 			<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
 			<meta name="author" content="{$website-name}" />
 			<meta name="viewport" content="width=device-width,initial-scale=1" />
-
 			<meta name="application-name" content="{$website-name}" />
 			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
 			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
 
+			<link rel="stylesheet" href="{$workspace}/bootstrap/docs/assets/css/bootstrap.css" />
+			<link rel="stylesheet" href="{$workspace}/bootstrap/docs/assets/css/bootstrap-responsive.css" />
 			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
 
 			<!-- Typekit
@@ -95,32 +113,25 @@
 					<div class="container">
 
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-
 						</a>
-
 						<!-- <a class="brand first" href="{$root}">
 							<xsl:value-of select="$website-name" disable-output-escaping="yes" />
 						</a> -->
-
 						<div class="nav-collapse">
-
 							<ul class="nav">
-								<xsl:call-template name="topnav" />
+								<!-- <li class="entry "><a href="#">Login</a></li> -->
+								<!-- <li>
+									<a href="http://72.10.33.203/">Prayer Request</a>
+								</li> -->
 							</ul>
-
 							<ul class="nav pull-right">
-								
 								<li><a href="#"><i class="icon-time icon-white"></i>&#160;&#160;6:30am</a></li>
-								
-								<li class="divider-vertical"></li>
-
+								<!-- <li class="divider-vertical"></li> -->
 								<li>
 									<a href="#">
-
 										<xsl:attribute name="class">
 											<xsl:text>modalLiveLink</xsl:text>
 											<xsl:choose>
@@ -132,11 +143,8 @@
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:attribute>
-
 										<i class="icon-facetime-video icon-white"></i>
-
 										<xsl:text>&#160;&#160;Live</xsl:text>
-
 										<xsl:choose>
 											<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
 												<span class="status">&#160;(online)</span>
@@ -145,76 +153,71 @@
 												<span class="status">&#160;(offline)</span>
 											</xsl:otherwise>
 										</xsl:choose>
-
 									</a>
 								</li>
-
 							</ul>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
 
-			<div class="container">
+			<!-- Hidden live broadcast modal -->
+
+			<div class="modal fade modalLive" id="modalLive">
+				<div class="modal-header">
+					<a class="close">×</a>
+					<h3>
+						<xsl:value-of select="$website-name" disable-output-escaping="yes" />
+						<xsl:text> — Live broadcast</xsl:text>
+						<xsl:choose>
+							<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
+								<span class="status">&#160;(online)</span>
+							</xsl:when>
+							<xsl:otherwise>
+								<span class="status">&#160;(offline)</span>
+							</xsl:otherwise>
+						</xsl:choose>
+					</h3>
+				</div>
+				<div class="modal-body">
+					<xsl:for-each select="//xml-ustreamcom/xml/results">
+						<div class="ustream-embed"></div>
+						<span class="url hidden">http://www.ustream.tv/embed/<xsl:value-of select="id" disable-output-escaping="yes" />/?autoplay=true</span>
+					</xsl:for-each>
+				</div>
+			</div>
+
+			<header class="mast" id="overview">
+				<div class="container">
+					<div class="row">
+						<div class="span12">
+							<div class="logo"><img src="../img/logo.png" /></div>
+							<ul class="main nav nav-pills">
+								<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
+									<xsl:variable name="entry-id" select="@id" />
+									<li>
+										<xsl:call-template name="class-rows">
+											<xsl:with-param name="nav" select="true()"/>
+										</xsl:call-template>
+										<a href="{$root}/{@id}/{description/@handle}/">
+											<xsl:call-template name="tag-href" />
+											<xsl:value-of select="tag" />
+										</a>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="container" id="main">
 
 				<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
 
-				<!-- Hidden live broadcast modal -->
+				<div class="jumbotron masthead" id="overview">
 
-				<div class="modal fade modalLive" id="modalLive">
-					<div class="modal-header">
-						<a class="close">×</a>
-						<h3>
-							<xsl:value-of select="$website-name" disable-output-escaping="yes" />
-							<xsl:text> — Live broadcast</xsl:text>
-							
-							<xsl:choose>
-								<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
-									<span class="status">&#160;(online)</span>
-								</xsl:when>
-								<xsl:otherwise>
-									<span class="status">&#160;(offline)</span>
-								</xsl:otherwise>
-							</xsl:choose>
-
-						</h3>
-					</div>
-					<div class="modal-body">
-
-						<xsl:for-each select="//xml-ustreamcom/xml/results">
-
-							<div class="ustream-embed"></div>
-
-							<span class="url hidden">http://www.ustream.tv/embed/<xsl:value-of select="id" disable-output-escaping="yes" />/?autoplay=true</span>
-
-						</xsl:for-each>
-
-					</div>
-				</div>
-
-				<!-- Visible main content -->
-
-				<header class="jumbotron masthead" id="overview">
-
-					<div class="row">
-
-						<div class="span2">
-							<div class="logo">
-								<img src="http://placehold.it/120x70/57a3d1/f4faff&amp;text=ACCF+Logo" />
-							</div>
-						</div>
-
-						<div class="span10">
-							<h1>
-								<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" />
-							</h1>
-						</div>
-
-					</div>
+					<h1><xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" /></h1>
 
 					<xsl:if test="
 						count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header = 'Yes')] ) or
@@ -235,87 +238,87 @@
 
 					</xsl:if>
 
-				</header>
+				</div>
 
-				<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
-					
-					<div class="alert alert-success alertLive hidden">
-						<a class="close" data-dismiss="alert">×</a>
-						<strong>We're broadcasting live right now!</strong>
-						<a class="btn btn-success modalLiveLink">
-							<xsl:text> Watch the broadcast »</xsl:text>		
-						</a>
-					</div>
+				<xsl:call-template name="alerts"/>
 
-				</xsl:if>
+				<div class="row">
+					<section id="main-content" class="span8 column-center">
 
-				<xsl:choose>
-					<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
+						<xsl:choose>
+							<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
+								<xsl:call-template name="call-components">
+									<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="call-components">
+									<xsl:with-param name="xpath" select="//layouts-default/entry"/>
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
 
-						<xsl:call-template name="call-components">
-							<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
-						</xsl:call-template>
-
-					</xsl:when>
-					<xsl:otherwise>
-
-						<xsl:call-template name="call-components">
-							<xsl:with-param name="xpath" select="//layouts-default/entry"/>
-						</xsl:call-template>
-
-					</xsl:otherwise>
-				</xsl:choose>
-
-				<xsl:if test="$pt2 = 'teachings'">
-					<xsl:call-template name="teachings" />
-				</xsl:if>
+					</section>
+				</div>
 
 				<p class="pull-right"><a href="#">Back to top</a></p>
-
-				<footer class="footer row">
-					
-					<xsl:call-template name="nav-footer" />
-					
-					<div class="span2">
-						<h4>Online Giving</h4>
-						
-						<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
-						<p><a href="#" class="btn btn-primary">Give Online</a></p>
-					</div>
-
-					<div class="span2">
-						<h4><xsl:value-of select="$website-name" /></h4>
-						
-						<address>
-							27520 SW 95th Ave.<br />
-							Wilsonville, Oregon 97070<br />
-							<abbr title="Phone">P:</abbr> (971) 327-2123
-						</address>
-						
-						<h4>Office Hours</h4>
-						
-						<p>
-							9:00 AM to 5:00 PM — Tues., Thr., Fri.<br />
-							9:00 AM to 12:00 PM — Wed.<br />
-							Closed Monday
-						</p>
-
-					</div>
-
-					<div class="smallprint">
-						<div class="wrapper">
-							<xsl:text>© </xsl:text>
-							<xsl:value-of select="$this-year" />
-							<xsl:text>. </xsl:text>
-							<a href="{$root}">
-								<xsl:value-of select="$website-name" />
-							</a>
-							<xsl:text>. All rights reserved.</xsl:text>
+				
+				<footer>
+					<div class="container">
+						<div class="row">
+							<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
+								<xsl:variable name="entry-id" select="@id" />
+								<div class="span2">
+									<ul class="nav nav-list">
+										<li class="nav-header">
+											<a href="{$root}/{@id}/{description/@handle}/">
+												<xsl:call-template name="tag-href" />
+												<xsl:value-of select="tag" />
+											</a>
+										</li>
+										<xsl:call-template name="subnav">
+											<xsl:with-param name="instance" select="'footer'" />
+											<xsl:with-param name="parents" select="@id" />
+										</xsl:call-template>
+									</ul>							
+								</div>
+							</xsl:for-each>
+							
+							<div class="span2">
+								<h4>Online Giving</h4>
+								<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
+								<p><a href="#" class="btn btn-primary give">Give →</a></p>
+							</div>
+							<div class="span2">
+								<h4><xsl:value-of select="$website-name" /></h4>
+								<address>
+									27520 SW 95th Ave.<br />
+									Wilsonville, Oregon 97070<br />
+									<abbr title="Phone">P:</abbr> (971) 327-2123
+								</address>
+								<h4>Office Hours</h4>
+								<p>
+									9:00 AM to 5:00 PM — Tues., Thr., Fri.<br />
+									9:00 AM to 12:00 PM — Wed.<br />
+									Closed Monday
+								</p>
+							</div>
 						</div>
 					</div>
-					
+					<div class="finish">
+						<div class="container">
+							<div class="row">
+								<p>
+									<xsl:text>© </xsl:text>
+									<xsl:value-of select="$this-year" />
+									<xsl:text>. </xsl:text>
+									<a href="{$root}"><xsl:value-of select="$website-name" /></a>
+									<xsl:text>. All rights reserved.</xsl:text>
+								</p>
+							</div>
+						</div>
+					</div>
 				</footer>
-
 			</div>
 
 			<script type="text/javascript" src="{$workspace}/js/jquery-1.7.1.min.js"></script>
@@ -421,69 +424,6 @@
 		<xsl:text>/</xsl:text>
 
 	</xsl:attribute>
-
-</xsl:template>
-
-
-
-<xsl:template name="topnav">
-
-	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
-
-		<xsl:variable name="entry-id" select="@id" />
-
-		<li>
-
-			<xsl:attribute name="class">
-
-				<xsl:text>entry </xsl:text>
-
-				<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
-					<xsl:text>active</xsl:text>
-				</xsl:if>
-
-			</xsl:attribute>
-
-			<a href="{$root}/{@id}/{description/@handle}/">
-				<xsl:call-template name="tag-href" />
-				<xsl:value-of select="tag" />
-			</a>
-
-		</li>
-
-	</xsl:for-each>
-
-</xsl:template>
-
-
-
-<xsl:template name="nav-footer">
-
-	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
-
-		<xsl:variable name="entry-id" select="@id" />
-
-		<div class="span2">
-
-			<ul class="nav nav-list">
-			
-				<li class="nav-header">
-					<a href="{$root}/{@id}/{description/@handle}/">
-						<xsl:call-template name="tag-href" />
-						<xsl:value-of select="tag" />
-					</a>
-				</li>
-
-				<xsl:call-template name="subnav">
-					<xsl:with-param name="instance" select="'footer'" />
-					<xsl:with-param name="parents" select="@id" />
-				</xsl:call-template>
-
-			</ul>
-		
-		</div>
-
-	</xsl:for-each>
 
 </xsl:template>
 
