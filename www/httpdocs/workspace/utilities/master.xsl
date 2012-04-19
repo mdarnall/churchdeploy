@@ -243,7 +243,7 @@
 				<xsl:call-template name="alerts"/>
 
 				<div class="row">
-					<section id="main-content" class="span8 column-center">
+					<section id="main-content" class="span12 column-center">
 
 						<xsl:choose>
 							<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
@@ -261,7 +261,7 @@
 					</section>
 				</div>
 
-				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p class="pull-right to-top"><a href="#">Back to top</a></p>
 				
 				<footer>
 					<div class="container">

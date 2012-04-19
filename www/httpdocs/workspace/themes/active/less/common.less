@@ -87,7 +87,7 @@ body {
 	}
 
 	.navbar-inner ul.nav li a:hover {
-		color: #eee;
+		color: darken(@mast-color, 35%);
 	}
 
 	.navbar-inner ul.nav li a .status {
@@ -175,12 +175,14 @@ body {
 
 .main.nav li a:hover {
 	background: none;
-	color: #ddd;
+	color: darken(@mast-color, 35%);
 }
 
 .main.nav li.active a {
 	background: none;
 	color: @accent-color;
+
+	&:hover { color: darken(@accent-color, 10%); }
 }
 
 #main-content .description, p, blockquote {
@@ -189,9 +191,6 @@ body {
 }
 
 #main {
-	blockquote h3 {
-		text-transform: none;
-	}
 	h1 {
 		font-weight: bold;
 		font-size: 64px;
@@ -211,6 +210,10 @@ body {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
+	blockquote h3 {
+		text-transform: none;
+		font-weight: normal;
+	}
 
 	.jumbotron h1 {
 		display: none;
@@ -223,13 +226,31 @@ blockquote {
 	padding: 0;
 	text-align: center;
 	border: none;
+
+
+	cite {
+		display: block;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 10px 0;
+
+		a {
+			color: #ccc;
+			&:hover {
+				color: @accent-color;
+				text-decoration: none;
+			}
+		}
+		
+	}
 }
 
 footer {
 	background: #D6D6D6;
 	position: absolute;
 	margin: 40px 0 80px 0;
-	padding: 20px 0 60px 0;
+	padding: 20px 0;
 	left: 0;
 	width: 100%;
 	
@@ -292,25 +313,33 @@ footer {
 
 .finish {
 	background: #f3f3f0;
-	position: absolute;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	margin: 40px 0 0 0;
 	padding: 5px 0 5px 0;
-	font-size: 18px;
+	font-size: 16px;
 
 	.row { text-indent: 30px; }
 	p {
-		font-size: 16px;
+		color: #aaa;
+		font-size: 14px;
 	}
-	p, a { color: #aaa }
+	a { 
+		color: #aaa;
+		&:hover {
+			color: @accent-color;
+			text-decoration: none;
+		}
+	}
 
 }
 
 /* EVENTS COMPONENTS*/
 
-.component-events {
+#main-content {
+	.component-events {
 	
 	.entry {
 		padding: 20px;
@@ -355,6 +384,62 @@ footer {
 		}
 	}
 
+	}
+}
+
+#sidebar {
+.component-events {
+	
+	.entry {
+		padding: 0;
+		border: none;
+		margin: 10px 0;
+		background: #fff;
+
+		a {
+			padding: 10px;
+			border: 5px solid #ddd;
+			background: #fff;
+		}
+
+		&.even { 
+			background: #fff; 
+		}
+
+		.header {
+			text-transform: none;
+			font-size: 26px;
+
+			a {
+				text-transform: none;
+				text-decoration: none;
+				color: #303030;
+
+				&:hover { 
+					color: #555; 
+				}
+			}
+		}
+
+		.label {
+			line-height: 12px;
+			float: right;
+			padding: 3px 6px;
+			.border-radius(0);
+			text-shadow: none;
+		}
+
+		.help-block {
+			clear: both;
+			margin-bottom: 10px;
+			font-size: 16px;
+			.date {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	}
 }
 
 /*
