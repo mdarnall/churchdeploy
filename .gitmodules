@@ -136,3 +136,6 @@
 [submodule "www/httpdocs/extensions/duplicate_entry"]
 	path = www/httpdocs/extensions/duplicate_entry
 	url = https://github.com/nickdunn/duplicate_entry.git
+[submodule "www/httpdocs/extensions/scaffolds"]
+	path = www/httpdocs/extensions/scaffolds
+	url = http://github.com/brendo/scaffolds.git
