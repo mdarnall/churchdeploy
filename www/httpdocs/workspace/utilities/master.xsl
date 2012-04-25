@@ -189,6 +189,7 @@
 
 			<header class="mast" id="overview">
 				<div class="container">
+					<xsl:call-template name="alerts" />
 					<div class="row">
 						<div class="span12">
 							<div class="logo"><img src="../img/logo.png" /></div>
@@ -239,8 +240,6 @@
 					</xsl:if>
 
 				</div>
-
-				<xsl:call-template name="alerts"/>
 
 				<div class="row">
 					<section id="main-content" class="span12 column-center">
