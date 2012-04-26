@@ -168,13 +168,13 @@
 					<a class="close">×</a>
 					<h3>
 						<xsl:value-of select="$website-name" disable-output-escaping="yes" />
-						<xsl:text> — Live broadcast</xsl:text>
+						<xsl:text> — Live Broadcast</xsl:text>
 						<xsl:choose>
 							<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
-								<span class="status">&#160;(online)</span>
+								<span class="status">&#160;(Online)</span>
 							</xsl:when>
 							<xsl:otherwise>
-								<span class="status">&#160;(offline)</span>
+								<span class="status">&#160;(Offline)</span>
 							</xsl:otherwise>
 						</xsl:choose>
 					</h3>
