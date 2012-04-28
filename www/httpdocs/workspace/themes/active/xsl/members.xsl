@@ -10,11 +10,11 @@
 
 	<xsl:if test="count($entries)">
 		
-		<!-- <div> -->
+		<div>
 			
-			<!-- <xsl:call-template name="class-position">
+			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'member'" />
-			</xsl:call-template> -->
+			</xsl:call-template>
 			
 			<h3 class="header">Leader Contact</h3>
 			
@@ -22,7 +22,7 @@
 
 				<xsl:for-each select="//members-entries-by-tag/entry">
 					
-					<li>
+					<li class="entry">
 						
 						<!-- <xsl:call-template name="class-rows" /> -->
 						
@@ -80,7 +80,7 @@
 			
 			</ul>
 
-		<!-- </div> -->
+		</div>
 	
 	</xsl:if>
 	

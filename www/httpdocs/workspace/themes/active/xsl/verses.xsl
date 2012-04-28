@@ -24,13 +24,10 @@
 				
 					<blockquote>
 
-						<h3>
-							<xsl:value-of select="//xml-apibibliacom/text" />
-						</h3>
+						<span><xsl:text>&#8220;</xsl:text><xsl:value-of select="//xml-apibibliacom/text" /><xsl:text>&#8221;</xsl:text></span>
 
 						<cite>
 							<a href="#" class="verse">
-								<xsl:text>—</xsl:text>
 								<xsl:value-of select="passage" />
 							</a>
 						</cite>
