@@ -9,15 +9,20 @@
 @import 'pictos.css';
 
 
-// LESS Color Variables
+// LESS Variables
 
 @mast-color: #9fc9d4; // Mast Color (Aqua)
 @accent-color: #d83629; // Logo/Accent/Link Color (Red/Orange)
+@gray-accent: #eeeeee;
+@body-text: #303030;
+@proxima: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+@skolar: "skolar", serif;
+@pictos: 'Pictos', sans-serif;
 
 a {
 	color: @accent-color;
 	text-decoration: none;
-	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out,;
+	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
 
 	&:hover { color: darken(@accent-color, 15%); text-decoration: none; }	
 }
@@ -35,17 +40,21 @@ a {
 body {
 	background-image: none;
 	background: #fdfdfd;
-	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: @proxima;
 	color: #303030;
 }
 
 [data-icon]:before {
 	content: attr(data-icon);
-	font-family: 'Pictos', sans-serif;
+	font-family: @pictos;
 	font-weight: normal;
 	font-style: normal;
 	text-transform: none;
 	-webkit-font-smoothing: antialiased;
+	position: relative;
+	font-size: 20px;
+	margin-right: 10px;
+	bottom: -2px;
 }
 
 .logo {
@@ -77,8 +86,9 @@ body {
 /* ALERT OVERRIDES */
 
 .alert {
-
-	.box-shadow(0 1px 8px rgba(0,0,0,0.1));
+	border: 1px solid lighten(#468847, 25%);
+	letter-spacing: 1px;
+	.box-shadow(0 1px 2px rgba(0,0,0,0.1));
 
 	strong {
 		display: inline-block;
@@ -139,7 +149,7 @@ body {
 
 	ul {
 		text-align: center;
-		border-bottom: 2px solid #D4D4D4;
+		border-bottom: 1px solid #ddd;
 	}
 
 	li {
@@ -216,8 +226,12 @@ body {
 }
 
 #main-content .description, p, blockquote {
-	font: normal normal normal 16px/1.6 "skolar", Georgia, Times, serif;
+	font-family: @skolar;
+	font-size: 16px;
+	line-height: 1.7;
+	font-weight: normal;
 	color: #303030;
+	margin-bottom: 20px;
 }
 
 #main {
@@ -250,26 +264,8 @@ body {
 	}
 } 
 
-blockquote {
-	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
-	margin: 40px 0;
-	padding: 0;
-	text-align: center;
-	border: none;
-
-
-	cite {
-		display: block;
-		font-size: 18px;
-		text-transform: uppercase;
-		font-weight: bold;
-		margin: 10px 0;
-		
-	}
-}
-
 .to-top {
-	font-family: "Proxima Nova", "proxima-nova", "Futura", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: @proxima;
 	font-size: 12px;
 	text-transform: uppercase;
 
@@ -342,7 +338,7 @@ footer {
 	background: #f3f3f0;
 	position: relative;
 	left: 0;
-	bottom: 0;
+	bottom: -20px;
 	width: 100%;
 	margin: 40px 0 0 0;
 	padding: 5px 0 5px 0;
@@ -365,6 +361,36 @@ footer {
 
 /* EVENTS COMPONENTS*/
 
+.component-verses {
+	blockquote {
+	font-family: @skolar;
+	margin: 40px 0;
+	padding: 0 35% 0 35%;
+	color: @body-text;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-align: center;
+	border: none;
+
+	cite a {
+		font-family: @proxima;
+		display: block;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin: 10px 0;
+		color: #999;
+		
+		&:hover { color: @accent-color; }
+
+	}
+	p {
+		font-size: 20px;
+		letter-spacing: 5px;
+	}
+}
+}
+
 #main-content {
 	.component-events {
 	
@@ -376,6 +402,10 @@ footer {
 
 		&.even { 
 			background: #fff; 
+		}
+
+		a {
+			.border-radius(0 0 0 0);
 		}
 
 		.header {
@@ -415,22 +445,93 @@ footer {
 }
 
 #sidebar {
-.component-events {
-	
-	.entry {
-		padding: 0;
-		border: none;
-		margin: 10px 0;
-		background: #fff;
 
+a.info-link {
+	display: block;
+	margin: -5px 0 0 0;
+	background: darken(@gray-accent, 33.5%);
+	font-family: @proxima;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff !important;
+	padding: 7px 14px;
+
+	&:hover {
+		background: darken(@gray-accent, 40%);
+	}
+
+}	
+
+.component {
+	h3 {
+		margin-bottom: 10px;
+	}
+}
+
+
+.component-events {
+
+	.entry {
+		background: @gray-accent;
+		padding: 0 14px;
+		border: none;
+		margin: 0;
 		a {
-			padding: 10px;
-			border: 5px solid #ddd;
-			background: #fff;
+			min-height: 50px;
+			border: none;
+			background: @gray-accent;
+			padding: 15px 10px;
+			border-bottom: 1px solid darken(@gray-accent, 20%);
+			color: @body-text;
+
+			&:hover { color: @accent-color; }
+
+			.date {
+				width: 48px;
+				margin: 0 15px 0 -10px;
+				text-align: center;
+
+				.month {
+					display: block;
+					width: 48px;
+					background: @accent-color;
+					color: #fff;
+					font-weight: bold;
+					font-size: 12px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+				}
+
+				.day {
+					width: 48px;
+					background: #fff;
+					font-weight: bold;
+					font-size: 26px;
+					color: @body-text;
+					padding: 7px 0;
+				}
+
+			}
+
+			.info h4 {
+				padding: 5px 0 0 0;
+				vertical-align: center;
+				font-family: @skolar;
+				font-size: 18px;
+				line-height: 1.3;
+				font-weight: normal;
+			}
+
 		}
 
 		&.even { 
-			background: #fff; 
+			background: @gray-accent; 
+		}
+
+		&.last a {
+			padding-bottom: 18px;
 		}
 
 		.header {
@@ -440,7 +541,7 @@ footer {
 			a {
 				text-transform: none;
 				text-decoration: none;
-				color: #303030;
+				color: @body-text;
 
 				&:hover { 
 					color: #555; 
@@ -484,11 +585,33 @@ jon, please integrate this or delete it..
 
 .component-locations {
 	.map {
-		padding-top: 18px;
-
+		margin-bottom: 30px;
 		iframe {
-			margin-top: 0;
-			border: 10px solid #ddd;
+			width: 350px;
+			height: 197	px;
+			margin: 0;
+			border: 10px solid @gray-accent;
+		}
+		p {
+			a {
+				display: block;
+				margin: -5px 0 0 0;
+				padding:
+				width: 100%;
+				background: darken(@gray-accent, 33.5%);
+				font-family: @proxima;
+				font-size: 12px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #fff !important;
+				padding: 7px 14px;
+
+				&:hover {
+					background: darken(@gray-accent, 40%);
+				}
+
+			}
 		}
 	}
 }

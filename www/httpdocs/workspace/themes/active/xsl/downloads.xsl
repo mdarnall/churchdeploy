@@ -10,11 +10,11 @@
 
 	<xsl:if test="count($entries)">
 	
-		<!-- <div>
+		<div>
 			
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="'downloads'" />
-			</xsl:call-template> -->
+			</xsl:call-template>
 			
 			<h3>Documents</h3>
 			
@@ -22,7 +22,7 @@
 
 				<xsl:for-each select="$entries">
 		
-					<li>
+					<li class="entry">
 						
 						<!-- <xsl:call-template name="class-rows" /> -->
 						
@@ -71,7 +71,7 @@
 			
 			</ul>
 
-		<!-- </div> -->
+		</div>
 
 	</xsl:if>
 

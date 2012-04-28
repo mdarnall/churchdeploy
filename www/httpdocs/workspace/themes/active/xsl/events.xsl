@@ -23,18 +23,18 @@
 
 					<h3>
 						<xsl:call-template name="pluralize">
-							<xsl:with-param name="singular" select="'Event'"/>
-							<xsl:with-param name="plural" select="'Events'"/>
+							<xsl:with-param name="singular" select="'Upcoming Event'"/>
+							<xsl:with-param name="plural" select="'Upcoming Events'"/>
 							<xsl:with-param name="xpath" select="$entries"/>
 						</xsl:call-template>
 					</h3>
 
 					<ul class="events nav nav-tabs nav-stacked">
 
-						<xsl:call-template name="class-position">
+<!-- 						<xsl:call-template name="class-position">
 							<xsl:with-param name="component" select="'events'" />
 							<xsl:with-param name="classes" select="'events nav nav-tabs nav-stacked'"/>
-						</xsl:call-template>
+						</xsl:call-template> -->
 
 						<xsl:for-each select="$entries[ position() &lt; 4 ]">
 
@@ -42,7 +42,7 @@
 
 						</xsl:for-each>
 
-						<p><a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="btn btn-mini show-all">Show all</a></p>
+						<p><a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="info-link"><span data-icon="l"></span> See more events</a></p>
 
 						<div class="more hidden">
 
@@ -328,15 +328,13 @@
 
 		<a href="#">
 
-			<div class="btn disabled pull-left">
+			<div class="date pull-left">
 
 				<div class="month">
-					<span class="label label-important">
-						<xsl:call-template name="format-date">
-							<xsl:with-param name="date" select="date/date/start/@iso" />
-							<xsl:with-param name="format" select="'%m-;'" />
-						</xsl:call-template>
-					</span>
+					<xsl:call-template name="format-date">
+						<xsl:with-param name="date" select="date/date/start/@iso" />
+						<xsl:with-param name="format" select="'%m-;'" />
+					</xsl:call-template>
 				</div>
 
 				<div class="day">
@@ -354,8 +352,9 @@
 					<xsl:text> </xsl:text>
 					<xsl:value-of select="name" disable-output-escaping="yes" />
 				</h4>
+<!-- Hey Kirk, we decided against locations in the sidebar view for now, so I hid this. -->
 
-				<p>
+<!-- 				<p>
 
 					<xsl:text> &#160;</xsl:text>
 
@@ -385,7 +384,7 @@
 
 					</em>
 
-				</p>
+				</p> -->
 
 			</div>
 

@@ -355,7 +355,7 @@
 			<!--
 
 			Throwing error => see http://stackoverflow.com/questions/1386312/resource-interpreted-as-other-but-transferred-with-mime-type-text-javascript
-
+			
 			<script type="text/javascript" src="{$workspace}/js/reftagger.js"></script>
 
 			<script type="text/javascript">
@@ -369,6 +369,14 @@
 			</script>
 
 			-->
+			<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+			<script>
+			  WebFont.load({
+			    typekit: {
+			      id: 'tix6unz'
+			    }
+			  });
+			</script>
 
 		</body>
 
