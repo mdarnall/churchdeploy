@@ -225,7 +225,7 @@ body {
 	&:hover { color: darken(@accent-color, 10%); }
 }
 
-#main-content .description, p, blockquote {
+#main-content .description, p, blockquote, #main-content ul, #main-content ul li {
 	font-family: @skolar;
 	font-size: 16px;
 	line-height: 1.7;
@@ -238,9 +238,11 @@ body {
 	h1 {
 		font-weight: bold;
 		font-size: 64px;
-		line-height: 1.1;
+		line-height: 1.2;
 		letter-spacing: 1px;
 		font-weight: 900;
+		text-align: center;
+		padding: 40px 15%;
 	}
 	h2 {
 		font-weight: bold;
@@ -360,6 +362,19 @@ footer {
 }
 
 /* EVENTS COMPONENTS*/
+
+.column-full-width {
+	h2 {
+		margin: 40px 0;
+	}
+	.intro {
+		display: block;
+		font-size: 22px;
+		margin: 20px 0;
+		font-weight: 300;
+	}
+
+}
 
 .component-verses {
 	blockquote {
