@@ -22,61 +22,62 @@
 
 				<xsl:for-each select="//members-entries-by-tag/entry">
 					
-					<li class="entry">
-						
-						<!-- <xsl:call-template name="class-rows" /> -->
-						
-						<div class="pull-left">
-						
-							<img>
-
-								<xsl:attribute name="src">
-									
-									<xsl:value-of select="$root" />
-									
-									<xsl:choose>
-										<xsl:when test="$position = 'column-center'">
-											<xsl:text>/image/2/129/151/2/0</xsl:text>
-										</xsl:when>
-										<xsl:when test="$position = 'column-right'">
-											<xsl:text>/image/2/44/44/2/0</xsl:text>
-										</xsl:when>
-									</xsl:choose>
-									
-									<xsl:value-of select="photo/@path" />
-									<xsl:text>/</xsl:text>
-									<xsl:value-of select="photo/filename" />
-									
-								</xsl:attribute>
+						<li class="entry">
+							<a href="maito:{email}">
 							
-							</img>
-
-						</div>
-						
-						<div>
-							
-							<h4>
-								<xsl:text>&#160;&#160;</xsl:text>
-								<xsl:value-of select="first-name" disable-output-escaping="yes" />
-								<xsl:text> </xsl:text>
-								<xsl:value-of select="last-name" disable-output-escaping="yes" />
-							</h4>
-							
-							<p>
-								<xsl:text>&#160;&#160;</xsl:text>
-								<i class="icon-envelope"></i>
+							<div class="pull-left">
 								
-								<xsl:text>&#160;&#160;</xsl:text>
-								<a href="maito:{email}">
-									<xsl:value-of select="email" />
-								</a>
-							</p>
-							
-						</div>
+								<img>
 
-					</li>
+									<xsl:attribute name="src">
+										
+										<xsl:value-of select="$root" />
+										
+										<xsl:choose>
+											<xsl:when test="$position = 'column-center'">
+												<xsl:text>/image/2/129/151/2/0</xsl:text>
+											</xsl:when>
+											<xsl:when test="$position = 'column-right'">
+												<xsl:text>/image/2/44/44/2/0</xsl:text>
+											</xsl:when>
+										</xsl:choose>
+										
+										<xsl:value-of select="photo/@path" />
+										<xsl:text>/</xsl:text>
+										<xsl:value-of select="photo/filename" />
+										
+									</xsl:attribute>
+								
+								</img>
+
+							</div>
+							
+							<div class="info">
+								
+								<h4>
+									<xsl:text>&#160;&#160;</xsl:text>
+									<xsl:value-of select="first-name" disable-output-escaping="yes" />
+									<xsl:text> </xsl:text>
+									<xsl:value-of select="last-name" disable-output-escaping="yes" />
+								</h4>
+								
+								<p>
+									<xsl:text>&#160;&#160;</xsl:text>
+									<span data-icon="M"></span>
+									
+									<xsl:text>&#160;&#160;</xsl:text>
+					
+									<span class="email"><xsl:value-of select="email" /></span>
+
+								</p>
+								
+							</div>
+							</a>
+						</li>
+					
 					
 				</xsl:for-each>
+				<p><a href="/103/staff/" class="info-link"><span data-icon="g"></span> Meet our staff</a></p>
 			
 			</ul>
 
