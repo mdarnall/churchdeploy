@@ -24,7 +24,7 @@
 		
 					<li class="entry">
 						
-						<!-- <xsl:call-template name="class-rows" /> -->
+						<xsl:call-template name="class-rows" />
 						
 						<a>
 							
@@ -37,11 +37,9 @@
 								
 							</xsl:attribute>
 							
-							<h5 class="name">
-								<i class="icon-file"></i>
-								<xsl:text>&#160;&#160;</xsl:text>
-								<xsl:value-of select="name" />
-							</h5>
+							<span data-icon="F"></span>
+							<xsl:text>&#160;&#160;</xsl:text>
+							<xsl:value-of select="name" />
 							
 							<!-- <span class="meta">
 								

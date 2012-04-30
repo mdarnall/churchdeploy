@@ -192,7 +192,7 @@
 					<xsl:call-template name="alerts" />
 					<div class="row">
 						<div class="span12">
-							<div class="logo"><img src="../img/logo.png" /></div>
+							<div class="logo"><a href="{$root}"></a></div>
 							<ul class="main nav nav-pills">
 								<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 									<xsl:variable name="entry-id" select="@id" />
@@ -260,7 +260,7 @@
 					</section>
 				</div>
 
-				<p class="pull-right to-top"><a href="#">Back to top</a></p>
+				<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 				
 				<footer>
 					<div class="container">
