@@ -128,7 +128,7 @@
 								</li> -->
 							</ul>
 							<ul class="nav pull-right">
-								<li><a href="#"><i class="icon-time icon-white"></i>&#160;&#160;6:30am</a></li>
+								<li><a href="#"><span data-icon="t"></span>6:30am</a></li>
 								<!-- <li class="divider-vertical"></li> -->
 								<li>
 									<a href="#">
@@ -143,7 +143,7 @@
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:attribute>
-										<i class="icon-facetime-video icon-white"></i>
+										<span data-icon="V"></span>
 										<xsl:text>&#160;&#160;Live</xsl:text>
 										<xsl:choose>
 											<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">

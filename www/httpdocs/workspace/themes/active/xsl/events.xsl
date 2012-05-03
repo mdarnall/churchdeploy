@@ -264,12 +264,10 @@
 
 							<xsl:if test="$single">
 								<p>
-									<i class="icon-lock"></i>
 									<xsl:text> Paste link in </xsl:text>
 									<strong>email</strong>
 									<xsl:text> or </xsl:text>
 									<strong>IM</strong>
-									<br />
 									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="selectAllText($(this))" />
 								</p>
 							</xsl:if>
