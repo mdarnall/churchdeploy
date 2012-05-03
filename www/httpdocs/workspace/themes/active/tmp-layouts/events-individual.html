@@ -15,9 +15,9 @@
     <meta name="application-name" content="Athey Creek Christian Fellowship" />
     <meta name="msapplication-tooltip" content="To make Jesus known." />
     <meta name="msapplication-starturl" content="http://churchdeploy.com/" />
-    <link rel="stylesheet" href="http://72.10.33.203/workspace/themes/active/css/common.css" />
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link href="//get.pictos.cc/fonts/1414/1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://72.10.33.203/workspace/bootstrap/docs/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="http://72.10.33.203/workspace/bootstrap/docs/assets/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="/workspace/themes/active/css/common.css" />
   </head>
   <body data-spy="scroll" data-target=".subnav" data-offset="50" class="page-home layout-events">
     <div class="navbar navbar-fixed-top">
@@ -29,20 +29,13 @@
             <span class="icon-bar"></span>
           </a>
           <div class="nav-collapse">
-            <ul class="nav">
-              <li class="entry ">
-                <a href="http://72.10.33.203/">Login</a>
-              </li>
-              <li class="entry ">
-                <a href="http://72.10.33.203/">Prayer Request</a>
-              </li>
-            </ul>
+            <ul class="nav"></ul>
             <ul class="nav pull-right">
               <li>
-                <a href="#" data-icon="t"> 6:30am</a>
+                <a href="#">  6:30am</a>
               </li>
               <li>
-                <a href="#" class="modalLiveLink offline" data-icon="v"> Live<span class="status"> (offline)</span></a>
+                <a href="#" class="modalLiveLink offline"><i class="icon-facetime-video icon-white"></i>  Live<span class="status"> (offline)</span></a>
               </li>
             </ul>
           </div>
@@ -52,7 +45,7 @@
     <div class="modal fade modalLive" id="modalLive">
       <div class="modal-header">
         <a class="close">×</a>
-        <h3>Athey Creek Christian Fellowship — Live broadcast<span class="status"> (offline)</span></h3>
+        <h3>Athey Creek Christian Fellowship — Live Broadcast<span class="status"> (Offline)</span></h3>
       </div>
       <div class="modal-body">
         <div class="ustream-embed"></div>
@@ -61,218 +54,182 @@
     </div>
     <header class="mast" id="overview">
       <div class="container">
-	      <div class="row">
-	        <div class="span12">
-	         <div class="logo"><img src="../img/logo.png" /></div>
-	          <ul class="main nav nav-pills">
-              <li><a href="#">Meetings</a></li>
-              <li><a href="#">Teachings</a></li>
-              <li class="active"><a href="#">Events</a></li>
-              <li><a href="#">Ministries</a></li>
-              <li><a href="#">Give</a></li>
-              <li><a href="#">About</a></li>
+        <div class="row">
+          <div class="span12">
+            <div class="logo">
+              <a href="http://72.10.33.203"></a>
+            </div>
+            <ul class="main nav nav-pills">
+              <li class="entry clearfix odd first">
+                <a href="http://72.10.33.203/7761/meetings/">Meetings</a>
+              </li>
+              <li class="entry clearfix even middle">
+                <a href="http://72.10.33.203/21/teachings/">Teachings</a>
+              </li>
+              <li class="entry clearfix odd middle active">
+                <a href="http://72.10.33.203/20/events/">Events</a>
+              </li>
+              <li class="entry clearfix even middle">
+                <a href="http://72.10.33.203/22/ministries/">Ministries</a>
+              </li>
+              <li class="entry clearfix odd middle">
+                <a href="http://72.10.33.203/24/give/">Give</a>
+              </li>
+              <li class="entry clearfix even last">
+                <a href="http://72.10.33.203/18/about/">About</a>
+              </li>
             </ul>
-	        </div>
-	      </div>
+          </div>
+        </div>
       </div>
     </header>
-    <div id="main" class="container">
-      <div class="jumbotron masthead">
-          <h1>Seeing Jesus glorified<br /> from house to house</h1>
+    <div class="container" id="main">
+      <div class="jumbotron masthead" id="overview">
+        <h1>Events</h1>
       </div>
       <div class="row">
-        <section id="main-content" class="span8 column-center">
-          <div class="component component-events">
-            <div class="component-header">
-              <p>
-                <a href="http://72.10.33.203/20/events/">« Back to all events</a>
-              </p>
-            </div>
-            <div class="entry clearfix odd first last">
-              <div class="events-header">
-                <h2 class="header">Tim Hawkins LIVE</h2>
-                <div class="help-block clearfix">
-                  <span class="pull-left"><span class="date" data-icon="c"> Thu, May 10, 2012</span> &nbsp;<span class="time" data-icon="t"> 7:00 PM</span></span>
+        <section id="main-content" class="span12 column-center">
+          <div class="row">
+            <section id="main-content" class="span8 column-center">
+              <div class="component component-events">
+                <div class="component-header">
+                  <p>
+                    <a href="http://72.10.33.203/20/events/">« Back to all events</a>
+                  </p>
+                </div>
+                <div class="entry clearfix odd first last">
+                  <div class="events-header">
+                    <h2 class="header">Women’s Christmas Dinner <span class="label label-warning">This occured in the past</span></h2>
+                    <div class="help-block clearfix">
+                      <span class="pull-left"><span class="date"><i class="icon-calendar"></i> Tue, December 13, 2011</span>  <span class="time"><i class="icon-time"></i> 6:00 PM</span></span>
+                      <span class="pull-right">
+                        <a href="http://72.10.33.203/symphony/publish/events/edit/48/">Edit this event »</a>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="description"><p>It’s the most wonderful time of the year!  We will take an evening during this special month to gather and celebrate the birth of our Savior.  Dinner will be delicious, worship will be sweet and the fellowship will be warm.  To top it all off, Marna Slaughter will be sharing with us, which will be a special treat.  Please join us for a lovely evening to celebrate Christmas together.</p>
+
+<p>Cost: $20</p>
+
+<p>Questions: Email info@atheycreek.com or call (971)327-2120</p></div>
+                  <p>Share link <input type="text" name="permalink" class="span4" value="http://72.10.33.203/20/events/48/women-s-christmas-dinner/" onclick="selectAllText($(this))" /></p>
+                </div>
+                <div class="component-footer"></div>
+              </div>
+            </section>
+            <section id="sidebar" class="span4 column-right">
+              <div class="component component-locations">
+                <h3 class="header">Location</h3>
+                <div class="entry clearfix odd first last">
+                  <div class="map">
+                    <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=45.320392,-122.772479&amp;aq=&amp;sll=45.320392,-122.772479&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=45.320392,-122.772479&amp;output=embed"></iframe>
+                    <p>
+                      <a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=45.320392,-122.772479&amp;aq=&amp;sll=45.320392,-122.772479&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=45.320392,-122.772479"><span data-icon="G"></span> View on Google</a>
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="description"><p>Purchase tickets at TimHawkins.net</p>
-
-              <p>Cost:</p>
-
-              <ul>
-              <li>$20 - General Advance </li>
-              <li>$25 - General Door </li>
-              <li>$30 - Premium Advance</li>
-              </ul></div>
-              <p><i class="icon-lock"></i> Paste link in <strong>email</strong> or <strong>IM</strong><br><input type="text" name="permalink" class="span4" value="http://72.10.33.203/20/events/12610/tim-hawkins-live/" onclick="selectAllText($(this))"></p>
-            </div>
-            <div class="component-footer"></div>
-          </div>
-        </section>
-        <section id="sidebar" class="span4 column-right">
-          <div class="component component-locations">
-            <h3 class="header">Location</h3>
-            <div class="entry clearfix odd first last">
-              <div class="map">
-                <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=45.320392,-122.772479&amp;aq=&amp;sll=45.320392,-122.772479&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=45.320392,-122.772479&amp;output=embed"></iframe>
-                <p>
-                  <a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=45.320392,-122.772479&amp;aq=&amp;sll=45.320392,-122.772479&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=45.320392,-122.772479" style="color:#0000FF;text-align:left">View on Google »</a>
-                </p>
-              </div>
-            </div>
+            </section>
           </div>
         </section>
       </div>
-      <p class="pull-right">
-        <a href="#">Back to top</a>
+      <p class="pull-right to-top">
+        <a href="#">Back to top   ↥</a>
       </p>
       <footer>
         <div class="container">
-        <div class="row">
-        <div class="span2">
-          <ul class="nav nav-list">
-            <li class="nav-header">
-              <a href="http://72.10.33.203/22/ministries/">Ministries</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/25/men/">Men</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/26/women/">Women</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/31/college/">College</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/30/high-school/">High School</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/29/jr-high/">Jr. High</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/28/grade-school/">Grade School</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/27/children-0-k/">Children (0-K)</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/55/bulletin-board/">Bulletin Board</a>
-            </li>
-          </ul>
-        </div>
-        <div class="span2">
-          <ul class="nav nav-list">
-            <li class="nav-header">
-              <a href="http://72.10.33.203/74/home-groups/">Home Groups</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12491/aurora/">Aurora</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12492/beaverton/">Beaverton</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12493/hillsboro/">Hillsboro</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12623/north-plains/">North Plains</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12624/oregon-city/">Oregon City</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12625/portland/">Portland</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12626/sherwood/">Sherwood</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12627/tualatin/">Tualatin</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/12628/west-linn/">West Linn</a>
-            </li>
-          </ul>
-        </div>
-        <div class="span2">
-          <ul class="nav nav-list">
-            <li class="nav-header">
-              <a href="http://72.10.33.203/23/missions/">Missions</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/80/brazil/">Brazil</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/81/burkina-faso/">Burkina Faso</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/83/sweden/">Sweden</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/84/uganda/">Uganda</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/85/vanuatu/">Vanuatu</a>
-            </li>
-          </ul>
-        </div>
-        <div class="span2">
-          <ul class="nav nav-list">
-            <li class="nav-header">
-              <a href="http://72.10.33.203/18/about/">About</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/88/contact-us/">Contact Us</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/99/the-good-news/">The Good News</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/104/what-we-believe/">What We Believe</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/100/our-vision/">Our Vision</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/101/getting-involved/">Getting Involved</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/102/our-history/">Our History</a>
-            </li>
-            <li class="entry ">
-              <a href="http://72.10.33.203/103/staff/">Staff</a>
-            </li>
-          </ul>
-        </div>
-        <div class="span2">
-          <h4>Online Giving</h4>
-          <p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
-          <p>
-            <a href="#" class="btn btn-primary give">Give &rarr;</a>
-          </p>
-        </div>
-        <div class="span2">
-          <h4>Athey Creek Christian Fellowship</h4>
-          <address>
-							27520 SW 95th Ave.<br />
-							Wilsonville, Oregon 97070<br /><abbr title="Phone">P:</abbr> (971) 327-2123
-						</address>
-          <h4>Office Hours</h4>
-          <p>
-							9:00 AM to 5:00 PM — Tues., Thr., Fri.<br />
-							9:00 AM to 12:00 PM — Wed.<br />
-							Closed Monday
-						</p>
-        </div>
-        </div> <!-- end of .row -->
-        </div> <!-- end of .container -->
-            <div class="finish">
-              <div class="container">
-                <div class="row">
-                  <p>© 2012. <a href="http://72.10.33.203">Athey Creek Christian Fellowship</a>. All rights reserved.</p>
-                </div>
-              </div>
+          <div class="row">
+            <div class="span2">
+              <ul class="nav nav-list">
+                <li class="nav-header">
+                  <a href="http://72.10.33.203/22/ministries/">Ministries</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/25/men/">Men</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/26/women/">Women</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/31/college/">College</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/30/high-school/">High School</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/29/jr-high/">Jr. High</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/28/grade-school/">Grade School</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/27/children-0-k/">Children (0-K)</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/55/bulletin-board/">Bulletin Board</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/23/missions/">Missions</a>
+                </li>
+              </ul>
             </div>
+            <div class="span2">
+              <ul class="nav nav-list">
+                <li class="nav-header">
+                  <a href="http://72.10.33.203/18/about/">About</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/88/contact-us/">Contact Us</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/99/the-good-news/">The Good News</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/104/what-we-believe/">What We Believe</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/100/our-vision/">Our Vision</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/101/getting-involved/">Getting Involved</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/102/our-history/">Our History</a>
+                </li>
+                <li class="entry ">
+                  <a href="http://72.10.33.203/103/staff/">Staff</a>
+                </li>
+              </ul>
+            </div>
+            <div class="span2">
+              <h4>Online Giving</h4>
+              <p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
+              <p>
+                <a href="#" class="btn btn-primary give">Give →</a>
+              </p>
+            </div>
+            <div class="span2">
+              <h4>Athey Creek Christian Fellowship</h4>
+              <address>
+                  27520 SW 95th Ave.<br />
+                  Wilsonville, Oregon 97070<br /><abbr title="Phone">P:</abbr> (971) 327-2123
+                </address>
+              <h4>Office Hours</h4>
+              <p>
+                  9:00 AM to 5:00 PM — Tues., Thr., Fri.<br />
+                  9:00 AM to 12:00 PM — Wed.<br />
+                  Closed Monday
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="finish">
+          <div class="container">
+            <div class="row">
+              <p>© 2012. <a href="http://72.10.33.203">Athey Creek Christian Fellowship</a>. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <script type="text/javascript" src="http://72.10.33.203/workspace/js/jquery-1.7.1.min.js"></script>
@@ -295,11 +252,17 @@
     <script type="text/javascript" src="http://72.10.33.203/workspace/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
     <script type="text/javascript" src="http://72.10.33.203/workspace/bootstrap/docs/assets/js/application.js"></script>
     <script type="text/javascript" src="http://72.10.33.203/workspace/themes/active/js/common.js"></script>
-    <script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <!--[if lt IE 7 ]>
-			<script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-			<script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-			<![endif]-->
+      <script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+      <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script>
+        WebFont.load({
+          typekit: {
+            id: 'tix6unz'
+          }
+        });
+      </script>
   </body>
 </html>
