@@ -4141,3 +4141,9 @@ INSERT INTO `sym_fields_checkbox` (`field_id`, `default_state`) VALUES ('146', '
 UPDATE sym_fields SET  `element_name` = 'filter',  `label` = 'Filter',  `parent_section` = '6',  `location` = 'main',  `required` = 'no',  `type` = 'filter',  `show_column` = 'no',  `sortorder` = '10' WHERE  `id` = '169';
 DELETE FROM `sym_fields_filter` WHERE `field_id` = '169';
 INSERT INTO `sym_fields_filter` (`field_id`, `filter_publish`, `filter_publish_errors`, `filter_datasource`) VALUES ('169', NULL, 'no', 'yes');
+
+-- 2012-04-19 10:32:53, Kirk Strobeck, http://churchdeploy/symphony/system/extensions/
+INSERT INTO `sym_extensions` (`name`, `status`, `version`) VALUES ('scaffolds', 'enabled', '0.5');
+DELETE FROM sym_extensions_delegates WHERE  `extension_id` = '34 ';
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('34', '/backend/', 'InitaliseAdminPageHead', 'appendAssets');
+INSERT INTO `sym_extensions_delegates` (`extension_id`, `page`, `delegate`, `callback`) VALUES ('34', '/blueprints/sections/', 'AddSectionElements', 'addSectionElements');
