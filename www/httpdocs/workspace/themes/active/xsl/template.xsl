@@ -180,18 +180,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="finish">
-			<div class="container">
-				<div class="row">
-					<p>
-						<xsl:text>© </xsl:text>
-						<xsl:value-of select="$this-year" />
-						<xsl:text>. </xsl:text>
-						<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-						<xsl:text>. All rights reserved.</xsl:text>
-					</p>
-				</div>
-			</div>
+		<div class="baseline">
+			<xsl:text>© </xsl:text>
+			<xsl:value-of select="$this-year" />
+			<xsl:text>. </xsl:text>
+			<a href="{$root}"><xsl:value-of select="$website-name" /></a>
+			<xsl:text>. All rights reserved.</xsl:text>
 		</div>
 	</footer>
 
@@ -207,63 +201,20 @@
 
 <xsl:template name="template-footer-outside-container">
 
-	<script type="text/javascript" src="{$workspace}/js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery-ui.custom.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.color.js"></script>
+	<script type="text/javascript" src="{$workspace}/js/libs/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="{$workspace}/js/libs/jquery-ui.custom.min.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/plugins.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.cookie.js"></script>
-
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-alert.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-button.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-carousel.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-collapse.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-dropdown.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-modal.js"></script>			
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-scrollspy.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-tab.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-tooltip.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-transition.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-typeahead.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/js/bootstrap-popover.js"></script>
-
-	<script type="text/javascript" src="{$workspace}/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/docs/assets/js/application.js"></script>
-
+	<script type="text/javascript" src="{$workspace}/bootstrap/zip/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{$workspace}/themes/active/js/jquery.color.js"></script>
+	<script type="text/javascript" src="{$workspace}/themes/active/js/jquery.cookie.js"></script>
+	<!-- <script type="text/javascript" src="http://bible.logos.com/jsapi/referencetagging.js"></script> -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
-
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-	chromium.org/developers/how-tos/chrome-frame-getting-started -->
 
 	<xsl:comment><![CDATA[[if lt IE 7 ]>
 	<script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 	<script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]]]></xsl:comment>
-
-	<!--
-
-	Throwing error => see http://stackoverflow.com/questions/1386312/resource-interpreted-as-other-but-transferred-with-mime-type-text-javascript
-	
-	<script type="text/javascript" src="{$workspace}/js/reftagger.js"></script>
-
-	<script type="text/javascript">
-		Logos.ReferenceTagging.lbsBibleVersion = "KJV";
-		Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
-		Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
-		Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
-		Logos.ReferenceTagging.lbsTargetSite = "biblia";
-		Logos.ReferenceTagging.tag();
-		Logos.ReferenceTagging.lbsCssOverride = true;
-	</script>
-
-	-->
-	<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-	<script>
-	  WebFont.load({
-	    typekit: {
-	      id: 'tix6unz'
-	    }
-	  });
-	</script>
 
 </xsl:template>
 

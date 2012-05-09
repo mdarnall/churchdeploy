@@ -4,7 +4,23 @@
 $(document).ready(
     function() 
     {
+
+		WebFont.load({
+			typekit: {
+				id: 'tix6unz'
+			}
+		});
 		
+    	//reftagger
+    	/*
+    	Logos.ReferenceTagging.lbsBibleVersion = "KJV";
+		Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
+		Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
+		Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+		Logos.ReferenceTagging.lbsTargetSite = "biblia";
+		Logos.ReferenceTagging.tag();
+		Logos.ReferenceTagging.lbsCssOverride = true;
+		*/
 		// Reveal mini logo when scrolling down
 		
 //		$(window).scroll(
@@ -79,7 +95,28 @@ $(document).ready(
 	}
 );
 
+// exists
 
+jQuery.fn.exists = function() // test to see if an object exists
+{
+    return jQuery(this).length > 0;
+}
+
+
+// scroll to
+
+function scrollTo( obj, offset )
+{
+    $('html, body').animate(
+        {
+            scrollTop: $(obj).offset().top + offset
+        }, 
+        1000, 
+        'easeInOutCubic'
+    );
+    
+    return false;
+}  
 
 function selectAllText(obj) 
 {
