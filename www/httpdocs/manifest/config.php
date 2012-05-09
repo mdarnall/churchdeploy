@@ -49,7 +49,7 @@
 			'port' => '3306',
 			'user' => 'root',
 			'password' => 'root',
-			'db' => 'churchdeploy',
+			'db' => 'atheycreek',
 			'tbl_prefix' => 'sym_',
 		),
 		########
@@ -65,7 +65,7 @@
 		###### GENERAL ######
 		'general' => array(
 			'useragent' => 'Symphony/2.2.5',
-			'sitename' => 'Church Deploy',
+			'sitename' => 'Athey Creek Christian Fellowship',
 		),
 		########
 
@@ -126,8 +126,8 @@
 
 		###### EMAIL_SENDMAIL ######
 		'email_sendmail' => array(
-			'from_name' => 'churchdeploy',
-			'from_address' => 'noreply@churchdeploy.com',
+			'from_name' => 'atheycreek',
+			'from_address' => 'noreply@atheycreek.com',
 		),
 		########
 
@@ -135,13 +135,13 @@
 		###### EMAIL_SMTP ######
 		'email_smtp' => array(
 			'from_name' => 'Symphony',
-			'from_address' => 'noreply@churchdeploy',
+			'from_address' => 'noreply@atheycreek.com',
 			'host' => '127.0.0.1',
 			'port' => '25',
 			'secure' => 'no',
 			'auth' => '0',
-			'username' => 'kirkstrobeck',
-			'password' => 'c4angeblip4',
+			'username' => '',
+			'password' => '',
 		),
 		########
 

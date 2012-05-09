@@ -2,33 +2,38 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcelocations_entries_by_tag extends Datasource{
+	Class datasourceevents_entry_by_id extends Datasource{
 
-		public $dsParamROOTELEMENT = 'locations-entries-by-tag';
+		public $dsParamROOTELEMENT = 'events-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
+		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'142' => '{$pt1:43}',
+				'id' => '{$pt3}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name-formal: raw',
-				'name-casual: raw',
+				'name: raw',
+				'date',
 				'description',
-				'address',
-				'city',
-				'state',
-				'zip',
-				'latitude',
-				'longitude'
+				'location: name-formal: raw',
+				'location: name-casual: raw',
+				'location: description',
+				'location: address',
+				'location: city',
+				'location: state',
+				'location: zip',
+				'location: latitude',
+				'location: longitude',
+				'childcare',
+				'hidden'
 		);
 
 
@@ -39,18 +44,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Locations: Entries by tag',
+				'name' => 'Events: Entry by ID',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-09T10:01:32+00:00'
+				'release-date' => '2012-03-20T20:32:03+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '5';
+			return '6';
 		}
 
 		public function allowEditorToParse(){
