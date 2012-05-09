@@ -1,35 +1,28 @@
-// These are being added to HEAD, but should be added here to compile
-
+// these are being added to head, but should be added here to compile final optimized if we wanna get crazy agile
 // @import 'import.less'; // For importing CSS documents
 // @import '../../../bootstrap/less/bootstrap.less';
 // @import '../../../bootstrap/less/responsive.less';
-
 
 @import '../../../bootstrap/less/mixins.less';
 @import 'pictos.css';
 
 
-// LESS Variables
+// variables
 
-@white: #fff;
-@mast-color: #9fc9d4; // Mast Color (Aqua)
-@accent-color: #d83629; // Logo/Accent/Link Color (Red/Orange)
-@gray-accent: #eeeeee;
-@body-text: #303030;
-@sans: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
-@serif: "ff-tisa-web-pro", serif;
-@icons: "Pictos", sans-serif;
 @base: 10px;
+@color-accent: #d83629; // Logo/Accent/Link Color (Red/Orange)
+@color-body-text: #303030;
+@color-gray-accent: #eeeeee;
+@color-mast: #9fc9d4; // Mast Color (Aqua)
+@color-white: #fff;
+@font-sans: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+@font-serif: "ff-tisa-web-pro", serif;
+@icons: "Pictos", sans-serif;
 
-a {
-	color: @accent-color;
-	text-decoration: none;
-	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
 
-	&:hover { color: darken(@accent-color, 15%); text-decoration: none; }	
-}
 
-// Bootstrap Cleanup
+
+// bootstrap overrides
 
 [class^="icon-"] {
 	background-image: url(../../../bootstrap/img/glyphicons-halflings.png);
@@ -39,11 +32,64 @@ a {
 	background-image: url(../../../bootstrap/img/glyphicons-halflings-white.png);
 }
 
+#main-content .description, p, blockquote, #main-content ul, #main-content ul li {
+	font-family: @font-serif;
+	font-size: 16px;
+	line-height: 1.7;
+	font-weight: normal;
+	color: #303030;
+	margin-bottom: 20px;
+}
+
+.nav-tabs.nav-stacked > li > a { border: none; }
+
+// tags
+
+a {
+	color: @color-accent;
+	text-decoration: none;
+	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
+
+	&:hover { color: darken(@color-accent, 15%); text-decoration: none; }	
+}
+
 body {
 	background-image: none;
 	background: #fdfdfd;
-	font-family: @sans;
+	font-family: @font-sans;
 	color: #303030;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	font-weight: 900;
+	text-align: center;
+	padding: 40px 15%;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+blockquote {
+
+	h3 {
+		text-transform: none;
+		font-weight: normal;
+	}
 }
 
 [data-icon]:before {
@@ -58,6 +104,8 @@ body {
 	margin-right: 5px;
 	top: -1px;
 }
+
+
 
 .logo {
 
@@ -77,7 +125,7 @@ body {
 }
 
 .mast {
-	background: @mast-color;
+	background: @color-mast;
 	padding: 40px 0;
 	margin-top: 40px;
 
@@ -86,13 +134,9 @@ body {
 	}
 }
 
-/* Live modal */
-
 .modalLive {
 	width: 630px !important;
 }
-
-/* ALERT OVERRIDES */
 
 .alert {
 	border: 1px solid lighten(#468847, 25%);
@@ -115,8 +159,6 @@ body {
 	}
 }
 
-/* NAVBAR OVERRIDES */
-
 .navbar {
 
 	&.navbar-fixed-top {
@@ -125,7 +167,7 @@ body {
 
 	.navbar-inner {
 		background-image: none;
-		background-color: darken(desaturate(@mast-color, 10%), 10%);
+		background-color: darken(desaturate(@color-mast, 10%), 10%);
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -140,7 +182,7 @@ body {
 					text-shadow: none;
 
 					&:hover {
-						color: darken(@mast-color, 35%);
+						color: darken(@color-mast, 35%);
 					}
 				}
 			}
@@ -177,14 +219,14 @@ body {
 		display: inline-block;
 	
 		&.active a {
-			color: @accent-color;
+			color: @color-accent;
 			background: #fdfdfd;
 			background-image: none;
 			.box-shadow(none);
 
 			&:hover {
 				background: #E9E9E9;
-				color: @accent-color;
+				color: @color-accent;
 			}
 		}
 
@@ -220,107 +262,79 @@ body {
 	float: left;
 }
 
-.main.nav {
-	float: right;
-	text-transform: uppercase;
-	font-size: 18px;
-	margin-top: 45px;
-	padding-right: 17px;
-	font-weight: 300;
-	letter-spacing: 1px;
-}
+header {
+	.nav {
+		float: right;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-top: 45px;
+		padding-right: 17px;
+		font-weight: 300;
+		letter-spacing: 1px;
 
-.main.nav {
+		li {
+			margin-right: 10px;
+			
+			&.active { 
+				a {
+					background: none;
+					color: @color-accent;
 
-	li {
-		margin-right: 10px;
-		
-		&.active { 
-			a {
-				background: none;
-				color: @accent-color;
-
-				&:hover { 
-					color: darken(@accent-color, 10%); 
+					&:hover { 
+						color: darken(@color-accent, 10%); 
+					}
 				}
 			}
-		}
 
-		a {
-			color: #ffffff;
+			a {
+				color: #ffffff;
 
-			&:hover {
-				background: none;
-				color: darken(@mast-color, 35%);
+				&:hover {
+					background: none;
+					color: darken(@color-mast, 35%);
+				}
 			}
 		}
 	}
 }
 
-#main-content .description, p, blockquote, #main-content ul, #main-content ul li {
-	font-family: @serif;
-	font-size: 16px;
-	line-height: 1.7;
-	font-weight: normal;
-	color: #303030;
-	margin-bottom: 20px;
+.jumbotron {
+
+	h1 {
+		display: none;
+	}
 }
 
-h1 {
-	font-weight: bold;
-	font-size: 64px;
-	line-height: 1.2;
-	letter-spacing: 1px;
-	font-weight: 900;
-	text-align: center;
-	padding: 40px 15%;
+.column-center {
+	
+	h2 {
+		width: 80%;
+	}
 }
 
-h2 {
-	font-weight: bold;
-	font-size: 28px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
+.column-right {
 
-h3 {
-	font-weight: bold;
-	font-size: 18px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-
-blockquote h3 {
-	text-transform: none;
-	font-weight: normal;
-}
-
-.jumbotron h1 {
-	display: none;
-}
-
-#sidebar {
-
-	a.info-link {
+	.more {
 		display: block;
-		margin: -5px 0 0 0;
-		background: darken(@gray-accent, 33.5%);
-		font-family: @sans;
+		background: darken(@color-gray-accent, 33.5%);
+		font-family: @font-sans;
 		font-size: 12px;
 		font-weight: bold;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: #fff !important;
-		padding: 7px 14px;
+		height: @base * 5;
+		line-height: @base * 5;
+		padding: 0 0 0 @base * 1.5;
 
 		&:hover {
-			background: darken(@gray-accent, 40%);
+			background: darken(@color-gray-accent, 40%);
 		}
 	}
-}	
+}
 
 .to-top {
-	font-family: @sans;
+	font-family: @font-sans;
 	font-size: 12px;
 	text-transform: uppercase;
 	padding-bottom: 50px;
@@ -348,18 +362,6 @@ footer {
 	left: 0;
 	width: 100%;
 
-	h4 {
-		font-size: 11px;
-		line-height: 18px;
-		text-transform: uppercase;
-	}
-
-	li.entry.active a {
-		background: none;
-		color: @accent-color;
-		text-shadow: none;
-	}
-
 	a {
 		color: #333;
 	
@@ -385,36 +387,43 @@ footer {
 		line-height: inherit;
 		margin: 15px 0;
 	}
-}
 
-.finish {
-	background: #f3f3f0;
-	position: relative;
-	left: 0;
-	bottom: -20px;
-	width: 100%;
-	margin: 40px 0 0 0;
-	padding: 5px 0 5px 0;
-	font-size: 16px;
-
-	.row { 
-		text-indent: 30px; 
+	h4 {
+		font-size: 11px;
+		line-height: 18px;
+		text-transform: uppercase;
 	}
-	
-	p {
+
+	.active {
+		
+		a {
+			background: none;
+			color: @color-accent;
+			text-shadow: none;
+		}
+	}
+
+	.baseline {
+		background: #f3f3f0;
+		position: relative;
+		left: 0;
+		bottom: -20px;
+		width: 100%;
+		padding: @base * 2 @base * 2.5;
 		color: #aaa;
 		font-size: 14px;
-	}
-	
-	a { 
-		color: #aaa;
-	
-		&:hover {
-			color: @accent-color;
-			text-decoration: none;
+
+		a { 
+			color: #aaa;
+		
+			&:hover {
+				color: @color-accent;
+				text-decoration: none;
+			}
 		}
 	}
 }
+
 
 // column defaults ---------------------------------------------------------
 
@@ -422,13 +431,6 @@ footer {
 
 	h2 {
 		margin: 40px 0;
-	}
-
-	.intro {
-		display: block;
-		font-size: 22px;
-		margin: 20px 0;
-		font-weight: 300;
 	}
 
 	.columns-2 {
@@ -451,6 +453,13 @@ footer {
 		-o-column-count: 4; -o-column-gap:20px;
 		column-count: 4; column-gap:20px;
 	}
+
+	.intro {
+		display: block;
+		font-size: 22px;
+		margin: 20px 0;
+		font-weight: 300;
+	}	
 }
 
 //---------------------------------------------------------
@@ -490,33 +499,33 @@ footer {
 .component-downloads {
 
 	.entry {
-		background: @gray-accent;
+		background: @color-gray-accent;
 		padding: 0 14px;
 		border: none;
 		margin: 0;
 
 		a {
 			border: none;
-			background: @gray-accent;
+			background: @color-gray-accent;
 			padding: 30px 10px;
-			border-bottom: 1px solid darken(@gray-accent, 20%);
-			color: @body-text;
+			border-bottom: 1px solid darken(@color-gray-accent, 20%);
+			color: @color-body-text;
 			font-size: 14px;
 
 			&:hover { 
-				color: @accent-color; 
+				color: @color-accent; 
 			}
 
 			.date {
 				width: 48px;
 				margin: 0 15px 0 -10px;
 				text-align: center;
-				font-family: @sans;
+				font-family: @font-sans;
 
 				.month {
 					display: block;
 					width: 48px;
-					background: @accent-color;
+					background: @color-accent;
 					color: #fff;
 					font-weight: bold;
 					font-size: 12px;
@@ -529,14 +538,14 @@ footer {
 					background: #fff;
 					font-weight: bold;
 					font-size: 26px;
-					color: @body-text;
+					color: @color-body-text;
 					padding: 7px 0;
 				}
 			}
 		}
 
 		&.even { 
-			background: @gray-accent; 
+			background: @color-gray-accent; 
 		}
 
 		&.last a {
@@ -609,7 +618,7 @@ footer {
 	.component-events {
 
 		.entry {
-			background: @gray-accent;
+			background: @color-gray-accent;
 			padding: 0 14px;
 			border: none;
 			margin: 0;
@@ -617,25 +626,25 @@ footer {
 			a {
 				min-height: 50px;
 				border: none;
-				background: @gray-accent;
+				background: @color-gray-accent;
 				padding: 15px 10px;
-				border-bottom: 1px solid darken(@gray-accent, 20%);
-				color: @body-text;
+				border-bottom: 1px solid darken(@color-gray-accent, 20%);
+				color: @color-body-text;
 
 				&:hover { 
-					color: @accent-color; 
+					color: @color-accent; 
 				}
 
 				.date {
 					width: 48px;
 					margin: 0 15px 0 -10px;
 					text-align: center;
-					font-family: @sans;
+					font-family: @font-sans;
 
 					.month {
 						display: block;
 						width: 48px;
-						background: @accent-color;
+						background: @color-accent;
 						color: #fff;
 						font-weight: bold;
 						font-size: 12px;
@@ -648,7 +657,7 @@ footer {
 						background: #fff;
 						font-weight: bold;
 						font-size: 26px;
-						color: @body-text;
+						color: @color-body-text;
 						padding: 7px 0;
 					}
 				}
@@ -656,7 +665,7 @@ footer {
 				.info h4 {
 					padding: 5px 0 0 0;
 					vertical-align: center;
-					font-family: @serif;
+					font-family: @font-serif;
 					font-size: 18px;
 					line-height: 1.3;
 					font-weight: normal;
@@ -664,7 +673,7 @@ footer {
 			}
 
 			&.even { 
-				background: @gray-accent; 
+				background: @color-gray-accent; 
 			}
 
 			&.last a {
@@ -678,7 +687,7 @@ footer {
 				a {
 					text-transform: none;
 					text-decoration: none;
-					color: @body-text;
+					color: @color-body-text;
 
 					&:hover { 
 						color: #555; 
@@ -726,13 +735,13 @@ footer {
 			}
 
 			.link {
-				background: darken(@gray-accent, 40%);
+				background: darken(@color-gray-accent, 40%);
 			}
 		}
 
 		.map {
 			position: relative;
-			border: 10px solid @gray-accent;
+			border: 10px solid @color-gray-accent;
 			line-height: 0;
 			background-position: center;
 			height: 280px;
@@ -746,7 +755,7 @@ footer {
 
 			.screen {
 				display: none;
-				background: @white;
+				background: @color-white;
 				opacity: .75;
 				width: 100%;
 				height: 90px;
@@ -766,23 +775,26 @@ footer {
 			}
 		}
 
+		/*
+		taken care of above i think -> .more
 		.link {
 			display: block;
 			margin: -5px 0 0 0;
 			padding:
 			width: 100%;
-			background: darken(@gray-accent, 33.5%);
-			font-family: @sans;
+			background: darken(@color-gray-accent, 33.5%);
+			font-family: @font-sans;
 			font-size: 12px;
 			font-weight: bold;
 			letter-spacing: 1px;
 			text-transform: uppercase;
-			color: @white !important;
+			color: @color-white !important;
 			padding: 0 0 0 14px;
 			height: 50px;
 			line-height: 54px;
-			color: @white;
+			color: @color-white;
 		}
+		*/
 
 		.edit {
 			.edit-defaults;
@@ -799,50 +811,49 @@ footer {
 .component-member {
 
 	.entry {
-		background: @gray-accent;
-		padding: 0 14px;
-		border: none;
-		margin: 0;
+		background: @color-gray-accent;
 
 		a {
 			min-height: 50px;
-			border: none;
-			background: @gray-accent;
-			padding: 15px 10px;
-			border-bottom: 1px solid darken(@gray-accent, 20%);
-			color: @body-text;
+			background: @color-gray-accent;
+			padding: @base * 1.5;
+			border-bottom: 1px solid darken(@color-gray-accent, 20%);
+			color: @color-body-text;
+			height: 72px;
 
 			&:hover { 
-				color: @accent-color; 
+				color: @color-accent; 
 			}
 
 			img {
+				margin-right: @base;
+				.border-radius(100%);
 				width: 72px;
 				height: 72px;
-				margin: 0 10px 0 -10px;
-				.border-radius(36px);
 			}
 
 			.info  {
-				margin-bottom: -10px;
+
 				h4 {
-					padding: 10px 0 0 0;
+					padding: @base * 1.25 0 0 0;
+					margin-bottom: @base * .125;
 					vertical-align: center;
-					font-family: @serif;
+					font-family: @font-serif;
 					font-size: 18px;
 					line-height: 1.3;
 					font-weight: normal;
 				}
+
 				.email {
 					color: #999;
-					font-family: @sans;
+					font-family: @font-sans;
 					font-size: 14px;
 				}
 			}
 		}
 
 		&.even { 
-			background: @gray-accent; 
+			background: @color-gray-accent; 
 		}
 
 		&.last a {
@@ -857,17 +868,17 @@ footer {
 .component-verses {
 
 	blockquote {
-		font-family: @serif;
+		font-family: @font-serif;
 		margin: 40px 0;
 		padding: 0 35% 0 35%;
-		color: @body-text;
+		color: @color-body-text;
 		font-size: 16px;
 		letter-spacing: 1px;
 		text-align: center;
 		border: none;
 
 		cite a {
-			font-family: @sans;
+			font-family: @font-sans;
 			display: block;
 			font-size: 12px;
 			text-transform: uppercase;
@@ -876,7 +887,7 @@ footer {
 			color: #999;
 			
 			&:hover { 
-				color: @accent-color; 
+				color: @color-accent; 
 			}
 		}
 

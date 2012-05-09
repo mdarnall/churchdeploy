@@ -51,9 +51,8 @@
 
             <link rel="dns-prefetch" href="//ajax.googleapis.com" />
 
-			<link rel="stylesheet" href="{$workspace}/bootstrap/docs/assets/css/bootstrap.css" />		
-			<link rel="stylesheet" href="{$workspace}/bootstrap/docs/assets/css/bootstrap-responsive.css" />
-			<link rel="stylesheet" href="{$workspace}/css/common.css" />
+			<link rel="stylesheet" href="{$workspace}/bootstrap/zip/css/bootstrap.min.css" />		
+			<link rel="stylesheet" href="{$workspace}/bootstrap/zip/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
 
 			<meta charset="utf-8" />
@@ -69,6 +68,8 @@
 			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
 			<meta name="responsimage" data-server="{$root}/image/2/width/height/anchor/0/uploads/images/filename" />
 			
+			<script src="{$workspace}/js/libs/modernizr-2.5.3.min.js"></script>
+
 			<xsl:call-template name="template-head"/>
 
 		</head>
