@@ -10,6 +10,7 @@
 <xsl:include href="../themes/active/xsl/members.xsl" />
 <xsl:include href="../themes/active/xsl/text.xsl" />
 <xsl:include href="../themes/active/xsl/verses.xsl" />
+<xsl:include href="../themes/active/xsl/videos.xsl" />
 
 
 
@@ -41,6 +42,9 @@
 			<xsl:when test="name($xpath) = 'column-right'">
 				
 				<section id="sidebar" class="span4 column-right">
+
+					<xsl:call-template name="template-column-right-top"/>
+
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath"/>
 					</xsl:call-template>
@@ -82,14 +86,6 @@
 				</xsl:when>
 
 				<!-- Related entried -->
-				<xsl:when test="count(//events-entries-by-tag-related/entry) and $pt5 = 'related'">
-					<xsl:call-template name="component-events">
-						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//events-entries-by-tag-related/entry" />
-					</xsl:call-template>
-				</xsl:when>
-
-				<!-- Related entried (past) -->
 				<xsl:when test="count(//events-entries-by-tag-related/entry) and $pt5 = 'related'">
 					<xsl:call-template name="component-events">
 						<xsl:with-param name="position" select="name($xpath)" />
@@ -152,7 +148,6 @@
 				</xsl:otherwise>
 
 			</xsl:choose>
-
 			
 		</xsl:if>
 		
@@ -194,6 +189,13 @@
 			<xsl:call-template name="component-verses">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//verses-entries-by-tag/entry" />
+			</xsl:call-template>
+		</xsl:if>
+
+		<xsl:if test=". = 'videos'">
+			<xsl:call-template name="component-videos">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//videos-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
 	

@@ -206,13 +206,9 @@
 							
 									</span>
 
-									<xsl:if test="$cookie-username">
-										<span class="pull-right">
-											<a href="{$root}/symphony/publish/events/edit/{@id}/">
-												<xsl:text>Edit this event »</xsl:text>
-											</a>
-										</span>
-									</xsl:if>
+									<xsl:call-template name="edit-entry">
+										<xsl:with-param name="link" select="concat($root, '/symphony/publish/events/edit/', @id, '/')" />
+									</xsl:call-template>
 
 									<!-- <span class="pull-right"> -->
 
@@ -264,10 +260,8 @@
 
 							<xsl:if test="$single">
 								<p>
-									<xsl:text> Paste link in </xsl:text>
-									<strong>email</strong>
-									<xsl:text> or </xsl:text>
-									<strong>IM</strong>
+									<em>Paste link in email or IM</em>
+									<br />
 									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="selectAllText($(this))" />
 								</p>
 							</xsl:if>

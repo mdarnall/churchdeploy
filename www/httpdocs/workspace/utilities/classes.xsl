@@ -3,6 +3,44 @@
 
 
 
+<xsl:template name="class-nav">
+
+	<!-- 
+	
+	Call on the component container
+
+	<xsl:call-template name="class-nav">
+		<xsl:with-param name="xpath" select="." />
+		<xsl:with-param name="classes" select="'additional classes'" />
+	</xsl:call-template>
+
+	-->
+	<xsl:param name="xpath" />
+	<xsl:param name="class" />
+
+	<xsl:attribute name="class">
+
+		<xsl:text>entry </xsl:text>
+
+		<xsl:if test="
+			$pt1 = @id or 
+			//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id or
+			not($pt1) and tag/@handle = 'home'
+		">
+			<xsl:text>active</xsl:text>
+		</xsl:if>
+
+		<xsl:if test="string-length($class)">
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="$class" disable-output-escaping="yes" />
+		</xsl:if>
+
+	</xsl:attribute>
+	
+</xsl:template>
+
+
+
 <xsl:template name="class-position">
 	
 	<!-- 
@@ -15,7 +53,7 @@
 
 	-->
 	<xsl:param name="component" />
-	<xsl:param name="classes" />
+	<xsl:param name="class" />
 
 	<xsl:attribute name="class">
 		
@@ -23,10 +61,10 @@
 		
 		<xsl:text>component-</xsl:text>
 		<xsl:value-of select="$component" disable-output-escaping="yes" />
-		
-		<xsl:if test="string-length($classes)">
+
+		<xsl:if test="string-length($class)">
 			<xsl:text> </xsl:text>
-			<xsl:value-of select="$classes" />
+			<xsl:value-of select="$class" disable-output-escaping="yes" />
 		</xsl:if>
 
 	</xsl:attribute>
@@ -44,7 +82,6 @@
 	-->
 	
 	<xsl:param name="class" />
-	<xsl:param name="nav" />
 	
 	<xsl:attribute name="class">
 	
@@ -89,17 +126,11 @@
 			
 		</xsl:if>
 		
-		<xsl:if test="$nav">
-			<xsl:if test="
-				$pt1 = @id or 
-				//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id
-			">
-				<xsl:text> active</xsl:text>
-			</xsl:if>
+		<xsl:if test="string-length($class)">
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="$class" disable-output-escaping="yes" />
 		</xsl:if>
-		
-		<xsl:value-of select="$class" disable-output-escaping="yes" />
-		
+	
 	</xsl:attribute>
 
 </xsl:template>

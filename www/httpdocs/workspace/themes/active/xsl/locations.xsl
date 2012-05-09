@@ -26,19 +26,52 @@
 			
 			<xsl:for-each select="$entries">
 				
+				<xsl:variable name="address">
+					<xsl:call-template name="url-encode">
+						<xsl:with-param name="str" select="concat(address, ' ', city, ' ', state, ' ', zip)"/>
+					</xsl:call-template>
+				</xsl:variable>
+
 				<div>
 					
 					<xsl:call-template name="class-rows" />
 					
 					<xsl:if test="string-length(longitude) and string-length(latitude)">
 						
-						<div class="map">
-						
-							<iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={latitude},{longitude}&amp;aq=&amp;sll={latitude},{longitude}&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll={latitude},{longitude}&amp;output=embed"></iframe>
-							
-							<p><a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q={latitude},{longitude}&amp;aq=&amp;sll={latitude},{longitude}&amp;sspn=0.021183,0.032616&amp;vpsrc=0&amp;safe=on&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll={latitude},{longitude}"><span data-icon="G"></span> View on Google</a></p>
-											
+						<div class="map" style="background-image: url('http://maps.googleapis.com/maps/api/staticmap?center={$address}&amp;zoom=14&amp;size=350x280&amp;markers={$address}&amp;maptype=roadmap&amp;sensor=false&amp;scale=1')">
+
+							<div class="screen"></div>
+
+							<address>
+								<h4>
+									<xsl:choose>
+										<xsl:when test="string-length(name-casual)">
+											<xsl:value-of select="name-casual" disable-output-escaping="yes" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="name-formal" disable-output-escaping="yes" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</h4>
+								<xsl:value-of select="address" />
+								<br />
+								<xsl:value-of select="city" />
+								<xsl:text>, </xsl:text>
+								<xsl:value-of select="state" />
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="zip" />
+							</address>
+
+							<xsl:call-template name="edit-entry">
+								<xsl:with-param name="link" select="concat($root, '/symphony/publish/locations/edit/', @id, '/')" />
+							</xsl:call-template>
+
 						</div>
+
+						<a href="http://maps.google.com/maps?q={$address}" class="link" target="_blank">
+							<span data-icon="G"></span>
+							<xsl:text> View on Google Maps</xsl:text>
+						</a>
 						
 					</xsl:if>
 			
@@ -51,7 +84,6 @@
 	</xsl:if>
 	
 </xsl:template>
-
 
 
 </xsl:stylesheet>

@@ -2,6 +2,61 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+<!-- 
+
+Toolkit
+
+-->
+<xsl:template name="toolkit">
+
+    <xsl:if test="$pt1 = 'toolkit' and $pt2 = 'images'">
+        
+        <h2>New</h2>
+
+        <xsl:if test="//images-create/message or //images-create/image/@message">
+            <p>
+                <b><xsl:value-of select="//images-create/message" /></b>
+                <br />
+                <xsl:value-of select="//images-create/image/@message" />
+            </p>
+        </xsl:if>
+        
+        <form method="post" action="" enctype="multipart/form-data">
+            <label>Image <input name="fields[image]" type="file" style="width: 200px; background: #fff; border: solid 1px #ccc; padding: 15px; margin: 15px 0;" /></label>
+            <input name="action[images-create]" type="submit" value="Submit" class="btn btn-primary" />
+        </form>
+
+        <p><a href="{$root}/symphony/publish/images/new/">Use the multiple file uploader »</a></p>
+
+        <xsl:if test="//images-toolkit-all-entries-filtered/entry">
+            <hr />
+            <table border="1" style="border-collapse: collapse">
+                <xsl:for-each select="//images-toolkit-all-entries-filtered/entry">
+                    <tr>
+                        <td style="padding: 10px">
+                            <img src="{$root}/image/2/0/50/5/0{image/@path}/{image/filename}" style="border: #000 1px solid" />
+                        </td>
+                        <td style="padding: 10px">
+                            <input value='&lt;img data-responsimage="{image/filename}" style="width: 350px; height: 200px;" class="inline" /&gt;' style="width: 550px; font-size: 13px" onclick="this.select()" />
+                            <p style="font-size: 12px; margin: 5px 0; font-family: helvetica">
+                                Filesize: <xsl:value-of select="image/@size" /> | 
+                                Type: <xsl:value-of select="image/@type" /> | 
+                                Created: <xsl:value-of select="image/meta/@creation" /> | 
+                                Original size: <xsl:value-of select="image/meta/@width" />x<xsl:value-of select="image/meta/@height" />
+                            </p>
+                        </td>
+                        <td style="padding: 10px">
+                            <a href="{$root}/symphony/publish/images/edit/{@id}/">Edit/Delete »</a>
+                        </td>
+                    </tr>
+                </xsl:for-each>
+            </table>
+        </xsl:if>
+
+    </xsl:if>
+
+</xsl:template>
+
 
 <!-- 
 
@@ -20,7 +75,11 @@ Global date formatting
 </xsl:template>
 
 
+<!-- 
 
+Global Pagination
+
+-->
 <xsl:template name="cd-pagination">
     
     <xsl:param name="pagination"     select="$pagination" />
@@ -49,6 +108,8 @@ Global date formatting
 
 
 <!-- 
+
+Pluralization
 
 Count items to check for pluralization
 
@@ -170,9 +231,6 @@ Search and replace
         </xsl:otherwise>
     </xsl:choose>
 </xsl:template>
-
-
-
 
 
 
