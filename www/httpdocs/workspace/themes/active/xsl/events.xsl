@@ -30,11 +30,11 @@
 					</h3>
 
 					<ul class="events nav nav-tabs nav-stacked">
-
-<!-- 						<xsl:call-template name="class-position">
+				
+						<xsl:call-template name="class-position">
 							<xsl:with-param name="component" select="'events'" />
 							<xsl:with-param name="classes" select="'events nav nav-tabs nav-stacked'"/>
-						</xsl:call-template> -->
+						</xsl:call-template> 
 
 						<xsl:for-each select="$entries[ position() &lt; 4 ]">
 
@@ -42,13 +42,13 @@
 
 						</xsl:for-each>
 
-						<p><a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="info-link"><span data-icon="l"></span> See more events</a></p>
+						<a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
+							<span data-icon="l"></span>
+							<xsl:text>See more events</xsl:text>
+						</a>
 
-						<div class="more hidden">
 
 							<xsl:call-template name="column-right-events-entry"/>
-
-						</div>
 
 					</ul>
 
@@ -72,7 +72,6 @@
 							</xsl:otherwise>
 
 						</xsl:choose>
-						
 
 					</div>
 

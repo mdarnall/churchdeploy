@@ -39,24 +39,26 @@
 					<ul class="nav pull-right">
 						<li><a href="#"><span data-icon="t"></span>6:30am</a></li>
 						<!-- <li class="divider-vertical"></li> -->
-						<li>
-							<a href="#">
-								<xsl:attribute name="class">
-									<xsl:text>modalLiveLink</xsl:text>
-									<xsl:choose>
-										<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
-											<xsl:text> online</xsl:text>
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:text> offline</xsl:text>
-										</xsl:otherwise>
-									</xsl:choose>
-								</xsl:attribute>
-								<span data-icon="V" style="top: 1px; position: relative"></span>
-								<xsl:text>Live</xsl:text>
-								<xsl:call-template name="live-status"/>
-							</a>
-						</li>
+
+						<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
+							<li>
+								<a href="#">
+									<xsl:attribute name="class">
+										<xsl:text>modalLiveLink</xsl:text>
+										<xsl:choose>
+											<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
+												<xsl:text> online</xsl:text>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:text> offline</xsl:text>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:attribute>
+									<span data-icon="V" style="top: 1px; position: relative"></span>
+									<xsl:text>Live</xsl:text>									
+								</a>
+							</li>
+						</xsl:if>
 					</ul>
 				</div>
 			</div>
@@ -92,9 +94,22 @@
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 							<xsl:variable name="entry-id" select="@id" />
 							<li>
-								<xsl:call-template name="class-rows">
-									<xsl:with-param name="nav" select="true()"/>
-								</xsl:call-template>
+								<xsl:choose>
+									<xsl:when test="
+										@id = $pt1 or 
+										//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id
+										">
+										<xsl:call-template name="class-rows">
+											<xsl:with-param name="nav" select="true()"/>
+											<xsl:with-param name="class" select="'active'" />
+										</xsl:call-template>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:call-template name="class-rows">
+											<xsl:with-param name="nav" select="true()"/>
+										</xsl:call-template>
+									</xsl:otherwise>
+								</xsl:choose>
 								<a href="{$root}/{@id}/{description/@handle}/">
 									<xsl:call-template name="tag-href" />
 									<xsl:value-of select="tag" />
@@ -159,12 +174,12 @@
 					</div>
 				</xsl:for-each>
 				
-				<div class="span2">
+				<div class="offset1 span3">
 					<h4>Online Giving</h4>
 					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
 					<p><a href="#" class="btn btn-primary give">Give →</a></p>
 				</div>
-				<div class="span2">
+				<div class="span3">
 					<h4><xsl:value-of select="$website-name" /></h4>
 					<address>
 						27520 SW 95th Ave.<br />
@@ -181,11 +196,17 @@
 			</div>
 		</div>
 		<div class="baseline">
-			<xsl:text>© </xsl:text>
-			<xsl:value-of select="$this-year" />
-			<xsl:text>. </xsl:text>
-			<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-			<xsl:text>. All rights reserved.</xsl:text>
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<xsl:text>© </xsl:text>
+						<xsl:value-of select="$this-year" />
+						<xsl:text>. </xsl:text>
+						<a href="{$root}"><xsl:value-of select="$website-name" /></a>
+						<xsl:text>. All rights reserved.</xsl:text>						
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 
@@ -201,14 +222,9 @@
 
 <xsl:template name="template-footer-outside-container">
 
-	<script type="text/javascript" src="{$workspace}/js/libs/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/libs/jquery-ui.custom.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/plugins.js"></script>
-	<script type="text/javascript" src="{$workspace}/bootstrap/zip/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/themes/active/js/jquery.color.js"></script>
-	<script type="text/javascript" src="{$workspace}/themes/active/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
+	<script type="text/javascript" src="{$workspace}/themes/active/js/plugins.min.js"></script>
 	<!-- <script type="text/javascript" src="http://bible.logos.com/jsapi/referencetagging.js"></script> -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
 
 	<xsl:comment><![CDATA[[if lt IE 7 ]>

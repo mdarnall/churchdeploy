@@ -22,18 +22,21 @@
 					
 				<xsl:for-each select="$entries">
 				
-					<blockquote>
+					<div class="span6 offset3">
+						
+						<blockquote>
 
-						<span><xsl:text>&#8220;</xsl:text><xsl:value-of select="//xml-apibibliacom/text" /><xsl:text>&#8221;</xsl:text></span>
+							<span><xsl:text>&#8220;</xsl:text><xsl:value-of select="//xml-apibibliacom/text" /><xsl:text>&#8221;</xsl:text></span>
 
-						<cite>
-							<a href="#" class="verse">
-								<xsl:value-of select="passage" />
-							</a>
-						</cite>
+							<cite>
+								<a href="#" class="verse">
+									<xsl:value-of select="passage" />
+								</a>
+							</cite>
 
-					</blockquote>
-			
+						</blockquote>
+					</div>
+
 				</xsl:for-each>
 
 			</div>
