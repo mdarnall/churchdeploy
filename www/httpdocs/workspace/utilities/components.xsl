@@ -161,10 +161,10 @@
 		<xsl:if  test=". = 'teachings'">
 			<xsl:choose>
 
-				<xsl:when test="count(//events-all-entries-filtered/entry)">
+				<xsl:when test="count(//teachings-all-entries/entry)">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//teachings-all-entries-filtered/entry" />
+						<xsl:with-param name="entries" select="//teachings-all-entries/entry" />
 					</xsl:call-template>
 				</xsl:when>
 

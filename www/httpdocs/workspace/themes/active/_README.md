@@ -1,4 +1,3 @@
-# Theme: Default
+# Theme: Athey Creek
 
-This theme is the default theme.
-Comes rigged up with all essentials. Primarily uses bootstrap by Twitter.
+This theme is used by Athey Creek church at http://atheycreek.com

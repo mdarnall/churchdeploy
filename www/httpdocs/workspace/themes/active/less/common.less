@@ -4,8 +4,20 @@
 // @import '../../../bootstrap/less/responsive.less';
 
 @import '../../../bootstrap/less/mixins.less';
-@import 'pictos.css';
+@import 'pictos.less';
 
+
+
+
+address, pre, span, h1, h2, h3, h4, h5, h6, p, block, li {
+	visibility: hidden;
+}
+
+.wf-active {
+	address, pre, span, h1, h2, h3, h4, h5, h6, p, block, li {
+		visibility: visible;
+	}
+}
 
 // variables
 
@@ -18,8 +30,6 @@
 @font-sans: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
 @font-serif: "ff-tisa-web-pro", serif;
 @icons: "Pictos", sans-serif;
-
-
 
 
 // bootstrap overrides
@@ -42,6 +52,11 @@
 }
 
 .nav-tabs.nav-stacked > li > a { border: none; }
+.nav-pills > li > a { .border-radius(0); }
+.mast .nav-pills .active * { background: none !important; }
+.mast .nav-pills > li > a { padding: @base * .5 0; margin: 0 0 0 @base * 2.5; }
+.mast .nav-pills { margin-right: 5px; }
+
 
 // tags
 
@@ -50,7 +65,18 @@ a {
 	text-decoration: none;
 	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
 
-	&:hover { color: darken(@color-accent, 15%); text-decoration: none; }	
+	&:hover { 
+		color: darken(@color-accent, 15%); 
+		text-decoration: none; 
+	}	
+}
+
+blockquote {
+
+	h3 {
+		text-transform: none;
+		font-weight: normal;
+	}
 }
 
 body {
@@ -84,13 +110,10 @@ h3 {
 	letter-spacing: 2px;
 }
 
-blockquote {
 
-	h3 {
-		text-transform: none;
-		font-weight: normal;
-	}
-}
+
+
+// classes
 
 [data-icon]:before {
 	content: attr(data-icon);
@@ -104,8 +127,6 @@ blockquote {
 	margin-right: 5px;
 	top: -1px;
 }
-
-
 
 .logo {
 
@@ -166,8 +187,7 @@ blockquote {
 	}
 
 	.navbar-inner {
-		background-image: none;
-		background-color: darken(desaturate(@color-mast, 10%), 10%);
+		background: darken(desaturate(@color-mast, 10%), 10%);
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -191,10 +211,9 @@ blockquote {
 }
 
 .edit-tag {
-	position: absolute;
+	.edit-defaults;
 	top: @base;
 	right: @base;
-	z-index: 500;
 }
 
 .subnav {
@@ -220,12 +239,12 @@ blockquote {
 	
 		&.active a {
 			color: @color-accent;
-			background: #fdfdfd;
 			background-image: none;
 			.box-shadow(none);
+			background: #E9E9E9;
 
 			&:hover {
-				background: #E9E9E9;
+				background: #ddd;
 				color: @color-accent;
 			}
 		}
@@ -235,20 +254,6 @@ blockquote {
 			font-size: 12px;
 			line-height: 18px;
 			font-weight: normal;
-		}
-	}
-}
-
-.nav-pills {
-
-	li {
-
-		a {
-			.border-radius(0);
-
-			&:hover {
-				background: #E9E9E9;
-			}
 		}
 	}
 }
@@ -408,7 +413,6 @@ footer {
 		position: relative;
 		left: 0;
 		bottom: -20px;
-		width: 100%;
 		padding: @base * 2 @base * 2.5;
 		color: #aaa;
 		font-size: 14px;
@@ -484,11 +488,9 @@ footer {
 
 .edit-defaults {
 	position: absolute;
-	right: @base;
-	top: @base;
 	border: none !important;
 	background: none;
-	z-index: 500;
+	z-index: 10000;
 	padding: 0;
 	margin: 0;
 }
@@ -607,7 +609,9 @@ footer {
 			}
 
 			.edit {
-				margin-left: @base;
+				.edit-defaults;
+				top: @base;
+				right: @base;
 			}
 		}
 	}
@@ -716,6 +720,23 @@ footer {
 	}
 }
 
+// images ---------------------------------------------------------
+
+.component-images {
+
+	.entry {
+		position: relative;
+
+		.edit {
+			.edit-defaults;
+			top: @base;
+			right: @base;
+			background: #fff;
+			padding: 2px 2px 1px 4px;
+		}
+	}
+}
+
 
 // locations ---------------------------------------------------------
 
@@ -798,7 +819,6 @@ footer {
 
 		.edit {
 			.edit-defaults;
-			top: auto;
 			bottom: @base;
 			right: @base;
 		}
@@ -869,8 +889,8 @@ footer {
 
 	blockquote {
 		font-family: @font-serif;
-		margin: 40px 0;
-		padding: 0 35% 0 35%;
+		margin: @base * 4 0;
+		//padding: 0 35% 0 35%;
 		color: @color-body-text;
 		font-size: 16px;
 		letter-spacing: 1px;

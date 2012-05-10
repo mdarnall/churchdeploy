@@ -7,8 +7,8 @@
 		public $dsParamROOTELEMENT = 'teachings-all-entries';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '{$pt4}';
-		public $dsParamSTARTPAGE = '{$pt3}';
+		public $dsParamLIMIT = '{$pt4:10}';
+		public $dsParamSTARTPAGE = '{$pt3:1}';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
@@ -37,10 +37,10 @@
 				'name' => 'Teachings: All entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-14T03:40:19+00:00'
+				'release-date' => '2012-05-09T23:31:51+00:00'
 			);
 		}
 

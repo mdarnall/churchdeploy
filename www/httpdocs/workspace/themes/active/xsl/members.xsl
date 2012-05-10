@@ -24,7 +24,7 @@
 						<a href="maito:{email}">
 
 							<div class="pull-left">
-								<img height="100%">
+								<img>
 									<xsl:attribute name="src">
 										<xsl:value-of select="$root" />
 										<xsl:choose>
@@ -32,7 +32,7 @@
 												<xsl:text>/image/2/129/151/2/0</xsl:text>
 											</xsl:when>
 											<xsl:when test="$position = 'column-right'">
-												<xsl:text>/image/2/44/44/2/0</xsl:text>
+												<xsl:text>/image/2/72/72/2/0</xsl:text>
 											</xsl:when>
 										</xsl:choose>
 										<xsl:value-of select="photo/@path" />
