@@ -1,6 +1,3 @@
-
-#From https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess
-
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
@@ -54,15 +51,19 @@
 # CORS-enabled images (@crossorigin)
 # ----------------------------------------------------------------------
 
-# Send CORS headers if browsers request them; enabled by default.
+# Send CORS headers if browsers request them; enabled by default for images.
 # developer.mozilla.org/en/CORS_Enabled_Image
 # blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
 # hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+# wiki.mozilla.org/Security/Reviews/crossoriginAttribute
 
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
-    SetEnvIf Origin ":" IS_CORS
-    Header set Access-Control-Allow-Origin "*" env=IS_CORS
+    # mod_headers, y u no match by Content-Type?!
+    <FilesMatch "\.(gif|png|jpe?g|svg|svgz|ico|webp)$">
+      SetEnvIf Origin ":" IS_CORS
+      Header set Access-Control-Allow-Origin "*" env=IS_CORS
+    </FilesMatch>
   </IfModule>
 </IfModule>
 
@@ -123,7 +124,7 @@ AddType application/x-chrome-extension      crx
 AddType application/x-opera-extension       oex
 AddType application/x-xpinstall             xpi
 AddType application/octet-stream            safariextz
-AddType application/x-web-app-manifest+json webapp 
+AddType application/x-web-app-manifest+json webapp
 AddType text/x-vcard                        vcf
 
 
@@ -263,10 +264,6 @@ AddType text/x-vcard                        vcf
 # CSS and JavaScript
   ExpiresByType text/css                  "access plus 1 year"
   ExpiresByType application/javascript    "access plus 1 year"
-
-  <IfModule mod_headers.c>
-    Header append Cache-Control "public"
-  </IfModule>
 
 </IfModule>
 
@@ -436,7 +433,7 @@ ErrorDocument 404 /404.html
 AddDefaultCharset utf-8
 
 # Force UTF-8 for a number of file formats
-AddCharset utf-8 .html .css .js .xml .json .rss .atom
+AddCharset utf-8 .css .js .xml .json .rss .atom
 
 
 
@@ -462,18 +459,20 @@ AddCharset utf-8 .html .css .js .xml .json .rss .atom
 # Block access to "hidden" directories whose names begin with a period. This
 # includes directories used by version control systems such as Subversion or Git.
 <IfModule mod_rewrite.c>
+  RewriteCond %{SCRIPT_FILENAME} -d
+  RewriteCond %{SCRIPT_FILENAME} -f
   RewriteRule "(^|/)\." - [F]
 </IfModule>
 
 
 # Block access to backup and source files
-# This files may be left by some text/html editors and 
+# This files may be left by some text/html editors and
 # pose a great security danger, when someone can access them
-#<FilesMatch ".(bak|config|sql|fla|psd|ini|log|sh|inc|~|swp)$">
-#  Order allow,deny
-#  Deny from all
-#  Satisfy All
-#</FilesMatch>
+<FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
+  Order allow,deny
+  Deny from all
+  Satisfy All
+</FilesMatch>
 
 
 # If your server is not already configured as such, the following directive
@@ -545,58 +544,49 @@ Options +FollowSymlinks -Indexes
 
 <IfModule mod_rewrite.c>
 
-	RewriteEngine on
-	RewriteBase /
+  RewriteEngine on
+  RewriteBase /
 
-	### SECURITY - Protect crucial files
-	RewriteRule ^manifest/(.*)$ - [F]
-	RewriteRule ^workspace/utilities/(.*).xsl$ - [F]
-	RewriteRule ^workspace/pages/(.*).xsl$ - [F]
-	RewriteRule ^(.*).sql$ - [F]
-	RewriteRule (^|/)\. - [F]
+  ### SECURITY - Protect crucial files
+  RewriteRule ^manifest/(.*)$ - [F]
+  RewriteRule ^workspace/utilities/(.*).xsl$ - [F]
+  RewriteRule ^workspace/pages/(.*).xsl$ - [F]
+  RewriteRule ^(.*).sql$ - [F]
+  RewriteRule (^|/)\. - [F]
 
-	### DO NOT APPLY RULES WHEN REQUESTING "favicon.ico"
-	RewriteCond %{REQUEST_FILENAME} favicon.ico [NC]
-	RewriteRule .* - [S=14]
+  ### DO NOT APPLY RULES WHEN REQUESTING "favicon.ico"
+  RewriteCond %{REQUEST_FILENAME} favicon.ico [NC]
+  RewriteRule .* - [S=14]
+  
+  ### IMAGE RULES
+  RewriteRule ^image\/(.+\.(jpg|gif|jpeg|png|bmp))$ extensions/jit_image_manipulation/lib/image.php?param=$1 [L,NC]
+    
+  ### CHECK FOR TRAILING SLASH - Will ignore files
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [L,R=301]
 
-	
-	
-	
-	### IMAGE RULES
-	RewriteRule ^image\/(.+\.(jpg|gif|jpeg|png|bmp))$ extensions/jit_image_manipulation/lib/image.php?param=$1 [L,NC]
+  ### URL Correction
+  RewriteRule ^(symphony/)?index.php(/.*/?) $1$2 [NC]
 
+  ### ADMIN REWRITE
+  RewriteRule ^symphony\/?$ index.php?mode=administration&%{QUERY_STRING} [NC,L]
 
-	
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING} [NC,L]
 
-	
+  ### LANGUAGE REDIRECT RULES start
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(en)-?()?\/(.*\/?)$ index.php?language=$1&region=$2&symphony-page=$3&%{QUERY_STRING} [L]
+  ### LANGUAGE REDIRECT RULES end
 
-		
-	### CHECK FOR TRAILING SLASH - Will ignore files
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_URI} !/$
-	RewriteCond %{REQUEST_URI} !(.*)/$
-	RewriteRule ^(.*)$ $1/ [L,R=301]
-
-	### URL Correction
-	RewriteRule ^(symphony/)?index.php(/.*/?) $1$2 [NC]
-
-	### ADMIN REWRITE
-	RewriteRule ^symphony\/?$ index.php?mode=administration&%{QUERY_STRING} [NC,L]
-
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING}	[NC,L]
-
-	### LANGUAGE REDIRECT RULES start
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^(en)-?()?\/(.*\/?)$ index.php?language=$1&region=$2&symphony-page=$3&%{QUERY_STRING} [L]
-	### LANGUAGE REDIRECT RULES end
-
-	### FRONTEND REWRITE - Will ignore files and folders
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^(.*\/?)$ index.php?symphony-page=$1&%{QUERY_STRING}	[L]
+  ### FRONTEND REWRITE - Will ignore files and folders
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*\/?)$ index.php?symphony-page=$1&%{QUERY_STRING}  [L]
 
 </IfModule>
 ######

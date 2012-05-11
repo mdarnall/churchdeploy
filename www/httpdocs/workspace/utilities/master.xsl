@@ -14,7 +14,7 @@
 	encoding="UTF-8"
     method="xml"
     omit-xml-declaration="yes"
-    indent="yes"
+    indent="no"
     />
 
 <xsl:include href="../utilities/alerts.xsl" />

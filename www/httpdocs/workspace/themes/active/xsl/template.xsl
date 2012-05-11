@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output
+	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+	encoding="UTF-8"
+    method="xml"
+    omit-xml-declaration="yes"
+    indent="no"
+    />
 
 <xsl:include href="teachings.xsl" />
 
@@ -7,7 +15,13 @@
 <xsl:template name="template-head">
 	
 	<link rel="canonical" href="http://atheycreek.com" />
-	<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+
+	<!-- <meta http-equiv="x-dns-prefetch-control" content="on" />
+	<link rel="dns-prefetch" href="{$root}" />
+	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
+		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
+		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
+	</xsl:for-each> -->
 
 </xsl:template>
 
@@ -182,15 +196,15 @@
 				<div class="span3">
 					<h4><xsl:value-of select="$website-name" /></h4>
 					<address>
-						27520 SW 95th Ave.<br />
-						Wilsonville, Oregon 97070<br />
-						<abbr title="Phone">P:</abbr> (971) 327-2123
+						<xsl:text>27520 SW 95th Ave.</xsl:text><br />
+						<xsl:text>Wilsonville, Oregon 97070</xsl:text><br />
+						<abbr title="Phone">P:</abbr><xsl:text> (971) 327-2123</xsl:text>
 					</address>
 					<h4>Office Hours</h4>
 					<p>
-						9:00 AM to 5:00 PM — Tues., Thr., Fri.<br />
-						9:00 AM to 12:00 PM — Wed.<br />
-						Closed Monday
+						<xsl:text>9:00 AM to 5:00 PM — Tues., Thr., Fri.</xsl:text><br />
+						<xsl:text>9:00 AM to 12:00 PM — Wed.</xsl:text><br />
+						<xsl:text>Closed Monday</xsl:text>
 					</p>
 				</div>
 			</div>
@@ -222,15 +236,9 @@
 
 <xsl:template name="template-footer-outside-container">
 
-	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/themes/active/js/plugins.min.js"></script>
-	<!-- <script type="text/javascript" src="http://bible.logos.com/jsapi/referencetagging.js"></script> -->
-	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
+	<script type="text/javascript"><![CDATA[(function (window){'use strict';function downloadJSAtOnload(){var js={"scripts":["]]><xsl:value-of select="$workspace" /><![CDATA[/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/common.min.js"]};for(var key in js.scripts){if(js.scripts[key]){var element=document.createElement("script");element.src=js.scripts[key];document.body.appendChild(element);}}}if(window.addEventListener){window.addEventListener("load",downloadJSAtOnload,false);}else if(window.attachEvent){window.attachEvent("onload",downloadJSAtOnload);}else{window.onload=downloadJSAtOnload;}}(window));]]></script>
 
-	<xsl:comment><![CDATA[[if lt IE 7 ]>
-	<script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-	<script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment>
 
 </xsl:template>
 
