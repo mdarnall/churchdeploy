@@ -24,7 +24,7 @@
 						<xsl:with-param name="class" select="'image'" />
 					</xsl:call-template>
 					
-					<img>
+					<img width="1170" height="475">
 
 						<xsl:attribute name="src">
 							
