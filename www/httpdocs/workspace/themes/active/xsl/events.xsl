@@ -116,8 +116,12 @@
 
 							<xsl:call-template name="class-rows" />
 
-							<div class="events-header">
+							<xsl:if test="$is-earlier &lt; 0">
+								<xsl:text> </xsl:text>
+								<div class="label label-warning">This occured in the past</div>
+							</xsl:if>
 
+							<div class="events-header">
 								<h2 class="header">
 									<xsl:choose>
 										<xsl:when test="$single">
@@ -130,10 +134,7 @@
 										</xsl:otherwise>
 									</xsl:choose>
 
-									<xsl:if test="$is-earlier &lt; 0">
-										<xsl:text> </xsl:text>
-										<span class="label label-warning">This occured in the past</span>
-									</xsl:if>
+					
 								</h2>
 
 								<div class="help-block clearfix">
