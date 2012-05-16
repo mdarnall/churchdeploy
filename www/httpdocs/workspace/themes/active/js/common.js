@@ -1,16 +1,14 @@
 /* Author: Jonathan Simcoe, Kirk Strobeck, et al. */
 
+$(window).load(
+	function() 
+	{
 
-$(document).ready(
-    function() 
-    {
-
-		WebFont.load({
-			typekit: {
-				id: 'tix6unz'
-			}
-		});
 		
+		try{Typekit.load();}catch(e){}
+
+
+
     	//reftagger
     	/*
     	Logos.ReferenceTagging.lbsBibleVersion = "KJV";

@@ -24,7 +24,7 @@
 						<xsl:with-param name="class" select="'image'" />
 					</xsl:call-template>
 					
-					<img width="1170" height="475">
+					<img>
 
 						<xsl:attribute name="src">
 							
@@ -65,18 +65,6 @@
 							<xsl:value-of select="image/filename" />
 							
 						</xsl:attribute>
-
-						<xsl:if test="string-length(height)">
-
-							<xsl:attribute name="style">
-
-								<xsl:text>height: </xsl:text>
-								<xsl:value-of select="height" />
-								<xsl:text>px</xsl:text>
-
-							</xsl:attribute>
-							
-						</xsl:if>
 				
 					</img>
 				

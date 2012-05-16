@@ -2,16 +2,16 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-
 <xsl:include href="../themes/active/xsl/downloads.xsl" />
 <xsl:include href="../themes/active/xsl/events.xsl" />
 <xsl:include href="../themes/active/xsl/images.xsl" />
 <xsl:include href="../themes/active/xsl/locations.xsl" />
 <xsl:include href="../themes/active/xsl/members.xsl" />
+<xsl:include href="../themes/active/xsl/spacer.xsl" />
+<xsl:include href="../themes/active/xsl/teachings.xsl" />
 <xsl:include href="../themes/active/xsl/text.xsl" />
 <xsl:include href="../themes/active/xsl/verses.xsl" />
 <xsl:include href="../themes/active/xsl/videos.xsl" />
-
 
 
 <xsl:template name="component">
@@ -65,14 +65,14 @@
 
 	<xsl:for-each select="$xpath/item/label/@handle">
 	
-		<xsl:if  test=". = 'downloads'">
+		<xsl:if test=". = 'downloads'">
 			<xsl:call-template name="component-downloads">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//downloads-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
 	
-		<xsl:if  test=". = 'events'">
+		<xsl:if test=". = 'events'">
 
 			<xsl:choose>
 
@@ -125,11 +125,10 @@
 			<xsl:call-template name="component-images">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//images-entries-by-tag/entry" />
-
 			</xsl:call-template>
 		</xsl:if>
 		
-		<xsl:if  test=". = 'locations'">
+		<xsl:if test=". = 'locations'">
 
 			<xsl:choose>
 
@@ -151,20 +150,24 @@
 			
 		</xsl:if>
 		
-		<xsl:if  test=". = 'members'">
+		<xsl:if test=". = 'members'">
 			<xsl:call-template name="component-members">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//members-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
 
-		<xsl:if  test=". = 'teachings'">
+		<xsl:if test=". = 'spacer'">
+			<xsl:call-template name="component-spacer" />
+		</xsl:if>
+
+		<xsl:if test=". = 'teachings'">
 			<xsl:choose>
 
-				<xsl:when test="count(//teachings-all-entries/entry)">
+				<xsl:when test="count(//teachings-all-entries-filtered/entry)">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//teachings-all-entries/entry" />
+						<xsl:with-param name="entries" select="//teachings-all-entries-filtered/entry" />
 					</xsl:call-template>
 				</xsl:when>
 

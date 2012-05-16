@@ -43,12 +43,9 @@
 						</xsl:for-each>
 
 						<a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
-							<span data-icon="l"></span>
-							<xsl:text>See more events</xsl:text>
+							<span data-icon="l" class="icon"></span>
+							<span>See more events</span>
 						</a>
-
-
-							<xsl:call-template name="column-right-events-entry"/>
 
 					</ul>
 
@@ -209,21 +206,6 @@
 										<xsl:with-param name="link" select="concat($root, '/symphony/publish/events/edit/', @id, '/')" />
 									</xsl:call-template>
 
-									<!-- <span class="pull-right"> -->
-
-										<!-- <span class="location">
-											<i class="icon-file"></i>
-											<xsl:text> </xsl:text>
-											<a href="#">Download Flyer (PDF)</a>
-										</span> -->
-
-										<!-- <xsl:text> | </xsl:text> -->
-
-										<!-- <a href="#">Tweet</a>
-										<xsl:text>, </xsl:text>
-										<a href="#">Facebook</a> -->
-									<!-- </span> -->
-
 								</div>
 
 							</div>
@@ -317,9 +299,9 @@
 
 		<xsl:call-template name="class-rows" />
 
-		<a href="#">
+		<a href="{$root}/20/events/{@id}/{name/@handle}/">
 
-			<div class="date pull-left">
+			<div class="date">
 
 				<div class="month">
 					<xsl:call-template name="format-date">
@@ -337,47 +319,13 @@
 
 			</div>
 
-			<div class="info">
-
-				<h4>
-					<xsl:text> </xsl:text>
-					<xsl:value-of select="name" disable-output-escaping="yes" />
-				</h4>
-<!-- Hey Kirk, we decided against locations in the sidebar view for now, so I hid this. -->
-
-<!-- 				<p>
-
-					<xsl:text> &#160;</xsl:text>
-
-					<i class="icon-map-marker"></i>
-
-					<xsl:text> </xsl:text>
-
-					<em>
-
-						<xsl:variable name="location-id" select="location/item/@id" />
-
-						<xsl:for-each select="//events-entries-by-tag-locations/entry[ @id = $location-id ]">
-
-							<xsl:choose>
-
-								<xsl:when test="string-length(name-casual)">
-									<xsl:value-of select="name-casual" disable-output-escaping="yes" />
-								</xsl:when>
-
-								<xsl:otherwise>
-									<xsl:value-of select="name-formal" disable-output-escaping="yes" />
-								</xsl:otherwise>
-
-							</xsl:choose>
-
-						</xsl:for-each>
-
-					</em>
-
-				</p> -->
-
-			</div>
+			<table class="info">
+				<tr>
+					<td>
+						<xsl:value-of select="name" disable-output-escaping="yes" />
+					</td>
+				</tr>
+			</table>
 
 		</a>
 
