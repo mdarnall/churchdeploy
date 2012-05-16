@@ -715,11 +715,21 @@ footer {
 				.border-radius(0 0 0 0);
 			}
 
+			.description {
+				padding: 0 @base * 1.5;
+			}
+
+			.edit {
+				.edit-defaults;
+				top: @base;
+				left: @base;
+			}
+
 			.header {
 				text-transform: none;
 				font-size: 26px;
 				margin: 0 0 @base 0;
-				padding: 0 @base * 1.5;
+				padding: @base * 1.5 @base * 1.5;
 
 				a {
 					text-transform: none;
@@ -732,29 +742,9 @@ footer {
 				}
 			}
 
-			.label {
-				display: block;
-				font-size: 14px;
-				font-weight: normal;
-				text-transform: uppercase;
-				padding: @base;
-				margin-bottom: @base;
-				background: none;
-				color: @color-accent;
-				text-align: right;
-				border-bottom: 1px solid @color-gray-accent;
-				.border-radius(0);
-				text-shadow: none;
-			}
-
-			.description {
-				padding: 0 @base * 1.5;
-			}
-
 			.help-block {
 				.body-text-serif;
 				clear: both;
-				color: #999;
 				font-style: italic;
 				margin-bottom: 0;
 				padding: 0 @base * 1.5;
@@ -770,11 +760,20 @@ footer {
 				}
 			}
 
-			.edit {
-				.edit-defaults;
-				top: @base;
-				left: @base;
+			.label {
+				display: block;
+				font-size: 14px;
+				font-weight: normal;
+				text-transform: uppercase;
+				padding: @base;
+				background: none;
+				color: @color-accent;
+				text-align: right;
+				border-bottom: 1px solid @color-gray-accent;
+				.border-radius(0);
+				text-shadow: none;
 			}
+
 		}
 	}
 }
