@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: localhost (MySQL 5.5.9)
+# Host: 72.10.33.203 (MySQL 5.1.54)
 # Database: atheycreek
-# Generation Time: 2012-05-16 01:16:33 +0000
+# Generation Time: 2012-05-16 22:20:16 +0000
 # ************************************************************
 
 
@@ -47,21 +47,22 @@ LOCK TABLES `sym_authors` WRITE;
 
 INSERT INTO `sym_authors` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `last_seen`, `user_type`, `primary`, `default_area`, `auth_token_active`, `language`)
 VALUES
-	(3,'dfrost','39abc98f9c11b7a1d8d2529cf39bb2090c9a8393','David','Frost','dfrost@atheycreek.com','2012-05-10 11:53:22','developer','no','3','no',NULL),
-	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-05-14 19:41:03','developer','no','3','yes',NULL),
-	(4,'jsimcoe','7b10dfd8ecfb74eafd8778364f883ce41cb756f5','Jonathan','Simcoe','jdsimcoe@gmail.com','2012-05-11 09:55:17','developer','no','3','no',NULL),
+	(3,'dfrost','39abc98f9c11b7a1d8d2529cf39bb2090c9a8393','David','Frost','dfrost@atheycreek.com','2012-05-16 14:55:08','developer','no','3','no',NULL),
+	(2,'kirkstrobeck','eb5999e46d61f4e0013b77436c57f1edc2087592','Kirk','Strobeck','kirk@strobeck.com','2012-05-16 14:34:23','developer','no','3','yes',NULL),
+	(4,'jsimcoe','7b10dfd8ecfb74eafd8778364f883ce41cb756f5','Jonathan','Simcoe','jdsimcoe@gmail.com','2012-05-16 13:48:20','developer','no','3','no',NULL),
 	(5,'jwheeler','6a0bf4be0400168e7453d876311667eda7068fe3','Jeff','Wheeler','jeff.wheelerpdx@gmail.com',NULL,'author','no','3','no',NULL),
 	(6,'britchie','aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d','Bryn','Ritchie','britchie@atheycreek.com','2011-12-04 09:40:15','developer','no','3','no',NULL),
 	(7,'csimcoe','bb28b5a369216776354b2c859eec5e50eac7fcda','Colsey','Simcoe','cksimcoe@gmail.com','2012-04-09 20:56:57','author','no','10','no',NULL),
 	(8,'lallphin','b5fdfaf4bbdecbbb9605ba04feefd77bfb78f440','Lorri','Allphin','lorri@aracnet.com','2012-05-07 15:53:43','author','no','13','no',NULL),
-	(9,'tmiller','9ffda488ce1acffc37345654b345f432384e49e6','Tim','Miller','tmiller@atheycreek.com','2012-05-09 23:03:32','author','no','13','no',NULL),
-	(10,'jmeador','8024ecc2651265213db9704be4b9a38e6811fe59','Joey','Meador','jmeador@atheycreek.com','2012-04-26 16:45:36','author','no','13','no',NULL),
+	(9,'tmiller','9ffda488ce1acffc37345654b345f432384e49e6','Tim','Miller','tmiller@atheycreek.com','2012-05-15 10:59:12','author','no','13','no',NULL),
+	(10,'jmeador','8024ecc2651265213db9704be4b9a38e6811fe59','Joey','Meador','jmeador@atheycreek.com','2012-05-16 15:12:13','author','no','13','no',NULL),
 	(11,'mmarugg','d42cacdcbb572f17e0fae556e1cbc1b22bb85c23','Mike','Marugg','mmarugg@atheycreek.com',NULL,'author','no','6','no',NULL),
 	(15,'brooke','fc5f410100ee6462becc13b280f7741a5fe04c54','Brooke','Meador','brooke@atheycreek.com',NULL,'author','no','13','no',NULL),
 	(13,'gguerrero','940e8b8e68b06b49239fd0864d2dc09688a4472e','Grace','Guerrero','grace.guerrero@yahoo.com','2012-03-29 20:53:58','author','no','13','no',NULL),
 	(14,'gcarter','49051258ba43aa6e28173a0b1d98b3dd6dba1bd0','Gabe','Carter','gabekcarter@gmail.com',NULL,'author','no','3','no',NULL),
-	(16,'aelliott','f2bffc35f7830222bbcb2bbfcaa050aa6cbb349b','Amy','Elliott','aelliott@atheycreek.com','2012-05-09 21:47:13','author','no','7','no',NULL),
-	(17,'klinder','70e2b145fd7eb0f8cce64483fdb28dc9905933c5','Kari','Linder','klinder@atheycreek.com','2012-05-10 15:30:26','author','no','5','no',NULL);
+	(16,'aelliott','f2bffc35f7830222bbcb2bbfcaa050aa6cbb349b','Amy','Elliott','aelliott@atheycreek.com','2012-05-16 15:15:33','author','no','7','no',NULL),
+	(17,'klinder','70e2b145fd7eb0f8cce64483fdb28dc9905933c5','Kari','Linder','klinder@atheycreek.com','2012-05-10 15:30:26','author','no','5','no',NULL),
+	(18,'demoauthor','bb290bc23933805238b5651f09e00940ad0902da','Demo','Author','kirk+2@strobeck.com','2012-05-15 18:25:00','author','no','3','yes',NULL);
 
 /*!40000 ALTER TABLE `sym_authors` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -255,7 +256,7 @@ VALUES
 	(111,9,2,'2011-12-03 21:50:49','2011-12-04 05:50:49'),
 	(112,9,2,'2011-12-03 21:50:55','2011-12-04 05:50:55'),
 	(113,9,2,'2011-12-07 15:27:52','2011-12-07 23:27:52'),
-	(116,7,3,'2011-12-07 18:24:24','2011-12-08 02:24:24'),
+	(13348,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
 	(115,10,2,'2011-12-07 15:34:13','2011-12-07 23:34:13'),
 	(117,11,2,'2011-12-08 07:32:35','2011-12-08 15:32:35'),
 	(118,11,2,'2011-12-08 08:39:01','2011-12-08 16:39:01'),
@@ -2323,7 +2324,6 @@ VALUES
 	(11983,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(11982,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(11981,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
-	(13062,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(11979,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(12836,15,8,'2012-02-08 20:18:55','2012-02-09 04:18:55'),
 	(11977,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
@@ -2394,7 +2394,6 @@ VALUES
 	(11911,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(11910,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(12873,15,10,'2012-02-17 22:44:29','2012-02-18 06:44:29'),
-	(13061,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(11907,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(11906,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
 	(11905,15,0,'2011-12-19 09:54:08','2011-12-19 17:54:08'),
@@ -3949,7 +3948,6 @@ VALUES
 	(12531,1,3,'2012-01-12 11:23:23','2012-01-12 19:23:23'),
 	(12532,1,3,'2012-01-12 11:23:46','2012-01-12 19:23:46'),
 	(12533,1,3,'2012-01-12 11:24:22','2012-01-12 19:24:22'),
-	(13065,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(12535,1,3,'2012-01-12 11:44:13','2012-01-12 19:44:13'),
 	(12536,1,3,'2012-01-12 11:44:53','2012-01-12 19:44:53'),
 	(12537,1,3,'2012-01-12 11:45:23','2012-01-12 19:45:23'),
@@ -4016,7 +4014,6 @@ VALUES
 	(12602,5,3,'2012-01-12 16:23:23','2012-01-13 00:23:23'),
 	(12603,5,3,'2012-01-12 16:23:55','2012-01-13 00:23:55'),
 	(12604,5,3,'2012-01-12 16:25:04','2012-01-13 00:25:04'),
-	(13066,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(12606,5,3,'2012-01-12 16:26:33','2012-01-13 00:26:33'),
 	(12607,5,3,'2012-01-12 16:34:20','2012-01-13 00:34:20'),
 	(12608,5,3,'2012-01-12 16:34:48','2012-01-13 00:34:48'),
@@ -4053,7 +4050,6 @@ VALUES
 	(12649,13,0,'2012-01-17 08:51:20','2012-01-17 16:51:20'),
 	(12650,15,2,'2012-01-17 11:10:21','2012-01-17 19:10:21'),
 	(12651,15,2,'2012-01-17 11:12:39','2012-01-17 19:12:39'),
-	(13064,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(12656,17,2,'2012-01-18 09:32:52','2012-01-18 17:32:52'),
 	(12657,17,2,'2012-01-18 09:42:59','2012-01-18 17:42:59'),
 	(12658,18,2,'2012-01-18 09:45:00','2012-01-18 17:45:00'),
@@ -4198,7 +4194,6 @@ VALUES
 	(12916,15,9,'2012-03-28 22:08:16','2012-03-29 05:08:16'),
 	(12917,15,9,'2012-03-28 22:09:13','2012-03-29 05:09:13'),
 	(12918,13,9,'2012-03-28 22:27:45','2012-03-29 05:27:45'),
-	(13063,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
 	(12925,15,9,'2012-04-06 16:01:22','2012-04-06 23:01:22'),
 	(12924,13,9,'2012-03-31 20:17:12','2012-04-01 03:17:12'),
 	(12922,1,8,'2012-03-29 14:14:58','2012-03-29 21:14:58'),
@@ -4241,27 +4236,46 @@ VALUES
 	(12971,11,2,'2012-05-09 18:51:16','2012-05-10 01:51:16'),
 	(12973,15,9,'2012-05-09 22:57:29','2012-05-10 05:57:29'),
 	(12974,13,9,'2012-05-09 23:03:03','2012-05-10 06:03:03'),
-	(13067,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13068,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13069,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13070,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13071,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13072,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13073,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13074,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13075,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13076,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13052,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13053,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13054,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13055,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13056,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13057,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13058,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13059,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13060,22,2,'2012-05-13 20:11:58','2012-05-14 03:11:58'),
-	(13077,11,2,'2012-05-14 00:13:33','2012-05-14 07:13:33'),
-	(13078,9,2,'2012-05-14 00:13:43','2012-05-14 07:13:43');
+	(13078,11,2,'2012-05-14 00:10:30','2012-05-14 07:10:30'),
+	(13077,9,2,'2012-05-14 00:10:01','2012-05-14 07:10:01'),
+	(13104,15,9,'2012-05-15 10:44:34','2012-05-15 17:44:34'),
+	(13105,15,9,'2012-05-15 10:45:07','2012-05-15 17:45:07'),
+	(13106,15,9,'2012-05-15 10:46:08','2012-05-15 17:46:08'),
+	(13107,15,9,'2012-05-15 10:47:11','2012-05-15 17:47:11'),
+	(13108,13,9,'2012-05-15 10:58:52','2012-05-15 17:58:52'),
+	(13109,1,3,'2012-05-15 16:21:07','2012-05-15 23:21:07'),
+	(13110,1,3,'2012-05-15 16:22:25','2012-05-15 23:22:25'),
+	(13355,25,2,'2012-05-16 14:28:37','2012-05-16 21:28:37'),
+	(13343,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
+	(13344,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
+	(13345,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
+	(13346,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
+	(13347,24,2,'2012-05-16 14:18:02','2012-05-16 21:18:02'),
+	(13319,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13318,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13342,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13341,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13340,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13339,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13338,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13337,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13336,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13335,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13334,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13333,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13332,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13331,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13330,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13329,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13328,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13327,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13326,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13325,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13324,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13323,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13322,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13321,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01'),
+	(13320,22,2,'2012-05-16 14:16:01','2012-05-16 21:16:01');
 
 /*!40000 ALTER TABLE `sym_entries` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -5855,7 +5869,7 @@ VALUES
 	(16091,7876,'s1-555','S1-555'),
 	(15907,7877,'s1-559','S1-559'),
 	(15912,7878,'s1-556','S1-556'),
-	(16989,7879,'s1-558','S1-558'),
+	(16997,7879,'s1-558','S1-558'),
 	(15141,7880,'m1-577','M1-577'),
 	(14967,12642,'m1-578','M1-578'),
 	(15002,12643,'m1-579','M1-579'),
@@ -5898,7 +5912,8 @@ VALUES
 	(16857,12944,'m1-595','M1-595'),
 	(16858,12957,'s1-576','S1-576'),
 	(16987,12970,'m1-596','M1-596'),
-	(16988,12974,'s1-577','S1-577');
+	(16988,12974,'s1-577','S1-577'),
+	(16993,13108,'m1-597','M1-597');
 
 /*!40000 ALTER TABLE `sym_entries_data_100` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -7490,7 +7505,7 @@ VALUES
 	(15911,7876,'2','2'),
 	(15727,7877,'6-1-4','6:1-4'),
 	(15732,7878,'4','4'),
-	(16808,7879,'5-21-24','5:21-24'),
+	(16816,7879,'5-21-24','5:21-24'),
 	(14961,7880,'6-5-9','6:5-9'),
 	(14751,12665,'3-1-3','3:1-3'),
 	(14753,12668,'3-1-21','3:1-21'),
@@ -7534,7 +7549,8 @@ VALUES
 	(16676,12944,'1-1-18','1:1-18'),
 	(16677,12957,'2-1-3','2:1-3'),
 	(16806,12970,'1-17-2-15','1:17-2:15'),
-	(16807,12974,'2-2','2:2');
+	(16807,12974,'2-2','2:2'),
+	(16812,13108,'2-9-14','2:9-14');
 
 /*!40000 ALTER TABLE `sym_entries_data_103` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -8928,7 +8944,7 @@ VALUES
 	(1506,12668,'through-the-bible-study-6','Through The Bible Study','through-the-bible-study-6','Through The Bible Study',4,'Through The Bible Study'),
 	(1715,7874,'through-the-bible-study-66','Through the Bible Study','through-the-bible-study-66','Through the Bible Study',4,'Through the Bible Study'),
 	(2480,7877,'a-directive-for-dads','A Directive For Dads','a-directive-for-dads','A Directive For Dads',4,'A Directive For Dads'),
-	(3562,7879,'run-for-cover','Run For Cover','run-for-cover','Run For Cover',3,'Run For Cover'),
+	(3570,7879,'run-for-cover','Run For Cover','run-for-cover','Run For Cover',3,'Run For Cover'),
 	(1713,7873,'through-the-bible-study-64','Through the Bible Study','through-the-bible-study-64','Through the Bible Study',4,'Through the Bible Study'),
 	(1716,7871,'through-the-bible-study-67','Through the Bible Study','through-the-bible-study-67','Through the Bible Study',4,'Through the Bible Study'),
 	(1645,7870,'forgiveness-2','Forgiveness','forgiveness-2','Forgiveness',1,'Forgiveness'),
@@ -9173,7 +9189,8 @@ VALUES
 	(3487,6660,'through-the-bible-study-702','Through the Bible Study','through-the-bible-study-702','Through the Bible Study',4,'Through the Bible Study'),
 	(3542,6585,'through-the-bible-study-729','Through the Bible Study','through-the-bible-study-729','Through the Bible Study',4,'Through the Bible Study'),
 	(3560,12970,'through-the-bible-study-736','Through The Bible Study','through-the-bible-study-736','Through The Bible Study',4,'Through The Bible Study'),
-	(3561,12974,'true-godliness','True Godliness','true-godliness','True Godliness',2,'True Godliness');
+	(3561,12974,'true-godliness','True Godliness','true-godliness','True Godliness',2,'True Godliness'),
+	(3566,13108,'through-the-bible-study-737','Through The Bible Study','through-the-bible-study-737','Through The Bible Study',4,'Through The Bible Study');
 
 /*!40000 ALTER TABLE `sym_entries_data_108` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -10765,7 +10782,7 @@ VALUES
 	(2789,7876,'2011-10-30 00:00:00','2011-10-30 00:00:00'),
 	(2605,7877,'2011-12-04 00:00:00','2011-12-04 00:00:00'),
 	(2610,7878,'2011-11-06 00:00:00','2011-11-06 00:00:00'),
-	(3687,7879,'2011-11-27 00:00:00','2011-11-27 00:00:00'),
+	(3695,7879,'2011-11-27 00:00:00','2011-11-27 00:00:00'),
 	(1839,7880,'2011-12-07 00:00:00','2011-12-07 00:00:00'),
 	(1665,12642,'2011-12-14 19:00:00','2011-12-14 19:00:00'),
 	(1700,12643,'2011-12-21 19:00:00','2011-12-21 19:00:00'),
@@ -10808,7 +10825,8 @@ VALUES
 	(3555,12944,'2012-04-25 19:00:00','2012-04-25 19:00:00'),
 	(3556,12957,'2012-04-29 08:30:00','2012-04-29 08:30:00'),
 	(3685,12970,'2012-05-02 19:00:00','2012-05-02 19:00:00'),
-	(3686,12974,'2012-05-06 11:00:00','2012-05-06 11:00:00');
+	(3686,12974,'2012-05-06 11:00:00','2012-05-06 11:00:00'),
+	(3691,13108,'2012-05-09 19:00:00','2012-05-09 19:00:00');
 
 /*!40000 ALTER TABLE `sym_entries_data_109` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -10835,8 +10853,8 @@ LOCK TABLES `sym_entries_data_11` WRITE;
 
 INSERT INTO `sym_entries_data_11` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(330,105,'male','Male'),
-	(337,106,'male','Male'),
+	(372,105,'male','Male'),
+	(389,106,'male','Male'),
 	(89,7749,'male','Male'),
 	(265,12498,'male','Male'),
 	(268,12499,'male','Male'),
@@ -10852,7 +10870,7 @@ VALUES
 	(227,12513,'male','Male'),
 	(230,12514,'male','Male'),
 	(274,12515,'female','Female'),
-	(353,12516,'male','Male'),
+	(383,12516,'male','Male'),
 	(232,12517,'male','Male'),
 	(234,12519,'male','Male'),
 	(235,12520,'male','Male'),
@@ -10865,11 +10883,11 @@ VALUES
 	(249,12530,'male','Male'),
 	(250,12531,'male','Male'),
 	(280,12532,'female','Female'),
-	(359,12533,'male','Male'),
+	(374,12533,'male','Male'),
 	(84,12535,'male','Male'),
 	(129,12536,'male','Male'),
 	(281,12537,'female','Female'),
-	(344,12538,'male','Male'),
+	(400,12538,'male','Male'),
 	(273,12512,'female','Female'),
 	(276,12521,'female','Female'),
 	(271,12506,'female','Female'),
@@ -10884,27 +10902,27 @@ VALUES
 	(140,12543,'male','Male'),
 	(141,12544,'male','Male'),
 	(142,12545,'male','Male'),
-	(332,12546,'male','Male'),
+	(375,12546,'male','Male'),
 	(283,12547,'female','Female'),
-	(341,12548,'male','Male'),
-	(360,12549,'male','Male'),
-	(328,12550,'female','Female'),
-	(334,12551,'male','Male'),
-	(338,12552,'male','Male'),
+	(362,12548,'male','Male'),
+	(363,12549,'male','Male'),
+	(368,12550,'female','Female'),
+	(367,12551,'male','Male'),
+	(371,12552,'male','Male'),
 	(342,12553,'female','Female'),
 	(241,12599,'female','Female'),
 	(279,12529,'female','Female'),
-	(331,12555,'female','Female'),
+	(373,12555,'female','Female'),
 	(351,12556,'male','Male'),
-	(358,12557,'male','Male'),
-	(335,12558,'female','Female'),
-	(349,12559,'male','Male'),
-	(343,12560,'female','Female'),
+	(404,12557,'male','Male'),
+	(406,12558,'female','Female'),
+	(379,12559,'male','Male'),
+	(380,12560,'female','Female'),
 	(336,12561,'male','Male'),
-	(340,12562,'female','Female'),
-	(345,12563,'male','Male'),
-	(346,12564,'male','Male'),
-	(347,12565,'male','Male'),
+	(381,12562,'female','Female'),
+	(369,12563,'male','Male'),
+	(364,12564,'male','Male'),
+	(382,12565,'male','Male'),
 	(184,12572,'male','Male'),
 	(185,12573,'male','Male'),
 	(186,12574,'male','Male'),
@@ -10925,14 +10943,16 @@ VALUES
 	(277,12600,'female','Female'),
 	(239,12601,'female','Female'),
 	(252,12653,'male','Male'),
+	(403,13109,'female','Female'),
 	(255,12748,'female','Female'),
 	(256,12752,'male','Male'),
 	(260,12812,'male','Male'),
 	(261,12813,'male','Male'),
 	(288,12822,'male','Male'),
 	(290,12830,'male','Male'),
+	(396,13110,'female','Female'),
 	(294,12911,'male','Male'),
-	(325,12972,'female','Female'),
+	(399,12972,'female','Female'),
 	(298,12922,'male','Male'),
 	(299,12923,'male','Male');
 
@@ -12523,7 +12543,7 @@ VALUES
 	(14639,7876,'sunday','Sunday'),
 	(14455,7877,'sunday','Sunday'),
 	(14460,7878,'sunday','Sunday'),
-	(15537,7879,'sunday','Sunday'),
+	(15545,7879,'sunday','Sunday'),
 	(13689,7880,'wednesday','Wednesday'),
 	(13550,12643,'wednesday','Wednesday'),
 	(13547,12644,'sunday','Sunday'),
@@ -12571,7 +12591,8 @@ VALUES
 	(15405,12944,'wednesday','Wednesday'),
 	(15406,12957,'sunday','Sunday'),
 	(15535,12970,'wednesday','Wednesday'),
-	(15536,12974,'sunday','Sunday');
+	(15536,12974,'sunday','Sunday'),
+	(15541,13108,'wednesday','Wednesday');
 
 /*!40000 ALTER TABLE `sym_entries_data_110` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -14160,7 +14181,7 @@ VALUES
 	(14639,7876,'ephesians','Ephesians'),
 	(14455,7877,'ephesians','Ephesians'),
 	(14460,7878,'ephesians','Ephesians'),
-	(15537,7879,'ephesians','Ephesians'),
+	(15545,7879,'ephesians','Ephesians'),
 	(13689,7880,'ephesians','Ephesians'),
 	(13550,12643,'philippians','Philippians'),
 	(13547,12644,'luke','Luke'),
@@ -14208,7 +14229,8 @@ VALUES
 	(15405,12944,'1-timothy','1 Timothy'),
 	(15406,12957,'1-timothy','1 Timothy'),
 	(15535,12970,'1-timothy','1 Timothy'),
-	(15536,12974,'1-timothy','1 Timothy');
+	(15536,12974,'1-timothy','1 Timothy'),
+	(15541,13108,'1-timothy','1 Timothy');
 
 /*!40000 ALTER TABLE `sym_entries_data_111` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -15407,7 +15429,7 @@ VALUES
 	(1724,6559,NULL,NULL,NULL,NULL,0,'\n'),
 	(1726,6424,NULL,NULL,NULL,NULL,0,'\n'),
 	(1728,6562,NULL,NULL,NULL,NULL,0,'\n'),
-	(2800,7879,NULL,'Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.',NULL,'Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.',25,'<p>Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.</p>\n'),
+	(2808,7879,NULL,'Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.',NULL,'Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.',25,'<p>Today, we take a closer look at Ephesians 5:21-24. Paul writes to the church about submission, specifically pertaining to how wives should submit to their husbands.</p>\n'),
 	(952,7880,NULL,'Tonight, we take our text from Ephesians 6:5-9, where we see Paul talk about servants submitting to their masters. Pastor Brett talks about whether the Bible condemns or condones slavery, as well as the meaning of hard work. He talks about our rights and responsibilities both as citizens of the United States and as followers of Jesus Christ.',NULL,'Tonight, we take our text from Ephesians 6:5-9, where we see Paul talk about servants submitting to their masters. Pastor Brett talks about whether the Bible condemns or condones slavery, as well as the meaning of hard work. He talks about our rights and responsibilities both as citizens of the United States and as followers of Jesus Christ.',57,'<p>Tonight, we take our text from Ephesians 6:5-9, where we see Paul talk about servants submitting to their masters. Pastor Brett talks about whether the Bible condemns or condones slavery, as well as the meaning of hard work. He talks about our rights and responsibilities both as citizens of the United States and as followers of Jesus Christ.</p>\n'),
 	(778,12642,NULL,'Tonight, we find Paul talking to the early church about how to handle the devil and his works. Pastor Brett continues his discussion about the enemy himself, the equipment we’re given to deal with him, and the energy we can tap into.',NULL,'Tonight, we find Paul talking to the early church about how to handle the devil and his works. Pastor Brett continues his discussion about the enemy himself, the equipment we’re given to deal with him, and the energy we can tap into.',42,'<p>Tonight, we find Paul talking to the early church about how to handle the devil and his works. Pastor Brett continues his discussion about the enemy himself, the equipment we’re given to deal with him, and the energy we can tap into.</p>\n'),
 	(781,7759,NULL,NULL,NULL,NULL,0,'\n'),
@@ -15850,7 +15872,8 @@ VALUES
 	(2795,6568,NULL,NULL,NULL,NULL,0,'\n'),
 	(2796,6517,NULL,NULL,NULL,NULL,0,'\n'),
 	(2798,12970,NULL,'As we continue our study through Paul\'s letter to Timothy, we see Paul talk to Timothy about some of the issues Timothy was having with his church.  These are issues that are definitely applicable to the way things are today, and Pastor Brett discusses how we can relate these things to our lives.',NULL,'As we continue our study through Paul\'s letter to Timothy, we see Paul talk to Timothy about some of the issues Timothy was having with his church.  These are issues that are definitely applicable to the way things are today, and Pastor Brett discusses how we can relate these things to our lives.',53,'<p>As we continue our study through Paul&#8217;s letter to Timothy, we see Paul talk to Timothy about some of the issues Timothy was having with his church.  These are issues that are definitely applicable to the way things are today, and Pastor Brett discusses how we can relate these things to our lives.</p>\n'),
-	(2799,12974,NULL,'There are many interpretations of what the word \"godliness\" means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.',NULL,'There are many interpretations of what the word \"godliness\" means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.',41,'<p>There are many interpretations of what the word &#8220;godliness&#8221; means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.</p>\n');
+	(2799,12974,NULL,'There are many interpretations of what the word \"godliness\" means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.',NULL,'There are many interpretations of what the word \"godliness\" means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.',41,'<p>There are many interpretations of what the word &#8220;godliness&#8221; means.  In 1 Timothy 2, Paul talks about what it means to be godly as a Christian.  Today, Pastor Brett talks about godliness and how we can be godly in this day and age.</p>\n'),
+	(2804,13108,NULL,'We take some time to see what Paul has to say about women\'s roles in the church.  It can be really easy to take something out of context in the Bible.  Tonight, we focus on what Paul\'s words to the women of the church mean, and how they apply to the women of the church today.',NULL,'We take some time to see what Paul has to say about women\'s roles in the church.  It can be really easy to take something out of context in the Bible.  Tonight, we focus on what Paul\'s words to the women of the church mean, and how they apply to the women of the church today.',56,'<p>We take some time to see what Paul has to say about women&#8217;s roles in the church.  It can be really easy to take something out of context in the Bible.  Tonight, we focus on what Paul&#8217;s words to the women of the church mean, and how they apply to the women of the church today.</p>\n');
 
 /*!40000 ALTER TABLE `sym_entries_data_112` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -15888,7 +15911,7 @@ VALUES
 	(7,113,'downloads','Downloads','downloads','Downloads',1,'Downloads'),
 	(8,12495,'ustream','UStream','ustream','UStream',1,'UStream'),
 	(9,12975,'spacer','Spacer','spacer','Spacer',1,'Spacer'),
-	(10,13078,'teachings','Teachings','teachings','Teachings',1,'Teachings');
+	(10,13077,'teachings','Teachings','teachings','Teachings',1,'Teachings');
 
 /*!40000 ALTER TABLE `sym_entries_data_115` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -15916,7 +15939,7 @@ LOCK TABLES `sym_entries_data_117` WRITE;
 INSERT INTO `sym_entries_data_117` (`id`, `entry_id`, `handle`, `value`)
 VALUES
 	(43,12589,'45205685','45.205685'),
-	(40,7748,'574388809204102','57.4388809204102'),
+	(48,7748,'57427699','57.427699'),
 	(9,12590,'45222418','45.222418'),
 	(11,12604,'453567706793547','45.3567706793547'),
 	(12,12591,'45442600','45.442600'),
@@ -17517,7 +17540,7 @@ VALUES
 	(8449,7876,'yes'),
 	(8265,7877,'yes'),
 	(8270,7878,'yes'),
-	(9347,7879,'yes'),
+	(9355,7879,'yes'),
 	(7499,7880,'yes'),
 	(7325,12642,'yes'),
 	(7360,12643,'yes'),
@@ -17576,7 +17599,8 @@ VALUES
 	(9215,12944,'yes'),
 	(9216,12957,'yes'),
 	(9345,12970,'yes'),
-	(9346,12974,'yes');
+	(9346,12974,'yes'),
+	(9351,13108,'yes');
 
 /*!40000 ALTER TABLE `sym_entries_data_118` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -19300,8 +19324,8 @@ VALUES
 	(29014,7333,'upon','upon'),
 	(29010,7333,'heard','heard'),
 	(28937,7341,'hand','hand'),
-	(30532,7879,'wives','wives'),
-	(30531,7879,'submission','submission'),
+	(30584,7879,'wives','wives'),
+	(30583,7879,'submission','submission'),
 	(28899,7877,'spanking','spanking'),
 	(28898,7877,'punishment','punishment'),
 	(28888,7344,'temptation','temptation'),
@@ -19731,7 +19755,7 @@ VALUES
 	(28954,7340,'wall','wall'),
 	(28948,7878,'light','light'),
 	(28946,7878,'global-warming','global warming'),
-	(30530,7879,'marriage','marriage'),
+	(30582,7879,'marriage','marriage'),
 	(30498,6891,'jesus','Jesus'),
 	(30497,6891,'holy-spirit','Holy Spirit'),
 	(30492,6894,'manifestation','manifestation'),
@@ -20747,7 +20771,7 @@ VALUES
 	(25523,7873,'obscenities','obscenities'),
 	(25539,7874,'gay-marriage','gay marriage'),
 	(28891,7877,'children','children'),
-	(30529,7879,'husbands','husbands'),
+	(30581,7879,'husbands','husbands'),
 	(30446,6912,'faith','faith'),
 	(30420,7187,'come-now','come now'),
 	(30415,7189,'his-bread','His bread'),
@@ -20914,14 +20938,14 @@ VALUES
 	(25501,7863,'weary','weary'),
 	(25495,7863,'load','load'),
 	(28945,7878,'evolution','evolution'),
-	(30528,7879,'women-s-studies','Women?s studies'),
+	(30580,7879,'women-s-studies','Women?s studies'),
 	(25533,7880,'responsibility','responsibility'),
 	(25532,7880,'racism','racism'),
 	(25504,7864,'diana','Diana'),
-	(30527,7879,'women-s-liberation','Women?s liberation'),
-	(30526,7879,'women','Women'),
-	(30525,7879,'sarah','Sarah'),
-	(30524,7879,'islam','Islam'),
+	(30579,7879,'women-s-liberation','Women?s liberation'),
+	(30578,7879,'women','Women'),
+	(30577,7879,'sarah','Sarah'),
+	(30576,7879,'islam','Islam'),
 	(25521,7873,'light','light'),
 	(25520,7873,'imitation','imitation'),
 	(25518,7873,'fornication','fornication'),
@@ -21058,7 +21082,7 @@ VALUES
 	(24378,7710,'constantine','Constantine'),
 	(24377,7710,'balaam','Balaam'),
 	(29734,7785,'bible-word','Bible Word'),
-	(30523,7879,'ishmael','Ishmael'),
+	(30575,7879,'ishmael','Ishmael'),
 	(29612,7857,'holy-spirit','holy spirit'),
 	(29611,7857,'gospel','gospel'),
 	(25220,7851,'demons','demons'),
@@ -21521,9 +21545,9 @@ VALUES
 	(28914,7872,'vanuatu','Vanuatu'),
 	(25537,7874,'men-s-roles','Men?s roles'),
 	(28889,7877,'men-s-roles','Men?s roles'),
-	(30522,7879,'hagar','Hagar'),
-	(30521,7879,'adam','Adam'),
-	(30520,7879,'abraham','Abraham'),
+	(30574,7879,'hagar','Hagar'),
+	(30573,7879,'adam','Adam'),
+	(30572,7879,'abraham','Abraham'),
 	(25515,7873,'children-of-light','children of light'),
 	(25514,7873,'children','children'),
 	(25513,7873,'beloved','beloved'),
@@ -22335,8 +22359,8 @@ LOCK TABLES `sym_entries_data_12` WRITE;
 
 INSERT INTO `sym_entries_data_12` (`id`, `entry_id`, `start`, `end`)
 VALUES
-	(307,105,'2011-12-02 20:54:43','2011-12-02 20:54:43'),
-	(314,106,'2012-01-12 20:56:47','2012-01-12 20:56:47'),
+	(349,105,'2011-12-02 14:28:43','2011-12-02 14:28:43'),
+	(365,106,'2012-01-12 14:44:17','2012-01-12 14:44:17'),
 	(84,7749,'2011-12-14 11:56:04','2011-12-14 11:56:04'),
 	(256,12498,'2012-01-11 14:48:42','2012-01-11 14:48:42'),
 	(259,12499,'2012-01-11 15:01:08','2012-01-11 15:01:08'),
@@ -22356,7 +22380,7 @@ VALUES
 	(222,12513,'2012-01-11 16:45:15','2012-01-11 16:45:15'),
 	(225,12514,'2012-01-11 16:45:46','2012-01-11 16:45:46'),
 	(265,12515,'2012-01-11 15:14:28','2012-01-11 15:14:28'),
-	(330,12516,'2012-01-11 14:05:35','2012-01-11 14:05:35'),
+	(360,12516,'2012-01-11 14:40:16','2012-01-11 14:40:16'),
 	(227,12517,'2012-01-11 16:47:55','2012-01-11 16:47:55'),
 	(276,12518,'2012-01-11 15:40:20','2012-01-11 15:40:20'),
 	(229,12519,'2012-01-11 16:49:14','2012-01-11 16:49:14'),
@@ -22373,11 +22397,11 @@ VALUES
 	(244,12530,'2012-01-12 17:01:33','2012-01-12 17:01:33'),
 	(245,12531,'2012-01-12 17:01:49','2012-01-12 17:01:49'),
 	(271,12532,'2012-01-12 15:24:30','2012-01-12 15:24:30'),
-	(336,12533,'2012-01-12 15:22:18','2012-01-12 15:22:18'),
+	(351,12533,'2012-01-12 14:29:54','2012-01-12 14:29:54'),
 	(79,12535,'2012-01-12 11:44:13','2012-01-12 11:44:13'),
 	(124,12536,'2012-01-12 12:18:02','2012-01-12 12:18:02'),
 	(272,12537,'2012-01-12 15:27:42','2012-01-12 15:27:42'),
-	(321,12538,'2012-01-12 20:59:28','2012-01-12 20:59:28'),
+	(366,12538,'2012-01-12 16:35:11','2012-01-12 16:35:11'),
 	(277,12539,'2012-01-12 15:50:39','2012-01-12 15:50:39'),
 	(132,12540,'2012-01-12 12:22:56','2012-01-12 12:22:56'),
 	(273,12541,'2012-01-12 15:30:23','2012-01-12 15:30:23'),
@@ -22385,26 +22409,26 @@ VALUES
 	(135,12543,'2012-01-12 12:25:07','2012-01-12 12:25:07'),
 	(136,12544,'2012-01-12 12:25:31','2012-01-12 12:25:31'),
 	(137,12545,'2012-01-12 12:26:24','2012-01-12 12:26:24'),
-	(309,12546,'2012-01-12 20:55:25','2012-01-12 20:55:25'),
+	(352,12546,'2012-01-12 14:30:57','2012-01-12 14:30:57'),
 	(274,12547,'2012-01-12 15:32:05','2012-01-12 15:32:05'),
-	(318,12548,'2012-01-12 20:58:24','2012-01-12 20:58:24'),
-	(337,12549,'2012-01-12 15:22:50','2012-01-12 15:22:50'),
-	(305,12550,'2012-01-12 20:53:22','2012-01-12 20:53:22'),
-	(311,12551,'2012-01-12 20:56:12','2012-01-12 20:56:12'),
-	(315,12552,'2012-01-12 20:57:02','2012-01-12 20:57:02'),
+	(339,12548,'2012-01-12 12:51:27','2012-01-12 12:51:27'),
+	(340,12549,'2012-01-12 12:52:23','2012-01-12 12:52:23'),
+	(345,12550,'2012-01-12 14:22:55','2012-01-12 14:22:55'),
+	(344,12551,'2012-01-12 14:20:53','2012-01-12 14:20:53'),
+	(348,12552,'2012-01-12 14:27:58','2012-01-12 14:27:58'),
 	(319,12553,'2012-01-12 20:58:37','2012-01-12 20:58:37'),
 	(236,12599,'2012-01-12 16:54:12','2012-01-12 16:54:12'),
-	(308,12555,'2012-01-12 20:55:11','2012-01-12 20:55:11'),
+	(350,12555,'2012-01-12 14:29:27','2012-01-12 14:29:27'),
 	(328,12556,'2012-01-12 14:04:52','2012-01-12 14:04:52'),
-	(335,12557,'2012-01-12 14:26:37','2012-01-12 14:26:37'),
-	(312,12558,'2012-01-12 20:56:27','2012-01-12 20:56:27'),
-	(326,12559,'2012-01-12 14:02:39','2012-01-12 14:02:39'),
-	(320,12560,'2012-01-12 20:59:10','2012-01-12 20:59:10'),
+	(367,12557,'2012-01-12 09:49:04','2012-01-12 09:49:04'),
+	(369,12558,'2012-01-12 10:42:35','2012-01-12 10:42:35'),
+	(356,12559,'2012-01-12 14:37:43','2012-01-12 14:37:43'),
+	(357,12560,'2012-01-12 14:38:23','2012-01-12 14:38:23'),
 	(313,12561,'2012-01-12 20:56:37','2012-01-12 20:56:37'),
-	(317,12562,'2012-01-12 20:58:04','2012-01-12 20:58:04'),
-	(322,12563,'2012-01-12 20:59:38','2012-01-12 20:59:38'),
-	(323,12564,'2012-01-12 20:59:51','2012-01-12 20:59:51'),
-	(324,12565,'2012-01-12 21:00:08','2012-01-12 21:00:08'),
+	(358,12562,'2012-01-12 14:39:20','2012-01-12 14:39:20'),
+	(346,12563,'2012-01-12 14:26:20','2012-01-12 14:26:20'),
+	(341,12564,'2012-01-12 12:53:30','2012-01-12 12:53:30'),
+	(359,12565,'2012-01-12 14:39:50','2012-01-12 14:39:50'),
 	(179,12572,'2012-01-12 14:51:17','2012-01-12 14:51:17'),
 	(180,12573,'2012-01-12 14:53:35','2012-01-12 14:53:35'),
 	(181,12574,'2012-01-12 14:54:59','2012-01-12 14:54:59'),
@@ -23995,7 +24019,7 @@ VALUES
 	(8385,7876,'brett-meador','Brett Meador'),
 	(8208,7877,'brett-meador','Brett Meador'),
 	(8213,7878,'brett-meador','Brett Meador'),
-	(9256,7879,'brett-meador','Brett Meador'),
+	(9260,7879,'brett-meador','Brett Meador'),
 	(7454,7880,'brett-meador','Brett Meador'),
 	(7403,7833,'james-shields','James Shields'),
 	(8419,12859,'brett-meador','Brett Meador'),
@@ -25575,7 +25599,7 @@ VALUES
 	(3724,7876,'1780','1780'),
 	(3547,7877,'1784','1784'),
 	(3552,7878,'1785','1785'),
-	(4595,7879,'1786','1786'),
+	(4599,7879,'1786','1786'),
 	(2793,7880,'1787','1787'),
 	(3758,12859,'1608','1608'),
 	(3757,12860,'1608','1608');
@@ -25631,8 +25655,8 @@ VALUES
 	(2004,7874,11533),
 	(2003,7874,11502),
 	(2002,7874,11098),
-	(8328,7879,12672),
-	(8327,7879,12671),
+	(8416,7879,12672),
+	(8415,7879,12671),
 	(1994,7873,12415),
 	(1993,7873,12360),
 	(1992,7873,12028),
@@ -25879,17 +25903,17 @@ VALUES
 	(415,12668,11509),
 	(414,12668,11361),
 	(413,12668,12669),
-	(8326,7879,12427),
-	(8325,7879,12423),
-	(8324,7879,12172),
-	(8323,7879,12001),
-	(8322,7879,11502),
-	(8321,7879,11324),
-	(8320,7879,11323),
-	(8319,7879,11259),
-	(8318,7879,11176),
-	(8317,7879,10447),
-	(8316,7879,10431),
+	(8414,7879,12427),
+	(8413,7879,12423),
+	(8412,7879,12172),
+	(8411,7879,12001),
+	(8410,7879,11502),
+	(8409,7879,11324),
+	(8408,7879,11323),
+	(8407,7879,11259),
+	(8406,7879,11176),
+	(8405,7879,10447),
+	(8404,7879,10431),
 	(1991,7873,12027),
 	(1990,7873,11994),
 	(1989,7873,11659),
@@ -31577,7 +31601,16 @@ VALUES
 	(8312,12974,11561),
 	(8313,12974,11228),
 	(8314,12974,10655),
-	(8315,12974,11994);
+	(8315,12974,11994),
+	(8364,13108,12671),
+	(8363,13108,11994),
+	(8362,13108,13107),
+	(8361,13108,13106),
+	(8360,13108,11571),
+	(8359,13108,10686),
+	(8358,13108,13105),
+	(8357,13108,13104),
+	(8356,13108,12427);
 
 /*!40000 ALTER TABLE `sym_entries_data_124` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -31605,7 +31638,7 @@ VALUES
 	(266,7880,105),
 	(1032,7877,105),
 	(267,7874,105),
-	(2114,7879,105),
+	(2122,7879,105),
 	(265,7873,105),
 	(1233,7779,105),
 	(21,7709,105),
@@ -33212,7 +33245,8 @@ VALUES
 	(2109,6568,105),
 	(2110,6517,105),
 	(2112,12970,105),
-	(2113,12974,105);
+	(2113,12974,105),
+	(2118,13108,105);
 
 /*!40000 ALTER TABLE `sym_entries_data_125` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -35323,7 +35357,11 @@ VALUES
 	(2345,12956,'thanksgiving','Thanksgiving','thanksgiving','Thanksgiving',1,'Thanksgiving'),
 	(2346,12968,'baptism','Baptism','baptism','Baptism',1,'Baptism'),
 	(2347,12969,'mediator','Mediator','mediator','Mediator',1,'Mediator'),
-	(2348,12973,'godliness','Godliness','godliness','Godliness',1,'Godliness');
+	(2348,12973,'godliness','Godliness','godliness','Godliness',1,'Godliness'),
+	(2349,13104,'womens-roles','Women\'s roles','womens-roles','Women\'s roles',2,'Women\'s roles'),
+	(2350,13105,'mens-roles','Men\'s roles','mens-roles','Men\'s roles',2,'Men\'s roles'),
+	(2351,13106,'clothing','Clothing','clothing','Clothing',1,'Clothing'),
+	(2352,13107,'dorcas','Dorcas','dorcas','Dorcas',1,'Dorcas');
 
 /*!40000 ALTER TABLE `sym_entries_data_127` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -35361,8 +35399,8 @@ VALUES
 	(123,12510,'5033410314','503.341.0314'),
 	(124,12511,'5035500074','503.550.0074'),
 	(125,12513,'5035169264','503.516.9264'),
-	(169,106,'5035507372','503.550.7372'),
-	(179,12516,'5036161858','503.616.1858'),
+	(206,106,'5035507372','503.550.7372'),
+	(201,12516,'5036161858','503.616.1858'),
 	(129,12517,'5036556175','503.655.6175'),
 	(130,12519,'5035449839','503.544.9839'),
 	(131,12520,'5032662244','503.266.2244'),
@@ -35373,24 +35411,24 @@ VALUES
 	(137,12528,'5038198854','503.819.8854'),
 	(138,12530,'5033295254','503.329.5254'),
 	(139,12531,'5039846605','503.984.6605'),
-	(185,12533,'9712552470','971.255.2470'),
-	(184,12557,'9717329225','971.732.9225'),
+	(194,12533,'9712552470','971.255.2470'),
+	(208,12557,'9717329225','971.732.9225'),
 	(34,12535,'5038693257','503.869.3257'),
 	(62,12536,'5037305970','503.730.5970'),
-	(171,12538,'5039978988','503.997.8988'),
+	(207,12538,'5039978988','503.997.8988'),
 	(127,12514,'5038162166','503.816.2166'),
 	(147,12539,'5036869715','503.686.9715'),
 	(69,12542,'5035397573','503.539.7573'),
 	(70,12543,'5034540656','503.454.0656'),
 	(71,12545,'5038071810','503.807.1810'),
-	(165,12546,'5034679899','503.467.9899'),
-	(167,12551,'5037811459','503.781.1459'),
+	(195,12546,'5034679899','503.467.9899'),
+	(191,12551,'5037811459','503.781.1459'),
 	(177,12556,'5037243393','503.724.3393'),
-	(175,12559,'5033605203','503.360.5203'),
+	(199,12559,'5033605203','503.360.5203'),
 	(168,12561,'5035909673','503.590.9673'),
-	(172,12563,'5038030868','503.803.0868'),
-	(173,12564,'5036218540','503.621.8540'),
-	(174,12565,'5039972765','503.997.2765'),
+	(192,12563,'5038030868','503.803.0868'),
+	(189,12564,'5036218540','503.621.8540'),
+	(200,12565,'5039972765','503.997.2765'),
 	(90,12572,'3608877076','360.887.7076'),
 	(91,12573,'5039312366','503.931.2366'),
 	(92,12574,'5039193737','503.919.3737'),
@@ -35408,7 +35446,7 @@ VALUES
 	(105,12586,'5035932057','503.593.2057'),
 	(106,12587,'5034139876','503.413.9876'),
 	(107,12588,'5037202523','503.720.2523'),
-	(186,12549,'5039151021','503.915.1021');
+	(188,12549,'5039151021','503.915.1021');
 
 /*!40000 ALTER TABLE `sym_entries_data_129` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -36071,12 +36109,12 @@ VALUES
 	(7,18,117),
 	(35,99,12976),
 	(14,20,12908),
-	(36,21,13077),
+	(37,21,13078),
 	(13,24,NULL),
 	(29,23,12945),
 	(20,55,12945),
 	(22,104,12945),
-	(23,100,12945),
+	(38,100,12945),
 	(24,101,12945),
 	(26,102,12945),
 	(34,103,12971);
@@ -36131,13 +36169,13 @@ VALUES
 	(29,88,18),
 	(73,99,18),
 	(60,104,18),
-	(61,100,18),
+	(76,100,18),
 	(62,101,18),
 	(64,102,18),
 	(72,103,18),
 	(47,7761,NULL),
 	(52,20,NULL),
-	(74,21,NULL),
+	(75,21,NULL),
 	(57,43,NULL),
 	(51,24,NULL),
 	(56,74,7761),
@@ -36177,7 +36215,7 @@ VALUES
 	(65,12745,NULL),
 	(47,12595,74),
 	(32,12590,74),
-	(57,7748,83),
+	(70,7748,83),
 	(45,12608,74),
 	(43,12606,74),
 	(44,12609,74),
@@ -36439,18 +36477,17 @@ INSERT INTO `sym_entries_data_148` (`id`, `entry_id`, `relation_id`)
 VALUES
 	(1,12631,74),
 	(2,12621,21),
-	(3,12490,88),
+	(53,12490,88),
 	(37,12487,102),
 	(6,12485,24),
 	(40,12484,101),
-	(35,12482,100),
+	(48,12482,100),
 	(41,12480,104),
 	(47,12478,99),
 	(11,12476,87),
 	(12,12475,86),
 	(13,7763,7761),
 	(15,7762,7761),
-	(16,116,43),
 	(17,97,85),
 	(18,95,84),
 	(19,93,83),
@@ -36565,7 +36602,7 @@ LOCK TABLES `sym_entries_data_151` WRITE;
 
 INSERT INTO `sym_entries_data_151` (`id`, `entry_id`, `relation_id`)
 VALUES
-	(95,12516,103),
+	(125,12516,103),
 	(2,12812,NULL),
 	(3,12813,NULL),
 	(19,12600,NULL),
@@ -36587,34 +36624,36 @@ VALUES
 	(24,12541,NULL),
 	(25,12547,NULL),
 	(28,12539,NULL),
-	(72,105,103),
+	(114,105,103),
 	(30,12822,NULL),
 	(32,12830,NULL),
+	(138,13110,103),
 	(36,12911,NULL),
-	(79,106,103),
+	(131,106,103),
+	(145,13109,103),
 	(40,12922,NULL),
 	(41,12923,NULL),
-	(91,12559,103),
+	(121,12559,103),
 	(93,12556,103),
-	(70,12550,103),
-	(102,12549,103),
-	(73,12555,103),
-	(74,12546,103),
-	(76,12551,103),
+	(110,12550,103),
+	(105,12549,103),
+	(115,12555,103),
+	(117,12546,103),
+	(109,12551,103),
 	(78,12561,103),
-	(80,12552,103),
-	(82,12562,103),
-	(83,12548,103),
+	(113,12552,103),
+	(123,12562,103),
+	(104,12548,103),
 	(84,12553,103),
-	(85,12560,103),
-	(86,12538,103),
-	(87,12563,103),
-	(88,12564,103),
-	(89,12565,103),
-	(67,12972,103),
-	(77,12558,103),
-	(101,12533,103),
-	(100,12557,103);
+	(122,12560,103),
+	(142,12538,103),
+	(111,12563,103),
+	(106,12564,103),
+	(124,12565,103),
+	(141,12972,103),
+	(148,12558,NULL),
+	(116,12533,103),
+	(146,12557,103);
 
 /*!40000 ALTER TABLE `sym_entries_data_151` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -36762,7 +36801,7 @@ INSERT INTO `sym_entries_data_167` (`id`, `entry_id`, `value`)
 VALUES
 	(1,7761,'yes'),
 	(6,20,'yes'),
-	(28,21,'yes'),
+	(29,21,'yes'),
 	(11,43,'yes'),
 	(5,24,'yes'),
 	(10,74,'no'),
@@ -36770,7 +36809,7 @@ VALUES
 	(12,55,'no'),
 	(27,99,'no'),
 	(14,104,'no'),
-	(15,100,'no'),
+	(30,100,'no'),
 	(16,101,'no'),
 	(18,102,'no'),
 	(26,103,'no');
@@ -36800,7 +36839,7 @@ INSERT INTO `sym_entries_data_168` (`id`, `entry_id`, `value`)
 VALUES
 	(1,7761,'no'),
 	(6,20,'no'),
-	(28,21,'no'),
+	(29,21,'no'),
 	(11,43,'yes'),
 	(5,24,'no'),
 	(10,74,'no'),
@@ -36808,7 +36847,7 @@ VALUES
 	(12,55,'no'),
 	(27,99,'no'),
 	(14,104,'no'),
-	(15,100,'no'),
+	(30,100,'no'),
 	(16,101,'no'),
 	(18,102,'no'),
 	(26,103,'no');
@@ -37302,31 +37341,31 @@ LOCK TABLES `sym_entries_data_183` WRITE;
 
 INSERT INTO `sym_entries_data_183` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(100,13076,'through-the-bible-study-in-galatians-1-1-10-taught-by-pastor-brett-meador','Through the Bible Study in Galatians 1:1-10 Taught by Pastor Brett Meador'),
-	(99,13075,'through-the-bible-study-in-galatians-3-taught-by-pastor-brett-meador','Through the Bible Study in  Galatians 3 Taught by Pastor Brett Meador'),
-	(98,13074,'marriage-through-the-bible-study-in-ephesians-5','Marriage - Through the Bible Study in Ephesians 5'),
-	(76,13052,'2012-5-6-sun-2nd','2012 5 6 Sun 2nd'),
-	(77,13053,'2012-5-2-wed','2012 5 2 WED'),
-	(78,13054,'2012-4-29-sun-1st','2012 4 29 SUN 1st'),
-	(79,13055,'2012-4-25-wed','2012 4 25 WED'),
-	(80,13056,'2012-4-22-sun','2012 4 22 SUN'),
-	(81,13057,'2012-4-1-sun','2012 4 1 Sun'),
-	(82,13058,'the-end-description-of-the-antichrist|sun|04-15-12|s1-574','The End: Description of the Antichrist|Sun|04/15/12|S1-574'),
-	(83,13059,'4-18-2012','4 18 2012'),
-	(84,13060,'4-4-2012-wednesday','4 4 2012 Wednesday'),
-	(85,13061,'04-11-12','04 11 12'),
-	(86,13062,'4-8-2012','4_8_2012'),
-	(87,13063,'03-14-2011','03_14_2011'),
-	(88,13064,'2-thessalanisans-4-13-18','2 Thessalanisans 4 13-18'),
-	(89,13065,'031112','031112'),
-	(90,13066,'030712','030712'),
-	(91,13067,'seasoned-with-salt-|-sun-|-03-04-12-|-s1-569','Seasoned With Salt | Sun | 03/04/12 | S1-569'),
-	(92,13068,'m1-587-colossians-3-through-the-bible-study','M1-587 Colossians 3 - Through the Bible Study'),
-	(93,13069,'ryan-kamahoahoa','Ryan Kamahoahoa'),
-	(94,13070,'through-the-bible-study-ephesians-6-10-m1-578','Through the Bible Study Ephesians 6:10 M1-578'),
-	(95,13071,'s1-561','S1-561'),
-	(96,13072,'through-the-bible-study-ephesians-6-m1-577','Through the Bible Study  Ephesians 6   M1-577'),
-	(97,13073,'discipline-bible-study-in-the-book-of-ephesians-5-21-24','\"Discipline\" Bible Study in the book of Ephesians 5:21-24');
+	(2099,13341,'through-the-bible-study-ephesians-6-m1-577','Through the Bible Study  Ephesians 6   M1-577'),
+	(2100,13342,'discipline-|-ephesians-5-21-24','Discipline | Ephesians 5:21-24'),
+	(2091,13333,'2-thessalanisans-4-13-18','2 Thessalanisans 4 13-18'),
+	(2092,13334,'031112','031112'),
+	(2093,13335,'030712','030712'),
+	(2094,13336,'seasoned-with-salt-|-sun-|-03-04-12-|-s1-569','Seasoned With Salt | Sun | 03/04/12 | S1-569'),
+	(2095,13337,'m1-587-colossians-3-through-the-bible-study','M1-587 Colossians 3 - Through the Bible Study'),
+	(2096,13338,'ryan-kamahoahoa','Ryan Kamahoahoa'),
+	(2097,13339,'through-the-bible-study-ephesians-6-10-m1-578','Through the Bible Study Ephesians 6:10 M1-578'),
+	(2098,13340,'s1-561','S1-561'),
+	(2090,13332,'03-14-2011','03_14_2011'),
+	(2089,13331,'4-8-2012','4_8_2012'),
+	(2086,13328,'4-18-2012','4 18 2012'),
+	(2087,13329,'4-4-2012-wednesday','4 4 2012 Wednesday'),
+	(2088,13330,'04-11-12','04 11 12'),
+	(2085,13327,'the-end-description-of-the-antichrist|sun|04-15-12|s1-574','The End: Description of the Antichrist|Sun|04/15/12|S1-574'),
+	(2084,13326,'2012-4-1-sun','2012 4 1 Sun'),
+	(2083,13325,'2012-4-22-sun','2012 4 22 SUN'),
+	(2082,13324,'2012-4-25-wed','2012 4 25 WED'),
+	(2081,13323,'2012-4-29-sun-1st','2012 4 29 SUN 1st'),
+	(2080,13322,'2012-5-2-wed','2012 5 2 WED'),
+	(2079,13321,'2012-5-6-sun-2nd','2012 5 6 Sun 2nd'),
+	(2078,13320,'2012-5-9-wed','2012 5 9 WED'),
+	(2077,13319,'2012-5-12-sat','2012 5 12 Sat'),
+	(2076,13318,'mothers-day-2012-|-1-timothy-2-15','Mother\'s Day 2012 | 1 Timothy 2:15');
 
 /*!40000 ALTER TABLE `sym_entries_data_183` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37352,31 +37391,31 @@ LOCK TABLES `sym_entries_data_184` WRITE;
 
 INSERT INTO `sym_entries_data_184` (`id`, `entry_id`, `value`, `value_formatted`)
 VALUES
-	(76,13052,'<p><a href=\"http://vimeo.com/41774388\"><img src=\"http://b.vimeocdn.com/ts/289/527/289527532_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 6 Sun 2nd</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:201256sun2nd\">2012 5 6 Sun 2nd</a></p>',NULL),
-	(77,13053,'<p><a href=\"http://vimeo.com/41618509\"><img src=\"http://b.vimeocdn.com/ts/288/411/288411301_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 2 WED</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:201252wed\">2012 5 2 WED</a></p>',NULL),
-	(78,13054,'<p><a href=\"http://vimeo.com/41289565\"><img src=\"http://b.vimeocdn.com/ts/285/903/285903289_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 29 SUN 1st</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012429sun1st\">2012 4 29 SUN 1st</a></p>',NULL),
-	(79,13055,'<p><a href=\"http://vimeo.com/41289564\"><img src=\"http://b.vimeocdn.com/ts/285/909/285909208_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 25 WED</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012425wed\">2012 4 25 WED</a></p>',NULL),
-	(80,13056,'<p><a href=\"http://vimeo.com/40914925\"><img src=\"http://b.vimeocdn.com/ts/283/058/283058848_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 22 SUN 2nd</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012422sun2nd\">2012 4 22 SUN 2nd</a></p>',NULL),
-	(81,13057,'<p><a href=\"http://vimeo.com/40850676\"><img src=\"http://b.vimeocdn.com/ts/282/576/282576542_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(82,13058,'<p><a href=\"http://vimeo.com/40775215\"><img src=\"http://b.vimeocdn.com/ts/281/985/281985153_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Sun|04/15/12|S1-574</p> <p>This morning, we delve further into 2 Thessalonians as it relates to end times. We turn our attention to what the Bible says about the antichrist, a man of sin and a son of perdition.<br>     <br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:endtimes\">end times</a>,  <a href=\"http://vimeo.com/tag:antichrist\">antichrist</a>,  <a href=\"http://vimeo.com/tag:worldleaders\">world leaders</a>,  <a href=\"http://vimeo.com/tag:iran\">Iran</a>,  <a href=\"http://vimeo.com/tag:mahdi\">Mahdi</a>,  <a href=\"http://vimeo.com/tag:tribulation\">tribulation</a>,  <a href=\"http://vimeo.com/tag:perdition\">perdition</a>  and <a href=\"http://vimeo.com/tag:pride\">pride</a></p>',NULL),
-	(83,13059,'<p><a href=\"http://vimeo.com/40751840\"><img src=\"http://b.vimeocdn.com/ts/281/839/281839594_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(84,13060,'<p><a href=\"http://vimeo.com/40340542\"><img src=\"http://b.vimeocdn.com/ts/278/726/278726966_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(85,13061,'<p><a href=\"http://vimeo.com/40276098\"><img src=\"http://b.vimeocdn.com/ts/278/255/278255065_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(86,13062,'<p><a href=\"http://vimeo.com/40157477\"><img src=\"http://b.vimeocdn.com/ts/277/432/277432343_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(87,13063,'<p><a href=\"http://vimeo.com/39344018\"><img src=\"http://b.vimeocdn.com/ts/271/366/271366292_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(88,13064,'<p><a href=\"http://vimeo.com/39344017\"><img src=\"http://b.vimeocdn.com/ts/271/382/271382690_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(89,13065,'<p><a href=\"http://vimeo.com/38479581\"><img src=\"http://b.vimeocdn.com/ts/264/880/264880240_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(90,13066,'<p><a href=\"http://vimeo.com/38479492\"><img src=\"http://b.vimeocdn.com/ts/264/879/264879321_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(91,13067,'<p><a href=\"http://vimeo.com/37931216\"><img src=\"http://b.vimeocdn.com/ts/260/759/260759126_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Sun | 03/04/12 | S1-569</p> <p>Today, we take our text from Colossians 4:6, where Paul talks to the church about the importance of speaking with grace. Brett talks about how we are to season our words with salt.</p> <p><a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:speech\">speech</a>,  <a href=\"http://vimeo.com/tag:words\">words</a>,  <a href=\"http://vimeo.com/tag:grace\">grace</a>,  <a href=\"http://vimeo.com/tag:silence\">silence</a>,  <a href=\"http://vimeo.com/tag:thoughts\">thoughts</a>,  <a href=\"http://vimeo.com/tag:tongue\">tongue</a>,  <a href=\"http://vimeo.com/tag:moses\">Moses</a>,  <a href=\"http://vimeo.com/tag:salt\">salt</a>  and <a href=\"http://vimeo.com/tag:promisedland\">promised land</a></p>',NULL),
-	(92,13068,'<p><a href=\"http://vimeo.com/37930229\"><img src=\"http://b.vimeocdn.com/ts/260/753/260753349_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> atheycreek.com/</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-578\">M1-578</a>,  <a href=\"http://vimeo.com/tag:ephesians\">Ephesians</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>  and <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a></p>',NULL),
-	(93,13069,'<p><a href=\"http://vimeo.com/37825850\"><img src=\"http://b.vimeocdn.com/ts/264/715/264715278_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">A slideshow of Ryan\'s life.</p> <p>This was shown at the Thursday Morning Women\'s Study on 3/1/2012.</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> </p>',NULL),
-	(94,13070,'<p><a href=\"http://vimeo.com/34345436\"><img src=\"http://b.vimeocdn.com/ts/233/836/233836426_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-578\">M1-578</a>,  <a href=\"http://vimeo.com/tag:ephesians\">Ephesians</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">brett Meador</a></p>',NULL),
-	(95,13071,'<p><a href=\"http://vimeo.com/34326804\"><img src=\"http://b.vimeocdn.com/ts/233/732/233732843_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:s1-561\">S1-561</a></p>',NULL),
-	(96,13072,'<p><a href=\"http://vimeo.com/33765755\"><img src=\"http://b.vimeocdn.com/ts/229/500/229500153_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-577\">M1-577</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a></p>',NULL),
-	(97,13073,'<p><a href=\"http://vimeo.com/33331528\"><img src=\"http://b.vimeocdn.com/ts/226/188/226188208_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:s1-558\">S1-558</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a></p>',NULL),
-	(98,13074,'<p><a href=\"http://vimeo.com/33259080\"><img src=\"http://b.vimeocdn.com/ts/225/662/225662295_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-575\">M1-575</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>,  <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a>  and <a href=\"http://vimeo.com/tag:marriage\">marriage</a></p>',NULL),
-	(99,13075,'<p><a href=\"http://vimeo.com/29296416\"><img src=\"http://b.vimeocdn.com/ts/196/138/196138532_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.</p> <p>Tags:Athey,Bible,Brett,Calvary,Chapel,Christ,Church,Creek,Fellowship,God,Jesus,Meador,Oregon,Portland,Salvation,teaching,Through,Wilsonville,Brett Meador</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:meador\">Meador</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a></p>',NULL),
-	(100,13076,'<p><a href=\"http://vimeo.com/28586610\"><img src=\"http://b.vimeocdn.com/ts/190/776/190776513_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ.<br> On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">ACCF</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:christian\">Christian</a>,  <a href=\"http://vimeo.com/tag:galatians1:1-10\">Galatians 1:1-10</a>,  <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a>,  <a href=\"http://vimeo.com/tag:accf\">ACCF</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:meador\">Meador</a>  and <a href=\"http://vimeo.com/tag:oregon\">Oregon</a></p>',NULL);
+	(2100,13342,'<p><a href=\"http://vimeo.com/33331528\"><img src=\"http://b.vimeocdn.com/ts/292/969/292969797_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:s1-558\">S1-558</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a></p>',NULL),
+	(2099,13341,'<p><a href=\"http://vimeo.com/33765755\"><img src=\"http://b.vimeocdn.com/ts/292/969/292969173_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-577\">M1-577</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">Brett Meador</a></p>',NULL),
+	(2098,13340,'<p><a href=\"http://vimeo.com/34326804\"><img src=\"http://b.vimeocdn.com/ts/292/968/292968599_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:s1-561\">S1-561</a></p>',NULL),
+	(2097,13339,'<p><a href=\"http://vimeo.com/34345436\"><img src=\"http://b.vimeocdn.com/ts/292/960/292960453_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:ephesians\">Ephesians</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>,  <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a>  and <a href=\"http://vimeo.com/tag:brettmeador\">brett Meador</a></p>',NULL),
+	(2096,13338,'<p><a href=\"http://vimeo.com/37825850\"><img src=\"http://b.vimeocdn.com/ts/264/715/264715278_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">A slideshow of Ryan\'s life.</p> <p>This was shown at the Thursday Morning Women\'s Study on 3/1/2012.</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2091,13333,'<p><a href=\"http://vimeo.com/39344017\"><img src=\"http://b.vimeocdn.com/ts/292/959/292959276_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2092,13334,'<p><a href=\"http://vimeo.com/38479581\"><img src=\"http://b.vimeocdn.com/ts/292/959/292959531_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2093,13335,'<p><a href=\"http://vimeo.com/38479492\"><img src=\"http://b.vimeocdn.com/ts/292/959/292959804_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2094,13336,'<p><a href=\"http://vimeo.com/37931216\"><img src=\"http://b.vimeocdn.com/ts/292/960/292960076_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Sun | 03/04/12 | S1-569</p> <p>Today, we take our text from Colossians 4:6, where Paul talks to the church about the importance of speaking with grace. Brett talks about how we are to season our words with salt.</p> <p><a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:speech\">speech</a>,  <a href=\"http://vimeo.com/tag:words\">words</a>,  <a href=\"http://vimeo.com/tag:grace\">grace</a>,  <a href=\"http://vimeo.com/tag:silence\">silence</a>,  <a href=\"http://vimeo.com/tag:thoughts\">thoughts</a>,  <a href=\"http://vimeo.com/tag:tongue\">tongue</a>,  <a href=\"http://vimeo.com/tag:moses\">Moses</a>,  <a href=\"http://vimeo.com/tag:salt\">salt</a>  and <a href=\"http://vimeo.com/tag:promisedland\">promised land</a></p>',NULL),
+	(2095,13337,'<p><a href=\"http://vimeo.com/37930229\"><img src=\"http://b.vimeocdn.com/ts/292/960/292960251_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Athey Creek Christian Fellowship is a body of believers in Wilsonville Oregon desiring to know the Lord in an ever-increasing measure. We are a non- denominational fellowship associating with all who are in the Body of Christ. On Wednesday Nights at Athey, we teach book-by-book through the Bible. On Sunday mornings, the teaching usually highlights a particular verse or section from the upcoming midweek study.<br> atheycreek.com/</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:m1-578\">M1-578</a>,  <a href=\"http://vimeo.com/tag:ephesians\">Ephesians</a>,  <a href=\"http://vimeo.com/tag:athey\">Athey</a>,  <a href=\"http://vimeo.com/tag:bible\">Bible</a>,  <a href=\"http://vimeo.com/tag:brett\">Brett</a>,  <a href=\"http://vimeo.com/tag:calvary\">Calvary</a>,  <a href=\"http://vimeo.com/tag:chapel\">Chapel</a>,  <a href=\"http://vimeo.com/tag:christ\">Christ</a>,  <a href=\"http://vimeo.com/tag:church\">Church</a>,  <a href=\"http://vimeo.com/tag:creek\">Creek</a>,  <a href=\"http://vimeo.com/tag:fellowship\">Fellowship</a>,  <a href=\"http://vimeo.com/tag:god\">God</a>,  <a href=\"http://vimeo.com/tag:jesus\">Jesus</a>,  <a href=\"http://vimeo.com/tag:oregon\">Oregon</a>,  <a href=\"http://vimeo.com/tag:portland\">Portland</a>,  <a href=\"http://vimeo.com/tag:salvation\">Salvation</a>,  <a href=\"http://vimeo.com/tag:teaching\">teaching</a>,  <a href=\"http://vimeo.com/tag:through\">Through</a>  and <a href=\"http://vimeo.com/tag:wilsonville\">Wilsonville</a></p>',NULL),
+	(2089,13331,'<p><a href=\"http://vimeo.com/40157477\"><img src=\"http://b.vimeocdn.com/ts/292/958/292958664_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2090,13332,'<p><a href=\"http://vimeo.com/39344018\"><img src=\"http://b.vimeocdn.com/ts/292/958/292958920_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2088,13330,'<p><a href=\"http://vimeo.com/40276098\"><img src=\"http://b.vimeocdn.com/ts/292/958/292958361_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2082,13324,'<p><a href=\"http://vimeo.com/41289564\"><img src=\"http://b.vimeocdn.com/ts/292/956/292956843_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 25 WED</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012425wed\">2012 4 25 WED</a></p>',NULL),
+	(2083,13325,'<p><a href=\"http://vimeo.com/40914925\"><img src=\"http://b.vimeocdn.com/ts/292/957/292957013_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 22 SUN 2nd</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012422sun2nd\">2012 4 22 SUN 2nd</a></p>',NULL),
+	(2084,13326,'<p><a href=\"http://vimeo.com/40850676\"><img src=\"http://b.vimeocdn.com/ts/292/957/292957124_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2085,13327,'<p><a href=\"http://vimeo.com/40775215\"><img src=\"http://b.vimeocdn.com/ts/292/957/292957528_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">Sun|04/15/12|S1-574</p> <p>This morning, we delve further into 2 Thessalonians as it relates to end times. We turn our attention to what the Bible says about the antichrist, a man of sin and a son of perdition.<br>     <br> <a href=\"http://www.atheycreek.com/\" target=\"_blank\" rel=\"nofollow\">atheycreek.com/</a></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong>  <a href=\"http://vimeo.com/tag:endtimes\">end times</a>,  <a href=\"http://vimeo.com/tag:antichrist\">antichrist</a>,  <a href=\"http://vimeo.com/tag:worldleaders\">world leaders</a>,  <a href=\"http://vimeo.com/tag:iran\">Iran</a>,  <a href=\"http://vimeo.com/tag:mahdi\">Mahdi</a>,  <a href=\"http://vimeo.com/tag:tribulation\">tribulation</a>,  <a href=\"http://vimeo.com/tag:perdition\">perdition</a>  and <a href=\"http://vimeo.com/tag:pride\">pride</a></p>',NULL),
+	(2086,13328,'<p><a href=\"http://vimeo.com/40751840\"><img src=\"http://b.vimeocdn.com/ts/292/957/292957693_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2087,13329,'<p><a href=\"http://vimeo.com/40340542\"><img src=\"http://b.vimeocdn.com/ts/292/957/292957954_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\"></p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> </p>',NULL),
+	(2081,13323,'<p><a href=\"http://vimeo.com/41289565\"><img src=\"http://b.vimeocdn.com/ts/292/956/292956348_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 4 29 SUN 1st</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012429sun1st\">2012 4 29 SUN 1st</a></p>',NULL),
+	(2080,13322,'<p><a href=\"http://vimeo.com/41618509\"><img src=\"http://b.vimeocdn.com/ts/292/955/292955926_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 2 WED</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:201252wed\">2012 5 2 WED</a></p>',NULL),
+	(2076,13318,'<p><a href=\"http://vimeo.com/42127481\"><img src=\"http://b.vimeocdn.com/ts/292/953/292953852_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 13 Sun 2nd</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012513sun2nd\">2012 5 13 Sun 2nd</a></p>',NULL),
+	(2077,13319,'<p><a href=\"http://vimeo.com/42127480\"><img src=\"http://b.vimeocdn.com/ts/292/954/292954437_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 12 Sat</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:2012512sat\">2012 5 12 Sat</a></p>',NULL),
+	(2079,13321,'<p><a href=\"http://vimeo.com/41774388\"><img src=\"http://b.vimeocdn.com/ts/292/955/292955679_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 6 Sun 2nd</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:201256sun2nd\">2012 5 6 Sun 2nd</a></p>',NULL),
+	(2078,13320,'<p><a href=\"http://vimeo.com/42127479\"><img src=\"http://b.vimeocdn.com/ts/292/955/292955431_200.jpg\" alt=\"\" /></a></p><p><p class=\"first\">2012 5 9 WED</p></p><p><strong>Cast:</strong> <a href=\"http://vimeo.com/atheycreek\">Athey Creek Christian Fellowship</a></p><p><strong>Tags:</strong> <a href=\"http://vimeo.com/tag:201259wed\">2012 5 9 WED</a></p>',NULL);
 
 /*!40000 ALTER TABLE `sym_entries_data_184` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37401,31 +37440,31 @@ LOCK TABLES `sym_entries_data_185` WRITE;
 
 INSERT INTO `sym_entries_data_185` (`id`, `entry_id`, `start`, `end`)
 VALUES
-	(100,13076,'2011-09-04 12:49:05','2011-09-04 12:49:05'),
-	(99,13075,'2011-09-19 19:11:23','2011-09-19 19:11:23'),
-	(98,13074,'2011-12-06 17:57:11','2011-12-06 17:57:11'),
-	(97,13073,'2011-12-07 23:51:32','2011-12-07 23:51:32'),
-	(96,13072,'2011-12-15 21:40:05','2011-12-15 21:40:05'),
-	(95,13071,'2011-12-29 04:28:44','2011-12-29 04:28:44'),
-	(94,13070,'2011-12-29 13:32:55','2011-12-29 13:32:55'),
-	(93,13069,'2012-03-02 12:54:04','2012-03-02 12:54:04'),
-	(92,13068,'2012-03-04 20:23:40','2012-03-04 20:23:40'),
-	(91,13067,'2012-03-04 20:50:30','2012-03-04 20:50:30'),
-	(90,13066,'2012-03-13 20:34:05','2012-03-13 20:34:05'),
-	(89,13065,'2012-03-13 20:36:43','2012-03-13 20:36:43'),
-	(88,13064,'2012-03-28 07:31:54','2012-03-28 07:31:54'),
-	(87,13063,'2012-03-28 07:31:54','2012-03-28 07:31:54'),
-	(86,13062,'2012-04-11 07:42:40','2012-04-11 07:42:40'),
-	(85,13061,'2012-04-12 21:41:54','2012-04-12 21:41:54'),
-	(84,13060,'2012-04-13 22:44:22','2012-04-13 22:44:22'),
-	(83,13059,'2012-04-20 15:25:46','2012-04-20 15:25:46'),
-	(82,13058,'2012-04-21 08:04:55','2012-04-21 08:04:55'),
-	(81,13057,'2012-04-23 00:23:27','2012-04-23 00:23:27'),
-	(80,13056,'2012-04-23 20:29:51','2012-04-23 20:29:51'),
-	(79,13055,'2012-04-30 06:43:34','2012-04-30 06:43:34'),
-	(78,13054,'2012-04-30 06:43:35','2012-04-30 06:43:35'),
-	(77,13053,'2012-05-05 10:04:40','2012-05-05 10:04:40'),
-	(76,13052,'2012-05-08 06:38:13','2012-05-08 06:38:13');
+	(2100,13342,'2011-12-07 23:51:32','2011-12-07 23:51:32'),
+	(2099,13341,'2011-12-15 21:40:05','2011-12-15 21:40:05'),
+	(2098,13340,'2011-12-29 04:28:44','2011-12-29 04:28:44'),
+	(2097,13339,'2011-12-29 13:32:55','2011-12-29 13:32:55'),
+	(2096,13338,'2012-03-02 12:54:04','2012-03-02 12:54:04'),
+	(2095,13337,'2012-03-04 20:23:40','2012-03-04 20:23:40'),
+	(2094,13336,'2012-03-04 20:50:30','2012-03-04 20:50:30'),
+	(2093,13335,'2012-03-13 20:34:05','2012-03-13 20:34:05'),
+	(2092,13334,'2012-03-13 20:36:43','2012-03-13 20:36:43'),
+	(2091,13333,'2012-03-28 07:31:54','2012-03-28 07:31:54'),
+	(2090,13332,'2012-03-28 07:31:54','2012-03-28 07:31:54'),
+	(2089,13331,'2012-04-11 07:42:40','2012-04-11 07:42:40'),
+	(2088,13330,'2012-04-12 21:41:54','2012-04-12 21:41:54'),
+	(2087,13329,'2012-04-13 22:44:22','2012-04-13 22:44:22'),
+	(2086,13328,'2012-04-20 15:25:46','2012-04-20 15:25:46'),
+	(2085,13327,'2012-04-21 08:04:55','2012-04-21 08:04:55'),
+	(2084,13326,'2012-04-23 00:23:27','2012-04-23 00:23:27'),
+	(2083,13325,'2012-04-23 20:29:51','2012-04-23 20:29:51'),
+	(2082,13324,'2012-04-30 06:43:34','2012-04-30 06:43:34'),
+	(2081,13323,'2012-04-30 06:43:35','2012-04-30 06:43:35'),
+	(2080,13322,'2012-05-05 10:04:40','2012-05-05 10:04:40'),
+	(2079,13321,'2012-05-08 06:38:13','2012-05-08 06:38:13'),
+	(2078,13320,'2012-05-14 06:43:48','2012-05-14 06:43:48'),
+	(2077,13319,'2012-05-14 06:43:48','2012-05-14 06:43:48'),
+	(2076,13318,'2012-05-14 06:43:49','2012-05-14 06:43:49');
 
 /*!40000 ALTER TABLE `sym_entries_data_185` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37452,31 +37491,31 @@ LOCK TABLES `sym_entries_data_186` WRITE;
 
 INSERT INTO `sym_entries_data_186` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(100,13076,'http-vimeocom-28586610','http://vimeo.com/28586610'),
-	(99,13075,'http-vimeocom-29296416','http://vimeo.com/29296416'),
-	(98,13074,'http-vimeocom-33259080','http://vimeo.com/33259080'),
-	(97,13073,'http-vimeocom-33331528','http://vimeo.com/33331528'),
-	(96,13072,'http-vimeocom-33765755','http://vimeo.com/33765755'),
-	(95,13071,'http-vimeocom-34326804','http://vimeo.com/34326804'),
-	(94,13070,'http-vimeocom-34345436','http://vimeo.com/34345436'),
-	(76,13052,'http-vimeocom-41774388','http://vimeo.com/41774388'),
-	(77,13053,'http-vimeocom-41618509','http://vimeo.com/41618509'),
-	(78,13054,'http-vimeocom-41289565','http://vimeo.com/41289565'),
-	(79,13055,'http-vimeocom-41289564','http://vimeo.com/41289564'),
-	(80,13056,'http-vimeocom-40914925','http://vimeo.com/40914925'),
-	(81,13057,'http-vimeocom-40850676','http://vimeo.com/40850676'),
-	(82,13058,'http-vimeocom-40775215','http://vimeo.com/40775215'),
-	(83,13059,'http-vimeocom-40751840','http://vimeo.com/40751840'),
-	(84,13060,'http-vimeocom-40340542','http://vimeo.com/40340542'),
-	(85,13061,'http-vimeocom-40276098','http://vimeo.com/40276098'),
-	(86,13062,'http-vimeocom-40157477','http://vimeo.com/40157477'),
-	(87,13063,'http-vimeocom-39344018','http://vimeo.com/39344018'),
-	(88,13064,'http-vimeocom-39344017','http://vimeo.com/39344017'),
-	(89,13065,'http-vimeocom-38479581','http://vimeo.com/38479581'),
-	(90,13066,'http-vimeocom-38479492','http://vimeo.com/38479492'),
-	(91,13067,'http-vimeocom-37931216','http://vimeo.com/37931216'),
-	(92,13068,'http-vimeocom-37930229','http://vimeo.com/37930229'),
-	(93,13069,'http-vimeocom-37825850','http://vimeo.com/37825850');
+	(2100,13342,'http-vimeocom-33331528','http://vimeo.com/33331528'),
+	(2099,13341,'http-vimeocom-33765755','http://vimeo.com/33765755'),
+	(2098,13340,'http-vimeocom-34326804','http://vimeo.com/34326804'),
+	(2097,13339,'http-vimeocom-34345436','http://vimeo.com/34345436'),
+	(2096,13338,'http-vimeocom-37825850','http://vimeo.com/37825850'),
+	(2095,13337,'http-vimeocom-37930229','http://vimeo.com/37930229'),
+	(2094,13336,'http-vimeocom-37931216','http://vimeo.com/37931216'),
+	(2093,13335,'http-vimeocom-38479492','http://vimeo.com/38479492'),
+	(2092,13334,'http-vimeocom-38479581','http://vimeo.com/38479581'),
+	(2091,13333,'http-vimeocom-39344017','http://vimeo.com/39344017'),
+	(2090,13332,'http-vimeocom-39344018','http://vimeo.com/39344018'),
+	(2089,13331,'http-vimeocom-40157477','http://vimeo.com/40157477'),
+	(2088,13330,'http-vimeocom-40276098','http://vimeo.com/40276098'),
+	(2087,13329,'http-vimeocom-40340542','http://vimeo.com/40340542'),
+	(2086,13328,'http-vimeocom-40751840','http://vimeo.com/40751840'),
+	(2085,13327,'http-vimeocom-40775215','http://vimeo.com/40775215'),
+	(2084,13326,'http-vimeocom-40850676','http://vimeo.com/40850676'),
+	(2083,13325,'http-vimeocom-40914925','http://vimeo.com/40914925'),
+	(2082,13324,'http-vimeocom-41289564','http://vimeo.com/41289564'),
+	(2081,13323,'http-vimeocom-41289565','http://vimeo.com/41289565'),
+	(2080,13322,'http-vimeocom-41618509','http://vimeo.com/41618509'),
+	(2079,13321,'http-vimeocom-41774388','http://vimeo.com/41774388'),
+	(2078,13320,'http-vimeocom-42127479','http://vimeo.com/42127479'),
+	(2077,13319,'http-vimeocom-42127480','http://vimeo.com/42127480'),
+	(2076,13318,'http-vimeocom-42127481','http://vimeo.com/42127481');
 
 /*!40000 ALTER TABLE `sym_entries_data_186` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37502,31 +37541,31 @@ LOCK TABLES `sym_entries_data_187` WRITE;
 
 INSERT INTO `sym_entries_data_187` (`id`, `entry_id`, `value`, `value_formatted`)
 VALUES
-	(100,13076,'http://vimeo.com/moogaloop.swf?clip_id=28586610',NULL),
-	(99,13075,'http://vimeo.com/moogaloop.swf?clip_id=29296416',NULL),
-	(98,13074,'http://vimeo.com/moogaloop.swf?clip_id=33259080',NULL),
-	(97,13073,'http://vimeo.com/moogaloop.swf?clip_id=33331528',NULL),
-	(96,13072,'http://vimeo.com/moogaloop.swf?clip_id=33765755',NULL),
-	(95,13071,'http://vimeo.com/moogaloop.swf?clip_id=34326804',NULL),
-	(94,13070,'http://vimeo.com/moogaloop.swf?clip_id=34345436',NULL),
-	(93,13069,'http://vimeo.com/moogaloop.swf?clip_id=37825850',NULL),
-	(92,13068,'http://vimeo.com/moogaloop.swf?clip_id=37930229',NULL),
-	(76,13052,'http://vimeo.com/moogaloop.swf?clip_id=41774388',NULL),
-	(77,13053,'http://vimeo.com/moogaloop.swf?clip_id=41618509',NULL),
-	(78,13054,'http://vimeo.com/moogaloop.swf?clip_id=41289565',NULL),
-	(79,13055,'http://vimeo.com/moogaloop.swf?clip_id=41289564',NULL),
-	(80,13056,'http://vimeo.com/moogaloop.swf?clip_id=40914925',NULL),
-	(81,13057,'http://vimeo.com/moogaloop.swf?clip_id=40850676',NULL),
-	(82,13058,'http://vimeo.com/moogaloop.swf?clip_id=40775215',NULL),
-	(83,13059,'http://vimeo.com/moogaloop.swf?clip_id=40751840',NULL),
-	(84,13060,'http://vimeo.com/moogaloop.swf?clip_id=40340542',NULL),
-	(85,13061,'http://vimeo.com/moogaloop.swf?clip_id=40276098',NULL),
-	(86,13062,'http://vimeo.com/moogaloop.swf?clip_id=40157477',NULL),
-	(87,13063,'http://vimeo.com/moogaloop.swf?clip_id=39344018',NULL),
-	(88,13064,'http://vimeo.com/moogaloop.swf?clip_id=39344017',NULL),
-	(89,13065,'http://vimeo.com/moogaloop.swf?clip_id=38479581',NULL),
-	(90,13066,'http://vimeo.com/moogaloop.swf?clip_id=38479492',NULL),
-	(91,13067,'http://vimeo.com/moogaloop.swf?clip_id=37931216',NULL);
+	(2100,13342,'http://vimeo.com/moogaloop.swf?clip_id=33331528',NULL),
+	(2099,13341,'http://vimeo.com/moogaloop.swf?clip_id=33765755',NULL),
+	(2098,13340,'http://vimeo.com/moogaloop.swf?clip_id=34326804',NULL),
+	(2097,13339,'http://vimeo.com/moogaloop.swf?clip_id=34345436',NULL),
+	(2096,13338,'http://vimeo.com/moogaloop.swf?clip_id=37825850',NULL),
+	(2095,13337,'http://vimeo.com/moogaloop.swf?clip_id=37930229',NULL),
+	(2094,13336,'http://vimeo.com/moogaloop.swf?clip_id=37931216',NULL),
+	(2093,13335,'http://vimeo.com/moogaloop.swf?clip_id=38479492',NULL),
+	(2092,13334,'http://vimeo.com/moogaloop.swf?clip_id=38479581',NULL),
+	(2091,13333,'http://vimeo.com/moogaloop.swf?clip_id=39344017',NULL),
+	(2090,13332,'http://vimeo.com/moogaloop.swf?clip_id=39344018',NULL),
+	(2089,13331,'http://vimeo.com/moogaloop.swf?clip_id=40157477',NULL),
+	(2088,13330,'http://vimeo.com/moogaloop.swf?clip_id=40276098',NULL),
+	(2087,13329,'http://vimeo.com/moogaloop.swf?clip_id=40340542',NULL),
+	(2086,13328,'http://vimeo.com/moogaloop.swf?clip_id=40751840',NULL),
+	(2085,13327,'http://vimeo.com/moogaloop.swf?clip_id=40775215',NULL),
+	(2084,13326,'http://vimeo.com/moogaloop.swf?clip_id=40850676',NULL),
+	(2083,13325,'http://vimeo.com/moogaloop.swf?clip_id=40914925',NULL),
+	(2082,13324,'http://vimeo.com/moogaloop.swf?clip_id=41289564',NULL),
+	(2081,13323,'http://vimeo.com/moogaloop.swf?clip_id=41289565',NULL),
+	(2080,13322,'http://vimeo.com/moogaloop.swf?clip_id=41618509',NULL),
+	(2079,13321,'http://vimeo.com/moogaloop.swf?clip_id=41774388',NULL),
+	(2078,13320,'http://vimeo.com/moogaloop.swf?clip_id=42127479',NULL),
+	(2077,13319,'http://vimeo.com/moogaloop.swf?clip_id=42127480',NULL),
+	(2076,13318,'http://vimeo.com/moogaloop.swf?clip_id=42127481',NULL);
 
 /*!40000 ALTER TABLE `sym_entries_data_187` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37553,31 +37592,31 @@ LOCK TABLES `sym_entries_data_188` WRITE;
 
 INSERT INTO `sym_entries_data_188` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(100,13076,'http-bvimeocdncom-ts-190-776-190776513-200jpg','http://b.vimeocdn.com/ts/190/776/190776513_200.jpg'),
-	(99,13075,'http-bvimeocdncom-ts-196-138-196138532-200jpg','http://b.vimeocdn.com/ts/196/138/196138532_200.jpg'),
-	(98,13074,'http-bvimeocdncom-ts-225-662-225662295-200jpg','http://b.vimeocdn.com/ts/225/662/225662295_200.jpg'),
-	(97,13073,'http-bvimeocdncom-ts-226-188-226188208-200jpg','http://b.vimeocdn.com/ts/226/188/226188208_200.jpg'),
-	(76,13052,'http-bvimeocdncom-ts-289-527-289527532-200jpg','http://b.vimeocdn.com/ts/289/527/289527532_200.jpg'),
-	(77,13053,'http-bvimeocdncom-ts-288-411-288411301-200jpg','http://b.vimeocdn.com/ts/288/411/288411301_200.jpg'),
-	(78,13054,'http-bvimeocdncom-ts-285-903-285903289-200jpg','http://b.vimeocdn.com/ts/285/903/285903289_200.jpg'),
-	(79,13055,'http-bvimeocdncom-ts-285-909-285909208-200jpg','http://b.vimeocdn.com/ts/285/909/285909208_200.jpg'),
-	(80,13056,'http-bvimeocdncom-ts-283-058-283058848-200jpg','http://b.vimeocdn.com/ts/283/058/283058848_200.jpg'),
-	(81,13057,'http-bvimeocdncom-ts-282-576-282576542-200jpg','http://b.vimeocdn.com/ts/282/576/282576542_200.jpg'),
-	(82,13058,'http-bvimeocdncom-ts-281-985-281985153-200jpg','http://b.vimeocdn.com/ts/281/985/281985153_200.jpg'),
-	(83,13059,'http-bvimeocdncom-ts-281-839-281839594-200jpg','http://b.vimeocdn.com/ts/281/839/281839594_200.jpg'),
-	(84,13060,'http-bvimeocdncom-ts-278-726-278726966-200jpg','http://b.vimeocdn.com/ts/278/726/278726966_200.jpg'),
-	(85,13061,'http-bvimeocdncom-ts-278-255-278255065-200jpg','http://b.vimeocdn.com/ts/278/255/278255065_200.jpg'),
-	(86,13062,'http-bvimeocdncom-ts-277-432-277432343-200jpg','http://b.vimeocdn.com/ts/277/432/277432343_200.jpg'),
-	(87,13063,'http-bvimeocdncom-ts-271-366-271366292-200jpg','http://b.vimeocdn.com/ts/271/366/271366292_200.jpg'),
-	(88,13064,'http-bvimeocdncom-ts-271-382-271382690-200jpg','http://b.vimeocdn.com/ts/271/382/271382690_200.jpg'),
-	(89,13065,'http-bvimeocdncom-ts-264-880-264880240-200jpg','http://b.vimeocdn.com/ts/264/880/264880240_200.jpg'),
-	(90,13066,'http-bvimeocdncom-ts-264-879-264879321-200jpg','http://b.vimeocdn.com/ts/264/879/264879321_200.jpg'),
-	(91,13067,'http-bvimeocdncom-ts-260-759-260759126-200jpg','http://b.vimeocdn.com/ts/260/759/260759126_200.jpg'),
-	(92,13068,'http-bvimeocdncom-ts-260-753-260753349-200jpg','http://b.vimeocdn.com/ts/260/753/260753349_200.jpg'),
-	(93,13069,'http-bvimeocdncom-ts-264-715-264715278-200jpg','http://b.vimeocdn.com/ts/264/715/264715278_200.jpg'),
-	(94,13070,'http-bvimeocdncom-ts-233-836-233836426-200jpg','http://b.vimeocdn.com/ts/233/836/233836426_200.jpg'),
-	(95,13071,'http-bvimeocdncom-ts-233-732-233732843-200jpg','http://b.vimeocdn.com/ts/233/732/233732843_200.jpg'),
-	(96,13072,'http-bvimeocdncom-ts-229-500-229500153-200jpg','http://b.vimeocdn.com/ts/229/500/229500153_200.jpg');
+	(2100,13342,'http-bvimeocdncom-ts-292-969-292969797-200jpg','http://b.vimeocdn.com/ts/292/969/292969797_200.jpg'),
+	(2099,13341,'http-bvimeocdncom-ts-292-969-292969173-200jpg','http://b.vimeocdn.com/ts/292/969/292969173_200.jpg'),
+	(2098,13340,'http-bvimeocdncom-ts-292-968-292968599-200jpg','http://b.vimeocdn.com/ts/292/968/292968599_200.jpg'),
+	(2097,13339,'http-bvimeocdncom-ts-292-960-292960453-200jpg','http://b.vimeocdn.com/ts/292/960/292960453_200.jpg'),
+	(2096,13338,'http-bvimeocdncom-ts-264-715-264715278-200jpg','http://b.vimeocdn.com/ts/264/715/264715278_200.jpg'),
+	(2095,13337,'http-bvimeocdncom-ts-292-960-292960251-200jpg','http://b.vimeocdn.com/ts/292/960/292960251_200.jpg'),
+	(2094,13336,'http-bvimeocdncom-ts-292-960-292960076-200jpg','http://b.vimeocdn.com/ts/292/960/292960076_200.jpg'),
+	(2093,13335,'http-bvimeocdncom-ts-292-959-292959804-200jpg','http://b.vimeocdn.com/ts/292/959/292959804_200.jpg'),
+	(2092,13334,'http-bvimeocdncom-ts-292-959-292959531-200jpg','http://b.vimeocdn.com/ts/292/959/292959531_200.jpg'),
+	(2091,13333,'http-bvimeocdncom-ts-292-959-292959276-200jpg','http://b.vimeocdn.com/ts/292/959/292959276_200.jpg'),
+	(2090,13332,'http-bvimeocdncom-ts-292-958-292958920-200jpg','http://b.vimeocdn.com/ts/292/958/292958920_200.jpg'),
+	(2089,13331,'http-bvimeocdncom-ts-292-958-292958664-200jpg','http://b.vimeocdn.com/ts/292/958/292958664_200.jpg'),
+	(2088,13330,'http-bvimeocdncom-ts-292-958-292958361-200jpg','http://b.vimeocdn.com/ts/292/958/292958361_200.jpg'),
+	(2087,13329,'http-bvimeocdncom-ts-292-957-292957954-200jpg','http://b.vimeocdn.com/ts/292/957/292957954_200.jpg'),
+	(2086,13328,'http-bvimeocdncom-ts-292-957-292957693-200jpg','http://b.vimeocdn.com/ts/292/957/292957693_200.jpg'),
+	(2085,13327,'http-bvimeocdncom-ts-292-957-292957528-200jpg','http://b.vimeocdn.com/ts/292/957/292957528_200.jpg'),
+	(2084,13326,'http-bvimeocdncom-ts-292-957-292957124-200jpg','http://b.vimeocdn.com/ts/292/957/292957124_200.jpg'),
+	(2083,13325,'http-bvimeocdncom-ts-292-957-292957013-200jpg','http://b.vimeocdn.com/ts/292/957/292957013_200.jpg'),
+	(2082,13324,'http-bvimeocdncom-ts-292-956-292956843-200jpg','http://b.vimeocdn.com/ts/292/956/292956843_200.jpg'),
+	(2081,13323,'http-bvimeocdncom-ts-292-956-292956348-200jpg','http://b.vimeocdn.com/ts/292/956/292956348_200.jpg'),
+	(2080,13322,'http-bvimeocdncom-ts-292-955-292955926-200jpg','http://b.vimeocdn.com/ts/292/955/292955926_200.jpg'),
+	(2079,13321,'http-bvimeocdncom-ts-292-955-292955679-200jpg','http://b.vimeocdn.com/ts/292/955/292955679_200.jpg'),
+	(2078,13320,'http-bvimeocdncom-ts-292-955-292955431-200jpg','http://b.vimeocdn.com/ts/292/955/292955431_200.jpg'),
+	(2077,13319,'http-bvimeocdncom-ts-292-954-292954437-200jpg','http://b.vimeocdn.com/ts/292/954/292954437_200.jpg'),
+	(2076,13318,'http-bvimeocdncom-ts-292-953-292953852-200jpg','http://b.vimeocdn.com/ts/292/953/292953852_200.jpg');
 
 /*!40000 ALTER TABLE `sym_entries_data_188` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37625,7 +37664,7 @@ VALUES
 	(202,18,'about','About','about','About','1','About'),
 	(213,12491,'aurora','Aurora','aurora','Aurora','1','Aurora'),
 	(226,20,'events','Events','events','Events','1','Events'),
-	(248,21,'teachings','Teachings','teachings','Teachings','1','Teachings'),
+	(249,21,'teachings','Teachings','teachings','Teachings','1','Teachings'),
 	(173,22,'ministries','Ministries','ministries','Ministries','1','Ministries'),
 	(241,23,'missions','Missions','missions','Missions','1','Missions'),
 	(225,24,'give','Give','give','Give','1','Give'),
@@ -37648,7 +37687,7 @@ VALUES
 	(201,87,'fanafo','Fanafo','fanafo','Fanafo','1','Fanafo'),
 	(203,88,'contact-us','Contact Us','contact-us','Contact Us','2','Contact Us'),
 	(247,99,'the-good-news','The Good News','the-good-news','The Good News','3','The Good News'),
-	(235,100,'our-vision','Our Vision','our-vision','Our Vision','2','Our Vision'),
+	(250,100,'our-vision','Our Vision','our-vision','Our Vision','2','Our Vision'),
 	(236,101,'getting-involved','Getting Involved','getting-involved','Getting Involved','2','Getting Involved'),
 	(238,102,'our-history','Our History','our-history','Our History','2','Our History'),
 	(246,103,'staff','Staff','staff','Staff','1','Staff'),
@@ -37688,31 +37727,31 @@ LOCK TABLES `sym_entries_data_190` WRITE;
 
 INSERT INTO `sym_entries_data_190` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(50,13076,'28586610','28586610'),
-	(49,13075,'29296416','29296416'),
-	(48,13074,'33259080','33259080'),
-	(47,13073,'33331528','33331528'),
-	(46,13072,'33765755','33765755'),
-	(45,13071,'34326804','34326804'),
-	(44,13070,'34345436','34345436'),
-	(43,13069,'37825850','37825850'),
-	(42,13068,'37930229','37930229'),
-	(41,13067,'37931216','37931216'),
-	(40,13066,'38479492','38479492'),
-	(39,13065,'38479581','38479581'),
-	(38,13064,'39344017','39344017'),
-	(37,13063,'39344018','39344018'),
-	(36,13062,'40157477','40157477'),
-	(35,13061,'40276098','40276098'),
-	(34,13060,'40340542','40340542'),
-	(33,13059,'40751840','40751840'),
-	(32,13058,'40775215','40775215'),
-	(31,13057,'40850676','40850676'),
-	(30,13056,'40914925','40914925'),
-	(29,13055,'41289564','41289564'),
-	(28,13054,'41289565','41289565'),
-	(27,13053,'41618509','41618509'),
-	(26,13052,'41774388','41774388');
+	(2050,13342,'33331528','33331528'),
+	(2049,13341,'33765755','33765755'),
+	(2048,13340,'34326804','34326804'),
+	(2047,13339,'34345436','34345436'),
+	(2046,13338,'37825850','37825850'),
+	(2045,13337,'37930229','37930229'),
+	(2044,13336,'37931216','37931216'),
+	(2043,13335,'38479492','38479492'),
+	(2042,13334,'38479581','38479581'),
+	(2041,13333,'39344017','39344017'),
+	(2040,13332,'39344018','39344018'),
+	(2039,13331,'40157477','40157477'),
+	(2038,13330,'40276098','40276098'),
+	(2037,13329,'40340542','40340542'),
+	(2036,13328,'40751840','40751840'),
+	(2035,13327,'40775215','40775215'),
+	(2034,13326,'40850676','40850676'),
+	(2033,13325,'40914925','40914925'),
+	(2032,13324,'41289564','41289564'),
+	(2031,13323,'41289565','41289565'),
+	(2030,13322,'41618509','41618509'),
+	(2029,13321,'41774388','41774388'),
+	(2028,13320,'42127479','42127479'),
+	(2027,13319,'42127480','42127480'),
+	(2026,13318,'42127481','42127481');
 
 /*!40000 ALTER TABLE `sym_entries_data_190` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37737,7 +37776,8 @@ LOCK TABLES `sym_entries_data_191` WRITE;
 
 INSERT INTO `sym_entries_data_191` (`id`, `entry_id`, `relation_id`)
 VALUES
-	(1,7879,13073);
+	(6,13108,13081),
+	(10,7879,13186);
 
 /*!40000 ALTER TABLE `sym_entries_data_191` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -37762,9 +37802,194 @@ LOCK TABLES `sym_entries_data_192` WRITE;
 
 INSERT INTO `sym_entries_data_192` (`id`, `entry_id`, `value`)
 VALUES
-	(1,7879,'yes');
+	(5,13108,'yes'),
+	(9,7879,'yes');
 
 /*!40000 ALTER TABLE `sym_entries_data_192` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_194
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_194`;
+
+CREATE TABLE `sym_entries_data_194` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entry_id` (`entry_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_194` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_194` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_194` (`id`, `entry_id`, `start`, `end`)
+VALUES
+	(396,13348,'2012-05-10 17:08:45','2012-05-10 17:08:45'),
+	(395,13347,'2012-05-10 22:51:02','2012-05-10 22:51:02'),
+	(394,13346,'2012-05-10 22:51:09','2012-05-10 22:51:09'),
+	(393,13345,'2012-05-10 22:52:25','2012-05-10 22:52:25'),
+	(392,13344,'2012-05-10 22:52:28','2012-05-10 22:52:28'),
+	(391,13343,'2012-05-10 22:52:35','2012-05-10 22:52:35');
+
+/*!40000 ALTER TABLE `sym_entries_data_194` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_195
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_195`;
+
+CREATE TABLE `sym_entries_data_195` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_195` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_195` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_195` (`id`, `entry_id`, `handle`, `value`)
+VALUES
+	(396,13348,'200739181679493120','200739181679493120'),
+	(395,13347,'200825323200315392','200825323200315392'),
+	(394,13346,'200825352744996864','200825352744996864'),
+	(393,13345,'200825668139892736','200825668139892736'),
+	(392,13344,'200825682610241537','200825682610241537'),
+	(391,13343,'200825712867942400','200825712867942400');
+
+/*!40000 ALTER TABLE `sym_entries_data_195` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_196
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_196`;
+
+CREATE TABLE `sym_entries_data_196` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_196` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_196` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_196` (`id`, `entry_id`, `handle`, `value`)
+VALUES
+	(396,13348,'atheycreek','AtheyCreek'),
+	(395,13347,'atheycreek','AtheyCreek'),
+	(394,13346,'atheycreek','AtheyCreek'),
+	(393,13345,'atheycreek','AtheyCreek'),
+	(392,13344,'atheycreek','AtheyCreek'),
+	(391,13343,'atheycreek','AtheyCreek');
+
+/*!40000 ALTER TABLE `sym_entries_data_196` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_197
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_197`;
+
+CREATE TABLE `sym_entries_data_197` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_197` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_197` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_197` (`id`, `entry_id`, `handle`, `value`)
+VALUES
+	(396,13348,'athey-creek-cf','Athey Creek C.F.'),
+	(395,13347,'athey-creek-cf','Athey Creek C.F.'),
+	(394,13346,'athey-creek-cf','Athey Creek C.F.'),
+	(393,13345,'athey-creek-cf','Athey Creek C.F.'),
+	(392,13344,'athey-creek-cf','Athey Creek C.F.'),
+	(391,13343,'athey-creek-cf','Athey Creek C.F.');
+
+/*!40000 ALTER TABLE `sym_entries_data_197` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_198
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_198`;
+
+CREATE TABLE `sym_entries_data_198` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` mediumtext,
+  `value_formatted` mediumtext,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_198` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_198` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_198` (`id`, `entry_id`, `value`, `value_formatted`)
+VALUES
+	(395,13347,'RT @<a class=\" \" href=\"http://twitter.com/Kidwithgun503\">Kidwithgun503</a>: Getting ready to head to @<a class=\" \" href=\"http://twitter.com/AtheyCreek\">AtheyCreek</a> for the @<a class=\" \" href=\"http://twitter.com/timhawkinscomic\">timhawkinscomic</a> show! Gonna be a blast I hope!',NULL),
+	(394,13346,'RT @<a class=\" \" href=\"http://twitter.com/BrookeMeador\">BrookeMeador</a>: Tim Hawkins = So. Funny.  <a href=\"http://t.co/TjKKjFYB\">http://t.co/TjKKjFYB</a>',NULL),
+	(393,13345,'RT @<a class=\" \" href=\"http://twitter.com/macyglen\">macyglen</a>: Tim Hawkins show wit @<a class=\" \" href=\"http://twitter.com/a_rage12\">a_rage12</a> and @<a class=\" \" href=\"http://twitter.com/nicolenosler\">nicolenosler</a> <a href=\"http://search.twitter.com/search?q=%23funnyfunnyfunny\" title=\"#funnyfunnyfunny\" class=\" \">#funnyfunnyfunny</a>',NULL),
+	(392,13344,'RT @<a class=\" \" href=\"http://twitter.com/ThibodeauxMike\">ThibodeauxMike</a>: Debbie and I are on a date!  45 minutes away from watching Tim Hawkins Live.',NULL),
+	(391,13343,'RT @<a class=\" \" href=\"http://twitter.com/scrappyfrog\">scrappyfrog</a>: Ready to see Tim Hawkins! <a href=\"http://t.co/fePYKGCe\">http://t.co/fePYKGCe</a>',NULL),
+	(396,13348,'We are hosting a sold-out Tim Hawkins show at 7 o\'clock tonight! Are you coming??',NULL);
+
+/*!40000 ALTER TABLE `sym_entries_data_198` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_199
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_199`;
+
+CREATE TABLE `sym_entries_data_199` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `handle` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  KEY `handle` (`handle`),
+  KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_199` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_199` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_199` (`id`, `entry_id`, `handle`, `value`)
+VALUES
+	(55,13355,'ustream-status','ustream-status');
+
+/*!40000 ALTER TABLE `sym_entries_data_199` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -37789,8 +38014,8 @@ LOCK TABLES `sym_entries_data_2` WRITE;
 
 INSERT INTO `sym_entries_data_2` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(330,105,'brett','Brett'),
-	(337,106,'jeff','Jeff'),
+	(372,105,'brett','Brett'),
+	(389,106,'jeff','Jeff'),
 	(89,7749,'jesse','Jesse'),
 	(265,12498,'john','John '),
 	(269,12500,'dave-and-sheri','Dave & Sheri'),
@@ -37809,7 +38034,7 @@ VALUES
 	(227,12513,'jim','Jim '),
 	(230,12514,'daryn','Daryn'),
 	(274,12515,'daryn-and-kristi','Daryn & Kristi'),
-	(353,12516,'abner','Abner'),
+	(383,12516,'abner','Abner'),
 	(232,12517,'jim','Jim'),
 	(285,12518,'jim-and-tani','Jim & Tani'),
 	(234,12519,'gordie','Gordie'),
@@ -37827,11 +38052,11 @@ VALUES
 	(249,12530,'brandon','Brandon'),
 	(250,12531,'seth','Seth'),
 	(280,12532,'brandon-and-jessie','Brandon & Jessie'),
-	(359,12533,'joey','Joey'),
+	(374,12533,'joey','Joey'),
 	(84,12535,'erik','Erik'),
 	(129,12536,'chad','Chad'),
 	(281,12537,'erik-and-kim','Erik & Kim'),
-	(344,12538,'micah','Micah'),
+	(400,12538,'micah','Micah'),
 	(286,12539,'andy','Andy'),
 	(137,12540,'mike','Mike'),
 	(282,12541,'mike-and-tiffany','Mike & Tiffany '),
@@ -37839,25 +38064,25 @@ VALUES
 	(140,12543,'cesar','Cesar'),
 	(141,12544,'grace','Grace'),
 	(142,12545,'eric','Eric'),
-	(332,12546,'bryan','Bryan '),
+	(375,12546,'bryan','Bryan '),
 	(283,12547,'eric-and-lorri','Eric & Lorri'),
-	(341,12548,'kaipo','Kaipo'),
-	(360,12549,'bobby','Bobby'),
-	(328,12550,'amy','Amy'),
-	(334,12551,'david','David'),
-	(338,12552,'jen','Jen'),
+	(362,12548,'kaipo','Kaipo'),
+	(363,12549,'bobby','Bobby'),
+	(368,12550,'amy','Amy'),
+	(367,12551,'david','David'),
+	(371,12552,'jen','Jen'),
 	(342,12553,'kari','Kari'),
-	(331,12555,'brooke','Brooke'),
+	(373,12555,'brooke','Brooke'),
 	(351,12556,'abe','Abe'),
-	(358,12557,'tim','Tim'),
-	(335,12558,'haley','Haley'),
-	(349,12559,'bryn','Bryn'),
-	(343,12560,'kate','Kate'),
+	(404,12557,'tim','Tim'),
+	(406,12558,'haley','Haley'),
+	(379,12559,'bryn','Bryn'),
+	(380,12560,'kate','Kate'),
 	(336,12561,'james','James'),
-	(340,12562,'judy','Judy'),
-	(345,12563,'mike','Mike'),
-	(346,12564,'nate','Nate'),
-	(347,12565,'tad','Tad'),
+	(381,12562,'judy','Judy'),
+	(369,12563,'mike','Mike'),
+	(364,12564,'nate','Nate'),
+	(382,12565,'tad','Tad'),
 	(184,12572,'al','Al'),
 	(185,12573,'george','George'),
 	(186,12574,'jeff','Jeff'),
@@ -37877,6 +38102,7 @@ VALUES
 	(201,12588,'jon','Jon'),
 	(239,12601,'shanna','Shanna'),
 	(252,12653,'brian','Brian'),
+	(403,13109,'rachel','Rachel'),
 	(255,12748,'mindy','Mindy'),
 	(256,12752,'sarah','Sarah'),
 	(260,12812,'danny','Danny'),
@@ -37885,12 +38111,39 @@ VALUES
 	(268,12499,'dave','Dave'),
 	(288,12822,'marcel','Marcel'),
 	(290,12830,'josh','Josh'),
+	(396,13110,'amy','Amy '),
 	(294,12911,'jon','Jon'),
-	(325,12972,'stacey','Stacey'),
+	(399,12972,'stacey','Stacey'),
 	(298,12922,'jason','Jason'),
 	(299,12923,'daniel','Daniel');
 
 /*!40000 ALTER TABLE `sym_entries_data_2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table sym_entries_data_200
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sym_entries_data_200`;
+
+CREATE TABLE `sym_entries_data_200` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) unsigned NOT NULL,
+  `value` mediumtext,
+  `value_formatted` mediumtext,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `entry_id` (`entry_id`),
+  FULLTEXT KEY `value` (`value`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sym_entries_data_200` WRITE;
+/*!40000 ALTER TABLE `sym_entries_data_200` DISABLE KEYS */;
+
+INSERT INTO `sym_entries_data_200` (`id`, `entry_id`, `value`, `value_formatted`)
+VALUES
+	(60,13355,'offline',NULL);
+
+/*!40000 ALTER TABLE `sym_entries_data_200` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -37920,7 +38173,7 @@ VALUES
 	(217,24,'giving-at-athey','Giving at Athey','giving-at-athey','Giving at Athey',3,'Giving at Athey'),
 	(194,18,'about-us','About us','about-us','About us',2,'About us'),
 	(218,20,'events','Events','events','Events',1,'Events'),
-	(240,21,'teachings','Teachings','teachings','Teachings',1,'Teachings'),
+	(241,21,'teachings','Teachings','teachings','Teachings',1,'Teachings'),
 	(165,22,'ministries','Ministries','ministries','Ministries',1,'Ministries'),
 	(233,23,'missions','Missions','missions','Missions',1,'Missions'),
 	(166,25,'men-s-ministry','Men’s Ministry','men-s-ministry','Men’s Ministry',2,'Men’s Ministry'),
@@ -37941,7 +38194,7 @@ VALUES
 	(193,87,'fanafo-christian-fellowship','Fanafo Christian Fellowship','fanafo-christian-fellowship','Fanafo Christian Fellowship',3,'Fanafo Christian Fellowship'),
 	(195,88,'contact-us','Contact Us','contact-us','Contact Us',2,'Contact Us'),
 	(239,99,'the-good-news','The Good News','the-good-news','The Good News',3,'The Good News'),
-	(227,100,'our-vision','Our Vision','our-vision','Our Vision',2,'Our Vision'),
+	(242,100,'our-vision','Our Vision','our-vision','Our Vision',2,'Our Vision'),
 	(228,101,'getting-involved','Getting Involved','getting-involved','Getting Involved',2,'Getting Involved'),
 	(230,102,'our-history','Our History','our-history','Our History',2,'Our History'),
 	(238,103,'staff','Staff','staff','Staff',1,'Staff'),
@@ -37982,7 +38235,7 @@ LOCK TABLES `sym_entries_data_23` WRITE;
 INSERT INTO `sym_entries_data_23` (`id`, `entry_id`, `value`)
 VALUES
 	(192,18,35),
-	(238,21,3),
+	(239,21,3),
 	(216,20,5),
 	(203,12491,16),
 	(163,22,6),
@@ -38007,7 +38260,7 @@ VALUES
 	(191,87,33),
 	(193,88,36),
 	(237,99,37),
-	(225,100,39),
+	(240,100,39),
 	(226,101,40),
 	(228,102,41),
 	(236,103,42),
@@ -38121,13 +38374,13 @@ VALUES
 	(97,12803,'burkina-faso-africa','Burkina Faso Africa','burkina-faso-africa','Burkina Faso Africa',3,'Burkina Faso Africa'),
 	(98,12804,'lima','Lima','lima','Lima',1,'Lima'),
 	(99,12805,'luganville-vanuatu','Luganville, Vanuatu','luganville-vanuatu','Luganville, Vanuatu',2,'Luganville, Vanuatu'),
-	(100,7748,'holsbybrunn-sweden','Holsbybrunn, Sweden','holsbybrunn-sweden','Holsbybrunn, Sweden',2,'Holsbybrunn, Sweden'),
 	(102,33,'church-building','Church building','church-building','Church building',2,'Church building'),
 	(103,12948,'david-frost','David Frost','david-frost','David Frost',2,'David Frost'),
 	(106,12953,NULL,NULL,NULL,NULL,0,NULL),
 	(107,12589,NULL,NULL,NULL,NULL,0,NULL),
 	(108,12745,NULL,NULL,NULL,NULL,0,NULL),
-	(109,12950,NULL,NULL,NULL,NULL,0,NULL);
+	(109,12950,NULL,NULL,NULL,NULL,0,NULL),
+	(113,7748,'holsbybrunn-sweden','Holsbybrunn, Sweden','holsbybrunn-sweden','Holsbybrunn, Sweden',2,'Holsbybrunn, Sweden');
 
 /*!40000 ALTER TABLE `sym_entries_data_26` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -38180,13 +38433,13 @@ VALUES
 	(97,12803,'ouagadougou-burkina-faso','Ouagadougou, Burkina Faso','ouagadougou-burkina-faso','Ouagadougou, Burkina Faso',3,'Ouagadougou, Burkina Faso'),
 	(98,12804,'lima-peru','Lima, Peru','lima-peru','Lima, Peru',2,'Lima, Peru'),
 	(99,12805,'vanuatu','Vanuatu','vanuatu','Vanuatu',1,'Vanuatu'),
-	(100,7748,'holsbybrunn-sweden','Holsbybrunn, Sweden','holsbybrunn-sweden','Holsbybrunn, Sweden',2,'Holsbybrunn, Sweden'),
 	(102,33,'athey-creek-christian-fellowship','Athey Creek Christian Fellowship','athey-creek-christian-fellowship','Athey Creek Christian Fellowship',4,'Athey Creek Christian Fellowship'),
 	(103,12948,'bullwinkles-family-fun-center','Bullwinkle\'s Family Fun Center','bullwinkles-family-fun-center','Bullwinkle\'s Family Fun Center',4,'Bullwinkle\'s Family Fun Center'),
 	(106,12953,'hebb-park','Hebb Park','hebb-park','Hebb Park',2,'Hebb Park'),
 	(107,12589,'dave-and-sheri-ober-s-home','Dave & Sheri Ober’s home','dave-and-sheri-ober-s-home','Dave & Sheri Ober’s home',4,'Dave &amp; Sheri Ober’s home'),
 	(108,12745,'derek-and-sarah-glos-home','Derek & Sarah Glos\' Home','derek-and-sarah-glos-home','Derek & Sarah Glos\' Home',4,'Derek &amp; Sarah Glos\' Home'),
-	(109,12950,'macleay-christian-retreat','Macleay Christian Retreat','macleay-christian-retreat','Macleay Christian Retreat',3,'Macleay Christian Retreat');
+	(109,12950,'macleay-christian-retreat','Macleay Christian Retreat','macleay-christian-retreat','Macleay Christian Retreat',3,'Macleay Christian Retreat'),
+	(113,7748,'holsbybrunn-sweden','Holsbybrunn, Sweden','holsbybrunn-sweden','Holsbybrunn, Sweden',2,'Holsbybrunn, Sweden');
 
 /*!40000 ALTER TABLE `sym_entries_data_27` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -38239,13 +38492,13 @@ VALUES
 	(97,12803,NULL,NULL,NULL,NULL,0,'\n'),
 	(98,12804,NULL,NULL,NULL,NULL,0,'\n'),
 	(99,12805,NULL,NULL,NULL,NULL,0,'\n'),
-	(100,7748,NULL,'We have a missions team here.\r\n\r\n',NULL,'We have a missions team here.\r\n\r\n',6,'<p>We have a missions team here.</p>\n'),
 	(102,33,NULL,'Main building for fellowship',NULL,'Main building for fellowship',4,'<p>Main building for fellowship</p>\n'),
 	(103,12948,NULL,NULL,NULL,NULL,0,'\n'),
 	(106,12953,NULL,'Wakeboarding Spot',NULL,'Wakeboarding Spot',2,'<p>Wakeboarding Spot</p>\n'),
 	(107,12589,NULL,NULL,NULL,NULL,0,'\n'),
 	(108,12745,NULL,NULL,NULL,NULL,0,'\n'),
-	(109,12950,NULL,'Retreat center in Salem',NULL,'Retreat center in Salem',4,'<p>Retreat center in Salem</p>\n');
+	(109,12950,NULL,'Retreat center in Salem',NULL,'Retreat center in Salem',4,'<p>Retreat center in Salem</p>\n'),
+	(113,7748,NULL,'We have a missions team here.\r\n\r\n',NULL,'We have a missions team here.\r\n\r\n',6,'<p>We have a missions team here.</p>\n');
 
 /*!40000 ALTER TABLE `sym_entries_data_28` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -38665,8 +38918,8 @@ LOCK TABLES `sym_entries_data_4` WRITE;
 
 INSERT INTO `sym_entries_data_4` (`id`, `entry_id`, `handle`, `value`)
 VALUES
-	(330,105,'meador','Meador'),
-	(337,106,'young','Young'),
+	(372,105,'meador','Meador'),
+	(389,106,'young','Young'),
 	(89,7749,'ashmen','Ashmen'),
 	(265,12498,'heise','Heise'),
 	(268,12499,'ober','Ober'),
@@ -38686,7 +38939,7 @@ VALUES
 	(227,12513,'chapin','Chapin'),
 	(230,12514,'thorpe','Thorpe'),
 	(274,12515,'thorpe','Thorpe'),
-	(353,12516,'sumrall','Sumrall'),
+	(383,12516,'sumrall','Sumrall'),
 	(232,12517,'jansen','Jansen'),
 	(285,12518,'jansen','Jansen'),
 	(234,12519,'erickson','Erickson'),
@@ -38703,11 +38956,11 @@ VALUES
 	(249,12530,'bittner','Bittner'),
 	(250,12531,'sumetz','Sumetz'),
 	(280,12532,'bittner','Bittner'),
-	(359,12533,'meador','Meador'),
+	(374,12533,'meador','Meador'),
 	(84,12535,'ortiz','Ortiz'),
 	(129,12536,'vallely','Vallely'),
 	(281,12537,'ortiz','Ortiz'),
-	(344,12538,'depaoli','DePaoli'),
+	(400,12538,'depaoli','DePaoli'),
 	(286,12539,'coleman','Coleman'),
 	(137,12540,'wagner','Wagner'),
 	(282,12541,'wagner','Wagner'),
@@ -38715,26 +38968,26 @@ VALUES
 	(140,12543,'olivares','Olivares'),
 	(141,12544,'crary','Crary'),
 	(142,12545,'allphin','Allphin'),
-	(332,12546,'maurice','Maurice'),
+	(375,12546,'maurice','Maurice'),
 	(283,12547,'allphin','Allphin'),
-	(341,12548,'amina','Amina'),
-	(360,12549,'belt','Belt'),
-	(328,12550,'elliott','Elliott'),
-	(334,12551,'frost','Frost'),
-	(338,12552,'maurice','Maurice'),
+	(362,12548,'amina','Amina'),
+	(363,12549,'belt','Belt'),
+	(368,12550,'elliott','Elliott'),
+	(367,12551,'frost','Frost'),
+	(371,12552,'maurice','Maurice'),
 	(342,12553,'linder','Linder'),
 	(241,12599,'baker','Baker'),
-	(331,12555,'meador','Meador'),
+	(373,12555,'meador','Meador'),
 	(351,12556,'menshenfriend','Menshenfriend'),
-	(358,12557,'miller','Miller'),
-	(335,12558,'norton','Norton'),
-	(349,12559,'ritchie','Ritchie'),
-	(343,12560,'rockwell','Rockwell'),
+	(404,12557,'miller','Miller'),
+	(406,12558,'norton','Norton'),
+	(379,12559,'ritchie','Ritchie'),
+	(380,12560,'rockwell','Rockwell'),
 	(336,12561,'shields','Shields'),
-	(340,12562,'slaughter','Slaughter'),
-	(345,12563,'marugg','Marugg'),
-	(346,12564,'decoste','DeCoste'),
-	(347,12565,'slaughter','Slaughter'),
+	(381,12562,'slaughter','Slaughter'),
+	(369,12563,'marugg','Marugg'),
+	(364,12564,'decoste','DeCoste'),
+	(382,12565,'slaughter','Slaughter'),
 	(184,12572,'lippincott','Lippincott'),
 	(185,12573,'nelson','Nelson'),
 	(186,12574,'frost','Frost'),
@@ -38755,14 +39008,16 @@ VALUES
 	(277,12600,'browning','Browning'),
 	(239,12601,'browning','Browning'),
 	(252,12653,'fowler','Fowler'),
+	(403,13109,'wagner','Wagner'),
 	(255,12748,'strauss','Strauss'),
 	(256,12752,'glos','Glos'),
 	(260,12812,'robinson','Robinson'),
 	(261,12813,'lundberg','Lundberg'),
 	(288,12822,'yanogo','Yanogo'),
 	(290,12830,'vallely','Vallely'),
+	(396,13110,'mcreynolds','McReynolds'),
 	(294,12911,'courson','Courson'),
-	(325,12972,'wilber','Wilber'),
+	(399,12972,'wilber','Wilber'),
 	(298,12922,'arsenault','Arsenault'),
 	(299,12923,'delma','Delma');
 
@@ -38797,13 +39052,11 @@ VALUES
 	(31,79,NULL,'## Going deeper into God\'s Word\r\n\r\n### Wednesday at 7:00 PM\r\n#### Athey Creek Christian Fellowship\r\n#### 27520 SW 95th Ave\r\n#### Wilsonville, OR 97070\r\n\r\nWednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.\r\n\r\nDuring this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.',NULL,'## Going deeper into God\'s Word\r\n\r\n### Wednesday at 7:00 PM\r\n#### Athey Creek Christian Fellowship\r\n#### 27520 SW 95th Ave\r\n#### Wilsonville, OR 97070\r\n\r\nWednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.\r\n\r\nDuring this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.',106,'<h2>Going deeper into God&#8217;s Word</h2>\n\n<h3>Wednesday at 7:00 PM</h3>\n\n<h4>Athey Creek Christian Fellowship</h4>\n\n<h4>27520 SW 95th Ave</h4>\n\n<h4>Wilsonville, OR 97070</h4>\n\n<p>Wednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.</p>\n\n<p>During this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.</p>\n'),
 	(158,12631,NULL,'Home Groups meet twice a month on Sundays to fellowship from house-to-house around the Portland Metro Area.  This is a great way to get to know other believers in a smaller setting, spend time in the Word, pray for one another and celebrate the sacrifice Jesus made for us on the cross.  Ultimately, our hope is that these groups are a place where Athey Creekers are strengthened, cared for and joined together.  So, we encourage you to find a home group that is a good fit and plug in!\r\n\r\nFeel free to contact the leaders for more information about a specific home group.  If you have general questions about home groups, you can send an email to homegroups@atheycreek.com or call Mike Marugg at 503.803.0868.',NULL,'Home Groups meet twice a month on Sundays to fellowship from house-to-house around the Portland Metro Area.  This is a great way to get to know other believers in a smaller setting, spend time in the Word, pray for one another and celebrate the sacrifice Jesus made for us on the cross.  Ultimately, our hope is that these groups are a place where Athey Creekers are strengthened, cared for and joined together.  So, we encourage you to find a home group that is a good fit and plug in!\r\n\r\nFeel free to contact the leaders for more information about a specific home group.  If you have general questions about home groups, you can send an email to homegroups@atheycreek.com or call Mike Marugg at 503.803.0868.',123,'<p>Home Groups meet twice a month on Sundays to fellowship from house-to-house around the Portland Metro Area.  This is a great way to get to know other believers in a smaller setting, spend time in the Word, pray for one another and celebrate the sacrifice Jesus made for us on the cross.  Ultimately, our hope is that these groups are a place where Athey Creekers are strengthened, cared for and joined together.  So, we encourage you to find a home group that is a good fit and plug in!</p>\n\n<p>Feel free to contact the leaders for more information about a specific home group.  If you have general questions about home groups, you can send an email to homegroups@atheycreek.com or call Mike Marugg at 503.803.0868.</p>\n'),
 	(159,12621,NULL,'##\"Day by Day\" Radio Broadcasts##\r\n\r\n###Portland Area Radio Listeners###\r\n\r\nMonday through Friday\r\n\r\nKPDQ 800 AM at 8:30 am\r\n\r\nKPDQ 800 AM at 3:00 pm (for a limited time only)\r\n\r\nKPDQ 93.9 FM at 10:00 pm\r\n\r\n \r\n###Southern Oregon Radio Listeners###\r\n\r\nMonday through Friday\r\n\r\nKAPL 1300 AM at 1:30 pm\r\n\r\nKAPL 1300 AM at 11:30 pm\r\n\r\n \r\n###Vanuatu Radio Listeners###\r\n\r\nEveryday\r\n\r\nNAMBAWAN 98 FM at 5:00 pm',NULL,'##\"Day by Day\" Radio Broadcasts##\r\n\r\n###Portland Area Radio Listeners###\r\n\r\nMonday through Friday\r\n\r\nKPDQ 800 AM at 8:30 am\r\n\r\nKPDQ 800 AM at 3:00 pm (for a limited time only)\r\n\r\nKPDQ 93.9 FM at 10:00 pm\r\n\r\n \r\n###Southern Oregon Radio Listeners###\r\n\r\nMonday through Friday\r\n\r\nKAPL 1300 AM at 1:30 pm\r\n\r\nKAPL 1300 AM at 11:30 pm\r\n\r\n \r\n###Vanuatu Radio Listeners###\r\n\r\nEveryday\r\n\r\nNAMBAWAN 98 FM at 5:00 pm',52,'<h2>&#8220;Day by Day&#8221; Radio Broadcasts</h2>\n\n<h3>Portland Area Radio Listeners</h3>\n\n<p>Monday through Friday</p>\n\n<p>KPDQ 800 AM at 8:30 am</p>\n\n<p>KPDQ 800 AM at 3:00 pm (for a limited time only)</p>\n\n<p>KPDQ 93.9 FM at 10:00 pm</p>\n\n<h3>Southern Oregon Radio Listeners</h3>\n\n<p>Monday through Friday</p>\n\n<p>KAPL 1300 AM at 1:30 pm</p>\n\n<p>KAPL 1300 AM at 11:30 pm</p>\n\n<h3>Vanuatu Radio Listeners</h3>\n\n<p>Everyday</p>\n\n<p>NAMBAWAN 98 FM at 5:00 pm</p>\n'),
-	(160,12490,NULL,'##If you would like to get in touch with us, please feel free to call or drop by the church office.\r\n\r\n###Church Office\r\n\r\n**Phone:**	 	(971) 327-2120\r\n\r\n**FAX:**  	(971) 327-2123\r\n\r\n**Address:**\r\n\r\n> 27520 SW 95th Ave\r\n\r\n> Wilsonville, OR 97070\r\n\r\n**Mail:**\r\n\r\n> P.O. Box 534\r\n\r\n> Tualatin, OR 97062\r\n\r\n**Office Hours:**	 	\r\n\r\n> 9:00 AM to 5:00 PM - Tues, Thur, Fri\r\n\r\n> 9:00 AM to 12:00 PM - Wed\r\n\r\n> Closed Monday\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n',NULL,'##If you would like to get in touch with us, please feel free to call or drop by the church office.\r\n\r\n###Church Office\r\n\r\n**Phone:**	 	(971) 327-2120\r\n\r\n**FAX:**  	(971) 327-2123\r\n\r\n**Address:**\r\n\r\n> 27520 SW 95th Ave\r\n\r\n> Wilsonville, OR 97070\r\n\r\n**Mail:**\r\n\r\n> P.O. Box 534\r\n\r\n> Tualatin, OR 97062\r\n\r\n**Office Hours:**	 	\r\n\r\n> 9:00 AM to 5:00 PM - Tues, Thur, Fri\r\n\r\n> 9:00 AM to 12:00 PM - Wed\r\n\r\n> Closed Monday\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n',50,'<h2>If you would like to get in touch with us, please feel free to call or drop by the church office.</h2>\n\n<h3>Church Office</h3>\n\n<p><strong>Phone:</strong>      (971) 327-2120</p>\n\n<p><strong>FAX:</strong>    (971) 327-2123</p>\n\n<p><strong>Address:</strong></p>\n\n<blockquote>\n  <p>27520 SW 95th Ave</p>\n  \n  <p>Wilsonville, OR 97070</p>\n</blockquote>\n\n<p><strong>Mail:</strong></p>\n\n<blockquote>\n  <p>P.O. Box 534</p>\n  \n  <p>Tualatin, OR 97062</p>\n</blockquote>\n\n<p><strong>Office Hours:</strong></p>\n\n<blockquote>\n  <p>9:00 AM to 5:00 PM - Tues, Thur, Fri</p>\n  \n  <p>9:00 AM to 12:00 PM - Wed</p>\n  \n  <p>Closed Monday</p>\n</blockquote>\n'),
 	(163,12485,NULL,'> \"Bring all the tithes into the storehouse, That there may be food in My house, And try Me now in this,\" Says the LORD of hosts, \"If I will not open for you the windows of heaven And pour out for you such blessing That there will not be room enough to receive it.\" - Malachi 3:10\r\n\r\nFor your convenience we now have the ability to accept tithes and offerings electronically via our online giving page.  We use PayPal for our financial transactions to guarantee that your funds transfers are private and secure. \r\n\r\nAthey Creek is faithfully committed to good stewardship and integrity in the management of the resources God has provided us. \r\n\r\nThank you for your heart of giving to the Lord! \r\n\r\n<a href=\"https://accf.webconnex.com/giving/\" target=\"_blank\">online giving</a>',NULL,'> \"Bring all the tithes into the storehouse, That there may be food in My house, And try Me now in this,\" Says the LORD of hosts, \"If I will not open for you the windows of heaven And pour out for you such blessing That there will not be room enough to receive it.\" - Malachi 3:10\r\n\r\nFor your convenience we now have the ability to accept tithes and offerings electronically via our online giving page.  We use PayPal for our financial transactions to guarantee that your funds transfers are private and secure. \r\n\r\nAthey Creek is faithfully committed to good stewardship and integrity in the management of the resources God has provided us. \r\n\r\nThank you for your heart of giving to the Lord! \r\n\r\n<a href=\"https://accf.webconnex.com/giving/\" target=\"_blank\">online giving</a>',123,'<blockquote>\n  <p>&#8220;Bring all the tithes into the storehouse, That there may be food in My house, And try Me now in this,&#8221; Says the LORD of hosts, &#8220;If I will not open for you the windows of heaven And pour out for you such blessing That there will not be room enough to receive it.&#8221; - Malachi 3:10</p>\n</blockquote>\n\n<p>For your convenience we now have the ability to accept tithes and offerings electronically via our online giving page.  We use PayPal for our financial transactions to guarantee that your funds transfers are private and secure.</p>\n\n<p>Athey Creek is faithfully committed to good stewardship and integrity in the management of the resources God has provided us.</p>\n\n<p>Thank you for your heart of giving to the Lord!</p>\n\n<p><a href=\"https://accf.webconnex.com/giving/\" target=\"_blank\">online giving</a></p>\n'),
 	(168,12476,NULL,'## We are blessed to come along side our brothers and sisters around the world.\r\n\r\nFanafo Village is actually a grouping of many “mini villages” situated very closely together. It is about an hour’s drive from Natanara Christian Fellowship and 45 minutes from the town of Luganville. Fanafo is dotted with the remains of hastily built anti-aircraft bunkers and Quonset huts left by the Allied forces (primarily American) during World War Two. It is an area with several small churches but also with numerous people who are still following their tribal religions. This area was the home of a political rebellion in 1980 that came to a head when men from Fanafo took over Luganville using bows and arrows, spears and unearthed rifles left behind during WWII. They were successful until the government received assistance from Papua New Guinea who sent a gunship and threatened to quash the rebellion with overwhelming force. Fanafo still has many who would prefer to see Vanuatu return to the old ways and to remove all foreign influences.\r\n\r\nSeveral years ago, Pastor Zachy, returned to his home in Fanafo after graduating from Searchlight Bible College. He began sharing the Word of God with his family and with his relatives in the village. This was the beginning of Fanafo Christian Fellowship. Now Pastor Zachy has started another church in his area, splitting his time teaching each church two Sundays a month. The original church is located in his area of the village, while the other is over an hour’s trek through the jungle to a distant, smaller village. He has been doing this for several years now and is praying that the Lord will send him someone who knows the language who can also teach the people about the grace and freedom that are found in Jesus Christ.',NULL,'## We are blessed to come along side our brothers and sisters around the world.\r\n\r\nFanafo Village is actually a grouping of many “mini villages” situated very closely together. It is about an hour’s drive from Natanara Christian Fellowship and 45 minutes from the town of Luganville. Fanafo is dotted with the remains of hastily built anti-aircraft bunkers and Quonset huts left by the Allied forces (primarily American) during World War Two. It is an area with several small churches but also with numerous people who are still following their tribal religions. This area was the home of a political rebellion in 1980 that came to a head when men from Fanafo took over Luganville using bows and arrows, spears and unearthed rifles left behind during WWII. They were successful until the government received assistance from Papua New Guinea who sent a gunship and threatened to quash the rebellion with overwhelming force. Fanafo still has many who would prefer to see Vanuatu return to the old ways and to remove all foreign influences.\r\n\r\nSeveral years ago, Pastor Zachy, returned to his home in Fanafo after graduating from Searchlight Bible College. He began sharing the Word of God with his family and with his relatives in the village. This was the beginning of Fanafo Christian Fellowship. Now Pastor Zachy has started another church in his area, splitting his time teaching each church two Sundays a month. The original church is located in his area of the village, while the other is over an hour’s trek through the jungle to a distant, smaller village. He has been doing this for several years now and is praying that the Lord will send him someone who knows the language who can also teach the people about the grace and freedom that are found in Jesus Christ.',299,'<h2>We are blessed to come along side our brothers and sisters around the world.</h2>\n\n<p>Fanafo Village is actually a grouping of many “mini villages” situated very closely together. It is about an hour’s drive from Natanara Christian Fellowship and 45 minutes from the town of Luganville. Fanafo is dotted with the remains of hastily built anti-aircraft bunkers and Quonset huts left by the Allied forces (primarily American) during World War Two. It is an area with several small churches but also with numerous people who are still following their tribal religions. This area was the home of a political rebellion in 1980 that came to a head when men from Fanafo took over Luganville using bows and arrows, spears and unearthed rifles left behind during WWII. They were successful until the government received assistance from Papua New Guinea who sent a gunship and threatened to quash the rebellion with overwhelming force. Fanafo still has many who would prefer to see Vanuatu return to the old ways and to remove all foreign influences.</p>\n\n<p>Several years ago, Pastor Zachy, returned to his home in Fanafo after graduating from Searchlight Bible College. He began sharing the Word of God with his family and with his relatives in the village. This was the beginning of Fanafo Christian Fellowship. Now Pastor Zachy has started another church in his area, splitting his time teaching each church two Sundays a month. The original church is located in his area of the village, while the other is over an hour’s trek through the jungle to a distant, smaller village. He has been doing this for several years now and is praying that the Lord will send him someone who knows the language who can also teach the people about the grace and freedom that are found in Jesus Christ.</p>\n'),
 	(169,12475,NULL,'## We are blessed to come along side our brothers and sisters around the world.\r\n\r\nThe area known as Natanara is located about 20 minutes from Luganville down an “American road” built in World War Two by the Allies. Over 100,000 Americans at a time were in Luganville during the war to prevent the Japanese from completely capturing the Pacific. This was a staging area for the battles in the Solomon Islands. The remnants of World War Two are still put to good use. Virtually every road on Santo was built during the war and many buildings in town also date from this period. Natanara is a coastal area that is covered by coconut plantations and scattered settlements. The people of Natanara Christian Fellowship come from a large area with many walking over an hour and a half each way to church and back. Most of these people hail from other islands and speak different languages. It is not uncommon for the people in the fellowship to be conversant in five or more languages. Usually English is their third or fourth best language. The language most commonly used in Vanuatu is Bislama, which is a form of Pidgin English. This is the language that Pastor Floyd Bani and his assistants Steve Moli and Bradley Ngwera use in teaching the Bible.\r\n\r\nAt Natanara fellowship, church is an all day event. Before the church family arrives, Pastor Floyd, Steve and Bradley must put in several hours in preparation. Beginning at 5:30 a.m. they rake the leaves that continually fall. With no running water, they make many trips carrying five gallon buckets to the various locations where fresh water will needed throughout the day. Then the process of making lunch begins with the boiling of three huge pots of rice. Rice is the staple that goes with every meal in Vanuatu. As early as eight o’clock people begin trickling in for the service that starts at ten. Some come to help, others come to rest and enjoy relaxing on the peaceful grounds. Lunch follows the service and is a time for fellowship and laughter. The children will often start a game of soccer, basketball, or just play together. Many of the older youth and adults play volleyball. Others escape the heat and humidity with a nap on the shaded grass while being cooled by the soft ocean breeze. Around half past four in the afternoon following a short time of worship, the church family begins dispersing and making their way back home. The only things to be seen at the close of the day are the coals of a burning fire in the darkness with the three men gathered around worshipping the Lord.\r\n\r\nFloyd Bani has been the pastor of Natanara Christian Fellowship for the last year and a half. He had spent the previous year as the children’s pastor in [Fanafo](/87/vanuatu/fanafo/ \"Fanafo\") before returning to Natanara. Floyd is a gifted Bible teacher who keeps the emphasis on Jesus Christ in a way that is refreshing. Steve Moli and Bradley Ngwera help in many ways around the fellowship. They do everything from leading worship to teaching the children to cooking. They are beautiful examples of serving the lord with joy and humility.',NULL,'## We are blessed to come along side our brothers and sisters around the world.\r\n\r\nThe area known as Natanara is located about 20 minutes from Luganville down an “American road” built in World War Two by the Allies. Over 100,000 Americans at a time were in Luganville during the war to prevent the Japanese from completely capturing the Pacific. This was a staging area for the battles in the Solomon Islands. The remnants of World War Two are still put to good use. Virtually every road on Santo was built during the war and many buildings in town also date from this period. Natanara is a coastal area that is covered by coconut plantations and scattered settlements. The people of Natanara Christian Fellowship come from a large area with many walking over an hour and a half each way to church and back. Most of these people hail from other islands and speak different languages. It is not uncommon for the people in the fellowship to be conversant in five or more languages. Usually English is their third or fourth best language. The language most commonly used in Vanuatu is Bislama, which is a form of Pidgin English. This is the language that Pastor Floyd Bani and his assistants Steve Moli and Bradley Ngwera use in teaching the Bible.\r\n\r\nAt Natanara fellowship, church is an all day event. Before the church family arrives, Pastor Floyd, Steve and Bradley must put in several hours in preparation. Beginning at 5:30 a.m. they rake the leaves that continually fall. With no running water, they make many trips carrying five gallon buckets to the various locations where fresh water will needed throughout the day. Then the process of making lunch begins with the boiling of three huge pots of rice. Rice is the staple that goes with every meal in Vanuatu. As early as eight o’clock people begin trickling in for the service that starts at ten. Some come to help, others come to rest and enjoy relaxing on the peaceful grounds. Lunch follows the service and is a time for fellowship and laughter. The children will often start a game of soccer, basketball, or just play together. Many of the older youth and adults play volleyball. Others escape the heat and humidity with a nap on the shaded grass while being cooled by the soft ocean breeze. Around half past four in the afternoon following a short time of worship, the church family begins dispersing and making their way back home. The only things to be seen at the close of the day are the coals of a burning fire in the darkness with the three men gathered around worshipping the Lord.\r\n\r\nFloyd Bani has been the pastor of Natanara Christian Fellowship for the last year and a half. He had spent the previous year as the children’s pastor in [Fanafo](/87/vanuatu/fanafo/ \"Fanafo\") before returning to Natanara. Floyd is a gifted Bible teacher who keeps the emphasis on Jesus Christ in a way that is refreshing. Steve Moli and Bradley Ngwera help in many ways around the fellowship. They do everything from leading worship to teaching the children to cooking. They are beautiful examples of serving the lord with joy and humility.',536,'<h2>We are blessed to come along side our brothers and sisters around the world.</h2>\n\n<p>The area known as Natanara is located about 20 minutes from Luganville down an “American road” built in World War Two by the Allies. Over 100,000 Americans at a time were in Luganville during the war to prevent the Japanese from completely capturing the Pacific. This was a staging area for the battles in the Solomon Islands. The remnants of World War Two are still put to good use. Virtually every road on Santo was built during the war and many buildings in town also date from this period. Natanara is a coastal area that is covered by coconut plantations and scattered settlements. The people of Natanara Christian Fellowship come from a large area with many walking over an hour and a half each way to church and back. Most of these people hail from other islands and speak different languages. It is not uncommon for the people in the fellowship to be conversant in five or more languages. Usually English is their third or fourth best language. The language most commonly used in Vanuatu is Bislama, which is a form of Pidgin English. This is the language that Pastor Floyd Bani and his assistants Steve Moli and Bradley Ngwera use in teaching the Bible.</p>\n\n<p>At Natanara fellowship, church is an all day event. Before the church family arrives, Pastor Floyd, Steve and Bradley must put in several hours in preparation. Beginning at 5:30 a.m. they rake the leaves that continually fall. With no running water, they make many trips carrying five gallon buckets to the various locations where fresh water will needed throughout the day. Then the process of making lunch begins with the boiling of three huge pots of rice. Rice is the staple that goes with every meal in Vanuatu. As early as eight o’clock people begin trickling in for the service that starts at ten. Some come to help, others come to rest and enjoy relaxing on the peaceful grounds. Lunch follows the service and is a time for fellowship and laughter. The children will often start a game of soccer, basketball, or just play together. Many of the older youth and adults play volleyball. Others escape the heat and humidity with a nap on the shaded grass while being cooled by the soft ocean breeze. Around half past four in the afternoon following a short time of worship, the church family begins dispersing and making their way back home. The only things to be seen at the close of the day are the coals of a burning fire in the darkness with the three men gathered around worshipping the Lord.</p>\n\n<p>Floyd Bani has been the pastor of Natanara Christian Fellowship for the last year and a half. He had spent the previous year as the children’s pastor in <a href=\"/87/vanuatu/fanafo/\" title=\"Fanafo\">Fanafo</a> before returning to Natanara. Floyd is a gifted Bible teacher who keeps the emphasis on Jesus Christ in a way that is refreshing. Steve Moli and Bradley Ngwera help in many ways around the fellowship. They do everything from leading worship to teaching the children to cooking. They are beautiful examples of serving the lord with joy and humility.</p>\n'),
 	(170,7763,NULL,'##Wednesday Night Through-the-Bible Study##\r\n###Wednesday Night at 7:00 PM###\r\n\r\nWednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.\r\n\r\nDuring this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.',NULL,'##Wednesday Night Through-the-Bible Study##\r\n###Wednesday Night at 7:00 PM###\r\n\r\nWednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.\r\n\r\nDuring this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.',97,'<h2>Wednesday Night Through-the-Bible Study</h2>\n\n<h3>Wednesday Night at 7:00 PM</h3>\n\n<p>Wednesday nights are a time to grow in knowledge and understanding of the Word. We dig in with a verse-by-verse, chapter-by-chapter study of the Bible. Bring your Bible, a notebook and a heart ready to hear from the Lord.</p>\n\n<p>During this time, we have classes for our children, from infants through fifth grade. Our Junior High group meets for time in the Word, worship and loads of fun! For information on other studies, such as the High School group, or our College group, please refer to our ministries page.</p>\n'),
 	(172,7762,NULL,'##Weekend Worship Services##\r\n###Saturday Night at 6:00 PM###\r\n###Sunday Morning at 8:30 AM and 11:00 AM###\r\n\r\nOur Saturday night and Sunday morning services are identical to one another. Like much of what we do at Athey, they are simple and casual. Acts 2:42 offers a clear description of what the early church was like. It is our desire to follow this model as closely as possible. Pastor Brett teaches book-by-book through the Bible. In these weekend worship services, the teaching usually highlights a particular verse or section from the upcoming midweek study.\r\n\r\nIn John 4:23, Jesus says that the Father seeks those who will worship Him \'in spirit and in truth.\' With this in mind, we endeavor to worship expressively and sincerely. Many of our songs are taken directly from passages of Scripture. The Word also directs that \"all things be done decently, and in order\" (I Corinthians 14:40). We desire to make Saturday Nights and Sunday mornings a time where you can feel comfortable bringing friends and family who may not know the Lord.\r\n\r\nWhile the adults are studying through the Word, our kids are being taught as well. We invite you take advantage of our children’s ministry program. We have found that the kids have more fun in their classes, learning about Jesus and playing with other kids, than sitting through the service. This way, parents are able to take in the Word without distraction and kids are able to learn in an age-appropriate environment. On Saturday nights and Sunday mornings we provide childcare during all of our services for infants through grade school.',NULL,'##Weekend Worship Services##\r\n###Saturday Night at 6:00 PM###\r\n###Sunday Morning at 8:30 AM and 11:00 AM###\r\n\r\nOur Saturday night and Sunday morning services are identical to one another. Like much of what we do at Athey, they are simple and casual. Acts 2:42 offers a clear description of what the early church was like. It is our desire to follow this model as closely as possible. Pastor Brett teaches book-by-book through the Bible. In these weekend worship services, the teaching usually highlights a particular verse or section from the upcoming midweek study.\r\n\r\nIn John 4:23, Jesus says that the Father seeks those who will worship Him \'in spirit and in truth.\' With this in mind, we endeavor to worship expressively and sincerely. Many of our songs are taken directly from passages of Scripture. The Word also directs that \"all things be done decently, and in order\" (I Corinthians 14:40). We desire to make Saturday Nights and Sunday mornings a time where you can feel comfortable bringing friends and family who may not know the Lord.\r\n\r\nWhile the adults are studying through the Word, our kids are being taught as well. We invite you take advantage of our children’s ministry program. We have found that the kids have more fun in their classes, learning about Jesus and playing with other kids, than sitting through the service. This way, parents are able to take in the Word without distraction and kids are able to learn in an age-appropriate environment. On Saturday nights and Sunday mornings we provide childcare during all of our services for infants through grade school.',260,'<h2>Weekend Worship Services</h2>\n\n<h3>Saturday Night at 6:00 PM</h3>\n\n<h3>Sunday Morning at 8:30 AM and 11:00 AM</h3>\n\n<p>Our Saturday night and Sunday morning services are identical to one another. Like much of what we do at Athey, they are simple and casual. Acts 2:42 offers a clear description of what the early church was like. It is our desire to follow this model as closely as possible. Pastor Brett teaches book-by-book through the Bible. In these weekend worship services, the teaching usually highlights a particular verse or section from the upcoming midweek study.</p>\n\n<p>In John 4:23, Jesus says that the Father seeks those who will worship Him &#8216;in spirit and in truth.&#8217; With this in mind, we endeavor to worship expressively and sincerely. Many of our songs are taken directly from passages of Scripture. The Word also directs that &#8220;all things be done decently, and in order&#8221; (I Corinthians 14:40). We desire to make Saturday Nights and Sunday mornings a time where you can feel comfortable bringing friends and family who may not know the Lord.</p>\n\n<p>While the adults are studying through the Word, our kids are being taught as well. We invite you take advantage of our children’s ministry program. We have found that the kids have more fun in their classes, learning about Jesus and playing with other kids, than sitting through the service. This way, parents are able to take in the Word without distraction and kids are able to learn in an age-appropriate environment. On Saturday nights and Sunday mornings we provide childcare during all of our services for infants through grade school.</p>\n'),
-	(173,116,NULL,'Welcome to Athey Creek Christian Fellowship!',NULL,'Welcome to Athey Creek Christian Fellowship!',6,'<p>Welcome to Athey Creek Christian Fellowship!</p>\n'),
 	(174,97,NULL,'##The Islands of Vanuatu##\r\n\r\n###Tad and Marna Slaughter\r\n###Joel (Wheaton), Amy (Wheaton) and John###\r\n\r\nThe Islands of Vanuatu are located in the South Pacific west of Fiji.  In the late 1800’s the first missionaries came to these fierce cannibalistic islands.  In an amazingly brief space of time many became Christians with entire populations of some islands coming to Christ.  In spite of this, there is little teaching through the Bible today.  Consequently, there is a huge hunger for the Word and many opportunities for sharing with people.  Our work is to help people know Jesus and love Him more as a result of learning who He is through the study of His Word. \r\n\r\nPrayer Requests:\r\n\r\nThe Lord has been adding to and blessing the church here, for which we are thankful.  We are also thankful for the Lord’s constant provision of everything we need - wisdom, direction and daily necessities.  Please pray that the Lord would provide safe transportation for the new people who have begun to attend the fellowship (our truck is simply not enough), and that the people coming to church would truly comprehend God’s grace and mercy in their lives.  Pray for discernment that we would know which of the open doors the Lord has for US since there are so many possibilities! ',NULL,'##The Islands of Vanuatu##\r\n\r\n###Tad and Marna Slaughter\r\n###Joel (Wheaton), Amy (Wheaton) and John###\r\n\r\nThe Islands of Vanuatu are located in the South Pacific west of Fiji.  In the late 1800’s the first missionaries came to these fierce cannibalistic islands.  In an amazingly brief space of time many became Christians with entire populations of some islands coming to Christ.  In spite of this, there is little teaching through the Bible today.  Consequently, there is a huge hunger for the Word and many opportunities for sharing with people.  Our work is to help people know Jesus and love Him more as a result of learning who He is through the study of His Word. \r\n\r\nPrayer Requests:\r\n\r\nThe Lord has been adding to and blessing the church here, for which we are thankful.  We are also thankful for the Lord’s constant provision of everything we need - wisdom, direction and daily necessities.  Please pray that the Lord would provide safe transportation for the new people who have begun to attend the fellowship (our truck is simply not enough), and that the people coming to church would truly comprehend God’s grace and mercy in their lives.  Pray for discernment that we would know which of the open doors the Lord has for US since there are so many possibilities! ',215,'<h2>The Islands of Vanuatu</h2>\n\n<h3>Tad and Marna Slaughter</h3>\n\n<h3>Joel (Wheaton), Amy (Wheaton) and John</h3>\n\n<p>The Islands of Vanuatu are located in the South Pacific west of Fiji.  In the late 1800’s the first missionaries came to these fierce cannibalistic islands.  In an amazingly brief space of time many became Christians with entire populations of some islands coming to Christ.  In spite of this, there is little teaching through the Bible today.  Consequently, there is a huge hunger for the Word and many opportunities for sharing with people.  Our work is to help people know Jesus and love Him more as a result of learning who He is through the study of His Word.</p>\n\n<p>Prayer Requests:</p>\n\n<p>The Lord has been adding to and blessing the church here, for which we are thankful.  We are also thankful for the Lord’s constant provision of everything we need - wisdom, direction and daily necessities.  Please pray that the Lord would provide safe transportation for the new people who have begun to attend the fellowship (our truck is simply not enough), and that the people coming to church would truly comprehend God’s grace and mercy in their lives.  Pray for discernment that we would know which of the open doors the Lord has for US since there are so many possibilities!</p>\n'),
 	(175,95,NULL,'##Kampala, Uganda##\r\n\r\n###Randy and Alisa Varga###           \r\n###Josh, Eli and Gabe###\r\n\r\n\r\nRandy and Alisa are in Kampala Uganda to help serve at a mission base. Their vision is to share the gospel, to love on the kids and to be a godly example for those they will encounter in Uganda. The Vargas will primarily be serving at Hope Christian Home, a big facility that houses and feeds several hundred orphans. In addition to serving at the mission they hope to share the gospel anywhere from prisons, to radio stations, to the streets of Uganda. Currently Randy, a contractor himself, is helping with the construction of a new building project called the Field of Dreams which will be able to house more missionaries and orphans.\r\n\r\n\r\nPrayer Requests:\r\n\r\nHey church family! We have been so blessed to be a part of Athey and are really excited to be in Uganda to do God’s work! We thank you deeply for your prayers and are glad to know that the Lord’s work is done in Wilsonville as well as in Uganda.\r\n',NULL,'##Kampala, Uganda##\r\n\r\n###Randy and Alisa Varga###           \r\n###Josh, Eli and Gabe###\r\n\r\n\r\nRandy and Alisa are in Kampala Uganda to help serve at a mission base. Their vision is to share the gospel, to love on the kids and to be a godly example for those they will encounter in Uganda. The Vargas will primarily be serving at Hope Christian Home, a big facility that houses and feeds several hundred orphans. In addition to serving at the mission they hope to share the gospel anywhere from prisons, to radio stations, to the streets of Uganda. Currently Randy, a contractor himself, is helping with the construction of a new building project called the Field of Dreams which will be able to house more missionaries and orphans.\r\n\r\n\r\nPrayer Requests:\r\n\r\nHey church family! We have been so blessed to be a part of Athey and are really excited to be in Uganda to do God’s work! We thank you deeply for your prayers and are glad to know that the Lord’s work is done in Wilsonville as well as in Uganda.\r\n',176,'<h2>Kampala, Uganda</h2>\n\n<h3>Randy and Alisa Varga</h3>\n\n<h3>Josh, Eli and Gabe</h3>\n\n<p>Randy and Alisa are in Kampala Uganda to help serve at a mission base. Their vision is to share the gospel, to love on the kids and to be a godly example for those they will encounter in Uganda. The Vargas will primarily be serving at Hope Christian Home, a big facility that houses and feeds several hundred orphans. In addition to serving at the mission they hope to share the gospel anywhere from prisons, to radio stations, to the streets of Uganda. Currently Randy, a contractor himself, is helping with the construction of a new building project called the Field of Dreams which will be able to house more missionaries and orphans.</p>\n\n<p>Prayer Requests:</p>\n\n<p>Hey church family! We have been so blessed to be a part of Athey and are really excited to be in Uganda to do God’s work! We thank you deeply for your prayers and are glad to know that the Lord’s work is done in Wilsonville as well as in Uganda.</p>\n'),
 	(176,93,NULL,'##Holsbybrunn, Sweden##\r\n\r\n###Jesse & Krista Ashmen###\r\n###Eleri 2###\r\n\r\nWe are missionaries with Torchbearers in Holsbybrunn, Sweden. We live on campus with 50 students who have come to learn more about what it means to be a Christ-follower. Students come from all over the world and are taught by both resident lecturers (like Jesse) and guest lecturers that fly in from different parts of the world. At Holsby, we’re involved with outreaches to the local and greater community. Most recently we led a mission trip to Göteborg, which was an incredible experience. We are very thankful for the life and opportunities God has given us. We hope to continue making a difference in the lives He sends our way. \r\n\r\n\r\nPrayer Requests:\r\n\r\nFor our ministry:\r\nPlease be praying that the Lord would continue to bring willing and eager students despite the worldwide economic recession.\r\nWe have a need for able short-term staff members willing to serve in maintenance, hospitality or an adventure team.  Please pray that the Lord provides the right people for these roles.\r\nOur campus will serve as the holiday grounds for nearly 1,000 Swedes during one of our biggest Scandinavian holidays – Midsomer.  Join us in praying for the logistics, which can be challenging, as well our opportunity to reach out to these listeners as many of them have no relationship with the Lord.\r\nFor us personally:\r\nWe have been blessed with our first child, Eleri.  Like all new parents, we need prayer for wisdom, patience and love for our little girl. ',NULL,'##Holsbybrunn, Sweden##\r\n\r\n###Jesse & Krista Ashmen###\r\n###Eleri 2###\r\n\r\nWe are missionaries with Torchbearers in Holsbybrunn, Sweden. We live on campus with 50 students who have come to learn more about what it means to be a Christ-follower. Students come from all over the world and are taught by both resident lecturers (like Jesse) and guest lecturers that fly in from different parts of the world. At Holsby, we’re involved with outreaches to the local and greater community. Most recently we led a mission trip to Göteborg, which was an incredible experience. We are very thankful for the life and opportunities God has given us. We hope to continue making a difference in the lives He sends our way. \r\n\r\n\r\nPrayer Requests:\r\n\r\nFor our ministry:\r\nPlease be praying that the Lord would continue to bring willing and eager students despite the worldwide economic recession.\r\nWe have a need for able short-term staff members willing to serve in maintenance, hospitality or an adventure team.  Please pray that the Lord provides the right people for these roles.\r\nOur campus will serve as the holiday grounds for nearly 1,000 Swedes during one of our biggest Scandinavian holidays – Midsomer.  Join us in praying for the logistics, which can be challenging, as well our opportunity to reach out to these listeners as many of them have no relationship with the Lord.\r\nFor us personally:\r\nWe have been blessed with our first child, Eleri.  Like all new parents, we need prayer for wisdom, patience and love for our little girl. ',248,'<h2>Holsbybrunn, Sweden</h2>\n\n<h3>Jesse &amp; Krista Ashmen</h3>\n\n<h3>Eleri 2</h3>\n\n<p>We are missionaries with Torchbearers in Holsbybrunn, Sweden. We live on campus with 50 students who have come to learn more about what it means to be a Christ-follower. Students come from all over the world and are taught by both resident lecturers (like Jesse) and guest lecturers that fly in from different parts of the world. At Holsby, we’re involved with outreaches to the local and greater community. Most recently we led a mission trip to Göteborg, which was an incredible experience. We are very thankful for the life and opportunities God has given us. We hope to continue making a difference in the lives He sends our way.</p>\n\n<p>Prayer Requests:</p>\n\n<p>For our ministry:\nPlease be praying that the Lord would continue to bring willing and eager students despite the worldwide economic recession.\nWe have a need for able short-term staff members willing to serve in maintenance, hospitality or an adventure team.  Please pray that the Lord provides the right people for these roles.\nOur campus will serve as the holiday grounds for nearly 1,000 Swedes during one of our biggest Scandinavian holidays – Midsomer.  Join us in praying for the logistics, which can be challenging, as well our opportunity to reach out to these listeners as many of them have no relationship with the Lord.\nFor us personally:\nWe have been blessed with our first child, Eleri.  Like all new parents, we need prayer for wisdom, patience and love for our little girl.</p>\n'),
@@ -38817,12 +39070,13 @@ VALUES
 	(186,53,NULL,'## Caring for the kids of our Fellowship\r\n\r\nThanks for checking out our Children’s Ministry web page.  The Lord has blessed us with a great bunch of kids at Athey Creek.  We enjoy sharing the love of Jesus with them in a safe and secure environment.  Feel free to click on the links on this page to get a better understanding of children’s ministry at Athey Creek.\r\n\r\nGod bless you,\r\n\r\nJames',NULL,'## Caring for the kids of our Fellowship\r\n\r\nThanks for checking out our Children’s Ministry web page.  The Lord has blessed us with a great bunch of kids at Athey Creek.  We enjoy sharing the love of Jesus with them in a safe and secure environment.  Feel free to click on the links on this page to get a better understanding of children’s ministry at Athey Creek.\r\n\r\nGod bless you,\r\n\r\nJames',70,'<h2>Caring for the kids of our Fellowship</h2>\n\n<p>Thanks for checking out our Children’s Ministry web page.  The Lord has blessed us with a great bunch of kids at Athey Creek.  We enjoy sharing the love of Jesus with them in a safe and secure environment.  Feel free to click on the links on this page to get a better understanding of children’s ministry at Athey Creek.</p>\n\n<p>God bless you,</p>\n\n<p>James</p>\n'),
 	(187,52,NULL,'Our goal in the Jr. High Ministry is to worship the Lord, study the Bible and enjoy great fellowship. Whether we’re meeting on a Wednesday night or on one of our many trips, we always have an awesome time. \r\nAs we study through the Bible, we learn what Jesus has done for us and how we should live our lives for Him. Come ready to worship the Lord, dig into the Word and have tons of crazy fun!\r\n\r\nIf you would like information on Bible Studies and Upcoming Events, check out the links below.  You can also visit the Jr. High Blog to see the latest pictures from recent Jr. High activities!\r\n\r\nIf you have any questions, you can contact Seth at (503) 984-6605.',NULL,'Our goal in the Jr. High Ministry is to worship the Lord, study the Bible and enjoy great fellowship. Whether we’re meeting on a Wednesday night or on one of our many trips, we always have an awesome time. \r\nAs we study through the Bible, we learn what Jesus has done for us and how we should live our lives for Him. Come ready to worship the Lord, dig into the Word and have tons of crazy fun!\r\n\r\nIf you would like information on Bible Studies and Upcoming Events, check out the links below.  You can also visit the Jr. High Blog to see the latest pictures from recent Jr. High activities!\r\n\r\nIf you have any questions, you can contact Seth at (503) 984-6605.',122,'<p>Our goal in the Jr. High Ministry is to worship the Lord, study the Bible and enjoy great fellowship. Whether we’re meeting on a Wednesday night or on one of our many trips, we always have an awesome time. \nAs we study through the Bible, we learn what Jesus has done for us and how we should live our lives for Him. Come ready to worship the Lord, dig into the Word and have tons of crazy fun!</p>\n\n<p>If you would like information on Bible Studies and Upcoming Events, check out the links below.  You can also visit the Jr. High Blog to see the latest pictures from recent Jr. High activities!</p>\n\n<p>If you have any questions, you can contact Seth at (503) 984-6605.</p>\n'),
 	(191,47,NULL,'## Offering a refreshing look at what it means to be a godly woman\r\n\r\n\r\nOur approach to Women’s Ministry at Athey Creek is rather simple.  In *Titus 2:3-5*, the Lord gives us a loving outline for godly living that is specifically directed to women.  We are blessed to have some wonderful ‘older’ women in our fellowship who are willing to come alongside the younger women.  Much of this happens naturally as the women interact at church or various gatherings.  Relationships are formed and women grow as they learn from one another.  There are also opportunities for prayer, fellowship and getting into the Word at Bible studies and various events that take place throughout the year.  If you would like to know more about current Bible studies or upcoming events, please check the links listed below.\r\n\r\nJudy Slaughter oversees our Women’s Ministry and she is available to meet with the women of our church who desire prayer, godly counsel or simply a time to fellowship.  Judy also leads many of the studies that we offer, and she enjoys seeing the Lord at work in the hearts and minds of the ladies at our church.  If you would like to meet with Judy, or if you have any questions about this ministry, please contact the church office at 971-327-2120. ',NULL,'## Offering a refreshing look at what it means to be a godly woman\r\n\r\n\r\nOur approach to Women’s Ministry at Athey Creek is rather simple.  In *Titus 2:3-5*, the Lord gives us a loving outline for godly living that is specifically directed to women.  We are blessed to have some wonderful ‘older’ women in our fellowship who are willing to come alongside the younger women.  Much of this happens naturally as the women interact at church or various gatherings.  Relationships are formed and women grow as they learn from one another.  There are also opportunities for prayer, fellowship and getting into the Word at Bible studies and various events that take place throughout the year.  If you would like to know more about current Bible studies or upcoming events, please check the links listed below.\r\n\r\nJudy Slaughter oversees our Women’s Ministry and she is available to meet with the women of our church who desire prayer, godly counsel or simply a time to fellowship.  Judy also leads many of the studies that we offer, and she enjoys seeing the Lord at work in the hearts and minds of the ladies at our church.  If you would like to meet with Judy, or if you have any questions about this ministry, please contact the church office at 971-327-2120. ',214,'<h2>Offering a refreshing look at what it means to be a godly woman</h2>\n\n<p>Our approach to Women’s Ministry at Athey Creek is rather simple.  In <em>Titus 2:3-5</em>, the Lord gives us a loving outline for godly living that is specifically directed to women.  We are blessed to have some wonderful ‘older’ women in our fellowship who are willing to come alongside the younger women.  Much of this happens naturally as the women interact at church or various gatherings.  Relationships are formed and women grow as they learn from one another.  There are also opportunities for prayer, fellowship and getting into the Word at Bible studies and various events that take place throughout the year.  If you would like to know more about current Bible studies or upcoming events, please check the links listed below.</p>\n\n<p>Judy Slaughter oversees our Women’s Ministry and she is available to meet with the women of our church who desire prayer, godly counsel or simply a time to fellowship.  Judy also leads many of the studies that we offer, and she enjoys seeing the Lord at work in the hearts and minds of the ladies at our church.  If you would like to meet with Judy, or if you have any questions about this ministry, please contact the church office at 971-327-2120.</p>\n'),
-	(192,12482,NULL,'# Where there is no vision, the people perish\r\n\r\n<span class=\"intro\">Proverbs 29:18 tells us, \"Without vision, the people perish.\" Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span>\r\n\r\n## Simplicity\r\nThe very heart of what we strive after is keeping Jesus the focal point of everything! There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: \"And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.\"\r\n\r\n- The Apostles’ Doctrine – teaching the Word\r\n- Fellowship – friendship, interaction that is rich and centered on the Lord\r\n- Breaking of Bread – eating together, sharing meals, and communion\r\n- Prayer – worship, praying with one another, praying for one another, time alone before the Lord\r\n\r\nYou will find that there are plenty of opportunities throughout the week to be fed from the Word, to worship, to fellowship, to pray and to take communion. We hope that you are refreshed as you make the most of these times.\r\n\r\n## Humility\r\n<span class=\"columns_2\">There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, \"We’re better than nothing!\" We are just another body of believers, seeking to know the Lord better and to bring others to Him.</span>\r\n\r\n## Sincerity\r\nWe live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic ... our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.',NULL,'# Where there is no vision, the people perish\r\n\r\n<span class=\"intro\">Proverbs 29:18 tells us, \"Without vision, the people perish.\" Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span>\r\n\r\n## Simplicity\r\nThe very heart of what we strive after is keeping Jesus the focal point of everything! There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: \"And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.\"\r\n\r\n- The Apostles’ Doctrine – teaching the Word\r\n- Fellowship – friendship, interaction that is rich and centered on the Lord\r\n- Breaking of Bread – eating together, sharing meals, and communion\r\n- Prayer – worship, praying with one another, praying for one another, time alone before the Lord\r\n\r\nYou will find that there are plenty of opportunities throughout the week to be fed from the Word, to worship, to fellowship, to pray and to take communion. We hope that you are refreshed as you make the most of these times.\r\n\r\n## Humility\r\n<span class=\"columns_2\">There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, \"We’re better than nothing!\" We are just another body of believers, seeking to know the Lord better and to bring others to Him.</span>\r\n\r\n## Sincerity\r\nWe live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic ... our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.',448,'<h1>Where there is no vision, the people perish</h1>\n\n<p><span class=\"intro\">Proverbs 29:18 tells us, &#8220;Without vision, the people perish.&#8221; Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span></p>\n\n<h2>Simplicity</h2>\n\n<p>The very heart of what we strive after is keeping Jesus the focal point of everything! There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: &#8220;And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.&#8221;</p>\n\n<ul>\n<li>The Apostles’ Doctrine – teaching the Word</li>\n<li>Fellowship – friendship, interaction that is rich and centered on the Lord</li>\n<li>Breaking of Bread – eating together, sharing meals, and communion</li>\n<li>Prayer – worship, praying with one another, praying for one another, time alone before the Lord</li>\n</ul>\n\n<p>You will find that there are plenty of opportunities throughout the week to be fed from the Word, to worship, to fellowship, to pray and to take communion. We hope that you are refreshed as you make the most of these times.</p>\n\n<h2>Humility</h2>\n\n<p><span class=\"columns_2\">There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, &#8220;We’re better than nothing!&#8221; We are just another body of believers, seeking to know the Lord better and to bring others to Him.</span></p>\n\n<h2>Sincerity</h2>\n\n<p>We live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic &#8230; our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.</p>\n'),
 	(194,12487,NULL,'# The History of Athey Creek\r\n\r\n## Early Years\r\n\r\nIn 1996, Brett Meador moved with his family from Southern Oregon to Portland to start Athey Creek Christian Fellowship. The first Sunday morning service was held at Athey Creek Middle School. Wednesday Bible study took place in a little building around the corner from the school.\r\n\r\n## Moving Forward\r\n\r\nFrom the beginning, we have envisioned the church as a refuge, a place where those who are lost, hurting, or just plain worn out can find a haven from the chaos of the world in which we live. Our desire is to see people grow strong in their relationship with Jesus. We believe the best way to accomplish this is to study right through the Bible, receiving the \'full counsel of God.\' The result, we pray, is a place like the New Testament church where the study of God\'s Word, prayer, communion and fellowship with other believers will cause us to grow in our love relationship with Jesus, and allow us to be lights in this dark world.\r\n\r\n<span class=\"intro\">[Meet the staff at Athey Creek](/103/about/staff/)</span>',NULL,'# The History of Athey Creek\r\n\r\n## Early Years\r\n\r\nIn 1996, Brett Meador moved with his family from Southern Oregon to Portland to start Athey Creek Christian Fellowship. The first Sunday morning service was held at Athey Creek Middle School. Wednesday Bible study took place in a little building around the corner from the school.\r\n\r\n## Moving Forward\r\n\r\nFrom the beginning, we have envisioned the church as a refuge, a place where those who are lost, hurting, or just plain worn out can find a haven from the chaos of the world in which we live. Our desire is to see people grow strong in their relationship with Jesus. We believe the best way to accomplish this is to study right through the Bible, receiving the \'full counsel of God.\' The result, we pray, is a place like the New Testament church where the study of God\'s Word, prayer, communion and fellowship with other believers will cause us to grow in our love relationship with Jesus, and allow us to be lights in this dark world.\r\n\r\n<span class=\"intro\">[Meet the staff at Athey Creek](/103/about/staff/)</span>',179,'<h1>The History of Athey Creek</h1>\n\n<h2>Early Years</h2>\n\n<p>In 1996, Brett Meador moved with his family from Southern Oregon to Portland to start Athey Creek Christian Fellowship. The first Sunday morning service was held at Athey Creek Middle School. Wednesday Bible study took place in a little building around the corner from the school.</p>\n\n<h2>Moving Forward</h2>\n\n<p>From the beginning, we have envisioned the church as a refuge, a place where those who are lost, hurting, or just plain worn out can find a haven from the chaos of the world in which we live. Our desire is to see people grow strong in their relationship with Jesus. We believe the best way to accomplish this is to study right through the Bible, receiving the &#8216;full counsel of God.&#8217; The result, we pray, is a place like the New Testament church where the study of God&#8217;s Word, prayer, communion and fellowship with other believers will cause us to grow in our love relationship with Jesus, and allow us to be lights in this dark world.</p>\n\n<p><span class=\"intro\"><a href=\"/103/about/staff/\">Meet the staff at Athey Creek</a></span></p>\n'),
 	(197,12484,NULL,'# How to Get Plugged in at Athey Creek\r\n\r\n## The Importance of Fellowship\r\n\r\nIn Christ, there are no strangers but instead brothers and sisters. Ephesians 2:19-21 reminds us of this, \'\'Now, therefore you are no longer strangers and foreigners, but fellow citizens with the saints and members of the household of God, having been built on the foundation of the apostles and prophets, Jesus Christ Himself being the chief cornerstone in whom the whole building, being fitted together, grows into a holy temple in the Lord, in whom you also are being built together for a dwelling place of God in the Spirit.\'\' Christ desires for us to find our place in the fellowship - we are the living stones that build His house.\r\n\r\n## Getting Started\r\n\r\nThe first step is to try to get to know the pastors, elders, deacons and staff at Athey Creek.  Our pastors and elders are always available at the close of each service, and they would love the chance to meet you.  These men are also available for prayer, to answer questions or just to chat. If you are looking for further ways to connect, there are several ways to do this.\r\n\r\n## Events\r\n\r\nWhether it is retreats, Family Camp, rafting or BBQs, there are plenty of chances to meet members of the body outside of our Sundays and Wednesdays together. Watch for information in the church bulletin or on the [calendar page](/20/events/ \"calendar page\").\r\n\r\n## Serving\r\n\r\nAnother way to get involved is to serve. There are several ministries at Athey Creek where the focus is on meeting the needs of others.\r\n\r\n- [Children’s ministry](/101/about/getting-involved/#children \"Children\'s ministry\")\r\n- [Parking Lot](/101/about/getting-involved/#parking \"Parking Lot\")\r\n- [Servant Ministry](/101/about/getting-involved/#servant \"Servant Ministry\")\r\n\r\nThese are all ways to be a part of what the Lord is doing at Athey. You can call the church office for more information on any opportunities to serve.\r\n\r\nIf you are new to the fellowship, we invite you to simply enjoy the Lord and take in the Word for a few months. We hope this will be a time of refreshment for you, allowing you to get a feel for our flavor and understand the ‘why’ behind much of what we do. \r\n\r\n<h3 id=\"children\">Children’s Ministry</h3>\r\n\r\nIf you are looking for a way to plug into our Children’s Ministry, we ask that you sign up at the Children’s Ministry table in the \'\'Kid\'s Lobby.\'\'  \r\n\r\nWe will contact you about the process itself, and give you the information you will need as you pray through your involvement.  If you simply want more information on our Children’s Ministry, please look through our Document Library.  If you have any questions, you may contact James Shields at 971-327-2120.  The after-hours Children’s Ministry line is 971-327-2120, extension 106.\r\n\r\n<h3 id=\"parking\">Parking</h3>\r\n\r\nWe direct traffic before and after services. We also have a crew of guys that stroll the parking lot during services for security purposes. If you are interested in getting involved in the security rotation, please call Eric Dodson at 971-327-2120.\r\n\r\n<h3 id=\"servant\">Servant Ministry</h3>\r\n\r\nThe leadership of ACCF has been on the lookout for ways to connect the needs within the body, with the people of our body. Many people are looking for ways to get more plugged into the church, and to exercise their spiritual gifts. This Servant Ministry is really just a structure we have put in place to provide Athey Creekers with practical opportunities to serve other members of the church body. Whether on the giving or the receiving end, we know that scores of people will be blessed by the fruit of this ministry. If you are feeling the desire to serve, please pick up a flier from the information table in the foyer. If you have any questions, feel free to contact Kaipo or Kari at the church office at 971-327-2120.',NULL,'# How to Get Plugged in at Athey Creek\r\n\r\n## The Importance of Fellowship\r\n\r\nIn Christ, there are no strangers but instead brothers and sisters. Ephesians 2:19-21 reminds us of this, \'\'Now, therefore you are no longer strangers and foreigners, but fellow citizens with the saints and members of the household of God, having been built on the foundation of the apostles and prophets, Jesus Christ Himself being the chief cornerstone in whom the whole building, being fitted together, grows into a holy temple in the Lord, in whom you also are being built together for a dwelling place of God in the Spirit.\'\' Christ desires for us to find our place in the fellowship - we are the living stones that build His house.\r\n\r\n## Getting Started\r\n\r\nThe first step is to try to get to know the pastors, elders, deacons and staff at Athey Creek.  Our pastors and elders are always available at the close of each service, and they would love the chance to meet you.  These men are also available for prayer, to answer questions or just to chat. If you are looking for further ways to connect, there are several ways to do this.\r\n\r\n## Events\r\n\r\nWhether it is retreats, Family Camp, rafting or BBQs, there are plenty of chances to meet members of the body outside of our Sundays and Wednesdays together. Watch for information in the church bulletin or on the [calendar page](/20/events/ \"calendar page\").\r\n\r\n## Serving\r\n\r\nAnother way to get involved is to serve. There are several ministries at Athey Creek where the focus is on meeting the needs of others.\r\n\r\n- [Children’s ministry](/101/about/getting-involved/#children \"Children\'s ministry\")\r\n- [Parking Lot](/101/about/getting-involved/#parking \"Parking Lot\")\r\n- [Servant Ministry](/101/about/getting-involved/#servant \"Servant Ministry\")\r\n\r\nThese are all ways to be a part of what the Lord is doing at Athey. You can call the church office for more information on any opportunities to serve.\r\n\r\nIf you are new to the fellowship, we invite you to simply enjoy the Lord and take in the Word for a few months. We hope this will be a time of refreshment for you, allowing you to get a feel for our flavor and understand the ‘why’ behind much of what we do. \r\n\r\n<h3 id=\"children\">Children’s Ministry</h3>\r\n\r\nIf you are looking for a way to plug into our Children’s Ministry, we ask that you sign up at the Children’s Ministry table in the \'\'Kid\'s Lobby.\'\'  \r\n\r\nWe will contact you about the process itself, and give you the information you will need as you pray through your involvement.  If you simply want more information on our Children’s Ministry, please look through our Document Library.  If you have any questions, you may contact James Shields at 971-327-2120.  The after-hours Children’s Ministry line is 971-327-2120, extension 106.\r\n\r\n<h3 id=\"parking\">Parking</h3>\r\n\r\nWe direct traffic before and after services. We also have a crew of guys that stroll the parking lot during services for security purposes. If you are interested in getting involved in the security rotation, please call Eric Dodson at 971-327-2120.\r\n\r\n<h3 id=\"servant\">Servant Ministry</h3>\r\n\r\nThe leadership of ACCF has been on the lookout for ways to connect the needs within the body, with the people of our body. Many people are looking for ways to get more plugged into the church, and to exercise their spiritual gifts. This Servant Ministry is really just a structure we have put in place to provide Athey Creekers with practical opportunities to serve other members of the church body. Whether on the giving or the receiving end, we know that scores of people will be blessed by the fruit of this ministry. If you are feeling the desire to serve, please pick up a flier from the information table in the foyer. If you have any questions, feel free to contact Kaipo or Kari at the church office at 971-327-2120.',622,'<h1>How to Get Plugged in at Athey Creek</h1>\n\n<h2>The Importance of Fellowship</h2>\n\n<p>In Christ, there are no strangers but instead brothers and sisters. Ephesians 2:19-21 reminds us of this, &#8221;Now, therefore you are no longer strangers and foreigners, but fellow citizens with the saints and members of the household of God, having been built on the foundation of the apostles and prophets, Jesus Christ Himself being the chief cornerstone in whom the whole building, being fitted together, grows into a holy temple in the Lord, in whom you also are being built together for a dwelling place of God in the Spirit.&#8221; Christ desires for us to find our place in the fellowship - we are the living stones that build His house.</p>\n\n<h2>Getting Started</h2>\n\n<p>The first step is to try to get to know the pastors, elders, deacons and staff at Athey Creek.  Our pastors and elders are always available at the close of each service, and they would love the chance to meet you.  These men are also available for prayer, to answer questions or just to chat. If you are looking for further ways to connect, there are several ways to do this.</p>\n\n<h2>Events</h2>\n\n<p>Whether it is retreats, Family Camp, rafting or BBQs, there are plenty of chances to meet members of the body outside of our Sundays and Wednesdays together. Watch for information in the church bulletin or on the <a href=\"/20/events/\" title=\"calendar page\">calendar page</a>.</p>\n\n<h2>Serving</h2>\n\n<p>Another way to get involved is to serve. There are several ministries at Athey Creek where the focus is on meeting the needs of others.</p>\n\n<ul>\n<li><a href=\"/101/about/getting-involved/#children\" title=\"Children\'s ministry\">Children’s ministry</a></li>\n<li><a href=\"/101/about/getting-involved/#parking\" title=\"Parking Lot\">Parking Lot</a></li>\n<li><a href=\"/101/about/getting-involved/#servant\" title=\"Servant Ministry\">Servant Ministry</a></li>\n</ul>\n\n<p>These are all ways to be a part of what the Lord is doing at Athey. You can call the church office for more information on any opportunities to serve.</p>\n\n<p>If you are new to the fellowship, we invite you to simply enjoy the Lord and take in the Word for a few months. We hope this will be a time of refreshment for you, allowing you to get a feel for our flavor and understand the ‘why’ behind much of what we do.</p>\n\n<h3 id=\"children\">Children’s Ministry</h3>\n\n<p>If you are looking for a way to plug into our Children’s Ministry, we ask that you sign up at the Children’s Ministry table in the &#8221;Kid&#8217;s Lobby.&#8221;</p>\n\n<p>We will contact you about the process itself, and give you the information you will need as you pray through your involvement.  If you simply want more information on our Children’s Ministry, please look through our Document Library.  If you have any questions, you may contact James Shields at 971-327-2120.  The after-hours Children’s Ministry line is 971-327-2120, extension 106.</p>\n\n<h3 id=\"parking\">Parking</h3>\n\n<p>We direct traffic before and after services. We also have a crew of guys that stroll the parking lot during services for security purposes. If you are interested in getting involved in the security rotation, please call Eric Dodson at 971-327-2120.</p>\n\n<h3 id=\"servant\">Servant Ministry</h3>\n\n<p>The leadership of ACCF has been on the lookout for ways to connect the needs within the body, with the people of our body. Many people are looking for ways to get more plugged into the church, and to exercise their spiritual gifts. This Servant Ministry is really just a structure we have put in place to provide Athey Creekers with practical opportunities to serve other members of the church body. Whether on the giving or the receiving end, we know that scores of people will be blessed by the fruit of this ministry. If you are feeling the desire to serve, please pick up a flier from the information table in the foyer. If you have any questions, feel free to contact Kaipo or Kari at the church office at 971-327-2120.</p>\n'),
 	(198,12480,NULL,'<span class=\"intro\">The Athey Creek Christian Fellowship is a body of believers desiring to know the Lord in an ever-increasing measure. We are a non-denominational fellowship associating with all who are in the Body of Christ.</span>\r\n\r\n**We believe** there is one God who eternally exists in three persons: the Father, the Son and the Holy Spirit. We believe that Jesus Christ, the second person of the Holy Trinity, was born of a virgin, lived a sinless life, died a sacrificial death for the sins of the world, rose bodily from the dead, ascended into Heaven and is coming again to judge the living and the dead and to establish God’s kingdom of righteousness and peace on the earth.\r\n\r\n**We believe** the only true basis of Christian fellowship is God’s love, which is greater than any differences we possess and without which we have no right to claim ourselves Christians. (1 Corinthians 13)\r\n\r\n\r\n**We believe** that salvation comes through Jesus alone. It is by His grace and work on the cross we can go to Heaven, not by any work we do. (Ephesians 2:8-9)\r\n\r\n\r\n**We believe** the marks of a maturing church are Faith, Hope and Love. (Colossians 1:3-7)\r\n\r\n**We believe** the Bible to be the inspired and inerrant Word of God. We place high emphasis on the teaching of God’s Word, the Bible, that our Faith may grow. (Romans 10:17, 2 Timothy 3:16)\r\n\r\n**We live** in anticipation of the return of Jesus, for He is our Blessed Hope. (Titus 2:13)\r\n\r\n**We desire** the fullness of the Spirit in our lives, for the fruit of the Spirit is Love. (Galatians 5:22)\r\n',NULL,'<span class=\"intro\">The Athey Creek Christian Fellowship is a body of believers desiring to know the Lord in an ever-increasing measure. We are a non-denominational fellowship associating with all who are in the Body of Christ.</span>\r\n\r\n**We believe** there is one God who eternally exists in three persons: the Father, the Son and the Holy Spirit. We believe that Jesus Christ, the second person of the Holy Trinity, was born of a virgin, lived a sinless life, died a sacrificial death for the sins of the world, rose bodily from the dead, ascended into Heaven and is coming again to judge the living and the dead and to establish God’s kingdom of righteousness and peace on the earth.\r\n\r\n**We believe** the only true basis of Christian fellowship is God’s love, which is greater than any differences we possess and without which we have no right to claim ourselves Christians. (1 Corinthians 13)\r\n\r\n\r\n**We believe** that salvation comes through Jesus alone. It is by His grace and work on the cross we can go to Heaven, not by any work we do. (Ephesians 2:8-9)\r\n\r\n\r\n**We believe** the marks of a maturing church are Faith, Hope and Love. (Colossians 1:3-7)\r\n\r\n**We believe** the Bible to be the inspired and inerrant Word of God. We place high emphasis on the teaching of God’s Word, the Bible, that our Faith may grow. (Romans 10:17, 2 Timothy 3:16)\r\n\r\n**We live** in anticipation of the return of Jesus, for He is our Blessed Hope. (Titus 2:13)\r\n\r\n**We desire** the fullness of the Spirit in our lives, for the fruit of the Spirit is Love. (Galatians 5:22)\r\n',259,'<p><span class=\"intro\">The Athey Creek Christian Fellowship is a body of believers desiring to know the Lord in an ever-increasing measure. We are a non-denominational fellowship associating with all who are in the Body of Christ.</span></p>\n\n<p><strong>We believe</strong> there is one God who eternally exists in three persons: the Father, the Son and the Holy Spirit. We believe that Jesus Christ, the second person of the Holy Trinity, was born of a virgin, lived a sinless life, died a sacrificial death for the sins of the world, rose bodily from the dead, ascended into Heaven and is coming again to judge the living and the dead and to establish God’s kingdom of righteousness and peace on the earth.</p>\n\n<p><strong>We believe</strong> the only true basis of Christian fellowship is God’s love, which is greater than any differences we possess and without which we have no right to claim ourselves Christians. (1 Corinthians 13)</p>\n\n<p><strong>We believe</strong> that salvation comes through Jesus alone. It is by His grace and work on the cross we can go to Heaven, not by any work we do. (Ephesians 2:8-9)</p>\n\n<p><strong>We believe</strong> the marks of a maturing church are Faith, Hope and Love. (Colossians 1:3-7)</p>\n\n<p><strong>We believe</strong> the Bible to be the inspired and inerrant Word of God. We place high emphasis on the teaching of God’s Word, the Bible, that our Faith may grow. (Romans 10:17, 2 Timothy 3:16)</p>\n\n<p><strong>We live</strong> in anticipation of the return of Jesus, for He is our Blessed Hope. (Titus 2:13)</p>\n\n<p><strong>We desire</strong> the fullness of the Spirit in our lives, for the fruit of the Spirit is Love. (Galatians 5:22)</p>\n'),
 	(201,49,NULL,'## Becoming a man after God\'s own heart\r\n\r\nThe world’s definition of manhood is distorted, to say the least.  The roles of men have been undermined and confused to the extent that many men are left wondering what it really means to be a good man.  The great news is that the Lord has much to say on this subject.  The Bible is full of practical instruction on how to be a godly man.  Marriages will be built up as men learn how to really love their wives.  Children will grow up knowing the Lord as men take on the responsibility of leading their families.  Every relationship in a man’s life – his family, his work, his friendships – is strengthened and solidified as he grows in the most important relationship, which is his relationship with Jesus Christ. \r\n\r\nAs hearts and minds are renewed by the Word, lives are impacted and changed.  The guys of our church will become effective tools in the Lord’s hand as we reflect His glory and His character.  A man who can live out a life of faith and conviction will undoubtedly shine Jesus’ love in a lost world.',NULL,'## Becoming a man after God\'s own heart\r\n\r\nThe world’s definition of manhood is distorted, to say the least.  The roles of men have been undermined and confused to the extent that many men are left wondering what it really means to be a good man.  The great news is that the Lord has much to say on this subject.  The Bible is full of practical instruction on how to be a godly man.  Marriages will be built up as men learn how to really love their wives.  Children will grow up knowing the Lord as men take on the responsibility of leading their families.  Every relationship in a man’s life – his family, his work, his friendships – is strengthened and solidified as he grows in the most important relationship, which is his relationship with Jesus Christ. \r\n\r\nAs hearts and minds are renewed by the Word, lives are impacted and changed.  The guys of our church will become effective tools in the Lord’s hand as we reflect His glory and His character.  A man who can live out a life of faith and conviction will undoubtedly shine Jesus’ love in a lost world.',191,'<h2>Becoming a man after God&#8217;s own heart</h2>\n\n<p>The world’s definition of manhood is distorted, to say the least.  The roles of men have been undermined and confused to the extent that many men are left wondering what it really means to be a good man.  The great news is that the Lord has much to say on this subject.  The Bible is full of practical instruction on how to be a godly man.  Marriages will be built up as men learn how to really love their wives.  Children will grow up knowing the Lord as men take on the responsibility of leading their families.  Every relationship in a man’s life – his family, his work, his friendships – is strengthened and solidified as he grows in the most important relationship, which is his relationship with Jesus Christ.</p>\n\n<p>As hearts and minds are renewed by the Word, lives are impacted and changed.  The guys of our church will become effective tools in the Lord’s hand as we reflect His glory and His character.  A man who can live out a life of faith and conviction will undoubtedly shine Jesus’ love in a lost world.</p>\n'),
-	(202,12478,NULL,'## In a Nutshell...\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<ul>\r\n<li>We are <em>all</em> sinners.</li>\r\n<li>The consequence of our sin is eternal separation from God.</li>\r\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\r\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\r\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\r\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\r\n</ul>\r\n</div>\r\n\r\n## Who We Are\r\n\r\n<div class=\"columns-2\">\r\n<p>Many of us tend to think of ourselves as pretty good people. We think, \"Well, I\'m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I\'m doing pretty well!\" We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, \"...There is no one righteous, not even one; there is no one who understands, no one who seeks God.\" You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that \"all have sinned and fallen short of the glory of God.\" That\'s all sin is...falling short of God\'s best and we are all guilty of it.</p>\r\n</div>\r\n\r\n##What We Deserve\r\n\r\n<div class=\"columns-2\">\r\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us \"The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.\" So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn\'t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\r\n</div>\r\n\r\n##What God Offers\r\n\r\n<div class=\"columns-2\">\r\n<p>John 3:16 says \"For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.\" There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God\'s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\r\n\r\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, \"God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.\" He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, \"Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you...\" His resurrection provides our certain hope of eternal life in heaven with Him!</p>\r\n</div>\r\n\r\n##How It Works\r\n\r\n<div class=\"columns-2\">\r\n<p>How do we receive salvation? Romans 10:9-10 tells us \"That if you confess with your mouth, \'Jesus is Lord,\' and believe in your heart that God raised Him from the dead, you will be saved.\" Later on in that same chapter, in verse 13 it says, \"Everyone who calls on the name of the Lord will be saved.\" This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That\'s all there is to it!</p>\r\n</div>\r\n\r\n## What\'s Next?\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 \"...I have come that they may have life, and have it to the full.\" He doesn\'t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\r\n</div>\r\n\r\n<div class=\"columns-2\">\r\n\r\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\r\n\r\n<p><strong>Study the Bible</strong> – the Bible is God\'s love letter to you. It is the owner\'s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is \'God-breathed.\' This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus\' life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\r\n\r\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\r\n\r\n<p><strong>Tell someone</strong> – You don\'t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life...and hang on for the ride!</p>\r\n\r\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\r\n\r\n</div>',NULL,'## In a Nutshell...\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<ul>\r\n<li>We are <em>all</em> sinners.</li>\r\n<li>The consequence of our sin is eternal separation from God.</li>\r\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\r\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\r\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\r\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\r\n</ul>\r\n</div>\r\n\r\n## Who We Are\r\n\r\n<div class=\"columns-2\">\r\n<p>Many of us tend to think of ourselves as pretty good people. We think, \"Well, I\'m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I\'m doing pretty well!\" We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, \"...There is no one righteous, not even one; there is no one who understands, no one who seeks God.\" You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that \"all have sinned and fallen short of the glory of God.\" That\'s all sin is...falling short of God\'s best and we are all guilty of it.</p>\r\n</div>\r\n\r\n##What We Deserve\r\n\r\n<div class=\"columns-2\">\r\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us \"The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.\" So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn\'t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\r\n</div>\r\n\r\n##What God Offers\r\n\r\n<div class=\"columns-2\">\r\n<p>John 3:16 says \"For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.\" There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God\'s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\r\n\r\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, \"God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.\" He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, \"Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you...\" His resurrection provides our certain hope of eternal life in heaven with Him!</p>\r\n</div>\r\n\r\n##How It Works\r\n\r\n<div class=\"columns-2\">\r\n<p>How do we receive salvation? Romans 10:9-10 tells us \"That if you confess with your mouth, \'Jesus is Lord,\' and believe in your heart that God raised Him from the dead, you will be saved.\" Later on in that same chapter, in verse 13 it says, \"Everyone who calls on the name of the Lord will be saved.\" This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That\'s all there is to it!</p>\r\n</div>\r\n\r\n## What\'s Next?\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 \"...I have come that they may have life, and have it to the full.\" He doesn\'t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\r\n</div>\r\n\r\n<div class=\"columns-2\">\r\n\r\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\r\n\r\n<p><strong>Study the Bible</strong> – the Bible is God\'s love letter to you. It is the owner\'s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is \'God-breathed.\' This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus\' life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\r\n\r\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\r\n\r\n<p><strong>Tell someone</strong> – You don\'t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life...and hang on for the ride!</p>\r\n\r\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\r\n\r\n</div>',1308,'<h2>In a Nutshell&#8230;</h2>\n\n<div class=\"columns-2 grey-bkd\">\n<ul>\n<li>We are <em>all</em> sinners.</li>\n<li>The consequence of our sin is eternal separation from God.</li>\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\n</ul>\n</div>\n\n<h2>Who We Are</h2>\n\n<div class=\"columns-2\">\n<p>Many of us tend to think of ourselves as pretty good people. We think, &#8220;Well, I&#8217;m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I&#8217;m doing pretty well!&#8221; We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, &#8220;&#8230;There is no one righteous, not even one; there is no one who understands, no one who seeks God.&#8221; You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that &#8220;all have sinned and fallen short of the glory of God.&#8221; That&#8217;s all sin is&#8230;falling short of God&#8217;s best and we are all guilty of it.</p>\n</div>\n\n<h2>What We Deserve</h2>\n\n<div class=\"columns-2\">\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us &#8220;The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.&#8221; So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn&#8217;t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\n</div>\n\n<h2>What God Offers</h2>\n\n<div class=\"columns-2\">\n<p>John 3:16 says &#8220;For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.&#8221; There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God&#8217;s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\n\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, &#8220;God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.&#8221; He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, &#8220;Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you&#8230;&#8221; His resurrection provides our certain hope of eternal life in heaven with Him!</p>\n</div>\n\n<h2>How It Works</h2>\n\n<div class=\"columns-2\">\n<p>How do we receive salvation? Romans 10:9-10 tells us &#8220;That if you confess with your mouth, &#8216;Jesus is Lord,&#8217; and believe in your heart that God raised Him from the dead, you will be saved.&#8221; Later on in that same chapter, in verse 13 it says, &#8220;Everyone who calls on the name of the Lord will be saved.&#8221; This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That&#8217;s all there is to it!</p>\n</div>\n\n<h2>What&#8217;s Next?</h2>\n\n<div class=\"columns-2 grey-bkd\">\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 &#8220;&#8230;I have come that they may have life, and have it to the full.&#8221; He doesn&#8217;t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\n</div>\n\n<div class=\"columns-2\">\n\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\n\n<p><strong>Study the Bible</strong> – the Bible is God&#8217;s love letter to you. It is the owner&#8217;s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is &#8216;God-breathed.&#8217; This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus&#8217; life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\n\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\n\n<p><strong>Tell someone</strong> – You don&#8217;t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life&#8230;and hang on for the ride!</p>\n\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\n\n</div>\n');
+	(202,12478,NULL,'## In a Nutshell...\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<ul>\r\n<li>We are <em>all</em> sinners.</li>\r\n<li>The consequence of our sin is eternal separation from God.</li>\r\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\r\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\r\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\r\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\r\n</ul>\r\n</div>\r\n\r\n## Who We Are\r\n\r\n<div class=\"columns-2\">\r\n<p>Many of us tend to think of ourselves as pretty good people. We think, \"Well, I\'m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I\'m doing pretty well!\" We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, \"...There is no one righteous, not even one; there is no one who understands, no one who seeks God.\" You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that \"all have sinned and fallen short of the glory of God.\" That\'s all sin is...falling short of God\'s best and we are all guilty of it.</p>\r\n</div>\r\n\r\n##What We Deserve\r\n\r\n<div class=\"columns-2\">\r\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us \"The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.\" So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn\'t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\r\n</div>\r\n\r\n##What God Offers\r\n\r\n<div class=\"columns-2\">\r\n<p>John 3:16 says \"For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.\" There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God\'s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\r\n\r\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, \"God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.\" He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, \"Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you...\" His resurrection provides our certain hope of eternal life in heaven with Him!</p>\r\n</div>\r\n\r\n##How It Works\r\n\r\n<div class=\"columns-2\">\r\n<p>How do we receive salvation? Romans 10:9-10 tells us \"That if you confess with your mouth, \'Jesus is Lord,\' and believe in your heart that God raised Him from the dead, you will be saved.\" Later on in that same chapter, in verse 13 it says, \"Everyone who calls on the name of the Lord will be saved.\" This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That\'s all there is to it!</p>\r\n</div>\r\n\r\n## What\'s Next?\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 \"...I have come that they may have life, and have it to the full.\" He doesn\'t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\r\n</div>\r\n\r\n<div class=\"columns-2\">\r\n\r\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\r\n\r\n<p><strong>Study the Bible</strong> – the Bible is God\'s love letter to you. It is the owner\'s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is \'God-breathed.\' This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus\' life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\r\n\r\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\r\n\r\n<p><strong>Tell someone</strong> – You don\'t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life...and hang on for the ride!</p>\r\n\r\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\r\n\r\n</div>',NULL,'## In a Nutshell...\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<ul>\r\n<li>We are <em>all</em> sinners.</li>\r\n<li>The consequence of our sin is eternal separation from God.</li>\r\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\r\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\r\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\r\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\r\n</ul>\r\n</div>\r\n\r\n## Who We Are\r\n\r\n<div class=\"columns-2\">\r\n<p>Many of us tend to think of ourselves as pretty good people. We think, \"Well, I\'m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I\'m doing pretty well!\" We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, \"...There is no one righteous, not even one; there is no one who understands, no one who seeks God.\" You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that \"all have sinned and fallen short of the glory of God.\" That\'s all sin is...falling short of God\'s best and we are all guilty of it.</p>\r\n</div>\r\n\r\n##What We Deserve\r\n\r\n<div class=\"columns-2\">\r\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us \"The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.\" So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn\'t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\r\n</div>\r\n\r\n##What God Offers\r\n\r\n<div class=\"columns-2\">\r\n<p>John 3:16 says \"For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.\" There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God\'s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\r\n\r\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, \"God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.\" He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, \"Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you...\" His resurrection provides our certain hope of eternal life in heaven with Him!</p>\r\n</div>\r\n\r\n##How It Works\r\n\r\n<div class=\"columns-2\">\r\n<p>How do we receive salvation? Romans 10:9-10 tells us \"That if you confess with your mouth, \'Jesus is Lord,\' and believe in your heart that God raised Him from the dead, you will be saved.\" Later on in that same chapter, in verse 13 it says, \"Everyone who calls on the name of the Lord will be saved.\" This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That\'s all there is to it!</p>\r\n</div>\r\n\r\n## What\'s Next?\r\n\r\n<div class=\"columns-2 grey-bkd\">\r\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 \"...I have come that they may have life, and have it to the full.\" He doesn\'t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\r\n</div>\r\n\r\n<div class=\"columns-2\">\r\n\r\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\r\n\r\n<p><strong>Study the Bible</strong> – the Bible is God\'s love letter to you. It is the owner\'s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is \'God-breathed.\' This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus\' life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\r\n\r\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\r\n\r\n<p><strong>Tell someone</strong> – You don\'t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life...and hang on for the ride!</p>\r\n\r\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\r\n\r\n</div>',1308,'<h2>In a Nutshell&#8230;</h2>\n\n<div class=\"columns-2 grey-bkd\">\n<ul>\n<li>We are <em>all</em> sinners.</li>\n<li>The consequence of our sin is eternal separation from God.</li>\n<li>God loves us! He loves us so much He sent His Son Jesus to die for our sins. He lived a sinless life, died on a cross and rose again from the dead.<br /><br /></li>\n<li>All we need to do is talk to the Lord - confess our sin, ask Him for forgiveness and invite Him into our lives.</li>\n<li>Once that prayer is prayed, we can be certain of eternal life in Heaven with God.</li>\n<li>In order to live this life to the fullest, it is best to start studying the Bible, to spend time with the Lord by praying and to get plugged into a church that teaches the Bible.</li>\n</ul>\n</div>\n\n<h2>Who We Are</h2>\n\n<div class=\"columns-2\">\n<p>Many of us tend to think of ourselves as pretty good people. We think, &#8220;Well, I&#8217;m not a murderer. I pay my taxes. I love my family. I try to be a good citizen. I think I&#8217;m doing pretty well!&#8221; We compare ourselves to the really bad people and conclude that we must be good. However, the Bible says in Romans 3:10-11, &#8220;&#8230;There is no one righteous, not even one; there is no one who understands, no one who seeks God.&#8221; You see, we can not compare ourselves to other people to determine our goodness. We have to compare ourselves to the ultimate standard of goodness. We have to compare ourselves to God. In this light, we are all sinful men and women, living in a fallen world. Try as we may to be good, to do good things, we cannot escape the fact that we are powerless to do it on our own. Romans 3:23 tells us that &#8220;all have sinned and fallen short of the glory of God.&#8221; That&#8217;s all sin is&#8230;falling short of God&#8217;s best and we are all guilty of it.</p>\n</div>\n\n<h2>What We Deserve</h2>\n\n<div class=\"columns-2\">\n<p>The consequences for this sin are dire. Further on in Romans 6:23, the Bible tells us &#8220;The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.&#8221; So while we deserve death for our sin, the Lord provides a way out of that consequence. He doesn&#8217;t just turn a blind eye to our shortcomings. That would deny His righteous nature. Instead He offers another way for that debt to be satisfied.</p>\n</div>\n\n<h2>What God Offers</h2>\n\n<div class=\"columns-2\">\n<p>John 3:16 says &#8220;For God so loved the world that He gave His only begotten Son that whosoever believeth in Him should not perish, but have everlasting life.&#8221; There are a few important things to notice about this passage. One aspect is the fact that it is belief in Jesus that allows us to enjoy eternal life AND avoid the eternal death we all deserve. But perhaps the most profound truth is the reason behind all of this: God&#8217;s love! That is the gospel in a nutshell, it is the Good News…God LOVES you! While many people envision the Lord as some cosmic being who looks down on us all with a scowl and a pointed finger, the opposite is actually true. He is a loving Creator who loves His creation so deeply, so fervently, that He sacrificed His only Son to offer us eternal life with Him in Heaven.</p>\n\n<p>Jesus lived a sinless life on earth, and His death on a cross fulfilled the demand. His innocent death served as the sacrifice for our sins. In 2 Corinthians 5:21 it says, &#8220;God made Him who had no sin to be sin for us, so that in Him we might become the righteousness of God.&#8221; He bridged the gap between sinful people and a holy God. In addition to this perfect sacrifice, He conquered death and rose again. He is a living Savior! And the Bible says in 1 Peter 1:3-4, &#8220;Praise be to the God and Father of our Lord Jesus Christ! In His great mercy He has given us birth into a living hope through the resurrections from the dead, and into an inheritance that can never perish, spoil or fade – kept in heaven for you&#8230;&#8221; His resurrection provides our certain hope of eternal life in heaven with Him!</p>\n</div>\n\n<h2>How It Works</h2>\n\n<div class=\"columns-2\">\n<p>How do we receive salvation? Romans 10:9-10 tells us &#8220;That if you confess with your mouth, &#8216;Jesus is Lord,&#8217; and believe in your heart that God raised Him from the dead, you will be saved.&#8221; Later on in that same chapter, in verse 13 it says, &#8220;Everyone who calls on the name of the Lord will be saved.&#8221; This is something the Lord longs to do for each and every person! Praying to God may seem a little scary, but it is simply a matter of talking to Him. He is anxious to hear you call out to Him! You can simply admit that you are a sinner in need of a Savior. Confess that you believe in the work He did on the cross for you and ask Him to forgive your sins and to come to live in your heart. That&#8217;s all there is to it!</p>\n</div>\n\n<h2>What&#8217;s Next?</h2>\n\n<div class=\"columns-2 grey-bkd\">\n<p>Asking Jesus into your life as your Savior is the first step of an incredible, eternal journey! You have become a child of God, a member of the family of believers! There are a couple things you can do to help you grow in this new life. Keep in mind, however, that these things you do will never be things that save you. That part is done! Jesus tells us in John 10:10 &#8220;&#8230;I have come that they may have life, and have it to the full.&#8221; He doesn&#8217;t want us to simply get through this life, He wants us to live an abundant life! It is the quality of our lives that is affected by our growth in Him!</p>\n</div>\n\n<div class=\"columns-2\">\n\n<p><strong>Pray</strong> – talk to the Lord. Your existence is a delight to Him! (Zephaniah 3:17) He wants the relationship you share with Him to grow deeper and stronger. Talking to Him is a great place to start!</p>\n\n<p><strong>Study the Bible</strong> – the Bible is God&#8217;s love letter to you. It is the owner&#8217;s manual for this life we live. As you read it you will discover more about who God is, how He wants us to live and how you can grow as a follower of Him! In 2 Timothy 3:16-17 we learn that Scripture is &#8216;God-breathed.&#8217; This means that God Himself speaks to us through these pages. If studying the Bible seems intimidating, start in the book of John. It is a straightforward account of Jesus&#8217; life here on earth. Remember that God wants to reveal Himself to you. He will be faithful to do this as you read His Word.</p>\n\n<p><strong>Plug into a church</strong> – Find a church that teaches the Bible faithfully. Being involved in a church helps us grow in our knowledge of the Lord and His Word. It also enables us to fellowship – to have other Christians come alongside us as we walk through this life. Find a church where you can receive sound teaching from the Bible, fellowship with other believers, worship and pray.</p>\n\n<p><strong>Tell someone</strong> – You don&#8217;t have to be an expert on doctrine or theology before you share the Lord with others. Your own salvation experience is your testimony! There is a dying world in need of a Savior and you know Him now. So feel free to share what the Lord has done in your life&#8230;and hang on for the ride!</p>\n\n<p><strong><a href=\"/88/about/contact-us/\">Contact Us</a></strong> – Please feel free to contact our church office if you have any questions or need some direction. We have pastors and elders who would be happy to speak with you or pray with you. Giving your life to Jesus is the most important decision you will ever make and you will never be sorry. In fact, you will wonder how you survived a day without Him. May the Lord bless you!</p>\n\n</div>\n'),
+	(203,12482,NULL,'# Where there is no vision, the people perish\r\n\r\n<span class=\"intro\">Proverbs 29:18 tells us, \"Without vision, the people perish.\" Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span>\r\n\r\n## Simplicity\r\n<div class=\"columns-2\">\r\n<p>We strive to keep Jesus the focal point of everything. There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: \"And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.\"</p>\r\n<p>There are plenty of opportunities throughout the week to be study the Word, to worship, to fellowship, to pray and to take communion.</p>\r\n\r\n<div class=\"grey-bkd top\">\r\n<ul>\r\n<li><em><strong>The Apostles’ Doctrine</strong> – teaching the Word</em></li>\r\n<li><em><strong>Fellowship</strong> – friendship, interaction that is rich and centered on the Lord</em></li>\r\n<li><em><strong>Breaking of Bread</strong> – eating together, sharing meals, and communion</em></li>\r\n<li><em><strong>Prayer</strong> – worship, praying with one another, praying for one another, time alone before the Lord</em></li>\r\n</ul>\r\n</div>\r\n\r\n\r\n</div>\r\n\r\n## Humility\r\n<div class=\"columns-2\"><p>There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, \"We’re better than nothing!\" We are just another body of believers, seeking to know the Lord better and to bring others to Him.</p></div>\r\n\r\n## Sincerity\r\n<div class=\"columns-2\"><p>We live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic ... our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.</p></div>',NULL,'# Where there is no vision, the people perish\r\n\r\n<span class=\"intro\">Proverbs 29:18 tells us, \"Without vision, the people perish.\" Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span>\r\n\r\n## Simplicity\r\n<div class=\"columns-2\">\r\n<p>We strive to keep Jesus the focal point of everything. There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: \"And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.\"</p>\r\n<p>There are plenty of opportunities throughout the week to be study the Word, to worship, to fellowship, to pray and to take communion.</p>\r\n\r\n<div class=\"grey-bkd top\">\r\n<ul>\r\n<li><em><strong>The Apostles’ Doctrine</strong> – teaching the Word</em></li>\r\n<li><em><strong>Fellowship</strong> – friendship, interaction that is rich and centered on the Lord</em></li>\r\n<li><em><strong>Breaking of Bread</strong> – eating together, sharing meals, and communion</em></li>\r\n<li><em><strong>Prayer</strong> – worship, praying with one another, praying for one another, time alone before the Lord</em></li>\r\n</ul>\r\n</div>\r\n\r\n\r\n</div>\r\n\r\n## Humility\r\n<div class=\"columns-2\"><p>There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, \"We’re better than nothing!\" We are just another body of believers, seeking to know the Lord better and to bring others to Him.</p></div>\r\n\r\n## Sincerity\r\n<div class=\"columns-2\"><p>We live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic ... our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.</p></div>',423,'<h1>Where there is no vision, the people perish</h1>\n\n<p><span class=\"intro\">Proverbs 29:18 tells us, &#8220;Without vision, the people perish.&#8221; Biblically, vision typically means ‘God-given revelation’ and the Hebrew word for perish, used here in Proverbs, is a picture of someone running around like a madman. Without a vision for our fellowship, we would be like the madman, running aimlessly. The Lord has given our leadership a clear direction for us as a church, a mode in which we are to function.</span></p>\n\n<h2>Simplicity</h2>\n\n<div class=\"columns-2\">\n<p>We strive to keep Jesus the focal point of everything. There are many good things we could be doing in the way of programs or presentation; however, we have made the decision to keep it simple. We feel called to preserve our fellowship as a place patterned after the early church of the New Testament. Our model for this is found in Acts 2:42: &#8220;And they continued steadfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers.&#8221;</p>\n<p>There are plenty of opportunities throughout the week to be study the Word, to worship, to fellowship, to pray and to take communion.</p>\n\n<div class=\"grey-bkd top\">\n<ul>\n<li><em><strong>The Apostles’ Doctrine</strong> – teaching the Word</em></li>\n<li><em><strong>Fellowship</strong> – friendship, interaction that is rich and centered on the Lord</em></li>\n<li><em><strong>Breaking of Bread</strong> – eating together, sharing meals, and communion</em></li>\n<li><em><strong>Prayer</strong> – worship, praying with one another, praying for one another, time alone before the Lord</em></li>\n</ul>\n</div>\n\n\n</div>\n\n<h2>Humility</h2>\n\n<div class=\"columns-2\"><p>There are many other good churches in the area that do things very differently than we do, and they do them well! While we are very certain of what the Lord has called us to do, we are quick to recognize that we are no better than any other fellowship. Pastor Brett likes to joke, &#8220;We’re better than nothing!&#8221; We are just another body of believers, seeking to know the Lord better and to bring others to Him.</p></div>\n\n<h2>Sincerity</h2>\n\n<div class=\"columns-2\"><p>We live in a fast-paced, busy world. Flashy commercials, computer technology, crazy traffic &#8230; our lives are about doing more, doing better, doing faster. Church can become the same way. It is another thing we guard against. We try to remember that the church is to be a hospital, a place of healing and refreshment. It is not to be a place of recruitment. We do not want you to come here, after a busy week, and feel like you have to do more, be more, pay more. So sit back and enjoy. Spend time before the Lord in worship. Drink deeply of His Word. Receive from Him. Take pleasure in the time you have to be still before Him.</p></div>\n'),
+	(208,12490,NULL,'##If you would like to get in touch with us, please feel free to call or drop by the church office.\r\n\r\n###Church Office\r\n\r\n**Email:**	        <a href=\"mailto:info@atheycreek.com\">info@atheycreek.com</a>\r\n\r\n**Phone:**	 	(971) 327-2120\r\n\r\n**FAX:**  	        (971) 327-2123\r\n\r\n**Address:**\r\n\r\n> 27520 SW 95th Ave\r\n\r\n> Wilsonville, OR 97070\r\n\r\n**Mail:**\r\n\r\n> P.O. Box 534\r\n\r\n> Tualatin, OR 97062\r\n\r\n**Office Hours:**	 	\r\n\r\n> 9:00 AM to 5:00 PM - Tues, Thur, Fri\r\n\r\n> 9:00 AM to 12:00 PM - Wed\r\n\r\n> Closed Monday\r\n\r\n\r\n\r\n\r\n\r\n',NULL,'##If you would like to get in touch with us, please feel free to call or drop by the church office.\r\n\r\n###Church Office\r\n\r\n**Email:**	        <a href=\"mailto:info@atheycreek.com\">info@atheycreek.com</a>\r\n\r\n**Phone:**	 	(971) 327-2120\r\n\r\n**FAX:**  	        (971) 327-2123\r\n\r\n**Address:**\r\n\r\n> 27520 SW 95th Ave\r\n\r\n> Wilsonville, OR 97070\r\n\r\n**Mail:**\r\n\r\n> P.O. Box 534\r\n\r\n> Tualatin, OR 97062\r\n\r\n**Office Hours:**	 	\r\n\r\n> 9:00 AM to 5:00 PM - Tues, Thur, Fri\r\n\r\n> 9:00 AM to 12:00 PM - Wed\r\n\r\n> Closed Monday\r\n\r\n\r\n\r\n\r\n\r\n',52,'<h2>If you would like to get in touch with us, please feel free to call or drop by the church office.</h2>\n\n<h3>Church Office</h3>\n\n<p><strong>Email:</strong>          <a href=\"mailto:info@atheycreek.com\">info@atheycreek.com</a></p>\n\n<p><strong>Phone:</strong>      (971) 327-2120</p>\n\n<p><strong>FAX:</strong>            (971) 327-2123</p>\n\n<p><strong>Address:</strong></p>\n\n<blockquote>\n  <p>27520 SW 95th Ave</p>\n  \n  <p>Wilsonville, OR 97070</p>\n</blockquote>\n\n<p><strong>Mail:</strong></p>\n\n<blockquote>\n  <p>P.O. Box 534</p>\n  \n  <p>Tualatin, OR 97062</p>\n</blockquote>\n\n<p><strong>Office Hours:</strong></p>\n\n<blockquote>\n  <p>9:00 AM to 5:00 PM - Tues, Thur, Fri</p>\n  \n  <p>9:00 AM to 12:00 PM - Wed</p>\n  \n  <p>Closed Monday</p>\n</blockquote>\n');
 
 /*!40000 ALTER TABLE `sym_entries_data_40` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -38997,22 +39251,22 @@ LOCK TABLES `sym_entries_data_5` WRITE;
 
 INSERT INTO `sym_entries_data_5` (`id`, `entry_id`, `value`)
 VALUES
-	(57,12538,'mdepaoli@atheycreek.com'),
-	(66,12516,'asumrall@atheycreek.com'),
-	(51,12546,'bmaurice@atheycreek.com'),
-	(55,12548,'kamina@atheycreek.com'),
-	(53,12551,'dfrost@atheycreek.com'),
+	(89,12538,'mdepaoli@atheycreek.com'),
+	(86,12516,'asumrall@atheycreek.com'),
+	(79,12546,'bmaurice@atheycreek.com'),
+	(71,12548,'kamina@atheycreek.com'),
+	(75,12551,'dfrost@atheycreek.com'),
 	(64,12556,'abe@atheycreek.com'),
-	(67,12557,'tmiller@atheycreek.com'),
-	(62,12559,'britchie@atheycreek.com'),
-	(56,12560,'accounting@atheycreek.com'),
+	(90,12557,'tmiller@atheycreek.com'),
+	(83,12559,'britchie@atheycreek.com'),
+	(84,12560,'accounting@atheycreek.com'),
 	(54,12561,'jshields@atheycreek.com'),
-	(58,12563,'mmarugg@atheycreek.com'),
-	(59,12564,'nate@atheycreek.com'),
-	(60,12565,'tad@atheycreek.com'),
-	(48,12972,'stacey@atheycreek.com'),
-	(68,12533,'jmeador@atheycreek.com'),
-	(69,12549,'bbelt@atheycreek.com');
+	(76,12563,'mmarugg@atheycreek.com'),
+	(73,12564,'nate@atheycreek.com'),
+	(85,12565,'tad@atheycreek.com'),
+	(88,12972,'stacey@atheycreek.com'),
+	(78,12533,'jmeador@atheycreek.com'),
+	(72,12549,'bbelt@atheycreek.com');
 
 /*!40000 ALTER TABLE `sym_entries_data_5` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -39041,6 +39295,8 @@ LOCK TABLES `sym_entries_data_50` WRITE;
 
 INSERT INTO `sym_entries_data_50` (`id`, `entry_id`, `file`, `size`, `mimetype`, `meta`)
 VALUES
+	(364,105,'/uploads/members/photos/brett-4fab37d7b4dce.jpg',1602114,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:55-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(381,106,'/uploads/members/photos/jeff-4fab384bca727.jpg',1677766,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:38:51-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(81,7749,NULL,NULL,NULL,NULL),
 	(235,12525,NULL,NULL,NULL,NULL),
 	(270,12526,NULL,NULL,NULL,NULL),
@@ -39075,7 +39331,7 @@ VALUES
 	(241,12530,NULL,NULL,NULL,NULL),
 	(242,12531,NULL,NULL,NULL,NULL),
 	(272,12532,NULL,NULL,NULL,NULL),
-	(351,12533,'/uploads/members/photos/joey-4f0f367e9836c.jpg',80209,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-01-12T11:37:34-08:00\";s:5:\"width\";i:228;s:6:\"height\";i:224;}'),
+	(366,12533,'/uploads/members/photos/joey-4f0f367e9836c.jpg',80209,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-01-12T11:37:34-08:00\";s:5:\"width\";i:228;s:6:\"height\";i:224;}'),
 	(76,12535,NULL,NULL,NULL,NULL),
 	(121,12536,NULL,NULL,NULL,NULL),
 	(273,12537,NULL,NULL,NULL,NULL),
@@ -39086,17 +39342,23 @@ VALUES
 	(132,12543,NULL,NULL,NULL,NULL),
 	(133,12544,NULL,NULL,NULL,NULL),
 	(134,12545,NULL,NULL,NULL,NULL),
-	(324,12546,'/uploads/members/photos/bryan-4fab37fe01219.jpg',1758655,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:34-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(367,12546,'/uploads/members/photos/bryan-4fab37fe01219.jpg',1758655,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:34-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(275,12547,NULL,NULL,NULL,NULL),
-	(352,12549,'/uploads/members/photos/bobby-4fab37c6e4b2d.jpg',1503552,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:38-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(330,12552,'/uploads/members/photos/jen-4fab3866c43be.jpg',1967864,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:39:18-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(354,12548,'/uploads/members/photos/kaipo-4fab389b3acc5.jpg',1814991,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:40:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(359,12551,'/uploads/members/photos/david-4fab381e36e2d.jpg',1731813,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:38:06-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(363,12552,'/uploads/members/photos/jen-4fab3866c43be.jpg',1967864,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:39:18-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(233,12599,NULL,NULL,NULL,NULL),
-	(323,12555,'/uploads/members/photos/brooke-4fab37e78160d.jpg',1545653,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(365,12555,'/uploads/members/photos/brooke-4fab37e78160d.jpg',1545653,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(343,12556,'/uploads/members/photos/abe-4fab378f640e3.jpg',1966969,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:35:43-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(350,12557,'/uploads/members/photos/tim-4f0f471b4cbcd.jpg',28176,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-01-12T12:48:27-08:00\";s:5:\"width\";i:116;s:6:\"height\";i:116;}'),
-	(327,12558,'/uploads/members/photos/haley-4f0f475a35e3f.jpg',30724,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-01-12T12:49:30-08:00\";s:5:\"width\";i:116;s:6:\"height\";i:116;}'),
-	(341,12559,'/uploads/members/photos/bryn-4fab380bc4024.jpg',1938566,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:47-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(339,12565,'/uploads/members/photos/tad-4fab398191b61.jpg',1463588,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:44:01-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(396,12557,'/uploads/members/photos/tim-4fb3da80b15e3.jpg',2411198,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-16T09:49:04-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(398,12558,'/uploads/members/photos/haley-4f0f475a35e3f.jpg',30724,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-01-12T12:49:30-08:00\";s:5:\"width\";i:116;s:6:\"height\";i:116;}'),
+	(371,12559,'/uploads/members/photos/bryn-4fab380bc4024.jpg',1938566,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:37:47-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(372,12560,'/uploads/members/photos/kate-4fab38f2b1efc.jpg',1597218,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:41:38-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(373,12562,'/uploads/members/photos/judy-4fab3880e9b90.jpg',1606800,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:39:45-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(361,12563,'/uploads/members/photos/mike-4fab394c0d259.jpg',2070286,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:43:08-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(356,12564,'/uploads/members/photos/nate-4fab39613373d.jpg',1508068,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:43:29-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(375,12516,'/uploads/members/photos/abner-4fab37a5df856.jpg',2110558,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:05-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(374,12565,'/uploads/members/photos/tad-4fab398191b61.jpg',1463588,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:44:01-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(176,12572,NULL,NULL,NULL,NULL),
 	(177,12573,NULL,NULL,NULL,NULL),
 	(178,12574,NULL,NULL,NULL,NULL),
@@ -39125,22 +39387,16 @@ VALUES
 	(280,12822,NULL,NULL,NULL,NULL),
 	(282,12830,NULL,NULL,NULL,NULL),
 	(286,12911,NULL,NULL,NULL,NULL),
-	(345,12516,'/uploads/members/photos/abner-4fab37a5df856.jpg',2110558,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:05-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(290,12922,NULL,NULL,NULL,NULL),
 	(291,12923,NULL,NULL,NULL,NULL),
-	(320,12550,'/uploads/members/photos/amy_elliott-4fab37b4d4184.jpg',1730793,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:20-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(322,105,'/uploads/members/photos/brett-4fab37d7b4dce.jpg',1602114,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:55-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(326,12551,'/uploads/members/photos/david-4fab381e36e2d.jpg',1731813,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:38:06-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(360,12550,'/uploads/members/photos/amy_elliott-4fab37b4d4184.jpg',1730793,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:20-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(355,12549,'/uploads/members/photos/bobby-4fab37c6e4b2d.jpg',1503552,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:36:38-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(328,12561,'/uploads/members/photos/james-4fab3839bef86.jpg',2004001,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:38:33-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(329,106,'/uploads/members/photos/jeff-4fab384bca727.jpg',1677766,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:38:51-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(332,12562,'/uploads/members/photos/judy-4fab3880e9b90.jpg',1606800,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:39:45-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(333,12548,'/uploads/members/photos/kaipo-4fab389b3acc5.jpg',1814991,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:40:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
 	(334,12553,'/uploads/members/photos/kari-4fab38dfe8aad.jpg',1696504,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:41:19-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(335,12560,'/uploads/members/photos/kate-4fab38f2b1efc.jpg',1597218,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:41:38-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(336,12538,'/uploads/members/photos/micah-4fab391367825.jpg',1836034,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:42:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(337,12563,'/uploads/members/photos/mike-4fab394c0d259.jpg',2070286,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:43:08-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(338,12564,'/uploads/members/photos/nate-4fab39613373d.jpg',1508068,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:43:29-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
-	(317,12972,'/uploads/members/photos/stacey-4fab3a2bc83f7.jpg',1433975,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:46:52-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}');
+	(392,12538,'/uploads/members/photos/micah-4fab391367825.jpg',1836034,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:42:11-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(391,12972,'/uploads/members/photos/stacey-4fab3a2bc83f7.jpg',1433975,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-09T20:46:52-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(388,13110,'/uploads/members/photos/amy_mcreynolds-4fb2e70566fb9.jpg',1836588,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-15T16:30:13-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}'),
+	(395,13109,'/uploads/members/photos/rachel-4fb2e793b13bd.jpg',2070860,'image/jpeg','a:3:{s:8:\"creation\";s:25:\"2012-05-15T16:32:35-07:00\";s:5:\"width\";i:2912;s:6:\"height\";i:2912;}');
 
 /*!40000 ALTER TABLE `sym_entries_data_50` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -39169,8 +39425,8 @@ LOCK TABLES `sym_entries_data_52` WRITE;
 
 INSERT INTO `sym_entries_data_52` (`id`, `entry_id`, `handle`, `value`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`)
 VALUES
-	(322,105,'head-pastor','Head Pastor','head-pastor','Head Pastor',2,'Head Pastor'),
-	(329,106,'associate-pastor','Associate Pastor','associate-pastor','Associate Pastor',2,'Associate Pastor'),
+	(364,105,'head-pastor','Head Pastor','head-pastor','Head Pastor',2,'Head Pastor'),
+	(381,106,'associate-pastor','Associate Pastor','associate-pastor','Associate Pastor',2,'Associate Pastor'),
 	(81,7749,'missionary','Missionary','missionary','Missionary',1,'Missionary'),
 	(257,12498,'leader','Leader','leader','Leader',1,'Leader'),
 	(260,12499,'co-leader','Co-Leader ','co-leader','Co-Leader ',1,'Co-Leader '),
@@ -39201,11 +39457,12 @@ VALUES
 	(240,12528,'leader-3','Leader','leader-3','Leader',1,'Leader'),
 	(271,12529,'host-13','Host','host-13','Host',1,'Host'),
 	(272,12532,'host-12','Host','host-12','Host',1,'Host'),
-	(351,12533,'staff-2','Staff','staff-2','Staff',1,'Staff'),
+	(366,12533,'staff-2','Staff','staff-2','Staff',1,'Staff'),
+	(395,13109,'staff-12','Staff','staff-12','Staff',1,'Staff'),
 	(76,12535,'leader-11','Leader','leader-11','Leader',1,'Leader'),
 	(121,12536,'leader-19','Leader','leader-19','Leader',1,'Leader'),
 	(273,12537,'host-11','Host','host-11','Host',1,'Host'),
-	(336,12538,'leader-2','Leader','leader-2','Leader',1,'Leader'),
+	(392,12538,'staff-13','Staff','staff-13','Staff',1,'Staff'),
 	(241,12530,'leader-12','Leader','leader-12','Leader',1,'Leader'),
 	(235,12525,'leader-10','Leader','leader-10','Leader',1,'Leader'),
 	(242,12531,'leader-16','Leader','leader-16','Leader',1,'Leader'),
@@ -39218,27 +39475,27 @@ VALUES
 	(132,12543,'leader-24','Leader','leader-24','Leader',1,'Leader'),
 	(133,12544,'host-15','Host','host-15','Host',1,'Host'),
 	(134,12545,'leader-25','Leader','leader-25','Leader',1,'Leader'),
-	(324,12546,'staff-3','Staff','staff-3','Staff',1,'Staff'),
+	(367,12546,'staff-3','Staff','staff-3','Staff',1,'Staff'),
 	(275,12547,'host-16','Host','host-16','Host',1,'Host'),
-	(333,12548,'staff-4','Staff','staff-4','Staff',1,'Staff'),
-	(352,12549,'associate-pastor-2','Associate Pastor','associate-pastor-2','Associate Pastor',2,'Associate Pastor'),
-	(320,12550,'staff','Staff','staff','Staff',1,'Staff'),
-	(326,12551,'college-pastor','College Pastor','college-pastor','College Pastor',2,'College Pastor'),
-	(330,12552,'staff-6','Staff','staff-6','Staff',1,'Staff'),
+	(354,12548,'staff-4','Staff','staff-4','Staff',1,'Staff'),
+	(355,12549,'associate-pastor-2','Associate Pastor','associate-pastor-2','Associate Pastor',2,'Associate Pastor'),
+	(360,12550,'staff','Staff','staff','Staff',1,'Staff'),
+	(359,12551,'college-pastor','College Pastor','college-pastor','College Pastor',2,'College Pastor'),
+	(363,12552,'staff-6','Staff','staff-6','Staff',1,'Staff'),
 	(334,12553,'staff-7','Staff','staff-7','Staff',1,'Staff'),
 	(233,12599,'host-17','Host','host-17','Host',1,'Host'),
-	(323,12555,'staff-5','Staff','staff-5','Staff',1,'Staff'),
+	(365,12555,'staff-5','Staff','staff-5','Staff',1,'Staff'),
 	(343,12556,'high-school-pastor','High School Pastor','high-school-pastor','High School Pastor',3,'High School Pastor'),
-	(350,12557,'staff-10','Staff','staff-10','Staff',1,'Staff'),
-	(327,12558,'staff-11','Staff','staff-11','Staff',1,'Staff'),
-	(341,12559,'associate-pastor-3','Associate Pastor','associate-pastor-3','Associate Pastor',2,'Associate Pastor'),
-	(335,12560,'staff-9','Staff','staff-9','Staff',1,'Staff'),
+	(396,12557,'staff-10','Staff','staff-10','Staff',1,'Staff'),
+	(398,12558,'staff-11','Staff','staff-11','Staff',1,'Staff'),
+	(371,12559,'associate-pastor-3','Associate Pastor','associate-pastor-3','Associate Pastor',2,'Associate Pastor'),
+	(372,12560,'staff-9','Staff','staff-9','Staff',1,'Staff'),
 	(328,12561,'childrens-pastor','Children\'s Pastor','childrens-pastor','Children\'s Pastor',2,'Children\'s Pastor'),
-	(332,12562,'staff-8','Staff','staff-8','Staff',1,'Staff'),
-	(337,12563,'associate-pastor-4','Associate Pastor','associate-pastor-4','Associate Pastor',2,'Associate Pastor'),
-	(338,12564,'junior-high-pastor','Junior High Pastor','junior-high-pastor','Junior High Pastor',3,'Junior High Pastor'),
-	(345,12516,'associate-pastor-5','Associate Pastor','associate-pastor-5','Associate Pastor',2,'Associate Pastor'),
-	(339,12565,'associate-pastor-6','Associate Pastor','associate-pastor-6','Associate Pastor',2,'Associate Pastor'),
+	(373,12562,'staff-8','Staff','staff-8','Staff',1,'Staff'),
+	(361,12563,'associate-pastor-4','Associate Pastor','associate-pastor-4','Associate Pastor',2,'Associate Pastor'),
+	(356,12564,'junior-high-pastor','Junior High Pastor','junior-high-pastor','Junior High Pastor',3,'Junior High Pastor'),
+	(375,12516,'associate-pastor-5','Associate Pastor','associate-pastor-5','Associate Pastor',2,'Associate Pastor'),
+	(374,12565,'associate-pastor-6','Associate Pastor','associate-pastor-6','Associate Pastor',2,'Associate Pastor'),
 	(176,12572,'elder-3','Elder','elder-3','Elder',1,'Elder'),
 	(177,12573,'elder-5','Elder','elder-5','Elder',1,'Elder'),
 	(178,12574,'elder-6','Elder','elder-6','Elder',1,'Elder'),
@@ -39259,6 +39516,7 @@ VALUES
 	(269,12600,'host-18','Host','host-18','Host',1,'Host'),
 	(231,12601,'host-19','Host','host-19','Host',1,'Host'),
 	(244,12653,NULL,NULL,NULL,NULL,0,NULL),
+	(388,13110,'wedding-coordinator','Wedding Coordinator','wedding-coordinator','Wedding Coordinator',2,'Wedding Coordinator'),
 	(247,12748,NULL,NULL,NULL,NULL,0,NULL),
 	(248,12752,NULL,NULL,NULL,NULL,0,NULL),
 	(252,12812,NULL,NULL,NULL,NULL,0,NULL),
@@ -39266,7 +39524,7 @@ VALUES
 	(280,12822,NULL,NULL,NULL,NULL,0,NULL),
 	(282,12830,NULL,NULL,NULL,NULL,0,NULL),
 	(286,12911,NULL,NULL,NULL,NULL,0,NULL),
-	(317,12972,'accountant','Accountant','accountant','Accountant',1,'Accountant'),
+	(391,12972,'bookkeeper','Bookkeeper ','bookkeeper','Bookkeeper ',1,'Bookkeeper '),
 	(290,12922,NULL,NULL,NULL,NULL,0,NULL),
 	(291,12923,NULL,NULL,NULL,NULL,0,NULL);
 
@@ -39296,7 +39554,7 @@ LOCK TABLES `sym_entries_data_53` WRITE;
 INSERT INTO `sym_entries_data_53` (`id`, `entry_id`, `handle`, `value`)
 VALUES
 	(42,12589,'122786444','-122.786444'),
-	(39,7748,'152027797698975','15.2027797698975'),
+	(47,7748,'15198641','15.198641'),
 	(9,12590,'122757818','-122.757818'),
 	(11,12604,'122791706398129','-122.791706398129'),
 	(12,12591,'122830709','-122.830709'),
@@ -39353,8 +39611,8 @@ LOCK TABLES `sym_entries_data_54` WRITE;
 
 INSERT INTO `sym_entries_data_54` (`id`, `entry_id`, `handle`, `value`, `handle-en`, `value-en`, `word_count-en`, `value_format-en`)
 VALUES
-	(322,105,NULL,'Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship. Brett and his wife Debbie have three children – Brooke, Joe and Casey.',NULL,'Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship. Brett and his wife Debbie have three children – Brooke, Joe and Casey.',31,'<p>Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship. Brett and his wife Debbie have three children – Brooke, Joe and Casey.</p>\n'),
-	(329,106,NULL,'Jeff is an assisting pastor who handles the business dealings of our fellowship. Presently, his focus is working with the various agencies, contractors and lenders to coordinate the pace and flow of the building project. Jeff and his wife, Sherry, have a ',NULL,'Jeff is an assisting pastor who handles the business dealings of our fellowship. Presently, his focus is working with the various agencies, contractors and lenders to coordinate the pace and flow of the building project. Jeff and his wife, Sherry, have a daughter named Caedy.',45,'<p>Jeff is an assisting pastor who handles the business dealings of our fellowship. Presently, his focus is working with the various agencies, contractors and lenders to coordinate the pace and flow of the building project. Jeff and his wife, Sherry, have a daughter named Caedy.</p>\n'),
+	(364,105,NULL,'Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship.  As our church has grown, Brett’s main focus has remained the same; pointing people to Jesus by teaching through God’s Word, verse-by-verse,',NULL,'Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship.  As our church has grown, Brett’s main focus has remained the same; pointing people to Jesus by teaching through God’s Word, verse-by-verse, book-by-book and chapter-by-chapter.  Brett and his wife Debbie have three children – Brooke, Joe and Casey.',56,'<p>Brett is our senior pastor. He and his family moved to Portland in 1996 to start Athey Creek Christian Fellowship.  As our church has grown, Brett’s main focus has remained the same; pointing people to Jesus by teaching through God’s Word, verse-by-verse, book-by-book and chapter-by-chapter.  Brett and his wife Debbie have three children – Brooke, Joe and Casey.</p>\n'),
+	(381,106,NULL,'Jeff is an assisting pastor at our church.  He handles the business and finance-related issues, and provides support to the pastors and staff for our fellowship. His present focus is working with the various agencies, contractors and lenders to coordinate',NULL,'Jeff is an assisting pastor at our church.  He handles the business and finance-related issues, and provides support to the pastors and staff for our fellowship. His present focus is working with the various agencies, contractors and lenders to coordinate the pace and flow of the building project. Jeff and his wife, Sherry, have a daughter named Caedy.',58,'<p>Jeff is an assisting pastor at our church.  He handles the business and finance-related issues, and provides support to the pastors and staff for our fellowship. His present focus is working with the various agencies, contractors and lenders to coordinate the pace and flow of the building project. Jeff and his wife, Sherry, have a daughter named Caedy.</p>\n'),
 	(81,7749,NULL,NULL,NULL,NULL,0,'\n'),
 	(257,12498,NULL,NULL,NULL,NULL,0,'\n'),
 	(260,12499,NULL,NULL,NULL,NULL,0,'\n'),
@@ -39374,7 +39632,7 @@ VALUES
 	(219,12513,NULL,NULL,NULL,NULL,0,'\n'),
 	(222,12514,NULL,NULL,NULL,NULL,0,'\n'),
 	(266,12515,NULL,NULL,NULL,NULL,0,'\n'),
-	(345,12516,NULL,'Abner is one of the pastors here at Athey.',NULL,'Abner is one of the pastors here at Athey.',9,'<p>Abner is one of the pastors here at Athey.</p>\n'),
+	(375,12516,NULL,'Abner is a great asset to our staff.  He has years of ministry experience under his belt and spends the bulk of his time meeting with the people of our fellowship for prayer, counsel and discipleship.  He and his wife Sara have three kids and four grandch',NULL,'Abner is a great asset to our staff.  He has years of ministry experience under his belt and spends the bulk of his time meeting with the people of our fellowship for prayer, counsel and discipleship.  He and his wife Sara have three kids and four grandchildren.',47,'<p>Abner is a great asset to our staff.  He has years of ministry experience under his belt and spends the bulk of his time meeting with the people of our fellowship for prayer, counsel and discipleship.  He and his wife Sara have three kids and four grandchildren.</p>\n'),
 	(224,12517,NULL,NULL,NULL,NULL,0,'\n'),
 	(277,12518,NULL,NULL,NULL,NULL,0,'\n'),
 	(226,12519,NULL,NULL,NULL,NULL,0,'\n'),
@@ -39391,11 +39649,11 @@ VALUES
 	(241,12530,NULL,NULL,NULL,NULL,0,'\n'),
 	(242,12531,NULL,NULL,NULL,NULL,0,'\n'),
 	(272,12532,NULL,NULL,NULL,NULL,0,'\n'),
-	(351,12533,NULL,NULL,NULL,NULL,0,'\n'),
+	(366,12533,NULL,'Joey serves in a variety of ministries here at Athey.  He is quick to jump in to help whenever and wherever help is needed.  Joey is also one of our worship leaders, and helps with the production of our Day-by-Day radio program.',NULL,'Joey serves in a variety of ministries here at Athey.  He is quick to jump in to help whenever and wherever help is needed.  Joey is also one of our worship leaders, and helps with the production of our Day-by-Day radio program.',42,'<p>Joey serves in a variety of ministries here at Athey.  He is quick to jump in to help whenever and wherever help is needed.  Joey is also one of our worship leaders, and helps with the production of our Day-by-Day radio program.</p>\n'),
 	(76,12535,NULL,NULL,NULL,NULL,0,'\n'),
 	(121,12536,NULL,NULL,NULL,NULL,0,'\n'),
 	(273,12537,NULL,NULL,NULL,NULL,0,'\n'),
-	(336,12538,NULL,'Micah does a little bit of everything! In addition to being one of our worship leaders, he is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.',NULL,'Micah does a little bit of everything! In addition to being one of our worship leaders, he is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.',48,'<p>Micah does a little bit of everything! In addition to being one of our worship leaders, he is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.</p>\n'),
+	(392,12538,NULL,'In addition to being one of our worship leaders, Micah is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.',NULL,'In addition to being one of our worship leaders, Micah is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.',41,'<p>In addition to being one of our worship leaders, Micah is a huge help to the staff in meeting the needs of the various ministries at our church. Micah and his wife, Jacey, help out with our high school youth group.</p>\n'),
 	(278,12539,NULL,NULL,NULL,NULL,0,'\n'),
 	(129,12540,NULL,NULL,NULL,NULL,0,'\n'),
 	(274,12541,NULL,NULL,NULL,NULL,0,'\n'),
@@ -39403,28 +39661,25 @@ VALUES
 	(132,12543,NULL,NULL,NULL,NULL,0,'\n'),
 	(133,12544,NULL,NULL,NULL,NULL,0,'\n'),
 	(134,12545,NULL,NULL,NULL,NULL,0,'\n'),
-	(324,12546,NULL,'Bryan works alongside of James and his wife Jen to make sure that the kids of Athey are well taken care of.',NULL,'Bryan works alongside of James and his wife Jen to make sure that the kids of Athey are well taken care of.',22,'<p>Bryan works alongside of James and his wife Jen to make sure that the kids of Athey are well taken care of.</p>\n'),
 	(275,12547,NULL,NULL,NULL,NULL,0,'\n'),
-	(333,12548,NULL,'Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.',NULL,'Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.',30,'<p>Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.</p>\n'),
-	(352,12549,NULL,'Bobby serves as an assisting pastor here at the fellowship.  His primary focus is to be available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, Caleb, Molly and Ashli.',NULL,'Bobby serves as an assisting pastor here at the fellowship.  His primary focus is to be available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, Caleb, Molly and Ashli.',40,'<p>Bobby serves as an assisting pastor here at the fellowship.  His primary focus is to be available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, Caleb, Molly and Ashli.</p>\n'),
-	(320,12550,NULL,'Amy is an administrative assistant for the pastoral staff. She helps plan and coordinate various fellowship events, as well as tackling any special projects that come up.',NULL,'Amy is an administrative assistant for the pastoral staff. She helps plan and coordinate various fellowship events, as well as tackling any special projects that come up.',27,'<p>Amy is an administrative assistant for the pastoral staff. She helps plan and coordinate various fellowship events, as well as tackling any special projects that come up.</p>\n'),
-	(326,12551,NULL,'David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.',NULL,'David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.',41,'<p>David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.</p>\n'),
-	(330,12552,NULL,'Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work wit',NULL,'Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work with our kiddos.',48,'<p>Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work with our kiddos.</p>\n'),
+	(354,12548,NULL,'Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.  He and his wife, Jen, are some of our newest newlyweds!',NULL,'Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.  He and his wife, Jen, are some of our newest newlyweds!',41,'<p>Kaipo spends much of his time taking care of the maintenance and cleaning needs of the church building. He also heads up many of the improvement projects around the church.  He and his wife, Jen, are some of our newest newlyweds!</p>\n'),
+	(355,12549,NULL,'Bobby serves as an assisting pastor here at the fellowship.  He primarily functions in the role of pastoral ministry, being available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, ',NULL,'Bobby serves as an assisting pastor here at the fellowship.  He primarily functions in the role of pastoral ministry, being available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, Caleb, Molly and Ashli.',44,'<p>Bobby serves as an assisting pastor here at the fellowship.  He primarily functions in the role of pastoral ministry, being available to the congregation of our church for prayer, counseling and hospital visitations. Bobby and his wife Meghan have Emily, Caleb, Molly and Ashli.</p>\n'),
+	(359,12551,NULL,'David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.',NULL,'David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.',41,'<p>David is our college pastor. He also serves as one of our worship leaders at church. Throughout the rest of the week, he helps take care of our IT and media ministry needs. David and Becca have a daughter named Christy.</p>\n'),
+	(363,12552,NULL,'Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work wit',NULL,'Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work with our kiddos.  She and Bryan were just married this winter.',56,'<p>Jen has been a vital part of our Children’s Ministry for several years now. She helps James keep things up and running as she works on the schedule, facilitates events and makes sure the Children’s Ministry teachers have all they need in order to work with our kiddos.  She and Bryan were just married this winter.</p>\n'),
 	(334,12553,NULL,'Kari is an administrative assistant. She helps with the routine workings of the office, which include covering the phones, greeting guests, distributing information and assisting with the many ministry needs as they arise.',NULL,'Kari is an administrative assistant. She helps with the routine workings of the office, which include covering the phones, greeting guests, distributing information and assisting with the many ministry needs as they arise.',33,'<p>Kari is an administrative assistant. She helps with the routine workings of the office, which include covering the phones, greeting guests, distributing information and assisting with the many ministry needs as they arise.</p>\n'),
 	(233,12599,NULL,NULL,NULL,NULL,0,'\n'),
 	(269,12600,NULL,NULL,NULL,NULL,0,'\n'),
 	(231,12601,NULL,NULL,NULL,NULL,0,'\n'),
-	(323,12555,NULL,'Brooke is an administrative assistant. She works together with Kari and Haley to run the office. This means looking after the routine projects, as well as handling all of the unexpected needs that arise each week. They also provide tremendous organization',NULL,'Brooke is an administrative assistant. She works together with Kari and Haley to run the office. This means looking after the routine projects, as well as handling all of the unexpected needs that arise each week. They also provide tremendous organizational support for the various ministries of the church.',49,'<p>Brooke is an administrative assistant. She works together with Kari and Haley to run the office. This means looking after the routine projects, as well as handling all of the unexpected needs that arise each week. They also provide tremendous organizational support for the various ministries of the church.</p>\n'),
+	(365,12555,NULL,'Brooke is one of the administrative assistants at the office.  This team of girls looks after routine projects, as well as the unexpected needs that arise each week. They also provide tremendous organizational support for the various ministries of the chu',NULL,'Brooke is one of the administrative assistants at the office.  This team of girls looks after routine projects, as well as the unexpected needs that arise each week. They also provide tremendous organizational support for the various ministries of the church.',41,'<p>Brooke is one of the administrative assistants at the office.  This team of girls looks after routine projects, as well as the unexpected needs that arise each week. They also provide tremendous organizational support for the various ministries of the church.</p>\n'),
 	(343,12556,NULL,'Abe is our high school youth pastor. He divides his time between the youth group, two Dutch Brothers stands and his lovely family – his wife Melissa and their four kids: Jonah, Emery, Charlotte and Judah.',NULL,'Abe is our high school youth pastor. He divides his time between the youth group, two Dutch Brothers stands and his lovely family – his wife Melissa and their four kids: Jonah, Emery, Charlotte and Judah.',35,'<p>Abe is our high school youth pastor. He divides his time between the youth group, two Dutch Brothers stands and his lovely family – his wife Melissa and their four kids: Jonah, Emery, Charlotte and Judah.</p>\n'),
-	(350,12557,NULL,'Tim is our audio, visual and lighting specialist. He takes care of the ins and outs of the sound and lighting systems during our times of worship and teaching. He also helps to coordinate musicians for worship during the week. Tim and his wife Jamie have ',NULL,'Tim is our audio, visual and lighting specialist. He takes care of the ins and outs of the sound and lighting systems during our times of worship and teaching. He also helps to coordinate musicians for worship during the week. Tim and his wife Jamie have a son named Elijah.',50,'<p>Tim is our audio, visual and lighting specialist. He takes care of the ins and outs of the sound and lighting systems during our times of worship and teaching. He also helps to coordinate musicians for worship during the week. Tim and his wife Jamie have a son named Elijah.</p>\n'),
-	(327,12558,NULL,'Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office. ',NULL,'Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office. ',38,'<p>Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office.</p>\n'),
-	(341,12559,NULL,'Bryn is an assisting pastor who oversees the operations of our fellowship, along with other pastoral ministries.  He and Jessica have three kids – Liam, Madison, and Elijah.',NULL,'Bryn is an assisting pastor who oversees the operations of our fellowship, along with other pastoral ministries.  He and Jessica have three kids – Liam, Madison, and Elijah.',27,'<p>Bryn is an assisting pastor who oversees the operations of our fellowship, along with other pastoral ministries.  He and Jessica have three kids – Liam, Madison, and Elijah.</p>\n'),
-	(335,12560,NULL,'Kate is our bookkeeper. She assists Jeff Young with financial administrative duties, as well as providing office support throughout the week.',NULL,'Kate is our bookkeeper. She assists Jeff Young with financial administrative duties, as well as providing office support throughout the week.',21,'<p>Kate is our bookkeeper. She assists Jeff Young with financial administrative duties, as well as providing office support throughout the week.</p>\n'),
+	(396,12557,NULL,'Tim is our audio, visual and lighting specialist. He looks after the technical details during our times of worship and teaching, as well as providing support for worship team musicians. Tim and Jamie have a son named Elijah and another little guy on the w',NULL,'Tim is our audio, visual and lighting specialist. He looks after the technical details during our times of worship and teaching, as well as providing support for worship team musicians. Tim and Jamie have a son named Elijah and another little guy on the way.',45,'<p>Tim is our audio, visual and lighting specialist. He looks after the technical details during our times of worship and teaching, as well as providing support for worship team musicians. Tim and Jamie have a son named Elijah and another little guy on the way.</p>\n'),
+	(398,12558,NULL,'Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office. ',NULL,'Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office. ',38,'<p>Haley is an administrative assistant who helps in a multitude of ways. She is a great support to the staff, helping to make sure all of the details are covered in the day-to-day matters at the church office.</p>\n'),
+	(372,12560,NULL,'Kate is an administrative assistant who works with the staff in various areas of operations such as communications coordination, maintaining schedules and the day-to-day workings of the office.  She is married to Travis.  ',NULL,'Kate is an administrative assistant who works with the staff in various areas of operations such as communications coordination, maintaining schedules and the day-to-day workings of the office.  She is married to Travis.  ',33,'<p>Kate is an administrative assistant who works with the staff in various areas of operations such as communications coordination, maintaining schedules and the day-to-day workings of the office.  She is married to Travis.</p>\n'),
 	(328,12561,NULL,'James is our children\'s pastor. His time is divided between the administrative aspects of our Children’s Ministry and keeping up with the Grade Schoolers – both in the classroom and on the many trips they take throughout the year. James and his wife Angel',NULL,'James is our children\'s pastor. His time is divided between the administrative aspects of our Children’s Ministry and keeping up with the Grade Schoolers – both in the classroom and on the many trips they take throughout the year. James and his wife Angela have three boys – Silas, J.T. and Isaiah.',50,'<p>James is our children&#8217;s pastor. His time is divided between the administrative aspects of our Children’s Ministry and keeping up with the Grade Schoolers – both in the classroom and on the many trips they take throughout the year. James and his wife Angela have three boys – Silas, J.T. and Isaiah.</p>\n'),
-	(332,12562,NULL,'Judy leads our women’s ministry. She oversees the ladies\' Bible studies and meets with the women of Athey for prayer and fellowship. ',NULL,'Judy leads our women’s ministry. She oversees the ladies\' Bible studies and meets with the women of Athey for prayer and fellowship. ',22,'<p>Judy leads our women’s ministry. She oversees the ladies&#8217; Bible studies and meets with the women of Athey for prayer and fellowship.</p>\n'),
-	(337,12563,NULL,'Mike helps to head up our Home Groups.',NULL,'Mike helps to head up our Home Groups.',8,'<p>Mike helps to head up our Home Groups.</p>\n'),
-	(338,12564,NULL,'Nate is our Junior High Pastor.',NULL,'Nate is our Junior High Pastor.',6,'<p>Nate is our Junior High Pastor.</p>\n'),
-	(339,12565,NULL,'Tad is one of our pastors here at Athey.',NULL,'Tad is one of our pastors here at Athey.',9,'<p>Tad is one of our pastors here at Athey.</p>\n'),
+	(373,12562,NULL,'Judy leads our women’s ministry.  She oversees the ladies\' Bible studies and meets with the women of Athey for prayer, counsel and fellowship.  Judy has four children and is ‘Grammy’ to eight grandkids.',NULL,'Judy leads our women’s ministry.  She oversees the ladies\' Bible studies and meets with the women of Athey for prayer, counsel and fellowship.  Judy has four children and is ‘Grammy’ to eight grandkids.',33,'<p>Judy leads our women’s ministry.  She oversees the ladies&#8217; Bible studies and meets with the women of Athey for prayer, counsel and fellowship.  Judy has four children and is ‘Grammy’ to eight grandkids.</p>\n'),
+	(361,12563,NULL,'Mike is an assisting pastor who works with Tad to coordinate the day-to-day operations of the church office.  In addition, Mike heads up our Home Group ministry, which is a huge blessing to our fellowship!  Mike and Cassie have Anthony and Aaliyah.',NULL,'Mike is an assisting pastor who works with Tad to coordinate the day-to-day operations of the church office.  In addition, Mike heads up our Home Group ministry, which is a huge blessing to our fellowship!  Mike and Cassie have Anthony and Aaliyah.',42,'<p>Mike is an assisting pastor who works with Tad to coordinate the day-to-day operations of the church office.  In addition, Mike heads up our Home Group ministry, which is a huge blessing to our fellowship!  Mike and Cassie have Anthony and Aaliyah.</p>\n'),
+	(356,12564,NULL,'Nate is our Junior High youth pastor.  He has a great heart to teach God’s Word to our Junior High kids and to have a ton of fun in the process.  Nate and Heidi have a daughter named Collette (Coco) who is getting ready to become a big sister!',NULL,'Nate is our Junior High youth pastor.  He has a great heart to teach God’s Word to our Junior High kids and to have a ton of fun in the process.  Nate and Heidi have a daughter named Collette (Coco) who is getting ready to become a big sister!',49,'<p>Nate is our Junior High youth pastor.  He has a great heart to teach God’s Word to our Junior High kids and to have a ton of fun in the process.  Nate and Heidi have a daughter named Collette (Coco) who is getting ready to become a big sister!</p>\n'),
+	(374,12565,NULL,'Tad and Mike work together to oversee the office staff, and to make sure that things are running smoothly.  Tad also serves as a point of contact for our missionaries, which is a great fit, given his years of experience on the mission-field.  He and his w',NULL,'Tad and Mike work together to oversee the office staff, and to make sure that things are running smoothly.  Tad also serves as a point of contact for our missionaries, which is a great fit, given his years of experience on the mission-field.  He and his wife, Marna, have three kids – Joel, Amy and John.',55,'<p>Tad and Mike work together to oversee the office staff, and to make sure that things are running smoothly.  Tad also serves as a point of contact for our missionaries, which is a great fit, given his years of experience on the mission-field.  He and his wife, Marna, have three kids – Joel, Amy and John.</p>\n'),
 	(176,12572,NULL,NULL,NULL,NULL,0,'\n'),
 	(177,12573,NULL,NULL,NULL,NULL,0,'\n'),
 	(178,12574,NULL,NULL,NULL,NULL,0,'\n'),
@@ -39443,6 +39698,7 @@ VALUES
 	(192,12587,NULL,NULL,NULL,NULL,0,'\n'),
 	(193,12588,NULL,NULL,NULL,NULL,0,'\n'),
 	(244,12653,NULL,NULL,NULL,NULL,0,'\n'),
+	(371,12559,NULL,'Bryn is an assisting pastor who helps to oversee the operations of our fellowship.  He also coordinates a variety of pastoral ministries which include motocross, missions trips, special events and men’s ministry. He and Jessica have three kids – Liam, Mad',NULL,'Bryn is an assisting pastor who helps to oversee the operations of our fellowship.  He also coordinates a variety of pastoral ministries which include motocross, missions trips, special events and men’s ministry. He and Jessica have three kids – Liam, Madison, and Elijah.',42,'<p>Bryn is an assisting pastor who helps to oversee the operations of our fellowship.  He also coordinates a variety of pastoral ministries which include motocross, missions trips, special events and men’s ministry. He and Jessica have three kids – Liam, Madison, and Elijah.</p>\n'),
 	(247,12748,NULL,NULL,NULL,NULL,0,'\n'),
 	(248,12752,NULL,NULL,NULL,NULL,0,'\n'),
 	(252,12812,NULL,NULL,NULL,NULL,0,'\n'),
@@ -39450,9 +39706,13 @@ VALUES
 	(280,12822,NULL,NULL,NULL,NULL,0,'\n'),
 	(282,12830,NULL,NULL,NULL,NULL,0,'\n'),
 	(286,12911,NULL,NULL,NULL,NULL,0,'\n'),
-	(317,12972,NULL,'Stacey is our accountant.',NULL,'Stacey is our accountant.',4,'<p>Stacey is our accountant.</p>\n'),
 	(290,12922,NULL,NULL,NULL,NULL,0,'\n'),
-	(291,12923,NULL,NULL,NULL,NULL,0,'\n');
+	(291,12923,NULL,NULL,NULL,NULL,0,'\n'),
+	(360,12550,NULL,'Amy helps with event planning and the organization of church trips and outings.  She also works with various members of the pastoral staff to undertake special projects as they arise.  The rest of her time is spent meeting with ladies in the fellowship fo',NULL,'Amy helps with event planning and the organization of church trips and outings.  She also works with various members of the pastoral staff to undertake special projects as they arise.  The rest of her time is spent meeting with ladies in the fellowship for prayer and Bible study.',48,'<p>Amy helps with event planning and the organization of church trips and outings.  She also works with various members of the pastoral staff to undertake special projects as they arise.  The rest of her time is spent meeting with ladies in the fellowship for prayer and Bible study.</p>\n'),
+	(367,12546,NULL,'Bryan and Jen work together with James in our Children’s Ministry.  In addition to teaching the grade school class, Bryan helps ensure that our teachers and helpers have the support they need to make classes fun and fruitful.  He and Jen were recently mar',NULL,'Bryan and Jen work together with James in our Children’s Ministry.  In addition to teaching the grade school class, Bryan helps ensure that our teachers and helpers have the support they need to make classes fun and fruitful.  He and Jen were recently married and make a great ministry duo!',50,'<p>Bryan and Jen work together with James in our Children’s Ministry.  In addition to teaching the grade school class, Bryan helps ensure that our teachers and helpers have the support they need to make classes fun and fruitful.  He and Jen were recently married and make a great ministry duo!</p>\n'),
+	(391,12972,NULL,'Stacey is our bookkeeper. She assists Jeff Young by carrying out administrative duties related to business and finance, as well as providing general office support throughout the week.  Stacey is a tremendous help to the staff with regard to the accountin',NULL,'Stacey is our bookkeeper. She assists Jeff Young by carrying out administrative duties related to business and finance, as well as providing general office support throughout the week.  Stacey is a tremendous help to the staff with regard to the accounting end of ministries and events.',46,'<p>Stacey is our bookkeeper. She assists Jeff Young by carrying out administrative duties related to business and finance, as well as providing general office support throughout the week.  Stacey is a tremendous help to the staff with regard to the accounting end of ministries and events.</p>\n'),
+	(395,13109,NULL,'Rachel is an administrative assistant.  If you visit the office, chances are it will be Rachel’s smiling face that greets you.  When she isn’t helping the staff or chasing grade school kids, you can find her working with the high schoolers on Thursday nig',NULL,'Rachel is an administrative assistant.  If you visit the office, chances are it will be Rachel’s smiling face that greets you.  When she isn’t helping the staff or chasing grade school kids, you can find her working with the high schoolers on Thursday nights.',44,'<p>Rachel is an administrative assistant.  If you visit the office, chances are it will be Rachel’s smiling face that greets you.  When she isn’t helping the staff or chasing grade school kids, you can find her working with the high schoolers on Thursday nights.</p>\n'),
+	(388,13110,NULL,'Amy is our Lead Wedding Coordinator.  She works with a team of wonderful coordinators who help couples as they prepare for marriage.  This includes pre-marital counseling with our pastors, along with assistance in the planning of their wedding ceremonies.',NULL,'Amy is our Lead Wedding Coordinator.  She works with a team of wonderful coordinators who help couples as they prepare for marriage.  This includes pre-marital counseling with our pastors, along with assistance in the planning of their wedding ceremonies.  Amy and her husband, Chris, have three boys – Evan, Caden and Brennan.',51,'<p>Amy is our Lead Wedding Coordinator.  She works with a team of wonderful coordinators who help couples as they prepare for marriage.  This includes pre-marital counseling with our pastors, along with assistance in the planning of their wedding ceremonies.  Amy and her husband, Chris, have three boys – Evan, Caden and Brennan.</p>\n');
 
 /*!40000 ALTER TABLE `sym_entries_data_54` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -39478,9 +39738,9 @@ LOCK TABLES `sym_entries_data_55` WRITE;
 INSERT INTO `sym_entries_data_55` (`id`, `entry_id`, `relation_id`)
 VALUES
 	(311,12539,12628),
-	(364,12972,103),
-	(382,106,103),
-	(371,105,103),
+	(469,12972,103),
+	(459,106,103),
+	(434,105,103),
 	(88,7749,83),
 	(290,12498,12491),
 	(293,12499,12491),
@@ -39499,7 +39759,7 @@ VALUES
 	(298,12512,12623),
 	(247,12513,74),
 	(299,12515,12624),
-	(409,12516,103),
+	(453,12516,103),
 	(255,12517,12624),
 	(310,12518,12624),
 	(257,12519,12624),
@@ -39516,48 +39776,48 @@ VALUES
 	(272,12530,12627),
 	(273,12531,12627),
 	(305,12532,12627),
-	(416,12533,103),
-	(415,12557,103),
+	(436,12533,103),
+	(476,12557,103),
 	(81,12535,74),
 	(130,12536,74),
 	(306,12537,74),
-	(392,12538,103),
-	(391,12538,12628),
+	(471,12538,103),
+	(470,12538,12628),
 	(140,12540,74),
 	(307,12541,74),
 	(142,12542,74),
 	(143,12543,74),
 	(144,12544,74),
 	(145,12545,74),
-	(374,12546,103),
-	(373,12546,74),
+	(438,12546,103),
+	(437,12546,74),
 	(308,12547,74),
-	(388,12548,103),
-	(417,12549,103),
-	(369,12550,103),
-	(377,12551,103),
-	(383,12552,103),
+	(420,12548,103),
+	(421,12549,103),
+	(428,12550,103),
+	(427,12551,103),
+	(433,12552,103),
 	(389,12553,103),
 	(264,12599,12624),
-	(372,12555,103),
+	(435,12555,103),
 	(405,12556,103),
 	(404,12556,30),
-	(414,12557,74),
-	(378,12558,103),
-	(401,12559,103),
-	(400,12559,25),
-	(390,12560,103),
+	(475,12557,74),
+	(478,12558,NULL),
+	(446,12559,103),
+	(445,12559,25),
+	(447,12560,103),
 	(381,12561,103),
 	(380,12561,27),
 	(379,12561,28),
-	(387,12562,103),
-	(386,12562,26),
-	(394,12563,103),
-	(396,12564,103),
-	(395,12564,29),
-	(408,12516,12624),
-	(398,12565,103),
-	(397,12565,85),
+	(449,12562,103),
+	(448,12562,26),
+	(430,12563,103),
+	(423,12564,103),
+	(422,12564,29),
+	(452,12516,12624),
+	(451,12565,103),
+	(450,12565,85),
 	(201,12572,NULL),
 	(202,12573,NULL),
 	(203,12574,NULL),
@@ -39577,10 +39837,11 @@ VALUES
 	(218,12588,NULL),
 	(302,12600,12624),
 	(262,12601,12624),
-	(393,12563,74),
+	(429,12563,74),
 	(248,12513,12624),
 	(252,12514,12624),
 	(275,12653,NULL),
+	(466,13110,103),
 	(278,12748,NULL),
 	(279,12752,NULL),
 	(285,12812,NULL),
@@ -39588,6 +39849,7 @@ VALUES
 	(313,12822,81),
 	(315,12830,NULL),
 	(319,12911,NULL),
+	(474,13109,103),
 	(323,12922,NULL),
 	(324,12923,81);
 
@@ -39642,7 +39904,7 @@ VALUES
 	(101,29,'no'),
 	(98,26,'no'),
 	(136,12491,'no'),
-	(171,21,'no'),
+	(172,21,'no'),
 	(149,20,'no'),
 	(99,31,'no'),
 	(155,55,'no'),
@@ -39660,7 +39922,7 @@ VALUES
 	(126,88,'no'),
 	(170,99,'no'),
 	(157,104,'no'),
-	(158,100,'no'),
+	(173,100,'no'),
 	(159,101,'no'),
 	(161,102,'no'),
 	(144,7761,'no'),
@@ -39696,8 +39958,8 @@ LOCK TABLES `sym_entries_data_58` WRITE;
 
 INSERT INTO `sym_entries_data_58` (`id`, `entry_id`, `value`)
 VALUES
-	(326,106,1),
-	(319,105,2),
+	(378,106,1),
+	(361,105,2),
 	(78,7749,3),
 	(254,12498,4),
 	(257,12499,5),
@@ -39717,7 +39979,7 @@ VALUES
 	(216,12513,19),
 	(219,12514,20),
 	(263,12515,21),
-	(342,12516,22),
+	(372,12516,22),
 	(221,12517,23),
 	(274,12518,24),
 	(223,12519,25),
@@ -39734,11 +39996,11 @@ VALUES
 	(238,12530,36),
 	(239,12531,37),
 	(269,12532,38),
-	(348,12533,39),
+	(363,12533,39),
 	(73,12535,41),
 	(118,12536,42),
 	(270,12537,43),
-	(333,12538,44),
+	(389,12538,44),
 	(275,12539,45),
 	(126,12540,46),
 	(271,12541,47),
@@ -39746,26 +40008,26 @@ VALUES
 	(129,12543,49),
 	(130,12544,50),
 	(131,12545,51),
-	(321,12546,52),
+	(364,12546,52),
 	(272,12547,53),
-	(330,12548,54),
-	(349,12549,55),
-	(317,12550,56),
-	(323,12551,57),
-	(327,12552,58),
+	(351,12548,54),
+	(352,12549,55),
+	(357,12550,56),
+	(356,12551,57),
+	(360,12552,58),
 	(331,12553,59),
 	(230,12599,89),
-	(320,12555,61),
+	(362,12555,61),
 	(340,12556,62),
-	(347,12557,63),
-	(324,12558,64),
-	(338,12559,65),
-	(332,12560,66),
+	(393,12557,63),
+	(395,12558,64),
+	(368,12559,65),
+	(369,12560,66),
 	(325,12561,67),
-	(329,12562,68),
-	(334,12563,69),
-	(335,12564,70),
-	(336,12565,71),
+	(370,12562,68),
+	(358,12563,69),
+	(353,12564,70),
+	(371,12565,71),
 	(173,12572,72),
 	(174,12573,73),
 	(175,12574,74),
@@ -39786,6 +40048,7 @@ VALUES
 	(266,12600,90),
 	(228,12601,91),
 	(241,12653,92),
+	(385,13110,112),
 	(244,12748,95),
 	(245,12752,96),
 	(249,12812,97),
@@ -39793,7 +40056,8 @@ VALUES
 	(277,12822,99),
 	(279,12830,100),
 	(283,12911,103),
-	(314,12972,110),
+	(388,12972,110),
+	(392,13109,111),
 	(287,12922,107),
 	(288,12923,108);
 
@@ -39888,8 +40152,8 @@ LOCK TABLES `sym_entries_data_7` WRITE;
 
 INSERT INTO `sym_entries_data_7` (`id`, `entry_id`, `activated`, `timestamp`, `code`)
 VALUES
-	(322,105,'yes','2012-05-09 20:54:43',NULL),
-	(329,106,'yes','2012-05-09 20:56:47',NULL),
+	(364,105,'yes','2012-05-15 14:28:43',NULL),
+	(381,106,'yes','2012-05-15 14:44:17',NULL),
 	(81,7749,'yes','2012-01-12 11:56:04',NULL),
 	(257,12498,'yes','2012-01-26 14:48:42',NULL),
 	(260,12499,'yes','2012-01-26 15:01:08',NULL),
@@ -39909,7 +40173,7 @@ VALUES
 	(219,12513,'yes','2012-01-13 16:45:15',NULL),
 	(222,12514,'yes','2012-01-13 16:45:46',NULL),
 	(266,12515,'yes','2012-01-26 15:14:28',NULL),
-	(345,12516,'yes','2012-05-10 14:05:35',NULL),
+	(375,12516,'yes','2012-05-15 14:40:16',NULL),
 	(224,12517,'yes','2012-01-13 16:47:55',NULL),
 	(277,12518,'yes','2012-01-26 15:40:20',NULL),
 	(226,12519,'yes','2012-01-13 16:49:14',NULL),
@@ -39926,11 +40190,11 @@ VALUES
 	(241,12530,'yes','2012-01-13 17:01:33',NULL),
 	(242,12531,'yes','2012-01-13 17:01:49',NULL),
 	(272,12532,'yes','2012-01-26 15:24:30',NULL),
-	(351,12533,'yes','2012-05-10 15:22:18',NULL),
+	(366,12533,'yes','2012-05-15 14:29:54',NULL),
 	(76,12535,'yes','2012-01-12 11:44:13',NULL),
 	(121,12536,'yes','2012-01-12 12:18:02',NULL),
 	(273,12537,'yes','2012-01-26 15:27:42',NULL),
-	(336,12538,'yes','2012-05-09 20:59:28',NULL),
+	(392,12538,'yes','2012-05-15 16:35:11',NULL),
 	(278,12539,'yes','2012-01-26 15:50:39',NULL),
 	(129,12540,'yes','2012-01-12 12:22:56',NULL),
 	(274,12541,'yes','2012-01-26 15:30:23',NULL),
@@ -39938,26 +40202,26 @@ VALUES
 	(132,12543,'yes','2012-01-12 12:25:07',NULL),
 	(133,12544,'yes','2012-01-12 12:25:31',NULL),
 	(134,12545,'yes','2012-01-12 12:26:24',NULL),
-	(324,12546,'yes','2012-05-09 20:55:25',NULL),
+	(367,12546,'yes','2012-05-15 14:30:57',NULL),
 	(275,12547,'yes','2012-01-26 15:32:05',NULL),
-	(333,12548,'yes','2012-05-09 20:58:24',NULL),
-	(352,12549,'yes','2012-05-10 15:22:50',NULL),
-	(320,12550,'yes','2012-05-09 20:53:22',NULL),
-	(326,12551,'yes','2012-05-09 20:56:12',NULL),
-	(330,12552,'yes','2012-05-09 20:57:02',NULL),
+	(354,12548,'yes','2012-05-15 12:51:27',NULL),
+	(355,12549,'yes','2012-05-15 12:52:23',NULL),
+	(360,12550,'yes','2012-05-15 14:22:55',NULL),
+	(359,12551,'yes','2012-05-15 14:20:53',NULL),
+	(363,12552,'yes','2012-05-15 14:27:58',NULL),
 	(334,12553,'yes','2012-05-09 20:58:37',NULL),
 	(233,12599,'yes','2012-01-13 16:54:12',NULL),
-	(323,12555,'yes','2012-05-09 20:55:11',NULL),
+	(365,12555,'yes','2012-05-15 14:29:27',NULL),
 	(343,12556,'yes','2012-05-10 14:04:52',NULL),
-	(350,12557,'yes','2012-05-10 14:26:37',NULL),
-	(327,12558,'yes','2012-05-09 20:56:27',NULL),
-	(341,12559,'yes','2012-05-10 14:02:39',NULL),
-	(335,12560,'yes','2012-05-09 20:59:10',NULL),
+	(396,12557,'yes','2012-05-16 09:49:04',NULL),
+	(398,12558,'yes','2012-05-16 10:42:35',NULL),
+	(371,12559,'yes','2012-05-15 14:37:43',NULL),
+	(372,12560,'yes','2012-05-15 14:38:23',NULL),
 	(328,12561,'yes','2012-05-09 20:56:37',NULL),
-	(332,12562,'yes','2012-05-09 20:58:04',NULL),
-	(337,12563,'yes','2012-05-09 20:59:38',NULL),
-	(338,12564,'yes','2012-05-09 20:59:51',NULL),
-	(339,12565,'yes','2012-05-09 21:00:08',NULL),
+	(373,12562,'yes','2012-05-15 14:39:20',NULL),
+	(361,12563,'yes','2012-05-15 14:26:20',NULL),
+	(356,12564,'yes','2012-05-15 12:53:30',NULL),
+	(374,12565,'yes','2012-05-15 14:39:50',NULL),
 	(176,12572,'yes','2012-01-12 14:51:17',NULL),
 	(177,12573,'yes','2012-01-12 14:53:35',NULL),
 	(178,12574,'yes','2012-01-12 14:54:59',NULL),
@@ -39978,14 +40242,16 @@ VALUES
 	(269,12600,'yes','2012-01-26 15:21:07',NULL),
 	(231,12601,'yes','2012-01-13 16:53:52',NULL),
 	(244,12653,'yes','2012-01-17 12:03:16',NULL),
+	(395,13109,'yes','2012-05-15 16:42:42',NULL),
 	(247,12748,'yes','2012-01-19 16:50:53',NULL),
 	(248,12752,'yes','2012-01-19 16:52:39',NULL),
 	(252,12812,'yes','2012-01-25 12:51:31',NULL),
 	(253,12813,'yes','2012-01-25 12:55:49',NULL),
 	(280,12822,'yes','2012-01-30 11:34:27',NULL),
 	(282,12830,'yes','2012-02-06 10:21:56',NULL),
+	(388,13110,'yes','2012-05-15 16:32:34',NULL),
 	(286,12911,'yes','2012-03-21 07:37:06',NULL),
-	(317,12972,'yes','2012-05-09 20:46:52',NULL),
+	(391,12972,'yes','2012-05-15 16:33:59',NULL),
 	(290,12922,'yes','2012-03-29 14:14:58',NULL),
 	(291,12923,'yes','2012-03-29 15:28:35',NULL);
 
@@ -40094,7 +40360,7 @@ VALUES
 	(23,12945,'full-width','Full Width','full-width','Full Width',2,'Full Width'),
 	(26,12971,'staff','Staff','staff','Staff',1,'Staff'),
 	(27,12976,'the-good-news','The Good News','the-good-news','The Good News',3,'The Good News'),
-	(30,13077,'teachings','Teachings','teachings','Teachings',1,'Teachings');
+	(29,13078,'teachings','Teachings','teachings','Teachings',1,'Teachings');
 
 /*!40000 ALTER TABLE `sym_entries_data_73` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40134,7 +40400,7 @@ VALUES
 	(41,12971,111),
 	(43,12971,112),
 	(44,12976,108),
-	(47,13077,13078);
+	(46,13078,13077);
 
 /*!40000 ALTER TABLE `sym_entries_data_74` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40166,7 +40432,7 @@ VALUES
 	(20,12945,NULL),
 	(23,12971,NULL),
 	(24,12976,NULL),
-	(27,13077,NULL);
+	(26,13078,NULL);
 
 /*!40000 ALTER TABLE `sym_entries_data_75` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40204,7 +40470,7 @@ VALUES
 	(50,12945,NULL),
 	(53,12971,NULL),
 	(54,12976,NULL),
-	(57,13077,NULL);
+	(56,13078,NULL);
 
 /*!40000 ALTER TABLE `sym_entries_data_76` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40508,7 +40774,14 @@ VALUES
 	(180,'Hidden','hidden','checkbox',21,'no',10,'sidebar','yes'),
 	(181,'Childcare','childcare','checkbox',21,'no',11,'sidebar','yes'),
 	(182,'Type','type','subsectionmanager',21,'no',12,'main','yes'),
-	(192,'Featured','featured','checkbox',13,'no',14,'sidebar','yes');
+	(192,'Featured','featured','checkbox',13,'no',14,'sidebar','yes'),
+	(194,'Date','date','datetime',24,'no',0,'sidebar','yes'),
+	(195,'ID','id','input',24,'no',1,'main','yes'),
+	(196,'User','user','input',24,'no',2,'main','yes'),
+	(197,'User formatted','user-formatted','input',24,'no',3,'main','yes'),
+	(198,'Content','content','textarea',24,'no',4,'main','no'),
+	(199,'Name','name','input',25,'no',0,'main','yes'),
+	(200,'Content','content','textarea',25,'no',1,'main','no');
 
 /*!40000 ALTER TABLE `sym_fields` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40610,7 +40883,8 @@ VALUES
 	(124,12,0,0,0),
 	(123,35,1,1,1),
 	(127,109,1,1,1),
-	(125,185,1,1,1);
+	(125,185,1,1,1),
+	(131,194,1,1,1);
 
 /*!40000 ALTER TABLE `sym_fields_datetime` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -40680,6 +40954,10 @@ VALUES
 	(745,129,NULL),
 	(693,117,'/^-?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$/i'),
 	(694,53,'/^-?(?:\\d+(?:\\.\\d+)?|\\.\\d+)$/i'),
+	(768,199,NULL),
+	(771,197,NULL),
+	(770,196,NULL),
+	(769,195,NULL),
 	(749,190,NULL),
 	(748,188,NULL),
 	(746,183,NULL),
@@ -40982,7 +41260,8 @@ VALUES
 	(423,182,1,1,1,0,1,'subsectionmanager'),
 	(426,185,1,1,1,0,0,'datetime'),
 	(427,189,1,1,1,0,1,'subsectionmanager'),
-	(435,191,1,1,1,0,1,'subsectionmanager');
+	(435,191,1,1,1,0,1,'subsectionmanager'),
+	(439,194,1,1,1,0,0,'datetime');
 
 /*!40000 ALTER TABLE `sym_fields_stage` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -41768,7 +42047,9 @@ INSERT INTO `sym_fields_textarea` (`id`, `field_id`, `formatter`, `size`)
 VALUES
 	(43,16,NULL,15),
 	(44,184,NULL,15),
-	(45,187,NULL,15);
+	(45,187,NULL,15),
+	(52,198,NULL,15),
+	(51,200,NULL,15);
 
 /*!40000 ALTER TABLE `sym_fields_textarea` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -41941,7 +42222,7 @@ LOCK TABLES `sym_pages` WRITE;
 
 INSERT INTO `sym_pages` (`id`, `parent`, `title`, `handle`, `path`, `params`, `data_sources`, `events`, `sortorder`)
 VALUES
-	(1,NULL,'Home','home',NULL,'pt1/pt2/pt3/pt4/pt5/pt6/pt7/pt8/pt9/pt10','downloads_entries_by_tag,events_all_entries_filtered,events_all_entries_past_filtered,events_entries_by_tag,events_entries_by_tag_related,events_entries_past_by_tag_related,events_entry_by_id,images_entries_by_tag,layouts_default,layouts_ds_tags_entries_by_tag,locations_ds_events_entries_by_tag,locations_entries_by_tag,members_entries_by_tag,seo_all_entries,tags_all_entries,tags_entries_by_tag,teachings_all_entries_filtered,teachings_featured_filtered,text_entries_by_tag,verses_entries_by_tag,xml_apibibliacom,xml_books_of_the_bible,xml_ustreamcom',NULL,4);
+	(1,NULL,'Home','home',NULL,'pt1/pt2/pt3/pt4/pt5/pt6/pt7/pt8/pt9/pt10','downloads_entries_by_tag,events_all_entries_filtered,events_all_entries_past_filtered,events_entries_by_tag,events_entries_by_tag_related,events_entries_past_by_tag_related,events_entry_by_id,images_entries_by_tag,layouts_default,layouts_ds_tags_entries_by_tag,locations_ds_events_entries_by_tag,locations_entries_by_tag,members_entries_by_tag,seo_all_entries,tags_all_entries,tags_entries_by_tag,teachings_all_entries_filtered,teachings_featured_filtered,text_entries_by_tag,twitter,verses_entries_by_tag,xml_apibibliacom,xml_books_of_the_bible',NULL,4);
 
 /*!40000 ALTER TABLE `sym_pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -41965,7 +42246,7 @@ LOCK TABLES `sym_pages_types` WRITE;
 
 INSERT INTO `sym_pages_types` (`id`, `page_id`, `type`)
 VALUES
-	(55,1,'index');
+	(57,1,'index');
 
 /*!40000 ALTER TABLE `sym_pages_types` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -41994,24 +42275,26 @@ LOCK TABLES `sym_sections` WRITE;
 
 INSERT INTO `sym_sections` (`id`, `name`, `handle`, `sortorder`, `entry_order`, `entry_order_direction`, `hidden`, `navigation_group`)
 VALUES
-	(1,'Members','members',12,'2','asc','no','Members'),
-	(2,'SEO','seo',17,NULL,'asc','no','Structure'),
+	(1,'Members','members',14,'4','asc','no','Members'),
+	(2,'SEO','seo',19,NULL,'asc','no','Structure'),
 	(3,'Tags','tags',4,'23','asc','no','Content'),
 	(5,'Locations','locations',3,'30','asc','no','Content'),
-	(4,'Verses','verses',6,'24','asc','no','Content'),
-	(6,'Events','events',7,'35','asc','no','Events'),
+	(4,'Verses','verses',7,'24','asc','no','Content'),
+	(6,'Events','events',9,'35','asc','no','Events'),
 	(7,'Text','text',5,NULL,'asc','no','Content'),
 	(8,'Images','images',2,NULL,'asc','no','Content'),
-	(9,'Sections','sections',16,'115','asc','no','Structure'),
+	(9,'Sections','sections',18,'115','asc','no','Structure'),
 	(10,'Downloads','downloads',1,NULL,'asc','no','Content'),
-	(11,'Layouts','layouts',15,'78','desc','no','Structure'),
-	(13,'Teachings','teachings',10,'109','desc','no','Teachings'),
-	(19,'Events: Types','events-types',9,NULL,'asc','no','Events'),
-	(15,'Teachings: Tags','teachings-tags',11,'127','asc','no','Teachings'),
-	(17,'Members: Roles: Types','members-roles-types',14,'132','asc','no','Members'),
-	(18,'Members: Roles','members-roles',13,NULL,'asc','no','Members'),
-	(22,'Videos','videos',18,NULL,'asc','no','Content'),
-	(21,'Events: Recurring','events-recurring',8,NULL,'asc','no','Events');
+	(11,'Layouts','layouts',17,'78','desc','no','Structure'),
+	(13,'Teachings','teachings',12,'109','desc','no','Teachings'),
+	(19,'Events: Types','events-types',11,NULL,'asc','no','Events'),
+	(15,'Teachings: Tags','teachings-tags',13,'127','asc','no','Teachings'),
+	(17,'Members: Roles: Types','members-roles-types',16,'132','asc','no','Members'),
+	(18,'Members: Roles','members-roles',15,NULL,'asc','no','Members'),
+	(22,'Videos','videos',8,NULL,'asc','no','Content'),
+	(21,'Events: Recurring','events-recurring',10,NULL,'asc','no','Events'),
+	(24,'Twitter','twitter',6,NULL,'asc','no','Content'),
+	(25,'Status','status',20,NULL,'asc','no','Structure');
 
 /*!40000 ALTER TABLE `sym_sections` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -42095,24 +42378,225 @@ INSERT INTO `sym_sessions` (`session`, `session_expires`, `session_data`)
 VALUES
 	('moel42602qosf92niq8qma7f00',1336888901,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('juhgr1s8in5uuns172oecnngm6',1336548639,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('aouh203glk57clmu3fuf9f8sg1',1336625234,'sym-|a:2:{s:8:\"username\";s:8:\"aelliott\";s:4:\"pass\";s:40:\"f2bffc35f7830222bbcb2bbfcaa050aa6cbb349b\";}'),
+	('aouh203glk57clmu3fuf9f8sg1',1337206533,'sym-|a:2:{s:8:\"username\";s:8:\"aelliott\";s:4:\"pass\";s:40:\"f2bffc35f7830222bbcb2bbfcaa050aa6cbb349b\";}sym-members|a:0:{}'),
 	('p7fle2eipee1u9sbg07jf6q311',1336689026,'sym-|a:2:{s:8:\"username\";s:7:\"klinder\";s:4:\"pass\";s:40:\"70e2b145fd7eb0f8cce64483fdb28dc9905933c5\";}sym-members|a:0:{}'),
 	('o58e4skjuc5t8prc3h44jhvuu7',1336963369,'sym-members|a:0:{}sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
 	('9bjqnrsdrs5t01c84ptdcpldm2',1336963898,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('h9e83apsv923fk58jd5maucr01',1335892575,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('et7eh7ruu82h2ebh49o3jen5r1',1337202062,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('5160qke56q7dn2nm24s488i9j4',1337206166,'sym-members|a:0:{}sym-|a:0:{}'),
 	('la84k79d3mh5tussk1ouivuqn7',1336961894,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('ioq4mf791pavijnacps2s8krh3',1335891239,'sym-|a:2:{s:8:\"username\";s:8:\"lallphin\";s:4:\"pass\";s:40:\"b5fdfaf4bbdecbbb9605ba04feefd77bfb78f440\";}sym-members|a:0:{}'),
-	('gh9ngvpomngcb7ve9tlcrhdqe3',1336755317,'sym-|a:2:{s:8:\"username\";s:7:\"jsimcoe\";s:4:\"pass\";s:40:\"7b10dfd8ecfb74eafd8778364f883ce41cb756f5\";}sym-members|a:0:{}'),
-	('8cs8j3g91oueptnqkphl2rdt62',1336676003,'sym-|a:2:{s:8:\"username\";s:6:\"dfrost\";s:4:\"pass\";s:40:\"39abc98f9c11b7a1d8d2529cf39bb2090c9a8393\";}sym-members|a:0:{}'),
+	('gh9ngvpomngcb7ve9tlcrhdqe3',1337008396,'sym-|a:2:{s:8:\"username\";s:7:\"jsimcoe\";s:4:\"pass\";s:40:\"7b10dfd8ecfb74eafd8778364f883ce41cb756f5\";}sym-members|a:0:{}'),
+	('oo7j53qlhtdnlb6onsp05h5dp0',1337199629,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('8cs8j3g91oueptnqkphl2rdt62',1337194871,'sym-|a:2:{s:8:\"username\";s:6:\"dfrost\";s:4:\"pass\";s:40:\"39abc98f9c11b7a1d8d2529cf39bb2090c9a8393\";}sym-members|a:0:{}'),
 	('s9sksuiuemuf12415ljmdm8ad6',1336963971,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('kftst8ov3up1m1gbdkrcpsl300',1336964072,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('q8stfbv4ve5d4rdonkf2kmcp95',1336964110,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('k1198ht5s2tj69htbi481264l3',1336964182,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('h3kmto1jaf5hmeprtf3hf388p4',1336965130,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('h3kmto1jaf5hmeprtf3hf388p4',1337203987,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('u47f87qjlu8ovkgh07n8290hb5',1336964995,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('l0qcd4vnl83lnp1focte8m3137',1336968058,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
 	('tmv73q01tt0fcvre9s6fckkfh1',1336978561,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
-	('d618b578984de572cb7df2cedfe13cea',1337049663,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}');
+	('4dkb3pg2vovjqov7let4suh4p5',1336979454,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('l976tgo6p35t30ult5ehlhoh03',1337190891,'sym-members|a:0:{}sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8pasulu7balo6r1ea3hrqbst16',1337013373,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9ps00r6fc5d8hlupp5nj6vbof7',1337205309,'sym-|a:2:{s:8:\"username\";s:6:\"dfrost\";s:4:\"pass\";s:40:\"39abc98f9c11b7a1d8d2529cf39bb2090c9a8393\";}sym-members|a:0:{}'),
+	('f8dqh9serh290e4nrtshfblda5',1337198186,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('k4huee5sti0m2mu87hhg1ut9b7',1337198344,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('bidfdouk326b9ifmosprhojpd7',1337200220,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('1li0orobpovls1da62ionh5gk2',1337200124,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('irgha0n301jjvlfiisocbc6737',1337200165,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('pdh1319fgsub0p6qag97c9f4l1',1337202122,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('dnshfd4ioh09l3m4vocu1d2hs0',1337202687,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('07otsicgihfhks4qqb0h6uqap3',1337202901,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('45d5k98v0k406bb6iua6metn73',1337202961,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('gq8b55lgl3ea13oai715o2hsi6',1337203021,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('s9i06j4u17gi84b20pmcusho85',1337203082,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('eh5uchb2asv95uo9ufl5ar7mg1',1337203083,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('meljpm2i9sl618ckp7lvl032m3',1337203142,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('tun1ok4a87dp23len40061t5r3',1337203142,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('l22kn1o49o27gv7tfugq53lav2',1337203202,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('er5rp1vt89rcbkohjlkqipe222',1337203203,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('t6br5eh7ckl526cfsh7ulcr604',1337203262,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('08a690dmconfeo8vh4tdkhqbb6',1337203263,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8cj996rv64iptgq6kovooerip6',1337203322,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('q775i5hf1cv5hd8mb68c4iid82',1337203322,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cn0r7fu0pj5tekl5fgsfo3tnj5',1337203381,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9apb4p8el3ol7v8bdtv6d4va11',1337203382,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ov85jdjgetm4ph5v0sqlhd8nb5',1337203442,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cmftifl4n10isuejtt3cs4c6o2',1337203443,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('i5lpapgd2vsi5a1lr7l8r3eku3',1337203502,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('kc67iu30p0jjtvsqi4antlfph4',1337203503,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8ptfujepm9ri7ppk9h9706lsp1',1337203562,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2uggibh18hq005a1076k6lc2p2',1337203562,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('kt8m7rtaqh6140sogilkc6ha15',1337203621,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('d0f9qkdkvf2am5sl7pcfjcs193',1337203622,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('6ksnck90soe3fgiaaaml3bgsf0',1337203682,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('j8681jc4e01p5luhj4e3e9gu33',1337203682,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('dd44mji7a6g5r6v49osnhmjcs3',1337203741,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9fja7sgeegsatk8d19f6qsi5c7',1337203742,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ddin72obb0qk9lu76t14v9df12',1337203802,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('661183vt1ltbldr85ecfdergp6',1337203802,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cuoq82i50itemf4skf3ll3gv13',1337203862,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3hg6q6sl60q11mqck7f5ipuj43',1337203862,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('7gaggm3n69nd4e28butoisah66',1337203863,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('5l58hcr04r9u2huvff6i8at1a7',1337203921,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3blel8ns54ht047bmrjklg7ie6',1337203921,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('lg7lvcl0ba9acvt4aqemhbj5t5',1337203922,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('p1valjjm1i0c7nr32a7tnl4ln6',1337203982,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cn04c6t1c29rpnogpch0tfkbu1',1337203982,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('jmcd32a65rn35qb1be29jn75i2',1337203983,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ri2baunoe8t3bnn1pnvuu7crn1',1337204063,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}sym-members|a:0:{}'),
+	('46194iemlfdadub0n6fklt19v1',1337204041,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ns4kc2o5nie2m4bpdu4erh7m93',1337204042,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('vv4neodgjqr8c1aqief125ar94',1337204042,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('r8mb7fhef90l2c5v5ur0ggcji4',1337204102,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('uein49vaqi0oue35cjjthnvh94',1337204103,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('uf3464drvhq8j5dg14bp3orpp2',1337204103,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('sfklmvce0n7ho4le5i8fd2ovd0',1337204162,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('durkgjl6g2idd8m21a4sjcprh0',1337204162,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('99c2rmqu346bn6ftto7edph5n3',1337204163,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('uhdc895p9rb380vhb4id8hts92',1337204221,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('mlcltdh433188rm5t7oirm9673',1337204221,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8prtv9hsl61t2d230b87tjp5r1',1337204222,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('5dqbftik0rlphauk5m2n4q19p4',1337204281,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('7ibo0r9ol44a5nmis4lpft46t7',1337204281,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ov48d7piqbul033r6j6mclc9t6',1337204282,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('q8n4ghm6up7r7mukoc9g5mjgp4',1337204341,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('314kuuojn844s03bpm34gv8oc7',1337204341,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ihkbkir23e88aepuf8mm4f0d80',1337204342,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('n2aqee7gtab4ea27upudit6a73',1337204401,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cmqudsaeohakou52ane3jn4go4',1337204402,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('b58kpn4r4svqn6vp6e9hiea707',1337204403,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('378ll8s6sfa2he3ksku6diqph6',1337204461,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('sctmd5c7hgu4mao8amrpa1ram5',1337204462,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('kpa5u3g04pt7jm9pbu53eoh991',1337204463,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('lmqk948iiu9uq6h1s702avmu50',1337204521,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('d9v60l1s182t604quc9t6h9f95',1337204521,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qmisgn8q5j1hqkpauosmrofva7',1337204523,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qiq6p1o4dbpe11688ok0el4qa0',1337204581,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('b9idsgup7n5bbs54jc5dlo99b1',1337204582,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('piootrgf4b50gh1ul4hmrbj3l2',1337204583,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('hrkemac3ecm4l1nnps6b6ut187',1337204641,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cgf87rj8rffk6kiiautik32a03',1337204641,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('rknavncv6e4bfk71c5ljps6tv6',1337204643,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('m468vrf7mur3s8dlep7huvfqo5',1337204701,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3ljjhuo08gtrp5a3ab6cv276r2',1337204701,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('vrdrahv95ahpjhpb8tf97g1f06',1337204702,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('sdbpvpicn1c9qe4knca4bho9q5',1337204761,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('q2gh7m0jegunk4bd47c1ko4c77',1337204761,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cdhstjp5lgmapkur0ojr99r8k3',1337204762,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('hnkq6pm1lvn8kdh4ok20qpcvf2',1337204821,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ubq5bnepo8tj6h7n7mt253map2',1337204821,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cfstr1476lp6cmmsnrlf0lldd0',1337204822,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('1jum4887t7rhi40ejhqo6b7lh3',1337204882,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('c2tmtblps7e1t9vaukqkj6t6f6',1337204882,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('u0j78gg0sk42cno4r6h7htf0d0',1337204882,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('v6s50al0r90e6a8adijb0g3k47',1337204941,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('hluuoqobtki5rj3han5ei4oir0',1337204941,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('tg7ljf00pj9mfivp7rnvhqk472',1337204942,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('6eo0duhccjdqjs7hluludpah01',1337205001,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('28s653abas7tgm4okf5m6u7iq1',1337205002,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('67gm8itk10aj3q8clr4v6v1vl6',1337205002,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8bsmccmtqpmhad4eu40k0ao1b0',1337205061,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('luht386e9hvaapgc8qns8rauf4',1337205062,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ip6kq9rcccsj8fm0tail20aq50',1337205063,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('g1ufahl39fijrb2jmjpj2vrab3',1337205122,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('8u2ke8kq15khmvp2afpuunbuu7',1337205122,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('it2f7eoma8qmm5qke36hv43jo2',1337205123,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3nn0nvgnvtcis4194heolr5r20',1337205181,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('snic8ssklhpmnm0v9vlpkb7h25',1337205181,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('acc2furpjuqpc43u5emddsgm75',1337205182,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qblucs6mhveuhuo677ft4man26',1337205242,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('dma26tadsia8ikb7ibv9gktcu5',1337205242,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('c3vi98l9jpgv8fp88nb5g5ata6',1337205243,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('44j7pk15p3u1t52ino0f9q4nu2',1337205302,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('h7b40j8as79h680cvmnfcmkqa7',1337205302,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2791vuch70972gjqpmb7r67og6',1337205303,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('b6ub103ktebdrftfr6o86p7u13',1337205361,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cv1t5s8i4u72fo3m5ks0lqerq2',1337205362,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9j0n7rbk1imi3ogev13i25a5r6',1337205363,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('q8jrcbch002f52se49bduqg2d6',1337205421,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ioviqtutvjsv8oaa5u5gnakn71',1337205421,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('igvtiv6tmhjqb1e9da4ej62n50',1337205422,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('npjdrl8di1ut317h04ghirjbm2',1337205481,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('pim9upc0cc72mt4gomake8pqn1',1337205482,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cjr5ebr75t4df4qrs5rj35pl63',1337205483,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2o91i4ps27r4n2jaglcn82uhm1',1337205542,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('jg6r3b6tdc748cf3ogljsa11j3',1337205542,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ekgtbgse82ujdjnj6jp1qa9tg7',1337205543,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('attekrg2qkhlp6mhbmuv0mik76',1337205602,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('jn5tjfkb0u3gke4a4784ru93r7',1337205602,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('f8lve8gg9ft2qlicsrvt3pr7a5',1337205603,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('f8o4g9oob2a9t9r99u4ana4g06',1337205662,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('cc6bceinecb29vjilcdv3d3ns7',1337205662,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('j9ap78vas7o2a6r3anoc7q6sp1',1337205663,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('lhsbdlobla7gqtctest36pfmq5',1337205721,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('d11ipjfhk410tq5oc93gicla27',1337205721,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('57dhenjesqbj6fou3ofd222kp0',1337205722,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('tp383fsma27hcnuobpn540id77',1337205781,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('k3empv732iij1lsoamd55uf811',1337205782,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('hivsnik98tdjqj5vmhqokpran3',1337205783,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3p7nmstpj0fdt4jl8tmb7nt1g5',1337206333,'sym-|a:2:{s:8:\"username\";s:7:\"jmeador\";s:4:\"pass\";s:40:\"8024ecc2651265213db9704be4b9a38e6811fe59\";}sym-members|a:0:{}'),
+	('n1uk5usnhoeeuvjjq2s6gvboo2',1337205841,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ljbos04gl5lgtuja4mllnmc9e4',1337205841,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('l74td7jngumk7ujkatnif68oc5',1337205842,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('n4ej9m6v2hlhlo43cr9cd0qoi1',1337205901,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('psrpd9c8tcqs4usjag6vulik07',1337205901,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('1grg6udohtt7fuduep3v6i3tc4',1337205902,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('m9pgc7i3fm5t09ndnm4bo9sj54',1337205962,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('h33qjifbe6ggakpdjuomgdqt60',1337205962,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('81de5llmeeq2ucsupqi643n2m3',1337205963,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('b8ptst2sajvvgccn44p970sm35',1337206021,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('fdhmug5466b9v4sioc94m23tn3',1337206021,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ph2so9ecm8bin6vndfau49j7v2',1337206022,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('erss1ba9rd1kbsr1vnsfo2o582',1337206082,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('rgga98rq3nr9s243q85vjbnn92',1337206082,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('vb6nsfqug0ifbprffd3bhbn4g2',1337206083,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('blo2vctmes71eg6vtjles1ltl1',1337206141,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('vcjqbb4o72bmip5pdc0q0m54m2',1337206142,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('k4b08i0m8u8tfjoh3q8o73da02',1337206143,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2tqtafeoi7e3csg2smjpj6c657',1337206202,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qsco5rntm44jlvift386u698l6',1337206202,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('becg6tliot127539t2l1frmv76',1337206203,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('01jf0bh10i6afl8rg9pl6nphq7',1337206261,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('03rtp0duurculiei9lk3m8h237',1337206262,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('0jnaf4f01ttbvngem4mdr5iag5',1337206263,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('0tk2irr2on7ndkd7rp3n3qpga7',1337206321,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('1s1mm71vvildgo20jcp7r2fpn3',1337206322,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('s7lok75htnjrr9s6f09v241qi0',1337206323,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('odagathdulog937mfivbh9av25',1337206381,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('mboi008kf662ll920mr233bd13',1337206381,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('7l13hf6dqjda912tsbhdjoboe7',1337206382,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('n7jkote9kelvjlpgd0778t2mv2',1337206441,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('bi4ro7ieg4pjeklhosto4drjh3',1337206441,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9193u5fgq7upul4406uvc3cg31',1337206442,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qg2o7unf6bhhs7f4ufdeh4q774',1337206501,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2k8m14gtae701l41qkq3omgno3',1337206501,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2lhiqum5iu6ad3btdh1c7n6ld2',1337206502,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('u920igu779pturb3q64ri12154',1337206561,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('onbjq7f4lqtsmsjjmnkchlet13',1337206562,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('ofpsb87g2dkercj3m0lkpn0ar3',1337206563,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('j4nd5leln4q2oifd8jbmaidcj5',1337206621,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('1p0jbs4aru20o77trvhcguocc1',1337206622,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('k8fjdncjtahr91ggeam7skaf86',1337206622,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('n5c7lr6ge2mjlkpoi8c0b0nbb4',1337206681,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('2g98ou1ij1mqv8f5rfb542rl92',1337206682,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('3qh23kliq1e1mun02m2rn5rtl2',1337206683,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('h15d4ulfqusoqthlmk9pn9vk40',1337206741,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('5fn9kgfn5f8e0k6u6fmopkcks6',1337206741,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('7hj2t7q20dejiq5kik6mlvsdk4',1337206742,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('sbpna3j64r9k5u767fs85fh5o1',1337206802,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('qepc3e64na3c6qn5dvhidqis67',1337206802,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('13fvjtb1g46jodvupblb3j6cf6',1337206804,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('9vonrkm241sbj7r3t3u6801995',1337206861,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('gdahbpm0cip2r8sn898c19j577',1337206861,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('avlr6l44o4fitb02j42ogk7q20',1337206862,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('q01tkoqk7i36tgk93h71o6fj75',1337206921,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('jeqdfhgv63a9s30fdcvmfio2v4',1337206921,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('n1q8gkomdk2bg3ta7ohpiv3os6',1337206923,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('866dhpigt2ggncg224ahfb39c3',1337206981,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('7s3vjrrd79tuetj4a7lcb15470',1337206981,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}'),
+	('s0nm098p4h94q4uap5nbap7gs3',1337206982,'sym-|a:2:{s:8:\"username\";s:12:\"kirkstrobeck\";s:4:\"pass\";s:40:\"eb5999e46d61f4e0013b77436c57f1edc2087592\";}');
 
 /*!40000 ALTER TABLE `sym_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
