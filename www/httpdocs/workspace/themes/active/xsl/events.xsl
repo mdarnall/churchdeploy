@@ -144,7 +144,7 @@
 
 											<xsl:when test="$start-date = $end-date or not(date/date/end)">
 												<span class="date">
-													<i class="icon-calendar"></i>
+													<span data-icon="\"></span>
 													<xsl:text> </xsl:text>
 													<xsl:value-of select="$start-date" />
 												</span>
@@ -152,7 +152,7 @@
 												<xsl:text> &#160;</xsl:text>
 
 												<span class="time">
-													<i class="icon-time"></i>
+													<span data-icon="t"></span>
 													<xsl:text> </xsl:text>
 													<xsl:value-of select="$start-time" />
 
@@ -167,7 +167,7 @@
 
 												<span class="date-range">
 
-													<i class="icon-calendar"></i>
+													<span data-icon="\"></span>
 													<xsl:text> </xsl:text>
 
 													<span class="start">
@@ -211,7 +211,6 @@
 							</div>
 
 							<div class="description">
-								
 								<xsl:choose>
 
 									<xsl:when test="$single">

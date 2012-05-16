@@ -22,6 +22,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 // variables
 
 @base: 10px;
+@body-text-height: 18px;
 @color-accent: #d83629; // Logo/Accent/Link Color (Red/Orange)
 @color-body-text: #303030;
 @color-gray-accent: #eeeeee;
@@ -31,7 +32,6 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 @font-sans: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
 @font-serif: "ff-tisa-web-pro", serif;
 @icons: "Pictos", sans-serif;
-
 
 // styles
 
@@ -50,7 +50,6 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	margin: @base * 4 0;
 	color: @color-body-text;
 	font-size: 16px;
-	letter-spacing: 1px;
 	text-align: center;
 	border: none;
 }
@@ -64,7 +63,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 
 .body-text-serif {
 	font-family: @font-serif;
-	font-size: 16px;
+	font-size: @body-text-height;
 	line-height: 1.7;
 	font-weight: normal;
 	color: #303030;
@@ -139,7 +138,6 @@ h1 {
 	font-weight: bold;
 	font-size: 64px;
 	line-height: 1.2;
-	letter-spacing: 1px;
 	text-align: center;
 	width: 80%;
 	margin: @base * 3 auto;
@@ -147,9 +145,9 @@ h1 {
 
 h2 {
 	font-weight: bold;
-	font-size: 26px;
+	font-size: 30px;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin: @base * 4 0 @base * 2 0;
 }
 
@@ -176,9 +174,9 @@ h3 {
 	text-transform: none;
 	-webkit-font-smoothing: antialiased;
 	position: relative;
-	font-size: 14px;
-	margin-right: 5px;
-	top: -1px;
+	font-size: 20px;
+	margin-right: 7px;
+	top: 1px;
 }
 
 .logo {
@@ -294,11 +292,11 @@ h3 {
 			color: @color-accent;
 			background-image: none;
 			.box-shadow(none);
-			background: #E9E9E9;
+			background: none;
 
 			&:hover {
-				background: #ddd;
-				color: @color-accent;
+				background: none;
+				color: darken(@color-accent, 10%);
 			}
 		}
 
@@ -307,6 +305,12 @@ h3 {
 			font-size: 12px;
 			line-height: 18px;
 			font-weight: normal;
+
+			&:hover {
+				background: none;
+				color: darken(desaturate(@color-mast, 10%), 20%);
+			}
+
 		}
 	}
 }
@@ -365,9 +369,6 @@ header {
 
 .column-center {
 	
-	h2 {
-		width: 80%;
-	}
 }
 
 .column-right {
@@ -468,11 +469,11 @@ footer {
 		.nav-list > li {
 			margin: @base * .5 0;
 
-
 		}
 
 		.nav-list > .active > a {
 				color: @color-red;
+				text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 			}
 
 		.nav-list > li > a {
@@ -499,7 +500,7 @@ footer {
 			.body-text-serif;
 			color: @color-white;
 			margin-left: @base * 2;
-			font-size: 13px;
+			font-size: 16px;
 		}
 	}
 
@@ -527,6 +528,16 @@ footer {
 			&:hover {
 				color: @color-accent;
 				text-decoration: none;
+			}
+
+			&.facebook {
+				.body-text-sans;
+				color: #aaa;
+				letter-spacing: 1px;
+				font-weight: bold;
+				text-transform: uppercase;
+
+				&:hover { color: @color-accent; }
 			}
 		}
 	}
@@ -560,7 +571,7 @@ footer {
 
 	.intro {
 		display: block;
-		font-size: 22px;
+		font-size: 26px;
 		margin: 20px 0;
 		font-weight: 300;
 	}	
@@ -568,8 +579,24 @@ footer {
 
 .grey-bkd {
 	background: #e9ebea;
-	padding: @base * 1.5 @base * 2 0 @base * 2;
+	padding: @base * 1.5 @base * 2 @base * 0.5 @base * 2;
 	margin-bottom: @base * 2;
+
+	&.top {
+		position: relative;
+		top: -10px;
+		ul {
+			list-style: none;
+			margin-left: 0;
+			padding: @base * 0.5;
+
+			li {
+				margin: 0 0 @base 0;
+
+				&.last { margin-bottom: 0; }
+			}
+		}
+	}
 }
 
 //---------------------------------------------------------
@@ -582,7 +609,7 @@ footer {
 .component {
 
 	h3 {
-		margin-bottom: 10px;
+		margin-bottom: @base;
 	}
 }
 
@@ -604,60 +631,63 @@ footer {
 
 // downloads ---------------------------------------------------------
 
-.component-downloads {
+.column-right {
 
-	.entry {
-		background: @color-gray-accent;
-		padding: 0 14px;
-		border: none;
-		margin: 0;
+	.component-downloads {
 
-		a {
-			border: none;
+		.entry {
 			background: @color-gray-accent;
-			padding: 30px 10px;
-			border-bottom: 1px solid darken(@color-gray-accent, 20%);
-			color: @color-body-text;
-			font-size: 14px;
+			padding: 0 20px;
+			border: none;
+			margin: 0;
 
-			&:hover { 
-				color: @color-accent; 
-			}
+			a {
+				border: none;
+				background: @color-gray-accent;
+				padding: 30px 0;
+				border-bottom: 1px solid darken(@color-gray-accent, 20%);
+				color: @color-body-text;
+				font-size: 14px;
 
-			.date {
-				width: 48px;
-				margin: 0 15px 0 -10px;
-				text-align: center;
-				font-family: @font-sans;
-
-				.month {
-					display: block;
-					width: 48px;
-					background: @color-accent;
-					color: #fff;
-					font-weight: bold;
-					font-size: 12px;
-					letter-spacing: 1px;
-					text-transform: uppercase;
+				&:hover { 
+					color: @color-accent; 
 				}
 
-				.day {
+				.date {
 					width: 48px;
-					background: #fff;
-					font-weight: bold;
-					font-size: 26px;
-					color: @color-body-text;
-					padding: 7px 0;
+					margin: 0 15px 0 -10px;
+					text-align: center;
+					font-family: @font-sans;
+
+					.month {
+						display: block;
+						width: 48px;
+						background: @color-accent;
+						color: #fff;
+						font-weight: bold;
+						font-size: 12px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+					}
+
+					.day {
+						width: 48px;
+						background: #fff;
+						font-weight: bold;
+						font-size: 26px;
+						color: @color-body-text;
+						padding: 7px 0;
+					}
 				}
 			}
-		}
 
-		&.even { 
-			background: @color-gray-accent; 
-		}
+			&.even { 
+				background: @color-gray-accent; 
+			}
 
-		&.last a {
-			border-bottom: none;
+			&.last a {
+				border-bottom: none;
+			}
 		}
 	}
 }
@@ -671,11 +701,11 @@ footer {
 	.component-events {
 	
 		.entry {
-			margin: 20px 0;
-			background: #fff;
+			margin: @base * 2 0;
+			// background: #fff;
 
 			&.even { 
-				background: #fff; 
+				// background: #fff; 
 			}
 
 			a {
@@ -727,7 +757,7 @@ footer {
 
 	.component-events {
 		list-style: none;
-		margin: 0;
+		margin: 0 0 @base*2 0;
 		padding: 0;
 
 		@month-height: 16px;
@@ -739,6 +769,7 @@ footer {
 		.entry {
 			background: @color-gray-accent;
 			position: relative;
+			padding: 0 20px;
 
 			&:hover { 
 				background: darken(@color-gray-accent, 5%); 
@@ -747,7 +778,7 @@ footer {
 			a {
 				display: block;
 				height: 100%;
-				padding: @calendar-padding;
+				padding: @base * 1.5 @base @base * 1.5 0;
 				//padding: @calendar-padding 0;
 				border-bottom: 1px solid darken(@color-gray-accent, 20%);
 				.clearfix;
@@ -999,6 +1030,7 @@ footer {
 	
 		.entry {
 			background: @color-gray-accent;
+			padding: 0 20px;
 
 			a {
 				min-height: 50px;
@@ -1009,10 +1041,24 @@ footer {
 				height: 72px;
 
 				&:hover { 
-					color: @color-accent; 
+					color: @color-accent;
+					border-bottom: 1px solid darken(@color-gray-accent, 20%);
+
+					img {
+						opacity: 0.5;
+						-moz-opacity: 0.5;
+						filter:alpha(opacity=5);
+					}
+
+					.email {
+						color: @color-accent !important;
+						-webkit-transition: color 200ms ease-in-out;
+					}
 				}
 
 				img {
+					position: relative;
+					left: -15px;
 					margin-right: @base;
 					.border-radius(100%);
 					width: 72px;
@@ -1029,12 +1075,14 @@ footer {
 						font-size: 18px;
 						line-height: 1.3;
 						font-weight: normal;
-					}
 
-					.email {
+					}
+					.icon {
 						color: #999;
-						font-family: @font-sans;
-						font-size: 14px;
+					}
+					.email {
+						.small-grey-text;
+						display: inline;
 					}
 				}
 			}
@@ -1123,6 +1171,7 @@ footer {
 
 	blockquote {
 		.small-serif-header;
+		font-size: 18px;
 		margin: @base * 3 0 @base * 1.5 0;
 
 		cite {
