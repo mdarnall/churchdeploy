@@ -155,7 +155,7 @@ h3 {
 	font-weight: bold;
 	font-size: 18px;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .main-container ul li {
@@ -701,11 +701,14 @@ footer {
 	.component-events {
 	
 		.entry {
-			margin: @base * 2 0;
-			// background: #fff;
+			margin: @base * 3 0;
+			background: #fff;
+			border: @base solid #ddd;
+			padding: 0;
+			position: relative;
 
 			&.even { 
-				// background: #fff; 
+				background: #fff; 
 			}
 
 			a {
@@ -715,6 +718,8 @@ footer {
 			.header {
 				text-transform: none;
 				font-size: 26px;
+				margin: 0 0 @base 0;
+				padding: 0 @base * 1.5;
 
 				a {
 					text-transform: none;
@@ -722,23 +727,44 @@ footer {
 					color: #303030;
 
 					&:hover { 
-						color: #555; 
+						color: @color-accent; 
 					}
 				}
 			}
 
 			.label {
-				line-height: 12px;
-				float: right;
-				padding: 3px 6px;
+				display: block;
+				font-size: 14px;
+				font-weight: normal;
+				text-transform: uppercase;
+				padding: @base;
+				margin-bottom: @base;
+				background: none;
+				color: @color-accent;
+				text-align: right;
+				border-bottom: 1px solid @color-gray-accent;
 				.border-radius(0);
 				text-shadow: none;
 			}
 
+			.description {
+				padding: 0 @base * 1.5;
+			}
+
 			.help-block {
+				.body-text-serif;
 				clear: both;
-				margin-bottom: 10px;
-				font-size: 16px;
+				color: #999;
+				font-style: italic;
+				margin-bottom: 0;
+				padding: 0 @base * 1.5;
+
+				span {
+					font-size: 20px;
+					position: relative;
+					top: -3px;
+				}
+
 				.date {
 					margin-right: 20px;
 				}
@@ -747,7 +773,7 @@ footer {
 			.edit {
 				.edit-defaults;
 				top: @base;
-				right: @base;
+				left: @base;
 			}
 		}
 	}
@@ -1044,12 +1070,6 @@ footer {
 					color: @color-accent;
 					border-bottom: 1px solid darken(@color-gray-accent, 20%);
 
-					img {
-						opacity: 0.5;
-						-moz-opacity: 0.5;
-						filter:alpha(opacity=5);
-					}
-
 					.email {
 						color: @color-accent !important;
 						-webkit-transition: color 200ms ease-in-out;
@@ -1092,7 +1112,7 @@ footer {
 			}
 
 			&.last a {
-				padding-bottom: 18px;
+				border-bottom: none;
 			}
 		}
 	}
