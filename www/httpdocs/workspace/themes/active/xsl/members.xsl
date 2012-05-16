@@ -72,7 +72,7 @@
 					<ul class="contacts nav nav-tabs nav-stacked">
 						<xsl:for-each select="//members-entries-by-tag/entry">
 							<li class="entry">
-								<a href="maito:{email}">
+								<a href="mailto:{email}">
 									<div class="pull-left">
 										<img>
 											<xsl:attribute name="src">
@@ -98,7 +98,7 @@
 											<xsl:value-of select="last-name" disable-output-escaping="yes" />
 										</h4>
 										<div>
-											<span data-icon="M"></span>
+											<span class="icon" data-icon="M"></span>
 											<span class="email"><xsl:value-of select="email" /></span>
 										</div>
 									</div>

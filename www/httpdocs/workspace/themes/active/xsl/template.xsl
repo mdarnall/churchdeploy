@@ -224,7 +224,8 @@
 						<xsl:value-of select="$this-year" />
 						<xsl:text>. </xsl:text>
 						<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-						<xsl:text>. All rights reserved.</xsl:text>						
+						<xsl:text>. All rights reserved.</xsl:text>
+					<a href="http://www.facebook.com/groups/AtheyCreek" class="pull-right facebook">Visit us on Facebook</a>				
 					</div>
 				</div>
 			</div>
