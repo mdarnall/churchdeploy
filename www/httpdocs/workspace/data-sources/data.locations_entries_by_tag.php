@@ -45,7 +45,7 @@
 					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-09T10:01:32+00:00'
+				'release-date' => '2012-03-07T17:53:06+00:00'
 			);
 		}
 

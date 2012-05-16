@@ -22,20 +22,27 @@
 					
 				<xsl:for-each select="$entries">
 				
-					<div class="span6 offset3">
-						
-						<blockquote>
+					<div class="row">
+						<div class="span6 offset3">
+							
+							<blockquote>
 
-							<span><xsl:text>&#8220;</xsl:text><xsl:value-of select="//xml-apibibliacom/text" /><xsl:text>&#8221;</xsl:text></span>
+								<span><xsl:text>&#8220;</xsl:text><xsl:value-of select="//xml-apibibliacom/text" /><xsl:text>&#8221;</xsl:text></span>
 
-							<cite>
-								<a href="#" class="verse">
-									<xsl:value-of select="passage" />
-								</a>
-							</cite>
+								<cite>
+									<!-- <a href="#" class="verse"> -->
+										<xsl:value-of select="passage" />
+									<!-- </a> -->
+									<xsl:call-template name="edit-entry">
+										<xsl:with-param name="link" select="concat($root, '/symphony/publish/verses/edit/', @id, '/')" />
+									</xsl:call-template>
+								</cite>
 
-						</blockquote>
+							</blockquote>
+							
+						</div>						
 					</div>
+
 
 				</xsl:for-each>
 

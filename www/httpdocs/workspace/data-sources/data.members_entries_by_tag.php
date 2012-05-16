@@ -11,7 +11,7 @@
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamSORT = 'order';
+		public $dsParamSORT = 'last-name';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -29,8 +29,6 @@
 				'gender',
 				'password',
 				'activation',
-				'role',
-				'role: permissions',
 				'about'
 		);
 
@@ -45,10 +43,10 @@
 				'name' => 'Members: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://churchdeploy',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T15:39:44+00:00'
+				'release-date' => '2012-05-13T07:52:42+00:00'
 			);
 		}
 

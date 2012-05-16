@@ -23,7 +23,11 @@
 					<xsl:call-template name="class-rows" />
 			
 					<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
-				
+					
+					<xsl:call-template name="edit-entry">
+						<xsl:with-param name="link" select="concat($root, '/symphony/publish/text/edit/', @id, '/')" />
+					</xsl:call-template>
+
 				</div>
 			
 			</xsl:for-each>

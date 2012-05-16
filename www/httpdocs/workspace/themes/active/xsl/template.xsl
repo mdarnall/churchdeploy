@@ -9,8 +9,6 @@
     indent="no"
     />
 
-<xsl:include href="teachings.xsl" />
-
 
 <xsl:template name="template-head">
 	
@@ -24,7 +22,6 @@
 	</xsl:for-each> -->
 
 </xsl:template>
-
 
 
 <xsl:template name="template-header-outside-container">
@@ -166,9 +163,19 @@
 <xsl:template name="template-footer-inside-container">
 	
 	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
-				
+
 	<footer>
-		<div class="container">
+		<div class="twitter">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<strong>Recently on Twitter →</strong> 
+						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-nav container">
 			<div class="row">
 				<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
 					<xsl:variable name="entry-id" select="@id" />
@@ -188,12 +195,12 @@
 					</div>
 				</xsl:for-each>
 				
-				<div class="offset1 span3">
+				<div class="span3">
 					<h4>Online Giving</h4>
 					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
 					<p><a href="#" class="btn btn-primary give">Give →</a></p>
 				</div>
-				<div class="span3">
+				<div class="offset2 span3">
 					<h4><xsl:value-of select="$website-name" /></h4>
 					<address>
 						<xsl:text>27520 SW 95th Ave.</xsl:text><br />
@@ -236,9 +243,14 @@
 
 <xsl:template name="template-footer-outside-container">
 
-	<script type="text/javascript"><![CDATA[(function (window){'use strict';function downloadJSAtOnload(){var js={"scripts":["]]><xsl:value-of select="$workspace" /><![CDATA[/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/common.min.js"]};for(var key in js.scripts){if(js.scripts[key]){var element=document.createElement("script");element.src=js.scripts[key];document.body.appendChild(element);}}}if(window.addEventListener){window.addEventListener("load",downloadJSAtOnload,false);}else if(window.attachEvent){window.attachEvent("onload",downloadJSAtOnload);}else{window.onload=downloadJSAtOnload;}}(window));]]></script>
+	<!-- <script type="text/javascript"><![CDATA[(function (window){'use strict';function downloadJSAtOnload(){var js={"scripts":["]]><xsl:value-of select="$workspace" /><![CDATA[/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/plugins.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/common.js?3"]};for(var key in js.scripts){if(js.scripts[key]){var element=document.createElement("script");element.src=js.scripts[key];document.body.appendChild(element);}}}if(window.addEventListener){window.addEventListener("load",downloadJSAtOnload,false);}else if(window.attachEvent){window.attachEvent("onload",downloadJSAtOnload);}else{window.onload=downloadJSAtOnload;}}(window));]]></script>
 
-	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment>
+	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment> -->
+
+	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
+	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
+	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
+
 
 </xsl:template>
 
