@@ -181,9 +181,10 @@
 			<div class="row">
 					<div class="span2">
 						<ul class="nav nav-list">
-							<li class="nav-header"><a href="">Teachings</a></li><br />
-							<li class="nav-header"><a href="">Events</a></li><br />
-							<li class="nav-header"><a href="">Meetings</a></li><br />
+							<li class="nav-header"><a href="/21/teachings/">Teachings</a></li><br />
+							<li class="nav-header"><a href="/20/events/">Events</a></li><br />
+							<li class="nav-header"><a href="/7761/meetings/">Meetings</a></li><br />
+							<li class="nav-header"><a href="/23/missions/">Missions</a></li><br />
 						</ul>
 					</div>
 				<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
