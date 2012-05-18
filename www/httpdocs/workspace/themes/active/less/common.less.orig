@@ -503,11 +503,25 @@ footer {
 		line-height: 55px;
 
 		a {
+<<<<<<< Updated upstream
 			color: @color-white;
 
 			&:hover {
 				color: darken(@color-accent, 30%);
 			}
+=======
+			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		strong {
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 1px;
+>>>>>>> Stashed changes
 		}
 
 		span {

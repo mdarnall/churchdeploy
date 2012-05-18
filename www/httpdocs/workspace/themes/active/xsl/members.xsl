@@ -71,7 +71,8 @@
 					
 					<ul class="contacts nav nav-tabs nav-stacked">
 						<xsl:for-each select="//members-entries-by-tag/entry">
-							<li class="entry">
+							<li>
+								<xsl:call-template name="class-rows" />
 								<a href="mailto:{email}">
 									<div class="pull-left">
 										<img>
