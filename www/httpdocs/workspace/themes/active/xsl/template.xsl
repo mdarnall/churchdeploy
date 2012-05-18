@@ -21,6 +21,20 @@
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each> -->
 
+	<script type="text/javascript">
+	<xsl:comment>
+	var _gaq = _gaq || [];
+	//_gaq.push(['_setAccount', 'UA-XXX']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//</xsl:comment>
+	</script>
+
 </xsl:template>
 
 
@@ -171,8 +185,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<strong>Recently on Twitter →</strong> 
-						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						<xsl:for-each select="//twitter/entry">
+							<strong><a href="http://twitter.com/{user/@handle}/" target="_blank">Recently on Twitter →</a></strong> 
+							<span>
+								<a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank">
+									<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
+								</a>
+							</span>
+						</xsl:for-each>
 					</div>
 				</div>
 			</div>
@@ -258,7 +278,7 @@
 	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment> -->
 
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
+	<!-- <script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script> -->
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
 
 

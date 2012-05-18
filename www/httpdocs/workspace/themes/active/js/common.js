@@ -5,7 +5,7 @@ $(window).load(
 	{
 
 		
-		try{Typekit.load();}catch(e){}
+		//try{Typekit.load();}catch(e){}
 
 
 
@@ -76,7 +76,7 @@ $(window).load(
 				$('.modalLive .modal-body .ustream-embed').html('#');
 			}
 		);
-
+		/*
 		alertLiveCookie = $.cookie('alertLive');
 
 		if(alertLiveCookie != 'hidden')
@@ -90,6 +90,7 @@ $(window).load(
 				}
 			);
 		}
+		*/
 	}
 );
 
