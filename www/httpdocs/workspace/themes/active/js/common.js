@@ -5,7 +5,7 @@ $(window).load(
 	{
 
 		
-		try{Typekit.load();}catch(e){}
+		//try{Typekit.load();}catch(e){}
 
 
 

@@ -278,7 +278,7 @@
 	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment> -->
 
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
+	<!-- <script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script> -->
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
 
 
