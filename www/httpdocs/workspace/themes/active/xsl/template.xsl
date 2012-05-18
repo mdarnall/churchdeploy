@@ -48,6 +48,8 @@
 						</li> -->
 					</ul>
 					<ul class="nav pull-right">
+						<li><a href="/24/give/"><span data-icon="">&#160;</span>Give</a></li>
+						<li class="divider-vertical"></li>
 						<li><a href="#"><span data-icon="t"></span>6:30am</a></li>
 						<!-- <li class="divider-vertical"></li> -->
 
@@ -177,6 +179,14 @@
 		</div>
 		<div class="footer-nav container">
 			<div class="row">
+					<div class="span2">
+						<ul class="nav nav-list">
+							<li class="nav-header"><a href="/21/teachings/">Teachings</a></li><br />
+							<li class="nav-header"><a href="/20/events/">Events</a></li><br />
+							<li class="nav-header"><a href="/7761/meetings/">Meetings</a></li><br />
+							<li class="nav-header"><a href="/23/missions/">Missions</a></li><br />
+						</ul>
+					</div>
 				<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
 					<xsl:variable name="entry-id" select="@id" />
 					<div class="span2">
@@ -194,13 +204,12 @@
 						</ul>							
 					</div>
 				</xsl:for-each>
-				
 				<div class="span3">
 					<h4>Online Giving</h4>
 					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
 					<p><a href="#" class="btn btn-primary give">Give →</a></p>
 				</div>
-				<div class="offset2 span3">
+				<div class="span3">
 					<h4><xsl:value-of select="$website-name" /></h4>
 					<address>
 						<xsl:text>27520 SW 95th Ave.</xsl:text><br />
