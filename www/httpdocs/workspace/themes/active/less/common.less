@@ -22,7 +22,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 // variables
 
 @base: 10px;
-@body-text-height: 18px;
+@body-text-height: 16px;
 @color-accent: #d83629; // Logo/Accent/Link Color (Red/Orange)
 @color-body-text: #303030;
 @color-gray-accent: #eeeeee;
@@ -98,6 +98,12 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 .mast .nav-pills .active * { background: none !important; }
 .mast .nav-pills > li > a { padding: @base * .5 0; margin: 0 0 0 @base * 2.5; }
 .mast .nav-pills { margin-right: 5px; }
+.navbar .divider-vertical {
+	background: darken(desaturate(@color-mast, 10%), 15%);
+	border-right: 1px solid darken(desaturate(@color-mast, 10%), 20%);
+	height: 30px;
+	margin: 5px;
+}
 
 
 // tags
@@ -186,13 +192,6 @@ h3 {
 		background: url(../img/logo.png) 0 0 no-repeat;
 		height: 120px;
 		width: 120px;
-		-webkit-transition: opacity 200ms ease-in-out;
-
-		&:hover {
-			opacity: 0.5;
-			-moz-opacity: 0.5;
-			filter:alpha(opacity=50);
-		}
 	}
 }
 
@@ -239,6 +238,7 @@ h3 {
 
 	.navbar-inner {
 		background: darken(desaturate(@color-mast, 10%), 10%);
+		filter: none;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -257,6 +257,18 @@ h3 {
 					}
 				}
 			}
+		}
+	}
+
+	.btn-navbar {
+		background: darken(desaturate(@color-mast, 10%), 20%);
+		background-image: none;
+		filter: none;
+		.border-radius(0%);
+		border: none;
+
+		&:hover {
+			background: darken(desaturate(@color-mast, 10%), 40%);
 		}
 	}
 }
@@ -490,10 +502,12 @@ footer {
 		color: @color-white;
 		line-height: 55px;
 
-		strong {
-			text-transform: uppercase;
-			font-size: 12px;
-			letter-spacing: 1px;
+		a {
+			color: @color-white;
+
+			&:hover {
+				color: darken(@color-accent, 30%);
+			}
 		}
 
 		span {
@@ -501,6 +515,13 @@ footer {
 			color: @color-white;
 			margin-left: @base * 2;
 			font-size: 16px;
+		}
+
+
+		strong {
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 1px;
 		}
 	}
 
@@ -514,7 +535,7 @@ footer {
 	}
 
 	.baseline {
-		background: #f3f3f0;
+		background: #FDFDFD;
 		position: relative;
 		left: 0;
 		bottom: -20px;
@@ -574,7 +595,42 @@ footer {
 		font-size: 26px;
 		margin: 20px 0;
 		font-weight: 300;
-	}	
+	}
+
+	.nav-box {
+		margin-top: @base * 3;
+
+		.box {
+			font-family: 'Times New Roman', Times, serif;
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 1.2;
+			font-style: italic;
+			margin-bottom: 30px;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+
+			a {
+				background: lighten(desaturate(@color-mast, 10%), 20%);
+				display: block;
+				padding: @base * 8 0;
+				color: darken(desaturate(@color-mast, 10%), 20%);
+
+				&:hover {
+					background: lighten(desaturate(@color-mast, 10%), 15%);
+				}
+				
+
+				span {
+					padding: @base * 2 0;
+					border-top: 2px solid darken(desaturate(@color-mast, 10%), 20%);
+					border-bottom: 2px solid darken(desaturate(@color-mast, 10%), 20%);
+				}
+			}
+		}
+
+	}
 }
 
 .grey-bkd {
@@ -728,7 +784,7 @@ footer {
 			.header {
 				text-transform: none;
 				font-size: 26px;
-				margin: 0 0 @base 0;
+				margin: 0 0 0 0;
 				padding: @base * 1.5 @base * 1.5;
 
 				a {
@@ -749,7 +805,7 @@ footer {
 				margin-bottom: 0;
 				padding: 0 @base * 1.5;
 
-				span {
+				.icon {
 					font-size: 20px;
 					position: relative;
 					top: -3px;
@@ -796,10 +852,6 @@ footer {
 			position: relative;
 			padding: 0 20px;
 
-			&:hover { 
-				background: darken(@color-gray-accent, 5%); 
-			}
-
 			a {
 				display: block;
 				height: 100%;
@@ -808,8 +860,8 @@ footer {
 				border-bottom: 1px solid darken(@color-gray-accent, 20%);
 				.clearfix;
 
-				&:hover {
-					background: inherit;
+				&:hover td {
+					color: @color-accent;
 				}
 
 				.date {
@@ -1190,7 +1242,7 @@ footer {
 
 	blockquote {
 		.small-serif-header;
-		font-size: 18px;
+		font-size: @body-text-height;
 		margin: @base * 3 0 @base * 1.5 0;
 
 		cite {
