@@ -67,6 +67,9 @@
 
 			<xsl:call-template name="template-head"/>
 
+			<!-- <xsl:comment><![CDATA[[if IE 6]><link rel="stylesheet" type="text/css" href="]]><xsl:value-of select="$root"/><![CDATA[/workspace/assets/css/ie6patches-1.0.css" media="screen" /><![endif]]]></xsl:comment> -->
+
+			
 		</head>
 
 		<body data-spy="scroll" data-target=".subnav" data-offset="50">

@@ -21,7 +21,7 @@
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each> -->
 
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
 	//_gaq.push(['_setAccount', 'UA-XXX']);
@@ -33,7 +33,7 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-	</script>
+	</script> -->
 
 </xsl:template>
 
@@ -185,12 +185,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<xsl:for-each select="//twitter/entry">
+						<xsl:for-each select="//twitter-latest-entry/entry">
 							<strong><a href="http://twitter.com/{user/@handle}/" target="_blank">Recently on Twitter →</a></strong> 
 							<span>
-								<a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank">
-									<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
-								</a>
+								<!-- <a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank"> -->
+								<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 							</span>
 						</xsl:for-each>
 					</div>
@@ -273,14 +272,50 @@
 
 <xsl:template name="template-footer-outside-container">
 
-	<!-- <script type="text/javascript"><![CDATA[(function (window){'use strict';function downloadJSAtOnload(){var js={"scripts":["]]><xsl:value-of select="$workspace" /><![CDATA[/js/plugins.min.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/plugins.js","]]><xsl:value-of select="$workspace" /><![CDATA[/themes/active/js/common.js?3"]};for(var key in js.scripts){if(js.scripts[key]){var element=document.createElement("script");element.src=js.scripts[key];document.body.appendChild(element);}}}if(window.addEventListener){window.addEventListener("load",downloadJSAtOnload,false);}else if(window.attachEvent){window.attachEvent("onload",downloadJSAtOnload);}else{window.onload=downloadJSAtOnload;}}(window));]]></script>
+	<script type="text/javascript">
+		<xsl:comment>
+		(function (window){
+			'use strict';
+			function downloadJSAtOnload(){
 
-	<xsl:comment><![CDATA[[if lt IE 7 ]><script type="text/javascript" defer="defer" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script type="text/javascript" defer="defer">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]]]></xsl:comment> -->
+				var _gaq = _gaq || [];
+				//_gaq.push(['_setAccount', 'UA-XXX']);
+				_gaq.push(['_trackPageview']);
 
+				var js = {
+					"scripts":[
+						"/workspace/js/plugins.min.js",
+						"/workspace/themes/active/js/plugins.min.js",
+						"/workspace/themes/active/js/common.min.js"
+					]
+				};
+
+				for (var key in js.scripts) {
+					if (js.scripts[key]) {
+						var element=document.createElement("script");
+						element.src=js.scripts[key];
+						document.body.appendChild(element);
+					}
+				}
+			}
+
+			if(window.addEventListener) {
+				window.addEventListener("load",downloadJSAtOnload,false);
+			} else if (window.attachEvent){
+				window.attachEvent("onload",downloadJSAtOnload); 
+			} else { 
+				window.onload=downloadJSAtOnload;
+			}
+		}(window));
+		//</xsl:comment>
+	</script>
+
+
+<!-- 
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<!-- <script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script> -->
+	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
-
+ -->
 
 </xsl:template>
 
