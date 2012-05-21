@@ -32,23 +32,23 @@
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-center'">
 
-				<section id="main-content" class="span8 column-center">
+				<div id="main-content" class="span8 column-center">
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath"/>
 					</xsl:call-template>
-				</section>
+				</div>
 
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-right'">
 				
-				<section id="sidebar" class="span4 column-right">
+				<div id="sidebar" class="span4 column-right">
 
 					<xsl:call-template name="template-column-right-top"/>
 
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath"/>
 					</xsl:call-template>
-				</section>
+				</div>
 
 			</xsl:when>
 		</xsl:choose>
