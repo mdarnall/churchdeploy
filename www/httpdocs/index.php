@@ -1,11 +1,17 @@
 <?php
 
 	/*
+	
+
+	CHURCHDEPLOY
+	============
+
+	Except the Lord build the house, they labour in vain that build it: 
+	except the Lord keep the city, the watchman waketh but in vain.
+
+	- Psalms 127:1
 
 	
-	CHURCHDEPLOY // Psalms 127:1
-
-
 	*/
 
 	define('DOCROOT', rtrim(dirname(__FILE__), '\\/'));
@@ -27,8 +33,7 @@
 
 	header('Expires: Mon, 12 Dec 1982 06:14:00 GMT');
 	header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
-	header('Cache-Control: no-cache, must-revalidate, max-age=0');
-	header('Pragma: no-cache');
+	header('Cache-control: public');
 
 	$output = renderer($renderer)->display(getCurrentPage());
 
