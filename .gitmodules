@@ -139,3 +139,6 @@
 [submodule "www/httpdocs/extensions/scaffolds"]
 	path = www/httpdocs/extensions/scaffolds
 	url = http://github.com/brendo/scaffolds.git
+[submodule "www/httpdocs/extensions/publishfiltering"]
+	path = www/httpdocs/extensions/publishfiltering
+	url = http://github.com/nickdunn/publishfiltering.git
