@@ -281,38 +281,6 @@
 				var _gaq = _gaq || [];
 				//_gaq.push(['_setAccount', 'UA-XXX']);
 				_gaq.push(['_trackPageview']);
-<<<<<<< Updated upstream
-
-				var js = {
-					"scripts":[
-						"/workspace/js/plugins.min.js",
-						"/workspace/themes/active/js/plugins.min.js",
-						"/workspace/themes/active/js/common.min.js"
-					]
-				};
-
-				for (var key in js.scripts) {
-					if (js.scripts[key]) {
-						var element=document.createElement("script");
-						element.src=js.scripts[key];
-						document.body.appendChild(element);
-					}
-				}
-			}
-
-			if(window.addEventListener) {
-				window.addEventListener("load",downloadJSAtOnload,false);
-			} else if (window.attachEvent){
-				window.attachEvent("onload",downloadJSAtOnload); 
-			} else { 
-				window.onload=downloadJSAtOnload;
-			}
-		}(window));
-		//</xsl:comment>
-	</script>
-
-
-=======
 
 				var js = {
 					"scripts":[
