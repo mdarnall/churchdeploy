@@ -111,7 +111,7 @@
 		</div>
 	</div>
 
-	<header class="mast" id="overview">
+	<div class="header mast" id="overview">
 		<div class="container">
 			<xsl:call-template name="alerts" />
 			<div class="row">
@@ -147,7 +147,7 @@
 				</div>
 			</div>
 		</div>
-	</header>
+	</div>
 
 </xsl:template>
 
@@ -180,7 +180,7 @@
 	
 	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 
-	<footer>
+	<div class="footer">
 		<div class="twitter">
 			<div class="container">
 				<div class="row">
@@ -258,7 +258,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</div>
 
 </xsl:template>
 
