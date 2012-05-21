@@ -605,34 +605,38 @@ h3 {
 	.nav-box {
 		margin-top: @base * 3;
 
-		.box {
-			font-family: 'Times New Roman', Times, serif;
-			text-transform: uppercase;
-			font-weight: normal;
-			font-size: 24px;
-			line-height: 1.2;
-			font-style: italic;
+		.row {
 			margin-bottom: 30px;
-			text-align: center;
-			-webkit-font-smoothing: antialiased;
 
-			a {
-				background: lighten(desaturate(@color-mast, 10%), 20%);
-				display: block;
-				padding: @base * 8 0;
-				color: darken(desaturate(@color-mast, 10%), 20%);
+			.box {
+				font-family: 'Times New Roman', Times, serif;
+				text-transform: uppercase;
+				font-weight: normal;
+				font-size: 24px;
+				line-height: 1.2;
+				font-style: italic;
+				text-align: center;
+				-webkit-font-smoothing: antialiased;
 
-				&:hover {
-					background: lighten(desaturate(@color-mast, 10%), 15%);
-				}
-				
+				a {
+					background: lighten(desaturate(@color-mast, 10%), 20%);
+					display: block;
+					padding: @base * 8 0;
+					color: darken(desaturate(@color-mast, 10%), 20%);
 
-				span {
-					padding: @base * 2 0;
-					border-top: 2px solid darken(desaturate(@color-mast, 10%), 20%);
-					border-bottom: 2px solid darken(desaturate(@color-mast, 10%), 20%);
+					&:hover {
+						background: lighten(desaturate(@color-mast, 10%), 15%);
+					}
+					
+
+					span {
+						padding: @base * 2 0;
+						border-top: 2px solid darken(desaturate(@color-mast, 10%), 20%);
+						border-bottom: 2px solid darken(desaturate(@color-mast, 10%), 20%);
+					}
 				}
 			}
+
 		}
 	}
 }
