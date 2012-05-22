@@ -43,7 +43,7 @@
 						</xsl:for-each>
 
 						<a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
-							<span data-icon="l" class="icon"></span>
+							<span class="icon">l</span>
 							<span>See more events</span>
 						</a>
 
@@ -145,7 +145,7 @@
 
 											<xsl:when test="$start-date = $end-date or not(date/date/end)">
 												<span class="date">
-													<span data-icon="\" class="icon"></span>
+													<span class="icon">\</span>
 													<xsl:text> </xsl:text>
 													<xsl:value-of select="$start-date" />
 												</span>
@@ -153,7 +153,7 @@
 												<xsl:text> &#160;</xsl:text>
 
 												<span class="time">
-													<span data-icon="t" class="icon"></span>
+													<span class="icon">t</span>
 													<xsl:text> </xsl:text>
 													<xsl:value-of select="$start-time" />
 
@@ -168,7 +168,7 @@
 
 												<span class="date-range">
 
-													<span data-icon="\" class="icon"></span>
+													<span class="icon">\</span>
 													<xsl:text> </xsl:text>
 
 													<span class="start">

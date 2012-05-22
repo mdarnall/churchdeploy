@@ -62,9 +62,9 @@
 						</li> -->
 					</ul>
 					<ul class="nav pull-right">
-						<li><a href="/24/give/"><span data-icon="">&#160;</span>Give</a></li>
+						<li><a href="/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
-						<li><a href="#"><span data-icon="t"></span>6:30am</a></li>
+						<li><a href="#"><span class="icon">t</span>6:30am</a></li>
 						<!-- <li class="divider-vertical"></li> -->
 
 						<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
@@ -81,7 +81,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:attribute>
-									<span data-icon="V" style="top: 1px; position: relative"></span>
+									<span class="icon">V</span>
 									<xsl:text>Live</xsl:text>									
 								</a>
 							</li>

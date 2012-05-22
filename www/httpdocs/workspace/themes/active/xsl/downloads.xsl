@@ -37,7 +37,7 @@
 								
 							</xsl:attribute>
 							
-							<span data-icon="F"></span>
+							<span class="icon">F</span>
 							<xsl:text>&#160;&#160;</xsl:text>
 							<xsl:value-of select="name" />
 							

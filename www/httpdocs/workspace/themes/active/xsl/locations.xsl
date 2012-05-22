@@ -69,7 +69,7 @@
 						</div>
 
 						<a href="http://maps.google.com/maps?q={$address}" class="more" target="_blank">
-							<span data-icon="G"></span>
+							<span class="icon">G</span>
 							<xsl:text> View on Google Maps</xsl:text>
 						</a>
 						

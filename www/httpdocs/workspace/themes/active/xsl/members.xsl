@@ -99,7 +99,7 @@
 											<xsl:value-of select="last-name" disable-output-escaping="yes" />
 										</h4>
 										<div>
-											<span class="icon" data-icon="M"></span>
+											<span class="icon">M</span>
 											<span class="email"><xsl:value-of select="email" /></span>
 										</div>
 									</div>
@@ -110,7 +110,7 @@
 							</li>
 						</xsl:for-each>
 						<a href="/103/staff/" class="more">
-							<span data-icon="g"></span>
+							<span class="icon">g</span>
 							<xsl:text>Meet our staff</xsl:text>
 						</a>
 					</ul>
