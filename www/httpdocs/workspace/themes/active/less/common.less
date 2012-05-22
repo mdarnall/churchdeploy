@@ -224,7 +224,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	margin: 5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .nav .nav-header {
 	#font > #proxima > .bold;
 }
 
@@ -266,7 +266,6 @@ input {
 }
 
 h1 {
-	font-weight: bold;
 	font-size: 64px;
 	line-height: 1.2;
 	text-align: center;
@@ -275,7 +274,6 @@ h1 {
 }
 
 h2 {
-	font-weight: bold;
 	font-size: 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -283,7 +281,6 @@ h2 {
 }
 
 h3 {
-	font-weight: bold;
 	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -474,7 +471,7 @@ h3 {
 	float: left;
 }
 
-.header {
+#overview {
 	.nav {
 		#font > #proxima > .light;
 		float: right;
@@ -635,6 +632,11 @@ h3 {
 	}
 
 	.twitter {
+
+		strong {
+			#font > #proxima > .bold;
+		}
+
 		background: @color-red;
 		color: @color-white;
 		line-height: 55px;
@@ -736,7 +738,6 @@ h3 {
 		display: block;
 		font-size: 26px;
 		margin: 20px 0;
-		font-weight: 300;
 	}
 
 	.nav-box {
