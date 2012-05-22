@@ -140,6 +140,10 @@ h1, h2, h3, h4, h5, h6, .nav .nav-header {
 	#font > #proxima > .bold;
 }
 
+em {
+	#font > #tisa > .italic;
+}
+
 // tags
 
 a {
@@ -926,7 +930,7 @@ h3 {
 				.date {
 					width: @calendar-width;
 					text-align: center;
-					#font > #proxima > .regular;
+					#font > #proxima > .bold;
 					position: absolute;
 					height: @calendar-height;
 					left: 15px;
@@ -934,7 +938,6 @@ h3 {
 					.month {
 						background: @color-accent;
 						color: #fff;
-						font-weight: bold;
 						font-size: 12px;
 						letter-spacing: 1px;
 						text-transform: uppercase;
@@ -944,7 +947,6 @@ h3 {
 
 					.day {
 						background: #fff;
-						font-weight: bold;
 						font-size: 26px;
 						color: @color-body-text;
 						line-height: @day-height;
@@ -1307,6 +1309,32 @@ h3 {
 // Phones only
 @media (max-width: 767px) {
   
+	body {
+		padding: 0;
+		overflow-x: hidden;
+	}
+
+	.navbar, #overview, .container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.header {
+		.nav {
+			float: none;
+			text-align: center;
+		}
+	}
+
+	.logo  {
+		float: none;
+
+		a {
+			margin: 0 auto;
+		}
+		
+		
+	}
 
 }
 
@@ -1332,8 +1360,6 @@ h3 {
 // --------------------------------------------------
 
 @media (max-width: 767px) {
-
-
 
 }
 
