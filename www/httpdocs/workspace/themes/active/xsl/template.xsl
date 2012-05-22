@@ -111,7 +111,7 @@
 		</div>
 	</div>
 
-	<div class="mast" id="overview">
+	<div class="header mast" id="overview">
 		<div class="container">
 			<xsl:call-template name="alerts" />
 			<div class="row">
