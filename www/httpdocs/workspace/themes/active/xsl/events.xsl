@@ -13,13 +13,13 @@
 
 		<div>
 
-			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'events'" />
-			</xsl:call-template>
-
 			<xsl:choose>
 
 				<xsl:when test="$position = 'column-right'">
+
+					<xsl:call-template name="class-position">
+						<xsl:with-param name="component" select="'events'" />
+					</xsl:call-template>
 
 					<h3>
 						<xsl:call-template name="pluralize">
@@ -51,7 +51,11 @@
 
 				</xsl:when>
 
-				<xsl:otherwise>
+				<xsl:when test="$position = 'column-center'">
+
+					<xsl:call-template name="class-position">
+						<xsl:with-param name="component" select="'events individual'" />
+					</xsl:call-template>
 
 					<div class="component-header">
 
@@ -251,7 +255,7 @@
 
 					</xsl:for-each>
 
-				</xsl:otherwise>
+				</xsl:when>
 
 			</xsl:choose>
 

@@ -821,6 +821,20 @@ h3 {
 
 	.component-events {
 	
+		&.individual {
+
+			.entry {
+				border: none;
+
+				.header,
+				.description,
+				.help-block {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+
 		.entry {
 			margin: @base * 3 0;
 			background: #fff;

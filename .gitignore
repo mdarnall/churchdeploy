@@ -1,4 +1,11 @@
-www/httpdocs/manifest/*
-*.DS_Store
-
-www/httpdocs/manifest/logs/main
+._*
+.Apple*
+.DS_Store
+*.esproj
+*~
+*.geany
+www/httpdocs/install-log.txt
+www/httpdocs/_docs/
+www/httpdocs/manifest/
+www/httpdocs/themes/*/css/*
+www/httpdocs/workspace/uploads/
