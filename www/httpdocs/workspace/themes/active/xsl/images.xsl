@@ -30,7 +30,7 @@
 							
 							<xsl:value-of select="$root" />
 							
-							<xsl:text>/extensions/jit_image_manipulation/lib/image.php?param=2/1170/</xsl:text>
+							<xsl:text>/image/2/1170/</xsl:text>
 							
 							<xsl:choose>
 								<xsl:when test="string-length(height)">

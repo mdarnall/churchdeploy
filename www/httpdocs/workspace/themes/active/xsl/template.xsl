@@ -313,11 +313,7 @@
 		}(window));
 		//</xsl:comment>
 	</script>
-<<<<<<< Updated upstream
-	
-=======
 
->>>>>>> Stashed changes
 <!-- 
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
 	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
