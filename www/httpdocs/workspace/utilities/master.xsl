@@ -49,7 +49,7 @@
             	<xsl:value-of select="$website-name" />
             </title>
 
-			<link rel="stylesheet" href="{$workspace}/bootstrap/css/bootstrap-combined.min.css" />
+			<!-- <link rel="stylesheet" href="{$workspace}/bootstrap/css/bootstrap-combined.min.css" /> -->
 			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
 
 			<meta charset="utf-8" />

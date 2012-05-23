@@ -1,9 +1,19 @@
 // these are being added to head, but should be added here to compile final optimized if we wanna get crazy agile
 // @import 'import.less'; // For importing CSS documents
-// @import '../../../bootstrap/less/bootstrap.less';
-// @import '../../../bootstrap/less/responsive.less';
 
-@import '../../../bootstrap/less/mixins.less';
+// Bootstrap Import
+@import '../../../bootstrap/less/bootstrap.less';
+
+//Bootstrap Responsive Custom
+@import "../../../bootstrap/less/variables.less"; 
+@import "../../../bootstrap/less/mixins.less";
+@import "../../../bootstrap/less/responsive-utilities.less";
+@import "../../../bootstrap/less/responsive-767px-max.less";
+@import "../../../bootstrap/less/responsive-768px-979px.less";
+// @import "../../../bootstrap/less/responsive-1200px-min.less";
+@import "../../../bootstrap/less/responsive-navbar.less";
+
+
 @import 'pictos.less';
 @import 'webfonts.less';
 
@@ -1445,12 +1455,39 @@ h3 {
 
 @media (min-width: 980px) {
 
-.twitter {
+	.header {
 
-	span {
-		font-size: 13px;
+		.nav {
+			text-align: right;
+			display: block;
+			float: none;
+			padding: 0;
+
+			li {
+				float: none;
+				display: inline;
+
+				a {
+					display: inline-block;
+					padding: 15px 0;
+					margin: 0 5px;
+				}
+			}
+		}
 	}
-}
+
+	.twitter {
+
+		span {
+			font-size: 13px;
+		}
+	}
+
+	.facebook {
+		margin-top: 0;
+		float: right;
+		display: inline;
+	}
 
 }
 
