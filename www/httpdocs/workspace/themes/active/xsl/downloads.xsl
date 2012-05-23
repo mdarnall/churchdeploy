@@ -62,6 +62,10 @@
 							</span> -->
 							
 						</a>
+
+						<xsl:call-template name="edit-entry">
+							<xsl:with-param name="link" select="concat($root, '/symphony/publish/downloads/edit/', @id, '/')" />
+						</xsl:call-template>
 						
 					</li>
 					

@@ -16,7 +16,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'55' => '{$pt1:43}',
+				'151' => '{$pt1:43}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -43,10 +43,10 @@
 				'name' => 'Members: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-13T07:52:42+00:00'
+				'release-date' => '2012-05-23T07:48:17+00:00'
 			);
 		}
 

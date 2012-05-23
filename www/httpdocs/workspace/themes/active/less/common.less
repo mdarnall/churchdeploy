@@ -131,7 +131,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 
 // bootstrap overrides
 
-[class^="icon-"] {//../../../php/request.php?a=../themes/active/img/logo.png
+[class^="icon-"] {
 	background-image: url(../../../bootstrap/img/glyphicons-halflings.png);
 }
 
@@ -792,6 +792,7 @@ h3 {
 			padding: 0 20px;
 			border: none;
 			margin: 0;
+			position: relative;
 
 			a {
 				border: none;
@@ -842,6 +843,12 @@ h3 {
 				a {
 					border-bottom: none;
 				}
+			}
+
+			.edit {
+				.edit-defaults;
+				top: @base;
+				right: @base;
 			}
 		}
 	}
@@ -1040,6 +1047,12 @@ h3 {
 					}
 				}
 			}
+
+			.edit {
+				.edit-defaults;
+				top: @base;
+				right: @base;
+			}
 		}
 
 		.more  {
@@ -1197,6 +1210,7 @@ h3 {
 		.entry {
 			background: @color-grey-accent;
 			padding: 0 20px;
+			position: relative;
 
 			a {
 				min-height: 50px;
@@ -1252,6 +1266,12 @@ h3 {
 
 			&.last a {
 				border-bottom: none;
+			}
+
+			.edit {
+				.edit-defaults;
+				bottom: @base;
+				right: @base;
 			}
 		}
 	}

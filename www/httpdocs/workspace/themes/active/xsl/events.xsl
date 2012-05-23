@@ -38,7 +38,45 @@
 
 						<xsl:for-each select="$entries[ position() &lt; 4 ]">
 
-							<xsl:call-template name="column-right-events-entry"/>
+								<li class="clearfix">
+
+									<xsl:call-template name="class-rows" />
+
+									<a href="{$root}/20/events/{@id}/{name/@handle}/">
+
+										<div class="date">
+
+											<div class="month">
+												<xsl:call-template name="format-date">
+													<xsl:with-param name="date" select="date/date/start/@iso" />
+													<xsl:with-param name="format" select="'%m-;'" />
+												</xsl:call-template>
+											</div>
+
+											<div class="day">
+												<xsl:call-template name="format-date">
+													<xsl:with-param name="date" select="date/date/start/@iso" />
+													<xsl:with-param name="format" select="'%d;'" />
+												</xsl:call-template>
+											</div>
+
+										</div>
+
+										<table class="info">
+											<tr>
+												<td>
+													<xsl:value-of select="name" disable-output-escaping="yes" />
+												</td>
+											</tr>
+										</table>
+
+									</a>
+
+									<xsl:call-template name="edit-entry">
+										<xsl:with-param name="link" select="concat($root, '/symphony/publish/events/edit/', @id, '/')" />
+									</xsl:call-template>
+
+								</li>
 
 						</xsl:for-each>
 
@@ -295,48 +333,6 @@
 	</xsl:if>
 
 </xsl:template>
-
-
-<xsl:template name="column-right-events-entry">
-
-	<li class="clearfix">
-
-		<xsl:call-template name="class-rows" />
-
-		<a href="{$root}/20/events/{@id}/{name/@handle}/">
-
-			<div class="date">
-
-				<div class="month">
-					<xsl:call-template name="format-date">
-						<xsl:with-param name="date" select="date/date/start/@iso" />
-						<xsl:with-param name="format" select="'%m-;'" />
-					</xsl:call-template>
-				</div>
-
-				<div class="day">
-					<xsl:call-template name="format-date">
-						<xsl:with-param name="date" select="date/date/start/@iso" />
-						<xsl:with-param name="format" select="'%d;'" />
-					</xsl:call-template>
-				</div>
-
-			</div>
-
-			<table class="info">
-				<tr>
-					<td>
-						<xsl:value-of select="name" disable-output-escaping="yes" />
-					</td>
-				</tr>
-			</table>
-
-		</a>
-
-	</li>
-
-</xsl:template>
-
 
 
 </xsl:stylesheet>
