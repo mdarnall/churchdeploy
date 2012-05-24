@@ -29,6 +29,11 @@
 					<xsl:for-each select="//teachings-featured-filtered/entry">
 						<div class="latest">
 							<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe>
+
+							<div class="actions">
+								Audio listen | download video
+							</div>
+
 						</div>
 					</xsl:for-each>
 					

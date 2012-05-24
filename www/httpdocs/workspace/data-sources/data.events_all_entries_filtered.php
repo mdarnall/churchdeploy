@@ -7,18 +7,19 @@
 		public $dsParamROOTELEMENT = 'events-all-entries-filtered';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '{$pt4}';
-		public $dsParamSTARTPAGE = '{$pt3}';
+		public $dsParamLIMIT = '{$pt4:5}';
+		public $dsParamSTARTPAGE = '{$pt3:1}';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'169' => '(if value of ({$pt2}) is (events))',
+				'35' => 'later than {$today}',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'name: raw',
 				'date',
 				'description',
@@ -37,10 +38,10 @@
 				'name' => 'Events: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-18T00:32:49+00:00'
+				'release-date' => '2012-05-24T10:12:41+00:00'
 			);
 		}
 

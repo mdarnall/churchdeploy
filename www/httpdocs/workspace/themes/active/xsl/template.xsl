@@ -21,10 +21,10 @@
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each> -->
 
-<!-- 	<script type="text/javascript">
+<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
-	//_gaq.push(['_setAccount', 'UA-XXX']);
+	_gaq.push(['_setAccount', 'UA-32000708-1']);
 	_gaq.push(['_trackPageview']);
 
 	(function() {
@@ -33,7 +33,7 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-	</script> -->
+</script>
 
 </xsl:template>
 

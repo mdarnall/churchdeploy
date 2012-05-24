@@ -896,9 +896,12 @@ h3 {
 			}
 
 			.edit {
-				.edit-defaults;
+				//.edit-defaults;
+				//top: @base;
+				//left: @base;
+				position: relative;
 				top: @base;
-				left: @base;
+				left: @base * .5;
 			}
 
 			.header {
@@ -1329,13 +1332,21 @@ h3 {
 
 	.latest {
 		text-align: center;
+		width: 650px;
+		margin: auto;
 
 		.video {
 			width: 650px;
 			height: 365px;
-			margin: @base * 1.5 auto;
+			margin: @base * .5 auto;
 
 		}
+	}
+
+	.actions {
+		background: #e5e5e5;
+		padding: @base;
+		margin: @base * .5 0;
 	}
 }
 

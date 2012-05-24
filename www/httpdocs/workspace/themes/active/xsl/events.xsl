@@ -92,10 +92,19 @@
 				<xsl:when test="$position = 'column-center'">
 
 					<xsl:call-template name="class-position">
-						<xsl:with-param name="component" select="'events individual'" />
+						<xsl:with-param name="component">
+							<xsl:text>events</xsl:text>
+							<xsl:if test="$single">
+								<xsl:text> individual</xsl:text>
+							</xsl:if>
+						</xsl:with-param>
 					</xsl:call-template>
 
 					<div class="component-header">
+
+						<xsl:if test="$pt2 = 'events' and $pt5 = 'past'">
+							<p><a href="{$root}/{$pt1}/{$pt2}/">Show current events »</a></p>
+						</xsl:if>
 
 						<xsl:choose>
 
@@ -106,7 +115,24 @@
 							<xsl:otherwise>
 								<xsl:call-template name="cd-pagination">
 									<xsl:with-param name="pagination" select="$entries/../pagination" />
-									<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5, '/', $pt6, '/' )" />
+									<xsl:with-param name="pagination-url">
+										<xsl:value-of select="$root" /><xsl:text>/</xsl:text>
+										<xsl:if test="$pt1">
+											<xsl:value-of select="$pt1" /><xsl:text>/</xsl:text>
+										</xsl:if>
+										<xsl:if test="$pt2">
+											<xsl:value-of select="$pt2" /><xsl:text>/</xsl:text>
+										</xsl:if>
+										<xsl:if test="$pt3">
+											<xsl:value-of select="'$'" /><xsl:text>/</xsl:text>
+										</xsl:if>
+										<xsl:if test="$pt4">
+											<xsl:value-of select="$pt4" /><xsl:text>/</xsl:text>
+										</xsl:if>
+										<xsl:if test="$pt5">
+											<xsl:value-of select="$pt5" /><xsl:text>/</xsl:text>
+										</xsl:if>
+									</xsl:with-param>
 								</xsl:call-template>
 							</xsl:otherwise>
 
@@ -124,9 +150,9 @@
 						</xsl:variable>
 
 						<xsl:variable name="date-format" select="'%d-;, %m+; %d;, %y+;'"/>
-						<xsl:variable name="time-format" select="'#h;:#0m; #TS;'"/>
+						<xsl:variable name="time-format" select="'#h;:#0m;&#160;#TS;'"/>
 
-						<xsl:variable name="start-date">
+						<xsl:variable name="start-date"> 
 							<xsl:call-template name="format-date">
 								<xsl:with-param name="date" select="date/date/start/@iso" />
 								<xsl:with-param name="format" select="$date-format" />
@@ -164,7 +190,9 @@
 							</xsl:if>
 
 							<div class="events-header">
+
 								<h2 class="header">
+
 									<xsl:choose>
 										<xsl:when test="$single">
 											<xsl:value-of select="name" disable-output-escaping="no" />
@@ -176,7 +204,10 @@
 										</xsl:otherwise>
 									</xsl:choose>
 
-					
+									<xsl:call-template name="edit-entry">
+										<xsl:with-param name="link" select="concat($root, '/symphony/publish/events/edit/', @id, '/')" />
+									</xsl:call-template>
+									
 								</h2>
 
 								<div class="help-block clearfix">
@@ -245,10 +276,6 @@
 							
 									</span>
 
-									<xsl:call-template name="edit-entry">
-										<xsl:with-param name="link" select="concat($root, '/symphony/publish/events/edit/', @id, '/')" />
-									</xsl:call-template>
-
 								</div>
 
 							</div>
@@ -300,9 +327,10 @@
 			<xsl:if test="$pt2 = 'events'">
 
 				<div class="component-footer">
+
 					<xsl:call-template name="cd-pagination">
 						<xsl:with-param name="pagination" select="$entries/../pagination" />
-						<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5 )" />
+						<xsl:with-param name="pagination-url" select="concat( $root, '/', $pt1, '/', $pt2, '/', '$', '/', $pt4, '/', $pt5, '/')" />
 					</xsl:call-template>
 
 					<xsl:if test="not($single)">
@@ -311,16 +339,16 @@
 								<p>
 									<xsl:choose>
 										<xsl:when test="$pt5 = 'related'">
-											<a href="{$root}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/">« View past events</a>
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/">« Show past events</a>
 										</xsl:when>
 										<xsl:otherwise>
-											<a href="{$root}/{$pt1}/{$pt2}/1/5/past/">« View past events</a>
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/past/">« Show past events</a>
 										</xsl:otherwise>
 									</xsl:choose>
 								</p>
 							</xsl:when>
 							<xsl:otherwise>
-								<p><a href="{$root}/{$pt1}/{$pt2}/">View current events »</a></p>
+								<p><a href="{$root}/{$pt1}/{$pt2}/">Show current events »</a></p>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:if>

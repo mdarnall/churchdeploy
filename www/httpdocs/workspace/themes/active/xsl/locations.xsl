@@ -32,13 +32,36 @@
 					</xsl:call-template>
 				</xsl:variable>
 
+				<xsl:variable name="latlon">
+					<xsl:value-of select="latitude" />
+					<xsl:text>, </xsl:text>
+					<xsl:value-of select="longitude" />
+				</xsl:variable>
+
 				<div>
 					
 					<xsl:call-template name="class-rows" />
 					
-					<xsl:if test="string-length(longitude) and string-length(latitude)">
-						
-						<div class="map" style="background-image: url('http://maps.googleapis.com/maps/api/staticmap?center={$address}&amp;zoom=14&amp;size=350x280&amp;markers={$address}&amp;maptype=roadmap&amp;sensor=false&amp;scale=1')">
+					<xsl:if test="string-length(longitude) and string-length(latitude) or string-length(address)">
+
+						<div class="map">
+							
+							<xsl:attribute name="style">
+								<xsl:text>background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=</xsl:text>
+								<xsl:choose>
+									<xsl:when test="string-length(longitude) and string-length(latitude)">
+									 	<xsl:value-of select="$latlon" />
+									 	<xsl:text>&amp;zoom=14&amp;size=350x280&amp;markers=</xsl:text>
+									 	<xsl:value-of select="$latlon" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="$address" />
+									 	<xsl:text>&amp;zoom=14&amp;size=350x280&amp;markers=</xsl:text>
+									 	<xsl:value-of select="$address" />
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:text>&amp;maptype=roadmap&amp;sensor=false&amp;scale=1')</xsl:text>
+							</xsl:attribute>
 
 							<div class="screen"></div>
 
