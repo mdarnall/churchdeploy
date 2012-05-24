@@ -63,7 +63,7 @@
 			<meta name="application-name" content="{$website-name}" />
 			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
 			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
-			<meta name="responsimage" data-server="{$root}/image/2/width/height/anchor/0/uploads/images/filename" />
+			<meta name="responsimage" data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename" />
 
 			<xsl:call-template name="template-head"/>
 

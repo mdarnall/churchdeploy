@@ -23,15 +23,14 @@
 					<xsl:call-template name="class-rows">
 						<xsl:with-param name="class" select="'image'" />
 					</xsl:call-template>
-					
-					<img>
 
-						<xsl:attribute name="src">
-							
-							<xsl:value-of select="$root" />
-							
-							<xsl:text>/image/2/1170/</xsl:text>
-							
+					<img width="100%">
+
+						<xsl:attribute name="data-responsimage">
+							<xsl:value-of select="image/filename" />
+						</xsl:attribute>
+
+						<xsl:attribute name="height">
 							<xsl:choose>
 								<xsl:when test="string-length(height)">
 									<xsl:value-of select="height" />
@@ -40,9 +39,9 @@
 									<xsl:text>360</xsl:text>
 								</xsl:otherwise>
 							</xsl:choose>
-							
-							<xsl:text>/</xsl:text>
-							
+						</xsl:attribute>
+
+						<xsl:attribute name="data-responsimage-anchor">
 							<xsl:choose>
 								<xsl:when test="position = 'Top left'"     >1</xsl:when>
 								<xsl:when test="position = 'Top center'"   >2</xsl:when>
@@ -55,15 +54,6 @@
 								<xsl:when test="position = 'Bottom right'" >9</xsl:when>
 								<xsl:otherwise>5</xsl:otherwise>
 							</xsl:choose>
-							
-							<xsl:text>/0</xsl:text>
-							
-							<xsl:value-of select="image/@path" />
-							
-							<xsl:text>/</xsl:text>
-							
-							<xsl:value-of select="image/filename" />
-							
 						</xsl:attribute>
 				
 					</img>

@@ -62,7 +62,7 @@
 						</li> -->
 					</ul>
 					<ul class="nav pull-right">
-						<li><a href="/24/give/"><span class="icon">&#160;</span>Give</a></li>
+						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#"><span class="icon">t</span>6:30am</a></li>
 
@@ -113,7 +113,11 @@
 			<xsl:call-template name="alerts" />
 			<div class="row">
 				<div class="span12">
-					<div class="logo"><a href="{$root}"></a></div>
+
+					<a href="{$root}">
+						<img data-responsimage="logo-big-4fbe1f82408e2.png" style="width: 120px; height: 120px;" class="logo" />
+					</a>
+					
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 							<xsl:variable name="entry-id" select="@id" />
@@ -248,7 +252,7 @@
 					Wednesday at 7:00 PM</p>
 					<h4>Online Giving</h4>
 					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
-					<p><a href="#" class="btn btn-primary give">Give →</a></p>
+					<p><a href="{$root}/24/give/" class="btn btn-primary give">Give →</a></p>
 				</div>
 				<div class="span3">
 					<h4><xsl:value-of select="$website-name" /></h4>
