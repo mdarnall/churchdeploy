@@ -83,7 +83,16 @@
 			</xsl:attribute>
 
 			<xsl:call-template name="edit-entry">
-				<xsl:with-param name="link" select="concat($root, '/symphony/publish/tags/edit/', $pt1, '/')" />
+				<xsl:with-param name="link">
+					<xsl:choose>
+						<xsl:when test="$pt1">
+							<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/', $pt1, '/')" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/',//tags-all-entries/entry[tag/@handle = 'home']/@id , '/')" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:with-param>
 				<xsl:with-param name="class" select="'edit-tag'" />
 			</xsl:call-template>
 			

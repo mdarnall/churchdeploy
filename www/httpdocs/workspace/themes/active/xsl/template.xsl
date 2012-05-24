@@ -65,15 +65,15 @@
 						<li><a href="/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#"><span class="icon">t</span>6:30am</a></li>
-						<!-- <li class="divider-vertical"></li> -->
 
-						<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
+						<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
+							<li class="divider-vertical"></li>
 							<li>
 								<a href="#">
 									<xsl:attribute name="class">
 										<xsl:text>modalLiveLink</xsl:text>
 										<xsl:choose>
-											<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
+											<xsl:when test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 												<xsl:text> online</xsl:text>
 											</xsl:when>
 											<xsl:otherwise>
@@ -100,14 +100,11 @@
 			<h3>
 				<xsl:value-of select="$website-name" disable-output-escaping="yes" />
 				<xsl:text> — Live</xsl:text>
-				<xsl:call-template name="live-status"/>
 			</h3>
 		</div>
 		<div class="modal-body">
-			<xsl:for-each select="//xml-ustreamcom/xml/results">
-				<div class="ustream-embed"></div>
-				<span class="url hidden">http://www.ustream.tv/embed/<xsl:value-of select="id" disable-output-escaping="yes" />/?autoplay=true</span>
-			</xsl:for-each>
+			<div class="ustream-embed"></div>
+			<span class="url hidden">http://www.ustream.tv/embed/4325662/?autoplay=true</span>
 		</div>
 	</div>
 
@@ -146,6 +143,27 @@
 					</ul>
 				</div>
 			</div>
+			<xsl:if test="not($pt1) or $pt1 = 43">
+
+				<div class="row">
+					<div class="span8">
+						<h2>Welcome to Athey Creek</h2>
+
+						<p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					</div>
+					<div class="span3">
+						<div>
+							meeting times | i'm new here<br />
+							<br />
+							Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br />
+							<br />
+							John 6:33
+						</div>
+
+					</div>
+				</div>				
+			</xsl:if>
+
 		</div>
 	</div>
 
@@ -225,9 +243,9 @@
 				</xsl:for-each>
 				<div class="span3">
 					<h4>Main services</h4>
-					<p>Saturday at 6:00 pm<br />
-					Sunday at 8:30 and 11:00 am<br />
-					Wednesday at 7:00 pm</p>
+					<p>Saturday at 6:00 PM<br />
+					Sunday at 8:30 and 11:00 AM<br />
+					Wednesday at 7:00 PM</p>
 					<h4>Online Giving</h4>
 					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
 					<p><a href="#" class="btn btn-primary give">Give →</a></p>
@@ -241,7 +259,7 @@
 					</address>
 					<h4>Office Hours</h4>
 					<p>
-						<xsl:text>9:00 AM to 5:00 PM — Tues., Thr., Fri.</xsl:text><br />
+						<xsl:text>9:00 AM to 5:00 PM — Tue., Thr., Fri.</xsl:text><br />
 						<xsl:text>9:00 AM to 12:00 PM — Wed.</xsl:text><br />
 						<xsl:text>Closed Monday</xsl:text>
 					</p>
@@ -256,7 +274,7 @@
 						<xsl:value-of select="$this-year" />
 						<xsl:text>. </xsl:text>
 						<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-						<xsl:text>. All rights reserved.</xsl:text>
+						<xsl:text>. All&#160;rights&#160;reserved.</xsl:text>
 					<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right facebook">Visit us on Facebook</a>				
 					</div>
 				</div>
@@ -275,7 +293,7 @@
 
 
 <xsl:template name="template-footer-outside-container">
-
+<!--
 	<script type="text/javascript">
 		<xsl:comment>
 		(function (window){
@@ -290,7 +308,7 @@
 					"scripts":[
 						"/workspace/js/plugins.min.js",
 						"/workspace/themes/active/js/plugins.min.js",
-						"/workspace/themes/active/js/common.min.js"
+						"/workspace/themes/active/js/common.js"
 					]
 				};
 
@@ -314,24 +332,12 @@
 		//</xsl:comment>
 	</script>
 
-<!-- 
+  -->
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<script type="text/javascript" src="http://use.typekit.com/tix6unz.js"></script>
+	<script type="text/javascript" src="{$workspace}/themes/active/js/plugins.min.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
- -->
-
-</xsl:template>
 
 
-<xsl:template name="live-status">
-	<xsl:choose>
-		<xsl:when test="//xml-ustreamcom/xml/results/status = 'live'">
-			<span class="status"> (broadcasting)</span>
-		</xsl:when>
-		<xsl:otherwise>
-			<span class="status"> (idle)</span>
-		</xsl:otherwise>
-	</xsl:choose>
 </xsl:template>
 
 

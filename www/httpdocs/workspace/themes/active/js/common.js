@@ -1,26 +1,17 @@
-/* Author: Jonathan Simcoe, Kirk Strobeck, et al. */
 
-$(window).load(
-	function() 
-	{
-
-		
-		//try{Typekit.load();}catch(e){}
-
-
-
-    	//reftagger
-    	/*
-    	Logos.ReferenceTagging.lbsBibleVersion = "KJV";
-		Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
-		Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
-		Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
-		Logos.ReferenceTagging.lbsTargetSite = "biblia";
-		Logos.ReferenceTagging.tag();
-		Logos.ReferenceTagging.lbsCssOverride = true;
-		*/
-		// Reveal mini logo when scrolling down
-		
+$(window).load( function() {
+	//reftagger
+	/*
+	Logos.ReferenceTagging.lbsBibleVersion = "KJV";
+	Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
+	Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
+	Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+	Logos.ReferenceTagging.lbsTargetSite = "biblia";
+	Logos.ReferenceTagging.tag();
+	Logos.ReferenceTagging.lbsCssOverride = true;
+	*/
+	// Reveal mini logo when scrolling down
+	
 //		$(window).scroll(
 //			function() 
 //			{
@@ -35,64 +26,44 @@ $(window).load(
 //				}
 //			}
 //		);
+	
+	$('.modalLiveLink').click( function(e) {
+		e.preventDefault();
+		$('.modalLive').modal('show');
+		return false;
+	});
+	
+	$('.modalLive .close').click( function(e) {
+		e.preventDefault();
+		$('.modalLive').modal('hide');
+		return false;
+	});
+	
+	$('.modalLive').on('show', function () {
+		var url = $('.modalLive .modal-body .url').html();
+		
+		$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="356" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+	});
+	
+	$('.modalLive').on('hidden', function () {
+		$('.modalLive .modal-body .ustream-embed').html('#');
+		$('.modalLive').hide();
+	});
+	
+	alertLiveCookie = $.cookie('alertLive');
 
-		
-		$('.modalLiveLink').click(
-			function(e)
+	if(alertLiveCookie != 'hidden')
+	{
+		$('.alertLive').removeClass('hidden');
+		$('.alertLive .close').click(
+			function()
 			{
-				e.preventDefault();
-				
-				$('.modalLive').modal('show');
-				
-				return false;
+				$.cookie('alertLive', 'hidden', { expires: 1, path: '/' });
 			}
 		);
-		
-		$('.modalLive .close').click(
-			function(e)
-			{
-				e.preventDefault();
-				
-				$('.modalLive').modal('hide');
-							
-				return false;
-			}
-		);
-		
-		$('.modalLive').on(
-			'show', 
-			function () 
-			{
-				var url = $('.modalLive .modal-body .url').html();
-				
-				$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="356" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
-			}
-		);
-		
-		$('.modalLive').on(
-			'hidden', 
-			function () 
-			{
-				$('.modalLive .modal-body .ustream-embed').html('#');
-			}
-		);
-		/*
-		alertLiveCookie = $.cookie('alertLive');
-
-		if(alertLiveCookie != 'hidden')
-		{
-			$('.alertLive').removeClass('hidden');
-
-			$('.alertLive .close').click(
-				function()
-				{
-					$.cookie('alertLive', 'hidden', { expires: 1, path: '/' });
-				}
-			);
-		}
-		*/
 	}
-);
+	
+});
 
 // exists
 

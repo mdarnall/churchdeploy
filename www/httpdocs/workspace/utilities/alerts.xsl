@@ -5,7 +5,7 @@
 
 <xsl:template name="alerts">
 	
-	<xsl:if test="//xml-ustreamcom/xml/results/status = 'live'">
+	<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 
 		<div class="alert alert-success alertLive hidden">
 			<a class="close" data-dismiss="alert">×</a>
