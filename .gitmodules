@@ -141,4 +141,7 @@
 	url = http://github.com/brendo/scaffolds.git
 [submodule "www/httpdocs/extensions/publishfiltering"]
 	path = www/httpdocs/extensions/publishfiltering
-	url = http://github.com/kirkstrobeck/publishfiltering.git
+	url = https://github.com/nickdunn/publishfiltering.git
+[submodule "1.6.1"]
+	path = 1.6.1
+	url = https://github.com/nickdunn/publishfiltering.git
