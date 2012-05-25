@@ -30,6 +30,7 @@
 							<xsl:value-of select="image/filename" />
 						</xsl:attribute>
 
+						<!-- 						
 						<xsl:attribute name="height">
 							<xsl:choose>
 								<xsl:when test="string-length(height)">
@@ -39,7 +40,8 @@
 									<xsl:text>360</xsl:text>
 								</xsl:otherwise>
 							</xsl:choose>
-						</xsl:attribute>
+						</xsl:attribute> 
+						-->
 
 						<xsl:attribute name="data-responsimage-anchor">
 							<xsl:choose>
