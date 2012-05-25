@@ -164,7 +164,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 .mast .nav-pills { margin-right: 5px; }
 .navbar .divider-vertical {
 	background: darken(desaturate(@color-mast, 10%), 15%);
-	border-right: 1px solid darken(desaturate(@color-mast, 10%), 20%);
+	border-right: 1px solid darken(desaturate(@color-mast, 10%), 10%);
 	height: 30px;
 	margin: 5px;
 }
@@ -271,7 +271,7 @@ h3 {
 	margin-top: 40px;
 
 	.row {
-		margin: 0 auto;
+		margin: 40px auto 0 auto;
 		
 		.span8 {
 			margin-left: 0;
@@ -285,25 +285,33 @@ h3 {
 			}
 		}
 		.span4 {
-			background: darken(desaturate(@color-mast, 10%), 15%);
+			background: darken(desaturate(@color-mast, 10%), 5%);
 			.link-bar {
 				.small-grey-text;
 				#font > #proxima > .bold;
+				color: #fff;
 				margin:0;
 				padding: 10px 0;
 				text-align: center;
-				background: darken(desaturate(@color-mast, 20%), 30%);
+				background: darken(desaturate(@color-mast, 25%), 25%);
 				a {
 					color: #fff;
 					padding: 0 5px;
-				}
-				&:hover {
-					background: darken(desaturate(@color-mast, 20%), 35%);
+					&:hover {
+						color: darken(desaturate(@color-mast, 20%), 55%);
+					}
 				}
 			}
 			blockquote {
+				.body-text-serif;
 				border: none;
-				padding: 15px;
+				padding: 15px 15px 0 15px;
+			}
+			cite {
+				.small-grey-text;
+				color: #fff;
+				display: block;
+				padding: 0 15px 5px 15px;
 			}
 		}
 	}
@@ -342,7 +350,7 @@ h3 {
 	}
 
 	.navbar-inner {
-		background: darken(desaturate(@color-mast, 10%), 10%);
+		background: darken(desaturate(@color-mast, 10%), 5%);
 		filter: none;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -1416,6 +1424,7 @@ h3 {
 
 // Phones only
 @media (max-width: 767px) {
+
   
 	body {
 		padding: 0;
@@ -1431,33 +1440,6 @@ h3 {
 		margin: 0;
 	}
 
-	.header {
-		.logo  {
-			float: none;
-
-			a {
-				margin: 30px auto 40px auto;
-			}
-		
-		}
-		.nav {
-			text-align: center;
-			display: block;
-			float: none;
-			padding: 0;
-
-			li {
-				float: none;
-				display: inline;
-
-				a {
-					display: inline-block;
-					padding: 15px 0;
-					margin: 0 5px;
-				}
-			}
-		}
-	}
 
 	.subnav {
 		li {
@@ -1491,6 +1473,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 979px) {
 
 
+
 }
 
 
@@ -1510,24 +1493,61 @@ h3 {
 
 @media (max-width: 767px) {
 
-}
-
-
-
-// PORTRAIT TABLET TO DEFAULT DESKTOP
-// ----------------------------------
-
-@media (min-width: 768px) and (max-width: 979px) {
-
-
 
 }
+
 
 
 
 // TABLETS AND BELOW
 // -----------------
 @media (max-width: 979px) {
+
+	.navbar-inner {
+		.nav {
+			&.pull-right {
+				float: none;
+				text-align: center;
+				
+				li {
+					float: none;
+					display: inline;
+					
+					a {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	.header {
+		.logo  {
+			display: block;
+			float: none;
+			margin: 0 auto 30px auto;
+			width: 120px;
+			height: 120px;
+		
+		}
+		.nav {
+			text-align: center;
+			display: block;
+			float: none;
+			padding: 0 75px;
+
+			li {
+				float: none;
+				display: inline;
+
+				a {
+					display: inline-block;
+					padding: 15px 0;
+					margin: 0 5px;
+				}
+			}
+		}
+	}
 	.column-full-width {
 		.nav-box {
 			.row {
@@ -1543,6 +1563,21 @@ h3 {
 
 }
 
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+	.header {
+		.nav {
+			padding: 0 0;
+		}
+	}
+
+
+}
+
 
 
 // DEFAULT DESKTOP
@@ -1550,13 +1585,12 @@ h3 {
 
 @media (min-width: 980px) {
 
-	.header {
+	.header {	
 
 		.nav {
 			text-align: right;
 			display: block;
 			float: none;
-			padding: 0;
 
 			li {
 				float: none;
@@ -1586,6 +1620,17 @@ h3 {
 
 }
 
+
+@media (max-width: 480px) {
+
+	.header {
+		.nav {
+			padding: 0 0;
+		}
+	}
+
+
+}
 
 
 // LARGE DESKTOP & UP

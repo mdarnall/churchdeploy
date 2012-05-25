@@ -46,15 +46,17 @@
 
 			<div class="container">
 
+<!--
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
+-->
 				<!-- <a class="brand first" href="{$root}">
 					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
 				</a> -->
-				<div class="nav-collapse">
+				<div>
 					<ul class="nav">
 						<!-- <li class="entry "><a href="#">Login</a></li> -->
 						<!-- <li>
@@ -114,8 +116,8 @@
 			<div class="row">
 				<div class="span12">
 
-					<a href="{$root}">
-						<img data-responsimage="logo-big-4fbe1f82408e2.png" style="width: 120px; height: 120px;" class="logo" />
+					<a href="{$root}" class="logo">
+						<img data-responsimage="logo-big-4fbe1f82408e2.png" style="width: 120px; height: 120px;" />
 					</a>
 					
 					<ul class="main nav nav-pills">
@@ -152,18 +154,17 @@
 				<div class="row">
 					<div class="span8">
 						<h2>Welcome to Athey Creek</h2>
-
-						<p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>We hope this website is helpful in communicating who we are. To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
+the Bible, and serve one another. We believe church is supposed to be like a 
+hospital, a place of healing and refreshment.</p>
 					</div>
 					<div class="span4">
 						<div>
 							<div class="link-bar">
 							<a href="/7761/meetings/" class="link-home">Meeting Times</a>&#160;&#160;|&#160;&#160;<a href="/13391/im-new-here/" class="link-home">I'm New Here</a>
 							</div>
-							<blockquote>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</blockquote>
+							<blockquote>&#8220;For the bread of God is he which cometh down from heaven, and giveth life unto the world.&#8221;</blockquote>
 							<cite>John 6:33</cite>
-
-							
 						</div>
 
 					</div>
