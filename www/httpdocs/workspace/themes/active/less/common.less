@@ -88,7 +88,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 		padding: 12px 14px;
 
 		&:hover {
-			color: darken(@color-mast, 40%);
+			background: darken(@color-mast, 10%);
 		}
 	}
 }
@@ -237,19 +237,6 @@ h3 {
 
 // classes
 
-/*[data-icon]:before {
-	content: attr(data-icon);
-	font-family: @icons;
-	font-weight: normal;
-	font-style: normal;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
-	position: relative;
-	font-size: 20px;
-	margin-right: 7px;
-	top: 1px;
-}*/
-
 .icon {
 	font-family: @icons;
 	font-weight: normal;
@@ -279,7 +266,42 @@ h3 {
 
 	.row {
 		margin: 0 auto;
+		
+		.span8 {
+			margin-left: 0;
+			h2 {
+				color: #fff;
+				margin-top: 0;
+			}
+			p {
+				.body-text-serif;
+				color: #fff;
+			}
+		}
+		.span4 {
+			background: darken(desaturate(@color-mast, 10%), 15%);
+			.link-bar {
+				.small-grey-text;
+				#font > #proxima > .bold;
+				margin:0;
+				padding: 10px 0;
+				text-align: center;
+				background: darken(desaturate(@color-mast, 20%), 30%);
+				a {
+					color: #fff;
+					padding: 0 5px;
+				}
+				&:hover {
+					background: darken(desaturate(@color-mast, 20%), 35%);
+				}
+			}
+			blockquote {
+				border: none;
+				padding: 15px;
+			}
+		}
 	}
+	
 }
 
 .modalLive {
@@ -589,7 +611,7 @@ h3 {
 
 		background: @color-red;
 		color: @color-white;
-		line-height: 44px;
+		padding: 15px 0;
 
 		a {
 			color: inherit;
