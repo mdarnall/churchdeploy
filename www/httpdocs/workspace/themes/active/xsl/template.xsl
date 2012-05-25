@@ -181,6 +181,18 @@ hospital, a place of healing and refreshment.</p>
 			<div class="component component-teachings large">
 				<div class="latest">
 					<iframe src="http://player.vimeo.com/video/42127479?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen" width="620" height="349"></iframe>
+					<div class="meta">
+						<h2 class="title">Sanctification &amp; the Gospel</h2>
+						<p>
+							<span class="teacher"><em>by</em> Brett Meador</span>
+							<span class="verse"><span class="icon">?</span> 2 Thessalonians 2:1-12</span>
+						</p>
+						<p>
+							<span class="day">Sunday</span>&#160;&#8226;&#160;
+							<span class="date">April 15, 2012</span>
+						</p>
+					</div>
+					<p class="description">This morning, we delve further into 2 Thessalonians as it relates to end times. We turn our attention to what the Bible says about the antichrist, a man of sin and a son of perdition.</p>
 				</div>
 			</div>	
 		</div>
@@ -189,8 +201,7 @@ hospital, a place of healing and refreshment.</p>
 			<ul class="component component-events">
 				<li class="entry clearfix odd first"><a href="http://atheycreek/20/events/12947/jr-high-bullwinkle-s-and-burgers/"><div class="date"><div class="month">Jul</div><div class="day">6</div></div><table class="info"><tbody><tr><td>Jr. High Bullwinkle’s and Burgers</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12947/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
 				<li class="entry clearfix even middle"><a href="http://atheycreek/20/events/12949/jr-high-boating-bonanza/"><div class="date"><div class="month">Jul</div><div class="day">12</div></div><table class="info"><tbody><tr><td>Jr. High Boating Bonanza</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12949/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
-				<li class="entry clearfix odd"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
-				<li class="entry clearfix even last"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
+				<li class="entry clearfix odd last"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
 				<a href="http://atheycreek/20/events/1/5/related/29/" class="more"><span class="icon">l</span><span>See more events</span></a>
 			</ul>
 		</div>
