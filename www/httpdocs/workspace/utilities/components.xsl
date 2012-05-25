@@ -102,21 +102,21 @@
 				</xsl:when>
 
 				<!-- Current entries -->
-				<xsl:otherwise>
+				<xsl:when test="$pt2 = 'events'">
 					<!-- <xsl:when test="count(//events-all-entries-filtered/entry)"> -->
 					<xsl:call-template name="component-events">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//events-all-entries-filtered/entry" />
 					</xsl:call-template>
-				</xsl:otherwise>
+				</xsl:when>
 
 				<!-- Tagged entries -->
-				<!-- <xsl:otherwise>
+				<xsl:otherwise>
 					<xsl:call-template name="component-events">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//events-entries-by-tag/entry" />
 					</xsl:call-template>
-				</xsl:otherwise> -->
+				</xsl:otherwise>
 
 			</xsl:choose>
 

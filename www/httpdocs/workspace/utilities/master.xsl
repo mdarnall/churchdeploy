@@ -63,7 +63,11 @@
 			<meta name="application-name" content="{$website-name}" />
 			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
 			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
-			<meta name="responsimage" data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename" />
+			<meta name="responsimage" 
+				data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename" 
+				data-static="{$workspace}/img/spacer.gif"
+				data-loading="{$workspace}/img/loading.gif"
+			/>
 
 			<xsl:call-template name="template-head"/>
 
@@ -100,19 +104,28 @@
 			
 			<div class="container main-container">
 				<xsl:call-template name="template-header-inside-container"/>
-				<xsl:call-template name="toolkit"/>
+				
+
 				<xsl:choose>
-					<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
-						<xsl:call-template name="call-components">
-							<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
-						</xsl:call-template>
+					<xsl:when test="$pt1 = 'toolkit'">
+						<xsl:call-template name="toolkit"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:call-template name="call-components">
-							<xsl:with-param name="xpath" select="//layouts-default/entry"/>
-						</xsl:call-template>
+						<xsl:choose>
+							<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
+								<xsl:call-template name="call-components">
+									<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="call-components">
+									<xsl:with-param name="xpath" select="//layouts-default/entry"/>
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>	
 					</xsl:otherwise>
 				</xsl:choose>
+
 				<xsl:call-template name="template-footer-inside-container"/>
 			</div>
 

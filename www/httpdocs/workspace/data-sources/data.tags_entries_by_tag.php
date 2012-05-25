@@ -13,7 +13,6 @@
 		public $dsParamREQUIREDPARAM = '$pt1:43';
 		public $dsParamPARAMOUTPUT = 'layout';
 		public $dsParamSORT = 'system:id';
-		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
@@ -35,7 +34,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2011-12-08T15:35:07+00:00'
+				'release-date' => '2012-05-25T00:36:06+00:00'
 			);
 		}
 

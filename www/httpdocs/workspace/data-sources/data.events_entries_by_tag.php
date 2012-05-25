@@ -17,14 +17,16 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
+				'35' => 'later than {$today}',
 				'137' => '{$pt1:43}',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
+				'name',
 				'date',
 				'description',
-				'location: name-formal: raw'
+				'location: name-formal'
 		);
 
 
@@ -38,10 +40,10 @@
 				'name' => 'Events: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T20:40:19+00:00'
+				'release-date' => '2012-05-24T23:23:17+00:00'
 			);
 		}
 

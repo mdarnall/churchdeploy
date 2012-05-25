@@ -6,7 +6,7 @@
 
 		public $dsParamROOTELEMENT = 'downloads-entries-by-tag';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
@@ -17,10 +17,11 @@
 
 		public $dsParamFILTERS = array(
 				'131' => '{$pt1:43}',
+				'206' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
+				'name',
 				'file'
 		);
 
@@ -35,10 +36,10 @@
 				'name' => 'Downloads: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T17:53:23+00:00'
+				'release-date' => '2012-05-24T23:22:04+00:00'
 			);
 		}
 

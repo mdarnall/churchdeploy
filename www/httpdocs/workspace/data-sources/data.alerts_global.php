@@ -2,11 +2,11 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcetwitter extends Datasource{
+	Class datasourcealerts_global extends Datasource{
 
-		public $dsParamROOTELEMENT = 'twitter';
+		public $dsParamROOTELEMENT = 'alerts-global';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
@@ -15,10 +15,14 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
+				'227' => 'yes',
+				'221' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'content'
+				'url',
+				'content: formatted',
+				'can-be-closed'
 		);
 
 
@@ -29,18 +33,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Twitter',
+				'name' => 'Alerts: Global',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-16T07:16:44+00:00'
+				'release-date' => '2012-05-25T00:39:55+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '23';
+			return '26';
 		}
 
 		public function allowEditorToParse(){

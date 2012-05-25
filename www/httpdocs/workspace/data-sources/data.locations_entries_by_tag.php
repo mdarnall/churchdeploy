@@ -17,11 +17,12 @@
 
 		public $dsParamFILTERS = array(
 				'142' => '{$pt1:43}',
+				'208' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name-formal: raw',
-				'name-casual: raw',
+				'name-formal',
+				'name-casual',
 				'description',
 				'address',
 				'city',
@@ -42,10 +43,10 @@
 				'name' => 'Locations: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-07T17:53:06+00:00'
+				'release-date' => '2012-05-24T23:25:03+00:00'
 			);
 		}
 

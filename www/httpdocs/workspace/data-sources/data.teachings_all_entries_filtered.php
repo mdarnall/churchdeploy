@@ -16,13 +16,13 @@
 
 		public $dsParamFILTERS = array(
 				'118' => '(if value of ({$pt2}) is (teachings))',
+				'216' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'system:pagination',
 				'date',
 				'title',
-				'title: raw',
 				'day',
 				'book',
 				'description'
@@ -42,7 +42,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-14T06:55:42+00:00'
+				'release-date' => '2012-05-24T23:29:00+00:00'
 			);
 		}
 

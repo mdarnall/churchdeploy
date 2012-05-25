@@ -17,14 +17,15 @@
 
 		public $dsParamFILTERS = array(
 				'id' => '{$pt3}',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
+				'name',
 				'date',
 				'description',
-				'location: name-formal: raw',
-				'location: name-casual: raw',
+				'location: name-formal',
+				'location: name-casual',
 				'location: description',
 				'location: address',
 				'location: city',
@@ -32,8 +33,7 @@
 				'location: zip',
 				'location: latitude',
 				'location: longitude',
-				'childcare',
-				'hidden'
+				'childcare'
 		);
 
 
@@ -50,7 +50,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-20T20:32:03+00:00'
+				'release-date' => '2012-05-25T00:42:05+00:00'
 			);
 		}
 

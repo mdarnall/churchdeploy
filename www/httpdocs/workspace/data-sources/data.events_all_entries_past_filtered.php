@@ -17,17 +17,17 @@
 		public $dsParamFILTERS = array(
 				'35' => 'earlier than {$today}',
 				'169' => '(if all of ((if value of ({$pt2}) is (events)), (if value of ({$pt5}) is (past))) is (yes))',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'system:pagination',
-				'name: raw',
+				'name',
 				'date',
 				'description',
-				'location: name-formal: raw',
-				'location: name-casual: raw',
-				'childcare',
-				'hidden'
+				'location: name-formal',
+				'location: name-casual',
+				'childcare'
 		);
 
 
@@ -44,7 +44,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-21T02:18:51+00:00'
+				'release-date' => '2012-05-25T00:40:58+00:00'
 			);
 		}
 

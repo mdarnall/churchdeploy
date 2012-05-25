@@ -17,23 +17,22 @@
 		public $dsParamFILTERS = array(
 				'118' => '(if value of ({$pt2}) is (teachings))',
 				'192' => 'yes',
+				'216' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'filename',
 				'date',
 				'current-id',
-				'title: raw',
+				'title',
 				'chapter',
 				'day',
 				'book',
 				'description',
-				'description: raw',
 				'tags: tag',
 				'speaker: first-name',
 				'speaker: last-name',
-				'video: id',
-				'featured'
+				'video: id'
 		);
 
 
@@ -50,7 +49,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-16T02:17:41+00:00'
+				'release-date' => '2012-05-25T00:44:37+00:00'
 			);
 		}
 

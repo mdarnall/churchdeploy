@@ -14,14 +14,15 @@
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'57' => 'no',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'tag: raw',
-				'description: raw',
+				'tag',
+				'description',
 				'slug',
-				'parent',
-				'hidden',
+				'parent: tag',
 				'hide-from-header',
 				'hide-from-footer'
 		);
@@ -37,10 +38,10 @@
 				'name' => 'Tags: All entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://churchdeploy',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-06T23:05:35+00:00'
+				'release-date' => '2012-05-25T00:37:22+00:00'
 			);
 		}
 

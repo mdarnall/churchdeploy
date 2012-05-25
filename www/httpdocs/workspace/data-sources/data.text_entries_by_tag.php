@@ -17,6 +17,7 @@
 
 		public $dsParamFILTERS = array(
 				'148' => '{$pt1:43}',
+				'209' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -37,7 +38,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-14T03:39:40+00:00'
+				'release-date' => '2012-05-24T21:11:26+00:00'
 			);
 		}
 

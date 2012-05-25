@@ -16,15 +16,17 @@
 
 		public $dsParamFILTERS = array(
 				'35' => 'later than {$today}',
+				'169' => '(if value of ({$pt2}) is (events))',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'system:pagination',
-				'name: raw',
+				'name',
 				'date',
 				'description',
-				'location: name-formal: raw',
-				'location: name-casual: raw'
+				'location: name-formal',
+				'location: name-casual'
 		);
 
 
@@ -38,10 +40,10 @@
 				'name' => 'Events: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T10:12:41+00:00'
+				'release-date' => '2012-05-24T23:22:41+00:00'
 			);
 		}
 

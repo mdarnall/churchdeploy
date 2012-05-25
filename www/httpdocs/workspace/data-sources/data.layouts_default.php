@@ -6,8 +6,8 @@
 
 		public $dsParamROOTELEMENT = 'layouts-default';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
+		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'system:id';
@@ -16,13 +16,14 @@
 
 		public $dsParamFILTERS = array(
 				'73' => 'Default',
+				'222' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name: raw',
-				'column-full-width: label: raw',
-				'column-center: label: raw',
-				'column-right: label: raw'
+				'name',
+				'column-full-width: label',
+				'column-center: label',
+				'column-right: label'
 		);
 
 
@@ -39,7 +40,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-14T03:50:00+00:00'
+				'release-date' => '2012-05-24T23:24:31+00:00'
 			);
 		}
 

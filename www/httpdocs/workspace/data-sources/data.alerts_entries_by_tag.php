@@ -2,24 +2,29 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceseo_all_entries extends Datasource{
+	Class datasourcealerts_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'seo-all-entries';
+		public $dsParamROOTELEMENT = 'alerts-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$pt1:43';
 		public $dsParamSORT = 'system:id';
+		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'224' => 'no',
+				'227' => 'no',
+				'205' => '{$pt1:43}',
+				'221' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name',
-				'content'
+				'url',
+				'content: formatted',
+				'can-be-closed'
 		);
 
 
@@ -30,18 +35,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'SEO: All entries',
+				'name' => 'Alerts: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T21:23:12+00:00'
+				'release-date' => '2012-05-24T23:13:39+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '2';
+			return '26';
 		}
 
 		public function allowEditorToParse(){

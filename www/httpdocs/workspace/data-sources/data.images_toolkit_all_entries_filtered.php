@@ -2,34 +2,25 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcemembers_entries_by_tag extends Datasource{
+	Class datasourceimages_toolkit_all_entries_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'members-entries-by-tag';
-		public $dsParamORDER = 'asc';
+		public $dsParamROOTELEMENT = 'images-toolkit-all-entries-filtered';
+		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamSORT = 'last-name';
+		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'151' => '{$pt1:43}',
+				'226' => '(if all of ((if value of ({$pt1}) is (toolkit)), (if value of ({$pt2}) is (images))) is (yes))',
+				'207' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'system:pagination',
-				'first-name',
-				'last-name',
-				'photo',
-				'email',
-				'job-title: raw',
-				'gender',
-				'password',
-				'activation',
-				'about'
+				'image'
 		);
 
 
@@ -40,18 +31,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Members: Entries by tag',
+				'name' => 'Images: Toolkit: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-23T07:48:17+00:00'
+				'release-date' => '2012-05-24T21:16:56+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '1';
+			return '8';
 		}
 
 		public function allowEditorToParse(){

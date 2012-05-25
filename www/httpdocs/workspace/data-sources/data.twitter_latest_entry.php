@@ -14,13 +14,11 @@
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'210' => 'no',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'date',
-				'id',
-				'user',
-				'user-formatted',
 				'content'
 		);
 
@@ -38,7 +36,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-16T21:31:36+00:00'
+				'release-date' => '2012-05-24T23:18:28+00:00'
 			);
 		}
 

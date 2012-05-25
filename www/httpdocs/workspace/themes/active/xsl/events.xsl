@@ -80,10 +80,12 @@
 
 						</xsl:for-each>
 
-						<a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
-							<span class="icon">l</span>
-							<span>See more events</span>
-						</a>
+						<xsl:if test="count($entries) &gt; 3">
+							<a href="{$root}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
+								<span class="icon">l</span>
+								<span>See more events</span>
+							</a>							
+						</xsl:if>
 
 					</ul>
 

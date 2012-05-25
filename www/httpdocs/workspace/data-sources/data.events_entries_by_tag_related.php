@@ -10,14 +10,16 @@
 		public $dsParamLIMIT = '{$pt4:5}';
 		public $dsParamSTARTPAGE = '{$pt3:1}';
 		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$pt6';
 		public $dsParamSORT = 'date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
+				'35' => 'later than {$today}',
 				'137' => '{$pt6}',
 				'169' => '(if all of ((if value of ({$pt2}) is (events)), (if value of ({$pt5}) is (related))) is (yes))',
-				'35' => 'later than {$today}',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -41,7 +43,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-23T21:54:29+00:00'
+				'release-date' => '2012-05-24T23:06:30+00:00'
 			);
 		}
 
