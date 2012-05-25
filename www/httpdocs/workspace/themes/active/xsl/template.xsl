@@ -155,13 +155,15 @@
 
 						<p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</div>
-					<div class="span3">
+					<div class="span4">
 						<div>
-							meeting times | i'm new here<br />
-							<br />
-							Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br />
-							<br />
-							John 6:33
+							<div class="link-bar">
+							<a href="/7761/meetings/" class="link-home">Meeting Times</a>&#160;&#160;|&#160;&#160;<a href="/13391/im-new-here/" class="link-home">I'm New Here</a>
+							</div>
+							<blockquote>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</blockquote>
+							<cite>John 6:33</cite>
+
+							
 						</div>
 
 					</div>
