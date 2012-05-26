@@ -48,8 +48,7 @@ var jQuery, document, window;
 			});
 
 		});
-		
-		
+
 
 		//reftagger
 		/*

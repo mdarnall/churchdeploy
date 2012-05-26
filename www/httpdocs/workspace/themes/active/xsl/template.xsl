@@ -378,7 +378,7 @@ hospital, a place of healing and refreshment.</p>
 	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/plugins.min.js"></script>
 	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
-
+	
 
 </xsl:template>
 
