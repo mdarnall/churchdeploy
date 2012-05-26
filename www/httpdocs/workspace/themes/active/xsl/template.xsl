@@ -246,7 +246,7 @@ hospital, a place of healing and refreshment.</p>
 				<div class="row">
 					<div class="span12">
 						<xsl:for-each select="//twitter-latest-entry/entry">
-							<strong><a href="http://twitter.com/{user/@handle}/" target="_blank">Recently on Twitter →</a></strong> 
+							<strong><a href="http://twitter.com/atheycreek/" target="_blank">Recently on Twitter →</a></strong> 
 							<span>
 								<!-- <a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank"> -->
 								<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />

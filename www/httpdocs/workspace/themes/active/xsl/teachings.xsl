@@ -31,9 +31,47 @@
 							<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe>
 
 							<div class="actions">
-								Audio listen | download video
+								
+								<i class="icon-headphones"></i>
+								<strong>Audio</strong> <a href="">Listen</a>
+								<xsl:text> | </xsl:text>
+								<a href="">Download</a>
+								<xsl:text> | </xsl:text> 
+								<i class="icon-facetime-video"></i>
+								<strong>Video</strong> <a href="">View</a>
+								<xsl:text> | </xsl:text>
+								<a href="">Download</a>
 							</div>
 
+							<h3>
+								<xsl:value-of select="title" />
+							</h3>
+
+							<div class="meta">
+								<span class="badge">
+									<xsl:value-of select="filename" />
+								</span>
+								<xsl:text>Scripture: </xsl:text>
+								<xsl:value-of select="book/item" />
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="chapter" />
+								<xsl:text> | </xsl:text>
+								<xsl:call-template name="format-date">
+									<xsl:with-param name="date" select="date/date/start/@iso" />
+									<xsl:with-param name="format" select="'%d-;, %m+; %d;%ds;, %y+;'" />
+								</xsl:call-template>
+							</div>
+							<div class="description">
+								<xsl:value-of select="description"  disable-output-escaping="yes" />
+							</div>
+							<div class="tags">
+								<i class="icon-tags"></i>
+								<xsl:for-each select="tags/item">
+									<xsl:value-of select="tag" disable-output-escaping="yes" />
+									<xsl:if test="position() &lt; last()">,</xsl:if>
+									<xsl:text> </xsl:text>
+								</xsl:for-each>
+							</div>
 						</div>
 					</xsl:for-each>
 					
