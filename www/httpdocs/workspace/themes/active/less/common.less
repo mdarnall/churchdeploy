@@ -82,6 +82,11 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	      font-weight: normal;
 	    }
 	}
+	#climacons {
+		font-family:'Climacons';
+		font-weight: normal;
+		font-style: normal;
+	}
 }
 
 #link {
@@ -163,10 +168,10 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 .mast .nav-pills > li > a { padding: @base * .5 0; margin: 0 0 0 @base * 2.5; }
 .mast .nav-pills { margin-right: 5px; }
 .navbar .divider-vertical {
-	background: darken(desaturate(@color-mast, 10%), 15%);
-	border-right: 1px solid darken(desaturate(@color-mast, 10%), 10%);
-	height: 30px;
-	margin: 5px;
+	background: transparent;
+	border-right: 1px solid #fff;
+	height: 20px;
+	margin: 10px 5px 5px 5px;
 }
 
 h1, h2, h3, h4, h5, h6, .nav .nav-header {
@@ -255,6 +260,15 @@ h3 {
 	top: 1px;
 }
 
+.climacon {
+	#font > #climacons;
+	position: relative;
+	font-size: 20px;
+	margin-right: 7px;
+	top: 1px;
+	-webkit-font-smoothing: antialiased;
+}
+
 .logo {
   
 	a {
@@ -287,7 +301,7 @@ h3 {
 		.span4 {
 			background: darken(desaturate(@color-mast, 10%), 5%);
 			.link-bar {
-				.small-grey-text;
+				font-size: 14px;
 				#font > #proxima > .bold;
 				color: #fff;
 				margin:0;
@@ -295,6 +309,8 @@ h3 {
 				text-align: center;
 				background: darken(desaturate(@color-mast, 25%), 25%);
 				a {
+					.small-grey-text;
+					display: inline;
 					color: #fff;
 					padding: 0 5px;
 					&:hover {

@@ -66,7 +66,7 @@
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
-						<li><a href="#"><span class="icon">t</span>6:30am</a></li>
+						<li><a href="#"><span class="climacon">1</span>6:30am</a></li>
 
 						<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 							<li class="divider-vertical"></li>
