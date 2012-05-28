@@ -78,21 +78,115 @@
 					
 					<div class="row">
 
-						<div class="span6">
+						<div class="span8">
 							<h2>Recent teachings</h2>
-							<xsl:for-each select="//teachings-recent-filtered/entry">
-								<h4>
-									<xsl:value-of select="title" disable-output-escaping="yes" />
-								</h4>
-								<div class="meta">
-									<xsl:call-template name="date-teaching">
-										<xsl:with-param name="date" select="date/date/start/@iso"/>
-									</xsl:call-template>
+
+							<xsl:variable name="items-per-row" select="2" />
+
+						    <xsl:for-each select="//teachings-recent-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 3]">
+						        <div class="row">
+						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+						            	<div class="span4">
+											<h4>
+												<xsl:value-of select="title" disable-output-escaping="yes" />
+											</h4>
+											<div class="meta">
+												<xsl:call-template name="date-teaching">
+													<xsl:with-param name="date" select="date/date/start/@iso"/>
+												</xsl:call-template>
+											</div>
+											<xsl:choose>
+												<xsl:when test="string-length(poster/@path)">
+													<img data-responsimage="{poster/filename}" style="width: 100%; height: 168px" />
+												</xsl:when>
+												<xsl:otherwise>
+													<img data-responsimage="teaching-general-large-4fc3806e8bb9f.jpg" style="width: 100%; height: 168px" />
+												</xsl:otherwise>
+											</xsl:choose>
+
+											<div class="description">
+												<p><xsl:apply-templates select="description" mode="truncate" /></p>
+											</div>
+										</div>
+						            </xsl:for-each>
+						        </div>
+						    </xsl:for-each>
+
+						    <h2>Recommended series</h2>
+
+						    <xsl:for-each select="//teachings-recent-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
+						        <div class="row">
+						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+						            	<div class="span4">
+											<h4>
+												<xsl:value-of select="title" disable-output-escaping="yes" />
+											</h4>
+											<div class="meta">
+												<xsl:call-template name="date-teaching">
+													<xsl:with-param name="date" select="date/date/start/@iso"/>
+												</xsl:call-template>
+											</div>
+											<xsl:choose>
+												<xsl:when test="string-length(poster/@path)">
+													<img data-responsimage="{poster/filename}" style="width: 100%; height: 168px" />
+												</xsl:when>
+												<xsl:otherwise>
+													<img data-responsimage="teaching-general-large-4fc3806e8bb9f.jpg" style="width: 100%; height: 168px" />
+												</xsl:otherwise>
+											</xsl:choose>
+
+											<div class="description">
+												<p><xsl:apply-templates select="description" mode="truncate" /></p>
+											</div>
+										</div>
+						            </xsl:for-each>
+						        </div>
+						    </xsl:for-each>
+
+						</div>
+
+						<div class="span4">
+							<h3>Search media by</h3>
+							<div class="widget filter">
+								<h4>Books of the Bible</h4>
+								<div class="collection">
+									<h5>Old Testament</h5>
+									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'old-testament' ]">
+										<xsl:call-template name="bible-book">
+											<xsl:with-param name="book" select="name"/>
+										</xsl:call-template>
+										<xsl:if test="position() &lt; last()">, </xsl:if>
+									</xsl:for-each>
 								</div>
-								<div class="description">
-									<p><xsl:apply-templates select="description" mode="truncate" /></p>
+								<div class="collection">
+									<h5>New Testament</h5>
+									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'new-testament' ]">
+										<xsl:call-template name="bible-book">
+											<xsl:with-param name="book" select="name"/>
+										</xsl:call-template>
+										<xsl:if test="position() &lt; last()">, </xsl:if>
+									</xsl:for-each>
 								</div>
-							</xsl:for-each>
+							</div>
+							<div class="widget filter">
+								<h4>Year</h4>
+								<div class="collection">
+									<xsl:call-template name="years-counter" />
+								</div>
+							</div>
+							<div class="widget filter">
+								<h4>Tags</h4>
+								<div class="collection">
+									<xsl:for-each select="//teachings-tags-random-entries/entry">
+										<a href="#">
+											<xsl:value-of select="tag" disable-output-escaping="yes" />
+										</a>
+										<xsl:if test="position() &lt; last()">, </xsl:if>
+									</xsl:for-each>
+
+								</div>
+								<a href="" class="more">See all tags</a>
+							</div>
 						</div>
 
 					</div>
@@ -132,7 +226,27 @@
 
 </xsl:template>
 
+<xsl:template name="bible-book">
+	<xsl:param name="book" />
+	<a href="">
+		<xsl:value-of select="$book" />
+	</a>
+</xsl:template>
 
+
+<xsl:template name="years-counter">
+
+	<xsl:param name="howMany">1996</xsl:param>
+
+	<xsl:if test="$howMany &lt; $this-year">
+		<a href="#"><xsl:value-of select="$howMany" /></a>
+		<xsl:text> </xsl:text>
+		<xsl:call-template name="years-counter">
+		<xsl:with-param name="howMany" select="$howMany + 1"/>
+		</xsl:call-template>
+	</xsl:if>
+
+</xsl:template>
 
 
 </xsl:stylesheet>

@@ -278,7 +278,7 @@ Truncate
         <xsl:choose>
                 <xsl:when test="$limit &lt;= $c">
                         <xsl:value-of select="substring(., 1, ($limit - $p))" disable-output-escaping="yes" />
-                        <xsl:text>..</xsl:text>
+                        <xsl:text> ..</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
                         <xsl:value-of select="."/>

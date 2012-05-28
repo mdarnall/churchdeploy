@@ -15,29 +15,30 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'118' => '(if value of ({$pt2}) is (teachings))',
 				'192' => 'no',
+				'118' => '(if value of ({$pt2}) is (teachings))',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'filename',
-				'date',
-				'current-id',
 				'title',
-				'chapter',
-				'day',
+				'filename',
+				'current-id',
 				'book',
+				'chapter',
 				'description',
-				'tags: tag',
 				'speaker: first-name',
 				'speaker: last-name',
+				'date',
+				'poster',
 				'video: title',
 				'video: description',
 				'video: date',
 				'video: url',
 				'video: player',
 				'video: thumbnail',
-				'video: id'
+				'video: id',
+				'day',
+				'tags: tag'
 		);
 
 
@@ -54,7 +55,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-26T23:37:32+00:00'
+				'release-date' => '2012-05-28T06:30:48+00:00'
 			);
 		}
 

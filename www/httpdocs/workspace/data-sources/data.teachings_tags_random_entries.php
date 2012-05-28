@@ -2,38 +2,23 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_featured_filtered extends Datasource{
+	Class datasourceteachings_tags_random_entries extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-featured-filtered';
-		public $dsParamORDER = 'desc';
+		public $dsParamROOTELEMENT = 'teachings-tags-random-entries';
+		public $dsParamORDER = 'random';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '1';
+		public $dsParamLIMIT = '30';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		public $dsParamFILTERS = array(
-				'192' => 'yes',
-				'216' => 'no',
-				'118' => '(if value of ({$pt2}) is (teachings))',
-		);
+		
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'title',
-				'filename',
-				'current-id',
-				'book',
-				'chapter',
-				'description',
-				'speaker: first-name',
-				'speaker: last-name',
-				'date',
-				'poster',
-				'video: id',
-				'day',
-				'tags: tag'
+				'system:pagination',
+				'tag'
 		);
 
 
@@ -44,18 +29,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Featured (filtered)',
+				'name' => 'Teachings: Tags: Random entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-28T06:27:11+00:00'
+				'release-date' => '2012-05-28T19:50:09+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '13';
+			return '15';
 		}
 
 		public function allowEditorToParse(){
