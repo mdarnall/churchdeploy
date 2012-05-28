@@ -234,4 +234,64 @@ Search and replace
 
 
 
+<!-- 
+
+Truncate
+
+-->
+
+<xsl:strip-space elements="*"/>
+
+<!-- limit: the truncation limit -->
+<xsl:variable name="limit" select="100"/>
+
+<!-- t: Total number of characters in the set -->
+<xsl:variable name="t" select="string-length(normalize-space(//body))"/>
+
+<xsl:template match="*" mode="truncate">
+        <xsl:variable name="preceding-strings">
+                <xsl:copy-of select="preceding::text()[ancestor::body]"/>
+        </xsl:variable>
+
+        <!-- p: number of characters up to the current node -->
+        <xsl:variable name="p" select="string-length(normalize-space($preceding-strings))"/>
+
+        <xsl:if test="$p &lt; $limit">
+                <xsl:element name="{name()}">
+                        <xsl:apply-templates select="@*" mode="truncate"/>
+                        <xsl:apply-templates mode="truncate"/>
+                </xsl:element>
+        </xsl:if>
+</xsl:template>
+
+<xsl:template match="text()" mode="truncate">
+        <xsl:variable name="preceding-strings">
+                <xsl:copy-of select="preceding::text()[ancestor::body]"/>
+        </xsl:variable>
+
+        <!-- p: number of characters up to the current node -->
+        <xsl:variable name="p" select="string-length(normalize-space($preceding-strings))"/>
+
+        <!-- c: number of characters including current node -->
+        <xsl:variable name="c" select="$p + string-length(.)"/>
+
+        <xsl:choose>
+                <xsl:when test="$limit &lt;= $c">
+                        <xsl:value-of select="substring(., 1, ($limit - $p))" disable-output-escaping="yes" />
+                        <xsl:text>..</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                        <xsl:value-of select="."/>
+                </xsl:otherwise>
+        </xsl:choose>
+</xsl:template>
+
+<xsl:template match="@*" mode="truncate">
+        <xsl:attribute name="{name(.)}"><xsl:value-of select="."/></xsl:attribute>
+</xsl:template>
+
+
+
+
+
 </xsl:stylesheet>

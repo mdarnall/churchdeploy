@@ -28,7 +28,7 @@
 
 					<xsl:for-each select="//teachings-featured-filtered/entry">
 						<div class="latest">
-							<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe>
+							<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe>
 
 							<div class="actions">
 								
@@ -44,7 +44,7 @@
 							</div>
 
 							<h3>
-								<xsl:value-of select="title" />
+								<xsl:value-of select="title" disable-output-escaping="yes" />
 							</h3>
 
 							<div class="meta">
@@ -56,9 +56,8 @@
 								<xsl:text> </xsl:text>
 								<xsl:value-of select="chapter" />
 								<xsl:text> | </xsl:text>
-								<xsl:call-template name="format-date">
-									<xsl:with-param name="date" select="date/date/start/@iso" />
-									<xsl:with-param name="format" select="'%d-;, %m+; %d;%ds;, %y+;'" />
+								<xsl:call-template name="date-teaching">
+									<xsl:with-param name="date" select="date/date/start/@iso"/>
 								</xsl:call-template>
 							</div>
 							<div class="description">
@@ -67,7 +66,9 @@
 							<div class="tags">
 								<i class="icon-tags"></i>
 								<xsl:for-each select="tags/item">
-									<xsl:value-of select="tag" disable-output-escaping="yes" />
+									<a href="#">
+										<xsl:value-of select="tag" disable-output-escaping="yes" />
+									</a>
 									<xsl:if test="position() &lt; last()">,</xsl:if>
 									<xsl:text> </xsl:text>
 								</xsl:for-each>
@@ -75,6 +76,27 @@
 						</div>
 					</xsl:for-each>
 					
+					<div class="row">
+
+						<div class="span6">
+							<h2>Recent teachings</h2>
+							<xsl:for-each select="//teachings-recent-filtered/entry">
+								<h4>
+									<xsl:value-of select="title" disable-output-escaping="yes" />
+								</h4>
+								<div class="meta">
+									<xsl:call-template name="date-teaching">
+										<xsl:with-param name="date" select="date/date/start/@iso"/>
+									</xsl:call-template>
+								</div>
+								<div class="description">
+									<p><xsl:apply-templates select="description" mode="truncate" /></p>
+								</div>
+							</xsl:for-each>
+						</div>
+
+					</div>
+
 					<xsl:for-each select="$entries">
 
 						<div>
@@ -98,6 +120,19 @@
 	</xsl:if>
 
 </xsl:template>
+
+<xsl:template name="date-teaching">
+
+	<xsl:param name="date" />
+
+	<xsl:call-template name="format-date">
+		<xsl:with-param name="date" select="$date" />
+		<xsl:with-param name="format" select="'%d+;, %m+; %d;%ds;, %y+;'" />
+	</xsl:call-template>
+
+</xsl:template>
+
+
 
 
 </xsl:stylesheet>
