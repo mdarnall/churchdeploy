@@ -232,6 +232,7 @@ h2 {
 	font-size: 28px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	margin: @base * 4 0 @base * 2 0;
 }
 
 h3 {
@@ -267,13 +268,6 @@ h3 {
 	margin-right: 7px;
 	top: 1px;
 	-webkit-font-smoothing: antialiased;
-}
-
-.badge {
-	#font > #proxima > .bold;
-	text-transform: uppercase;
-	padding: 4px 6px 3px 6px;
-	margin-right: 10px;	
 }
 
 .logo {
@@ -724,6 +718,10 @@ h3 {
 
 .column-full-width {
 
+	h2 {
+		text-transform: uppercase;
+	}
+
 	.columns-2 {
 		-webkit-column-count: 2; -webkit-column-gap:20px;
 		-moz-column-count: 2; -moz-column-gap:20px;
@@ -812,6 +810,11 @@ h3 {
 	}
 }
 
+.column-center {
+	h2 {
+		text-transform: none;
+	}
+}
 
 //---------------------------------------------------------
 // components----------------------------------------------
@@ -856,7 +859,7 @@ h3 {
 		
 		.component-teachings {
 		
-			.latest {
+			&.large .latest {
 				margin: 0;
 				text-align: left;
 				.video {
@@ -864,16 +867,12 @@ h3 {
 					padding: 0;
 					width: 620px;
 					height: 349px;
-				}
-				h2 {
-					text-transform: none;
-					
-					a {
-						color:#303030;
-						&:hover { color: @color-accent; }
-					}
-				}	
+				}		
 				.meta {
+					h2 {
+						margin: 10px 0 5px 0;
+						text-transform: none;
+					}
 					p {
 						color: #999;
 						padding: 0;
@@ -911,30 +910,6 @@ h3 {
 		}
 	}
 	
-}
-
-// text --------------------------------------------------------------
-
-.column-full-width {
-
-	.component-text {
-	
-		h2 {
-			text-transform: uppercase;
-			margin: @base * 4 0 @base * 2 0;
-		}
-		
-	}
-	
-}
-
-.column-center {
-	.component-text {
-		h2 {
-			text-transform: none;
-			margin: @base * 4 0 @base * 2 0;
-		}	
-	}
 }
 
 
@@ -1456,7 +1431,7 @@ h3 {
 }
 
 
-// teachings -------------------------------------------------------
+//
 
 .component-teachings {
 
@@ -1489,8 +1464,14 @@ h3 {
 	}
 
 	.latest {
-		margin-top: 40px;
-		margin-bottom: 40px;
+<<<<<<< Updated upstream
+		//text-align: center;
+		//width: 650px;
+		//margin: auto;
+=======
+		width: 650px;
+		margin: auto;
+>>>>>>> Stashed changes
 
 		.video {
 			width: 100%;
@@ -1498,16 +1479,11 @@ h3 {
 			margin: @base * .5 auto;
 
 		}
-		h2 {
-			margin: 20px 0 5px 0;
-			text-transform: none;
-			a {
-				color:#303030;
-				&:hover { color: @color-accent; }
-			}
-		}
 		.meta {
-
+			h3 {
+				margin: 10px 0 5px 0;
+				text-transform: none;
+			}
 			p {
 				color: #999;
 				padding: 0;
@@ -1516,7 +1492,6 @@ h3 {
 			.teacher {
 				#font > #proxima > .bold;
 				text-transform: uppercase;
-				margin-right: 10px;
 				
 				em {
 					text-transform: none;
@@ -1524,12 +1499,6 @@ h3 {
 			}
 			.icon {
 				margin: 0 5px;
-			}
-			.icon-book {
-				opacity: 0.5;
-				position: relative;
-				top: 7px;
-				margin-right: 5px;
 			}
 		}
 		.description {
@@ -1539,43 +1508,11 @@ h3 {
 	}
 
 	.actions {
-		text-align: center;
-		color: #999;
 		background: #e5e5e5;
 		padding: @base;
 		margin: @base * .5 0;
-		
-		.action {
-			margin-right: 20px;
-		}
-		
-		strong {
-			#font > #proxima > .bold;
-			text-transform: uppercase;
-		}
-		
-		a {
-			color: #303030;
-			#font > #proxima > .bold;
-			text-transform: uppercase;
-			margin: 0 5px;
-			&:hover { color: @color-accent; }
-			
-		}
-	}
-	.tags {
-		color: #999;
-		border-top: 1px solid #999;
-		border-bottom: 1px solid #999;
-		padding: 10px 0;
-		
-		a {
-			color: #999;
-			&:hover { color: #303030; }
-		}
 	}
 }
-	
 
 
 // videos 

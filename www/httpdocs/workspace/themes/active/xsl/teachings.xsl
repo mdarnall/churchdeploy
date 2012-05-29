@@ -48,27 +48,40 @@
 								<xsl:call-template name="teaching-actions">
 									<xsl:with-param name="entry" select="."/>
 								</xsl:call-template>
-
+								<h2>
 								<a>
 									<xsl:call-template name="teaching-entry-url">
 										<xsl:with-param name="entry" select="."/>
 									</xsl:call-template>
-									<h3>
-										<xsl:value-of select="title" disable-output-escaping="yes" />
-									</h3>
+									<xsl:value-of select="title" disable-output-escaping="yes" />
+										
+									
 								</a>
+								</h2>
 								<div class="meta">
+									<p>
 									<span class="badge">
 										<xsl:value-of select="filename" />
 									</span>
-									<xsl:text>Scripture: </xsl:text>
-									<xsl:value-of select="book/item" />
-									<xsl:text> </xsl:text>
-									<xsl:value-of select="chapter" />
-									<xsl:text> | </xsl:text>
+									<span class="teacher">
+										<em>by </em>
+										<xsl:text>Jon: Speaker Name </xsl:text>
+									</span> 
+									<span class="verse">
+									    <i class="icon-book"></i>
+									    <xsl:text> </xsl:text>
+										<xsl:value-of select="book/item" />
+										<xsl:text> </xsl:text>
+										<xsl:value-of select="chapter" />
+									</span>
+									</p>
+									<p>
+									<span class="date">
 									<xsl:call-template name="date-teaching">
 										<xsl:with-param name="date" select="date/date/start/@iso"/>
 									</xsl:call-template>
+									</span>
+									</p>
 								</div>
 								<div class="description">
 									<xsl:value-of select="description"  disable-output-escaping="yes" />
@@ -287,22 +300,25 @@
 	</xsl:variable>
 
 	<div class="actions">
-		<i class="icon-headphones"></i>
-		<strong>Audio</strong> <a href="">Listen</a>
-		<xsl:text> | </xsl:text>
-		<a href="">Download</a>
-		<xsl:text> | </xsl:text> 
-		<i class="icon-facetime-video"></i>
-		<strong>Video</strong> 
-		<xsl:text> </xsl:text> 
-		<a>
-			<xsl:call-template name="teaching-entry-url">
-				<xsl:with-param name="entry" select="$entry"/>
-			</xsl:call-template>
-			<xsl:text>View</xsl:text>
-		</a>
-		<xsl:text> | </xsl:text>
-		<a href="{$entry/url}" target="_blank">Download</a>
+		<span class="action">
+			<span class="icon">m</span>
+			<strong>Audio</strong> <a href="">Listen</a>
+			<xsl:text> | </xsl:text>
+			<a href="">Download</a>
+		</span>
+		<span class="action">
+			<span class="icon">V</span>
+			<strong>Video</strong> 
+			<xsl:text> </xsl:text> 
+			<a>
+				<xsl:call-template name="teaching-entry-url">
+					<xsl:with-param name="entry" select="$entry"/>
+				</xsl:call-template>
+				<xsl:text>View</xsl:text>
+			</a>
+			<xsl:text> | </xsl:text>
+			<a href="{$entry/url}" target="_blank">Download</a>
+		</span>
 	</div>
 
 </xsl:template>
@@ -327,7 +343,7 @@
 	<xsl:param name="tags" />
 
 	<div class="tags">
-		<i class="icon-tags"></i>
+		<span class="icon">z</span>
 		<xsl:for-each select="tags/item">
 			<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/tag/{@id}/">
 				<xsl:value-of select="tag" disable-output-escaping="yes" />
