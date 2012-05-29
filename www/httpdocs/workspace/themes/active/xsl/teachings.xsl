@@ -51,7 +51,7 @@
 
 								<a>
 									<xsl:call-template name="teaching-entry-url">
-										<xsl:with-param name="entry" select="$entry"/>
+										<xsl:with-param name="entry" select="."/>
 									</xsl:call-template>
 									<h3>
 										<xsl:value-of select="title" disable-output-escaping="yes" />
@@ -90,7 +90,7 @@
 						            	<div class="span4">
 											<a>
 												<xsl:call-template name="teaching-entry-url">
-													<xsl:with-param name="entry" select="$entry"/>
+													<xsl:with-param name="entry" select="."/>
 												</xsl:call-template>
 												<xsl:choose>
 													<xsl:when test="string-length(poster/@path)">
@@ -103,7 +103,7 @@
 											</a>
 											<a>
 												<xsl:call-template name="teaching-entry-url">
-													<xsl:with-param name="entry" select="$entry"/>
+													<xsl:with-param name="entry" select="."/>
 												</xsl:call-template>
 												<h4>
 													<xsl:value-of select="title" disable-output-escaping="yes" />
