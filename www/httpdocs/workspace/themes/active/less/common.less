@@ -36,7 +36,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 // variables
   
 @base: 10px;
-@body-text-height: 18px; 
+@body-text-height: 16px; 
 @color-accent: #d83629; // Logo/Accent/Link Color (Red/Orange)
 @color-body-text: #303030;
 @color-grey-accent: #eeeeee;
@@ -83,9 +83,10 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	    }
 	}
 	#climacons {
-		font-family:'Climacons';
+		font-family:'ClimaconsRegular';
 		font-weight: normal;
 		font-style: normal;
+		text-transform: none !important;
 	}
 }
 
@@ -169,7 +170,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 .mast .nav-pills { margin-right: 5px; }
 .navbar .divider-vertical {
 	background: transparent;
-	border-right: 1px solid #fff;
+	border-right: 1px solid darken(desaturate(@color-mast, 20%), 15%);
 	height: 20px;
 	margin: 10px 5px 5px 5px;
 }
@@ -228,7 +229,7 @@ h1 {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 28px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin: @base * 4 0 @base * 2 0;
@@ -372,6 +373,7 @@ h3 {
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		#font > #proxima > .bold;
+		font-size: 12px;
 		.box-shadow(none);
 
 		ul.nav {
@@ -379,11 +381,11 @@ h3 {
 			li {
 
 				a {
-					color: #fff;
+					color: darken(desaturate(@color-mast, 20%), 15%);
 					text-shadow: none;
 
 					&:hover {
-						color: darken(@color-mast, 35%);
+						color: #fff;
 					}
 				}
 			}
@@ -716,6 +718,10 @@ h3 {
 
 .column-full-width {
 
+	h2 {
+		text-transform: uppercase;
+	}
+
 	.columns-2 {
 		-webkit-column-count: 2; -webkit-column-gap:20px;
 		-moz-column-count: 2; -moz-column-gap:20px;
@@ -801,6 +807,12 @@ h3 {
 				&.last { margin-bottom: 0; }
 			}
 		}
+	}
+}
+
+.column-center {
+	h2 {
+		text-transform: none;
 	}
 }
 
