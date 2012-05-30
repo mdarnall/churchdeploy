@@ -48,30 +48,45 @@
 								<xsl:call-template name="teaching-actions">
 									<xsl:with-param name="entry" select="."/>
 								</xsl:call-template>
-
+								<h2>
 								<a>
 									<xsl:call-template name="teaching-entry-url">
 										<xsl:with-param name="entry" select="."/>
 									</xsl:call-template>
-									<h2>
-										<xsl:value-of select="title" disable-output-escaping="yes" />
-									</h2>
+									<xsl:value-of select="title" disable-output-escaping="yes" />
+										
+									
 								</a>
+								</h2>
 								<div class="meta">
+									<p>
 									<span class="badge">
 										<xsl:value-of select="filename" />
 									</span>
-									<xsl:text>Scripture: </xsl:text>
-									<xsl:value-of select="book/item" />
-									<xsl:text> </xsl:text>
-									<xsl:value-of select="chapter" />
-									<xsl:text> | </xsl:text>
+									<span class="teacher">
+										<em>by </em>
+										<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
+										<xsl:text disable-output-escaping="yes"> </xsl:text>
+										<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
+									</span> 
+									<span class="verse">
+									    <i class="icon-book"></i>
+									    <xsl:text> </xsl:text>
+										<xsl:value-of select="book/item" />
+										<xsl:text> </xsl:text>
+										<xsl:value-of select="chapter" />
+									</span>
+									</p>
+									<p>
+									<span class="date">
 									<xsl:call-template name="date-teaching">
 										<xsl:with-param name="date" select="date/date/start/@iso"/>
 									</xsl:call-template>
+									</span>
+									</p>
 								</div>
 								<div class="description">
-									<xsl:value-of select="description"  disable-output-escaping="yes" />
+									<xsl:value-of select="description" disable-output-escaping="yes" />
 								</div>
 								<xsl:call-template name="teaching-tag-list">
 									<xsl:with-param name="tags" select="tags/item"/>
@@ -80,7 +95,7 @@
 						</xsl:for-each>
 
 						<div class="span8">
-							<h2>Recent teachings</h2>
+							<h2>Recent</h2>
 
 							<xsl:variable name="items-per-row" select="2" />
 
@@ -164,11 +179,11 @@
 					<xsl:when test="$position = 'column-full-width'">
 
 						<div class="span4">
-							<h3>Search media by</h3>
+							<h3>Filters</h3>
 							<div class="widget filter">
 								<h4>Books of the Bible</h4>
+								<h5>Old Testament</h5>
 								<div class="collection">
-									<h5>Old Testament</h5>
 									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'old-testament' ]">
 										<xsl:call-template name="bible-book">
 											<xsl:with-param name="book" select="name"/>
@@ -176,8 +191,8 @@
 										<xsl:if test="position() &lt; last()">, </xsl:if>
 									</xsl:for-each>
 								</div>
+								<h5>New Testament</h5>
 								<div class="collection">
-									<h5>New Testament</h5>
 									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'new-testament' ]">
 										<xsl:call-template name="bible-book">
 											<xsl:with-param name="book" select="name"/>
@@ -195,11 +210,15 @@
 							<div class="widget filter">
 								<h4>Tags</h4>
 								<div class="collection">
-									<xsl:call-template name="teaching-tag-list">
-										<xsl:with-param name="tags" select="//teachings-tags-random-filtered/entry"/>
-									</xsl:call-template>
+									<xsl:for-each select="//teachings-tags-random-filtered/entry">
+										<a href="#">
+											<xsl:value-of select="tag" disable-output-escaping="yes" />
+										</a>
+										<xsl:if test="position() &lt; last()">, </xsl:if>
+									</xsl:for-each>
+
 								</div>
-								<a href="" class="more">See all tags</a>
+								<a href="" class="more"><span class="icon">z</span> See all tags</a>
 							</div>
 						</div>
 
@@ -236,7 +255,6 @@
 	<xsl:param name="entry" />
 
 	<xsl:for-each select="$entry">
-
 		<h4>
 			<xsl:value-of select="title" disable-output-escaping="yes" />
 		</h4>
@@ -284,22 +302,25 @@
 	</xsl:variable>
 
 	<div class="actions">
-		<span class="icon">m</span>
-		<strong>Audio</strong> <a href="">Listen</a>
-		<xsl:text> | </xsl:text>
-		<a href="">Download</a>
-		<xsl:text> | </xsl:text> 
-		<span class="icon">V</span>
-		<strong>Video</strong> 
-		<xsl:text> </xsl:text> 
-		<a>
-			<xsl:call-template name="teaching-entry-url">
-				<xsl:with-param name="entry" select="$entry"/>
-			</xsl:call-template>
-			<xsl:text>View</xsl:text>
-		</a>
-		<xsl:text> | </xsl:text>
-		<a href="{$entry/video/item/url}" target="_blank">Download</a>
+		<span class="action">
+			<span class="icon">m</span>
+			<strong>Audio</strong> <a href="">Listen</a>
+			<xsl:text> | </xsl:text>
+			<a href="">Download</a>
+		</span>
+		<span class="action">
+			<span class="icon">V</span>
+			<strong>Video</strong> 
+			<xsl:text> </xsl:text> 
+			<a>
+				<xsl:call-template name="teaching-entry-url">
+					<xsl:with-param name="entry" select="$entry"/>
+				</xsl:call-template>
+				<xsl:text>View</xsl:text>
+			</a>
+			<xsl:text> | </xsl:text>
+			<a href="{$entry/url}" target="_blank">Download</a>
+		</span>
 	</div>
 
 </xsl:template>
@@ -314,9 +335,6 @@
 		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'teachings']/@id" />
 		<xsl:text>/teachings/</xsl:text>
 		<xsl:value-of select="@id" />
-		<xsl:text>/</xsl:text>
-		<xsl:value-of select="title/@handle" />
-		<xsl:text>/</xsl:text>
 	</xsl:attribute>
 
 </xsl:template>
@@ -328,11 +346,12 @@
 
 	<div class="tags">
 		<span class="icon">z</span>
-		<xsl:for-each select="$tags">
+		<xsl:for-each select="tags/item">
 			<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/tag/{@id}/">
 				<xsl:value-of select="tag" disable-output-escaping="yes" />
 			</a>
-			<xsl:if test="position() &lt; last()">, </xsl:if>
+			<xsl:if test="position() &lt; last()">,</xsl:if>
+			<xsl:text> </xsl:text>
 		</xsl:for-each>
 	</div>
 
@@ -352,7 +371,7 @@
 
 <xsl:template name="bible-book">
 	<xsl:param name="book" />
-	<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/book/{$book/@handle}/">
+	<a href="">
 		<xsl:value-of select="$book" />
 	</a>
 </xsl:template>
@@ -363,10 +382,8 @@
 	<xsl:param name="howMany">1996</xsl:param>
 
 	<xsl:if test="$howMany &lt; $this-year">
-		<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/year/{$howMany}/">
-			<xsl:value-of select="$howMany" />
-		</a>
-		<xsl:text>, </xsl:text>
+		<a href="#"><xsl:value-of select="$howMany" /></a>
+		<xsl:if test="$howMany &lt; $this-year - 1">, </xsl:if>
 		<xsl:call-template name="years-counter">
 		<xsl:with-param name="howMany" select="$howMany + 1"/>
 		</xsl:call-template>
@@ -376,4 +393,3 @@
 
 
 </xsl:stylesheet>
-
