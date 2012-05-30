@@ -6,7 +6,7 @@
 <xsl:include href="../themes/active/xsl/events.xsl" />
 <xsl:include href="../themes/active/xsl/images.xsl" />
 <xsl:include href="../themes/active/xsl/locations.xsl" />
-<xsl:include href="../themes/active/xsl/members.xsl" />
+<xsl:include href="../themes/active/xsl/members-roles.xsl" />
 <xsl:include href="../themes/active/xsl/spacer.xsl" />
 <xsl:include href="../themes/active/xsl/teachings.xsl" />
 <xsl:include href="../themes/active/xsl/text.xsl" />
@@ -151,10 +151,10 @@
 			
 		</xsl:if>
 		
-		<xsl:if test=". = 'members'">
-			<xsl:call-template name="component-members">
+		<xsl:if test=". = 'members-roles'">
+			<xsl:call-template name="component-members-roles">
 				<xsl:with-param name="position" select="name($xpath)" />
-				<xsl:with-param name="entries" select="//members-entries-by-tag/entry" />
+				<xsl:with-param name="entries" select="//members-roles-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
 

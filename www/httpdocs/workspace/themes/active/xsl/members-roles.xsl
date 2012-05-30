@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-<xsl:template name="component-members">
+<xsl:template name="component-members-roles">
 	
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
@@ -12,7 +12,7 @@
 		<div>
 			
 			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'member'" />
+				<xsl:with-param name="component" select="'members-roles'" />
 			</xsl:call-template>
 			
 			<h3 class="header">Our Staff</h3>
@@ -22,7 +22,7 @@
 
 					<xsl:variable name="items-per-row" select="3" />
 
-					<xsl:for-each select="//members-entries-by-tag/entry[position() mod $items-per-row = 1]">
+					<xsl:for-each select="$entries[position() mod $items-per-row = 1]">
 	
 						<div class="row">
 
@@ -37,20 +37,20 @@
 										<xsl:attribute name="src">
 											<xsl:value-of select="$root" />
 											<xsl:text>/image/2/180/180/2/0</xsl:text>
-											<xsl:value-of select="photo/@path" />
+											<xsl:value-of select="member/item/photo/@path" />
 											<xsl:text>/</xsl:text>
-											<xsl:value-of select="photo/filename" />
+											<xsl:value-of select="member/item/photo/filename" />
 										</xsl:attribute>
 									</img>
 
 									<h4>
-										<xsl:value-of select="job-title" disable-output-escaping="yes" />
+										<xsl:value-of select="role/item/role" disable-output-escaping="yes" />
 									</h4>	
 
 									<h3>
-										<xsl:value-of select="first-name" />
+										<xsl:value-of select="member/item/first-name" />
 										<xsl:text> </xsl:text>
-										<xsl:value-of select="last-name" />
+										<xsl:value-of select="member/item/last-name" />
 
 										<xsl:call-template name="edit-entry">
 											<xsl:with-param name="link" select="concat($root, '/symphony/publish/members/edit/', @id, '/')" />
@@ -58,7 +58,7 @@
 									</h3>
 
 									<div class="content">
-										<xsl:value-of select="about" disable-output-escaping="yes" />
+										<xsl:value-of select="member/item/about" disable-output-escaping="yes" />
 									</div>	
 								</div>
 
@@ -86,21 +86,21 @@
 														<xsl:text>/image/2/72/72/2/0</xsl:text>
 													</xsl:when>
 												</xsl:choose>
-												<xsl:value-of select="photo/@path" />
+												<xsl:value-of select="member/item/photo/@path" />
 												<xsl:text>/</xsl:text>
-												<xsl:value-of select="photo/filename" />
+												<xsl:value-of select="member/item/photo/filename" />
 											</xsl:attribute>
 										</img>
 									</div>
 									<div class="info">
 										<h4>
-											<xsl:value-of select="first-name" disable-output-escaping="yes" />
+											<xsl:value-of select="member/item/first-name" disable-output-escaping="yes" />
 											<xsl:text> </xsl:text>
-											<xsl:value-of select="last-name" disable-output-escaping="yes" />
+											<xsl:value-of select="member/item/last-name" disable-output-escaping="yes" />
 										</h4>
 										<div>
 											<span class="icon">M</span>
-											<span class="email"><xsl:value-of select="email" /></span>
+											<span class="email"><xsl:value-of select="member/item/email" /></span>
 										</div>
 									</div>
 								</a>
