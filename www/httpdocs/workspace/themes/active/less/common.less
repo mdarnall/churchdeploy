@@ -1049,27 +1049,28 @@ h3 {
 .column-center {
 
 	.component-events {
-	
-		&.individual {
-
-			.entry {
-				border: none;
-
-				.header,
-				.description,
-				.help-block {
-					padding-left: 0;
-					padding-right: 0;
+		
+		.back {
+			margin: 30px 0 30px 0;
+			
+			.link-large {
+				background: #e9e9e9;
+				color: #999;
+				
+				&:hover {
+					background: #ccc;
+					color: #777;
 				}
 			}
 		}
 
 		.entry {
-			margin: @base * 3 0;
-			background: #fff;
+			margin: 0 0 @base *3 0;
+			background: #fdfdfd;
 			border: @base solid #ddd;
 			padding: 0;
 			position: relative;
+			
 
 			&.even { 
 				background: #fff; 
@@ -1095,8 +1096,8 @@ h3 {
 			.header {
 				text-transform: none;
 				font-size: 26px;
-				margin: 0 0 0 0;
-				padding: @base * 1.5 @base * 1.5 @base @base * 1.5;
+				margin: 15px 0 0 0;
+				padding: 0 @base * 1.5 @base @base * 1.5;
 
 				a {
 					text-transform: none;
@@ -1140,7 +1141,49 @@ h3 {
 				.border-radius(0);
 				text-shadow: none;
 			}
+			
+			.share {
+				padding: 10px;
+				background: @color-mast;
+				label, input { display: inline; }
+				label {
+					color: #fff;
+					#font > #proxima > .bold;
+					text-transform: uppercase;
+					margin-right: 10px;
+				}
+				input {
+					#font > #proxima > .regular;
+					font-size: 14px;
+					padding: 5px;
+				}
+			}
 		}
+		
+		
+		&.individual {
+		
+			.back {
+				margin: 15px 0 30px 0;
+			}
+
+			.entry {
+				border: none;
+				.header,
+				.description,
+				.help-block {
+					padding-left: 0;
+					padding-right: 0;
+				}
+				
+				.header {
+					margin: 0;
+				}
+				
+			}
+		}
+		
+
 	}
 }
 
@@ -1286,7 +1329,6 @@ h3 {
 		&:hover {
 
 			.map {
-
 				.screen,
 				address {
 					display: block;
@@ -1315,7 +1357,7 @@ h3 {
 
 			.screen {
 				display: none;
-				background: @color-white;
+				background: #e9e9e9;
 				opacity: .75;
 				width: 100%;
 				height: 90px;
@@ -1329,6 +1371,7 @@ h3 {
 				margin: 0;
 
 				h4 {
+					text-transform: uppercase;
 					margin-top: 0;
 					margin-bottom: @base * .5;
 				}
