@@ -2,24 +2,27 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_recent_filtered extends Datasource{
+	Class datasourceteachings_entry_by_tag_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-recent-filtered';
+		public $dsParamROOTELEMENT = 'teachings-entry-by-tag-filtered';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '10';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamLIMIT = '{$pt6:10}';
+		public $dsParamSTARTPAGE = '{$pt5:1}';
 		public $dsParamREDIRECTONEMPTY = 'no';
+		public $dsParamREQUIREDPARAM = '$pt4';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'192' => 'no',
-				'118' => '(if value of ({$pt2}) is (teachings))',
+				'124' => '{$pt4}',
+				'216' => 'no',
+				'118' => '(if all of ((if value of ({$pt2}) is (teachings)), (if value of ({$pt3}) is (tag))) is (yes))',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'title',
 				'slug',
 				'filename',
@@ -31,9 +34,6 @@
 				'speaker: last-name',
 				'date',
 				'poster',
-				'video: title',
-				'video: description',
-				'video: date',
 				'video: url',
 				'video: player',
 				'video: id',
@@ -49,13 +49,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Recent (filtered)',
+				'name' => 'Teachings: Entry by tag (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-29T02:35:22+00:00'
+				'release-date' => '2012-05-29T09:56:22+00:00'
 			);
 		}
 

@@ -165,19 +165,26 @@
 		<xsl:if test=". = 'teachings'">
 			<xsl:choose>
 
-				<xsl:when test="count(//teachings-all-entries-filtered/entry)">
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'book'">					
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//teachings-all-entries-filtered/entry" />
+						<xsl:with-param name="entries" select="//teachings-entry-by-book-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
+				
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'tag'">					
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-entry-by-tag-filtered/entry" />
 					</xsl:call-template>
 				</xsl:when>
 
-				<xsl:otherwise>
+				<xsl:when test="$pt2 = 'teachings'">					
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//teachings-entries-by-tag/entry" />
+						<xsl:with-param name="entries" select="." />
 					</xsl:call-template>
-				</xsl:otherwise>
+				</xsl:when>
 
 			</xsl:choose>
 		</xsl:if>

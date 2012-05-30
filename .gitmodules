@@ -135,13 +135,13 @@
 	url = http://github.com/Solutions-Nitriques/save_and_return.git
 [submodule "www/httpdocs/extensions/duplicate_entry"]
 	path = www/httpdocs/extensions/duplicate_entry
-	url = https://github.com/nickdunn/duplicate_entry.git
+	url = http://github.com/nickdunn/duplicate_entry.git
 [submodule "www/httpdocs/extensions/scaffolds"]
 	path = www/httpdocs/extensions/scaffolds
 	url = http://github.com/brendo/scaffolds.git
 [submodule "www/httpdocs/extensions/publishfiltering"]
 	path = www/httpdocs/extensions/publishfiltering
-	url = https://github.com/nickdunn/publishfiltering.git
+	url = http://github.com/nickdunn/publishfiltering.git
 [submodule "1.6.1"]
 	path = 1.6.1
-	url = https://github.com/nickdunn/publishfiltering.git
+	url = http://github.com/nickdunn/publishfiltering.git

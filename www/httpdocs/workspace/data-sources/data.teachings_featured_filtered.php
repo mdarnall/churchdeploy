@@ -22,6 +22,7 @@
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
+				'slug',
 				'filename',
 				'current-id',
 				'book',
@@ -30,7 +31,7 @@
 				'speaker: first-name',
 				'speaker: last-name',
 				'date',
-				'poster',
+				'video: url',
 				'video: id',
 				'day',
 				'tags: tag'
@@ -47,10 +48,10 @@
 				'name' => 'Teachings: Featured (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-28T06:27:11+00:00'
+				'release-date' => '2012-05-29T02:49:01+00:00'
 			);
 		}
 

@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_tags_random_entries extends Datasource{
+	Class datasourceteachings_tags_random_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-tags-random-entries';
+		public $dsParamROOTELEMENT = 'teachings-tags-random-filtered';
 		public $dsParamORDER = 'random';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '30';
@@ -14,7 +14,10 @@
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		
+		public $dsParamFILTERS = array(
+				'236' => '(if value of ({$pt2}) is (teachings))',
+				'217' => 'no',
+		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'system:pagination',
@@ -29,13 +32,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Tags: Random entries',
+				'name' => 'Teachings: Tags: Random (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-28T19:50:09+00:00'
+				'release-date' => '2012-05-28T20:28:40+00:00'
 			);
 		}
 

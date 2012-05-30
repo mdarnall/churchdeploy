@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_series_all_entries_filtered extends Datasource{
+	Class datasourceteachings_series_entries_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-series-all-entries-filtered';
+		public $dsParamROOTELEMENT = 'teachings-series-entries-filtered';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '12';
@@ -15,14 +15,15 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
 		public $dsParamFILTERS = array(
-				'232' => '(if value of ({$pt2}) is (teachings))',
 				'233' => 'no',
+				'232' => '(if value of ({$pt2}) is (teachings))',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name',
+				'title',
 				'poster',
-				'teachings: title'
+				'teachings: title',
+				'teachings: slug'
 		);
 
 
@@ -33,13 +34,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Series: All entries (filtered)',
+				'name' => 'Teachings: Series: Entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-28T20:11:37+00:00'
+				'release-date' => '2012-05-29T02:35:16+00:00'
 			);
 		}
 
