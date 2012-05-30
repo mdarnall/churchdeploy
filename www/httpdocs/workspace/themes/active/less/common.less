@@ -1585,26 +1585,55 @@ h3 {
 	}
 	
 	.span4 {
-		width: 280px;
-		border: 10px solid #E9E9E9;
 		
-		h3 {
-			background: @color-mast;
-			color: #fff;
-			padding: 5px;
-			font-size: 14px;
+		
+		.widget {
+			#font > #tisa > .regular;
+			border: 10px solid #E9E9E9;
+			margin: 10px 0 20px 0;
+			
+			h4 {
+				background: @color-mast;
+				padding: 10px;
+				color: #fff;
+				#font > #proxima > .bold;
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+			h5 {
+				padding: 6px 10px 5px 10px;
+				color: #ccc;
+				border-top: 1px solid #e9e9e9;
+				border-bottom: 1px solid #e9e9e9;
+				#font > #proxima > .bold;
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+			.collection {
+				padding: 10px;
+				font-size: 13px;
+				line-height: 1.6;
+				a {
+					color: #303030;
+					&:hover { color: @color-accent; }
+				}
+			}
+			.more {
+				display: block;
+				background: darken(@color-grey-accent, 33.5%);
+				#font > #proxima > .bold;
+				font-size: 12px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #fff !important;
+				padding: 10px;
+		
+				&:hover {
+					background: darken(@color-grey-accent, 40%);
+				}
+			}
 		}
 		
-		
-		h4 {
-			padding: 5px 0;
-			color: #ccc;
-			border-top: 1px solid #E9E9E9;
-			border-bottom: 1px solid #E9E9E9;
-			#font > #proxima > .bold;
-			text-transform: uppercase;
-			font-size: 14px;
-		}
 	}
 }
 	

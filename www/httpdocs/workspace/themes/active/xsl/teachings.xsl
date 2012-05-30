@@ -180,8 +180,8 @@
 							<h3>Search media by</h3>
 							<div class="widget filter">
 								<h4>Books of the Bible</h4>
+								<h5>Old Testament</h5>
 								<div class="collection">
-									<h5>Old Testament</h5>
 									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'old-testament' ]">
 										<xsl:call-template name="bible-book">
 											<xsl:with-param name="book" select="name"/>
@@ -189,8 +189,8 @@
 										<xsl:if test="position() &lt; last()">, </xsl:if>
 									</xsl:for-each>
 								</div>
+								<h5>New Testament</h5>
 								<div class="collection">
-									<h5>New Testament</h5>
 									<xsl:for-each select="//books-of-the-bible/entry[ testament/@handle = 'new-testament' ]">
 										<xsl:call-template name="bible-book">
 											<xsl:with-param name="book" select="name"/>
@@ -216,7 +216,7 @@
 									</xsl:for-each>
 
 								</div>
-								<a href="" class="more">See all tags</a>
+								<a href="" class="more"><span class="icon">z</span> See all tags</a>
 							</div>
 						</div>
 
