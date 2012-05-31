@@ -158,8 +158,9 @@
 													<xsl:value-of select="title" disable-output-escaping="yes" />
 												</h4>
 											</a>
-											<xsl:text> (</xsl:text>
+											<br />
 											<div class="meta" style="display: inline">
+												<xsl:text> (</xsl:text>
 												<xsl:value-of select="teachings/@items" />
 												<xsl:text>&#160;teachings)</xsl:text>
 											</div>
