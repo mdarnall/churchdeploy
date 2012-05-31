@@ -162,8 +162,8 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 							<div class="link-bar">
 							<a href="/7761/meetings/" class="link-home">Meeting Times</a>&#160;&#160;|&#160;&#160;<a href="/13391/im-new-here/" class="link-home">I'm New Here</a>
 							</div>
-							<blockquote>&#8220;For the bread of God is he which cometh down from heaven, and giveth life unto the world.&#8221;</blockquote>
-							<cite>John 6:33</cite>
+							<blockquote>Studying the Bible, verse-by-verse, chapter-by-chapter. It took 13 years last time.</blockquote>
+							<cite>We’re currently at 1st Timothy 6:1</cite>
 						</div>
 
 					</div>
