@@ -264,6 +264,12 @@
 	<xsl:param name="entry" />
 
 	<xsl:for-each select="$entry">
+		<div class="verse">
+		    <xsl:text> </xsl:text>
+			<xsl:value-of select="book/item" />
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="chapter" />
+		</div>
 		<h4>
 			<xsl:value-of select="title" disable-output-escaping="yes" />
 		</h4>
@@ -278,13 +284,6 @@
 				<xsl:text disable-output-escaping="yes"> </xsl:text>
 				<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
 			</span> 
-			<span class="verse">
-			    <i class="icon-book"></i>
-			    <xsl:text> </xsl:text>
-				<xsl:value-of select="book/item" />
-				<xsl:text> </xsl:text>
-				<xsl:value-of select="chapter" />
-			</span>
 			<span class="date">
 				<xsl:text> </xsl:text>
 				<xsl:text> </xsl:text>
