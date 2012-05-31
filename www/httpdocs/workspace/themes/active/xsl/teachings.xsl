@@ -148,10 +148,10 @@
 											<a href="">
 												<xsl:choose>
 													<xsl:when test="string-length(poster/@path)">
-														<img data-responsimage="{poster/filename}" style="width: 100%;" />
+														<img data-responsimage="{poster/filename}" style="width: 100%; height: 169px;" />
 													</xsl:when>
 													<xsl:otherwise>
-														<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
+														<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%; height: 169px;" />
 													</xsl:otherwise>
 												</xsl:choose>
 											</a>
