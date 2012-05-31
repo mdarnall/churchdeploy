@@ -97,7 +97,7 @@
 						</xsl:for-each>
 
 						<div class="span8">
-							<h2>Recent</h2>
+							<h3>Recent</h3>
 
 							<xsl:variable name="items-per-row" select="2" />
 
@@ -126,10 +126,12 @@
 													<xsl:value-of select="title" disable-output-escaping="yes" />
 												</h4>
 											</a>
-											<div class="meta">
-												<xsl:call-template name="date-teaching">
-													<xsl:with-param name="date" select="date/date/start/@iso"/>
-												</xsl:call-template>
+											<div class="meta recent">
+												<p>
+													<xsl:call-template name="date-teaching">
+														<xsl:with-param name="date" select="date/date/start/@iso"/>
+													</xsl:call-template>
+												</p>
 											</div>
 											<div class="description">
 												<p><xsl:apply-templates select="description" mode="truncate" /></p>
@@ -139,12 +141,12 @@
 						        </div>
 						    </xsl:for-each>
 
-						    <h2>Series</h2>
+						    <h3>Series</h3>
 
 						    <xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
 						        <div class="row">
 						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
-						            	<div class="span4">
+						            	<div class="span4 series">
 											<a href="">
 												<xsl:choose>
 													<xsl:when test="string-length(poster/@path)">
@@ -155,16 +157,19 @@
 													</xsl:otherwise>
 												</xsl:choose>
 											</a>
-											<a href="#">
-												<h4 style="display: inline">
-													<xsl:value-of select="title" disable-output-escaping="yes" />
-												</h4>
-											</a>
-											<br />
-											<div class="meta" style="display: inline">
-												<xsl:text> (</xsl:text>
-												<xsl:value-of select="teachings/@items" />
-												<xsl:text>&#160;teachings)</xsl:text>
+											<div class="info">
+												<a href="#">
+													<h4>
+														<xsl:value-of select="title" disable-output-escaping="yes" />
+													</h4>
+												</a>
+												<div class="meta">
+													<p>
+														<xsl:text> (</xsl:text>
+														<xsl:value-of select="teachings/@items" />
+														<xsl:text>&#160;teachings)</xsl:text>
+													</p>
+												</div>
 											</div>
 										</div>
 						            </xsl:for-each>
@@ -182,7 +187,7 @@
 					<xsl:when test="$position = 'column-full-width'">
 
 						<div class="span4">
-							<h2>Filters</h2>
+							<h3>Filters</h3>
 							<div class="widget filter">
 								<h4>Books of the Bible</h4>
 								<h5>Old Testament</h5>

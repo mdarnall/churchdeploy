@@ -151,7 +151,7 @@
 			</div>
 			<xsl:if test="not($pt1) or $pt1 = 43">
 
-				<div class="row">
+				<div class="row introduction">
 					<div class="span8">
 						<h2>Welcome to Athey Creek</h2>
 						<p style="width: 95%"><!-- We hope this website is helpful in communicating who we are.  -->To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
