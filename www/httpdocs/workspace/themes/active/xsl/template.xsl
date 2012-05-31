@@ -243,11 +243,11 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 <xsl:template name="template-footer-inside-container">
 	
-	<h3>Series</h3>
+	<xsl:if test="not($pt1) or $pt1 = 43">
+		<h3>Series</h3>
 
-    <xsl:for-each select="//teachings-series-home-filtered/entry">
-        <div class="row">
-            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+		<div class="row">
+		    <xsl:for-each select="//teachings-series-home-filtered/entry">
             	<div class="span4">
 					<a href="">
 						<xsl:choose>
@@ -271,9 +271,9 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 						<xsl:text>&#160;teachings)</xsl:text>
 					</div>
 				</div>
-            </xsl:for-each>
-        </div>
-    </xsl:for-each>
+		    </xsl:for-each>
+	    </div>
+	</xsl:if>
 
 	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 
