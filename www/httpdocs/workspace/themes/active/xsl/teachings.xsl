@@ -21,6 +21,7 @@
 	 
 	 				<xsl:when test="$pt3 = 'book' or $pt3 = 'tag'">					
 						<div class="span8 results">
+							<h3>Results</h3>
 							<xsl:for-each select="$entries">
 
 								<div class="result">
@@ -104,7 +105,7 @@
 						    <xsl:for-each select="//teachings-recent-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 3]">
 						        <div class="row">
 						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
-						            	<div class="span4">
+						            	<div class="span4 recent">
 											<a>
 												<xsl:call-template name="teaching-entry-url">
 													<xsl:with-param name="entry" select="."/>
@@ -267,17 +268,34 @@
 			<xsl:value-of select="title" disable-output-escaping="yes" />
 		</h4>
 		<div class="meta">
+			<p>
 			<span class="badge">
 				<xsl:value-of select="filename" />
 			</span>
-			<xsl:text>Scripture: </xsl:text>
-			<xsl:value-of select="book/item" />
-			<xsl:text> </xsl:text>
-			<xsl:value-of select="chapter" />
-			<xsl:text> | </xsl:text>
-			<xsl:call-template name="date-teaching">
-				<xsl:with-param name="date" select="date/date/start/@iso"/>
-			</xsl:call-template>
+			<span class="teacher">
+				<em>by </em>
+				<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
+				<xsl:text disable-output-escaping="yes"> </xsl:text>
+				<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
+			</span> 
+			<span class="verse">
+			    <i class="icon-book"></i>
+			    <xsl:text> </xsl:text>
+				<xsl:value-of select="book/item" />
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="chapter" />
+			</span>
+			<span class="date">
+				<xsl:text> </xsl:text>
+				<xsl:text> </xsl:text>
+				<xsl:text>|</xsl:text>
+				<xsl:text> </xsl:text>
+				<xsl:text> </xsl:text>
+				<xsl:call-template name="date-teaching">
+					<xsl:with-param name="date" select="date/date/start/@iso"/>
+				</xsl:call-template>
+			</span>
+			</p>
 		</div>
 		<div class="description">
 			<xsl:value-of select="description"  disable-output-escaping="yes" />
