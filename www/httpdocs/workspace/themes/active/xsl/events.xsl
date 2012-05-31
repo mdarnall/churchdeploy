@@ -105,13 +105,13 @@
 					<div class="component-header">
 
 						<xsl:if test="$pt2 = 'events' and $pt5 = 'past'">
-							<p><a href="{$root}/{$pt1}/{$pt2}/">Show current events »</a></p>
+							<div class="back"><a href="{$root}/{$pt1}/{$pt2}/" class="link-large">Show current events &#8594;</a></div>
 						</xsl:if>
 
 						<xsl:choose>
 
 							<xsl:when test="$single">
-								<p><a href="{$root}/{$pt1}/{$pt2}/">« Back to all events</a></p>
+								<div class="back"><a href="{$root}/{$pt1}/{$pt2}/" class="link-large">&#8592; Back to all events</a></div>
 							</xsl:when>
 
 							<xsl:otherwise>
@@ -311,9 +311,8 @@
 							</div>
 
 							<xsl:if test="$single">
-								<p>
-									<em>Paste link in email or IM</em>
-									<br />
+								<p class="share">
+									<label for="permalink">Paste link in email or IM</label>
 									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="selectAllText($(this))" />
 								</p>
 							</xsl:if>
@@ -338,19 +337,19 @@
 					<xsl:if test="not($single)">
 						<xsl:choose>
 							<xsl:when test="$pt2 = 'events' and not($pt5 = 'past')">
-								<p>
+								<div class="back">
 									<xsl:choose>
 										<xsl:when test="$pt5 = 'related'">
-											<a href="{$root}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/">« Show past events</a>
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/" class="link-large">&#8592; Show past events</a>
 										</xsl:when>
 										<xsl:otherwise>
-											<a href="{$root}/{$pt1}/{$pt2}/1/5/past/">« Show past events</a>
+											<a href="{$root}/{$pt1}/{$pt2}/1/5/past/" class="link-large">&#8592; Show past events</a>
 										</xsl:otherwise>
 									</xsl:choose>
-								</p>
+								</div>
 							</xsl:when>
 							<xsl:otherwise>
-								<p><a href="{$root}/{$pt1}/{$pt2}/">Show current events »</a></p>
+								<div class="back"><a href="{$root}/{$pt1}/{$pt2}/" class="link-large">Show current events &#8594;</a></div>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:if>
