@@ -304,26 +304,29 @@
 		</xsl:attribute>
 	</xsl:variable>
 
-	<div class="actions">
-		<span class="action">
-			<span class="icon">m</span>
-			<strong>Audio</strong> <a href="{$audio-url}" target="_blank">Listen</a>
-			<xsl:text> | </xsl:text>
-			<a href="{$audio-url}" target="_blank">Download</a>
-		</span>
-		<span class="action">
-			<span class="icon">V</span>
-			<strong>Video</strong> 
-			<xsl:text> </xsl:text> 
-			<a>
-				<xsl:call-template name="teaching-entry-url">
-					<xsl:with-param name="entry" select="$entry"/>
-				</xsl:call-template>
-				<xsl:text>View</xsl:text>
-			</a>
-			<xsl:text> | </xsl:text>
-			<a href="{$entry/url}" target="_blank">Download</a>
-		</span>
+	<div>
+		<xsl:call-template name="class-rows" />
+		<div class="actions">
+			<span class="action">
+				<span class="icon">m</span>
+				<strong>Audio</strong> <a href="{$audio-url}" target="_blank">Listen</a>
+				<xsl:text> | </xsl:text>
+				<a href="{$audio-url}" target="_blank">Download</a>
+			</span>
+			<span class="action">
+				<span class="icon">V</span>
+				<strong>Video</strong> 
+				<xsl:text> </xsl:text> 
+				<a>
+					<xsl:call-template name="teaching-entry-url">
+						<xsl:with-param name="entry" select="$entry"/>
+					</xsl:call-template>
+					<xsl:text>View</xsl:text>
+				</a>
+				<xsl:text> | </xsl:text>
+				<a href="{$entry/url}" target="_blank">Download</a>
+			</span>
+		</div>
 	</div>
 
 </xsl:template>
