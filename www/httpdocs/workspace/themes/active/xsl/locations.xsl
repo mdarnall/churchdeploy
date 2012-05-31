@@ -34,7 +34,7 @@
 
 				<xsl:variable name="latlon">
 					<xsl:value-of select="latitude" />
-					<xsl:text>, </xsl:text>
+					<xsl:text>,</xsl:text>
 					<xsl:value-of select="longitude" />
 				</xsl:variable>
 

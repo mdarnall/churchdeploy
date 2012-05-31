@@ -298,7 +298,7 @@
 										<xsl:choose>
 										    <xsl:when test="string-length($stripped) > 250">
 										        <xsl:value-of select="substring($stripped, 0, 250)" disable-output-escaping="yes" />
-										        <xsl:text>…</xsl:text>
+										        <xsl:text> .. </xsl:text><!-- … -->
 										    </xsl:when>
 										    <xsl:otherwise>
 										        <xsl:value-of select="$stripped" disable-output-escaping="yes" />

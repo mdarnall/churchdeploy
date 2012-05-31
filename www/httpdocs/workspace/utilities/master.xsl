@@ -87,19 +87,22 @@
 				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
 			</xsl:attribute>
 
-			<xsl:call-template name="edit-entry">
-				<xsl:with-param name="link">
-					<xsl:choose>
-						<xsl:when test="$pt1">
-							<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/', $pt1, '/')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/',//tags-all-entries/entry[tag/@handle = 'home']/@id , '/')" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:with-param>
-				<xsl:with-param name="class" select="'edit-tag'" />
-			</xsl:call-template>
+			<xsl:if test="not($pt1 = 'toolkit')">
+				<xsl:call-template name="edit-entry">
+					<xsl:with-param name="link">
+						<xsl:choose>
+							<xsl:when test="$pt1">
+								<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/', $pt1, '/')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($root, '/symphony/publish/tags/edit/',//tags-all-entries/entry[tag/@handle = 'home']/@id , '/')" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:with-param>
+					<xsl:with-param name="class" select="'edit-tag'" />
+				</xsl:call-template>
+				<a href="{$root}/symphony/logout/" style="position: absolute; top: 10px; left: 10px; z-index: 1000">Logout</a>				
+			</xsl:if>
 			
 			<xsl:call-template name="template-header-outside-container"/>
 			
@@ -108,8 +111,8 @@
 				
 
 				<xsl:choose>
-					<xsl:when test="$pt1 = 'toolkit'">
-						<xsl:call-template name="toolkit"/>
+					<xsl:when test="$pt1 = 'toolkit' and $cookie-username">
+						<xsl:call-template name="toolkit" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
@@ -274,7 +277,7 @@
 	<xsl:param name="link" />
 	<xsl:param name="class" />
 
-	<xsl:if test="string-length($cookie-username)">
+	<xsl:if test="$cookie-username">
 		<a href="{$link}" target="blank">
 			<xsl:attribute name="class">
 				<xsl:text>edit </xsl:text>

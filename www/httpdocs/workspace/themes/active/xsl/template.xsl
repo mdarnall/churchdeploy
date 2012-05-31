@@ -154,7 +154,7 @@
 				<div class="row">
 					<div class="span8">
 						<h2>Welcome to Athey Creek</h2>
-						<p>We hope this website is helpful in communicating who we are. To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
+						<p style="width: 95%"><!-- We hope this website is helpful in communicating who we are.  -->To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
 the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</p>
 					</div>
 					<div class="span4">
@@ -206,7 +206,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 			<xsl:call-template name="component-events">
 				<xsl:with-param name="position" select="'column-right'" />
-				<xsl:with-param name="entries" select="//events-all-entries-filtered/entry" />
+				<xsl:with-param name="entries" select="//events-home-filtered/entry" />
 			</xsl:call-template>
 		</div>
 	</div>
