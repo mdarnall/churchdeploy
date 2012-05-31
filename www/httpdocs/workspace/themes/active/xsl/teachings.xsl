@@ -139,37 +139,41 @@
 						        </div>
 						    </xsl:for-each>
 
-						    <h2>Series</h2>
+						    <xsl:template name="series-featured">
+						    	
+						    	<h2>Series</h2>
 
-						    <xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
-						        <div class="row">
-						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
-						            	<div class="span4">
-											<a href="">
-												<xsl:choose>
-													<xsl:when test="string-length(poster/@path)">
-														<img data-responsimage="{poster/filename}" style="width: 100%;" />
-													</xsl:when>
-													<xsl:otherwise>
-														<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
-													</xsl:otherwise>
-												</xsl:choose>
-											</a>
-											<a href="#">
-												<h4 style="display: inline">
-													<xsl:value-of select="title" disable-output-escaping="yes" />
-												</h4>
-											</a>
-											<br />
-											<div class="meta" style="display: inline">
-												<xsl:text> (</xsl:text>
-												<xsl:value-of select="teachings/@items" />
-												<xsl:text>&#160;teachings)</xsl:text>
+							    <xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
+							        <div class="row">
+							            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+							            	<div class="span4">
+												<a href="">
+													<xsl:choose>
+														<xsl:when test="string-length(poster/@path)">
+															<img data-responsimage="{poster/filename}" style="width: 100%;" />
+														</xsl:when>
+														<xsl:otherwise>
+															<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
+														</xsl:otherwise>
+													</xsl:choose>
+												</a>
+												<a href="#">
+													<h4 style="display: inline">
+														<xsl:value-of select="title" disable-output-escaping="yes" />
+													</h4>
+												</a>
+												<br />
+												<div class="meta" style="display: inline">
+													<xsl:text> (</xsl:text>
+													<xsl:value-of select="teachings/@items" />
+													<xsl:text>&#160;teachings)</xsl:text>
+												</div>
 											</div>
-										</div>
-						            </xsl:for-each>
-						        </div>
-						    </xsl:for-each>
+							            </xsl:for-each>
+							        </div>
+							    </xsl:for-each>
+
+						    </xsl:template>
 
 						</div>
 

@@ -197,17 +197,18 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 		</div>
 		<div id="sidebar" class="span4 column-right">
 			<h3>Upcoming</h3>
-<!-- 			<ul class="component component-events">
+ 			<ul class="component component-events">
 				<li class="entry clearfix odd first"><a href="http://atheycreek/20/events/12947/jr-high-bullwinkle-s-and-burgers/"><div class="date"><div class="month">Jul</div><div class="day">6</div></div><table class="info"><tbody><tr><td>Jr. High Bullwinkle’s and Burgers</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12947/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
 				<li class="entry clearfix even middle"><a href="http://atheycreek/20/events/12949/jr-high-boating-bonanza/"><div class="date"><div class="month">Jul</div><div class="day">12</div></div><table class="info"><tbody><tr><td>Jr. High Boating Bonanza</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12949/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
 				<li class="entry clearfix odd last"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "><i class="icon-pencil"></i></a></li>
 				<a href="http://atheycreek/20/events/1/5/related/29/" class="more"><span class="icon">l</span><span>See more events</span></a>
-			</ul> -->
+			</ul> 
 
 			<xsl:call-template name="component-events">
 				<xsl:with-param name="position" select="'column-right'" />
 				<xsl:with-param name="entries" select="//events-home-filtered/entry" />
 			</xsl:call-template>
+
 		</div>
 	</div>
 </div>
@@ -242,6 +243,38 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 <xsl:template name="template-footer-inside-container">
 	
+	<h3>Series</h3>
+
+    <xsl:for-each select="//teachings-series-home-filtered/entry">
+        <div class="row">
+            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+            	<div class="span4">
+					<a href="">
+						<xsl:choose>
+							<xsl:when test="string-length(poster/@path)">
+								<img data-responsimage="{poster/filename}" style="width: 100%;" />
+							</xsl:when>
+							<xsl:otherwise>
+								<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</a>
+					<a href="#">
+						<h4 style="display: inline">
+							<xsl:value-of select="title" disable-output-escaping="yes" />
+						</h4>
+					</a>
+					<br />
+					<div class="meta" style="display: inline">
+						<xsl:text> (</xsl:text>
+						<xsl:value-of select="teachings/@items" />
+						<xsl:text>&#160;teachings)</xsl:text>
+					</div>
+				</div>
+            </xsl:for-each>
+        </div>
+    </xsl:for-each>
+
 	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 
 	<div class="footer">
