@@ -22,10 +22,12 @@
 	 				<xsl:when test="$pt3 = 'book' or $pt3 = 'tag'">					
 						<div class="span8 results">
 							<xsl:for-each select="$entries">
-						
-								<xsl:call-template name="teaching-entry">
-									<xsl:with-param name="entry" select="." />
-								</xsl:call-template>
+
+								<div class="result">
+									<xsl:call-template name="teaching-entry">
+										<xsl:with-param name="entry" select="." />
+									</xsl:call-template>									
+								</div>
 
 							</xsl:for-each>
 						</div>
