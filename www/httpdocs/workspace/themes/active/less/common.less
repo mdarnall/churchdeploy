@@ -1669,25 +1669,23 @@ h3 {
 			border: 10px solid #e9e9e9;
 			margin: 0 0 30px 0;
 			
-			.verse {
-				float: right;
-				margin-bottom: 15px;
-				font-size: 14px;
-				font-weight: normal;
-				text-transform: uppercase;
-				padding: @base;
-				background: none;
-				color: @color-accent;
-				text-align: right;
-				border-bottom: 1px solid @color-grey-accent;
-				.border-radius(0);
-				text-shadow: none;
-			}
 			h4 {
 				font-size: 18px;
-				padding: 0 @base @base * 0.5 @base;
+				padding: 0 @base *2 @base * 0.5 @base;
+				border-bottom: 1px solid @color-grey-accent;
+				margin-bottom: @base;
+				.verse {
+					#font > #proxima > .regular;
+					float: right;
+					font-size: 14px;
+					text-transform: uppercase;
+					background: none;
+					color: @color-accent;
+					text-shadow: none;
+				}
 			}
 			.meta {
+				clear: both;
 				padding: 0 @base;
 				p {
 					font-size: 13px;

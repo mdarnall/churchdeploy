@@ -264,14 +264,14 @@
 	<xsl:param name="entry" />
 
 	<xsl:for-each select="$entry">
-		<div class="verse">
-		    <xsl:text> </xsl:text>
-			<xsl:value-of select="book/item" />
-			<xsl:text> </xsl:text>
-			<xsl:value-of select="chapter" />
-		</div>
 		<h4>
 			<xsl:value-of select="title" disable-output-escaping="yes" />
+			<span class="verse">
+			    <xsl:text> </xsl:text>
+				<xsl:value-of select="book/item" />
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="chapter" />
+			</span>
 		</h4>
 		<div class="meta">
 			<p>
