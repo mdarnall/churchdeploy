@@ -299,9 +299,12 @@
 		<div class="description">
 			<xsl:value-of select="description"  disable-output-escaping="yes" />
 		</div>
-		<xsl:call-template name="teaching-tag-list">
-			<xsl:with-param name="tags" select="tags/item"/>
-		</xsl:call-template>
+		
+		<xsl:if test="tags/item">
+			<xsl:call-template name="teaching-tag-list">
+				<xsl:with-param name="tags" select="tags/item"/>
+			</xsl:call-template>
+		</xsl:if>
 
 		<xsl:call-template name="teaching-actions">
 			<xsl:with-param name="entry" select="."/>
