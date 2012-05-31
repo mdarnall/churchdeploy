@@ -68,6 +68,7 @@
 				data-static="{$workspace}/img/spacer.gif"
 				data-loading="{$workspace}/img/loading.gif"
 			/>
+			<link rel="apple-touch-icon-precomposed" href="{$workspace}/themes/active/img/apple-touch-icon.png" />
 
 			<xsl:call-template name="template-head"/>
 
@@ -273,7 +274,7 @@
 	<xsl:param name="link" />
 	<xsl:param name="class" />
 
-	<xsl:if test="$cookie-username">
+	<xsl:if test="string-length($cookie-username)">
 		<a href="{$link}" target="blank">
 			<xsl:attribute name="class">
 				<xsl:text>edit </xsl:text>

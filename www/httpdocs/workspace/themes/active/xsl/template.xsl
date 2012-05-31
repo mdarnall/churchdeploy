@@ -155,8 +155,7 @@
 					<div class="span8">
 						<h2>Welcome to Athey Creek</h2>
 						<p>We hope this website is helpful in communicating who we are. To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
-the Bible, and serve one another. We believe church is supposed to be like a 
-hospital, a place of healing and refreshment.</p>
+the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</p>
 					</div>
 					<div class="span4">
 						<div>
@@ -177,7 +176,7 @@ hospital, a place of healing and refreshment.</p>
 	<div class="container main-container">
 	<div class="row home">
 		<div id="main-content" class="span8 column-center">
-			<h3>Featured Content</h3>
+			<h3>Featured</h3>
 			<div class="component component-teachings large">
 				<div class="latest">
 					<iframe src="http://player.vimeo.com/video/42127479?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen" width="620" height="349"></iframe>

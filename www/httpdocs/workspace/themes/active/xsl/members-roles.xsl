@@ -53,7 +53,7 @@
 										<xsl:value-of select="member/item/last-name" />
 
 										<xsl:call-template name="edit-entry">
-											<xsl:with-param name="link" select="concat($root, '/symphony/publish/members/edit/', @id, '/')" />
+											<xsl:with-param name="link" select="concat($root, '/symphony/publish/members-roles/edit/', @id, '/')" />
 										</xsl:call-template>
 									</h3>
 
@@ -70,7 +70,7 @@
 				<xsl:otherwise>
 					
 					<ul class="contacts nav nav-tabs nav-stacked">
-						<xsl:for-each select="//members-entries-by-tag/entry">
+						<xsl:for-each select="$entries">
 							<li>
 								<xsl:call-template name="class-rows" />
 								<a href="mailto:{email}">
@@ -105,7 +105,7 @@
 									</div>
 								</a>
 								<xsl:call-template name="edit-entry">
-									<xsl:with-param name="link" select="concat($root, '/symphony/publish/members/edit/', @id, '/')" />
+									<xsl:with-param name="link" select="concat($root, '/symphony/publish/members-roles/edit/', @id, '/')" />
 								</xsl:call-template>
 							</li>
 						</xsl:for-each>
