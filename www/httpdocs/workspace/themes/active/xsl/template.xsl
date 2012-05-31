@@ -184,7 +184,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 						<h2 class="title">Sanctification &amp; the Gospel</h2>
 						<p>
 							<span class="teacher"><em>by</em> Brett Meador</span>
-							<span class="verse"><span class="icon">?</span> 2 Thessalonians 2:1-12</span>
+							<span class="verse"><i class="icon-book"></i> 2 Thessalonians 2:1-12</span>
 						</p>
 						<p>
 							<span class="day">Sunday</span>&#160;&#8226;&#160;
