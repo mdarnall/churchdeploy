@@ -137,7 +137,7 @@
 						        </div>
 						    </xsl:for-each>
 
-						    <h2>Recommended series</h2>
+						    <h2>Series</h2>
 
 						    <xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
 						        <div class="row">
@@ -179,7 +179,7 @@
 					<xsl:when test="$position = 'column-full-width'">
 
 						<div class="span4">
-							<h3>Filters</h3>
+							<h2>Filters</h2>
 							<div class="widget filter">
 								<h4>Books of the Bible</h4>
 								<h5>Old Testament</h5>
@@ -211,7 +211,7 @@
 								<h4>Tags</h4>
 								<div class="collection">
 									<xsl:for-each select="//teachings-tags-random-filtered/entry">
-										<a href="#">
+										<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/tag/{@id}/">
 											<xsl:value-of select="tag" disable-output-escaping="yes" />
 										</a>
 										<xsl:if test="position() &lt; last()">, </xsl:if>
@@ -304,9 +304,9 @@
 	<div class="actions">
 		<span class="action">
 			<span class="icon">m</span>
-			<strong>Audio</strong> <a href="">Listen</a>
+			<strong>Audio</strong> <a href="{$audio-url}" target="_blank">Listen</a>
 			<xsl:text> | </xsl:text>
-			<a href="">Download</a>
+			<a href="{$audio-url}" target="_blank">Download</a>
 		</span>
 		<span class="action">
 			<span class="icon">V</span>
@@ -371,7 +371,7 @@
 
 <xsl:template name="bible-book">
 	<xsl:param name="book" />
-	<a href="">
+	<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/book/{$book/@handle}/">
 		<xsl:value-of select="$book" />
 	</a>
 </xsl:template>
