@@ -244,39 +244,42 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 <xsl:template name="template-footer-inside-container">
 	
 	<xsl:if test="not($pt1) or $pt1 = 43">
-		<h3>Series</h3>
+		<div class="component-teachings">
+				
+			<h3>Series</h3>
 
-		<div class="row">
-		    <xsl:for-each select="//teachings-series-home-filtered/entry">
-            	<div class="span4">
-					<a href="">
-						<img style="width: 100%; height: 169px">
-							<xsl:attribute name="data-responsimage">
-								<xsl:choose>
-									<xsl:when test="string-length(poster/@path)">
-										<xsl:value-of select="poster/filename" disable-output-escaping="yes" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:attribute>
-						</img>
-					</a>
-					<a href="#">
-						<h4 style="display: inline">
-							<xsl:value-of select="title" disable-output-escaping="yes" />
-						</h4>
-					</a>
-					<br />
-					<div class="meta" style="display: inline">
-						<xsl:text> (</xsl:text>
-						<xsl:value-of select="teachings/@items" />
-						<xsl:text>&#160;teachings)</xsl:text>
+			<div class="row">
+			    <xsl:for-each select="//teachings-series-home-filtered/entry">
+	            	<div class="span4">
+						<a href="">
+							<img style="width: 100%; height: 169px">
+								<xsl:attribute name="data-responsimage">
+									<xsl:choose>
+										<xsl:when test="string-length(poster/@path)">
+											<xsl:value-of select="poster/filename" disable-output-escaping="yes" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</img>
+						</a>
+						<a href="#">
+							<h4 style="display: inline">
+								<xsl:value-of select="title" disable-output-escaping="yes" />
+							</h4>
+						</a>
+						<br />
+						<div class="meta" style="display: inline">
+							<xsl:text> (</xsl:text>
+							<xsl:value-of select="teachings/@items" />
+							<xsl:text>&#160;teachings)</xsl:text>
+						</div>
 					</div>
-				</div>
-		    </xsl:for-each>
-	    </div>
+			    </xsl:for-each>
+		    </div>
+		</div>
 	</xsl:if>
 
 	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
