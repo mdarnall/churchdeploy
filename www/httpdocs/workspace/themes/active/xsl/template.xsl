@@ -250,14 +250,18 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 		    <xsl:for-each select="//teachings-series-home-filtered/entry">
             	<div class="span4">
 					<a href="">
-						<xsl:choose>
-							<xsl:when test="string-length(poster/@path)">
-								<img data-responsimage="{poster/filename}" style="width: 100%;" />
-							</xsl:when>
-							<xsl:otherwise>
-								<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
-							</xsl:otherwise>
-						</xsl:choose>
+						<img style="width: 100%; height: 169px">
+							<xsl:attribute name="data-responsimage">
+								<xsl:choose>
+									<xsl:when test="string-length(poster/@path)">
+										<xsl:value-of select="poster/filename" disable-output-escaping="yes" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:attribute>
+						</img>
 					</a>
 					<a href="#">
 						<h4 style="display: inline">
