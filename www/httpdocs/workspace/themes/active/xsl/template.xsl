@@ -252,7 +252,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			    <xsl:for-each select="//teachings-series-home-filtered/entry">
 	            	<div class="span4 series">
 						<a href="">
-							<img style="width: 100%; height: 169px">
+							<img>
 								<xsl:attribute name="data-responsimage">
 									<xsl:choose>
 										<xsl:when test="string-length(poster/@path)">
@@ -270,7 +270,6 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 								<xsl:value-of select="title" disable-output-escaping="yes" />
 							</h4>
 						</a>
-						<br />
 						<div class="meta">
 							<p>
 								<xsl:text> (</xsl:text>
