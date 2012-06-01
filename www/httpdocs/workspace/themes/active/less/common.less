@@ -288,7 +288,7 @@ h3 {
 .mast {
 	background: @color-mast;
 	padding: 40px 0;
-	margin-top: 40px;
+	margin: 30px 0 30px 0;
 
 	.row {
 		margin: 20px auto 0 auto;
@@ -435,7 +435,9 @@ h3 {
 	&.subnav-fixed {
 		top: 0;
 	}
-
+	.nav {
+		margin-bottom: 0;
+	}
 	ul {
 		text-align: center;
 		border-bottom: 1px solid #ddd;
@@ -475,7 +477,9 @@ h3 {
 }
 
 .masthead {
-	margin-bottom: 20px;
+	position: relative;
+	top: -30px;
+	margin-bottom: 0;
 }
 
 
@@ -778,7 +782,6 @@ h3 {
 	}
 
 	.nav-box {
-		margin-top: @base * 3;
 
 		.row {
 			margin-bottom: 20px;
@@ -873,7 +876,6 @@ h3 {
 // home --------------------------------------------------------------
 
 .home {
-	margin-top: 40px;
 	
 	h3 {
 		margin-bottom: 15px;
@@ -1512,7 +1514,7 @@ h3 {
 	}
 
 	.search {
-		margin: @base auto;
+		margin: @base auto @base * 2 auto;
 		text-align: center;
 
 		input {
@@ -1540,7 +1542,7 @@ h3 {
 	}
 
 	.latest {
-		margin-top: 40px;
+
 		margin-bottom: 40px;
 
 		.video {
@@ -1561,6 +1563,11 @@ h3 {
 			p {
 				line-height: 1.8;
 			}
+		}
+		.actions {
+			position: relative;
+			top: -10px;
+			margin: 0;
 		}
 
 	}

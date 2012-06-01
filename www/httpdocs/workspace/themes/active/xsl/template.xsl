@@ -221,20 +221,20 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 	<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
 
-	<div class="jumbotron masthead" id="overview">
 		<xsl:if test="
 			count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header = 'Yes')] ) or
 			count( //tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header = 'Yes')] )
 		">
-			<div class="subnav">
-				<ul class="nav nav-pills">				
-					<xsl:call-template name="subnav">
-						<xsl:with-param name="parents" select="$parents" />
-					</xsl:call-template>
-				</ul>
+			<div class="jumbotron masthead" id="overview">
+				<div class="subnav">
+					<ul class="nav nav-pills">				
+						<xsl:call-template name="subnav">
+							<xsl:with-param name="parents" select="$parents" />
+						</xsl:call-template>
+					</ul>
+				</div>
 			</div>
 		</xsl:if>
-	</div>
 
 	<!-- <h1><xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" /></h1> -->
 
