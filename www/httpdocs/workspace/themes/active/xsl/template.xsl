@@ -252,7 +252,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			    <xsl:for-each select="//teachings-series-home-filtered/entry">
 	            	<div class="span4 series">
 						<a href="">
-							<img>
+							<img style="width: 100%;">
 								<xsl:attribute name="data-responsimage">
 									<xsl:choose>
 										<xsl:when test="string-length(poster/@path)">
@@ -357,12 +357,16 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<xsl:text>© </xsl:text>
-						<xsl:value-of select="$this-year" />
-						<xsl:text>. </xsl:text>
-						<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-						<xsl:text>. All&#160;rights&#160;reserved.</xsl:text>
-					<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right facebook">Visit us on Facebook</a>				
+						<span class="copyright">
+							<xsl:text>© </xsl:text>
+							<xsl:value-of select="$this-year" />
+							<xsl:text>. </xsl:text>
+							<a href="{$root}"><xsl:value-of select="$website-name" /></a>
+							<xsl:text>. All&#160;rights&#160;reserved.</xsl:text>
+						</span>
+						<span class="facebook">
+							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
+						</span>				
 					</div>
 				</div>
 			</div>
