@@ -80,11 +80,21 @@
 		<body data-spy="scroll" data-target=".subnav" data-offset="50">
 
 			<xsl:attribute name="class">
-				<xsl:text>page-</xsl:text>
-				<xsl:value-of select="$current-page" />
+				<xsl:text>pageid-</xsl:text>
+				<xsl:choose>
+					<xsl:when test="$pt1">
+						<xsl:value-of select="$pt1" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'home']/@id" />
+					</xsl:otherwise>
+				</xsl:choose>
 				<xsl:text> </xsl:text>
 				<xsl:text>layout-</xsl:text>
 				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
+				<xsl:if test="number($pt3)">
+					<xsl:text> profile</xsl:text>
+				</xsl:if>
 			</xsl:attribute>
 
 			<xsl:if test="not($pt1 = 'toolkit')">

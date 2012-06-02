@@ -2,34 +2,25 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcemembers_roles_entries_by_tag extends Datasource{
+	Class datasourceteachings_series_home_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'members-roles-entries-by-tag';
-		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
+		public $dsParamROOTELEMENT = 'teachings-series-home-filtered';
+		public $dsParamORDER = 'asc';
+		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamLIMIT = '3';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamSORT = 'system:id';
-		public $dsParamHTMLENCODE = 'yes';
+		public $dsParamSORT = 'order';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'152' => '{$pt1:43}',
+				'233' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'member: first-name',
-				'member: last-name',
-				'member: photo',
-				'member: email',
-				'member: job-title',
-				'member: gender',
-				'member: birthday',
-				'member: about',
-				'role: role',
-				'role: description'
+				'title',
+				'poster',
+				'teachings: title'
 		);
 
 
@@ -40,18 +31,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Members/Roles: Entries by tag',
+				'name' => 'Teachings: Series home (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-30T22:41:40+00:00'
+				'release-date' => '2012-05-31T03:29:00+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '18';
+			return '27';
 		}
 
 		public function allowEditorToParse(){

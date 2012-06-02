@@ -4,10 +4,10 @@
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 	encoding="UTF-8"
-    method="xml"
-    omit-xml-declaration="yes"
-    indent="no"
-    />
+	method="xml"
+	omit-xml-declaration="yes"
+	indent="no"
+	/>
 
 
 <xsl:template name="template-head">
@@ -197,7 +197,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 		</div>
 		<div id="sidebar" class="span4 column-right">
 			<h3>Upcoming</h3>
- 			<ul class="component component-events">
+			<ul class="component component-events">
 				<li class="entry clearfix odd first"><a href="http://atheycreek/20/events/12947/jr-high-bullwinkle-s-and-burgers/"><div class="date"><div class="month">Jul</div><div class="day">6</div></div><table class="info"><tbody><tr><td>Jr. High Bullwinkle’s and Burgers</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12947/" target="blank" class="edit "></a></li>
 				<li class="entry clearfix even middle"><a href="http://atheycreek/20/events/12949/jr-high-boating-bonanza/"><div class="date"><div class="month">Jul</div><div class="day">12</div></div><table class="info"><tbody><tr><td>Jr. High Boating Bonanza</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12949/" target="blank" class="edit "></a></li>
 				<li class="entry clearfix odd last"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "></a></li>
@@ -249,21 +249,12 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			<h3>Series</h3>
 
 			<div class="row">
-			    <xsl:for-each select="//teachings-series-home-filtered/entry">
-	            	<div class="span4">
+				<xsl:for-each select="//teachings-series-home-filtered/entry">
+					<div class="span4">
 						<a href="">
-							<img style="width: 100%; height: 169px">
-								<xsl:attribute name="data-responsimage">
-									<xsl:choose>
-										<xsl:when test="string-length(poster/@path)">
-											<xsl:value-of select="poster/filename" disable-output-escaping="yes" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
-										</xsl:otherwise>
-									</xsl:choose>
-								</xsl:attribute>
-							</img>
+							<xsl:call-template name="teaching-poster-or-default">
+								<xsl:with-param name="poster" select="poster"/>
+							</xsl:call-template>
 						</a>
 						<a href="#">
 							<h4 style="display: inline">
@@ -277,8 +268,8 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 							<xsl:text>&#160;teachings)</xsl:text>
 						</div>
 					</div>
-			    </xsl:for-each>
-		    </div>
+				</xsl:for-each>
+			</div>
 		</div>
 	</xsl:if>
 

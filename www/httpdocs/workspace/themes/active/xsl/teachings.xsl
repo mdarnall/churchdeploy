@@ -63,9 +63,9 @@
 								</h2>
 								<div class="meta">
 									<p>
-									<span class="badge">
+									<!-- <span class="badge">
 										<xsl:value-of select="filename" />
-									</span>
+									</span> -->
 									<span class="teacher">
 										<em>by </em>
 										<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
@@ -110,14 +110,9 @@
 												<xsl:call-template name="teaching-entry-url">
 													<xsl:with-param name="entry" select="."/>
 												</xsl:call-template>
-												<xsl:choose>
-													<xsl:when test="string-length(poster/@path)">
-														<img data-responsimage="{poster/filename}" style="width: 100%;" />
-													</xsl:when>
-													<xsl:otherwise>
-														<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%;" />
-													</xsl:otherwise>
-												</xsl:choose>
+												<xsl:call-template name="teaching-poster-or-default">
+							            			<xsl:with-param name="poster" select="poster"/>
+							            		</xsl:call-template>
 											</a>
 											<a>
 												<xsl:call-template name="teaching-entry-url">
@@ -149,14 +144,9 @@
 						            <xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
 						            	<div class="span4 series">
 											<a href="">
-												<xsl:choose>
-													<xsl:when test="string-length(poster/@path)">
-														<img data-responsimage="{poster/filename}" style="width: 100%; height: 169px;" />
-													</xsl:when>
-													<xsl:otherwise>
-														<img data-responsimage="accf-flat-4fc3e05b81747.jpg" style="width: 100%; height: 169px;" />
-													</xsl:otherwise>
-												</xsl:choose>
+												<xsl:call-template name="teaching-poster-or-default">
+							            			<xsl:with-param name="poster" select="poster"/>
+							            		</xsl:call-template>
 											</a>
 											<div class="info">
 												<a href="#">
@@ -419,6 +409,26 @@
 		<xsl:with-param name="howMany" select="$howMany + 1"/>
 		</xsl:call-template>
 	</xsl:if>
+
+</xsl:template>
+
+
+<xsl:template name="teaching-poster-or-default">
+
+	<xsl:param name="poster" />
+	
+	<img style="width: 100%; height: 169px">
+		<xsl:attribute name="data-responsimage">
+			<xsl:choose>
+				<xsl:when test="string-length(poster/@path)">
+					<xsl:value-of select="$poster/filename" disable-output-escaping="yes" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:attribute>
+	</img>
 
 </xsl:template>
 
