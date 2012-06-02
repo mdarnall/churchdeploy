@@ -99,7 +99,7 @@
 											<xsl:value-of select="member/item/last-name" disable-output-escaping="yes" />
 										</h4>
 										<div>
-											<span class="icon">M</span>
+<!-- 											<span class="icon">M</span> -->
 											<span class="email"><xsl:value-of select="member/item/email" /></span>
 										</div>
 									</div>
