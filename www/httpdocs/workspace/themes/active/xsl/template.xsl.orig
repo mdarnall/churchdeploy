@@ -249,12 +249,30 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			<h3>Series</h3>
 
 			<div class="row">
-			    <xsl:for-each select="//teachings-series-home-filtered/entry">
-	            	<div class="span4 series">
+<<<<<<< HEAD
+				<xsl:for-each select="//teachings-series-home-filtered/entry">
+					<div class="span4">
 						<a href="">
 							<xsl:call-template name="teaching-poster-or-default">
 								<xsl:with-param name="poster" select="poster"/>
 							</xsl:call-template>
+=======
+			    <xsl:for-each select="//teachings-series-home-filtered/entry">
+	            	<div class="span4 series">
+						<a href="">
+							<img style="width: 100%;">
+								<xsl:attribute name="data-responsimage">
+									<xsl:choose>
+										<xsl:when test="string-length(poster/@path)">
+											<xsl:value-of select="poster/filename" disable-output-escaping="yes" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:text disable-output-escaping="yes">accf-flat-4fc3e05b81747.jpg</xsl:text>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</img>
+>>>>>>> 99ad0726c7e43980cf985008918d72ccd67b9c86
 						</a>
 						<a href="#">
 							<h4>

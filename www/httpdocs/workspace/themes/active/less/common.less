@@ -701,6 +701,15 @@ h3 {
 		padding: @base * 2 @base * 2.5;
 		color: #aaa;
 		font-size: 14px;
+		
+		.facebook a {
+			#font > #proxima > .bold;
+			color: #aaa;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			&:hover { color: @color-accent; }
+		}
 
 		a { 
 			color: #aaa;
@@ -708,15 +717,6 @@ h3 {
 			&:hover {
 				color: @color-accent;
 				text-decoration: none;
-			}
-
-			&.facebook {
-				#font > #proxima > .bold;
-				color: #aaa;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-
-				&:hover { color: @color-accent; }
 			}
 		}
 	}
@@ -871,7 +871,7 @@ h3 {
 
 // home --------------------------------------------------------------
 
-.home {
+.page-home {
 	
 	h3 {
 		margin-bottom: 15px;
@@ -888,7 +888,6 @@ h3 {
 	}
 	
 	.featured {
-
 		img {
 			width: 300px;
 			height: 200px;
@@ -897,6 +896,8 @@ h3 {
 	}
 	
 	.component-teachings {
+		padding-bottom: @base * 2;
+		
 		.latest {
 			margin-top: 0;
 			.video {
@@ -1578,7 +1579,6 @@ h3 {
 		}
 	}
 	
-	
 	.meta {
 	
 		&.series {
@@ -1586,6 +1586,7 @@ h3 {
 		}
 
 		p {
+			.body-text-serif;
 			color: #999;
 			padding: 0;
 			margin: 0;
@@ -1847,11 +1848,6 @@ h3 {
 			padding: 5px 0
 		}
 	}
-	.facebook {
-		margin-top: 20px;
-		float: none;
-		display: block;
-	}
 
 }
 
@@ -1980,6 +1976,11 @@ h3 {
 			}
 		}
 	}
+	
+	.baseline {
+		text-align: center;
+		line-height: 1.7;
+	}
 
 }
 
@@ -2051,11 +2052,9 @@ h3 {
 			font-size: 13px;
 		}
 	}
-
-	.facebook {
-		margin-top: 0;
-		float: right;
-		display: inline;
+	
+	.copyright {
+		margin-bottom: 0;
 	}
 
 }
