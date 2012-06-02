@@ -73,7 +73,10 @@
 						<xsl:for-each select="$entries">
 							<li>
 								<xsl:call-template name="class-rows" />
-								<a href="mailto:{email}">
+								<a>
+									<xsl:attribute name="href">
+										<xsl:value-of select="member/item/email" />
+									</xsl:attribute>
 									<div class="pull-left">
 										<img>
 											<xsl:attribute name="src">
@@ -99,7 +102,7 @@
 											<xsl:value-of select="member/item/last-name" disable-output-escaping="yes" />
 										</h4>
 										<div>
-<!-- 											<span class="icon">M</span> -->
+											<!-- <span class="icon">M</span> -->
 											<span class="email"><xsl:value-of select="member/item/email" /></span>
 										</div>
 									</div>
