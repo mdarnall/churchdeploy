@@ -479,15 +479,6 @@
 
 			self::$_log['query'][$query_hash]['time'] = precision_timer('stop', self::$_log['query'][$query_hash]['start']);
 			
-			// ==============================================================
-			// Start database logger
-			// ==============================================================
-				require_once(EXTENSIONS . '/db_sync/lib/class.logquery.php');
-				if (class_exists('LogQuery')) LogQuery::log($query);
-			// ==============================================================
-			// End database logger
-			// ==============================================================
-			
 			return true;
 		}
 
