@@ -45,7 +45,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 		<title><!-- TITLE --></title>
-		<link rel="stylesheet" type="text/css" href="'.kINSTALL_ASSET_LOCATION.'/main.css"/>
+		<link rel="stylesheet" type="text/css" href="'.kINSTALL_ASSET_LOCATION.'/main.css" />
 		<script type="text/javascript" src="'.kINSTALL_ASSET_LOCATION.'/main.js"></script>
 	</head>' . CRLF;
 

@@ -23,6 +23,7 @@
 <xsl:include href="../utilities/date-time-advanced.xsl" />
 <xsl:include href="../utilities/date-utilities.xsl" />
 <xsl:include href="../utilities/pagination.xsl" />
+<xsl:include href="../utilities/timespan-format.xsl" />
 <xsl:include href="../utilities/toolkit.xsl" />
 <xsl:include href="../utilities/url-encode.xsl" />
 
@@ -30,10 +31,12 @@
 
 <xsl:param name="cookie-username" />
 <xsl:param name="url-language" />
+<xsl:param name="url-sections" />
+<xsl:param name="url-keywords" />
 
 <xsl:variable name="pt1" select="'43'" />
 <xsl:variable name="events-entries-per-page" select="'5'" />
-<xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')"/>
+<xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')" />
 
 
 <xsl:template match="/">
@@ -70,9 +73,9 @@
 			/>
 			<link rel="apple-touch-icon-precomposed" href="{$workspace}/themes/active/img/apple-touch-icon.png" />
 
-			<xsl:call-template name="template-head"/>
+			<xsl:call-template name="template-head" />
 
-			<!-- <xsl:comment><![CDATA[[if IE 6]><link rel="stylesheet" type="text/css" href="]]><xsl:value-of select="$root"/><![CDATA[/workspace/assets/css/ie6patches-1.0.css" media="screen" /><![endif]]]></xsl:comment> -->
+			<!-- <xsl:comment><![CDATA[[if IE 6]><link rel="stylesheet" type="text/css" href="]]><xsl:value-of select="$root" /><![CDATA[/workspace/assets/css/ie6patches-1.0.css" media="screen" /><![endif]]]></xsl:comment> -->
 
 			
 		</head>
@@ -114,10 +117,10 @@
 				<a href="{$root}/symphony/logout/" style="position: absolute; top: 10px; left: 10px; z-index: 1000">Logout</a>				
 			</xsl:if>
 			
-			<xsl:call-template name="template-header-outside-container"/>
+			<xsl:call-template name="template-header-outside-container" />
 			
 			<div class="container main-container">
-				<xsl:call-template name="template-header-inside-container"/>
+				<xsl:call-template name="template-header-inside-container" />
 				
 
 				<xsl:choose>
@@ -128,22 +131,22 @@
 						<xsl:choose>
 							<xsl:when test="count(//layouts-ds-tags-entries-by-tag/entry)">
 								<xsl:call-template name="call-components">
-									<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry"/>
+									<xsl:with-param name="xpath" select="//layouts-ds-tags-entries-by-tag/entry" />
 								</xsl:call-template>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:call-template name="call-components">
-									<xsl:with-param name="xpath" select="//layouts-default/entry"/>
+									<xsl:with-param name="xpath" select="//layouts-default/entry" />
 								</xsl:call-template>
 							</xsl:otherwise>
 						</xsl:choose>	
 					</xsl:otherwise>
 				</xsl:choose>
 
-				<xsl:call-template name="template-footer-inside-container"/>
+				<xsl:call-template name="template-footer-inside-container" />
 			</div>
 
-			<xsl:call-template name="template-footer-outside-container"/>
+			<xsl:call-template name="template-footer-outside-container" />
 		
 		</body>
 
@@ -175,27 +178,6 @@
 </xsl:template>		
 
 
-<xsl:template name="tag-href">
-
-	<xsl:attribute name="href">
-		<xsl:value-of select="$root" disable-output-escaping="yes" />
-		<xsl:text>/</xsl:text>
-		<xsl:value-of select="@id" disable-output-escaping="yes" />
-		<xsl:text>/</xsl:text>
-		<xsl:choose>
-			<xsl:when test="string-length(slug)">
-				<xsl:value-of select="slug/@handle" disable-output-escaping="yes" />
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="tag/@handle" disable-output-escaping="yes" />
-			</xsl:otherwise>
-		</xsl:choose>
-		<xsl:text>/</xsl:text>
-	</xsl:attribute>
-
-</xsl:template>
-
-
 <xsl:template name="topnav">
 
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
@@ -207,8 +189,8 @@
 					<xsl:text>active</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
-			<a href="{$root}/{@id}/{description/@handle}/">
-				<xsl:call-template name="tag-href" />
+			<a>
+				<xsl:call-template name="url-tags" />
 				<xsl:value-of select="tag" disable-output-escaping="yes" />
 			</a>
 		</li>
@@ -225,7 +207,7 @@
 			<ul class="nav nav-list">
 				<li class="nav-header">
 					<a href="{$root}/{@id}/{description/@handle}/">
-						<xsl:call-template name="tag-href" />
+						<xsl:call-template name="url-tags" />
 						<xsl:value-of select="tag" disable-output-escaping="yes" />
 					</a>
 				</li>
@@ -274,30 +256,10 @@
 			</xsl:if>
 		</xsl:attribute>
 		<a>
-			<xsl:call-template name="tag-href" />
+			<xsl:call-template name="url-tags" />
 			<xsl:value-of select="tag" disable-output-escaping="yes" />
 		</a>
 	</li>
-
-</xsl:template>
-
-
-<xsl:template name="edit-entry">
-	
-	<xsl:param name="link" />
-	<xsl:param name="class" />
-
-	<xsl:if test="$cookie-username">
-		<a href="{$link}" target="blank">
-			<xsl:attribute name="class">
-				<xsl:text>edit </xsl:text>
-				<xsl:if test="$class">		
-					<xsl:value-of select="$class" />
-				</xsl:if>
-			</xsl:attribute>
-			<i class="icon-pencil"></i>
-		</a>
-	</xsl:if>
 
 </xsl:template>
 

@@ -2,35 +2,44 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcemembers_roles_entries_by_tag extends Datasource{
+	Class datasourceteachings_entry_by_id extends Datasource{
 
-		public $dsParamROOTELEMENT = 'members-roles-entries-by-tag';
-		public $dsParamORDER = 'asc';
-		public $dsParamPAGINATERESULTS = 'no';
-		public $dsParamLIMIT = '20';
+		public $dsParamROOTELEMENT = 'teachings-entry-by-id';
+		public $dsParamORDER = 'desc';
+		public $dsParamPAGINATERESULTS = 'yes';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
+		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'152' => '{$pt1:43}',
+				'id' => '{$pt3}',
+				'216' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'member: first-name',
-				'member: last-name',
-				'member: photo',
-				'member: email',
-				'member: job-title',
-				'member: gender',
-				'member: birthday',
-				'member: about',
-				'member: anonymize',
-				'role: role',
-				'role: description'
+				'title',
+				'slug',
+				'current-id',
+				'book',
+				'chapter',
+				'description',
+				'speaker: first-name',
+				'speaker: last-name',
+				'date',
+				'poster',
+				'video: title',
+				'video: description',
+				'video: date',
+				'video: url',
+				'video: player',
+				'video: thumbnail',
+				'video: id',
+				'day',
+				'tags: tag'
 		);
 
 
@@ -41,18 +50,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Members/Roles: Entries by tag',
+				'name' => 'Teachings: Entry by ID',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-31T02:49:20+00:00'
+				'release-date' => '2012-06-03T18:51:17+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '18';
+			return '13';
 		}
 
 		public function allowEditorToParse(){

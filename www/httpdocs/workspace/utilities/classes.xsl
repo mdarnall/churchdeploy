@@ -52,7 +52,7 @@
 	</xsl:call-template>
 
 	-->
-	<xsl:param name="component" />
+	<xsl:param name="component" select="$component" />
 	<xsl:param name="class" />
 
 	<xsl:attribute name="class">

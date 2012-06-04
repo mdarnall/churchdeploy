@@ -2,18 +2,17 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-
 <xsl:template name="component-locations">
-	
+
+	<xsl:param name="component" select="'locations'" />		
 	<xsl:param name="entries" />
 	<xsl:param name="position" />
 
 	<xsl:if test="count($entries)">
 
 		<div>
-			
 			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'locations'" />
+				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
 			
 			<h3 class="header">
@@ -28,7 +27,7 @@
 				
 				<xsl:variable name="address">
 					<xsl:call-template name="url-encode">
-						<xsl:with-param name="str" select="concat(address, ' ', city, ' ', state, ' ', zip)"/>
+						<xsl:with-param name="str" select="concat(address, ' ', city, ' ', state, ' ', zip)" />
 					</xsl:call-template>
 				</xsl:variable>
 
@@ -86,7 +85,7 @@
 							</address>
 
 							<xsl:call-template name="edit-entry">
-								<xsl:with-param name="link" select="concat($root, '/symphony/publish/locations/edit/', @id, '/')" />
+								<xsl:with-param name="component" select="$component"/>
 							</xsl:call-template>
 
 						</div>

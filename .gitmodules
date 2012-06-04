@@ -145,3 +145,6 @@
 [submodule "1.6.1"]
 	path = 1.6.1
 	url = http://github.com/nickdunn/publishfiltering.git
+[submodule "www/httpdocs/extensions/search_index"]
+	path = www/httpdocs/extensions/search_index
+	url = http://github.com/nickdunn/search_index.git

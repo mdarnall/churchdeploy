@@ -2,18 +2,17 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-
 <xsl:template name="component-downloads">
-	
+
+	<xsl:param name="component" select="'downloads'" />	
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
 
 	<xsl:if test="count($entries)">
 	
 		<div>
-			
 			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'downloads'" />
+				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
 			
 			<h3>Documents</h3>
@@ -27,15 +26,7 @@
 						<xsl:call-template name="class-rows" />
 						
 						<a>
-							
-							<xsl:attribute name="href">
-								
-								<xsl:value-of select="$workspace" />
-								<xsl:value-of select="file/@path" />
-								<xsl:text>/</xsl:text>
-								<xsl:value-of select="file/filename" />
-								
-							</xsl:attribute>
+							<xsl:call-template name="url-downloads" />
 							
 							<span class="icon">F</span>
 							<xsl:text>&#160;&#160;</xsl:text>
@@ -64,7 +55,7 @@
 						</a>
 
 						<xsl:call-template name="edit-entry">
-							<xsl:with-param name="link" select="concat($root, '/symphony/publish/downloads/edit/', @id, '/')" />
+							<xsl:with-param name="component" select="$component"/>
 						</xsl:call-template>
 						
 					</li>

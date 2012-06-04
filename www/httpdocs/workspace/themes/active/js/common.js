@@ -50,6 +50,11 @@ var jQuery, document, window;
 		});
 
 
+		if($('layout-search'))
+		{
+			$('.search input.keywords').focus();
+		}
+		
 		//reftagger
 		/*
 		Logos.ReferenceTagging.lbsBibleVersion = "KJV";

@@ -2,9 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-
 <xsl:template name="component-videos">
-	
+
+	<xsl:param name="component" select="'videos'" />		
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
 
@@ -12,7 +12,7 @@
 	
 		<div>
 			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'videos'" />
+				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
 			<!-- <h3>Videos</h3> -->
 			<div class="entries">
@@ -50,7 +50,7 @@
 		<h4><xsl:value-of select="title" disable-output-escaping="yes" /></h4>
 
 		<xsl:call-template name="edit-entry">
-			<xsl:with-param name="link" select="concat($root, '/symphony/publish/videos/edit/', @id, '/')" />
+			<xsl:with-param name="component" select="$component"/>
 		</xsl:call-template>
 		
 		<!-- 370x279 is sidebar -->

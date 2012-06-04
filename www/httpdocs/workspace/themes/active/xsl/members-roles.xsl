@@ -3,16 +3,16 @@
 
 
 <xsl:template name="component-members-roles">
-	
+
+	<xsl:param name="component" select="'members-roles'" />	
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
 
 	<xsl:if test="count($entries)">
 		
 		<div>
-			
 			<xsl:call-template name="class-position">
-				<xsl:with-param name="component" select="'members-roles'" />
+				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
 			
 			<h3 class="header">Our Staff</h3>
@@ -30,7 +30,7 @@
 
 								<div>
 									<xsl:call-template name="class-rows">
-										<xsl:with-param name="class" select="'span4'"/>
+										<xsl:with-param name="class" select="'span4'" />
 									</xsl:call-template>
 
 									<img width="180" height="180">
@@ -53,7 +53,7 @@
 										<xsl:value-of select="member/item/last-name" />
 
 										<xsl:call-template name="edit-entry">
-											<xsl:with-param name="link" select="concat($root, '/symphony/publish/members-roles/edit/', @id, '/')" />
+											<xsl:with-param name="component" select="$component"/>
 										</xsl:call-template>
 									</h3>
 
@@ -108,7 +108,7 @@
 									</div>
 								</a>
 								<xsl:call-template name="edit-entry">
-									<xsl:with-param name="link" select="concat($root, '/symphony/publish/members-roles/edit/', @id, '/')" />
+									<xsl:with-param name="component" select="$component"/>
 								</xsl:call-template>
 							</li>
 						</xsl:for-each>

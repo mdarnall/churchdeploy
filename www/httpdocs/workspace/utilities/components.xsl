@@ -7,6 +7,7 @@
 <xsl:include href="../themes/active/xsl/images.xsl" />
 <xsl:include href="../themes/active/xsl/locations.xsl" />
 <xsl:include href="../themes/active/xsl/members-roles.xsl" />
+<xsl:include href="../themes/active/xsl/search.xsl" />
 <xsl:include href="../themes/active/xsl/spacer.xsl" />
 <xsl:include href="../themes/active/xsl/teachings.xsl" />
 <xsl:include href="../themes/active/xsl/text.xsl" />
@@ -25,7 +26,7 @@
 
 				<div class="column-full-width">
 					<xsl:call-template name="component-populate">
-						<xsl:with-param name="xpath" select="$xpath"/>
+						<xsl:with-param name="xpath" select="$xpath" />
 					</xsl:call-template>
 				</div>
 
@@ -34,7 +35,7 @@
 
 				<div id="main-content" class="span8 column-center">
 					<xsl:call-template name="component-populate">
-						<xsl:with-param name="xpath" select="$xpath"/>
+						<xsl:with-param name="xpath" select="$xpath" />
 					</xsl:call-template>
 				</div>
 
@@ -43,10 +44,10 @@
 				
 				<div id="sidebar" class="span4 column-right">
 
-					<xsl:call-template name="template-column-right-top"/>
+					<xsl:call-template name="template-column-right-top" />
 
 					<xsl:call-template name="component-populate">
-						<xsl:with-param name="xpath" select="$xpath"/>
+						<xsl:with-param name="xpath" select="$xpath" />
 					</xsl:call-template>
 				</div>
 
@@ -158,6 +159,13 @@
 			</xsl:call-template>
 		</xsl:if>
 
+		<xsl:if test=". = 'search'">
+			<xsl:call-template name="component-search">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//search/entry" />
+			</xsl:call-template>
+		</xsl:if>
+
 		<xsl:if test=". = 'spacer'">
 			<xsl:call-template name="component-spacer" />
 		</xsl:if>
@@ -165,10 +173,24 @@
 		<xsl:if test=". = 'teachings'">
 			<xsl:choose>
 
+				<xsl:when test="number($pt3)">					
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-entry-by-id/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
 				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'book'">					
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-entry-by-book-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
+
+				<xsl:when test="$pt2 = 'series'">					
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-series-entries-filtered/entry/teachings/item" />
 					</xsl:call-template>
 				</xsl:when>
 				
@@ -213,6 +235,197 @@
 	</xsl:for-each>
 
 </xsl:template>
+
+<!-- 
+
+URL helpers  //////////////////////////////////////////////////////////////////////////////
+
+-->
+
+
+<xsl:template name="url-downloads">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$workspace" />
+		<xsl:value-of select="$node/file/@path" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/file/filename" />
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-events">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/name/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-events-recurring">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
+		<xsl:text>/events/</xsl:text>
+		<xsl:value-of select="$node/name/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-events-home">
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
+		<xsl:text>/events/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-events-home-past">
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
+		<xsl:text>/events/1/5/past/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-tags">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:choose>
+			<xsl:when test="string-length($node/slug)">
+				<xsl:value-of select="$node/slug/@handle" disable-output-escaping="yes" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$node/tag/@handle" disable-output-escaping="yes" />
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-tags-by-text">
+	<xsl:param name="node" select="." />
+	<xsl:param name="tag" />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$tag" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[@id = $tag]/tag/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-teachings">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'teachings']/@id" />
+		<xsl:text>/teachings/</xsl:text>
+		<xsl:value-of select="$node/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/title/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-teachings-series">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'teachings']/@id" />
+		<xsl:text>/teachings/series/</xsl:text>
+		<xsl:value-of select="$node/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/title/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="url-teachings-tags">
+	<xsl:param name="node" select="." />
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'teachings']/@id" />
+		<xsl:text>/teachings/tag/</xsl:text>
+		<xsl:value-of select="$node/@id" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="$node/tag/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
+<xsl:template name="edit-entry">
+	
+	<xsl:param name="component" />
+	<xsl:param name="link">
+		<xsl:value-of select="$root" />
+		<xsl:text>/symphony/publish/</xsl:text>
+		<xsl:value-of select="$component" />
+		<xsl:text>/edit/</xsl:text>
+		<xsl:value-of select="@id" />
+		<xsl:text>/</xsl:text>
+	</xsl:param>
+	<xsl:param name="class" />
+
+	<xsl:if test="$cookie-username">
+		<a href="{$link}" target="blank">
+			<xsl:attribute name="class">
+				<xsl:text>edit </xsl:text>
+				<xsl:if test="$class">		
+					<xsl:value-of select="$class" />
+				</xsl:if>
+			</xsl:attribute>
+			<i class="icon-pencil"></i>
+		</a>
+	</xsl:if>
+
+</xsl:template>
+
+
+<xsl:template name="form-search-action">
+	<xsl:attribute name="action">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'search']/@id" />
+		<xsl:text>/search/</xsl:text>
+	</xsl:attribute>	
+</xsl:template>
+
+
+
+
+
+
+
+
+
 
 
 

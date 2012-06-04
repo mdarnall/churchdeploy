@@ -58,10 +58,14 @@
 				</a> -->
 				<div>
 					<ul class="nav">
-						<!-- <li class="entry "><a href="#">Login</a></li> -->
-						<!-- <li>
-							<a href="http://72.10.33.203/">Prayer Request</a>
-						</li> -->
+						<li class="top-search">
+							<span>Search</span>
+							<form action="get">
+								<xsl:call-template name="form-search-action"/>
+								<input name="keywords" />
+							</form>
+
+						</li>
 					</ul>
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
@@ -130,18 +134,18 @@
 										//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id
 										">
 										<xsl:call-template name="class-rows">
-											<xsl:with-param name="nav" select="true()"/>
+											<xsl:with-param name="nav" select="true()" />
 											<xsl:with-param name="class" select="'active'" />
 										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:call-template name="class-rows">
-											<xsl:with-param name="nav" select="true()"/>
+											<xsl:with-param name="nav" select="true()" />
 										</xsl:call-template>
 									</xsl:otherwise>
 								</xsl:choose>
 								<a href="{$root}/{@id}/{description/@handle}/">
-									<xsl:call-template name="tag-href" />
+									<xsl:call-template name="url-tags" />
 									<xsl:value-of select="tag" />
 								</a>
 							</li>
@@ -244,7 +248,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 <xsl:template name="template-footer-inside-container">
 	
 	<xsl:if test="not($pt1) or $pt1 = 43">
-		<div class="component-teachings">
+		<div class="component-series">
 				
 			<h3>Series</h3>
 
@@ -253,7 +257,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 	            	<div class="span4 series">
 						<a href="">
 							<xsl:call-template name="teaching-poster-or-default">
-								<xsl:with-param name="poster" select="poster"/>
+								<xsl:with-param name="poster" select="poster" />
 							</xsl:call-template>
 						</a>
 						<a href="#">
@@ -308,7 +312,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 						<ul class="nav nav-list">
 							<li class="nav-header">
 								<a href="{$root}/{@id}/{description/@handle}/">
-									<xsl:call-template name="tag-href" />
+									<xsl:call-template name="url-tags" />
 									<xsl:value-of select="tag" />
 								</a>
 							</li>

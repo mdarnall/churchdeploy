@@ -49,16 +49,19 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 
 #font {
 	#proxima {
+
 	    // .light() {
 	    //  font-family: "proxima-nova-light", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	    //  font-style: normal;
 	    //  font-weight: normal;
 	    //  }
+
 	    .regular() {
 	      font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	      font-style: normal;
 	      font-weight: normal;
 	    }
+
 	    .bold() {
 	      font-family: "proxima-nova-bold", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	      font-style: normal;
@@ -66,22 +69,26 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	    }
 	}
 	#tisa {
+
 		.regular() {
 	      font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
 	      font-style: normal;
 	      font-weight: normal;
 	    }
+
 	    .italic() {
 	      font-family: "ff-tisa-web-pro-italic", Georgia, 'Times New Roman', Times, serif;
 	      font-style: normal;
 	      font-weight: normal;
 	    }
+
 	    .bold() {
 	      font-family: "ff-tisa-web-pro-bold", Georgia, 'Times New Roman', Times, serif;
 	      font-style: normal;
 	      font-weight: normal;
 	    }
 	}
+
 	#climacons {
 		font-family:'ClimaconsRegular';
 		font-weight: normal;
@@ -91,6 +98,7 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 }
 
 #link {
+
 	.large {
 		.small-grey-text;
 		#font > #proxima > .bold;
@@ -107,6 +115,16 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 }
  
 // styles 
+
+.container {
+
+	a {
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 
 .small-grey-text {
 	#font > #proxima > .regular;
@@ -746,6 +764,26 @@ h3 {
 	}
 }
 
+
+.top-search {
+	line-height: 40px;
+
+	* {
+		float: left;
+	}
+
+	span {
+		margin-right: @base * .5;	
+		color: darken(desaturate(@color-mast, 20%), 40%);	
+	}
+
+	input {
+		margin: 8px 0 0 0;
+		padding: 2px;
+	}
+}
+
+
 // column defaults ---------------------------------------------------------
 
 .column-full-width {
@@ -836,6 +874,43 @@ h3 {
 		}
 	}
 }
+
+
+
+
+
+
+.search {
+	margin: @base auto @base * 2 auto;
+	text-align: center;
+
+	input {
+		border: 5px solid #e5e5e3;
+		width: 81%;
+		line-height: 25px;
+		height: 40px;
+		padding: 10px 15px 10px 85px;
+		#font > #tisa > .regular;
+		font-size: 25px;
+		border: solid @base #e5e5e3;
+		background: url('../img/search.gif') no-repeat left center;
+	}
+
+	p {
+		color: #999;
+		margin: @base * .5 0 @base 0;
+		font-size: 14px;
+
+		span {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}
+
+
+
+
 
 
 //---------------------------------------------------------
@@ -1482,6 +1557,79 @@ h3 {
 }
 
 
+// search ---------------------------------------------------------
+
+.component-search {
+
+	.filters {
+		* {
+			font-size: 14px;
+		}		 
+	}
+
+	.entries {
+		margin: @base * 4 0;
+	}
+
+	.entry {
+		padding: 20px 0;
+		border-bottom: 1px solid #999;
+
+		a {
+			display: block;
+		}
+
+		h3 {
+			font-size: 15px;
+		}
+	}
+
+	.excerpt * {
+		font-size: 12px;
+		color: #888;
+		margin: 0;
+		padding: 0;
+
+		strong {
+			color: #333;
+		}
+	}
+
+	.hyphen {
+		margin: 0 @base;
+	}
+
+	i {
+		margin-right: @base;
+		position: relative;
+		top: 1px;
+	}
+
+	.type-tags {
+
+		h3 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.type-teachings {
+
+		
+
+	}
+
+	h3 {
+		.meta {
+			.body-text-serif;
+			text-transform: none;
+			font-size: 14px;	
+			letter-spacing: 0;	
+		}
+	}
+}
+
+
 // spacer ---------------------------------------------------------
 
 .component-spacer {
@@ -1508,34 +1656,6 @@ h3 {
 		margin: 10px 0 5px 0;
 		color: #303030;
 		&:hover { color: @color-accent; }
-	}
-
-	.search {
-		margin: @base auto @base * 2 auto;
-		text-align: center;
-
-		input {
-			border: 5px solid #e5e5e3;
-			width: 81%;
-			line-height: 25px;
-			height: 40px;
-			padding: 10px 15px 10px 85px;
-			#font > #tisa > .regular;
-			font-size: 25px;
-			border: solid @base #e5e5e3;
-			background: url('../img/search.gif') no-repeat left center;
-		}
-
-		p {
-			color: #999;
-			margin: @base * .5 0 @base 0;
-			font-size: 14px;
-
-			span {
-				text-decoration: underline;
-				cursor: pointer;
-			}
-		}
 	}
 
 	.latest {

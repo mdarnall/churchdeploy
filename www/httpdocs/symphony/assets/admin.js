@@ -541,7 +541,7 @@ var Symphony = {};
 			var editor = $('textarea.code'),
 				lines = editor.val().split('\n'),
 				link = $(this).find('a').text(),
-				statement = '<xsl:import href="../utilities/' + link + '"/>',
+				statement = '<xsl:import href="../utilities/' + link + '" />',
 				regexp = '^<xsl:import href="(?:\.\./utilities/)?' + link + '"',
 				newLine = '\n',
 				numberOfNewLines = 1;
