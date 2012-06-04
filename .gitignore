@@ -5,7 +5,7 @@
 *~
 *.geany
 www/httpdocs/install-log.txt
-www/httpdocs/_docs/*
-www/httpdocs/manifest/*
-www/httpdocs/themes/active/css
-www/httpdocs/workspace/uploads/*
+www/httpdocs/_docs/
+www/httpdocs/manifest/
+www/httpdocs/themes/active/css/
+www/httpdocs/workspace/uploads/
