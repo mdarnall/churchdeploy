@@ -116,16 +116,6 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
  
 // styles 
 
-.container {
-
-	a {
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
-
 .small-grey-text {
 	#font > #proxima > .regular;
 	display: block;
@@ -158,7 +148,6 @@ address, blockquote, cite, h1, h2, h3, h4, h5, h6, li, p, pre, span, .descriptio
 	color: #303030;
 	margin-bottom: 20px;
 }
-
 
 // bootstrap overrides
 
@@ -257,6 +246,7 @@ h3 {
 	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	margin-bottom: @base * 1.5;
 }
 
 .main-container ul li {
@@ -771,15 +761,33 @@ h3 {
 	* {
 		float: left;
 	}
-
 	span {
-		margin-right: @base * .5;	
-		color: darken(desaturate(@color-mast, 20%), 40%);	
+		color: darken(desaturate(@color-mast, 20%), 20%);
 	}
-
 	input {
-		margin: 8px 0 0 0;
-		padding: 2px;
+		#font > #proxima > .regular;
+		color: darken(desaturate(@color-mast, 20%), 40%);
+		background: darken(desaturate(@color-mast, 10%), 5%);
+		position: relative;
+		.border-radius(0 0 0 0);
+		border: none;
+		margin: 0 0 0 0;
+		padding: 12px 6px;
+	}
+	input:focus {
+		border-bottom: 2px solid darken(desaturate(@color-mast, 20%), 20%);
+		outline: none;
+		border:none;
+	}
+	::-webkit-input-placeholder  {
+		color: darken(desaturate(@color-mast, 20%), 20%);
+		#font > #proxima > .regular;
+		text-transform: uppercase; 
+	}
+	input:-moz-placeholder {
+		color: darken(desaturate(@color-mast, 20%), 20%);
+		#font > #proxima > .regular;
+		text-transform: uppercase;
 	}
 }
 
@@ -875,11 +883,6 @@ h3 {
 	}
 }
 
-
-
-
-
-
 .search {
 	margin: @base auto @base * 2 auto;
 	text-align: center;
@@ -908,7 +911,12 @@ h3 {
 	}
 }
 
-
+.featured {
+	img {
+		width: 300px;
+		height: 200px;
+	}		
+}
 
 
 
@@ -919,13 +927,6 @@ h3 {
 
 
 // defaults ---------------------------------------------------------
-
-.component {
-
-	h3 {
-		margin-bottom: @base;
-	}
-}
 
 .entry-defaults {
 	background: #fff;
@@ -946,7 +947,7 @@ h3 {
 
 // home --------------------------------------------------------------
 
-.page-home {
+.layout-home {
 	
 	h3 {
 		margin-bottom: 15px;
@@ -960,14 +961,6 @@ h3 {
 				}
 			}
 		}
-	}
-	
-	.featured {
-		img {
-			width: 300px;
-			height: 200px;
-		}		
-
 	}
 	
 	.component-teachings {
@@ -1774,7 +1767,7 @@ h3 {
 		
 		a {
 			color: #999;
-			&:hover { color: #303030; }
+			&:hover { color: @color-accent; }
 		}
 	}
 

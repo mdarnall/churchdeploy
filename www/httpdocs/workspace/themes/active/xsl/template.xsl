@@ -59,10 +59,10 @@
 				<div>
 					<ul class="nav">
 						<li class="top-search">
-							<span>Search</span>
+							<span class="icon">s</span>
 							<form action="get">
 								<xsl:call-template name="form-search-action"/>
-								<input name="keywords" />
+								<input name="keywords" placeholder="Search" />
 							</form>
 
 						</li>
