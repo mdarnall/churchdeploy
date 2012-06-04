@@ -260,7 +260,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 		<xsl:value-of select="$root" />
 		<xsl:text>/</xsl:text>
 		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
-		<xsl:text>/</xsl:text>
+		<xsl:text>/events/</xsl:text>
 		<xsl:value-of select="$node/@id" />
 		<xsl:text>/</xsl:text>
 		<xsl:value-of select="$node/name/@handle" />

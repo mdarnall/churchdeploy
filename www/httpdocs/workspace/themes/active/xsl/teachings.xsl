@@ -59,7 +59,7 @@
 										<input type="hidden" name="sections" value="teachings,teachings-tags,teachings-series" />
 										<input class="keywords" name="keywords" value="Search.." onclick="this.select()" autocomplete="off" />
 									</form>
-									<p>Type and hit enter. You can search all of our media by any keyword. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span> or <span onclick="$('.search input.keywords').val('resurrection');">resurrection</span> ..</p>
+									<p>Type and hit enter. You can search all of our media by any keyword. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span> or <span onclick="$('.search input.keywords').val('resurrection');">resurrection</span>&#160;..</p>
 								</div>
 
 								<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width: 100%"></iframe>

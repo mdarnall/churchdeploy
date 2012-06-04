@@ -56,7 +56,7 @@
 				</xsl:if>
 				<input name="keywords" class="keywords" value="{$url-keywords}" onclick="this.select()" autocomplete="off" />
 			</form>
-			<p>Type and hit enter. You can search our entire site. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span>, <span onclick="$('.search input.keywords').val('Baptism');">Baptism</span> or <span onclick="$('.search input.keywords').val('Wilsonville');">Wilsonville</span> ..</p>
+			<p>Type and hit enter. You can search our entire site. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span>, <span onclick="$('.search input.keywords').val('Baptism');">Baptism</span> or <span onclick="$('.search input.keywords').val('Wilsonville');">Wilsonville</span>&#160;..</p>
 		</div>
 
 		<xsl:call-template name="pagination-search">

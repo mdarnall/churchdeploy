@@ -297,7 +297,7 @@ USAGE:
 		<xsl:choose>
 				<xsl:when test="$limit &lt;= $c">
 						<xsl:value-of select="substring(., 1, ($limit - $p))" disable-output-escaping="yes" />
-						<xsl:text> ..</xsl:text>
+						<xsl:text>&#160;..</xsl:text>
 				</xsl:when>
 				<xsl:otherwise>
 						<xsl:value-of select="." />
@@ -330,7 +330,7 @@ USAGE:
 	<xsl:choose>
 		<xsl:when test="string-length($node) > $length">
 			<xsl:value-of select="substring($node, 0, $length)" />
-			<xsl:text> ..</xsl:text>
+			<xsl:text>&#160;..</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="$node" />

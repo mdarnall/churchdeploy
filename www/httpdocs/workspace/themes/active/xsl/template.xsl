@@ -223,22 +223,26 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 <xsl:template name="template-header-inside-container">
 
-	<xsl:variable name="parents" select="//tags-all-entries/entry[ @id = $pt1 ]/parent" />
+	<xsl:variable name="parent" select="//tags-all-entries/entry[@id = $pt1]/parent/item/@id" />
 
-		<xsl:if test="
-			count( //tags-all-entries/entry[ parent/item/@id = $parents/item/@id and not(hide-from-header = 'Yes')] ) or
-			count( //tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header = 'Yes')] )
-		">
-			<div class="jumbotron masthead" id="overview">
-				<div class="subnav">
-					<ul class="nav nav-pills">				
-						<xsl:call-template name="subnav">
-							<xsl:with-param name="parents" select="$parents" />
-						</xsl:call-template>
+	<xsl:if test="$parent">
+		<div class="jumbotron masthead" id="overview">
+			<div class="subnav">
+				<ul class="nav nav-pills">
+					<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $parent and not(hide-from-header = 'Yes')]">
+						<xsl:call-template name="subnav-entry" />						
+					</xsl:for-each>
+				</ul>
+				<xsl:if test="count(//tags-all-entries/entry[parent/item/@id = $pt1 and not(hide-from-header = 'Yes')])">
+					<ul class="nav nav-pills">
+						<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $pt1 and not(hide-from-header = 'Yes')]">
+							<xsl:call-template name="subnav-entry" />						
+						</xsl:for-each>
 					</ul>
-				</div>
+				</xsl:if>
 			</div>
-		</xsl:if>
+		</div>
+	</xsl:if>
 
 	<!-- <h1><xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" /></h1> -->
 
@@ -316,10 +320,13 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 									<xsl:value-of select="tag" />
 								</a>
 							</li>
-							<xsl:call-template name="subnav">
-								<xsl:with-param name="instance" select="'footer'" />
-								<xsl:with-param name="parents" select="@id" />
-							</xsl:call-template>
+
+							<xsl:variable name="parents" select="@id"/>
+
+							<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $parents and not(hide-from-footer = 'Yes') ]">
+								<xsl:call-template name="subnav-entry" />
+							</xsl:for-each>
+
 						</ul>							
 					</div>
 				</xsl:for-each>

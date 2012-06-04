@@ -199,53 +199,6 @@
 </xsl:template>
 
 
-<xsl:template name="nav-footer">
-
-	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-footer = 'Yes') ]">
-		<xsl:variable name="entry-id" select="@id" />
-		<div class="span2">
-			<ul class="nav nav-list">
-				<li class="nav-header">
-					<a href="{$root}/{@id}/{description/@handle}/">
-						<xsl:call-template name="url-tags" />
-						<xsl:value-of select="tag" disable-output-escaping="yes" />
-					</a>
-				</li>
-				<xsl:call-template name="subnav">
-					<xsl:with-param name="instance" select="'footer'" />
-					<xsl:with-param name="parents" select="@id" />
-				</xsl:call-template>
-			</ul>
-		</div>
-	</xsl:for-each>
-
-</xsl:template>
-
-
-<xsl:template name="subnav">
-
-	<xsl:param name="instance" />
-	<xsl:param name="parents" />
-
-	<xsl:choose>
-		<xsl:when test="$instance = 'footer'">
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents ]">
-				<xsl:call-template name="subnav-entry" />
-			</xsl:for-each>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $parents/item/@id ]">
-				<xsl:call-template name="subnav-entry" />
-			</xsl:for-each>
-			<xsl:for-each select="//tags-all-entries/entry[ parent/item/@id = $pt1 and not(hide-from-header = 'Yes') ]">
-				<xsl:call-template name="subnav-entry" />
-			</xsl:for-each>
-		</xsl:otherwise>
-	</xsl:choose>
-
-</xsl:template>
-
-
 <xsl:template name="subnav-entry">
 
 	<li>
