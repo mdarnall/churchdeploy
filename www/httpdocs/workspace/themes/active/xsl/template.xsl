@@ -62,7 +62,7 @@
 							<span class="icon">s</span>
 							<form action="get">
 								<xsl:call-template name="form-search-action"/>
-								<input name="keywords" placeholder="Search" />
+								<input name="keywords" placeholder="Search" autocomplete="off" />
 							</form>
 
 						</li>
