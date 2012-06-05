@@ -302,6 +302,16 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 </xsl:template>
 
 
+<xsl:template name="url-search-home">
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'search']/@id" />
+		<xsl:text>/search/</xsl:text>
+	</xsl:attribute>
+</xsl:template>
+
+
 <xsl:template name="url-tags">
 	<xsl:param name="node" select="." />
 	<xsl:attribute name="href">
