@@ -140,7 +140,11 @@
 												</p>
 											</div>
 											<div class="description">
-												<p><xsl:apply-templates select="description" mode="truncate" /></p>
+<!-- 												<p><xsl:apply-templates select="description" mode="truncate" /></p>
+-->												<xsl:call-template name="truncate">
+													<xsl:with-param name="node" select="description" />
+													<xsl:with-param name="length" select="90" />
+												</xsl:call-template>
 											</div>
 										</div>
 									</xsl:for-each>
@@ -151,17 +155,19 @@
 								
 								<h3>Series</h3>
 
-								<xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
+								<xsl:for-each select="//teachings-series-entries-for-teachings-home-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
 									<div class="row">
 										<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
 											<div class="span4 series">
-												<a href="">
+												<a>
+													<xsl:call-template name="url-teachings-series" />
 													<xsl:call-template name="teaching-poster-or-default">
 														<xsl:with-param name="poster" select="poster" />
 													</xsl:call-template>
 												</a>
 												<div class="info">
-													<a href="#">
+													<a>
+														<xsl:call-template name="url-teachings-series" />
 														<h4>
 															<xsl:value-of select="title" disable-output-escaping="yes" />
 														</h4>

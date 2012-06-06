@@ -329,11 +329,11 @@ USAGE:
 	<xsl:param name="length" select="250" />
 	<xsl:choose>
 		<xsl:when test="string-length($node) > $length">
-			<xsl:value-of select="substring($node, 0, $length)" />
+			<xsl:value-of select="substring($node, 0, $length)" disable-output-escaping="yes" />
 			<xsl:text>&#160;..</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="$node" />
+			<xsl:value-of select="$node" disable-output-escaping="yes" />
 		</xsl:otherwise>
 	</xsl:choose>
 
