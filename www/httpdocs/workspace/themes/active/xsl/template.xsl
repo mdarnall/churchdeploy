@@ -185,19 +185,9 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			<h3>Featured</h3>
 			<div class="component component-teachings large">
 				<div class="latest">
-					<iframe src="http://player.vimeo.com/video/42127479?title=0&amp;byline=0&amp;portrait=0&amp;color=555555" frameborder="0" class="video" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen" width="620" height="349"></iframe>
-					<div class="meta">
-						<h2 class="title">Sanctification &amp; the Gospel</h2>
-						<p>
-							<span class="teacher"><em>by</em> Brett Meador</span>
-							<span class="verse"><i class="icon-book"></i> 2 Thessalonians 2:1-12</span>
-						</p>
-						<p>
-							<span class="day">Sunday</span>&#160;&#8226;&#160;
-							<span class="date">April 15, 2012</span>
-						</p>
-					</div>
-					<p class="description">This morning, we delve further into 2 Thessalonians as it relates to end times. We turn our attention to what the Bible says about the antichrist, a man of sin and a son of perdition.</p>
+
+
+					<xsl:call-template name="teaching-entry" />
 				</div>
 			</div>	
 		</div>
@@ -227,28 +217,35 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 	<xsl:variable name="parent" select="//tags-all-entries/entry[@id = $pt1]/parent/item/@id" />
 
-	<xsl:if test="$parent">
+	<xsl:if test="$pt1 and not($pt1 = //tags-all-entries/entry[tag/@handle = 'home']/@id)">
 		<div class="jumbotron masthead" id="overview">
 			<div class="subnav">
-				<ul class="nav nav-pills">
-					<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $parent and not(hide-from-header = 'Yes')]">
-						<xsl:call-template name="subnav-entry" />						
-					</xsl:for-each>
-				</ul>
-				<xsl:if test="count(//tags-all-entries/entry[parent/item/@id = $pt1 and not(hide-from-header = 'Yes')])">
-					<ul class="nav nav-pills">
-						<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $pt1 and not(hide-from-header = 'Yes')]">
-							<xsl:call-template name="subnav-entry" />						
-						</xsl:for-each>
-					</ul>
-				</xsl:if>
+				<xsl:for-each select="//tags-all-entries/entry[@id = $pt1]/parent/item/@id">
+					<xsl:call-template name="nav-tier" />
+				</xsl:for-each>
+				<xsl:call-template name="subnav-group">
+					<xsl:with-param name="group" select="//tags-all-entries/entry[parent/item/@id = $pt1 and not(hide-from-header = 'Yes')]" />
+				</xsl:call-template>
 			</div>
 		</div>
 	</xsl:if>
 
-	<!-- <h1><xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/tag" /></h1> -->
+</xsl:template>
+
+
+<xsl:template name="nav-tier">
+
+	<xsl:variable name="node" select="." />
+
+	<xsl:for-each select="//tags-all-entries/entry[@id = $node]/parent/item/@id">
+		<xsl:call-template name="nav-tier" />
+	</xsl:for-each>
+	<xsl:call-template name="subnav-group">
+		<xsl:with-param name="group" select="//tags-all-entries/entry[parent/item/@id = $node and not(hide-from-header = 'Yes')]" />
+	</xsl:call-template>
 
 </xsl:template>
+
 
 
 <xsl:template name="template-footer-inside-container">

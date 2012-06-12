@@ -216,7 +216,7 @@
 							<xsl:if test="$single">
 								<p class="share">
 									<label for="permalink">Paste link in email or IM</label>
-									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="selectAllText($(this))" />
+									<input type="text" name="permalink" class="span4" value="{$current-url}" onclick="this.select()" />
 								</p>
 							</xsl:if>
 

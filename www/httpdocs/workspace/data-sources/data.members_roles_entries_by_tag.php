@@ -28,6 +28,7 @@
 				'member: gender',
 				'member: birthday',
 				'member: about',
+				'member: phone-number',
 				'member: anonymize',
 				'role: role',
 				'role: description'
@@ -44,10 +45,10 @@
 				'name' => 'Members/Roles: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-31T02:49:20+00:00'
+				'release-date' => '2012-06-10T07:52:51+00:00'
 			);
 		}
 

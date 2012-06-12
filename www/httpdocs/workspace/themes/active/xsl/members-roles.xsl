@@ -71,11 +71,41 @@
 					
 					<ul class="contacts nav nav-tabs nav-stacked">
 						<xsl:for-each select="$entries">
+
+							<xsl:variable name="name">
+								<xsl:value-of select="member/item/first-name" disable-output-escaping="yes" />
+								<xsl:text> </xsl:text>
+								<xsl:value-of select="member/item/last-name" disable-output-escaping="yes" />
+							</xsl:variable>
+
+							<xsl:variable name="email">
+								<xsl:choose>
+									<xsl:when test="member/item/anonymize = 'Yes' or not(member/item/email)">
+										<xsl:value-of select="//misc-all-entries/entry[name='default-email-address']/content" disable-output-escaping="yes" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="member/item/email" />										
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+
+							<xsl:variable name="phone">
+								<xsl:choose>
+									<xsl:when test="member/item/anonymize = 'Yes' or not(member/item/phone-number)">
+										<xsl:value-of select="//misc-all-entries/entry[name='default-phone-number']/content" disable-output-escaping="yes" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="member/item/phone-number" />										
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+
 							<li>
 								<xsl:call-template name="class-rows" />
-								<a>
+								<a title="Email {$name}">
 									<xsl:attribute name="href">
-										<xsl:value-of select="member/item/email" />
+										<xsl:text disable-output-escaping="yes">mailto:</xsl:text>
+										<xsl:value-of select="$email" />
 									</xsl:attribute>
 									<div class="pull-left">
 										<img>
@@ -97,13 +127,12 @@
 									</div>
 									<div class="info">
 										<h4>
-											<xsl:value-of select="member/item/first-name" disable-output-escaping="yes" />
-											<xsl:text> </xsl:text>
-											<xsl:value-of select="member/item/last-name" disable-output-escaping="yes" />
+											<xsl:value-of select="$name" disable-output-escaping="yes" />
 										</h4>
 										<div>
 											<!-- <span class="icon">M</span> -->
-											<span class="email"><xsl:value-of select="member/item/email" /></span>
+											<span class="email"><xsl:value-of select="$email" /></span><br />
+											<span class="phone"><xsl:value-of select="$phone" /></span>
 										</div>
 									</div>
 								</a>

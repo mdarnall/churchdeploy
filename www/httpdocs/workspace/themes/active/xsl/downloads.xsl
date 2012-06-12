@@ -30,8 +30,9 @@
 							
 							<span class="icon">F</span>
 							<xsl:text>&#160;&#160;</xsl:text>
-							<xsl:value-of select="name" />
-							
+							<span class="title">
+								<xsl:value-of select="name" />
+							</span>
 							<!-- <span class="meta">
 								
 								<span class="filename">

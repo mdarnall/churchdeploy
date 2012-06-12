@@ -60,12 +60,12 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 			<meta http-equiv="imagetoolbar" content="false" />
 
-			<meta name="description" content="{//seo-all-entries/entry[name='description']/content}" />
+			<meta name="description" content="{//misc-all-entries/entry[name='description']/content}" />
 			<meta name="author" content="{$website-name}" />
 			<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 			<meta name="application-name" content="{$website-name}" />
-			<meta name="msapplication-tooltip" content="{//seo-all-entries/entry[name='msapplication-tooltip']/content}" />
-			<meta name="msapplication-starturl" content="{//seo-all-entries/entry[name='msapplication-starturl']/content}" />
+			<meta name="msapplication-tooltip" content="{//misc-all-entries/entry[name='msapplication-tooltip']/content}" />
+			<meta name="msapplication-starturl" content="{//misc-all-entries/entry[name='msapplication-starturl']/content}" />
 			<meta name="responsimage" 
 				data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename" 
 				data-static="{$workspace}/img/spacer.gif"
@@ -95,7 +95,7 @@
 				<xsl:text> </xsl:text>
 				<xsl:text>layout-</xsl:text>
 				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
-				<xsl:if test="number($pt3)">
+				<xsl:if test="//events-entry-by-id/entry">
 					<xsl:text> profile</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
@@ -213,6 +213,21 @@
 			<xsl:value-of select="tag" disable-output-escaping="yes" />
 		</a>
 	</li>
+
+</xsl:template>
+
+
+<xsl:template name="subnav-group">
+
+	<xsl:param name="group" />
+
+	<xsl:if test="count($group)">
+		<ul class="nav nav-pills">
+			<xsl:for-each select="$group">
+				<xsl:call-template name="subnav-entry" />						
+			</xsl:for-each>
+		</ul>		
+	</xsl:if>
 
 </xsl:template>
 

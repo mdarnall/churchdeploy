@@ -17,14 +17,12 @@
 		public $dsParamFILTERS = array(
 				'192' => 'yes',
 				'216' => 'no',
-				'118' => '(if value of ({$pt2}) is (teachings))',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
 				'slug',
 				'filename',
-				'current-id',
 				'book',
 				'chapter',
 				'description',
@@ -48,10 +46,10 @@
 				'name' => 'Teachings: Featured (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-29T02:49:01+00:00'
+				'release-date' => '2012-06-12T05:27:34+00:00'
 			);
 		}
 

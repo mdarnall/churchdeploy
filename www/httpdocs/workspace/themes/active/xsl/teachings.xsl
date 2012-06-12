@@ -24,9 +24,7 @@
 							<xsl:for-each select="$entries">
 
 								<div class="result">
-									<xsl:call-template name="teaching-entry">
-										<xsl:with-param name="entry" select="." />
-									</xsl:call-template>									
+									<xsl:call-template name="teaching-entry" />							
 								</div>
 
 							</xsl:for-each>
@@ -39,9 +37,7 @@
 							<xsl:for-each select="$entries">
 
 								<div class="result">
-									<xsl:call-template name="teaching-entry">
-										<xsl:with-param name="entry" select="." />
-									</xsl:call-template>									
+									<xsl:call-template name="teaching-entry" />									
 								</div>
 
 							</xsl:for-each>
@@ -64,9 +60,7 @@
 
 								<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width: 100%"></iframe>
 
-								<xsl:call-template name="teaching-actions">
-									<xsl:with-param name="entry" select="." />
-								</xsl:call-template>
+								<xsl:call-template name="teaching-actions" />
 								<h2>
 								<a>
 									<xsl:call-template name="url-teachings" />
@@ -269,7 +263,7 @@
 
 <xsl:template name="teaching-entry">
 
-	<xsl:param name="entry" />
+	<xsl:param name="entry" select="." />
 
 	<xsl:for-each select="$entry">
 
@@ -340,9 +334,7 @@
 			</xsl:call-template>
 		</xsl:if>
 
-		<xsl:call-template name="teaching-actions">
-			<xsl:with-param name="entry" select="." />
-		</xsl:call-template>
+		<xsl:call-template name="teaching-actions" />
 
 	</xsl:for-each>
 
@@ -353,14 +345,12 @@
 
 <xsl:template name="teaching-actions">
 
-	<xsl:param name="entry" />
+	<xsl:param name="entry" select="." />
 
 	<xsl:variable name="audio-url">
-		<xsl:attribute name="href">
-			<xsl:text>http://66.147.244.244/~atheycre/teachings/</xsl:text>
-			<xsl:value-of select="current-id" />
-			<xsl:text>.lq.mp3</xsl:text>
-		</xsl:attribute>
+		<xsl:text>http://66.147.244.244/~atheycre/teachings/</xsl:text>
+		<xsl:value-of select="filename" />
+		<xsl:text>.lq.mp3</xsl:text>
 	</xsl:variable>
 
 	<div>
