@@ -195,12 +195,12 @@ em {
 
 a {
 	color: @color-accent;
-	text-decoration: none;
+	text-decoration: none !important;
 	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
 
 	&:hover { 
 		color: darken(@color-accent, 15%); 
-		text-decoration: none; 
+		text-decoration: none !important; 
 	}	
 }
 
@@ -570,14 +570,12 @@ h3 {
 	#font > #proxima > .regular;
 	font-size: 12px;
 	text-transform: uppercase;
-	padding-bottom: 50px;
-
+	margin: @base * 4 0 @base * 2 0;
 	a {
 		color: #999;
 		background: #f3f3f0;
 		display: block;
 		padding: 4px 6px;
-		margin-bottom: 60px;
 
 		&:hover {
 			background: #f5f5f5;
@@ -765,7 +763,8 @@ h3 {
 
 .top-search {
 	line-height: 40px;
-
+	color: darken(desaturate(@color-mast, 20%), 40%);
+	
 	* {
 		float: left;
 	}
@@ -797,15 +796,15 @@ h3 {
 		outline: none;
 		border:none;
 	}
-	input::-webkit-input-placeholder  {
-		color: darken(desaturate(@color-mast, 20%), 20%);
-		#font > #proxima > .regular;
-		text-transform: uppercase; 
-	}
 	input:-moz-placeholder {
 		color: darken(desaturate(@color-mast, 20%), 20%);
 		#font > #proxima > .regular;
 		text-transform: uppercase;
+	}
+	input::-webkit-input-placeholder  {
+		color: darken(desaturate(@color-mast, 20%), 20%);
+		#font > #proxima > .regular;
+		text-transform: uppercase; 
 	}
 }
 
@@ -1663,7 +1662,7 @@ h3 {
 
 // teachings -------------------------------------------------------
 
-.component-teachings {
+.component-teachings, .component-series {
 
 	h4 {
 		font-size: 16px;
@@ -1904,8 +1903,35 @@ h3 {
 		}
 	}
 }
-	
 
+
+.column-full-width {
+	.component-teachings {
+		h1 {
+			
+			.verse {
+				border-top: 1px solid #ccc;
+				padding-top: @base * 2;
+				font-size: 32px;
+				text-transform: uppercase;
+				color: #ccc;
+			}
+		}
+		
+		.meta {
+			margin: @base * 2 0;
+			
+			p {
+				font-size: 20px;
+			}
+		}
+		
+		.tags {
+			margin: @base * 2 0;
+			text-transform: uppercase;
+		}
+	}
+}
 
 // videos 
 
@@ -2039,6 +2065,7 @@ h3 {
 	}
 	
 	.mast {
+		margin-top: @base * 8;
 		padding-bottom: 20px;
 		.row {
 			margin-top: 0;
@@ -2052,9 +2079,18 @@ h3 {
 	
 	.navbar-inner {
 		.nav {
+			float: none;
+			&.left {
+				position: relative;
+				display: block;
+				z-index: 10;
+			}
 			&.pull-right {
+				position: relative;
+				margin: 0;
 				float: none;
 				text-align: center;
+				width: 100%;
 				
 				li {
 					float: none;
@@ -2066,6 +2102,32 @@ h3 {
 				}
 				.worship {
 					display: none;
+				}
+			}
+			.top-search {
+				background: darken(desaturate(@color-mast, 20%), 20%);
+				position: relative;
+				left: -5px;
+				top: -5px;
+				padding-right: 20px;
+				display: block;
+				width: 100%;
+				
+				.icon {
+					color: darken(desaturate(@color-mast, 20%), 40%);
+				}
+				
+				input {
+					background: darken(desaturate(@color-mast, 20%), 20%);
+					color: #fff;
+				}
+				
+				input:-moz-placeholder {
+					color: #fff;
+				}
+				
+				input::-webkit-input-placeholder  {
+					color: #fff; 
 				}
 			}
 		}

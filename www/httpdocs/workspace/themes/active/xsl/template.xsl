@@ -57,7 +57,7 @@
 					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
 				</a> -->
 				<div>
-					<ul class="nav">
+					<ul class="nav left">
 						<li class="top-search">
 							<a>
 								<xsl:call-template name="url-search-home" />
@@ -283,8 +283,9 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			</div>
 		</div>
 	</xsl:if>
-
-	<p class="pull-right to-top"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
+	<div class="row to-top">
+		<p class="pull-right"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
+	</div>
 
 	<div class="footer">
 		<div class="twitter">
