@@ -57,7 +57,7 @@
 					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
 				</a> -->
 				<div>
-					<ul class="nav">
+					<ul class="nav left">
 						<li class="top-search">
 							<a>
 								<xsl:call-template name="url-search-home" />
