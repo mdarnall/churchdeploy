@@ -1063,6 +1063,7 @@ h3 {
 
 			.video {
 				margin:0;
+				height: 349px;
 			}
 		}
 	}
@@ -2101,29 +2102,35 @@ h3 {
 
 .column-full-width {
 	.component-teachings {
-		h1 {
+	
+		.result {
 			
-			.verse {
-				border-top: 1px solid #ccc;
-				padding-top: @base * 2;
-				font-size: 32px;
+			h1 {
+			
+				.verse {
+					border-top: 1px solid #ccc;
+					padding-top: @base * 2;
+					font-size: 32px;
+					text-transform: uppercase;
+					color: #ccc;
+				}
+			}
+			
+			.meta {
+				margin: @base * 2 0;
+				
+				p {
+					font-size: 20px;
+				}
+			}
+			
+			.tags {
+				margin: @base * 2 0;
 				text-transform: uppercase;
-				color: #ccc;
 			}
-		}
-		
-		.meta {
-			margin: @base * 2 0;
 			
-			p {
-				font-size: 20px;
-			}
 		}
 		
-		.tags {
-			margin: @base * 2 0;
-			text-transform: uppercase;
-		}
 	}
 }
 
@@ -2484,13 +2491,3 @@ h3 {
 @media (min-width: 1200px) {
 
 }
-
-
-
-
-
-
-
-
-
-
