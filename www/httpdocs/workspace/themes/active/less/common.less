@@ -98,12 +98,12 @@
 #link {
 
 	.large {
+		.small-grey-text;
 		#font > #proxima > .bold;
 		display: inline;
 		color: #fff;
 		background: @color-mast;
 		padding: 12px 14px;
-		.small-grey-text;
 
 		&:hover {
 			color: #fff;
@@ -239,7 +239,7 @@ a {
 
 	&:hover {
 		color: darken(@color-accent, 15%);
-		//text-decoration: none;
+		text-decoration: none;
 	}
 }
 
@@ -325,7 +325,7 @@ h3 {
 	#font > #proxima > .bold;
 	text-transform: uppercase;
 	padding: 4px 6px 3px 6px;
-	margin-right: 10px;
+	margin-right: @base;
 }
 
 .logo {
@@ -334,11 +334,11 @@ h3 {
 
 .mast {
 	background: @color-mast;
-	padding: 40px 0;
-	margin: 30px 0 30px 0;
+	padding: @base * 4 0;
+	margin: @base * 3 0 @base * 3 0;
 
 	.row {
-		margin: 30px auto 0 auto;
+		margin: @base * 3 auto 0 auto;
 
 		.span8 {
 			margin-left: 0;
@@ -365,7 +365,7 @@ h3 {
 				#font > #proxima > .bold;
 				color: #fff;
 				margin:0;
-				padding: 10px 0;
+				padding: @base 0;
 				text-align: center;
 				background: darken(desaturate(@color-mast, 25%), 25%);
 
@@ -388,11 +388,11 @@ h3 {
 			}
 
 			cite {
+				.small-grey-text;
 				color: #fff;
 				display: block;
 				margin-top: @base * 0.5;
 				padding: 0 15px 5px 15px;
-				.small-grey-text;
 			}
 		}
 	}
@@ -408,7 +408,7 @@ h3 {
 	.box-shadow(0 1px 2px rgba(0,0,0,0.1));
 
 	&.alertLive {
-		margin-top: -20px;
+		margin-top: @base * -2;
 	}
 
 	strong {
@@ -416,7 +416,7 @@ h3 {
 		display: inline-block;
 		text-transform: uppercase;
 		padding-top: 7px;
-		margin-right: 10px;
+		margin-right: @base;
 	}
 
 	.btn {
@@ -870,7 +870,7 @@ h3 {
 			border:none;
 		}
 
-		&:-webkit-input-placeholder  {
+		&::-webkit-input-placeholder  {
 			color: darken(desaturate(@color-mast, 20%), 20%);
 			#font > #proxima > .regular;
 			text-transform: uppercase;
@@ -912,13 +912,13 @@ h3 {
 	.intro {
 		display: block;
 		font-size: 26px;
-		margin: 20px 0;
+		margin: @base * 2 0;
 	}
 
 	.nav-box {
 
 		.row {
-			margin-bottom: 20px;
+			margin-bottom: @base * 2;
 
 			.box {
 				font-family: 'Times New Roman', Times, serif;
@@ -1117,9 +1117,6 @@ h3 {
 					color: @color-accent;
 					border-bottom: 1px solid darken(@color-grey-accent, 20%);
 
-					.title {
-						text-decoration: underline;
-					}
 				}
 
 				.date {
@@ -1228,7 +1225,7 @@ h3 {
 
 				a {
 					text-transform: none;
-					//text-decoration: none;
+					text-decoration: none;
 					color: #303030;
 
 					&:hover {
@@ -1328,7 +1325,7 @@ h3 {
 
 	.component-events {
 		list-style: none;
-		margin: 0 0 @base*2 0;
+		margin: 0 0 @base * 2 0;
 		padding: 0;
 
 		@month-height: 16px;
@@ -1353,7 +1350,6 @@ h3 {
 
 					.info {
 						color: @color-accent;
-						text-decoration: underline;
 					}
 				}
 
@@ -1610,7 +1606,7 @@ h3 {
 					}
 
 					h4 {
-						text-decoration: underline;
+						font-size: 16px;
 					}
 				}
 
@@ -1743,10 +1739,10 @@ h3 {
 	h3 {
 
 		.meta {
+			.body-text-serif;
 			text-transform: none;
 			font-size: 14px;
 			letter-spacing: 0;
-			.body-text-serif;
 		}
 	}
 }
@@ -1799,7 +1795,6 @@ h3 {
 
 				&:hover {
 					color: @color-accent;
-					text-decoration: underline;
 				}
 			}
 		}
@@ -2052,6 +2047,34 @@ h3 {
 	}
 }
 
+.column-full-width {
+	.component-teachings {
+		h1 {
+			
+			.verse {
+				border-top: 1px solid #ccc;
+				padding-top: @base * 2;
+				font-size: 32px;
+				text-transform: uppercase;
+				color: #ccc;
+			}
+		}
+		
+		.meta {
+			margin: @base * 2 0;
+			
+			p {
+				font-size: 20px;
+			}
+		}
+		
+		.tags {
+			margin: @base * 2 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
 // videos
 
 // verses ---------------------------------------------------------
@@ -2195,24 +2218,28 @@ h3 {
 	}
 
 	.navbar-inner {
-
 		.nav {
-
+			float: none;
+			&.left {
+				position: relative;
+				display: block;
+				z-index: 10;
+			}
 			&.pull-right {
 				position: relative;
 				margin: 0;
 				float: none;
 				text-align: center;
-
+				width: 100%;
+				
 				li {
 					float: none;
 					display: inline;
-
+					
 					a {
 						display: inline-block;
 					}
 				}
-
 				.worship {
 					display: none;
 				}
