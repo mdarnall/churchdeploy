@@ -341,4 +341,41 @@ USAGE:
 
 
 
+<!-- 
+
+Upper or lowercase in English
+
+http://stackoverflow.com/questions/3053828/lowercase-conversion-in-xsl
+
+To convert a string to lower case or uppercase you can use the XPath 1.0 function translate:
+
+First define your alphabets for lower case and upper case letters. Note that the position of each pair of characters needs to be the same:
+
+<xsl:variable name="en-lowercase-letters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
+<xsl:variable name="en-uppercase-letters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
+
+Then you can convert to upper case:
+<xsl:value-of select="translate($toconvert,$en-lowercase-letters,$en-uppercase-letters)"/>
+
+or to lower case
+<xsl:value-of select="translate($toconvert,$en-uppercase-letters,$en-lowercase-letters)"/>
+
+-->
+<xsl:variable name="en-lowercase-letters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
+<xsl:variable name="en-uppercase-letters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </xsl:stylesheet>

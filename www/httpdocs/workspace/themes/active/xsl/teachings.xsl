@@ -348,7 +348,7 @@
 
 	<xsl:variable name="audio-url">
 		<xsl:text>http://66.147.244.244/~atheycre/teachings/</xsl:text>
-		<xsl:value-of select="filename" />
+		<xsl:value-of select="translate(filename,$en-uppercase-letters,$en-lowercase-letters)"/>
 		<xsl:text>.lq.mp3</xsl:text>
 	</xsl:variable>
 
