@@ -65,7 +65,7 @@
 
 		<div class="entries results">
 			<div class="row"> 
-				<div class="span9">
+				<div class="span8">
 
 					<xsl:if test="not(count($entries)) and $url-keywords">
 						<p><strong>Sorry about that!</strong><br />Please, try another search or head to the <a href="{$root}">homepage</a></p>
@@ -241,13 +241,12 @@
 					</xsl:for-each>
 				</div>
 				<xsl:if test="$url-keywords">
-					<div class="span2 filters">
+					<div class="span4 filters">
 						<xsl:if test="
 							not(//search-suggestions/word = $url-keywords) and 
 							count(//search-suggestions/word) &gt; 0">
-							<br />
 							<div class="suggestions">
-								<h4>Did you mean</h4>
+								<h4>Did you mean...</h4>
 								<xsl:for-each select="//search-suggestions/word">
 									<a href="{$root}/{$pt1}/{$pt2}/?sections={$url-sections}&amp;keywords={.}">
 										<xsl:value-of select="." disable-output-escaping="yes" />
@@ -274,7 +273,6 @@
 						</xsl:if>
 
 						<div class="filter">
-							<br />
 							<h4>Search sections</h4>
 							<div class="collection">
 								<ul>

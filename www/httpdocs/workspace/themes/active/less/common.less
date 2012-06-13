@@ -1677,10 +1677,61 @@ h3 {
 .component-search {
 
 	.filters {
-
+	
 		* {
 			font-size: 14px;
 		}
+
+		.suggestions, .filter {
+			#font > #tisa > .regular;
+			border: @base solid #E9E9E9;
+			margin: @base 0 @base * 2 0;
+
+			h4 {
+				margin: 0;
+				background: @color-mast;
+				padding: 10px;
+				color: #fff;
+				#font > #proxima > .bold;
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+		}
+		
+		.filter {
+			.collection {
+				ul {
+					list-style: none;
+					margin: 0;
+					
+					li {
+						list-style-type: none;
+						
+						a {
+							display: block;
+							padding: 5px 10px;
+							border-bottom: 1px solid #e9e9e9;
+							
+							strong {
+								#font > #proxima > .bold;
+								text-transform: uppercase;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		.suggestions {
+			padding-bottom: 5px;
+			
+			a {
+				margin: @base;
+			}
+			
+		}
+
 	}
 
 	.entries {
@@ -1992,8 +2043,8 @@ h3 {
 
 	.widget {
 		#font > #tisa > .regular;
-		border: 10px solid #E9E9E9;
-		margin: 10px 0 20px 0;
+		border: @base solid #E9E9E9;
+		margin: @base 0 @base * 2 0;
 
 		h4 {
 			margin: 0;
@@ -2006,7 +2057,7 @@ h3 {
 		}
 
 		h5 {
-			padding: 6px 10px 5px 10px;
+			padding: 6px @base 5px @base;
 			color: #ccc;
 			border-top: 1px solid #e9e9e9;
 			border-bottom: 1px solid #e9e9e9;
@@ -2016,7 +2067,7 @@ h3 {
 		}
 
 		.collection {
-			padding: 10px;
+			padding: @base;
 			font-size: 13px;
 			line-height: 1.6;
 
