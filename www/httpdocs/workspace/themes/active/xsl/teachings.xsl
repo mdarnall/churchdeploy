@@ -149,7 +149,7 @@
 								
 								<h3>Series</h3>
 
-								<xsl:for-each select="//teachings-series-entries-for-teachings-home-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
+								<xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
 									<div class="row">
 										<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
 											<div class="span4 series">

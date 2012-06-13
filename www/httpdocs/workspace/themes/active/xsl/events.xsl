@@ -30,11 +30,11 @@
 					</h3>
 
 					<ul class="events nav nav-tabs nav-stacked">
-				
+
 						<xsl:call-template name="class-position">
 							<xsl:with-param name="component" select="'events'" />
 							<xsl:with-param name="classes" select="'events nav nav-tabs nav-stacked'" />
-						</xsl:call-template> 
+						</xsl:call-template>
 
 						<xsl:for-each select="$entries[ position() &lt; 4 ]">
 
@@ -81,12 +81,13 @@
 
 						</xsl:for-each>
 
-						<!-- <xsl:if test="count($entries) &gt; 3">
-							<a href="{$x}/20/events/1/{$events-entries-per-page}/related/{$pt1}/" class="more">
+						<xsl:if test="$entries/../pagination/@total-entries &gt; 3">
+							<a class="more">
+								<xsl:call-template name="url-events-home" />
 								<span class="icon">l</span>
 								<span>See more events</span>
-							</a>							
-						</xsl:if> -->
+							</a>
+						</xsl:if>
 
 					</ul>
 
@@ -168,7 +169,7 @@
 									<xsl:call-template name="edit-entry">
 										<xsl:with-param name="component" select="$component"/>
 									</xsl:call-template>
-									
+
 								</h2>
 
 								<div class="help-block clearfix">
@@ -206,7 +207,7 @@
 										    <xsl:otherwise>
 										        <xsl:value-of select="$stripped" disable-output-escaping="yes" />
 										    </xsl:otherwise>
-										</xsl:choose>										
+										</xsl:choose>
 									</xsl:otherwise>
 
 								</xsl:choose>

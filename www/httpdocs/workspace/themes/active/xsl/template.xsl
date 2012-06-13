@@ -192,17 +192,10 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			</div>	
 		</div>
 		<div id="sidebar" class="span4 column-right">
-			<h3>Upcoming</h3>
-			<ul class="component component-events">
-				<li class="entry clearfix odd first"><a href="http://atheycreek/20/events/12947/jr-high-bullwinkle-s-and-burgers/"><div class="date"><div class="month">Jul</div><div class="day">6</div></div><table class="info"><tbody><tr><td>Jr. High Bullwinkle’s and Burgers</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12947/" target="blank" class="edit "></a></li>
-				<li class="entry clearfix even middle"><a href="http://atheycreek/20/events/12949/jr-high-boating-bonanza/"><div class="date"><div class="month">Jul</div><div class="day">12</div></div><table class="info"><tbody><tr><td>Jr. High Boating Bonanza</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12949/" target="blank" class="edit "></a></li>
-				<li class="entry clearfix odd last"><a href="http://atheycreek/20/events/12952/jr-high-super-sliding-road-trip/"><div class="date"><div class="month">Aug</div><div class="day">17</div></div><table class="info"><tbody><tr><td>Jr. High Super Sliding Road Trip</td></tr></tbody></table></a><a href="http://atheycreek/symphony/publish/events/edit/12952/" target="blank" class="edit "></a></li>
-				<a href="http://atheycreek/20/events/1/5/related/29/" class="more"><span class="icon">l</span><span>See more events</span></a>
-			</ul> 
 
 			<xsl:call-template name="component-events">
 				<xsl:with-param name="position" select="'column-right'" />
-				<xsl:with-param name="entries" select="//events-home-filtered/entry" />
+				<xsl:with-param name="entries" select="//events-3-latest/entry" />
 			</xsl:call-template>
 
 		</div>
