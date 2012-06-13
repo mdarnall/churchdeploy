@@ -296,8 +296,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 
-
-		<xsl:if test="number($pt3) and video/item">
+		<xsl:if test="number($pt3) and video/item or not($pt1) and video/item">
 			<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width: 100%; height: 529px; margin: 0 0 20px 0"></iframe>
 		</xsl:if>
 

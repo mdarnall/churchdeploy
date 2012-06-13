@@ -185,9 +185,9 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 			<h3>Featured</h3>
 			<div class="component component-teachings large">
 				<div class="latest">
-
-
-					<xsl:call-template name="teaching-entry" />
+					<xsl:for-each select="//teachings-featured-filtered/entry">
+						<xsl:call-template name="teaching-entry" />
+					</xsl:for-each>
 				</div>
 			</div>	
 		</div>
