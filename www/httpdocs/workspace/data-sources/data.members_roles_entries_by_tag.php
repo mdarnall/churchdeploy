@@ -11,7 +11,7 @@
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'order';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -28,7 +28,6 @@
 				'member: gender',
 				'member: birthday',
 				'member: about',
-				'member: phone-number',
 				'member: anonymize',
 				'role: role',
 				'role: description'
@@ -45,10 +44,10 @@
 				'name' => 'Members/Roles: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-10T07:52:51+00:00'
+				'release-date' => '2012-06-14T04:36:40+00:00'
 			);
 		}
 

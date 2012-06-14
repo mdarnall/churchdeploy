@@ -5,18 +5,18 @@
 	Class datasourceteachings_series_entries_filtered extends Datasource{
 
 		public $dsParamROOTELEMENT = 'teachings-series-entries-filtered';
-		public $dsParamORDER = 'desc';
+		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '12';
+		public $dsParamLIMIT = '4';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'order';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
 		public $dsParamFILTERS = array(
 				'233' => 'no',
-				'232' => '(if all of ((if value of ({$pt2}) is (teachings)), (if value of ({$pt3}) is (series))) is (yes))',
+				'232' => '(if value of ({$pt2}) is (teachings))',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -55,7 +55,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-03T19:34:32+00:00'
+				'release-date' => '2012-06-14T02:29:11+00:00'
 			);
 		}
 

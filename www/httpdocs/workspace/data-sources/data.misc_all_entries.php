@@ -19,7 +19,7 @@
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'name',
-				'content'
+				'content: raw'
 		);
 
 
@@ -33,10 +33,10 @@
 				'name' => 'Misc: All entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-10T07:28:23+00:00'
+				'release-date' => '2012-06-14T04:02:30+00:00'
 			);
 		}
 

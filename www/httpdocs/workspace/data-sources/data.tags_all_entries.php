@@ -4,7 +4,6 @@
 
 	Class datasourcetags_all_entries extends Datasource{
 
-		public $dsParamCACHE = '60';
 		public $dsParamROOTELEMENT = 'tags-all-entries';
 		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -40,10 +39,10 @@
 				'name' => 'Tags: All entries',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-04T17:55:35+00:00'
+				'release-date' => '2012-06-03T16:25:29+00:00'
 			);
 		}
 

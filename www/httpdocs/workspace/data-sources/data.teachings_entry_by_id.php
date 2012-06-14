@@ -23,6 +23,7 @@
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
 				'slug',
+				'filename',
 				'current-id',
 				'book',
 				'chapter',
@@ -56,7 +57,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-03T18:51:17+00:00'
+				'release-date' => '2012-06-14T05:52:17+00:00'
 			);
 		}
 

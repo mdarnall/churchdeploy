@@ -23,6 +23,7 @@
 				'title',
 				'slug',
 				'filename',
+				'current-id',
 				'book',
 				'chapter',
 				'description',
@@ -46,10 +47,10 @@
 				'name' => 'Teachings: Featured (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-12T05:27:34+00:00'
+				'release-date' => '2012-06-13T19:12:18+00:00'
 			);
 		}
 

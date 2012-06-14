@@ -4,7 +4,6 @@
 
 	Class datasourcealerts_entries_by_tag extends Datasource{
 
-		public $dsParamCACHE = '60';
 		public $dsParamROOTELEMENT = 'alerts-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -17,8 +16,8 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'205' => '{$pt1:43}',
 				'227' => 'no',
+				'205' => '{$pt1:43}',
 				'221' => 'no',
 		);
 
@@ -39,10 +38,10 @@
 				'name' => 'Alerts: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-04T17:57:35+00:00'
+				'release-date' => '2012-05-24T23:13:39+00:00'
 			);
 		}
 

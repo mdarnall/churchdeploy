@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceevents_home_filtered extends Datasource{
+	Class datasourceevents_3_latest extends Datasource{
 
-		public $dsParamROOTELEMENT = 'events-home-filtered';
+		public $dsParamROOTELEMENT = 'events-3-latest';
 		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '3';
@@ -15,12 +15,12 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'169' => '(if value of ({$pt1}) is not ())',
-				'213' => 'no',
 				'35' => 'later than {$today}',
+				'213' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'name',
 				'date',
 				'description',
@@ -36,13 +36,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Events: Home (filtered)',
+				'name' => 'Events: 3 latest',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-31T02:19:41+00:00'
+				'release-date' => '2012-06-13T23:11:44+00:00'
 			);
 		}
 

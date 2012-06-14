@@ -5,7 +5,7 @@
 	Class datasourceevents_all_entries_filtered extends Datasource{
 
 		public $dsParamROOTELEMENT = 'events-all-entries-filtered';
-		public $dsParamORDER = 'desc';
+		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '{$pt4:5}';
 		public $dsParamSTARTPAGE = '{$pt3:1}';
@@ -43,7 +43,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T23:22:41+00:00'
+				'release-date' => '2012-06-04T02:47:40+00:00'
 			);
 		}
 

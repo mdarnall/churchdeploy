@@ -23,6 +23,7 @@
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'name',
 				'date',
 				'description',
@@ -43,7 +44,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T23:23:17+00:00'
+				'release-date' => '2012-06-13T23:23:22+00:00'
 			);
 		}
 
