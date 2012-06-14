@@ -108,7 +108,7 @@
 										<xsl:value-of select="$email" />
 									</xsl:attribute>
 									<div class="pull-left">
-										<img>
+										<img width="72" height="72">
 											<xsl:attribute name="src">
 												<xsl:value-of select="$root" />
 												<xsl:choose>

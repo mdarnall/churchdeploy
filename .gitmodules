@@ -1,3 +1,0 @@
-[submodule "www/httpdocs/extensions/cachelite"]
-	path = www/httpdocs/extensions/cachelite
-	url = http://github.com/symphonists/cachelite.git

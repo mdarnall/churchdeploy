@@ -21,7 +21,7 @@
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-32000708-1']);
@@ -33,7 +33,7 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-</script>
+</script> -->
 
 </xsl:template>
 
@@ -72,7 +72,12 @@
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
-						<li><a href="#"><span class="climacon">m</span><span class="worship">Sunrise Worship - </span>6:30 am</a></li>
+						<li>
+							<a href="#">
+								<span class="climacon">m</span><span class="worship">Sunrise Worship - </span>
+								<xsl:value-of select="//misc-all-entries/entry[name='sunrise-worship']/content" disable-output-escaping="yes" />
+							</a>
+						</li>
 
 						<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 							<li class="divider-vertical"></li>
@@ -123,7 +128,7 @@
 				<div class="span12">
 
 					<a href="{$root}" class="logo">
-						<img data-responsimage="logo-big-4fbe1f82408e2.png" style="width: 120px; height: 120px;" />
+						<img data-responsimage="logo-big-4fbe1f82408e2.png" width="120" height="120" />
 					</a>
 					
 					<ul class="main nav nav-pills">
@@ -156,24 +161,7 @@
 				</div>
 			</div>
 			<xsl:if test="not($pt1) or $pt1 = 43">
-
-				<div class="row introduction">
-					<div class="span8">
-						<h2>Welcome to Athey Creek</h2>
-						<p style="width: 95%"><!-- We hope this website is helpful in communicating who we are.  -->To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study 
-the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</p>
-					</div>
-					<div class="span4">
-						<div>
-							<div class="link-bar">
-							<a href="/7761/meetings/" class="link-home">Meeting Times</a>&#160;&#160;|&#160;&#160;<a href="/13391/im-new-here/" class="link-home">I'm New Here</a>
-							</div>
-							<blockquote>Studying the Bible, verse-by-verse, chapter-by-chapter. It took 13 years last time.</blockquote>
-							<cite>We’re currently at 1st Timothy 6:1</cite>
-						</div>
-
-					</div>
-				</div>				
+				<xsl:value-of select="normalize-space(//misc-all-entries/entry[name='welcome']/content)" disable-output-escaping="yes" />
 			</xsl:if>
 
 		</div>
@@ -323,29 +311,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 						</ul>							
 					</div>
 				</xsl:for-each>
-				<div class="span3">
-					<h4>Main services</h4>
-					<p>Saturday at 6:00 PM<br />
-					Sunday at 8:30 and 11:00 AM<br />
-					Wednesday at 7:00 PM</p>
-					<h4>Online Giving</h4>
-					<p>Athey Creek Christian Fellowship is supported solely through those who call Athey Creek their church home.</p>
-					<p><a href="{$root}/24/give/" class="btn btn-primary give">Give →</a></p>
-				</div>
-				<div class="span3">
-					<h4><xsl:value-of select="$website-name" /></h4>
-					<address>
-						<xsl:text>27520 SW 95th Ave.</xsl:text><br />
-						<xsl:text>Wilsonville, Oregon 97070</xsl:text><br />
-						<abbr title="Phone">P:</abbr><xsl:text> (971) 327-2123</xsl:text>
-					</address>
-					<h4>Office Hours</h4>
-					<p>
-						<xsl:text>9:00 AM to 5:00 PM — Tue., Thr., Fri.</xsl:text><br />
-						<xsl:text>9:00 AM to 12:00 PM — Wed.</xsl:text><br />
-						<xsl:text>Closed Monday</xsl:text>
-					</p>
-				</div>
+				<xsl:value-of select="normalize-space(//misc-all-entries/entry[name='footer']/content)" disable-output-escaping="yes" />
 			</div>
 		</div>
 		<div class="baseline">
@@ -379,22 +345,20 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 
 <xsl:template name="template-footer-outside-container">
-<!--
+
 	<script type="text/javascript">
 		<xsl:comment>
-		(function (window){
+		(function (window) {
 			'use strict';
-			function downloadJSAtOnload(){
-
+			function downloadJSAtOnload() {
+				
 				var _gaq = _gaq || [];
-				//_gaq.push(['_setAccount', 'UA-XXX']);
+				_gaq.push(['_setAccount', 'UA-32000708-1']);
 				_gaq.push(['_trackPageview']);
 
 				var js = {
 					"scripts":[
-						"/workspace/js/plugins.min.js",
-						"/workspace/themes/active/js/plugins.min.js",
-						"/workspace/themes/active/js/common.js"
+						"/workspace/themes/active/js/common-ck.js"
 					]
 				};
 
@@ -409,7 +373,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 
 			if(window.addEventListener) {
 				window.addEventListener("load",downloadJSAtOnload,false);
-			} else if (window.attachEvent){
+			} else if (window.attachEvent) {
 				window.attachEvent("onload",downloadJSAtOnload); 
 			} else { 
 				window.onload=downloadJSAtOnload;
@@ -418,11 +382,7 @@ the Bible, and serve one another. We believe church is supposed to be like a hos
 		//</xsl:comment>
 	</script>
 
-  -->
-	<script type="text/javascript" src="{$workspace}/js/plugins.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/themes/active/js/plugins.min.js"></script>
-	<script type="text/javascript" src="{$workspace}/themes/active/js/common.js"></script>
-	
+	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->	
 
 </xsl:template>
 

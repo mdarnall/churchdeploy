@@ -23,7 +23,7 @@
 					rImage;
 
 				if(rInit) {
-					rThis.attr('src', rStatic).css('background', '#fff url(' + rLoading + ') no-repeat center');
+					rThis.attr('src', rStatic).css('background', 'transparent url(' + rLoading + ') no-repeat center');
 				}
 
 				if(rThis.css('font-family') === 'pixel-ratio-2') {

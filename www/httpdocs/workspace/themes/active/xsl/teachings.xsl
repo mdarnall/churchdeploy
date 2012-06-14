@@ -355,23 +355,29 @@
 	<div>
 		<xsl:call-template name="class-rows" />
 		<div class="actions">
-			<span class="action">
-				<span class="icon">m</span>
-				<strong>Audio</strong> <a href="{$audio-url}" target="_blank">Listen</a>
-				<xsl:text> | </xsl:text>
-				<a href="{$audio-url}" target="_blank">Download</a>
-			</span>
-			<span class="action">
-				<span class="icon">V</span>
-				<strong>Video</strong> 
-				<xsl:text> </xsl:text> 
-				<a>
-					<xsl:call-template name="url-teachings" />
-					<xsl:text>View</xsl:text>
-				</a>
-				<xsl:text> | </xsl:text>
-				<a href="{$entry/url}" target="_blank">Download</a>
-			</span>
+			<xsl:if test="filename">
+				<span class="action">
+					<span class="icon">m</span>
+					<strong>Audio</strong>
+					<xsl:text> </xsl:text> 
+					<a href="{$audio-url}" target="_blank">Listen</a>
+					<xsl:text> | </xsl:text>
+					<a href="{$audio-url}" target="_blank">Download</a>
+				</span>				
+			</xsl:if>
+			<xsl:if test="video/item/id and not($pt4)">
+				<span class="action">
+					<span class="icon">V</span>
+					<strong>Video</strong> 
+					<xsl:text> </xsl:text> 
+					<a>
+						<xsl:call-template name="url-teachings" />
+						<xsl:text>View</xsl:text>
+					</a>
+					<xsl:text> | </xsl:text>
+					<a href="{$entry/url}" target="_blank">Download</a>					
+				</span>
+			</xsl:if>
 		</div>
 	</div>
 

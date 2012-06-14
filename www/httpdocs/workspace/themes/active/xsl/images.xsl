@@ -23,7 +23,7 @@
 						<xsl:with-param name="class" select="'image'" />
 					</xsl:call-template>
 
-					<img width="100%">
+					<img width="100%" height="378">
 
 						<xsl:attribute name="data-responsimage">
 							<xsl:value-of select="image/filename" />
