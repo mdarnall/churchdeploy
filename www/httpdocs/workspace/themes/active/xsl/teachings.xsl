@@ -301,8 +301,6 @@
 				<a>
 					<xsl:call-template name="url-teachings" />
 					<xsl:value-of select="title" disable-output-escaping="yes" />
-						
-					
 				</a>
 				</h2>
 				<div class="meta">
@@ -415,9 +413,9 @@
 	<xsl:param name="entry" select="." />
 
 	<xsl:variable name="audio-url">
-		<xsl:text>http://66.147.244.244/~atheycre/teachings/</xsl:text>
+		<xsl:text>http://72.10.33.203/media/audio/teachings/</xsl:text>
 		<xsl:value-of select="translate(filename,$en-uppercase-letters,$en-lowercase-letters)"/>
-		<xsl:text>.lq.mp3</xsl:text>
+		<xsl:text>.mp3</xsl:text>
 	</xsl:variable>
 
 	<div>
@@ -428,9 +426,7 @@
 					<span class="icon">m</span>
 					<strong>Audio</strong>
 					<xsl:text> </xsl:text> 
-					<a href="{$audio-url}" target="_blank">Listen</a>
-					<xsl:text> | </xsl:text>
-					<a href="{$audio-url}" target="_blank">Download</a>
+					<a href="{$audio-url}" target="_blank">Listen / Download</a>
 				</span>				
 			</xsl:if>
 			<xsl:if test="video/item/id and not($pt4)">
