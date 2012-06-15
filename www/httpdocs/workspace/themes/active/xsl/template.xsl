@@ -319,7 +319,38 @@
 <xsl:template name="template-footer-outside-container">
 
 	<script type="text/javascript">
-		<xsl:comment>(function(a){"use strict";function b(){var a=a||[],b={scripts:["/workspace/themes/active/js/common-ck.js"]};a.push(["_setAccount","UA-32000708-1"]);a.push(["_trackPageview"]);for(var c in b.scripts)if(b.scripts[c]){var d=document.createElement("script");d.src=b.scripts[c];document.body.appendChild(d)}}a.addEventListener?a.addEventListener("load",b,!1):a.attachEvent?a.attachEvent("onload",b):a.onload=b})(window); //</xsl:comment>
+		<xsl:comment>
+		(function (window) {
+			'use strict';
+			function downloadJSAtOnload() {	
+				var _gaq = _gaq || [],
+				js = {
+					"scripts":[
+						"/workspace/themes/active/js/common-ck.js"
+					]
+				};
+
+				_gaq.push(['_setAccount', 'UA-32000708-1']);
+				_gaq.push(['_trackPageview']);
+
+				for (var key in js.scripts) {
+					if (js.scripts[key]) {
+						var element=document.createElement("script");
+						element.src=js.scripts[key];
+						document.body.appendChild(element);
+					}
+				}
+			}
+
+			if(window.addEventListener) {
+				window.addEventListener("load",downloadJSAtOnload,false);
+			} else if (window.attachEvent) {
+				window.attachEvent("onload",downloadJSAtOnload); 
+			} else { 
+				window.onload=downloadJSAtOnload;
+			}
+		}(window));
+		//</xsl:comment>
 	</script>
 
 	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->	
