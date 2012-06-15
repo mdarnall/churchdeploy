@@ -323,8 +323,13 @@
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="chapter" />
 					</span>
-					</p>
-					<p>
+					<xsl:text> </xsl:text>
+					<xsl:text> </xsl:text>
+					<xsl:text> </xsl:text>
+					<xsl:text>|</xsl:text>
+					<xsl:text> </xsl:text>
+					<xsl:text> </xsl:text>
+					<xsl:text> </xsl:text>
 					<span class="date">
 					<xsl:call-template name="date-teaching">
 						<xsl:with-param name="date" select="date/date/start/@iso" />
@@ -373,7 +378,9 @@
 					<span class="date">
 						<xsl:text> </xsl:text>
 						<xsl:text> </xsl:text>
+						<xsl:text> </xsl:text>
 						<xsl:text>|</xsl:text>
+						<xsl:text> </xsl:text>
 						<xsl:text> </xsl:text>
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="date-teaching">
