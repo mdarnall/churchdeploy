@@ -9,19 +9,19 @@
 	indent="no"
 	/>
 
-
 <xsl:template name="template-head">
 	
 	<link rel="canonical" href="http://atheycreek.com" />
-
-	<!-- <meta http-equiv="x-dns-prefetch-control" content="on" />
+	<!-- 
+	<meta http-equiv="x-dns-prefetch-control" content="on" />
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
-	</xsl:for-each> -->
-
-<!-- <script type="text/javascript">
+	</xsl:for-each> 
+	-->
+	<!-- 
+	<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-32000708-1']);
@@ -33,29 +33,26 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-</script> -->
+	</script> 
+	-->
 
 </xsl:template>
 
-
 <xsl:template name="template-header-outside-container">
-	
+
 	<div class="navbar navbar-fixed-top">
-
 		<div class="navbar-inner">
-
 			<div class="container">
-
-<!--
+				<!--
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</a>
--->
-				<!-- <a class="brand first" href="{$root}">
+				</a> 
+				<a class="brand first" href="{$root}">
 					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
-				</a> -->
+				</a> 
+				-->
 				<div>
 					<ul class="nav left">
 						<li class="top-search">
@@ -78,7 +75,6 @@
 								<xsl:value-of select="//misc-all-entries/entry[name='sunrise-worship']/content" disable-output-escaping="yes" />
 							</a>
 						</li>
-
 						<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 							<li class="divider-vertical"></li>
 							<li>
@@ -104,9 +100,7 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- Hidden live broadcast modal -->
-
 	<div class="modal fade modalLive" id="modalLive">
 		<div class="modal-header">
 			<a class="close">×</a>
@@ -120,26 +114,20 @@
 			<span class="url hidden">http://www.ustream.tv/embed/4325662/?autoplay=true</span>
 		</div>
 	</div>
-
 	<div class="header mast" id="overview">
 		<div class="container">
 			<xsl:call-template name="alerts" />
 			<div class="row">
 				<div class="span12">
-
 					<a href="{$root}" class="logo">
 						<img data-responsimage="logo-big-4fbe1f82408e2.png" width="120" height="120" />
 					</a>
-					
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 							<xsl:variable name="entry-id" select="@id" />
 							<li>
 								<xsl:choose>
-									<xsl:when test="
-										@id = $pt1 or 
-										//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id
-										">
+									<xsl:when test="@id = $pt1 or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
 										<xsl:call-template name="class-rows">
 											<xsl:with-param name="nav" select="true()" />
 											<xsl:with-param name="class" select="'active'" />
@@ -163,33 +151,30 @@
 			<xsl:if test="not($pt1) or $pt1 = 43">
 				<xsl:value-of select="normalize-space(//misc-all-entries/entry[name='welcome']/content)" disable-output-escaping="yes" />
 			</xsl:if>
-
 		</div>
 	</div>
 	<xsl:if test="not($pt1) or $pt1 = 43">
-	<div class="container main-container">
-	<div class="row home">
-		<div id="main-content" class="span8 column-center">
-			<h3>Featured</h3>
-			<div class="component component-teachings large">
-				<div class="latest">
-					<xsl:for-each select="//teachings-featured-filtered/entry">
-						<xsl:call-template name="teaching-entry" />
-					</xsl:for-each>
+		<div class="container main-container">
+			<div class="row home">
+				<div id="main-content" class="span8 column-center">
+					<h3>Featured</h3>
+					<div class="component component-teachings large">
+						<div class="latest">
+							<xsl:for-each select="//teachings-featured-filtered/entry">
+								<xsl:call-template name="teaching-entry" />
+							</xsl:for-each>
+						</div>
+					</div>	
 				</div>
-			</div>	
+				<div id="sidebar" class="span4 column-right">
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="'column-right'" />
+						<xsl:with-param name="entries" select="//events-3-latest/entry" />
+					</xsl:call-template>
+				</div>
+			</div>
 		</div>
-		<div id="sidebar" class="span4 column-right">
-
-			<xsl:call-template name="component-events">
-				<xsl:with-param name="position" select="'column-right'" />
-				<xsl:with-param name="entries" select="//events-3-latest/entry" />
-			</xsl:call-template>
-
-		</div>
-	</div>
-</div>
-</xsl:if>
+	</xsl:if>
 
 </xsl:template>
 
@@ -228,14 +213,11 @@
 </xsl:template>
 
 
-
 <xsl:template name="template-footer-inside-container">
 	
 	<xsl:if test="not($pt1) or $pt1 = 43">
 		<div class="component-series">
-				
 			<h3>Series</h3>
-
 			<div class="row">
 			    <xsl:for-each select="//teachings-series-home-filtered/entry">
 	            	<div class="span4 series">
@@ -262,7 +244,6 @@
 	<div class="row to-top">
 		<p class="pull-right"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 	</div>
-
 	<div class="footer">
 		<div class="twitter">
 			<div class="container">
@@ -299,13 +280,10 @@
 									<xsl:value-of select="tag" />
 								</a>
 							</li>
-
 							<xsl:variable name="parents" select="@id"/>
-
 							<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $parents and not(hide-from-footer = 'Yes') ]">
 								<xsl:call-template name="subnav-entry" />
 							</xsl:for-each>
-
 						</ul>							
 					</div>
 				</xsl:for-each>
@@ -335,54 +313,56 @@
 </xsl:template>
 
 
-<xsl:template name="template-column-right-top">
-
-	
-	
-</xsl:template>
+<xsl:template name="template-column-right-top"></xsl:template>
 
 
 <xsl:template name="template-footer-outside-container">
 
 	<script type="text/javascript">
-		<xsl:comment>
-		(function (window) {
-			'use strict';
-			function downloadJSAtOnload() {
-				
-				var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', 'UA-32000708-1']);
-				_gaq.push(['_trackPageview']);
-
-				var js = {
-					"scripts":[
-						"/workspace/themes/active/js/common-ck.js"
-					]
-				};
-
-				for (var key in js.scripts) {
-					if (js.scripts[key]) {
-						var element=document.createElement("script");
-						element.src=js.scripts[key];
-						document.body.appendChild(element);
-					}
-				}
-			}
-
-			if(window.addEventListener) {
-				window.addEventListener("load",downloadJSAtOnload,false);
-			} else if (window.attachEvent) {
-				window.attachEvent("onload",downloadJSAtOnload); 
-			} else { 
-				window.onload=downloadJSAtOnload;
-			}
-		}(window));
-		//</xsl:comment>
+		<xsl:comment>(function(a){"use strict";function b(){var a=a||[],b={scripts:["/workspace/themes/active/js/common-ck.js"]};a.push(["_setAccount","UA-32000708-1"]);a.push(["_trackPageview"]);for(var c in b.scripts)if(b.scripts[c]){var d=document.createElement("script");d.src=b.scripts[c];document.body.appendChild(d)}}a.addEventListener?a.addEventListener("load",b,!1):a.attachEvent?a.attachEvent("onload",b):a.onload=b})(window); //</xsl:comment>
 	</script>
 
 	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->	
 
 </xsl:template>
+
+
+<!-- 
+
+Before minified
+
+(function (window) {
+	'use strict';
+	function downloadJSAtOnload() {	
+		var _gaq = _gaq || [],
+		js = {
+			"scripts":[
+				"/workspace/themes/active/js/common-ck.js"
+			]
+		};
+
+		_gaq.push(['_setAccount', 'UA-32000708-1']);
+		_gaq.push(['_trackPageview']);
+		
+		for (var key in js.scripts) {
+			if (js.scripts[key]) {
+				var element=document.createElement("script");
+				element.src=js.scripts[key];
+				document.body.appendChild(element);
+			}
+		}
+	}
+
+	if(window.addEventListener) {
+		window.addEventListener("load",downloadJSAtOnload,false);
+	} else if (window.attachEvent) {
+		window.attachEvent("onload",downloadJSAtOnload); 
+	} else { 
+		window.onload=downloadJSAtOnload;
+	}
+}(window));
+
+-->
 
 
 </xsl:stylesheet>

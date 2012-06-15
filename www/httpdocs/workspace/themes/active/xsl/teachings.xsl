@@ -301,8 +301,6 @@
 				<a>
 					<xsl:call-template name="url-teachings" />
 					<xsl:value-of select="title" disable-output-escaping="yes" />
-						
-					
 				</a>
 				</h2>
 				<div class="meta">

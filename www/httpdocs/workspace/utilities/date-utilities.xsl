@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+
 <!--
 
 Description:
@@ -48,7 +49,9 @@ Examples:
 
 -->
 
+
 <xsl:template name="date-compare">
+
 	<xsl:param name="first" select="''" />
 	<xsl:param name="second" select="''" />
 
@@ -88,9 +91,12 @@ Examples:
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:if>
+
 </xsl:template>
 
+
 <xsl:template name="date-is-valid">
+
 	<xsl:param name="year" select="''" />
 	<xsl:param name="month" select="''" />
 	<xsl:param name="day" select="''" />
@@ -114,9 +120,12 @@ Examples:
 			<xsl:value-of select="1" />
 		</xsl:otherwise>
 	</xsl:choose>
+
 </xsl:template>
 
+
 <xsl:template name="date-is-iso">
+
 	<xsl:param name="date" select="''" />
 
 	<xsl:choose>
@@ -140,6 +149,8 @@ Examples:
 			<xsl:value-of select="0" />
 		</xsl:otherwise>
 	</xsl:choose>
+
 </xsl:template>
+
 
 </xsl:stylesheet>
