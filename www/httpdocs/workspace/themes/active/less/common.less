@@ -638,6 +638,10 @@ h3 {
 	}
 }
 
+.normal {
+	text-transform: none;
+}
+
 .footer {
 	background: #D6D6D6;
 	position: absolute;
@@ -1031,7 +1035,7 @@ h3 {
 	margin: 0;
 }
 
-// home --------------------------------------------------------------
+// layouts --------------------------------------------------------------
 
 .layout-home {
 
@@ -1063,11 +1067,27 @@ h3 {
 				height: 349px;
 			}
 			
+			h2 {
+				margin-top: 0;
+			}
+			
 			.tags {
 				text-transform: uppercase;
 			}
 		}
 	}
+}
+
+.layout-missions {
+
+	.column-right {
+	
+		.component-locations {
+			margin-top: @base * 4;
+		}
+		
+	}
+	
 }
 
 // text --------------------------------------------------------------
@@ -1534,6 +1554,8 @@ h3 {
 		}
 	}
 }
+
+
 
 // members-roles ---------------------------------------------------------
 
