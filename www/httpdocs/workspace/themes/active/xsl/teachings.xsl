@@ -24,6 +24,11 @@
 							<xsl:for-each select="$entries">
 
 								<div class="result">
+									<xsl:attribute name="class">
+										<xsl:if test="number($pt3)">
+											<xsl:text>result individual</xsl:text>
+										</xsl:if>
+									</xsl:attribute>
 									<xsl:call-template name="teaching-entry" />							
 								</div>
 
@@ -87,8 +92,11 @@
 										<xsl:text> </xsl:text>
 										<xsl:value-of select="chapter" />
 									</span>
-									</p>
-									<p>
+									<xsl:text> </xsl:text>
+									<xsl:text> </xsl:text>
+									<xsl:text>|</xsl:text>
+									<xsl:text> </xsl:text>
+									<xsl:text> </xsl:text>
 									<span class="date">
 									<xsl:call-template name="date-teaching">
 										<xsl:with-param name="date" select="date/date/start/@iso" />
@@ -164,15 +172,14 @@
 														<xsl:call-template name="url-teachings-series" />
 														<h4>
 															<xsl:value-of select="title" disable-output-escaping="yes" />
-														</h4>
-													</a>
-													<div class="meta">
-														<p>
+																																						<span class="meta">
 															<xsl:text> (</xsl:text>
 															<xsl:value-of select="teachings/@items" />
 															<xsl:text>&#160;teachings)</xsl:text>
-														</p>
-													</div>
+															</span>
+														</h4>
+													</a>
+
 												</div>
 											</div>
 										</xsl:for-each>
@@ -267,73 +274,127 @@
 
 	<xsl:for-each select="$entry">
 
+		<xsl:if test="number($pt3)">
+			<h1>
+				<xsl:value-of select="title" disable-output-escaping="yes" />
+				<br />
+				<span class="verse">
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="book/item" />
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="chapter" />
+				</span>
+			</h1>
+		</xsl:if>
+
+		<xsl:if test="not($pt1) and video/item">
+			<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width:620px; height:349px; margin: 0 0 20px 0"></iframe>
+		</xsl:if>
+		
+		<xsl:if test="number($pt3) and video/item">
+			<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width: 100%; height: 529px; margin: 0 0 20px 0"></iframe>
+		</xsl:if>
+		
 		<xsl:choose>
-			<xsl:when test="number($pt3)">
-				<h1>
+			<xsl:when test="not($pt1) and video/item">
+				<h2>
+				<a>
+					<xsl:call-template name="url-teachings" />
 					<xsl:value-of select="title" disable-output-escaping="yes" />
-					<br />
+						
+					
+				</a>
+				</h2>
+				<div class="meta">
+					<p>
+					<!-- <span class="badge">
+						<xsl:value-of select="filename" />
+					</span> -->
+					<span class="teacher">
+						<em>by </em>
+						<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
+						<xsl:text disable-output-escaping="yes"> </xsl:text>
+						<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
+					</span> 
 					<span class="verse">
+						<i class="icon-book"></i>
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="book/item" />
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="chapter" />
 					</span>
-				</h1>
+					</p>
+					<p>
+					<span class="date">
+					<xsl:call-template name="date-teaching">
+						<xsl:with-param name="date" select="date/date/start/@iso" />
+					</xsl:call-template>
+					</span>
+					</p>
+				</div>
+				<div class="description">
+					<xsl:value-of select="description" disable-output-escaping="yes" />
+				</div>
+				<xsl:call-template name="teaching-tag-list">
+					<xsl:with-param name="tags" select="tags/item" />
+				</xsl:call-template>
+
 			</xsl:when>
 			<xsl:otherwise>
-				<h4>
-					<a>
-						<xsl:call-template name="url-teachings" />
-						<xsl:value-of select="title" disable-output-escaping="yes" />
-						<span class="verse">
-							<xsl:text> </xsl:text>
-							<xsl:value-of select="book/item" />
-							<xsl:text> </xsl:text>
-							<xsl:value-of select="chapter" />
-						</span>
-					</a>
-				</h4>				
+				<xsl:choose>
+					<xsl:when test="number($pt3)">
+					</xsl:when>
+					<xsl:otherwise>
+						<h4>
+							<a>
+								<xsl:call-template name="url-teachings" />
+								<xsl:value-of select="title" disable-output-escaping="yes" />
+								<span class="verse">
+									<xsl:text> </xsl:text>
+									<xsl:value-of select="book/item" />
+									<xsl:text> </xsl:text>
+									<xsl:value-of select="chapter" />
+								</span>
+							</a>
+						</h4>
+					</xsl:otherwise>
+				</xsl:choose>
+				<div class="meta">
+					<p>
+					<!-- <span class="badge">
+						<xsl:value-of select="filename" />
+					</span> -->
+					<span class="teacher">
+						<em>by </em>
+						<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
+						<xsl:text disable-output-escaping="yes"> </xsl:text>
+						<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
+					</span>
+					<span class="date">
+						<xsl:text> </xsl:text>
+						<xsl:text> </xsl:text>
+						<xsl:text>|</xsl:text>
+						<xsl:text> </xsl:text>
+						<xsl:text> </xsl:text>
+						<xsl:call-template name="date-teaching">
+							<xsl:with-param name="date" select="date/date/start/@iso" />
+						</xsl:call-template>
+					</span>
+					</p>
+				</div>
+				<div class="description">
+					<xsl:value-of select="description"  disable-output-escaping="yes" />
+				</div>
+				
+				<xsl:if test="tags/item">
+					<xsl:call-template name="teaching-tag-list">
+						<xsl:with-param name="tags" select="tags/item" />
+					</xsl:call-template>
+				</xsl:if>
+		
+				<xsl:call-template name="teaching-actions" />
 			</xsl:otherwise>
 		</xsl:choose>
-
-		<xsl:if test="number($pt3) and video/item or not($pt1) and video/item">
-			<iframe src="http://player.vimeo.com/video/{video/item/id}?title=0&amp;byline=0&amp;portrait=0&amp;color=d83629" frameborder="0" class="video" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen" style="width: 100%; height: 529px; margin: 0 0 20px 0"></iframe>
-		</xsl:if>
-
-		<div class="meta">
-			<p>
-			<!-- <span class="badge">
-				<xsl:value-of select="filename" />
-			</span> -->
-			<span class="teacher">
-				<em>by </em>
-				<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
-				<xsl:text disable-output-escaping="yes"> </xsl:text>
-				<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
-			</span> 
-			<span class="date">
-				<xsl:text> </xsl:text>
-				<xsl:text> </xsl:text>
-				<xsl:text>|</xsl:text>
-				<xsl:text> </xsl:text>
-				<xsl:text> </xsl:text>
-				<xsl:call-template name="date-teaching">
-					<xsl:with-param name="date" select="date/date/start/@iso" />
-				</xsl:call-template>
-			</span>
-			</p>
-		</div>
-		<div class="description">
-			<xsl:value-of select="description"  disable-output-escaping="yes" />
-		</div>
-		
-		<xsl:if test="tags/item">
-			<xsl:call-template name="teaching-tag-list">
-				<xsl:with-param name="tags" select="tags/item" />
-			</xsl:call-template>
-		</xsl:if>
-
-		<xsl:call-template name="teaching-actions" />
 
 	</xsl:for-each>
 
