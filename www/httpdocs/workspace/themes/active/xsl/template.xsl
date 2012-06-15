@@ -247,15 +247,13 @@
 						<a href="#">
 							<h4>
 								<xsl:value-of select="title" disable-output-escaping="yes" />
+								<span class="meta">
+									<xsl:text> (</xsl:text>
+									<xsl:value-of select="teachings/@items" />
+									<xsl:text>&#160;teachings)</xsl:text>
+								</span>
 							</h4>
 						</a>
-						<div class="meta">
-							<p>
-								<xsl:text> (</xsl:text>
-								<xsl:value-of select="teachings/@items" />
-								<xsl:text>&#160;teachings)</xsl:text>
-							</p>
-						</div>
 					</div>
 				</xsl:for-each>
 			</div>
