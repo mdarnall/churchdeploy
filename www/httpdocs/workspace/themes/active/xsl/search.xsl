@@ -260,7 +260,6 @@
 							not(//alternative-keywords/keyword = $url-keywords) and 
 							count(//alternative-keywords/keyword) &gt; 0 and 
 							string-length(//alternative-keywords/keyword/@alternative)">
-							<br />
 							<div class="alternatives">
 								<h4>Alternative keywords</h4>
 								<xsl:for-each select="//alternative-keywords/keyword">
