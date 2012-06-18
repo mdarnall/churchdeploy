@@ -106,6 +106,10 @@
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//events-recurring-all-entries-filtered/entry" />
 			</xsl:call-template>
+			<xsl:call-template name="component-events">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//events-recurring-entries-by-tag/entry" />
+			</xsl:call-template>
 		</xsl:if>
 		<xsl:if test=". = 'images'">
 			<xsl:call-template name="component-images">
