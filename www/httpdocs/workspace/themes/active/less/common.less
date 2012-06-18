@@ -1211,109 +1211,113 @@ h3 {
 			}
 		}
 
-		& > .entry {
-			margin: 0 0 @base *3 0;
-			background: #fdfdfd;
-			border: @base solid #e9e9e9;
-			padding: 0;
-			position: relative;
-
-			&.even {
-				background: #fff;
-			}
-
-			a {
-				.border-radius(0 0 0 0);
-			}
-
-			.description {
-				padding: 0 @base * 1.5;
-			}
-
-			.edit {
-				//.edit-defaults;
-				//top: @base;
-				//left: @base;
+		& > .entries {
+		
+			.entry {
+				margin: 0 0 @base *3 0;
+				background: #fdfdfd;
+				border: @base solid #e9e9e9;
+				padding: 0;
 				position: relative;
-				top: @base;
-				left: @base * .5;
-			}
-
-			.header {
-				text-transform: none;
-				font-size: 26px;
-				margin: 15px 0 0 0;
-				padding: 0 @base * 1.5 @base @base * 1.5;
-
+	
+				&.even {
+					background: #fff;
+				}
+	
 				a {
+					.border-radius(0 0 0 0);
+				}
+	
+				.description {
+					padding: 0 @base * 1.5;
+				}
+	
+				.edit {
+					//.edit-defaults;
+					//top: @base;
+					//left: @base;
+					position: relative;
+					top: @base;
+					left: @base * .5;
+				}
+	
+				.header {
 					text-transform: none;
-					text-decoration: none;
+					font-size: 26px;
+					margin: 15px 0 0 0;
+					padding: 0 @base * 1.5 @base @base * 1.5;
+	
+					a {
+						text-transform: none;
+						text-decoration: none;
+						color: #303030;
+	
+						&:hover {
+							color: @color-accent;
+						}
+					}
+				}
+	
+				.help-block {
+					#font > #tisa > .italic;
 					color: #303030;
-
-					&:hover {
-						color: @color-accent;
+					font-size: 18px;
+					clear: both;
+					margin-bottom: @base;
+					padding: 0 @base * 1.5;
+	
+					.icon {
+						color: #878787;
+						font-size: 20px;
+						position: relative;
+						top: -1px;
+					}
+	
+					.date {
+						margin-right: 20px;
+					}
+				}
+	
+				.label {
+					display: block;
+					margin-bottom: 15px;
+					font-size: 14px;
+					font-weight: normal;
+					text-transform: uppercase;
+					padding: @base;
+					background: none;
+					color: @color-accent;
+					text-align: right;
+					border-bottom: 1px solid @color-grey-accent;
+					.border-radius(0);
+					text-shadow: none;
+				}
+	
+				.share {
+					border-top: 1px solid #e9e9e9;
+					margin-top: 15px;
+					padding-top: 15px;
+	
+					label,
+					input {
+						display: inline;
+					}
+	
+					label {
+						color: #ccc;
+						#font > #proxima > .bold;
+						text-transform: uppercase;
+						margin-right: 10px;
+					}
+	
+					input {
+						#font > #proxima > .regular;
+						font-size: 14px;
+						padding: 5px;
 					}
 				}
 			}
-
-			.help-block {
-				#font > #tisa > .italic;
-				color: #303030;
-				font-size: 18px;
-				clear: both;
-				margin-bottom: @base;
-				padding: 0 @base * 1.5;
-
-				.icon {
-					color: #878787;
-					font-size: 20px;
-					position: relative;
-					top: -1px;
-				}
-
-				.date {
-					margin-right: 20px;
-				}
-			}
-
-			.label {
-				display: block;
-				margin-bottom: 15px;
-				font-size: 14px;
-				font-weight: normal;
-				text-transform: uppercase;
-				padding: @base;
-				background: none;
-				color: @color-accent;
-				text-align: right;
-				border-bottom: 1px solid @color-grey-accent;
-				.border-radius(0);
-				text-shadow: none;
-			}
-
-			.share {
-				border-top: 1px solid #e9e9e9;
-				margin-top: 15px;
-				padding-top: 15px;
-
-				label,
-				input {
-					display: inline;
-				}
-
-				label {
-					color: #ccc;
-					#font > #proxima > .bold;
-					text-transform: uppercase;
-					margin-right: 10px;
-				}
-
-				input {
-					#font > #proxima > .regular;
-					font-size: 14px;
-					padding: 5px;
-				}
-			}
+			
 		}
 	}
 }
@@ -1346,9 +1350,12 @@ h3 {
 .column-right {
 
 	.component-events {
-		list-style: none;
-		margin: 0 0 @base * 2 0;
-		padding: 0;
+	
+		.entries {
+			list-style: none;
+			margin: 0 0 @base * 2 0;
+			padding: 0;
+		
 
 		@month-height: 16px;
 		@day-height: 32px;
@@ -1451,6 +1458,7 @@ h3 {
 				top: @base;
 				right: @base;
 			}
+		}
 		}
 
 		.more  {
