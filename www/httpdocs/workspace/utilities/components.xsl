@@ -101,6 +101,12 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
+		<xsl:if test=". = 'events-recurring'">
+			<xsl:call-template name="component-events">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//events-recurring-all-entries-filtered/entry" />
+			</xsl:call-template>
+		</xsl:if>
 		<xsl:if test=". = 'images'">
 			<xsl:call-template name="component-images">
 				<xsl:with-param name="position" select="name($xpath)" />
@@ -243,6 +249,21 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 		<xsl:text>/</xsl:text>
 		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
 		<xsl:text>/events/</xsl:text>
+		<xsl:value-of select="$node/name/@handle" />
+		<xsl:text>/</xsl:text>
+	</xsl:attribute>
+
+</xsl:template>
+
+<xsl:template name="url-events-recurring-home">
+
+	<xsl:param name="node" select="." />
+
+	<xsl:attribute name="href">
+		<xsl:value-of select="$root" />
+		<xsl:text>/</xsl:text>
+		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'meetings']/@id" />
+		<xsl:text>/meetings/</xsl:text>
 		<xsl:value-of select="$node/name/@handle" />
 		<xsl:text>/</xsl:text>
 	</xsl:attribute>
