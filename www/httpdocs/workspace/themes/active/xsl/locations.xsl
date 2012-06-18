@@ -9,12 +9,10 @@
 	<xsl:param name="position" />
 
 	<xsl:if test="count($entries)">
-
 		<div>
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
-			
 			<h3 class="header">
 				<xsl:call-template name="pluralize">
 					<xsl:with-param name="singular" select="'Location'"  />
@@ -22,29 +20,21 @@
 					<xsl:with-param name="xpath"    select="$entries"    />
 				</xsl:call-template>
 			</h3>
-			
 			<xsl:for-each select="$entries">
-				
 				<xsl:variable name="address">
 					<xsl:call-template name="url-encode">
 						<xsl:with-param name="str" select="concat(address, ' ', city, ' ', state, ' ', zip)" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="latlon">
 					<xsl:value-of select="latitude" />
 					<xsl:text>,</xsl:text>
 					<xsl:value-of select="longitude" />
 				</xsl:variable>
-
 				<div>
-					
 					<xsl:call-template name="class-rows" />
-					
 					<xsl:if test="string-length(longitude) and string-length(latitude) or string-length(address)">
-
-						<div class="map">
-							
+						<div class="map">							
 							<xsl:attribute name="style">
 								<xsl:text>background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=</xsl:text>
 								<xsl:choose>
@@ -61,9 +51,7 @@
 								</xsl:choose>
 								<xsl:text>&amp;maptype=roadmap&amp;sensor=false&amp;scale=1')</xsl:text>
 							</xsl:attribute>
-
 							<div class="screen"></div>
-
 							<address>
 								<h4>
 									<xsl:choose>
@@ -83,26 +71,18 @@
 								<xsl:text> </xsl:text>
 								<xsl:value-of select="zip" />
 							</address>
-
 							<xsl:call-template name="edit-entry">
 								<xsl:with-param name="component" select="$component"/>
 							</xsl:call-template>
-
 						</div>
-
 						<a href="http://maps.google.com/maps?q={$address}" class="more" target="_blank">
 							<span class="icon">G</span>
 							<xsl:text> View on Google Maps</xsl:text>
 						</a>
-						
 					</xsl:if>
-			
 				</div>
-			
 			</xsl:for-each>
-		
 		</div>
-		
 	</xsl:if>
 	
 </xsl:template>

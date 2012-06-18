@@ -429,7 +429,7 @@
 					<a href="{$audio-url}" target="_blank">Listen / Download</a>
 				</span>				
 			</xsl:if>
-			<xsl:if test="video/item/id and not($pt4)">
+			<xsl:if test="video/item/@id">
 				<span class="action">
 					<span class="icon">V</span>
 					<strong>Video</strong> 
