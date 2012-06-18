@@ -235,7 +235,6 @@ em {
 a {
 	color: @color-accent;
 	text-decoration: none;
-	//-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
 
 	&:hover {
 		color: darken(@color-accent, 15%);
@@ -651,6 +650,10 @@ h3 {
 
 	a {
 		color: #333;
+		
+		&:hover {
+			color: @color-accent;
+		}
 
 		&.btn.btn-primary.give {
 			position: relative;
@@ -666,6 +669,7 @@ h3 {
 			text-transform: uppercase;
 			text-shadow: none;
 		}
+		
 	}
 
 	address,
