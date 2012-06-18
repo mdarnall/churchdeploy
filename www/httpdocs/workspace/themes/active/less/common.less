@@ -1609,13 +1609,14 @@ h3 {
 
 		.entry {
 			background: @color-grey-accent;
-			padding: 0 0 0 20px;
+			padding: 0 0 0 @base * 2;
 			position: relative;
 
 			a {
 				min-height: 50px;
 				background: @color-grey-accent;
-				padding: @base * 1.5;
+				padding: @base * 1.5 0 @base * 1.5 @base * 1.5;
+				margin-right: @base * 2;
 				border-bottom: 1px solid darken(@color-grey-accent, 20%);
 				color: @color-body-text;
 				height: 72px;
