@@ -1194,7 +1194,7 @@ h3 {
 .column-full-width,
 .column-center {
 
-	.component-events {
+	& > .component-events {
 
 		.back {
 			margin: 30px 0 30px 0;
@@ -1211,7 +1211,7 @@ h3 {
 			}
 		}
 
-		.entry {
+		& > .entry {
 			margin: 0 0 @base *3 0;
 			background: #fdfdfd;
 			border: @base solid #e9e9e9;
@@ -1360,6 +1360,7 @@ h3 {
 			background: @color-grey-accent;
 			position: relative;
 			padding: 0 20px;
+			margin: 0;
 
 			a {
 				display: block;
@@ -1561,7 +1562,7 @@ h3 {
 
 .column-full-width {
 
-	.component-members-roles {
+	& > .component-members-roles {
 
 		.header {
 			text-align: center;
@@ -2139,6 +2140,7 @@ h3 {
 }
 
 .column-full-width {
+
 	.component-teachings {
 	
 		.individual {
