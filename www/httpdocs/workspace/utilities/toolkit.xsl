@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-<!-- 
+<!--
 
 Toolkit
 
@@ -10,7 +10,7 @@ Toolkit
 <xsl:template name="toolkit">
 
 	<xsl:if test="$pt1 = 'toolkit' and $pt2 = 'images'">
-		
+
 		<h2>New</h2>
 
 		<xsl:if test="//images-create/message or //images-create/image/@message">
@@ -20,7 +20,7 @@ Toolkit
 				<xsl:value-of select="//images-create/image/@message" />
 			</p>
 		</xsl:if>
-		
+
 		<form method="post" action="" enctype="multipart/form-data">
 			<label>Image <input name="fields[image]" type="file" style="width: 200px; background: #fff; border: solid 1px #ccc; padding: 15px; margin: 15px 0;" /></label>
 			<input name="action[images-create]" type="submit" value="Submit" class="btn btn-primary" />
@@ -39,9 +39,9 @@ Toolkit
 						<td style="padding: 10px">
 							<input value='&lt;img data-responsimage="{image/filename}" style="width: 350px; height: 200px;" class="inline" data-responsimage-anchor="5" /&gt;' style="width: 550px; font-size: 13px" onclick="this.select()" />
 							<p style="font-size: 12px; margin: 5px 0; font-family: helvetica">
-								Filesize: <xsl:value-of select="image/@size" /> | 
-								Type: <xsl:value-of select="image/@type" /> | 
-								Created: <xsl:value-of select="image/meta/@creation" /> | 
+								Filesize: <xsl:value-of select="image/@size" /> |
+								Type: <xsl:value-of select="image/@type" /> |
+								Created: <xsl:value-of select="image/meta/@creation" /> |
 								Original size: <xsl:value-of select="image/meta/@width" />x<xsl:value-of select="image/meta/@height" />
 							</p>
 						</td>
@@ -58,7 +58,7 @@ Toolkit
 </xsl:template>
 
 
-<!-- 
+<!--
 
 Global date formatting
 
@@ -75,13 +75,13 @@ Global date formatting
 </xsl:template>
 
 
-<!-- 
+<!--
 
 Global Pagination
 
 -->
 <xsl:template name="cd-pagination">
-	
+
 	<xsl:param name="pagination"     select="$pagination" />
 	<xsl:param name="pagination-url" select="$pagination-url" />
 
@@ -90,10 +90,10 @@ Global Pagination
 		<xsl:with-param name="pagination" select="$pagination" />
 		<xsl:with-param name="pagination-url" select="$pagination-url" />
 		<xsl:with-param name="show-range" select="5" />
-		
+
 		<xsl:with-param name="label-previous" select="'← Previous'" />
 		<xsl:with-param name="label-next" select="'Next →'" />
-		
+
 		<xsl:with-param name="class-pagination" select="'pagination'" />
 		<xsl:with-param name="class-page" select="''" />
 		<xsl:with-param name="class-next" select="'next'" />
@@ -101,20 +101,20 @@ Global Pagination
 		<xsl:with-param name="class-selected" select="'active'" />
 		<xsl:with-param name="class-disabled" select="'disabled'" />
 		<xsl:with-param name="class-ellipsis" select="'disabled'" />
-		
+
 	</xsl:call-template>
 
 </xsl:template>
 
 
-<!-- 
+<!--
 
 Pluralization
 
 Count items to check for pluralization
 
 USAGE:
-	
+
 	<xsl:call-template name="pluralize">
 		<xsl:with-param name="singular" select="'Location'" />
 		<xsl:with-param name="plural" select="'Locations'" />
@@ -123,7 +123,7 @@ USAGE:
 
 -->
 <xsl:template name="pluralize">
-	
+
 	<xsl:param name="singular" />
 	<xsl:param name="plural" />
 	<xsl:param name="xpath" />
@@ -149,13 +149,13 @@ USAGE:
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
-		
+
 	</xsl:choose>
 
 </xsl:template>
 
 
-<!-- 
+<!--
 
 How to start a URL when using multi-lingual
 
@@ -170,20 +170,20 @@ How to start a URL when using multi-lingual
 			<xsl:value-of select="concat($root, '/')" />
 		</xsl:otherwise>
 	</xsl:choose>
-	
+
 </xsl:template>
 
 
 
-<!-- 
+<!--
 
 Removes HTML tags
 
 -->
 <xsl:template name="remove-html">
-	
+
 	<xsl:param name="text" />
-	
+
 	<xsl:choose>
 		<xsl:when test="contains($text, '&lt;')">
 			<xsl:value-of select="normalize-space(substring-before($text, '&lt;'))" />
@@ -201,7 +201,7 @@ Removes HTML tags
 
 
 
-<!-- 
+<!--
 
 Strip out spaces in source
 
@@ -209,9 +209,9 @@ Strip out spaces in source
 <xsl:strip-space elements="*" />
 
 <xsl:template name="nbsp">
-	
+
 	<xsl:param name="text" />
-	
+
 	<xsl:call-template name="string-replace-all">
 		<xsl:with-param name="text" select="$text" />
 		<xsl:with-param name="replace" select="' '" />
@@ -222,7 +222,7 @@ Strip out spaces in source
 
 
 
-<!-- 
+<!--
 
 Search and replace
 
@@ -249,7 +249,7 @@ Search and replace
 
 
 
-<!-- 
+<!--
 
 Truncate
 
@@ -310,7 +310,7 @@ USAGE:
 </xsl:template>
 
 
-<!-- 
+<!--
 
 Truncate
 
@@ -341,7 +341,7 @@ USAGE:
 
 
 
-<!-- 
+<!--
 
 Upper or lowercase in English
 

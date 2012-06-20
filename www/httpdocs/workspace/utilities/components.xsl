@@ -36,7 +36,7 @@
 				</div>
 			</xsl:when>
 			<xsl:when test="name($xpath) = 'column-right'">
-				<div id="sidebar" class="span4 column-right">
+				<div class="span4 column-right">
 					<xsl:call-template name="template-column-right-top" />
 					<xsl:call-template name="component-populate">
 						<xsl:with-param name="xpath" select="$xpath" />
@@ -102,6 +102,11 @@
 			</xsl:choose>
 		</xsl:if>
 		<xsl:if test=". = 'events-recurring'">
+			<xsl:call-template name="component-events">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//events-recurring-entry-by-id/entry" />
+				<xsl:with-param name="single" select="true()" />
+			</xsl:call-template>
 			<xsl:call-template name="component-events">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//events-recurring-all-entries-filtered/entry" />
@@ -268,8 +273,6 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 		<xsl:text>/</xsl:text>
 		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'meetings']/@id" />
 		<xsl:text>/meetings/</xsl:text>
-		<xsl:value-of select="$node/name/@handle" />
-		<xsl:text>/</xsl:text>
 	</xsl:attribute>
 
 </xsl:template>

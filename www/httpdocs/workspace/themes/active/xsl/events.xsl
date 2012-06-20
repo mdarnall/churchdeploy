@@ -22,7 +22,7 @@
 				<xsl:value-of select="'events-recurring'" disable-output-escaping="yes" />
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="'events'" disable-output-escaping="yes" />				
+				<xsl:value-of select="'events'" disable-output-escaping="yes" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:param>
@@ -40,8 +40,8 @@
 					</xsl:call-template>
 					<h3>
 						<xsl:call-template name="pluralize">
-							<xsl:with-param name="singular" select="'Upcoming Event'" />
-							<xsl:with-param name="plural" select="'Upcoming Events'" />
+							<xsl:with-param name="singular" select="'Upcoming'" />
+							<xsl:with-param name="plural" select="'Upcoming'" />
 							<xsl:with-param name="xpath" select="$entries" />
 						</xsl:call-template>
 					</h3>
@@ -96,8 +96,16 @@
 							<xsl:when test="$single">
 								<div class="back">
 									<a class="link-large">
-										<xsl:call-template name="url-events-home" />
-										<xsl:text>&#8592; Back to all events</xsl:text>
+										<xsl:choose>
+											<xsl:when test="Expr">
+												<xsl:call-template name="url-events-home" />
+												<xsl:text>&#8592; Back to all events</xsl:text>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:call-template name="url-events-recurring-home" />
+												<xsl:text>&#8592; Back to all recurring events</xsl:text>
+											</xsl:otherwise>
+										</xsl:choose>
 									</a></div>
 							</xsl:when>
 							<xsl:otherwise>
@@ -150,14 +158,14 @@
 									<div class="date clearfix">
 										<xsl:choose>
 											<xsl:when test="$is-recurring = 'No'">
-												<span class="icon">t</span> 
+												<span class="icon">t</span>
 												<xsl:call-template name="timespan-format">
 													<xsl:with-param name="date" select="date/date" />
 												</xsl:call-template>
 											</xsl:when>
 											<xsl:otherwise>
 												<span class="icon">r</span>
-												<xsl:value-of select="frequency" disable-output-escaping="yes" />	
+												<xsl:value-of select="frequency" disable-output-escaping="yes" />
 											</xsl:otherwise>
 										</xsl:choose>
 									</div>
@@ -188,7 +196,7 @@
 								</xsl:if>
 							</div>
 							<xsl:if test="$single">
-								<div id="sidebar" class="span4 column-right">
+								<div class="span4 column-right">
 									<div class="component component-locations">
 										<xsl:call-template name="component-locations">
 											<xsl:with-param name="position" select="'column-right'" />
@@ -207,7 +215,7 @@
 											<xsl:with-param name="entries" select="downloads/item" />
 										</xsl:call-template>
 									</div>
-								</div>							
+								</div>
 							</xsl:if>
 						</xsl:for-each>
 					</div>
@@ -254,7 +262,7 @@
 
 
 <xsl:template name="events-entry-column-right">
-	
+
 	<xsl:param name="component" />
 	<xsl:param name="is-recurring" />
 
@@ -287,7 +295,7 @@
 					</table>
 				</xsl:when>
 				<xsl:otherwise>
-					
+
 					jon
 
 				</xsl:otherwise>

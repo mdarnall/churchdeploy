@@ -166,7 +166,7 @@
 						</div>
 					</div>	
 				</div>
-				<div id="sidebar" class="span4 column-right">
+				<div class="span4 column-right">
 					<xsl:call-template name="component-events">
 						<xsl:with-param name="position" select="'column-right'" />
 						<xsl:with-param name="entries" select="//events-3-latest/entry" />
