@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+<xsl:include href="../themes/active/xsl/shared.xsl" />
 <xsl:include href="../themes/active/xsl/downloads.xsl" />
 <xsl:include href="../themes/active/xsl/events.xsl" />
 <xsl:include href="../themes/active/xsl/images.xsl" />
@@ -16,9 +17,9 @@
 
 
 <xsl:template name="component">
-	
+
 	<xsl:param name="xpath" />
-	
+
 	<xsl:if test="count($xpath/item)">
 		<xsl:choose>
 			<xsl:when test="name($xpath) = 'column-full-width'">
@@ -45,12 +46,12 @@
 			</xsl:when>
 		</xsl:choose>
 	</xsl:if>
-	
+
 </xsl:template>
 
 
 <xsl:template name="component-populate">
-	
+
 	<xsl:param name="xpath" />
 
 	<xsl:for-each select="$xpath/item/label/@handle">
@@ -63,7 +64,7 @@
 		<xsl:if test=". = 'events'">
 			<xsl:choose>
 				<!-- Single ID -->
-				<xsl:when test="count(//events-entry-by-id/entry)"> 
+				<xsl:when test="count(//events-entry-by-id/entry)">
 					<xsl:call-template name="component-events">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//events-entry-by-id/entry" />
@@ -155,31 +156,31 @@
 		</xsl:if>
 		<xsl:if test=". = 'teachings'">
 			<xsl:choose>
-				<xsl:when test="number($pt3)">					
+				<xsl:when test="number($pt3)">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-entry-by-id/entry" />
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'book'">					
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'book'">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-entry-by-book-filtered/entry" />
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="$pt2 = 'series'">					
+				<xsl:when test="$pt2 = 'series'">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-series-entries-filtered/entry/teachings/item" />
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'tag'">					
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'tag'">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-entry-by-tag-filtered/entry" />
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="$pt2 = 'teachings'">					
+				<xsl:when test="$pt2 = 'teachings'">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="." />
@@ -210,7 +211,7 @@
 </xsl:template>
 
 
-<!-- 
+<!--
 
 URL helpers  //////////////////////////////////////////////////////////////////////////////
 
@@ -409,7 +410,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 
 
 <xsl:template name="edit-entry">
-	
+
 	<xsl:param name="component" />
 	<xsl:param name="link">
 		<xsl:value-of select="$root" />
@@ -425,7 +426,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 		<a href="{$link}" target="blank">
 			<xsl:attribute name="class">
 				<xsl:text>edit </xsl:text>
-				<xsl:if test="$class">		
+				<xsl:if test="$class">
 					<xsl:value-of select="$class" />
 				</xsl:if>
 			</xsl:attribute>

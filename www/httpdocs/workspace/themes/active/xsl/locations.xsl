@@ -4,7 +4,7 @@
 
 <xsl:template name="component-locations">
 
-	<xsl:param name="component" select="'locations'" />		
+	<xsl:param name="component" select="'locations'" />
 	<xsl:param name="entries" />
 	<xsl:param name="position" />
 
@@ -34,34 +34,29 @@
 				<div>
 					<xsl:call-template name="class-rows" />
 					<xsl:if test="string-length(longitude) and string-length(latitude) or string-length(address)">
-						<div class="map">							
-							<xsl:attribute name="style">
-								<xsl:text>background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=</xsl:text>
-								<xsl:choose>
-									<xsl:when test="string-length(longitude) and string-length(latitude)">
-									 	<xsl:value-of select="$latlon" />
-									 	<xsl:text>&amp;zoom=14&amp;size=350x280&amp;markers=</xsl:text>
-									 	<xsl:value-of select="$latlon" />
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="$address" />
-									 	<xsl:text>&amp;zoom=14&amp;size=350x280&amp;markers=</xsl:text>
-									 	<xsl:value-of select="$address" />
-									</xsl:otherwise>
-								</xsl:choose>
-								<xsl:text>&amp;maptype=roadmap&amp;sensor=false&amp;scale=1')</xsl:text>
-							</xsl:attribute>
+						<div class="map">
+							<img>
+								<xsl:attribute name="src">
+									<xsl:text>http://maps.googleapis.com/maps/api/staticmap?center=</xsl:text>
+									<xsl:choose>
+										<xsl:when test="string-length(longitude) and string-length(latitude)">
+										 	<xsl:value-of select="$latlon" />
+										 	<xsl:text>&amp;zoom=14&amp;size=300x300&amp;markers=</xsl:text>
+										 	<xsl:value-of select="$latlon" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="$address" />
+										 	<xsl:text>&amp;zoom=14&amp;size=300x300&amp;markers=</xsl:text>
+										 	<xsl:value-of select="$address" />
+										</xsl:otherwise>
+									</xsl:choose>
+									<xsl:text>&amp;maptype=roadmap&amp;sensor=false&amp;scale=2</xsl:text>
+								</xsl:attribute>
+							</img>
 							<div class="screen"></div>
 							<address>
 								<h4>
-									<xsl:choose>
-										<xsl:when test="string-length(name-casual)">
-											<xsl:value-of select="name-casual" disable-output-escaping="yes" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="name-formal" disable-output-escaping="yes" />
-										</xsl:otherwise>
-									</xsl:choose>
+									<xsl:call-template name="location-name" />
 								</h4>
 								<xsl:value-of select="address" />
 								<br />
@@ -84,7 +79,23 @@
 			</xsl:for-each>
 		</div>
 	</xsl:if>
-	
+
+</xsl:template>
+
+
+<xsl:template name="location-name">
+
+	<xsl:param name="node" select="."/>
+
+	<xsl:choose>
+		<xsl:when test="string-length(name-casual)">
+			<xsl:value-of select="name-casual" disable-output-escaping="yes" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="name-formal" disable-output-escaping="yes" />
+		</xsl:otherwise>
+	</xsl:choose>
+
 </xsl:template>
 
 

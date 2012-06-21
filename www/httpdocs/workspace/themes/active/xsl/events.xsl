@@ -30,7 +30,6 @@
 	<xsl:param name="position" />
 	<xsl:param name="single" />
 
-
 	<xsl:if test="count($entries)">
 		<div>
 			<xsl:choose>
@@ -79,9 +78,8 @@
 				</xsl:when>
 				<xsl:when test="$position = 'column-full-width'">
 					<xsl:call-template name="class-position">
-						<xsl:with-param name="component">
-							<xsl:text>events</xsl:text>
-						</xsl:with-param>
+						<xsl:with-param name="component">events</xsl:with-param>
+						<xsl:with-param name="class">span8</xsl:with-param>
 					</xsl:call-template>
 					<div class="component-header">
 						<xsl:if test="$pt2 = 'events' and $pt5 = 'past'">
@@ -118,10 +116,10 @@
 					<div class="entries">
 						<xsl:for-each select="$entries">
 							<xsl:variable name="is-earlier">
-							    <xsl:call-template name="date-compare">
-							        <xsl:with-param name="first" select="date/date/start" />
-							        <xsl:with-param name="second" select="$today" />
-							    </xsl:call-template>
+								<xsl:call-template name="date-compare">
+									<xsl:with-param name="first" select="date/date/start" />
+									<xsl:with-param name="second" select="$today" />
+								</xsl:call-template>
 							</xsl:variable>
 							<div>
 								<xsl:choose>
@@ -177,9 +175,9 @@
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:variable name="stripped">
-											    <xsl:call-template name="remove-html">
-											        <xsl:with-param name="text" select="description" />
-											    </xsl:call-template>
+												<xsl:call-template name="remove-html">
+													<xsl:with-param name="text" select="description" />
+												</xsl:call-template>
 											</xsl:variable>
 											<xsl:call-template name="truncate">
 												<xsl:with-param name="node" select="$stripped" />
@@ -256,6 +254,16 @@
 				</div>
 			</xsl:if>
 		</div>
+		<xsl:if test="$position = 'column-full-width'">
+			<div class="span3">
+				<xsl:for-each select="//events-recurring-all-entries-filtered/entry">
+					<xsl:call-template name="events-entry-column-right">
+						<xsl:with-param name="component" select="$component" />
+						<xsl:with-param name="is-recurring" select="'Yes'" />
+					</xsl:call-template>
+				</xsl:for-each>
+			</div>
+		</xsl:if>
 	</xsl:if>
 
 </xsl:template>
@@ -295,9 +303,15 @@
 					</table>
 				</xsl:when>
 				<xsl:otherwise>
-
-					jon
-
+					<div class="frequency">
+						<xsl:value-of select="frequency" disable-output-escaping="yes" />
+					</div>
+					<div class="title">
+						<xsl:value-of select="name" disable-output-escaping="yes" />
+					</div>
+					<div class="location">
+						<xsl:call-template name="location-name" />
+					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</a>

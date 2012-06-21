@@ -10,17 +10,17 @@
 	/>
 
 <xsl:template name="template-head">
-	
+
 	<link rel="canonical" href="http://atheycreek.com" />
-	<!-- 
+	<!--
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
-	</xsl:for-each> 
+	</xsl:for-each>
 	-->
-	<!-- 
+	<!--
 	<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
@@ -33,7 +33,7 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-	</script> 
+	</script>
 	-->
 
 </xsl:template>
@@ -48,10 +48,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</a> 
+				</a>
 				<a class="brand first" href="{$root}">
 					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
-				</a> 
+				</a>
 				-->
 				<div>
 					<ul class="nav left">
@@ -91,7 +91,7 @@
 										</xsl:choose>
 									</xsl:attribute>
 									<span class="icon">V</span>
-									<xsl:text>Live</xsl:text>									
+									<xsl:text>Live</xsl:text>
 								</a>
 							</li>
 						</xsl:if>
@@ -164,7 +164,7 @@
 								<xsl:call-template name="teaching-entry" />
 							</xsl:for-each>
 						</div>
-					</div>	
+					</div>
 				</div>
 				<div class="span4 column-right">
 					<xsl:call-template name="component-events">
@@ -214,7 +214,7 @@
 
 
 <xsl:template name="template-footer-inside-container">
-	
+
 	<xsl:if test="not($pt1) or $pt1 = 43">
 		<div class="component-series">
 			<h3>Series</h3>
@@ -250,7 +250,7 @@
 				<div class="row">
 					<div class="span12">
 						<xsl:for-each select="//twitter-latest-entry/entry">
-							<strong><a href="http://twitter.com/atheycreek/" target="_blank">Recently on Twitter →</a></strong> 
+							<strong><a href="http://twitter.com/atheycreek/" target="_blank">Recently on Twitter →</a></strong>
 							<span>
 								<!-- <a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank"> -->
 								<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
@@ -284,7 +284,7 @@
 							<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $parents and not(hide-from-footer = 'Yes') ]">
 								<xsl:call-template name="subnav-entry" />
 							</xsl:for-each>
-						</ul>							
+						</ul>
 					</div>
 				</xsl:for-each>
 				<xsl:value-of select="normalize-space(//misc-all-entries/entry[name='footer']/content)" disable-output-escaping="yes" />
@@ -303,7 +303,7 @@
 						</span>
 						<span class="facebook">
 							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
-						</span>				
+						</span>
 					</div>
 				</div>
 			</div>
@@ -322,7 +322,7 @@
 		<xsl:comment>
 		(function (window) {
 			'use strict';
-			function downloadJSAtOnload() {	
+			function downloadJSAtOnload() {
 				var _gaq = _gaq || [],
 				js = {
 					"scripts":[
@@ -345,26 +345,26 @@
 			if(window.addEventListener) {
 				window.addEventListener("load",downloadJSAtOnload,false);
 			} else if (window.attachEvent) {
-				window.attachEvent("onload",downloadJSAtOnload); 
-			} else { 
+				window.attachEvent("onload",downloadJSAtOnload);
+			} else {
 				window.onload=downloadJSAtOnload;
 			}
 		}(window));
 		//</xsl:comment>
 	</script>
 
-	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->	
+	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->
 
 </xsl:template>
 
 
-<!-- 
+<!--
 
 Before minified
 
 (function (window) {
 	'use strict';
-	function downloadJSAtOnload() {	
+	function downloadJSAtOnload() {
 		var _gaq = _gaq || [],
 		js = {
 			"scripts":[
@@ -374,7 +374,7 @@ Before minified
 
 		_gaq.push(['_setAccount', 'UA-32000708-1']);
 		_gaq.push(['_trackPageview']);
-		
+
 		for (var key in js.scripts) {
 			if (js.scripts[key]) {
 				var element=document.createElement("script");
@@ -387,8 +387,8 @@ Before minified
 	if(window.addEventListener) {
 		window.addEventListener("load",downloadJSAtOnload,false);
 	} else if (window.attachEvent) {
-		window.attachEvent("onload",downloadJSAtOnload); 
-	} else { 
+		window.attachEvent("onload",downloadJSAtOnload);
+	} else {
 		window.onload=downloadJSAtOnload;
 	}
 }(window));
