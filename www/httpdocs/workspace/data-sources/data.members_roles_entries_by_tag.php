@@ -25,8 +25,6 @@
 				'member: photo',
 				'member: email',
 				'member: job-title',
-				'member: gender',
-				'member: birthday',
 				'member: about',
 				'member: anonymize',
 				'role: role',
@@ -47,7 +45,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-14T04:36:40+00:00'
+				'release-date' => '2012-06-21T08:07:43+00:00'
 			);
 		}
 

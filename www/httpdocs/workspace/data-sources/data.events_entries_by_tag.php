@@ -27,15 +27,7 @@
 				'name',
 				'date',
 				'description',
-				'location: name-formal',
-				'location: name-casual',
-				'location: description',
-				'location: address',
-				'location: city',
-				'location: state',
-				'location: zip',
-				'location: latitude',
-				'location: longitude'
+				'location: name-formal'
 		);
 
 
@@ -49,10 +41,10 @@
 				'name' => 'Events: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-17T02:33:13+00:00'
+				'release-date' => '2012-06-13T23:23:22+00:00'
 			);
 		}
 

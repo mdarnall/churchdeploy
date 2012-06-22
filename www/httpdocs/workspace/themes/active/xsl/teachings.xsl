@@ -31,12 +31,21 @@
 					</xsl:when>
 					<xsl:when test="$pt3 = 'book' or $pt3 = 'tag'">
 						<div class="span8 results">
-							<h3>Results</h3>
+							<h3>
+								<xsl:value-of select="$entries/../pagination/@total-entries" disable-output-escaping="yes" />
+								<xsl:text disable-output-escaping="yes"> results</xsl:text>
+							</h3>
+							<xsl:call-template name="teachings-pagination">
+								<xsl:with-param name="entries" select="$entries" />
+							</xsl:call-template>
 							<xsl:for-each select="$entries">
 								<div class="result">
 									<xsl:call-template name="teaching-entry" />
 								</div>
 							</xsl:for-each>
+							<xsl:call-template name="teachings-pagination">
+								<xsl:with-param name="entries" select="$entries" />
+							</xsl:call-template>
 						</div>
 					</xsl:when>
 					<xsl:otherwise>
@@ -191,6 +200,17 @@
 							</div>
 							<div class="widget filter">
 								<h4>Tags</h4>
+								<div class="search">
+									<form>
+										<xsl:attribute name="action">
+											<xsl:call-template name="url-search-home">
+												<xsl:with-param name="url-only" select="true()" />
+											</xsl:call-template>
+										</xsl:attribute>
+										<input type="hidden" name="sections" value="teachings-tags" />
+										<input name="keywords" placeholder="Search" autocomplete="off" onclick="this.select()" />
+									</form>
+								</div>
 								<div class="collection">
 									<xsl:for-each select="//teachings-tags-random-filtered/entry">
 										<a href="{$root}/{//tags-all-entries/entry[tag/@handle = 'teachings']/@id}/teachings/tag/{@id}/">
@@ -199,7 +219,7 @@
 										<xsl:if test="position() &lt; last()">, </xsl:if>
 									</xsl:for-each>
 								</div>
-								<a href="" class="more"><span class="icon">z</span> See all tags</a>
+								<!-- <a href="" class="more"><span class="icon">z</span> See all tags</a> -->
 							</div>
 						</div>
 					</xsl:when>
@@ -435,5 +455,33 @@
 
 </xsl:template>
 
+
+<xsl:template name="teachings-pagination">
+
+	<xsl:param name="entries" />
+
+	<xsl:call-template name="cd-pagination">
+		<xsl:with-param name="pagination" select="$entries/../pagination" />
+		<xsl:with-param name="pagination-url">
+			<xsl:value-of select="$root" /><xsl:text>/</xsl:text>
+			<xsl:if test="$pt1">
+				<xsl:value-of select="$pt1" /><xsl:text>/</xsl:text>
+			</xsl:if>
+			<xsl:if test="$pt2">
+				<xsl:value-of select="$pt2" /><xsl:text>/</xsl:text>
+			</xsl:if>
+			<xsl:if test="$pt3">
+				<xsl:value-of select="$pt3" /><xsl:text>/</xsl:text>
+			</xsl:if>
+			<xsl:if test="$pt4">
+				<xsl:value-of select="$pt4" /><xsl:text>/</xsl:text>
+			</xsl:if>
+			<xsl:if test="$pt5">
+				<xsl:value-of select="'$'" /><xsl:text>/</xsl:text>
+			</xsl:if>
+		</xsl:with-param>
+	</xsl:call-template>
+
+</xsl:template>
 
 </xsl:stylesheet>

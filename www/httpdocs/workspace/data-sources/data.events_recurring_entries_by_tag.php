@@ -2,43 +2,30 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_recent_filtered extends Datasource{
+	Class datasourceevents_recurring_entries_by_tag extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-recent-filtered';
-		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '10';
+		public $dsParamROOTELEMENT = 'events-recurring-entries-by-tag';
+		public $dsParamORDER = 'asc';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'order';
 		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
 		public $dsParamFILTERS = array(
-				'192' => 'no',
-				'118' => '(if value of ({$pt2}) is (teachings))',
+				'243' => '{$pt1:43}',
+				'214' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'title',
-				'slug',
-				'filename',
-				'current-id',
-				'book',
-				'chapter',
+				'system:pagination',
+				'name',
+				'frequency',
 				'description',
-				'speaker: first-name',
-				'speaker: last-name',
-				'date',
-				'poster',
-				'video: title',
-				'video: description',
-				'video: date',
-				'video: url',
-				'video: player',
-				'video: id',
-				'day',
-				'tags: tag'
+				'locations: name-formal',
+				'locations: name-casual'
 		);
 
 
@@ -49,18 +36,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Recent (filtered)',
+				'name' => 'Events: Recurring: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-29T02:35:22+00:00'
+				'release-date' => '2012-06-18T22:06:32+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '13';
+			return '21';
 		}
 
 		public function allowEditorToParse(){

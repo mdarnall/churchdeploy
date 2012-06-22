@@ -24,7 +24,11 @@
 									<xsl:call-template name="class-rows">
 										<xsl:with-param name="class" select="'span4'" />
 									</xsl:call-template>
-									<img data-responsimage="{member/item/photo/filename}" width="180" height="180" />
+									<xsl:call-template name="members-roles-avatar">
+										<xsl:with-param name="filename" select="member/item/photo/filename" />
+										<xsl:with-param name="height" select="180" />
+										<xsl:with-param name="width" select="180" />
+									</xsl:call-template>
 									<!-- <img width="180" height="180">
 										<xsl:attribute name="src">
 											<xsl:value-of select="$root" />
@@ -89,7 +93,11 @@
 										<xsl:value-of select="$email" />
 									</xsl:attribute>
 									<div class="pull-left">
-										<img data-responsimage="{member/item/photo/filename}" width="72" height="72" />
+										<xsl:call-template name="members-roles-avatar">
+											<xsl:with-param name="filename" select="member/item/photo/filename" />
+											<xsl:with-param name="height" select="72" />
+											<xsl:with-param name="width" select="72" />
+										</xsl:call-template>
 										<!-- <img width="72" height="72">
 											<xsl:attribute name="src">
 												<xsl:value-of select="$root" />
@@ -136,7 +144,7 @@
 </xsl:template>
 
 
-<xsl:template name="merbers-roles-avatar">
+<xsl:template name="members-roles-avatar">
 
 	<xsl:param name="filename" />
 	<xsl:param name="width" />
@@ -149,11 +157,11 @@
 					<xsl:value-of select="$filename" disable-output-escaping="yes" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:text disable-output-escaping="yes">anonymous-4fe35e41927cf.jpg</xsl:text>
+					<xsl:text disable-output-escaping="yes">anonymous-4fe3b032b38d3.jpg</xsl:text>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:attribute>
-	<img>
+	</img>
 
 </xsl:template>
 

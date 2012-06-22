@@ -4,6 +4,10 @@
 
 <xsl:template name="component-events">
 
+	<xsl:param name="entries" />
+	<xsl:param name="position" />
+	<xsl:param name="single" />
+
 	<xsl:variable name="data-source" select="name($entries/../.)" />
 	<xsl:variable name="is-recurring">
 		<xsl:choose>
@@ -15,8 +19,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-
-	<xsl:param name="component">
+	<xsl:variable name="component">
 		<xsl:choose>
 			<xsl:when test="$is-recurring = 'Yes'">
 				<xsl:value-of select="'events-recurring'" disable-output-escaping="yes" />
@@ -25,10 +28,7 @@
 				<xsl:value-of select="'events'" disable-output-escaping="yes" />
 			</xsl:otherwise>
 		</xsl:choose>
-	</xsl:param>
-	<xsl:param name="entries" />
-	<xsl:param name="position" />
-	<xsl:param name="single" />
+	</xsl:variable>
 
 	<xsl:if test="count($entries)">
 		<div>

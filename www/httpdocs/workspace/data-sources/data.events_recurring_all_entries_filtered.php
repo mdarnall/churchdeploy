@@ -2,43 +2,38 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_recent_filtered extends Datasource{
+	Class datasourceevents_recurring_all_entries_filtered extends Datasource{
 
-		public $dsParamROOTELEMENT = 'teachings-recent-filtered';
+		public $dsParamROOTELEMENT = 'events-recurring-all-entries-filtered';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '10';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'order';
 		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
 		public $dsParamFILTERS = array(
-				'192' => 'no',
-				'118' => '(if value of ({$pt2}) is (teachings))',
+				'214' => 'no',
+				'245' => '(if any of ((if value of ({$pt2}) is (meetings)), (if value of ({$pt2}) is (events))) is (yes)) ',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'title',
-				'slug',
-				'filename',
-				'current-id',
-				'book',
-				'chapter',
-				'description',
-				'speaker: first-name',
-				'speaker: last-name',
-				'date',
-				'poster',
-				'video: title',
-				'video: description',
-				'video: date',
-				'video: url',
-				'video: player',
-				'video: id',
-				'day',
-				'tags: tag'
+				'system:pagination',
+				'name',
+				'frequency',
+				'locations: name-formal',
+				'locations: name-casual',
+				'downloads: name',
+				'downloads: file',
+				'images: image',
+				'images: caption',
+				'images: position',
+				'images: height',
+				'text: content',
+				'verses: passage',
+				'verses: tags: description'
 		);
 
 
@@ -49,18 +44,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Recent (filtered)',
+				'name' => 'Events: Recurring: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-29T02:35:22+00:00'
+				'release-date' => '2012-06-20T23:35:47+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '13';
+			return '21';
 		}
 
 		public function allowEditorToParse(){

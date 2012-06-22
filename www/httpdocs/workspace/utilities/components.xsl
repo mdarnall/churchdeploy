@@ -2,7 +2,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-<xsl:include href="../themes/active/xsl/shared.xsl" />
 <xsl:include href="../themes/active/xsl/downloads.xsl" />
 <xsl:include href="../themes/active/xsl/events.xsl" />
 <xsl:include href="../themes/active/xsl/images.xsl" />
@@ -305,12 +304,25 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 
 <xsl:template name="url-search-home">
 
-	<xsl:attribute name="href">
+	<xsl:param name="url-only" select="false()" />
+
+	<xsl:variable name="url">
 		<xsl:value-of select="$root" />
 		<xsl:text>/</xsl:text>
 		<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'search']/@id" />
 		<xsl:text>/search/</xsl:text>
-	</xsl:attribute>
+	</xsl:variable>
+
+	<xsl:choose>
+		<xsl:when test="$url-only">
+			<xsl:value-of select="$url" disable-output-escaping="yes" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:attribute name="href">
+				<xsl:value-of select="$url" disable-output-escaping="yes" />
+			</xsl:attribute>
+		</xsl:otherwise>
+	</xsl:choose>
 
 </xsl:template>
 
