@@ -91,6 +91,11 @@
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//events-all-entries-filtered/entry" />
 					</xsl:call-template>
+					<xsl:call-template name="component-events">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//events-recurring-entry-by-id/entry" />
+						<xsl:with-param name="single" select="true()" />
+					</xsl:call-template>
 				</xsl:when>
 				<!-- Tagged entries -->
 				<xsl:otherwise>
@@ -171,6 +176,12 @@
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//teachings-series-entries-filtered/entry/teachings/item" />
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'series'">
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-entries-by-series-filtered/entry/teachings/item" />
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'tag'">

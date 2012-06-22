@@ -29,11 +29,19 @@
 							</xsl:for-each>
 						</div>
 					</xsl:when>
-					<xsl:when test="$pt3 = 'book' or $pt3 = 'tag' or $pt3 = 'year'">
+					<xsl:when test="$pt3 = 'book' or $pt3 = 'tag' or $pt3 = 'year' or $pt3 = 'series'">
 						<div class="span8 results">
 							<h3>
-								<xsl:value-of select="$entries/../pagination/@total-entries" disable-output-escaping="yes" />
-								<xsl:text disable-output-escaping="yes"> results</xsl:text>
+								<xsl:choose>
+									<xsl:when test="$pt3 = 'series'">
+										<xsl:text disable-output-escaping="yes">Series: </xsl:text>
+										<xsl:value-of select="$entries/../../title" disable-output-escaping="yes" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="$entries/../pagination/@total-entries" disable-output-escaping="yes" />
+										<xsl:text disable-output-escaping="yes"> results</xsl:text>
+									</xsl:otherwise>
+								</xsl:choose>
 							</h3>
 							<xsl:call-template name="teachings-pagination">
 								<xsl:with-param name="entries" select="$entries" />
@@ -425,9 +433,9 @@
 
 	<xsl:param name="howMany">1996</xsl:param>
 
-	<xsl:if test="$howMany &lt; $this-year">
+	<xsl:if test="$howMany &lt; $this-year + 1">
 		<a href="{$root}/{$pt1}/{$pt2}/year/{$howMany}/"><xsl:value-of select="$howMany" /></a>
-		<xsl:if test="$howMany &lt; $this-year - 1">, </xsl:if>
+		<xsl:if test="$howMany &lt; $this-year">, </xsl:if>
 		<xsl:call-template name="years-counter">
 		<xsl:with-param name="howMany" select="$howMany + 1" />
 		</xsl:call-template>

@@ -221,12 +221,14 @@
 			<div class="row">
 			    <xsl:for-each select="//teachings-series-home-filtered/entry">
 	            	<div class="span4 series">
-						<a href="">
+						<a>
+							<xsl:call-template name="url-teachings-series" />
 							<xsl:call-template name="teaching-poster-or-default">
 								<xsl:with-param name="poster" select="poster" />
 							</xsl:call-template>
 						</a>
-						<a href="#">
+						<a>
+							<xsl:call-template name="url-teachings-series" />
 							<h4>
 								<xsl:value-of select="title" disable-output-escaping="yes" />
 								<span class="meta">
