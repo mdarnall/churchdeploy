@@ -77,9 +77,14 @@
 					</ul>
 				</xsl:when>
 				<xsl:when test="$position = 'column-full-width'">
+					<xsl:variable name="class">
+						<xsl:if test="not($single)">
+							<xsl:text disable-output-escaping="yes">span8</xsl:text>
+						</xsl:if>
+					</xsl:variable>
 					<xsl:call-template name="class-position">
 						<xsl:with-param name="component">events</xsl:with-param>
-						<xsl:with-param name="class">span8</xsl:with-param>
+						<xsl:with-param name="class" select="$class" />
 					</xsl:call-template>
 					<div class="component-header">
 						<xsl:if test="$pt2 = 'events' and $pt5 = 'past'">
@@ -94,17 +99,10 @@
 							<xsl:when test="$single">
 								<div class="back">
 									<a class="link-large">
-										<xsl:choose>
-											<xsl:when test="Expr">
-												<xsl:call-template name="url-events-home" />
-												<xsl:text>&#8592; Back to all events</xsl:text>
-											</xsl:when>
-											<xsl:otherwise>
-												<xsl:call-template name="url-events-recurring-home" />
-												<xsl:text>&#8592; Back to all recurring events</xsl:text>
-											</xsl:otherwise>
-										</xsl:choose>
-									</a></div>
+										<xsl:call-template name="url-events-home" />
+										<xsl:text>&#8592; Back to all events</xsl:text>
+									</a>
+								</div>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:call-template name="events-pagination">
@@ -195,24 +193,18 @@
 							</div>
 							<xsl:if test="$single">
 								<div class="span4 column-right">
-									<div class="component component-locations">
-										<xsl:call-template name="component-locations">
-											<xsl:with-param name="position" select="'column-right'" />
-											<xsl:with-param name="entries" select="location/item" />
-										</xsl:call-template>
-									</div>
-									<div class="component component-members-roles">
-										<xsl:call-template name="component-members-roles">
-											<xsl:with-param name="position" select="'column-right'" />
-											<xsl:with-param name="entries" select="member-role/item" />
-										</xsl:call-template>
-									</div>
-									<div class="component component-downloads">
-										<xsl:call-template name="component-members-roles">
-											<xsl:with-param name="position" select="'column-right'" />
-											<xsl:with-param name="entries" select="downloads/item" />
-										</xsl:call-template>
-									</div>
+									<xsl:call-template name="component-locations">
+										<xsl:with-param name="position" select="'column-right'" />
+										<xsl:with-param name="entries" select="location/item" />
+									</xsl:call-template>
+									<xsl:call-template name="component-members-roles">
+										<xsl:with-param name="position" select="'column-right'" />
+										<xsl:with-param name="entries" select="member-role/item" />
+									</xsl:call-template>
+									<xsl:call-template name="component-members-roles">
+										<xsl:with-param name="position" select="'column-right'" />
+										<xsl:with-param name="entries" select="downloads/item" />
+									</xsl:call-template>
 								</div>
 							</xsl:if>
 						</xsl:for-each>
@@ -254,8 +246,8 @@
 				</div>
 			</xsl:if>
 		</div>
-		<xsl:if test="$position = 'column-full-width'">
-			<div class="span3">
+		<xsl:if test="$position = 'column-full-width' and not($single)">
+			<div class="span4">
 				<xsl:for-each select="//events-recurring-all-entries-filtered/entry">
 					<xsl:call-template name="events-entry-column-right">
 						<xsl:with-param name="component" select="$component" />

@@ -179,6 +179,12 @@
 						<xsl:with-param name="entries" select="//teachings-entry-by-tag-filtered/entry" />
 					</xsl:call-template>
 				</xsl:when>
+				<xsl:when test="$pt2 = 'teachings' and $pt3 = 'year'">
+					<xsl:call-template name="component-teachings">
+						<xsl:with-param name="position" select="name($xpath)" />
+						<xsl:with-param name="entries" select="//teachings-entries-by-year-filtered/entry" />
+					</xsl:call-template>
+				</xsl:when>
 				<xsl:when test="$pt2 = 'teachings'">
 					<xsl:call-template name="component-teachings">
 						<xsl:with-param name="position" select="name($xpath)" />

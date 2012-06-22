@@ -669,7 +669,6 @@ h3 {
 			text-transform: uppercase;
 			text-shadow: none;
 		}
-
 	}
 
 	address,
@@ -893,34 +892,34 @@ h3 {
 
 .column-full-width {
 
-	.columns-2 {
+	& > .columns-2 {
 		-webkit-column-count: 2; -webkit-column-gap:20px;
 		-moz-column-count: 2; -moz-column-gap:20px;
 		-o-column-count: 2; -o-column-gap:20px;
 		column-count: 2; column-gap:20px;
 	}
 
-	.columns-3 {
+	& > .columns-3 {
 		-webkit-column-count: 3; -webkit-column-gap:20px;
 		-moz-column-count: 3; -moz-column-gap:20px;
 		-o-column-count: 3; -o-column-gap:20px;
 		column-count: 3; column-gap:20px;
 	}
 
-	.columns-4 {
+	& > .columns-4 {
 		-webkit-column-count: 4; -webkit-column-gap:20px;
 		-moz-column-count: 4; -moz-column-gap:20px;
 		-o-column-count: 4; -o-column-gap:20px;
 		column-count: 4; column-gap:20px;
 	}
 
-	.intro {
+	& > .intro {
 		display: block;
 		font-size: 26px;
 		margin: @base * 2 0;
 	}
 
-	.nav-box {
+	& > .nav-box {
 
 		.row {
 			margin-bottom: @base * 2;
@@ -1018,9 +1017,9 @@ h3 {
 	}
 }
 
-//---------------------------------------------------------
-// components----------------------------------------------
-//---------------------------------------------------------
+//-------------------------------------------------------------------
+// components--------------------------------------------------------
+//-------------------------------------------------------------------
 
 // defaults ---------------------------------------------------------
 
@@ -1039,7 +1038,7 @@ h3 {
 	margin: 0;
 }
 
-// layouts --------------------------------------------------------------
+// layouts ----------------------------------------------------------
 
 .layout-home {
 
@@ -1049,7 +1048,7 @@ h3 {
 
 	.column-right {
 
-		.component-events {
+		& > .component-events {
 
 			.entry {
 
@@ -1086,19 +1085,17 @@ h3 {
 
 	.column-right {
 
-		.component-locations {
+		& > .component-locations {
 			margin-top: @base * 4;
 		}
-
 	}
-
 }
 
 // text --------------------------------------------------------------
 
 .column-full-width {
 
-	.component-text {
+	& > .component-text {
 
 		h2 {
 			text-transform: uppercase;
@@ -1109,7 +1106,7 @@ h3 {
 
 .column-center {
 
-	.component-text {
+	& > .component-text {
 
 		h2 {
 			text-transform: none;
@@ -1122,7 +1119,7 @@ h3 {
 
 .column-right {
 
-	.component-downloads {
+	& > .component-downloads {
 
 		.entry {
 			background: @color-grey-accent;
@@ -1142,7 +1139,6 @@ h3 {
 				&:hover {
 					color: @color-accent;
 					border-bottom: 1px solid darken(@color-grey-accent, 20%);
-
 				}
 
 				.date {
@@ -1211,10 +1207,7 @@ h3 {
 			padding: 0;
 			margin: 0 0 @base *3 0;
 		}
-
 	}
-
-
 }
 
 .column-full-width,
@@ -1237,7 +1230,7 @@ h3 {
 			}
 		}
 
-		& > .entries {
+		.entries {
 
 			.entry {
 				background: #fdfdfd;
@@ -1297,7 +1290,6 @@ h3 {
 						position: relative;
 						top: -1px;
 					}
-
 				}
 
 				.label {
@@ -1339,7 +1331,6 @@ h3 {
 					}
 				}
 			}
-
 		}
 	}
 }
@@ -1372,7 +1363,6 @@ h3 {
 						margin: 0;
 					}
 				}
-
 			}
 
 			.component-locations {
@@ -1385,125 +1375,120 @@ h3 {
 					padding-left: @base * 2;
 				}
 			}
-
-
 		}
-
 	}
 }
 
 .column-right {
 
-	.component-events {
+	& > .component-events {
 
 		.entries {
 			list-style: none;
 			margin: 0 0 @base * 2 0;
 			padding: 0;
 
+			@month-height: 16px;
+			@day-height: 32px;
+			@calendar-height: @month-height + @day-height;
+			@calendar-width: @calendar-height;
+			@calendar-padding: @base * 1.5;
 
-		@month-height: 16px;
-		@day-height: 32px;
-		@calendar-height: @month-height + @day-height;
-		@calendar-width: @calendar-height;
-		@calendar-padding: @base * 1.5;
-
-		.entry {
-			background: @color-grey-accent;
-			position: relative;
-			padding: 0 20px;
-			margin: 0;
-
-			a {
-				display: block;
-				height: 100%;
-				padding: @base * 1.5 @base @base * 1.5 0;
-				border-bottom: 1px solid darken(@color-grey-accent, 20%);
-				.clearfix;
-
-				&:hover {
-
-					.info {
-						color: @color-accent;
-					}
-				}
-
-				.date {
-					width: @calendar-width;
-					text-align: center;
-					#font > #proxima > .bold;
-					position: absolute;
-					height: @calendar-height;
-					left: 15px;
-
-					.month {
-						background: @color-accent;
-						color: #fff;
-						font-size: 12px;
-						letter-spacing: 1px;
-						text-transform: uppercase;
-						line-height: @month-height;
-						height: @month-height;
-					}
-
-					.day {
-						background: #fff;
-						font-size: 26px;
-						color: @color-body-text;
-						line-height: @day-height;
-						height: @day-height;
-					}
-				}
-
-				.info {
-					#font > #tisa > .regular;
-					font-size: 15px;
-					line-height: 1.3;
-					font-weight: normal;
-					float: left;
-					height: @calendar-height;
-					margin-left: @calendar-padding + @calendar-width;
-					color: @color-body-text;
-
-					.cel
-					td {
-						vertical-align: middle;
-					}
-				}
-			}
-
-			&.even {
-				//background: @color-grey-accent;
-			}
-
-			&.last {
+			.entry {
+				background: @color-grey-accent;
+				position: relative;
+				padding: 0 20px;
+				margin: 0;
 
 				a {
-					border: none;
-				}
-			}
-
-			.header {
-				text-transform: none;
-				font-size: 26px;
-
-				a {
-					text-transform: none;
-					text-decoration: none;
-					color: @color-body-text;
+					display: block;
+					height: 100%;
+					padding: @base * 1.5 @base @base * 1.5 0;
+					border-bottom: 1px solid darken(@color-grey-accent, 20%);
+					.clearfix;
 
 					&:hover {
-						color: #555;
+
+						.info {
+							color: @color-accent;
+						}
+					}
+
+					.date {
+						width: @calendar-width;
+						text-align: center;
+						#font > #proxima > .bold;
+						position: absolute;
+						height: @calendar-height;
+						left: 15px;
+
+						.month {
+							background: @color-accent;
+							color: #fff;
+							font-size: 12px;
+							letter-spacing: 1px;
+							text-transform: uppercase;
+							line-height: @month-height;
+							height: @month-height;
+						}
+
+						.day {
+							background: #fff;
+							font-size: 26px;
+							color: @color-body-text;
+							line-height: @day-height;
+							height: @day-height;
+						}
+					}
+
+					.info {
+						#font > #tisa > .regular;
+						font-size: 15px;
+						line-height: 1.3;
+						font-weight: normal;
+						float: left;
+						height: @calendar-height;
+						margin-left: @calendar-padding + @calendar-width;
+						color: @color-body-text;
+
+						.cel td {
+							vertical-align: middle;
+						}
 					}
 				}
-			}
 
-			.edit {
-				.edit-defaults;
-				top: @base;
-				right: @base;
+				&.even {
+					//background: @color-grey-accent;
+				}
+
+				&.last {
+
+					a {
+						border: none;
+					}
+				}
+
+				.header {
+					text-transform: none;
+					font-size: 26px;
+
+					a {
+						text-transform: none;
+						text-decoration: none;
+						color: @color-body-text;
+
+						&:hover {
+							color: #555;
+						}
+					}
+				}
+
+				.edit {
+					.edit-defaults;
+					top: @base;
+					right: @base;
+				}
 			}
-		}
 		}
 
 		.more  {
@@ -1534,7 +1519,6 @@ h3 {
 		}
 	}
 }
-
 
 // locations ---------------------------------------------------------
 
@@ -1609,8 +1593,6 @@ h3 {
 	}
 }
 
-
-
 // members-roles ---------------------------------------------------------
 
 .column-full-width {
@@ -1659,7 +1641,7 @@ h3 {
 
 .column-right {
 
-	.component-members-roles {
+	& > .component-members-roles {
 
 		.entry {
 			background: @color-grey-accent;
@@ -1761,7 +1743,9 @@ h3 {
 			font-size: 14px;
 		}
 
-		.alternatives, .suggestions, .filter {
+		.alternatives,
+		.suggestions,
+		.filter {
 			#font > #tisa > .regular;
 			border: @base solid #E9E9E9;
 			margin: @base 0 @base * 2 0;
@@ -1778,7 +1762,9 @@ h3 {
 		}
 
 		.filter {
+
 			.collection {
+
 				ul {
 					list-style: none;
 					margin: 0;
@@ -1795,7 +1781,6 @@ h3 {
 								#font > #proxima > .bold;
 								text-transform: uppercase;
 							}
-
 						}
 					}
 				}
@@ -1808,9 +1793,7 @@ h3 {
 			a {
 				margin: @base;
 			}
-
 		}
-
 	}
 
 	.entries {
@@ -1868,10 +1851,6 @@ h3 {
 		}
 	}
 
-	.type-teachings {
-
-	}
-
 	h3 {
 
 		.meta {
@@ -1901,7 +1880,8 @@ h3 {
 
 // teachings -------------------------------------------------------
 
-.component-teachings, .component-series {
+.component-teachings,
+.component-series {
 
 	h4 {
 		font-size: 16px;
@@ -2206,7 +2186,7 @@ h3 {
 
 .column-full-width {
 
-	.component-teachings {
+	& > .component-teachings {
 
 		.individual {
 
@@ -2233,9 +2213,7 @@ h3 {
 				margin: @base * 2 0;
 				text-transform: uppercase;
 			}
-
 		}
-
 	}
 }
 
@@ -2363,9 +2341,7 @@ h3 {
 				display: block;
 				margin-bottom: 20px;
 			}
-
 		}
-
 	}
 
 	.header {
@@ -2395,13 +2371,16 @@ h3 {
 	}
 
 	.navbar-inner {
+
 		.nav {
 			float: none;
+
 			&.left {
 				position: relative;
 				display: block;
 				z-index: 10;
 			}
+
 			&.pull-right {
 				position: relative;
 				margin: 0;
@@ -2417,10 +2396,12 @@ h3 {
 						display: inline-block;
 					}
 				}
+
 				.worship {
 					display: none;
 				}
 			}
+
 			.top-search {
 				background: darken(desaturate(@color-mast, 20%), 20%);
 				position: relative;
@@ -2481,7 +2462,7 @@ h3 {
 
 	.column-full-width {
 
-		.nav-box {
+		& > .nav-box {
 
 			.row {
 				margin-bottom: 0px;
