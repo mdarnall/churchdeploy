@@ -70,15 +70,16 @@
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
 						<li>
-							<a href="#">
-								<span class="climacon">m</span><span class="worship">Sunrise Worship - </span>
+							<a href="{$root}/20/events/12962/tuesday-sunrise-worship/">
+								<span class="climacon">m</span>
+								<span class="worship">Sunrise Worship - </span>
 								<xsl:value-of select="//misc-all-entries/entry[name='sunrise-worship']/content" disable-output-escaping="yes" />
 							</a>
 						</li>
 						<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
 							<li class="divider-vertical"></li>
 							<li>
-								<a href="#">
+								<a href="{$root}/24/give/">
 									<xsl:attribute name="class">
 										<xsl:text>modalLiveLink</xsl:text>
 										<xsl:choose>

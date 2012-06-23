@@ -1,10 +1,10 @@
 <?xml
-    version="1.0"
-    encoding="UTF-8"
-    ?>
+	version="1.0"
+	encoding="UTF-8"
+	?>
 
 <xsl:stylesheet
-    version="1.0"
+	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	>
 
@@ -12,10 +12,10 @@
 	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 	encoding="UTF-8"
-    method="xml"
-    omit-xml-declaration="yes"
-    indent="no"
-    />
+	method="xml"
+	omit-xml-declaration="yes"
+	indent="no"
+	/>
 
 <xsl:include href="../utilities/alerts.xsl" />
 <xsl:include href="../utilities/classes.xsl" />
@@ -26,7 +26,6 @@
 <xsl:include href="../utilities/timespan-format.xsl" />
 <xsl:include href="../utilities/toolkit.xsl" />
 <xsl:include href="../utilities/url-encode.xsl" />
-
 <xsl:include href="../themes/active/xsl/template.xsl" />
 
 <xsl:param name="cookie-username" />
@@ -34,7 +33,7 @@
 <xsl:param name="url-sections" />
 <xsl:param name="url-keywords" />
 
-<xsl:variable name="pt1" select="'43'" />
+<!-- <xsl:variable name="pt1" select="'43'" /> -->
 <xsl:variable name="events-entries-per-page" select="'5'" />
 <xsl:variable name="member-is-logged-in" select="boolean(//events/member-login-info/@logged-in = 'yes')" />
 
@@ -45,43 +44,45 @@
 	<xsl:comment><![CDATA[[if IE 7]> <html class="no-js ie7 oldie" lang="en" /> <![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if IE 8]> <html class="no-js ie8 oldie" lang="en" /> <![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html class="no-js" lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
-
 		<head>
-
-            <title>
-            	<xsl:value-of select="$website-name" />
-            </title>
-
+			<xsl:comment>AtheyCreek.com is an installation of ChurchDeploy.com — The mission of Church Deploy is to build, as a community, the best church website framework possible and give it away, free of charge.</xsl:comment>
+			<xsl:variable name="page-title">
+				<xsl:if test="string-length($pt1)">
+					<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/description" />
+					<xsl:text disable-output-escaping="yes"> | </xsl:text>
+				</xsl:if>
+				<xsl:value-of select="//misc-all-entries/entry[name='meta-page-title']/content" />
+			</xsl:variable>
+			<title>
+				<xsl:value-of select="$page-title" />
+			</title>
 			<!-- <link rel="stylesheet" href="{$workspace}/bootstrap/css/bootstrap-combined.min.css" /> -->
-			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
-
 			<meta charset="utf-8" />
-
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 			<meta http-equiv="imagetoolbar" content="false" />
-
-			<meta name="description" content="{//misc-all-entries/entry[name='description']/content}" />
+			<meta name="description" content="{//misc-all-entries/entry[name='meta-description']/content}" />
+			<meta name="keywords" content="{//misc-all-entries/entry[name='meta-keywords']/content}" />
 			<meta name="author" content="{$website-name}" />
 			<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 			<meta name="application-name" content="{$website-name}" />
-			<meta name="msapplication-tooltip" content="{//misc-all-entries/entry[name='msapplication-tooltip']/content}" />
-			<meta name="msapplication-starturl" content="{//misc-all-entries/entry[name='msapplication-starturl']/content}" />
-			<meta name="responsimage" 
-				data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename" 
+			<meta name="msapplication-tooltip" content="{$page-title}" />
+			<meta name="msapplication-starturl" content="{$root}" />
+			<meta name="responsimage"
+				data-server="{$root}/image/2/width/height/anchor/0/uploads/images/leaderboards/filename"
 				data-static="{$workspace}/img/spacer.gif"
 				data-loading="{$workspace}/img/loading.gif"
 			/>
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="{$root}" />
+			<meta property="og:image" content="{$workspace}/themes/active/img/apple-touch-icon.png" />
+			<meta property="og:title" content="{$page-title}" />
+			<meta property="og:description" content="{//misc-all-entries/entry[name='meta-description']/content}" />
 			<link rel="apple-touch-icon-precomposed" href="{$workspace}/themes/active/img/apple-touch-icon.png" />
-
+			<link rel="stylesheet" href="{$workspace}/themes/active/css/common.css" />
 			<xsl:call-template name="template-head" />
-
 			<!-- <xsl:comment><![CDATA[[if IE 6]><link rel="stylesheet" type="text/css" href="]]><xsl:value-of select="$root" /><![CDATA[/workspace/assets/css/ie6patches-1.0.css" media="screen" /><![endif]]]></xsl:comment> -->
-
-			
 		</head>
-
 		<body data-spy="scroll" data-target=".subnav" data-offset="50">
-
 			<xsl:attribute name="class">
 				<xsl:text>pageid-</xsl:text>
 				<xsl:choose>
@@ -99,7 +100,6 @@
 					<xsl:text> profile</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
-
 			<xsl:if test="not($pt1 = 'toolkit')">
 				<xsl:call-template name="edit-entry">
 					<xsl:with-param name="link">
@@ -114,15 +114,11 @@
 					</xsl:with-param>
 					<xsl:with-param name="class" select="'edit-tag'" />
 				</xsl:call-template>
-				<a href="{$root}/symphony/logout/" style="position: absolute; top: 10px; left: 10px; z-index: 1000">Logout</a>				
+				<a href="{$root}/symphony/logout/" style="position: absolute; top: 10px; left: 10px; z-index: 1000">Logout</a>
 			</xsl:if>
-			
 			<xsl:call-template name="template-header-outside-container" />
-			
 			<div class="container main-container">
 				<xsl:call-template name="template-header-inside-container" />
-				
-
 				<xsl:choose>
 					<xsl:when test="$pt1 = 'toolkit' and $cookie-username">
 						<xsl:call-template name="toolkit" />
@@ -139,24 +135,20 @@
 									<xsl:with-param name="xpath" select="//layouts-default/entry" />
 								</xsl:call-template>
 							</xsl:otherwise>
-						</xsl:choose>	
+						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
-
 				<xsl:call-template name="template-footer-inside-container" />
 			</div>
-
 			<xsl:call-template name="template-footer-outside-container" />
-		
 		</body>
-
 	</html>
 
 </xsl:template>
 
 
 <xsl:template name="call-components">
-	
+
 	<xsl:param name="xpath" />
 
 	<div class="row">
@@ -164,7 +156,7 @@
 			<xsl:call-template name="component">
 				<xsl:with-param name="xpath" select="$xpath/column-full-width" />
 			</xsl:call-template>
-		</div>	
+		</div>
 	</div>
 	<div class="row">
 		<xsl:call-template name="component">
@@ -175,7 +167,7 @@
 		</xsl:call-template>
 	</div>
 
-</xsl:template>		
+</xsl:template>
 
 
 <xsl:template name="topnav">
@@ -224,13 +216,12 @@
 	<xsl:if test="count($group)">
 		<ul class="nav nav-pills">
 			<xsl:for-each select="$group">
-				<xsl:call-template name="subnav-entry" />						
+				<xsl:call-template name="subnav-entry" />
 			</xsl:for-each>
-		</ul>		
+		</ul>
 	</xsl:if>
 
 </xsl:template>
-
 
 
 </xsl:stylesheet>
