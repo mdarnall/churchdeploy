@@ -352,7 +352,8 @@
 	<xsl:param name="entry" select="." />
 
 	<xsl:variable name="audio-url">
-		<xsl:text>http://72.10.33.203/media/audio/teachings/</xsl:text>
+		<!-- <xsl:text>http://72.10.33.203/media/audio/teachings/</xsl:text> -->
+		<xsl:text disable-output-escaping="yes">http://66.147.244.244/~atheycre/teachings/</xsl:text>
 		<xsl:value-of select="translate(filename,$en-uppercase-letters,$en-lowercase-letters)"/>
 		<xsl:text>.mp3</xsl:text>
 	</xsl:variable>
