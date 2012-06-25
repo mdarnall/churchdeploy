@@ -12,15 +12,20 @@
 <xsl:template name="template-head">
 
 	<link rel="canonical" href="http://atheycreek.com" />
-	<!--
-	<meta http-equiv="x-dns-prefetch-control" content="on" />
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each>
-	-->
 	<!--
+	<meta http-equiv="x-dns-prefetch-control" content="on" />
+
+	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
+		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
+		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
+	</xsl:for-each>
+	-->
+
 	<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
@@ -34,7 +39,6 @@
 	})();
 	//</xsl:comment>
 	</script>
-	-->
 
 </xsl:template>
 
@@ -62,7 +66,7 @@
 							</a>
 							<form action="get">
 								<xsl:call-template name="form-search-action"/>
-								<input name="keywords" placeholder="Search" autocomplete="off" onclick="this.select()" />
+								<input name="keywords" placeholder="SEARCH" autocomplete="off" onclick="this.select()" />
 							</form>
 						</li>
 					</ul>
@@ -302,7 +306,8 @@
 							<xsl:value-of select="$this-year" />
 							<xsl:text>. </xsl:text>
 							<a href="{$root}"><xsl:value-of select="$website-name" /></a>
-							<xsl:text>. All&#160;rights&#160;reserved.</xsl:text>
+							<xsl:text>. All&#160;rights&#160;reserved. </xsl:text>
+							<a href="{$root}/13667/api/">API</a>
 						</span>
 						<span class="facebook">
 							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
@@ -326,15 +331,11 @@
 		(function (window) {
 			'use strict';
 			function downloadJSAtOnload() {
-				var _gaq = _gaq || [],
-				js = {
+				var js = {
 					"scripts":[
 						"/workspace/themes/active/js/common-ck.js"
 					]
 				};
-
-				_gaq.push(['_setAccount', 'UA-32000708-1']);
-				_gaq.push(['_trackPageview']);
 
 				for (var key in js.scripts) {
 					if (js.scripts[key]) {

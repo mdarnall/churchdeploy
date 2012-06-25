@@ -187,4 +187,11 @@
 			'synonyms' => 'a:1:{s:40:\"165ccd67438b50ac44bbfdf7b5208f9c115f12b2\";a:2:{s:4:\"word\";s:18:\"Women’s ministry\";s:8:\"synonyms\";s:49:\"womens ministry, wemons minisrty, womens ministry\";}}',
 		),
 		########
+
+
+		###### GLOBALRESOURCELOADER ######
+		'globalresourceloader' => array(
+			'ds-names' => 'alerts_entries_by_tag,alerts_global,downloads_entries_by_tag,events_3_latest,events_all_entries_filtered,events_all_entries_past_filtered,events_entries_by_tag,events_entries_by_tag_related,events_entries_past_by_tag_related,events_entry_by_id,events_recurring_all_entries_filtered,events_recurring_entries_by_tag,events_recurring_entry_by_id,images_entries_by_tag,images_toolkit_all_entries_filtered,layouts_default,layouts_ds_tags_entries_by_tag,locations_ds_events_entries_by_tag,locations_entries_by_tag,members_roles_entries_by_tag,misc_all_entries,search,search_suggestions,status_all_entries,tags_all_entries,tags_entries_by_tag,teachings_entries_by_series_filtered,teachings_entries_by_year_filtered,teachings_entry_by_book_filtered,teachings_entry_by_id,teachings_entry_by_tag_filtered,teachings_featured_filtered,teachings_recent_filtered,teachings_series_entries_filtered,teachings_series_home_filtered,teachings_series_teachings_for_ds,teachings_tags_random_filtered,text_entries_by_tag,twitter_latest_entry,verses_entries_by_tag,xml_apibibliacom,xml_books_of_the_bible',
+		),
+		########
 	);
