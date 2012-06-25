@@ -332,13 +332,17 @@ h3 {
 	float: left;
 }
 
+.divider {
+    margin: 0 10px;
+}
+
 .mast {
 	background: @color-mast;
 	padding: 7px 0 @base * 1.5 0;
 	margin: @base * 3 0 @base * 3 0;
 
 	.row {
-		margin: @base * 3 auto 0 auto;
+		margin: @base * 3 auto @base * 1.5 auto;
 
 		.span8 {
 			margin-left: 0;
@@ -351,6 +355,7 @@ h3 {
 
 			p {
 				.body-text-serif;
+				width: 95%;
 				color: #fff;
 			}
 		}
@@ -800,6 +805,16 @@ h3 {
 				color: @color-accent;
 				text-decoration: none;
 			}
+		}
+		
+		.tech {
+    		margin-top: @base;
+    		
+    		a {
+    		  strong {
+        		 #font > #proxima > .bold; 
+    		  }
+    		}
 		}
 	}
 }
@@ -1281,7 +1296,7 @@ h3 {
 					color: #303030;
 					font-size: 18px;
 					clear: both;
-					margin-bottom: @base;
+					margin: 0 0 @base @base * 1.5;
 					padding: 0;
 
 					.icon {
@@ -1361,6 +1376,10 @@ h3 {
 
 					.header {
 						margin: 0;
+					}
+					
+					.date {
+    					margin: 0 0 @base 0;
 					}
 				}
 			}
