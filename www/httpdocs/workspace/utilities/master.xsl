@@ -125,10 +125,7 @@
 				<xsl:text> </xsl:text>
 				<xsl:text>layout-</xsl:text>
 				<xsl:value-of select="//layouts-ds-tags-entries-by-tag/entry/name/@handle" />
-				<xsl:if test="//events-entry-by-id/entry">
-					<xsl:text> profile</xsl:text>
-				</xsl:if>
-				<xsl:if test="//events-recurring-entries-by-id/entry">
+				<xsl:if test="//events-entry-by-id/entry or //events-recurring-entries-by-id/entry">
 					<xsl:text> profile</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
