@@ -38,17 +38,16 @@
 						<xsl:with-param name="component" select="$component" />
 					</xsl:call-template>
 					<h3>
-						<xsl:call-template name="pluralize">
-							<xsl:with-param name="singular" select="'Upcoming'" />
-							<xsl:with-param name="plural" select="'Upcoming'" />
-							<xsl:with-param name="xpath" select="$entries" />
-						</xsl:call-template>
+						<xsl:choose>
+							<xsl:when test="$is-recurring = 'Yes'">
+								<xsl:text disable-output-escaping="yes">Recurring</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:text disable-output-escaping="yes">Upcoming</xsl:text>
+							</xsl:otherwise>
+						</xsl:choose>
 					</h3>
-					<ul class="entries">  <!-- nav nav-tabs nav-stacked -->
-						<!-- <xsl:call-template name="class-position">
-							<xsl:with-param name="component" select="'events'" />
-							<xsl:with-param name="classes" select="'events nav nav-tabs nav-stacked'" />
-						</xsl:call-template> -->
+					<ul class="entries">
 						<xsl:choose>
 							<xsl:when test="$is-recurring = 'No'">
 								<xsl:for-each select="$entries[ position() &lt; 4 ]">
