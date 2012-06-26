@@ -301,24 +301,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="span12">
-						<span class="copyright">
+						<span class="facebook">
+							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
+						</span>
+						<div class="copyright">
+					       <a href="{$root}/13563/our-website/"><strong>Built with Church Deploy</strong></a>
+					       <span class="divider">|</span>
+					       <a href="{$root}/13667/api/"><strong>API</strong></a>
+						   <br />
 							<xsl:text>© </xsl:text>
 							<xsl:value-of select="$this-year" />
 							<xsl:text>. </xsl:text>
 							<a href="{$root}"><xsl:value-of select="$website-name" /></a>
 							<xsl:text>. All&#160;rights&#160;reserved. </xsl:text>
-						</span>
-						<span class="facebook">
-							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
-						</span>
-					</div>
-					<br />
-					<div class="span12 tech">
-					   <span class="copyright">
-					       Built with <a href="{$root}/13563/our-website/"><strong>Church Deploy</strong></a>
-					       <span class="divider">|</span>
-					       <a href="{$root}/13667/api/"><strong>API</strong></a>
-					   </span>
+						</div>
 					</div>
 				</div>
 			</div>
