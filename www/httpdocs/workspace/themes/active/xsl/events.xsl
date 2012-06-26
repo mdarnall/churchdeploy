@@ -298,11 +298,11 @@
 					</table>
 				</xsl:when>
 				<xsl:otherwise>
+				    <div class="title">
+						<xsl:value-of select="name" disable-output-escaping="yes" />
+					</div>
 					<div class="frequency">
 						<xsl:value-of select="frequency" disable-output-escaping="yes" />
-					</div>
-					<div class="title">
-						<xsl:value-of select="name" disable-output-escaping="yes" />
 					</div>
 					<div class="location">
 						<xsl:call-template name="location-name" />
