@@ -249,12 +249,14 @@
 					<xsl:if test="$position = 'column-full-width' and not($single)">
 						<div class="span4 column-right">
 							<div class="component component-events-recurring">
-								<xsl:for-each select="//events-recurring-all-entries-filtered/entry">
-									<xsl:call-template name="events-entry-column-right">
-										<xsl:with-param name="component" select="$component" />
-										<xsl:with-param name="is-recurring" select="'Yes'" />
-									</xsl:call-template>
-								</xsl:for-each>
+								<ul>
+									<xsl:for-each select="//events-recurring-all-entries-filtered/entry">
+										<xsl:call-template name="events-entry-column-right">
+											<xsl:with-param name="component" select="$component" />
+											<xsl:with-param name="is-recurring" select="'Yes'" />
+										</xsl:call-template>
+									</xsl:for-each>
+								</ul>
 							</div>
 						</div>
 					</xsl:if>
@@ -270,7 +272,6 @@
 
 	<xsl:param name="component" />
 	<xsl:param name="is-recurring" />
-
 	<li class="clearfix">
 		<xsl:call-template name="class-rows" />
 		<a>
