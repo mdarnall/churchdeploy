@@ -128,6 +128,9 @@
 				<xsl:if test="//events-entry-by-id/entry">
 					<xsl:text> profile</xsl:text>
 				</xsl:if>
+				<xsl:if test="//events-recurring-entries-by-id/entry">
+					<xsl:text> profile</xsl:text>
+				</xsl:if>
 			</xsl:attribute>
 			<xsl:if test="not($pt1 = 'toolkit')">
 				<xsl:call-template name="edit-entry">
