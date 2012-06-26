@@ -39,7 +39,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-26T02:55:29+00:00'
+				'release-date' => '2012-06-26T17:26:09+00:00'
 			);
 		}
 
