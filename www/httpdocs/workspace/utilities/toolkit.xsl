@@ -129,7 +129,7 @@ USAGE:
 	<xsl:param name="xpath" />
 
 	<xsl:choose>
-		<xsl:when test="number($xpath)">
+		<xsl:when test="number($xpath - 1)">
 			<xsl:choose>
 				<xsl:when test="$xpath = 1">
 					<xsl:value-of select="$singular" disable-output-escaping="yes" />
