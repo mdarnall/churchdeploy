@@ -370,7 +370,7 @@ h3 {
 				#font > #proxima > .bold;
 				color: #fff;
 				margin:0;
-				padding: @base 0;
+				padding: @base * 0.7 0;
 				text-align: center;
 				background: darken(desaturate(@color-mast, 25%), 25%);
 
@@ -1548,6 +1548,7 @@ h3 {
 // recurring events
 
 .component-events-recurring {
+    margin-bottom: @base * 2;
 
 	ul {
 		list-style: none;
@@ -1556,8 +1557,7 @@ h3 {
 		width: 270px;
 		background: #E9E9E9;
 		padding: 15px;
-		margin-left: 0;
-		margin-top: @base * 3.2;
+		
 
 	    li {
 		    list-style: none;
@@ -1600,6 +1600,14 @@ h3 {
 		    }
 	   }
 	}
+}
+
+.layout-events {
+    
+    .component-events-recurring {
+        margin-top: @base * 3.2;
+    }
+    
 }
 
 // images ---------------------------------------------------------
@@ -1723,17 +1731,32 @@ h3 {
 				.small-serif-header;
 				text-transform: none;
 				font-weight: normal;
-				margin: 0 0 @base * 2 0;
+				margin: 0 0 @base * 0.5 0;
 			}
 
 			h4 {
 				.small-grey-text;
 				margin: @base 0 @base * .25 0;
 			}
-
-			.content * {
-				#font > #proxima > .regular;
-				text-align: left;
+			
+			.contact-info {
+    			text-align: center;
+    			margin-bottom: @base * 1.5;
+    			
+    			span, a {
+        			color: #999;
+    			}
+    			
+    			a:hover {
+        			color: @color-accent;
+    			}
+    			
+    			.icon {
+        			color: #ccc;
+    			}
+			}
+			a.edit {
+    			display: none;
 			}
 		}
 
@@ -2362,6 +2385,12 @@ h3 {
 	margin-top: @base * 4;
 }
 
+.layout-home {
+	.column-right {
+		margin-top: 0;
+	}
+}
+
 .layout-home-group {
 
 	.column-right {
@@ -2486,6 +2515,28 @@ h3 {
 				margin-bottom: 20px;
 			}
 		}
+		
+		.column-right {
+			.component-events {
+				
+				.entry {
+					&.last {
+						padding-bottom: 0;
+					}
+					
+					a {
+    				    padding: @base * 1.2 0;
+						.info {
+							font-size: 13px;
+						}						
+					}
+
+				}
+				
+			}	
+			
+		}
+		
 	}
 
 	.header {
@@ -2663,6 +2714,31 @@ h3 {
 			}
 		}
 	}
+	
+	.layout-ministry, .layout-events {
+	
+	   .column-center, .span8 {
+	       float:none;
+    	   width: 98%;
+	   }
+	   
+	   	.column-right {
+        	float: none;
+        	width: 98%;
+        	margin-left: 0;
+        	
+        	.component-member-roles {
+            	display: block;
+        	}
+        	
+        	.component-locations {
+                display: block;
+        	}
+        	
+    	}
+    	
+	}
+	
 }
 
 // DEFAULT DESKTOP
@@ -2727,6 +2803,8 @@ h3 {
 			}
 		}
 	}
+		
+	
 }
 
 // LARGE DESKTOP & UP

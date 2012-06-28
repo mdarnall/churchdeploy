@@ -63,6 +63,7 @@
 									<div class="content">
 										<div class="contact-info">
 											<span class="email">
+											    <span class="icon">M</span>
 												<a title="Email {$name}">
 													<xsl:attribute name="href">
 														<xsl:text disable-output-escaping="yes">mailto:</xsl:text>
@@ -72,7 +73,7 @@
 												</a>
 											</span>
 											<span class="divider">|</span>
-											<span class="phone"><xsl:value-of select="$phone" /></span>
+											<span class="phone"> <span class="icon">:</span><xsl:value-of select="$phone" /></span>
 										</div>
 										<xsl:value-of select="member/item/about" disable-output-escaping="yes" />
 									</div>
