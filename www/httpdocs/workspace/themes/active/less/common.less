@@ -341,6 +341,16 @@ h3 {
 	padding: 7px 0 @base * 1.5 0;
 	margin: @base * 3 0 @base * 3 0;
 
+	.container {
+		.row {
+			margin-left: 0;
+
+			.span12 {
+				margin-left: 0;
+			}
+		}
+	}
+
 	.row {
 		margin: @base * 3 auto @base * 1.5 auto;
 
@@ -456,6 +466,12 @@ h3 {
 
 			li {
 
+				&.last {
+					a {
+						padding-right: 0;
+					}
+				}
+
 				a {
 					color: darken(desaturate(@color-mast, 20%), 20%);
 					text-shadow: none;
@@ -565,7 +581,8 @@ h3 {
 		text-transform: uppercase;
 		font-size: 18px;
 		margin-top: 47px;
-		padding-right: 17px;
+		padding-right:  0;
+		margin-right: 0;
 		letter-spacing: 1px;
 
 		li {
@@ -758,7 +775,7 @@ h3 {
 			#font > #tisa > .regular;
 			color: @color-white;
 			margin-left: @base * 2;
-			font-size: 16px;
+			font-size: 13px;
 			// -webkit-mask-image: -webkit-gradient(linear, 95% 0, 100% 0, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.2))); // Safari 4+, Chrome 2+ // Safari 4+, Chrome 2+
 			// -webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 95%, rgba(0,0,0,0.2) 100%); // Safari 5.1+, Chrome 10+;
 
@@ -878,6 +895,7 @@ h3 {
 		float: left !important;
 		padding-right: 0 !important;
 		margin-right: 0 !important;
+		padding-left: 0 !important;
 	}
 
 	.icon {
@@ -1378,6 +1396,7 @@ h3 {
 
 	.column-full-width {
 		.row {
+			padding-left: @base * 2;
 
 		& > .component-events {
 
@@ -1570,6 +1589,12 @@ h3 {
 	    li {
 		    list-style: none;
 		    list-style-type: none;
+
+		    a.edit {
+		    	position: absolute;
+		    	top: 10;
+		    	right: 10;
+		    }
 	    }
 
 		.entry {
@@ -1601,6 +1626,7 @@ h3 {
 			    &:hover .frequency, &:hover .title {
 					 color: @color-accent;
 			    }
+
 		    }
 	   }
 	}
@@ -2334,7 +2360,6 @@ h3 {
 			h1 {
 
 				.verse {
-					border-top: 1px solid #ccc;
 					padding-top: @base * 2;
 					font-size: 32px;
 					text-transform: uppercase;
@@ -2462,7 +2487,7 @@ h3 {
 		li {
 
 			a {
-				padding: 15px 0;
+				padding: @base 0;
 				margin: 0 5px;
 			}
 		}
@@ -2493,6 +2518,30 @@ h3 {
 // ---------------------
 
 @media (max-width: 480px) {
+
+	.column-full-width {
+
+		.columns-2 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+
+		.columns-3 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+
+		.columns-4 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+	}
 
 }
 
@@ -2665,6 +2714,11 @@ h3 {
 				}
 			}
 		}
+	}
+
+	.component-locations {
+		width: 300px;
+		margin: 0 auto;
 	}
 
 	.column-full-width {

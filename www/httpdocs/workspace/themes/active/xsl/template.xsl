@@ -73,7 +73,7 @@
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
-						<li>
+						<li class="last">
 							<a href="{$root}/20/events/12962/tuesday-sunrise-worship/">
 								<span class="climacon">m</span>
 								<span class="worship">Sunrise Worship - </span>
