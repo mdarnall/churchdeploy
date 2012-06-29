@@ -350,7 +350,7 @@ h3 {
 			h2 {
 				color: #fff;
 				margin-top: 0;
-				margin-bottom: 15px;
+				margin-bottom: @base * 2;
 			}
 
 			p {
@@ -370,12 +370,13 @@ h3 {
 				#font > #proxima > .bold;
 				color: #fff;
 				margin:0;
-				padding: @base * 0.7 0;
+				padding: @base 0;
 				text-align: center;
 				background: darken(desaturate(@color-mast, 25%), 25%);
 
 				a {
 					.small-grey-text;
+					#font > #proxima > .bold;
 					display: inline;
 					color: #fff;
 					padding: 0 5px;
@@ -390,14 +391,20 @@ h3 {
 				border: none;
 				padding: 13px 15px 0 15px;
 				.body-text-serif;
+				#font > #tisa > .italic;
+				margin-bottom: 0;
 			}
 
 			cite {
 				.small-grey-text;
 				color: #fff;
 				display: block;
-				margin-top: @base * 0.5;
+				margin-top: @base;
 				padding: 0 15px 5px 15px;
+				
+				.verse {
+    				color: @color-accent;
+				}
 			}
 		}
 	}
