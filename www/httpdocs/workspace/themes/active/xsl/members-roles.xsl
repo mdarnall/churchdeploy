@@ -102,7 +102,7 @@
 							</xsl:variable>
 							<li>
 								<xsl:call-template name="class-rows" />
-								<a title="Email {$name}">
+								<a title="Email {$name}" class="mailto">
 									<xsl:attribute name="href">
 										<xsl:text disable-output-escaping="yes">mailto:</xsl:text>
 										<xsl:value-of select="$email" />
