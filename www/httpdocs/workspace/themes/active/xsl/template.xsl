@@ -135,11 +135,13 @@
 									<xsl:when test="@id = $pt1 or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
 										<xsl:call-template name="class-rows">
 											<xsl:with-param name="nav" select="true()" />
+											<xsl:with-param name="clearfix" select="false()" />
 											<xsl:with-param name="class" select="'active'" />
 										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:call-template name="class-rows">
+											<xsl:with-param name="clearfix" select="false()" />
 											<xsl:with-param name="nav" select="true()" />
 										</xsl:call-template>
 									</xsl:otherwise>
