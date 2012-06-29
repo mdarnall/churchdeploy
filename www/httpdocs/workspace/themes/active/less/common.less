@@ -575,9 +575,11 @@ h3 {
 
 .header {
 
-	.nav {
+	.main {
 		#font > #proxima > .regular;
 		float: right;
+		position: relative;
+		display: block;
 		text-transform: uppercase;
 		font-size: 18px;
 		margin-top: 47px;
@@ -587,7 +589,7 @@ h3 {
 
 		li {
 			margin-right: 10px;
-
+			display: inline;
 			&.active {
 
 				a {
@@ -609,6 +611,7 @@ h3 {
 			}
 
 			a {
+				display: inline;
 				color: #ffffff;
 
 				&:hover {
@@ -630,6 +633,7 @@ h3 {
 .column-right {
 
 	.more {
+		position: relative;
 		display: block;
 		background: darken(@color-grey-accent, 33.5%);
 		#font > #proxima > .bold;
@@ -637,9 +641,12 @@ h3 {
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: #fff !important;
-		height: @base * 5;
 		line-height: @base * 5;
-		padding: 0 0 0 @base * 1.5;
+		padding: 0;
+
+		span {
+			padding-left: @base * 1.5;
+		}
 
 		&:hover {
 			background: darken(@color-grey-accent, 40%);
@@ -1810,7 +1817,7 @@ h3 {
 			padding: 0 0 0 @base * 2;
 			position: relative;
 
-			a {
+			.mailto {
 				min-height: 50px;
 				background: @color-grey-accent;
 				padding: @base * 1.5 0 @base * 1.5 @base * 1.5;
@@ -1881,7 +1888,7 @@ h3 {
 
 			&.last {
 
-				a {
+				.mailto {
 					border-bottom: none;
 				}
 			}
