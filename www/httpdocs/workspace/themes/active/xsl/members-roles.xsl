@@ -72,7 +72,6 @@
 													<xsl:value-of select="$email" />
 												</a>
 											</span>
-											<span class="divider">|</span>
 											<span class="phone"> <span class="icon">:</span><xsl:value-of select="$phone" /></span>
 										</div>
 										<xsl:value-of select="member/item/about" disable-output-escaping="yes" />
