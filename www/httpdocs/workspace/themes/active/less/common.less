@@ -1733,9 +1733,12 @@ h3 {
 
 			h3 {
 				.small-serif-header;
+				display: inline;
+				border-bottom: 1px solid #ccc;
 				text-transform: none;
 				font-weight: normal;
 				margin: 0 0 @base * 0.5 0;
+				padding: 0 0 @base 0;
 			}
 
 			h4 {
@@ -1747,16 +1750,23 @@ h3 {
     			text-align: center;
     			margin-bottom: @base * 1.5;
 
-    			span, a {
+    			span {
         			color: #999;
+        			display: block;
+        			margin-bottom: @base * 0.5;
+        			
+        			.icon {
+            			display: inline;
+            			color: #ccc;
+        			}
     			}
-
-    			a:hover {
-        			color: @color-accent;
-    			}
-
-    			.icon {
-        			color: #ccc;
+    			
+    			a {
+        			color: #999;
+        			
+        			&:hover {
+            			color: @color-accent;
+        			}
     			}
 			}
 		}

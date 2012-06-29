@@ -72,9 +72,6 @@
 													<xsl:value-of select="$email" />
 												</a>
 											</span>
-											<span class="phone"> <span class="icon">:</span><xsl:value-of select="$phone" /></span>
-
-											<br />
 											<!-- <span class="divider">|</span> -->
 											<span class="phone">
 												<!-- <span class="icon">:</span> -->
