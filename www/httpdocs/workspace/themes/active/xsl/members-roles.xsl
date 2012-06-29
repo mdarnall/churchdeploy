@@ -72,16 +72,15 @@
 													<xsl:value-of select="$email" />
 												</a>
 											</span>
-<<<<<<< HEAD
 											<span class="phone"> <span class="icon">:</span><xsl:value-of select="$phone" /></span>
-=======
+
 											<br />
 											<!-- <span class="divider">|</span> -->
 											<span class="phone">
 												<!-- <span class="icon">:</span> -->
 												<xsl:value-of select="$phone" />
 											</span>
->>>>>>> ed4557f9494b6ce87eee0c9db55d358f8ccddbdc
+
 										</div>
 										<xsl:value-of select="member/item/about" disable-output-escaping="yes" />
 									</div>
