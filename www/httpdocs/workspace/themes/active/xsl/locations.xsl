@@ -31,7 +31,7 @@
 					<xsl:text>,</xsl:text>
 					<xsl:value-of select="longitude" />
 				</xsl:variable>
-				<div>
+				<div class="wrapper">
 					<xsl:call-template name="class-rows" />
 					<xsl:if test="string-length(longitude) and string-length(latitude) or string-length(address)">
 						<div class="map">

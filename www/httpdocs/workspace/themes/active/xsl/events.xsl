@@ -106,9 +106,10 @@
 									</div>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:call-template name="events-pagination">
+									<h3>Upcoming Events</h3>
+									<!-- <xsl:call-template name="events-pagination">
 										<xsl:with-param name="entries" select="$entries" />
-									</xsl:call-template>
+									</xsl:call-template> -->
 								</xsl:otherwise>
 							</xsl:choose>
 						</div>
@@ -194,10 +195,10 @@
 								</div>
 								<xsl:if test="$single">
 									<div class="span4 column-right">
-										<xsl:call-template name="component-locations">
+										<!-- <xsl:call-template name="component-locations">
 											<xsl:with-param name="position" select="'column-right'" />
 											<xsl:with-param name="entries" select="locations/item" />
-										</xsl:call-template>
+										</xsl:call-template> -->
 										<xsl:call-template name="component-members-roles">
 											<xsl:with-param name="position" select="'column-right'" />
 											<xsl:with-param name="entries" select="member-role/item" />
@@ -248,6 +249,7 @@
 					<xsl:if test="$position = 'column-full-width' and not($single)">
 						<div class="span4 column-right">
 							<div class="component component-events-recurring">
+								<h3>Bible Studies</h3>
 								<ul>
 									<xsl:for-each select="//events-recurring-all-entries-filtered/entry">
 										<xsl:call-template name="events-entry-column-right">
