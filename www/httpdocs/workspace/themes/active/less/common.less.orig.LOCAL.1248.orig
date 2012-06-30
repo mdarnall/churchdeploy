@@ -320,6 +320,7 @@ h3 {
 	margin-right: @base;
 }
 
+
 .divider {
 	margin: 0 10px;
 }
@@ -341,7 +342,6 @@ h3 {
 						position: relative;
 						top: -5px;
 						float: left;
-						z-index: 1000;
 					}
 
 					.main {
@@ -393,7 +393,9 @@ h3 {
 					}
 
 			}
+
 		}
+
 	}
 
 	.row {
@@ -1390,7 +1392,6 @@ h3 {
 .profile {
 
 	.column-full-width {
-
 		.row {
 			padding-left: @base * 2;
 
@@ -1400,7 +1401,13 @@ h3 {
 				margin: 15px 0 30px 0;
 			}
 
+<<<<<<< HEAD
 			> .entries {
+=======
+
+
+			& > .entries {
+>>>>>>> d202a1fd1b5280ce520e6d0fb7f7096acc098f5a
 
 				.entry {
 					border: none;
@@ -1584,18 +1591,17 @@ h3 {
 		    list-style: none;
 		    list-style-type: none;
 
-			.edit {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-			}
-		}
+		    a.edit {
+		    	position: absolute;
+		    	top: 10;
+		    	right: 10;
+		    }
+	    }
 
 		.entry {
-			border-bottom: 1px solid #ccc;
-			padding: @base * 2 0 @base * 2 @base;
-			margin: 0;
-			position: relative;
+		    border-bottom: 1px solid #ccc;
+		    padding: @base * 2 0 @base * 2 @base;
+		    margin: 0;
 
 		    &.first {
 			    padding-top: 5px;
@@ -1622,13 +1628,7 @@ h3 {
 					 color: @color-accent;
 			    }
 
-			}
-
-			.edit {
-				position: absolute;
-				bottom: 10px;
-				right: 10px;
-			}
+		    }
 	   }
 	}
 }
@@ -2685,7 +2685,9 @@ h3 {
 					}
 				}
 			}
+
 		}
+
 	}
 
 	.navbar-inner {
@@ -2747,6 +2749,7 @@ h3 {
 					color: #fff;
 				}
 			}
+
 		}
 	}
 
@@ -2882,7 +2885,9 @@ h3 {
 					margin: 0 5px;
 				}
 			}
+
 		}
+
 	}
 
 	.twitter {
@@ -2941,33 +2946,6 @@ h3 {
 		height: 200px !important;
 	}
 }
-
-.layout-ministry {
-
-	.component-images {
-
-		img {
-			width: 940px !important;
-			height: 378px !important;
-		}
-
-	}
-
-}
-
-.layout-missions {
-
-	.component-images {
-
-		img {
-			width: 940px !important;
-			height: 529px !important;
-		}
-
-	}
-
-}
-
 // tablets and below
 @media (max-width: 979px)  {
 
@@ -2976,32 +2954,6 @@ h3 {
 			width: 228px !important;
 			height: 152px !important;
 		}
-	}
-
-	.layout-ministry {
-
-		.component-images {
-
-			img {
-				width: 724px !important;
-				height: 291px !important;
-			}
-
-		}
-
-	}
-
-	.layout-missions {
-
-		.component-images {
-
-			img {
-				width: 724px !important;
-				height: 407px !important;
-			}
-
-		}
-
 	}
 
 }
@@ -3014,32 +2966,6 @@ h3 {
 			width: 352px !important;
 			height: 235px !important;
 		}
-	}
-
-	.layout-ministry {
-
-		.component-images {
-
-			img {
-				width: 352px !important;
-				height: 141px !important;
-			}
-
-		}
-
-	}
-
-	.layout-missions {
-
-		.component-images {
-
-			img {
-				width: 352px !important;
-				height: 198px !important;
-			}
-
-		}
-
 	}
 
 }
