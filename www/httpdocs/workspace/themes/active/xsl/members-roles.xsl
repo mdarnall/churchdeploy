@@ -172,7 +172,7 @@
 					<xsl:value-of select="$filename" disable-output-escaping="yes" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:text disable-output-escaping="yes">anonymous-4fe3b032b38d3.jpg</xsl:text>
+					<xsl:text disable-output-escaping="yes">anonymous-4fef5a675fd64.jpg</xsl:text>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:attribute>
