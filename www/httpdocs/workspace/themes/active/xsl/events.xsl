@@ -195,10 +195,10 @@
 								</div>
 								<xsl:if test="$single">
 									<div class="span4 column-right">
-										<!-- <xsl:call-template name="component-locations">
+										<xsl:call-template name="component-locations">
 											<xsl:with-param name="position" select="'column-right'" />
-											<xsl:with-param name="entries" select="locations/item" />
-										</xsl:call-template> -->
+											<xsl:with-param name="entries" select="location/item" />
+										</xsl:call-template>
 										<xsl:call-template name="component-members-roles">
 											<xsl:with-param name="position" select="'column-right'" />
 											<xsl:with-param name="entries" select="member-role/item" />
