@@ -223,6 +223,42 @@
 <xsl:template name="template-footer-inside-container">
 
 	<xsl:if test="not($pt1) or $pt1 = 43">
+		<div class="component-teachings">
+			<h3>Recent teachings</h3>
+			<div class="row teachings-front">
+			    <xsl:for-each select="//teachings-3-latest/entry">
+	            	<div class="span4 recent">
+						<a>
+							<xsl:call-template name="url-teachings" />
+							<xsl:call-template name="teaching-poster-or-default">
+								<xsl:with-param name="poster" select="poster" />
+							</xsl:call-template>
+						</a>
+						<a>
+							<xsl:call-template name="url-teachings" />
+							<h4>
+								<xsl:value-of select="title" disable-output-escaping="yes" />
+							</h4>
+						</a>
+						<div class="meta">
+							<p>
+								<xsl:call-template name="date-teaching">
+									<xsl:with-param name="date" select="date/date/start/@iso" />
+								</xsl:call-template>
+							</p>
+						</div>
+						<div class="description">
+							<xsl:call-template name="truncate">
+								<xsl:with-param name="node" select="description" />
+								<xsl:with-param name="length" select="90" />
+							</xsl:call-template>
+						</div>
+					</div>
+				</xsl:for-each>
+			</div>
+		</div>
+	</xsl:if>
+	<xsl:if test="not($pt1) or $pt1 = 43">
 		<div class="component-series">
 			<h3>Series</h3>
 			<div class="row">

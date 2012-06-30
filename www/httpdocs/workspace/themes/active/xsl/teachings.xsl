@@ -109,7 +109,7 @@
 						<div class="span8">
 							<h3>Recent</h3>
 							<xsl:variable name="items-per-row" select="2" />
-							<xsl:for-each select="//teachings-recent-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 3]">
+							<xsl:for-each select="//teachings-3-latest/entry[position() mod $items-per-row = 1 and position() &lt; 3]">
 								<div class="row">
 									<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
 										<div class="span4 recent">
