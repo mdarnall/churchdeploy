@@ -47,6 +47,12 @@
 
 	#proxima {
 
+		// .light() {
+			//  font-family: "proxima-nova-light", "Helvetica Neue", Arial, Helvetica, sans-serif;
+			//  font-style: normal;
+			//  font-weight: normal;
+		//  }
+
 		.regular() {
 			font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
 			font-style: normal;
@@ -168,9 +174,9 @@
 
 	&.nav-stacked {
 
-		> li {
+		& > li {
 
-			> a {
+			& > a {
 				border: none;
 			}
 		}
@@ -182,9 +188,9 @@
 	.nav-pills {
 		margin-right: 5px;
 
-		> li {
+		& > li {
 
-			> a {
+			& > a {
 				padding: @base * .5 0;
 				margin: 0 0 0 @base * 2.5;
 				.border-radius(0);
@@ -215,7 +221,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.nav .nav-header {
 	#font > #proxima > .bold;
 }
 
@@ -458,7 +465,7 @@ h3 {
 				padding: 0 15px 5px 15px;
 
 				.verse {
-    				color: @color-accent;
+					color: @color-accent;
 				}
 			}
 		}
@@ -728,17 +735,16 @@ h3 {
 		}
 
 		.nav-header {
-			#font > #proxima > .bold;
 			margin: 0;
 			padding: 0;
 		}
 
 		.nav-list {
 
-			> li {
+			& > li {
 				margin: @base * .5 0;
 
-				> a {
+				& > a {
 					padding: 0;
 
 					&:hover {
@@ -747,9 +753,9 @@ h3 {
 				}
 			}
 
-			> .active {
+			& > .active {
 
-				> a {
+				& > a {
 					color: @color-red;
 					text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 				}
@@ -853,7 +859,7 @@ h3 {
 }
 
 .spotify {
-    border-top: 1px solid #ccc;
+	border-top: 1px solid #ccc;
 	color: #999;
 	font-size: 14px;
 	padding: @base * 1.5 0 @base 0;
@@ -1061,6 +1067,14 @@ h3 {
 	}
 }
 
+.featured {
+
+	img {
+		width: 300px;
+		height: 200px;
+	}
+}
+
 //-------------------------------------------------------------------
 // components--------------------------------------------------------
 //-------------------------------------------------------------------
@@ -1092,7 +1106,7 @@ h3 {
 
 	.column-right {
 
-		> .component-events {
+		& > .component-events {
 
 			.entry {
 
@@ -1129,7 +1143,7 @@ h3 {
 
 	.column-right {
 
-		> .component-locations {
+		& > .component-locations {
 			margin-top: @base * 4;
 		}
 	}
@@ -1139,7 +1153,7 @@ h3 {
 
 .column-full-width {
 
-	> .component-text {
+	& > .component-text {
 
 		h2 {
 			text-transform: uppercase;
@@ -1150,7 +1164,7 @@ h3 {
 
 .column-center {
 
-	> .component-text {
+	& > .component-text {
 
 		h2 {
 			text-transform: none;
@@ -1163,7 +1177,7 @@ h3 {
 
 .column-right {
 
-	> .component-downloads {
+	& > .component-downloads {
 
 		.entry {
 			background: @color-grey-accent;
@@ -1238,7 +1252,9 @@ h3 {
 .pageid-20 {
 
 	&.profile {
+
 		.component-events {
+
 			.entry {
 				margin-bottom: 0;
 			}
@@ -1257,9 +1273,9 @@ h3 {
 .column-full-width,
 .column-center {
 
-    .row {
+	.row {
 
-	> .component-events {
+	& > .component-events {
 
 		.back {
 			margin: 30px 0 30px 0;
@@ -1383,7 +1399,7 @@ h3 {
 				}
 			}
 		}
-    }
+	}
 	}
 }
 
@@ -1394,13 +1410,13 @@ h3 {
 		.row {
 			padding-left: @base * 2;
 
-		> .component-events {
+		& > .component-events {
 
 			.back {
 				margin: 15px 0 30px 0;
 			}
 
-			> .entries {
+			& > .entries {
 
 				.entry {
 					border: none;
@@ -1445,7 +1461,7 @@ h3 {
 
 .column-right {
 
-	> .component-events {
+	& > .component-events {
 
 		.entries {
 			list-style: none;
@@ -1570,7 +1586,7 @@ h3 {
 
 .component-events-recurring {
 
-    margin-bottom: @base * 2;
+	margin-bottom: @base * 2;
 
 	ul {
 		list-style: none;
@@ -1580,9 +1596,9 @@ h3 {
 		padding: 15px;
 
 
-	    li {
-		    list-style: none;
-		    list-style-type: none;
+		li {
+			list-style: none;
+			list-style-type: none;
 
 			.edit {
 				position: absolute;
@@ -1597,30 +1613,30 @@ h3 {
 			margin: 0;
 			position: relative;
 
-		    &.first {
-			    padding-top: 5px;
-		    }
+			&.first {
+				padding-top: 5px;
+			}
 
-		    &.last {
-			    border-bottom: none;
-			    padding-bottom: 5px;
-		    }
+			&.last {
+				border-bottom: none;
+				padding-bottom: 5px;
+			}
 
-		    a {
-			    .title {
-				    .body-text-serif;
-				    color: #303030;
-				    margin-bottom: 0;
-			    }
-			    .frequency {
-				    .small-grey-text;
-				    margin: 0;
-				    text-transform: none;
-			    }
+			a {
+				.title {
+					.body-text-serif;
+					color: #303030;
+					margin-bottom: 0;
+				}
+				.frequency {
+					.small-grey-text;
+					margin: 0;
+					text-transform: none;
+				}
 
-			    &:hover .frequency, &:hover .title {
+				&:hover .frequency, &:hover .title {
 					 color: @color-accent;
-			    }
+				}
 
 			}
 
@@ -1635,9 +1651,9 @@ h3 {
 
 .layout-events {
 
-    .component-events-recurring {
-        margin-top: @base * 3.2;
-    }
+	.component-events-recurring {
+		margin-top: @base * 3.2;
+	}
 
 }
 
@@ -1742,7 +1758,7 @@ h3 {
 
 .column-full-width {
 
-	> .component-members-roles {
+	& > .component-members-roles {
 
 		.header {
 			text-align: center;
@@ -1774,23 +1790,23 @@ h3 {
 			}
 
 			.contact-info {
-    			text-align: center;
-    			margin: @base * 1.5 0;
+				text-align: center;
+				margin: @base * 1.5 0;
 
-    			span {
-        			color: #999;
-        			display: block;
-        			margin: 0 0 @base * 0.5 0;
+				span {
+					color: #999;
+					display: block;
+					margin: 0 0 @base * 0.5 0;
 
-    			}
+				}
 
-    			a {
-        			color: #999;
+				a {
+					color: #999;
 
-        			&:hover {
-            			color: @color-accent;
-        			}
-    			}
+					&:hover {
+						color: @color-accent;
+					}
+				}
 			}
 		}
 
@@ -1804,7 +1820,7 @@ h3 {
 
 .column-right {
 
-	> .component-members-roles {
+	& > .component-members-roles {
 
 		.entry {
 			background: @color-grey-accent;
@@ -2112,7 +2128,7 @@ h3 {
 		}
 
 		.meta {
-            font-size: 13px;
+			font-size: 13px;
 		}
 
 	}
@@ -2160,10 +2176,6 @@ h3 {
 	.description {
 		padding-right: 60px;
 		margin: 10px 0;
-
-		p {
-			.body-text-serif;
-		}
 	}
 
 	.actions {
@@ -2393,7 +2405,7 @@ h3 {
 
 .column-full-width {
 
-	> .component-teachings {
+	& > .component-teachings {
 
 		.individual {
 
@@ -2626,7 +2638,7 @@ h3 {
 					}
 
 					a {
-    				    padding: @base * 1.2 0;
+						padding: @base * 1.2 0;
 						.info {
 							font-size: 13px;
 						}
@@ -2640,50 +2652,28 @@ h3 {
 
 	}
 
+	.header {
+
+		.nav {
+			margin-top: @base * 2;
+			margin-bottom: 0;
+			padding: 0 0;
+		}
+
+		.logo {
+			margin-bottom: 0;
+		}
+	}
+
 	.mast {
 		padding-top: @base * 9.7;
 		padding-bottom: 20px;
 
-		.container {
+		.row {
+			margin-top: 0;
 
-			.row {
-				margin-top: 0;
-
-				&.introduction {
-					margin: 40px 0;
-				}
-
-				.span12 {
-
-					.logo {
-						display: block;
-						float: none;
-						margin: 0 auto 30px auto;
-						width: 120px;
-						height: 120px;
-					}
-
-					.main {
-						margin-top: @base * 2;
-						margin-bottom: 0;
-						padding: 0 0;
-						text-align: center;
-						display: block;
-						float: none;
-						padding: 0 75px;
-
-						li {
-							float: none;
-							display: inline;
-
-							a {
-								display: inline-block;
-								padding: 15px 0;
-								margin: 0 5px;
-							}
-						}
-					}
-				}
+			&.introduction {
+				margin: 40px 0;
 			}
 		}
 	}
@@ -2725,13 +2715,13 @@ h3 {
 				position: relative;
 				left: -5px;
 				top: -5px;
+				padding-right: @base * 2;
+				padding-left: @base * 2;
 				display: block;
 				width: 100%;
-				padding-right: @base * 2;
 
 				.icon {
 					color: darken(desaturate(@color-mast, 20%), 40%);
-					margin-left: @base * 2;
 				}
 
 				input {
@@ -2750,7 +2740,34 @@ h3 {
 		}
 	}
 
+	.header {
 
+		.logo  {
+			display: block;
+			float: none;
+			margin: 0 auto 30px auto;
+			width: 120px;
+			height: 120px;
+		}
+
+		.nav {
+			text-align: center;
+			display: block;
+			float: none;
+			padding: 0 75px;
+
+			li {
+				float: none;
+				display: inline;
+
+				a {
+					display: inline-block;
+					padding: 15px 0;
+					margin: 0 5px;
+				}
+			}
+		}
+	}
 
 	.component-locations {
 		width: 300px;
@@ -2779,10 +2796,10 @@ h3 {
 		line-height: 1.7;
 
 		.facebook {
-    		a {
-    		  line-height: 1.7;
-        		float: none;
-    		}
+			a {
+			  line-height: 1.7;
+				float: none;
+			}
 		}
 	}
 }
@@ -2792,35 +2809,26 @@ h3 {
 
 @media (min-width: 768px) and (max-width: 979px) {
 
+	.header {
+
+		.nav {
+			margin-top: 20px;
+			margin-bottom: 0;
+			padding: 0 0;
+		}
+
+		.logo {
+			margin-bottom: 0;
+		}
+	}
 
 	.mast {
 		padding-bottom: 20px;
 
-		.container {
-
-			.row {
-				margin-top: 0;
-
-				.span12 {
-
-					.logo {
-						margin-bottom: 0;
-					}
-
-					.main {
-						margin-top: 20px;
-						margin-bottom: 0;
-						padding: 0 0;
-					}
-
-				}
-			}
-
+		.row {
+			margin-top: 0;
 		}
-
 	}
-
-
 
 	.component-teachings {
 
@@ -2836,24 +2844,24 @@ h3 {
 	.layout-ministry, .layout-events {
 
 	   .column-center, .span8 {
-	       float:none;
-    	   width: 98%;
+		   float:none;
+		   width: 98%;
 	   }
 
-	   	.column-right {
-        	float: none;
-        	width: 98%;
-        	margin-left: 0;
+		.column-right {
+			float: none;
+			width: 98%;
+			margin-left: 0;
 
-        	.component-member-roles {
-            	display: block;
-        	}
+			.component-member-roles {
+				display: block;
+			}
 
-        	.component-locations {
-                display: block;
-        	}
+			.component-locations {
+				display: block;
+			}
 
-    	}
+		}
 
 	}
 
@@ -2864,10 +2872,9 @@ h3 {
 
 @media (min-width: 980px) {
 
+	.header {
 
-	.mast {
-
-		.main {
+		.nav {
 			text-align: right;
 			display: block;
 			float: none;
@@ -2932,52 +2939,3 @@ h3 {
 @media (min-width: 1200px) {
 
 }
-
-// RESPONSIVE IMAGES
-
-.featured, .component-teachings, .component-series {
-	img {
-		width: 300px !important;
-		height: 200px !important;
-	}
-}
-// tablets and below
-@media (max-width: 979px)  {
-
-	.featured, .component-teachings, .component-series {
-		img {
-			width: 228px !important;
-			height: 152px !important;
-		}
-	}
-
-}
-
-// up to landscape phone
-@media (max-width: 480px)  { 
-
-	.featured, .component-teachings, .component-series {
-		img {
-			width: 352px !important;
-			height: 235px !important;
-		}
-	}
-
-}
-// landscape phone to small desktop & portrait tablet
-@media (max-width: 767px)  {
-
-
-
-}
-// portait tablet to default desktop
-@media (min-width: 768px) and (max-width: 979px)  {
-
-
-
-}
-// default desktop
-@media (min-width: 980px)  {
-
-}
-
