@@ -47,12 +47,6 @@
 
 	#proxima {
 
-		// .light() {
-			//  font-family: "proxima-nova-light", "Helvetica Neue", Arial, Helvetica, sans-serif;
-			//  font-style: normal;
-			//  font-weight: normal;
-		//  }
-
 		.regular() {
 			font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
 			font-style: normal;
@@ -174,9 +168,9 @@
 
 	&.nav-stacked {
 
-		& > li {
+		> li {
 
-			& > a {
+			> a {
 				border: none;
 			}
 		}
@@ -188,9 +182,9 @@
 	.nav-pills {
 		margin-right: 5px;
 
-		& > li {
+		> li {
 
-			& > a {
+			> a {
 				padding: @base * .5 0;
 				margin: 0 0 0 @base * 2.5;
 				.border-radius(0);
@@ -221,8 +215,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.nav .nav-header {
+h6 {
 	#font > #proxima > .bold;
 }
 
@@ -735,16 +728,17 @@ h3 {
 		}
 
 		.nav-header {
+			#font > #proxima > .bold;
 			margin: 0;
 			padding: 0;
 		}
 
 		.nav-list {
 
-			& > li {
+			> li {
 				margin: @base * .5 0;
 
-				& > a {
+				> a {
 					padding: 0;
 
 					&:hover {
@@ -753,9 +747,9 @@ h3 {
 				}
 			}
 
-			& > .active {
+			> .active {
 
-				& > a {
+				> a {
 					color: @color-red;
 					text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 				}
@@ -1106,7 +1100,7 @@ h3 {
 
 	.column-right {
 
-		& > .component-events {
+		> .component-events {
 
 			.entry {
 
@@ -1143,7 +1137,7 @@ h3 {
 
 	.column-right {
 
-		& > .component-locations {
+		> .component-locations {
 			margin-top: @base * 4;
 		}
 	}
@@ -1153,7 +1147,7 @@ h3 {
 
 .column-full-width {
 
-	& > .component-text {
+	> .component-text {
 
 		h2 {
 			text-transform: uppercase;
@@ -1164,7 +1158,7 @@ h3 {
 
 .column-center {
 
-	& > .component-text {
+	> .component-text {
 
 		h2 {
 			text-transform: none;
@@ -1177,7 +1171,7 @@ h3 {
 
 .column-right {
 
-	& > .component-downloads {
+	> .component-downloads {
 
 		.entry {
 			background: @color-grey-accent;
@@ -1275,7 +1269,7 @@ h3 {
 
 	.row {
 
-	& > .component-events {
+	> .component-events {
 
 		.back {
 			margin: 30px 0 30px 0;
@@ -1410,13 +1404,13 @@ h3 {
 		.row {
 			padding-left: @base * 2;
 
-		& > .component-events {
+		> .component-events {
 
 			.back {
 				margin: 15px 0 30px 0;
 			}
 
-			& > .entries {
+			> .entries {
 
 				.entry {
 					border: none;
@@ -1461,7 +1455,7 @@ h3 {
 
 .column-right {
 
-	& > .component-events {
+	> .component-events {
 
 		.entries {
 			list-style: none;
@@ -1758,7 +1752,7 @@ h3 {
 
 .column-full-width {
 
-	& > .component-members-roles {
+	> .component-members-roles {
 
 		.header {
 			text-align: center;
@@ -1820,7 +1814,7 @@ h3 {
 
 .column-right {
 
-	& > .component-members-roles {
+	> .component-members-roles {
 
 		.entry {
 			background: @color-grey-accent;
@@ -2405,7 +2399,7 @@ h3 {
 
 .column-full-width {
 
-	& > .component-teachings {
+	> .component-teachings {
 
 		.individual {
 
