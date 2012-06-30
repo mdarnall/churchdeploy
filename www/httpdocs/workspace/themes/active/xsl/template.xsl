@@ -346,6 +346,8 @@
 					       <a href="{$root}/13563/our-website/"><strong>Built with Church Deploy</strong></a>
 					       <span class="divider">|</span>
 					       <a href="{$root}/13667/api/"><strong>API</strong></a>
+					       <span class="divider">|</span>
+					       <a href="mailto:web@atheycreek.com?subject=ACCF Web Support"><strong>Website Support</strong></a>
 						   <br />
 							<xsl:text>© </xsl:text>
 							<xsl:value-of select="$this-year" />
