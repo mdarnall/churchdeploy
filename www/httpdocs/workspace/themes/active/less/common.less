@@ -244,9 +244,9 @@ blockquote {
 }
 
 body {
+	#font > #proxima > .regular;
 	background-image: none;
 	background: #fdfdfd;
-	#font > #proxima > .regular;
 	color: #303030;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -337,61 +337,61 @@ h3 {
 			.span12 {
 				margin-left: 0;
 
-					.logo {
-						position: relative;
-						top: -5px;
-						float: left;
-						z-index: 1000;
-					}
+				.logo {
+					position: relative;
+					top: -5px;
+					float: left;
+					z-index: 1000;
+				}
 
-					.main {
-						#font > #proxima > .regular;
-						float: right;
-						position: relative;
-						display: block;
-						text-transform: uppercase;
-						font-size: 18px;
-						margin-top: 47px;
-						padding-right:  0;
-						margin-right: 0;
-						letter-spacing: 1px;
-						z-index: 10;
+				.main {
+					#font > #proxima > .regular;
+					float: right;
+					position: relative;
+					display: block;
+					text-transform: uppercase;
+					font-size: 18px;
+					margin-top: 47px;
+					padding-right:  0;
+					margin-right: 0;
+					letter-spacing: 1px;
+					z-index: 10;
 
-						li {
-							margin-right: 10px;
-							display: inline;
-							&.active {
+					li {
+						margin-right: 10px;
+						display: inline;
 
-								a {
-									background: none;
-									color: @color-accent;
-
-									&:hover {
-										color: darken(@color-accent, 10%);
-									}
-								}
-							}
-
-							&.last {
-								margin-right: 0;
-
-								a {
-									margin-right: 0;
-								}
-							}
+						&.active {
 
 							a {
-								display: inline;
-								color: #ffffff;
+								background: none;
+								color: @color-accent;
 
 								&:hover {
-									background: none;
-									color: darken(@color-mast, 35%);
+									color: darken(@color-accent, 10%);
 								}
 							}
 						}
-					}
 
+						&.last {
+							margin-right: 0;
+
+							a {
+								margin-right: 0;
+							}
+						}
+
+						a {
+							display: inline;
+							color: #ffffff;
+
+							&:hover {
+								background: none;
+								color: darken(@color-mast, 35%);
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -431,6 +431,7 @@ h3 {
 
 				a {
 					.small-grey-text;
+
 					#font > #proxima > .bold;
 					display: inline;
 					color: #fff;
@@ -445,7 +446,9 @@ h3 {
 			blockquote {
 				border: none;
 				padding: 13px 15px 0 15px;
+
 				.body-text-serif;
+
 				#font > #tisa > .italic;
 				margin-bottom: 0;
 			}
@@ -470,9 +473,10 @@ h3 {
 }
 
 .alert {
+	.box-shadow(0 1px 2px rgba(0,0,0,0.1));
+
 	border: 1px solid lighten(#468847, 25%);
 	letter-spacing: 1px;
-	.box-shadow(0 1px 2px rgba(0,0,0,0.1));
 	line-height: 1.2;
 
 	&.alertLive {
@@ -499,19 +503,21 @@ h3 {
 	}
 
 	.navbar-inner {
+		.box-shadow(none);
+
+		#font > #proxima > .bold;
 		background: darken(desaturate(@color-mast, 10%), 5%);
 		filter: none;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		#font > #proxima > .bold;
 		font-size: 12px;
-		.box-shadow(none);
 
 		ul.nav {
 
 			li {
 
 				&.last {
+
 					a {
 						padding-right: 0;
 					}
@@ -530,11 +536,12 @@ h3 {
 	}
 
 	.btn-navbar {
+		.border-radius(0%);
+
 		background: darken(desaturate(@color-mast, 10%), 20%);
 		background-image: none;
 		filter: none;
 		border: none;
-		.border-radius(0%);
 
 		&:hover {
 			background: darken(desaturate(@color-mast, 10%), 40%);
@@ -628,10 +635,10 @@ h3 {
 .column-right {
 
 	.more {
+		#font > #proxima > .bold;
 		position: relative;
 		display: block;
 		background: darken(@color-grey-accent, 33.5%);
-		#font > #proxima > .bold;
 		font-size: 12px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
@@ -655,6 +662,7 @@ h3 {
 	font-size: 12px;
 	text-transform: uppercase;
 	margin: @base * 4 0 @base * 2 0;
+
 	a {
 		color: #999;
 		background: #f3f3f0;
@@ -804,7 +812,7 @@ h3 {
 	}
 
 	.baseline {
-		background: #FDFDFD;
+		background: #fdfdfd;
 		position: relative;
 		left: 0;
 		bottom: -20px;
@@ -840,34 +848,30 @@ h3 {
 
 			a {
 
-			  strong {
-
-				 #font > #proxima > .bold;
-
-			  }
-
+				strong {
+					#font > #proxima > .bold;
+				}
 			}
-
 		}
 	}
 }
 
 .spotify {
+	#font > #proxima > .regular;
+
 	border-top: 1px solid #ccc;
 	color: #999;
 	font-size: 14px;
 	padding: @base * 1.5 0 @base 0;
 	margin-bottom: @base * 2;
 
-	#font > #proxima > .regular;
-
 	.links {
 		margin-left: 10px;
 	}
 
 	a {
-		color: #6AAD2E;
 		#font > #proxima > .bold;
+		color: #6AAD2E;
 
 		&:hover {
 			color: darken(#6AAD2E, 10%);
@@ -911,6 +915,8 @@ h3 {
 	}
 
 	input {
+		.border-radius(0 0 0 0);
+
 		#font > #proxima > .regular;
 		color: darken(desaturate(@color-mast, 20%), 40%);
 		background: darken(desaturate(@color-mast, 10%), 5%);
@@ -918,7 +924,6 @@ h3 {
 		border: none;
 		margin: 0 0 0 0;
 		padding: 12px 6px;
-		.border-radius(0 0 0 0);
 
 		&:focus {
 			border-bottom: 2px solid darken(desaturate(@color-mast, 20%), 20%);
@@ -1038,12 +1043,12 @@ h3 {
 	text-align: center;
 
 	input {
+		#font > #tisa > .regular;
 		border: 5px solid #e5e5e3;
 		width: 81%;
 		line-height: 25px;
 		height: 40px;
 		padding: 10px 15px 10px 85px;
-		#font > #tisa > .regular;
 		font-size: 25px;
 		border: solid @base #e5e5e3;
 		background: url('../img/search.gif') no-repeat left center;
@@ -1186,10 +1191,10 @@ h3 {
 				}
 
 				.date {
+					#font > #proxima > .regular;
 					width: 48px;
 					margin: 0 15px 0 -10px;
 					text-align: center;
-					#font > #proxima > .regular;
 
 					.month {
 						display: block;
@@ -1259,131 +1264,128 @@ h3 {
 
 	.row {
 
-	> .component-events {
+		> .component-events {
 
-		.back {
-			margin: 30px 0 30px 0;
+			.back {
+				margin: 30px 0 30px 0;
 
-			.link-large {
-				background: #e9e9e9;
-				color: #999;
+				.link-large {
+					background: #e9e9e9;
+					color: #999;
 
-				&:hover {
-					background: #ccc;
-					color: #777;
-					text-decoration: none;
+					&:hover {
+						background: #ccc;
+						color: #777;
+						text-decoration: none;
+					}
 				}
 			}
-		}
 
-		.entries {
+			.entries {
 
-			.entry {
-				background: #fdfdfd;
-				border: @base solid #e9e9e9;
-				padding: 0;
-				position: relative;
-
-				&.even {
-					background: #fff;
-				}
-
-				a {
-					.border-radius(0 0 0 0);
-				}
-
-				.description {
-					padding: 0 @base * 1.5;
-				}
-
-				.edit {
-					//.edit-defaults;
-					//top: @base;
-					//left: @base;
+				.entry {
+					background: #fdfdfd;
+					border: @base solid #e9e9e9;
+					padding: 0;
 					position: relative;
-					top: @base;
-					left: @base * .5;
-				}
 
-				.header {
-					text-transform: none;
-					font-size: 26px;
-					margin: 15px 0 0 0;
-					padding: 0 @base * 1.5 @base @base * 1.5;
+					&.even {
+						background: #fff;
+					}
 
 					a {
-						text-transform: none;
-						text-decoration: none;
-						color: #303030;
+						.border-radius(0 0 0 0);
+					}
 
-						&:hover {
-							color: @color-accent;
+					.description {
+						padding: 0 @base * 1.5;
+					}
+
+					.edit {
+						position: relative;
+						top: @base;
+						left: @base * .5;
+					}
+
+					.header {
+						text-transform: none;
+						font-size: 26px;
+						margin: 15px 0 0 0;
+						padding: 0 @base * 1.5 @base @base * 1.5;
+
+						a {
+							text-transform: none;
+							text-decoration: none;
+							color: #303030;
+
+							&:hover {
+								color: @color-accent;
+							}
 						}
 					}
-				}
 
-				.date {
-					#font > #tisa > .italic;
-					color: #303030;
-					font-size: 18px;
-					clear: both;
-					margin: 0 0 @base @base * 1.5;
-					padding: 0;
+					.date {
+						#font > #tisa > .italic;
+						color: #303030;
+						font-size: 18px;
+						clear: both;
+						margin: 0 0 @base @base * 1.5;
+						padding: 0;
 
-					.icon {
-						color: #878787;
-						font-size: 20px;
-						position: relative;
-						top: -1px;
-					}
-				}
-
-				.label {
-					display: block;
-					margin-bottom: 15px;
-					font-size: 14px;
-					font-weight: normal;
-					text-transform: uppercase;
-					padding: @base;
-					background: none;
-					color: @color-accent;
-					text-align: right;
-					border-bottom: 1px solid @color-grey-accent;
-					.border-radius(0);
-					text-shadow: none;
-				}
-
-				.share {
-					border-top: 1px solid #e9e9e9;
-					margin-top: 15px;
-					padding-top: @base;
-
-					label,
-					input {
-						display: inline;
+						.icon {
+							color: #878787;
+							font-size: 20px;
+							position: relative;
+							top: -1px;
+						}
 					}
 
-					label {
-						color: #ccc;
-						#font > #proxima > .bold;
-						text-transform: uppercase;
-						margin-right: 10px;
-					}
-
-					input {
-						display: inline;
-						#font > #proxima > .regular;
+					.label {
+						display: block;
+						margin-bottom: 15px;
 						font-size: 14px;
-						padding: 5px;
+						font-weight: normal;
+						text-transform: uppercase;
+						padding: @base;
+						background: none;
+						color: @color-accent;
+						text-align: right;
+						border-bottom: 1px solid @color-grey-accent;
+						.border-radius(0);
+						text-shadow: none;
+					}
 
-						&.span4 {
-							margin-top: @base;
+					.share {
+						border-top: 1px solid #e9e9e9;
+						margin-top: 15px;
+						padding-top: @base;
+
+						label,
+						input {
+							display: inline;
+						}
+
+						label {
+							#font > #proxima > .bold;
+							color: #ccc;
+							text-transform: uppercase;
+							margin-right: 10px;
+						}
+
+						input {
+							#font > #proxima > .regular;
+							display: inline;
+							font-size: 14px;
+							padding: 5px;
+
+							&.span4 {
+								margin-top: @base;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
 	}
 }
 
@@ -1394,51 +1396,49 @@ h3 {
 		.row {
 			padding-left: @base * 2;
 
-		> .component-events {
+			> .component-events {
 
-			.back {
-				margin: 15px 0 30px 0;
-			}
-
-			> .entries {
-
-				.entry {
-					border: none;
-					padding: none;
-					margin: none !important;
-
-					.header,
-					.description,
-					.help-block {
-						padding-left: 0;
-						padding-right: 0;
-					}
-
-					.header {
-						margin: 0;
-					}
-
-					.date {
-						margin: 0 0 @base 0;
-					}
-				}
-				.span4 {
-					background: none;
-					margin-top: 0;
-					padding-top: 0;
+				.back {
+					margin: 15px 0 30px 0;
 				}
 
+				> .entries {
 
-				.component-members-roles {
 					.entry {
-						background: #eee;
-						padding-left: @base * 2;
+						border: none;
+						padding: none;
+						margin: none !important;
+
+						.header,
+						.description,
+						.help-block {
+							padding-left: 0;
+							padding-right: 0;
+						}
+
+						.header {
+							margin: 0;
+						}
+
+						.date {
+							margin: 0 0 @base 0;
+						}
+					}
+					.span4 {
+						background: none;
+						margin-top: 0;
+						padding-top: 0;
+					}
+
+					.component-members-roles {
+
+						.entry {
+							background: #eee;
+							padding-left: @base * 2;
+						}
 					}
 				}
 			}
-
-
-		}
 		}
 	}
 }
@@ -1479,9 +1479,9 @@ h3 {
 					}
 
 					.date {
+						#font > #proxima > .bold;
 						width: @calendar-width;
 						text-align: center;
-						#font > #proxima > .bold;
 						position: absolute;
 						height: @calendar-height;
 						left: 15px;
@@ -1515,14 +1515,13 @@ h3 {
 						margin-left: @calendar-padding + @calendar-width;
 						color: @color-body-text;
 
-						.cel td {
-							vertical-align: middle;
+						.cel {
+
+							td {
+								vertical-align: middle;
+							}
 						}
 					}
-				}
-
-				&.even {
-					//background: @color-grey-accent;
 				}
 
 				&.last {
@@ -1612,16 +1611,20 @@ h3 {
 					color: #303030;
 					margin-bottom: 0;
 				}
+
 				.frequency {
 					.small-grey-text;
 					margin: 0;
 					text-transform: none;
 				}
 
-				&:hover .frequency, &:hover .title {
-					 color: @color-accent;
-				}
+				&:hover {
 
+					.frequency,
+					.title {
+						color: @color-accent;
+					}
+				}
 			}
 
 			.edit {
@@ -1629,7 +1632,7 @@ h3 {
 				bottom: 10px;
 				right: 10px;
 			}
-	   }
+		}
 	}
 }
 
@@ -1638,7 +1641,6 @@ h3 {
 	.component-events-recurring {
 		margin-top: @base * 3.2;
 	}
-
 }
 
 // images ---------------------------------------------------------
@@ -1700,6 +1702,20 @@ h3 {
 				height: 280px;
 			}
 
+			address {
+				display: none;
+				position: absolute;
+				left: @base * 1.75;
+				bottom: @base * 1.5;
+				margin: 0;
+
+				h4 {
+					text-transform: uppercase;
+					margin-top: 0;
+					margin-bottom: @base * .5;
+				}
+			}
+
 			.screen,
 			address {
 				position: absolute;
@@ -1713,20 +1729,6 @@ h3 {
 				opacity: .75;
 				width: 100%;
 				height: 90px;
-			}
-
-			address {
-				display: none;
-				position: absolute;
-				left: @base * 1.75;
-				bottom: @base * 1.5;
-				margin: 0;
-
-				h4 {
-					text-transform: uppercase;
-					margin-top: 0;
-					margin-bottom: @base * .5;
-				}
 			}
 		}
 
@@ -1850,10 +1852,10 @@ h3 {
 					padding-top: @base * 0.5;
 
 					h4 {
+						#font > #tisa > .regular;
 						padding: @base * .25 0 0 0;
 						margin-bottom: @base * .125;
 						vertical-align: center;
-						#font > #tisa > .regular;
 						font-size: 18px;
 						line-height: 1.3;
 					}
@@ -2314,11 +2316,11 @@ h3 {
 		}
 
 		h5 {
+			#font > #proxima > .bold;
 			padding: 6px @base 5px @base;
 			color: #ccc;
 			border-top: 1px solid #e9e9e9;
 			border-bottom: 1px solid #e9e9e9;
-			#font > #proxima > .bold;
 			text-transform: uppercase;
 			font-size: 14px;
 		}
@@ -2473,13 +2475,18 @@ h3 {
 	.column-right {
 		margin-top: 0;
 	}
-
 }
 
 .layout-meetings {
 
-	.column-center > .component-text h2 {
-		margin-bottom: 0;
+	.column-center {
+
+		> .component-text {
+
+			h2 {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.date {
@@ -2497,7 +2504,6 @@ h3 {
 			top: -1px;
 		}
 	}
-
 }
 
 // media queries ---------------------------------------------------------
@@ -2582,7 +2588,6 @@ h3 {
 			column-count: 1;
 		}
 	}
-
 }
 
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
@@ -2618,26 +2623,25 @@ h3 {
 		}
 
 		.column-right {
+
 			.component-events {
 
 				.entry {
+
 					&.last {
 						padding-bottom: 0;
 					}
 
 					a {
 						padding: @base * 1.2 0;
+
 						.info {
 							font-size: 13px;
 						}
 					}
-
 				}
-
 			}
-
 		}
-
 	}
 
 	.mast {
@@ -2750,8 +2754,6 @@ h3 {
 		}
 	}
 
-
-
 	.component-locations {
 		width: 300px;
 		margin: 0 auto;
@@ -2812,15 +2814,10 @@ h3 {
 						margin-bottom: 0;
 						padding: 0 0;
 					}
-
 				}
 			}
-
 		}
-
 	}
-
-
 
 	.component-teachings {
 
@@ -2833,7 +2830,8 @@ h3 {
 		}
 	}
 
-	.layout-ministry, .layout-events {
+	.layout-ministry,
+	.layout-events {
 
 	   .column-center, .span8 {
 		   float:none;
@@ -2852,18 +2850,14 @@ h3 {
 			.component-locations {
 				display: block;
 			}
-
 		}
-
 	}
-
 }
 
 // DEFAULT DESKTOP
 // ---------------
 
 @media (min-width: 980px) {
-
 
 	.mast {
 
@@ -2922,8 +2916,6 @@ h3 {
 			}
 		}
 	}
-
-
 }
 
 // LARGE DESKTOP & UP
@@ -2935,7 +2927,10 @@ h3 {
 
 // RESPONSIVE IMAGES
 
-.featured, .component-teachings, .component-series {
+.featured,
+.component-teachings,
+.component-series {
+
 	img {
 		width: 300px !important;
 		height: 200px !important;
@@ -2950,9 +2945,7 @@ h3 {
 			width: 940px !important;
 			height: 378px !important;
 		}
-
 	}
-
 }
 
 .layout-missions {
@@ -2963,15 +2956,17 @@ h3 {
 			width: 940px !important;
 			height: 529px !important;
 		}
-
 	}
-
 }
 
 // tablets and below
+
 @media (max-width: 979px)  {
 
-	.featured, .component-teachings, .component-series {
+	.featured,
+	.component-teachings,
+	.component-series {
+
 		img {
 			width: 228px !important;
 			height: 152px !important;
@@ -2986,9 +2981,7 @@ h3 {
 				width: 724px !important;
 				height: 291px !important;
 			}
-
 		}
-
 	}
 
 	.layout-missions {
@@ -2999,17 +2992,18 @@ h3 {
 				width: 724px !important;
 				height: 407px !important;
 			}
-
 		}
-
 	}
-
 }
 
 // up to landscape phone
+
 @media (max-width: 480px)  {
 
-	.featured, .component-teachings, .component-series {
+	.featured,
+	.component-teachings,
+	.component-series {
+
 		img {
 			width: 352px !important;
 			height: 235px !important;
@@ -3024,9 +3018,7 @@ h3 {
 				width: 352px !important;
 				height: 141px !important;
 			}
-
 		}
-
 	}
 
 	.layout-missions {
@@ -3037,26 +3029,24 @@ h3 {
 				width: 352px !important;
 				height: 198px !important;
 			}
-
 		}
-
 	}
-
 }
+
 // landscape phone to small desktop & portrait tablet
+
 @media (max-width: 767px)  {
 
-
-
 }
+
 // portait tablet to default desktop
+
 @media (min-width: 768px) and (max-width: 979px)  {
 
-
-
 }
+
 // default desktop
+
 @media (min-width: 980px)  {
 
 }
-
