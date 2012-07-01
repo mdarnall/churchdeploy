@@ -135,12 +135,12 @@
 						<xsl:with-param name="entries" select="//events-entry-by-id/entry/location/item" />
 					</xsl:call-template>
 				</xsl:when>
-<!-- 				<xsl:otherwise>
+				<xsl:otherwise>
 					<xsl:call-template name="component-locations">
 						<xsl:with-param name="position" select="name($xpath)" />
 						<xsl:with-param name="entries" select="//locations-entries-by-tag/entry" />
 					</xsl:call-template>
-				</xsl:otherwise> -->
+				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>
 		<xsl:if test=". = 'members-roles'">
