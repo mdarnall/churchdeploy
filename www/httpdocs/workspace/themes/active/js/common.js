@@ -35,7 +35,7 @@
 			$('.modalLive').on('show', function () {
 				var url = $('.modalLive .modal-body .url').html();
 
-				$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="356" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+				$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="364" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
 			});
 
 			$('.modalLive').on('hidden', function () {

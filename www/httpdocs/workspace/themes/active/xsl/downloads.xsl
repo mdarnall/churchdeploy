@@ -18,7 +18,7 @@
 				<xsl:for-each select="$entries">
 					<li class="entry">
 						<xsl:call-template name="class-rows" />
-						<a>
+						<a target="_blank">
 							<xsl:call-template name="url-downloads" />
 							<span class="icon">F</span>
 							<xsl:text>&#160;&#160;</xsl:text>
