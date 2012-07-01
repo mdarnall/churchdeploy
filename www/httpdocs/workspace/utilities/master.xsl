@@ -48,29 +48,32 @@
 			<xsl:comment>AtheyCreek.com is an installation of ChurchDeploy.com — The mission of Church Deploy is to build, as a community, the best church website framework possible and give it away, free of charge.</xsl:comment>
 			<xsl:if test="not(number($pt1)) and string-length($pt1)">
 				<meta http-equiv="refresh">
+					<xsl:variable name="redirect-id" select="//tags-all-entries/entry[tag/@handle = $pt1]/@id" />
 					<xsl:attribute name="content">
 						<xsl:text>0;url=</xsl:text>
 						<xsl:value-of select="$root" />
 						<xsl:text>/</xsl:text>
-						<xsl:value-of select="//tags-all-entries/entry[tag/@handle = $pt1]/@id" />
-						<xsl:text>/</xsl:text>
-						<xsl:value-of select="$pt1" />
-						<xsl:text>/</xsl:text>
-						<xsl:if test="$pt2">
-							<xsl:value-of select="$pt2" />
+						<xsl:if test="$redirect-id">
+							<xsl:value-of select="$redirect-id" />
 							<xsl:text>/</xsl:text>
-						</xsl:if>
-						<xsl:if test="$pt3">
-							<xsl:value-of select="$pt3" />
+							<xsl:value-of select="$pt1" />
 							<xsl:text>/</xsl:text>
-						</xsl:if>
-						<xsl:if test="$pt4">
-							<xsl:value-of select="$pt4" />
-							<xsl:text>/</xsl:text>
-						</xsl:if>
-						<xsl:if test="$pt5">
-							<xsl:value-of select="$pt5" />
-							<xsl:text>/</xsl:text>
+							<xsl:if test="$pt2">
+								<xsl:value-of select="$pt2" />
+								<xsl:text>/</xsl:text>
+							</xsl:if>
+							<xsl:if test="$pt3">
+								<xsl:value-of select="$pt3" />
+								<xsl:text>/</xsl:text>
+							</xsl:if>
+							<xsl:if test="$pt4">
+								<xsl:value-of select="$pt4" />
+								<xsl:text>/</xsl:text>
+							</xsl:if>
+							<xsl:if test="$pt5">
+								<xsl:value-of select="$pt5" />
+								<xsl:text>/</xsl:text>
+							</xsl:if>
 						</xsl:if>
 					</xsl:attribute>
 				</meta>
