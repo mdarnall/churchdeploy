@@ -1297,32 +1297,6 @@ h3 {
 						.border-radius(0 0 0 0);
 					}
 
-					.description {
-						padding: 0 @base * 1.5;
-					}
-
-					.edit {
-						position: relative;
-						top: @base;
-						left: @base * .5;
-					}
-
-					.header {
-						text-transform: none;
-						font-size: 26px;
-						margin: 15px 0 0 0;
-						padding: 0 @base * 1.5 @base @base * 1.5;
-
-						a {
-							text-transform: none;
-							text-decoration: none;
-							color: #303030;
-
-							&:hover {
-								color: @color-accent;
-							}
-						}
-					}
 
 					.date {
 						#font > #tisa > .italic;
@@ -1337,6 +1311,37 @@ h3 {
 							font-size: 20px;
 							position: relative;
 							top: -1px;
+						}
+					}
+
+					.description {
+						padding: 0 @base * 1.5;
+						
+						p {
+							margin-top: @base;
+						}
+					}
+
+					.edit {
+						position: relative;
+						top: @base;
+						left: @base * .5;
+					}
+
+					.header {
+						text-transform: none;
+						font-size: 26px;
+						margin: @base 0 0 0;
+						padding: 0 @base * 1.5 0 @base * 1.5;
+
+						a {
+							text-transform: none;
+							text-decoration: none;
+							color: #303030;
+
+							&:hover {
+								color: @color-accent;
+							}
 						}
 					}
 
@@ -2513,7 +2518,7 @@ h3 {
 // .layout-events {
 
 // 	&.profile {
-		
+
 // 		.row + .row {
 // 			display: none;
 // 		}
