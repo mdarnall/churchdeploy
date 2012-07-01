@@ -1,17 +1,17 @@
 <?php
 
 	/*
-	
+
 
 	CHURCHDEPLOY
 	============
 
-	Except the Lord build the house, they labour in vain that build it: 
+	Except the Lord build the house, they labour in vain that build it:
 	except the Lord keep the city, the watchman waketh but in vain.
 
 	- Psalms 127:1
 
-	
+
 	*/
 
 	define('DOCROOT', rtrim(dirname(__FILE__), '\\/'));

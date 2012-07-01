@@ -198,7 +198,7 @@
 
 		###### CACHELITE ######
 		'cachelite' => array(
-			'lifetime' => '86400',
+			'lifetime' => '0',
 			'show-comments' => 'no',
 			'backend-delegates' => 'yes',
 		),

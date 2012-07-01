@@ -1,53 +1,58 @@
-(function ($, document, window, Date) {
+(function ($, document, window) {
 
-	'use strict';
+	"use strict";
 
-	$(function() {
+	$(function () {
 
-		var alertLiveCookie = $.cookie('alertLive');
-
-		if(alertLiveCookie !== 'hidden') {
-			$('.alertLive').removeClass('hidden');
-			$('.alertLive .close').click( function() {
-				$.cookie('alertLive', 'hidden', { expires: 1, path: '/' });
-			});
-		}
-
-		jQuery.fn.exists = function() // test to see if an object exists
-		{
+		jQuery.fn.exists = function () {
 			return jQuery(this).length > 0;
 		};
 
-		$(document).ready( function() {
+		$(document).ready(function () {
 
-			$('.modalLiveLink').click( function(e) {
+			var hostName = location.hostname,
+				links = $("a"),
+				alertLiveCookie = $.cookie("alertLive"),
+				i = 0;
+
+			if (alertLiveCookie !== "hidden") {
+				$(".alertLive").removeClass("hidden");
+				$(".alertLive .close").click(function () {
+					$.cookie("alertLive", "hidden", { expires: 1, path: "/" });
+				});
+			}
+
+			if ($("layout-search")) {
+				$(".search input.keywords").focus();
+			}
+
+			$(".modalLiveLink").click(function (e) {
 				e.preventDefault();
-				$('.modalLive').modal('show');
+				$(".modalLive").modal("show");
 				return false;
 			});
 
-			$('.modalLive .close').click( function(e) {
+			$(".modalLive .close").click(function (e) {
 				e.preventDefault();
-				$('.modalLive').modal('hide');
+				$(".modalLive").modal("hide");
 				return false;
 			});
 
-			$('.modalLive').on('show', function () {
-				var url = $('.modalLive .modal-body .url').html();
-
-				$('.modalLive .modal-body .ustream-embed').html('<iframe src="' + url + '" width="600" height="363" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+			$(".modalLive").on("show", function () {
+				var url = $(".modalLive .modal-body .url").html();
+				$(".modalLive .modal-body .ustream-embed").html("<iframe src=\"" + url + "\" width=\"600\" height=\"363\" scrolling=\"no\" frameborder=\"0\" style=\"border: 0px none transparent;\"></iframe>");
 			});
 
-			$('.modalLive').on('hidden', function () {
-				$('.modalLive .modal-body .ustream-embed').html('#');
-				$('.modalLive').hide();
+			$(".modalLive").on("hidden", function () {
+				$(".modalLive .modal-body .ustream-embed").html("#");
+				$(".modalLive").hide();
 			});
 
+			for (i = 0; i < links.length; i += 1) {
+				if (links[i].href.indexOf(hostName) === -1) {
+					links[i].setAttribute("target", "_blank");
+				}
+			}
 		});
-
-		if($('layout-search'))
-		{
-			$('.search input.keywords').focus();
-		}
 	});
-}(jQuery, window, Date));
+}(jQuery, window));

@@ -128,20 +128,14 @@
 			</xsl:call-template>
 		</xsl:if>
 		<xsl:if test=". = 'locations'">
-			<xsl:choose>
-				<xsl:when test="count(//events-entry-by-id/entry)"> <!-- if there are events, show associated locations -->
-					<xsl:call-template name="component-locations">
-						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//events-entry-by-id/entry/location/item" />
-					</xsl:call-template>
-				</xsl:when>
-<!-- 				<xsl:otherwise>
-					<xsl:call-template name="component-locations">
-						<xsl:with-param name="position" select="name($xpath)" />
-						<xsl:with-param name="entries" select="//locations-entries-by-tag/entry" />
-					</xsl:call-template>
-				</xsl:otherwise> -->
-			</xsl:choose>
+			<xsl:call-template name="component-locations">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//events-entry-by-id/entry/location/item" />
+			</xsl:call-template>
+			<xsl:call-template name="component-locations">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//locations-entries-by-tag/entry" />
+			</xsl:call-template>
 		</xsl:if>
 		<xsl:if test=". = 'members-roles'">
 			<xsl:call-template name="component-members-roles">

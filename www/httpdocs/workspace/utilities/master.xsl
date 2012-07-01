@@ -53,7 +53,7 @@
 						<xsl:text>0;url=</xsl:text>
 						<xsl:value-of select="$root" />
 						<xsl:text>/</xsl:text>
-						<xsl:if test="$redirect-id">
+						<xsl:if test="string-length($redirect-id)">
 							<xsl:value-of select="$redirect-id" />
 							<xsl:text>/</xsl:text>
 							<xsl:value-of select="$pt1" />
