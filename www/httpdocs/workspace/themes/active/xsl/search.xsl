@@ -4,12 +4,12 @@
 
 <xsl:template name="component-search">
 
-	<xsl:param name="component" select="'search'" />	
+	<xsl:param name="component" select="'search'" />
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
 
 	<!-- <xsl:if test="count($entries)"> -->
-		
+
 	<div>
 		<xsl:call-template name="class-position">
 			<xsl:with-param name="component" select="$component" />
@@ -36,7 +36,7 @@
 					<br />
 					<xsl:text>“</xsl:text>
 					<xsl:value-of select="$url-keywords" disable-output-escaping="yes" />
-					<xsl:text>”</xsl:text>					
+					<xsl:text>”</xsl:text>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:text>Search</xsl:text>
@@ -52,7 +52,7 @@
 			<form method="get">
 				<xsl:call-template name="form-search-action"/>
 				<xsl:if test="$url-sections">
-					<input type="hidden" name="sections" value="{$url-sections}" />	
+					<input type="hidden" name="sections" value="{$url-sections}" />
 				</xsl:if>
 				<input name="keywords" class="keywords" value="{$url-keywords}" onclick="this.select()" autocomplete="off" />
 			</form>
@@ -64,7 +64,7 @@
 		</xsl:call-template>
 
 		<div class="entries results">
-			<div class="row"> 
+			<div class="row">
 				<div class="span8">
 
 					<xsl:if test="not(count($entries)) and $url-keywords">
@@ -77,19 +77,19 @@
 					</xsl:if>
 
 					<xsl:for-each select="$entries">
-						
+
 						<xsl:variable name="tag">
 							<xsl:value-of select="tags/item/@id" />
 						</xsl:variable>
 
-						<xsl:choose>  
+						<xsl:choose>
 							<xsl:when test="@section = 'downloads'">
 								<div>
 									<xsl:call-template name="search-entry-class" />
 									<h3>
 										<a target="_blank">
 											<xsl:call-template name="url-downloads" />
-											<i class="icon-download-alt"></i> 
+											<i class="icon-download-alt"></i>
 											<xsl:value-of select="name" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -105,7 +105,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-events-recurring" />
-											<i class="icon-calendar"></i> 
+											<i class="icon-calendar"></i>
 											<xsl:value-of select="name" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -126,7 +126,7 @@
 										</xsl:call-template>
 									</div>
 									<div class="excerpt">
-										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />											
+										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />
 									</div>
 								</div>
 							</xsl:when>
@@ -136,7 +136,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-tags" />
-											<i class="icon-bookmark"></i> 
+											<i class="icon-bookmark"></i>
 											<xsl:value-of select="tag" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -152,7 +152,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings" />
-											<i class="icon-book"></i> 
+											<i class="icon-book"></i>
 											<xsl:value-of select="title" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -172,7 +172,7 @@
 										</xsl:call-template>
 									</div>
 									<div class="excerpt">
-										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />											
+										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />
 									</div>
 								</div>
 							</xsl:when>
@@ -182,7 +182,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings-series" />
-											<i class="icon-th"></i> 
+											<i class="icon-th"></i>
 											<xsl:value-of select="title" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -200,7 +200,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings-tags" />
-											<i class="icon-tag"></i> 
+											<i class="icon-tag"></i>
 											<xsl:value-of select="tag" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -233,9 +233,9 @@
 										</a>
 									</h3>
 									<div class="excerpt">
-										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />											
+										<xsl:copy-of select="excerpt" disable-output-escaping="yes" />
 									</div>
-								</div>	
+								</div>
 							</xsl:when>
 						</xsl:choose>
 					</xsl:for-each>
@@ -243,7 +243,7 @@
 				<xsl:if test="$url-keywords">
 					<div class="span4 filters">
 						<xsl:if test="
-							not(//search-suggestions/word = $url-keywords) and 
+							not(//search-suggestions/word = $url-keywords) and
 							count(//search-suggestions/word) &gt; 0">
 							<div class="suggestions">
 								<h4>Did you mean...</h4>
@@ -255,10 +255,10 @@
 								</xsl:for-each>
 							</div>
 						</xsl:if>
-						
+
 						<xsl:if test="
-							not(//alternative-keywords/keyword = $url-keywords) and 
-							count(//alternative-keywords/keyword) &gt; 0 and 
+							not(//alternative-keywords/keyword = $url-keywords) and
+							count(//alternative-keywords/keyword) &gt; 0 and
 							string-length(//alternative-keywords/keyword/@alternative)">
 							<div class="alternatives">
 								<h4>Alternative keywords</h4>
@@ -286,8 +286,8 @@
 									<li><a href="{$root}/{$pt1}/{$pt2}/?keywords={$url-keywords}&amp;sections=teachings-tags">Teachings tags</a></li>
 								</ul>
 							</div>
-						</div>	
-					</div>				
+						</div>
+					</div>
 				</xsl:if>
 			</div>
 		</div>
@@ -301,14 +301,14 @@
 
 
 <xsl:template name="search-entry-class">
-	
+
 	<xsl:call-template name="class-rows">
 		<xsl:with-param name="class">
 			<xsl:text>type-</xsl:text>
 			<xsl:value-of select="@section" disable-output-escaping="yes" />
 		</xsl:with-param>
 	</xsl:call-template>
-	
+
 </xsl:template>
 
 
@@ -334,10 +334,10 @@
 			</xsl:if>
 			<xsl:text>&amp;page=</xsl:text>
 			<xsl:value-of select="'$'" />
-			
+
 		</xsl:with-param>
 	</xsl:call-template>
-	
+
 </xsl:template>
 
 
