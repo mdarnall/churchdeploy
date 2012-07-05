@@ -1085,11 +1085,19 @@ h3 {
 	z-index: 10000;
 	padding: 0;
 	margin: 0;
+	.opacity(50);
 }
 
 // layouts ----------------------------------------------------------
 
 .layout-home {
+
+	.edit {
+		.edit-defaults;
+		position: relative;
+		top: @base * -28;
+		left: 0;
+	}
 
 	h3 {
 		margin-bottom: 15px;
@@ -1323,9 +1331,9 @@ h3 {
 					}
 
 					.edit {
-						position: relative;
+						position: absolute;
 						top: @base;
-						left: @base * .5;
+						right: @base;
 					}
 
 					.header {
@@ -1731,7 +1739,7 @@ h3 {
 			.screen {
 				display: none;
 				background: #e9e9e9;
-				opacity: .75;
+				.opacity(75);
 				width: 100%;
 				height: 90px;
 			}
@@ -2153,11 +2161,7 @@ h3 {
 		}
 
 		.icon-book {
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-			filter: alpha(opacity=50);
-			-moz-opacity: 0.5;
-			-khtml-opacity: 0.5;
-			opacity: 0.5;
+			.opacity(50);
 			position: relative;
 			top: 7px;
 			margin-right: 5px;
