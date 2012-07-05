@@ -940,7 +940,7 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .search p{color:#999;margin:5px 0 10px 0;font-size:14px;}.search p span{text-decoration:underline;cursor:pointer;}
 .entry-defaults{background:#fff;margin:10px 0 30px 0;position:relative;}
 .edit-defaults{position:absolute;border:none !important;background:none;z-index:10000;padding:0;margin:0;opacity:0.5;filter:alpha(opacity=50);opacity:0.5;filter:alpha(opacity=50);}
-.layout-home .edit{position:absolute;border:none !important;background:none;z-index:10000;padding:0;margin:0;opacity:0.5;filter:alpha(opacity=50);opacity:0.5;filter:alpha(opacity=50);position:relative;top:-280px;left:0;}
+.layout-home .main-container .component-text .edit{position:absolute;border:none !important;background:none;z-index:10000;padding:0;margin:0;opacity:0.5;filter:alpha(opacity=50);opacity:0.5;filter:alpha(opacity=50);position:relative;top:-280px;left:0;}
 .layout-home h3{margin-bottom:15px;}
 .layout-home .column-right>.component-events .entry.last{padding-bottom:62px;}
 .layout-home .component-teachings{padding-bottom:20px;}.layout-home .component-teachings .latest{margin-top:0;}.layout-home .component-teachings .latest .video{margin:0;height:349px;}
