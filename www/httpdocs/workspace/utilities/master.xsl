@@ -210,33 +210,14 @@
 </xsl:template>
 
 
-<xsl:template name="topnav">
-
-	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
-		<xsl:variable name="entry-id" select="@id" />
-		<li>
-			<xsl:attribute name="class">
-				<xsl:text>entry </xsl:text>
-				<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
-					<xsl:text>active</xsl:text>
-				</xsl:if>
-			</xsl:attribute>
-			<a>
-				<xsl:call-template name="url-tags" />
-				<xsl:value-of select="tag" disable-output-escaping="yes" />
-			</a>
-		</li>
-	</xsl:for-each>
-
-</xsl:template>
-
-
 <xsl:template name="subnav-entry">
+
+	<xsl:variable name="active-parent" select="//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id" />
 
 	<li>
 		<xsl:attribute name="class">
 			<xsl:text>entry </xsl:text>
-			<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
+			<xsl:if test="$pt1 = @id or $active-parent = @id or //tags-all-entries/entry[ @id = $active-parent ]/parent/item/@id = @id">
 				<xsl:text>active</xsl:text>
 			</xsl:if>
 		</xsl:attribute>

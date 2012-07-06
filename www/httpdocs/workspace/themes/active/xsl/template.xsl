@@ -118,28 +118,7 @@
 					</a>
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
-							<xsl:variable name="entry-id" select="@id" />
-							<li>
-								<xsl:choose>
-									<xsl:when test="@id = $pt1 or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
-										<xsl:call-template name="class-rows">
-											<xsl:with-param name="nav" select="true()" />
-											<xsl:with-param name="clearfix" select="false()" />
-											<xsl:with-param name="class" select="'active'" />
-										</xsl:call-template>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:call-template name="class-rows">
-											<xsl:with-param name="clearfix" select="false()" />
-											<xsl:with-param name="nav" select="true()" />
-										</xsl:call-template>
-									</xsl:otherwise>
-								</xsl:choose>
-								<a href="{$root}/{@id}/{description/@handle}/">
-									<xsl:call-template name="url-tags" />
-									<xsl:value-of select="tag" />
-								</a>
-							</li>
+							<xsl:call-template name="subnav-entry" />
 						</xsl:for-each>
 					</ul>
 				</div>
