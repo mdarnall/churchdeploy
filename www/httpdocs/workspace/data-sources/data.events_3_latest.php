@@ -4,6 +4,7 @@
 
 	Class datasourceevents_3_latest extends Datasource{
 
+		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-3-latest';
 		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -15,7 +16,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'35' => 'later than {$today}',
+				'35' => 'later than {$today}, {$today}',
 				'213' => 'no',
 		);
 
@@ -23,9 +24,7 @@
 				'system:pagination',
 				'name',
 				'date',
-				'description',
-				'location: name-formal',
-				'location: name-casual'
+				'description'
 		);
 
 
@@ -39,10 +38,10 @@
 				'name' => 'Events: 3 latest',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek.com',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-13T23:11:44+00:00'
+				'release-date' => '2012-07-04T17:36:19+00:00'
 			);
 		}
 

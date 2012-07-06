@@ -5,7 +5,7 @@
 	xmlns:exsl="http://exslt.org/common"
 	extension-element-prefixes="exsl">
 
-<xsl:import href="string-replace.xsl" />
+<xsl:import href="toolkit.xsl" />
 
 <xsl:variable name="array" />
 

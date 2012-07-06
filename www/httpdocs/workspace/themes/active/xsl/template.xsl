@@ -47,16 +47,6 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<!--
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a class="brand first" href="{$root}">
-					<xsl:value-of select="$website-name" disable-output-escaping="yes" />
-				</a>
-				-->
 				<div>
 					<ul class="nav left">
 						<li class="top-search">
@@ -105,7 +95,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Hidden live broadcast modal -->
 	<div class="modal fade modalLive" id="modalLive">
 		<div class="modal-header">
 			<a class="close">×</a>
@@ -297,7 +286,6 @@
 						<xsl:for-each select="//twitter-latest-entry/entry">
 							<strong><a href="http://twitter.com/atheycreek/" target="_blank">Recently on Twitter →</a></strong>
 							<span>
-								<!-- <a href="http://twitter.com/{user/@handle}/status/{id/@handle}" target="_blank"> -->
 								<xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 							</span>
 						</xsl:for-each>
@@ -400,47 +388,7 @@
 		//</xsl:comment>
 	</script>
 
-	<!-- <script type="text/javascript" src="{$workspace}/themes/active/js/common-ck.js"></script> -->
-
 </xsl:template>
-
-
-<!--
-
-Before minified
-
-(function (window) {
-	'use strict';
-	function downloadJSAtOnload() {
-		var _gaq = _gaq || [],
-		js = {
-			"scripts":[
-				"/workspace/themes/active/js/common-ck.js"
-			]
-		};
-
-		_gaq.push(['_setAccount', 'UA-32000708-1']);
-		_gaq.push(['_trackPageview']);
-
-		for (var key in js.scripts) {
-			if (js.scripts[key]) {
-				var element=document.createElement("script");
-				element.src=js.scripts[key];
-				document.body.appendChild(element);
-			}
-		}
-	}
-
-	if(window.addEventListener) {
-		window.addEventListener("load",downloadJSAtOnload,false);
-	} else if (window.attachEvent) {
-		window.attachEvent("onload",downloadJSAtOnload);
-	} else {
-		window.onload=downloadJSAtOnload;
-	}
-}(window));
-
--->
 
 
 </xsl:stylesheet>

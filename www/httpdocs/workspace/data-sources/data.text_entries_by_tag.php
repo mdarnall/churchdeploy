@@ -4,7 +4,7 @@
 
 	Class datasourcetext_entries_by_tag extends Datasource{
 
-		public $dsParamCACHE = '10000';
+		public $dsParamCACHE = '1000';
 		public $dsParamROOTELEMENT = 'text-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -36,10 +36,10 @@
 				'name' => 'Text: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-26T17:26:09+00:00'
+				'release-date' => '2012-06-26T03:40:34+00:00'
 			);
 		}
 

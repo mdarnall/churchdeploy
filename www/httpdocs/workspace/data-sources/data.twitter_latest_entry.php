@@ -4,7 +4,6 @@
 
 	Class datasourcetwitter_latest_entry extends Datasource{
 
-		public $dsParamCACHE = '500';
 		public $dsParamROOTELEMENT = 'twitter-latest-entry';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -34,10 +33,10 @@
 				'name' => 'Twitter: Latest entry',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://atheycreek',
+					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-26T17:26:58+00:00'
+				'release-date' => '2012-05-24T23:18:28+00:00'
 			);
 		}
 

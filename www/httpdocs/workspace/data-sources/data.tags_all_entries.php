@@ -24,8 +24,7 @@
 				'slug',
 				'parent: tag',
 				'hide-from-header',
-				'hide-from-footer',
-				'hide'
+				'hide-from-footer'
 		);
 
 
@@ -42,7 +41,7 @@
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-03T16:25:29+00:00'
+				'release-date' => '2012-06-24T03:09:16+00:00'
 			);
 		}
 

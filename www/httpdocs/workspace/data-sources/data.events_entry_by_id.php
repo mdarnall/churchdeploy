@@ -4,6 +4,7 @@
 
 	Class datasourceevents_entry_by_id extends Datasource{
 
+		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -24,15 +25,15 @@
 				'name',
 				'date',
 				'description',
-				'location: name-formal',
-				'location: name-casual',
-				'location: description',
-				'location: address',
-				'location: city',
-				'location: state',
-				'location: zip',
-				'location: latitude',
-				'location: longitude',
+				'locations: name-formal',
+				'locations: name-casual',
+				'locations: description',
+				'locations: address',
+				'locations: city',
+				'locations: state',
+				'locations: zip',
+				'locations: latitude',
+				'locations: longitude',
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
@@ -55,10 +56,10 @@
 				'name' => 'Events: Entry by ID',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek.com',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-17T06:01:53+00:00'
+				'release-date' => '2012-07-02T20:13:24+00:00'
 			);
 		}
 

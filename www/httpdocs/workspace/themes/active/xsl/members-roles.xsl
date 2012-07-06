@@ -113,22 +113,6 @@
 											<xsl:with-param name="height" select="72" />
 											<xsl:with-param name="width" select="72" />
 										</xsl:call-template>
-										<!-- <img width="72" height="72">
-											<xsl:attribute name="src">
-												<xsl:value-of select="$root" />
-												<xsl:choose>
-													<xsl:when test="$position = 'column-center'">
-														<xsl:text>/image/2/129/151/2/0</xsl:text>
-													</xsl:when>
-													<xsl:when test="$position = 'column-right'">
-														<xsl:text>/image/2/72/72/2/0</xsl:text>
-													</xsl:when>
-												</xsl:choose>
-												<xsl:value-of select="member/item/photo/@path" />
-												<xsl:text>/</xsl:text>
-												<xsl:value-of select="member/item/photo/filename" />
-											</xsl:attribute>
-										</img> -->
 									</div>
 									<div class="info">
 										<h4>

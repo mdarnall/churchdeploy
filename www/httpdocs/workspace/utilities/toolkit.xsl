@@ -7,12 +7,11 @@
 Toolkit
 
 -->
+
 <xsl:template name="toolkit">
 
 	<xsl:if test="$pt1 = 'toolkit' and $pt2 = 'images'">
-
 		<h2>New</h2>
-
 		<xsl:if test="//images-create/message or //images-create/image/@message">
 			<p>
 				<b><xsl:value-of select="//images-create/message" /></b>
@@ -20,14 +19,11 @@ Toolkit
 				<xsl:value-of select="//images-create/image/@message" />
 			</p>
 		</xsl:if>
-
 		<form method="post" action="" enctype="multipart/form-data">
 			<label>Image <input name="fields[image]" type="file" style="width: 200px; background: #fff; border: solid 1px #ccc; padding: 15px; margin: 15px 0;" /></label>
 			<input name="action[images-create]" type="submit" value="Submit" class="btn btn-primary" />
 		</form>
-
 		<p><a href="{$root}/symphony/publish/images/new/">Use the multiple file uploader »</a></p>
-
 		<xsl:if test="//images-toolkit-all-entries-filtered/entry">
 			<hr />
 			<table border="1" style="border-collapse: collapse">
@@ -52,7 +48,6 @@ Toolkit
 				</xsl:for-each>
 			</table>
 		</xsl:if>
-
 	</xsl:if>
 
 </xsl:template>
@@ -63,6 +58,7 @@ Toolkit
 Global date formatting
 
 -->
+
 <xsl:template name="date-with-format">
 
 	<div class="date">
@@ -80,20 +76,18 @@ Global date formatting
 Global Pagination
 
 -->
+
 <xsl:template name="cd-pagination">
 
 	<xsl:param name="pagination"     select="$pagination" />
 	<xsl:param name="pagination-url" select="$pagination-url" />
 
 	<xsl:call-template name="pagination">
-
 		<xsl:with-param name="pagination" select="$pagination" />
 		<xsl:with-param name="pagination-url" select="$pagination-url" />
 		<xsl:with-param name="show-range" select="5" />
-
 		<xsl:with-param name="label-previous" select="'← Previous'" />
 		<xsl:with-param name="label-next" select="'Next →'" />
-
 		<xsl:with-param name="class-pagination" select="'pagination'" />
 		<xsl:with-param name="class-page" select="''" />
 		<xsl:with-param name="class-next" select="'next'" />
@@ -101,11 +95,9 @@ Global Pagination
 		<xsl:with-param name="class-selected" select="'active'" />
 		<xsl:with-param name="class-disabled" select="'disabled'" />
 		<xsl:with-param name="class-ellipsis" select="'disabled'" />
-
 	</xsl:call-template>
 
 </xsl:template>
-
 
 <!--
 
@@ -122,6 +114,7 @@ USAGE:
 	</xsl:call-template>
 
 -->
+
 <xsl:template name="pluralize">
 
 	<xsl:param name="singular" />
@@ -149,17 +142,16 @@ USAGE:
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
-
 	</xsl:choose>
 
 </xsl:template>
-
 
 <!--
 
 How to start a URL when using multi-lingual
 
 -->
+
 <xsl:template name="root">
 
 	<xsl:choose>
@@ -174,12 +166,12 @@ How to start a URL when using multi-lingual
 </xsl:template>
 
 
-
 <!--
 
 Removes HTML tags
 
 -->
+
 <xsl:template name="remove-html">
 
 	<xsl:param name="text" />
@@ -200,12 +192,12 @@ Removes HTML tags
 </xsl:template>
 
 
-
 <!--
 
 Strip out spaces in source
 
 -->
+
 <xsl:strip-space elements="*" />
 
 <xsl:template name="nbsp">
@@ -221,12 +213,12 @@ Strip out spaces in source
 </xsl:template>
 
 
-
 <!--
 
 Search and replace
 
 -->
+
 <xsl:template name="string-replace-all">
 	<xsl:param name="text" />
 	<xsl:param name="replace" />
@@ -248,7 +240,6 @@ Search and replace
 </xsl:template>
 
 
-
 <!--
 
 Truncate
@@ -260,53 +251,57 @@ USAGE:
 -->
 
 <xsl:strip-space elements="*" />
-
 <!-- limit: the truncation limit -->
 <xsl:variable name="limit" select="250" />
-
 <!-- t: Total number of characters in the set -->
 <xsl:variable name="t" select="string-length(normalize-space(//body))" />
 
+
 <xsl:template match="*" mode="truncate">
-		<xsl:variable name="preceding-strings">
-				<xsl:copy-of select="preceding::text()[ancestor::body]" />
-		</xsl:variable>
 
-		<!-- p: number of characters up to the current node -->
-		<xsl:variable name="p" select="string-length(normalize-space($preceding-strings))" />
+	<xsl:variable name="preceding-strings">
+		<xsl:copy-of select="preceding::text()[ancestor::body]" />
+	</xsl:variable>
+	<!-- p: number of characters up to the current node -->
+	<xsl:variable name="p" select="string-length(normalize-space($preceding-strings))" />
 
-		<xsl:if test="$p &lt; $limit">
-				<xsl:element name="{name()}">
-						<xsl:apply-templates select="@*" mode="truncate" />
-						<xsl:apply-templates mode="truncate" />
-				</xsl:element>
-		</xsl:if>
+	<xsl:if test="$p &lt; $limit">
+		<xsl:element name="{name()}">
+			<xsl:apply-templates select="@*" mode="truncate" />
+			<xsl:apply-templates mode="truncate" />
+		</xsl:element>
+	</xsl:if>
+
 </xsl:template>
+
 
 <xsl:template match="text()" mode="truncate">
-		<xsl:variable name="preceding-strings">
-				<xsl:copy-of select="preceding::text()[ancestor::body]" />
-		</xsl:variable>
 
-		<!-- p: number of characters up to the current node -->
-		<xsl:variable name="p" select="string-length(normalize-space($preceding-strings))" />
+	<xsl:variable name="preceding-strings">
+		<xsl:copy-of select="preceding::text()[ancestor::body]" />
+	</xsl:variable>
+	<!-- p: number of characters up to the current node -->
+	<xsl:variable name="p" select="string-length(normalize-space($preceding-strings))" />
+	<!-- c: number of characters including current node -->
+	<xsl:variable name="c" select="$p + string-length(.)" />
 
-		<!-- c: number of characters including current node -->
-		<xsl:variable name="c" select="$p + string-length(.)" />
+	<xsl:choose>
+		<xsl:when test="$limit &lt;= $c">
+			<xsl:value-of select="substring(., 1, ($limit - $p))" disable-output-escaping="yes" />
+			<xsl:text>&#160;..</xsl:text>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="." />
+		</xsl:otherwise>
+	</xsl:choose>
 
-		<xsl:choose>
-				<xsl:when test="$limit &lt;= $c">
-						<xsl:value-of select="substring(., 1, ($limit - $p))" disable-output-escaping="yes" />
-						<xsl:text>&#160;..</xsl:text>
-				</xsl:when>
-				<xsl:otherwise>
-						<xsl:value-of select="." />
-				</xsl:otherwise>
-		</xsl:choose>
 </xsl:template>
 
+
 <xsl:template match="@*" mode="truncate">
-		<xsl:attribute name="{name(.)}"><xsl:value-of select="." /></xsl:attribute>
+
+	<xsl:attribute name="{name(.)}"><xsl:value-of select="." /></xsl:attribute>
+
 </xsl:template>
 
 
@@ -324,9 +319,12 @@ USAGE:
 	</xsl:call-template>
 
 -->
+
 <xsl:template name="truncate">
+
 	<xsl:param name="node" select="." />
 	<xsl:param name="length" select="250" />
+
 	<xsl:choose>
 		<xsl:when test="string-length($node) > $length">
 			<xsl:value-of select="substring($node, 0, $length)" disable-output-escaping="yes" />
@@ -338,7 +336,6 @@ USAGE:
 	</xsl:choose>
 
 </xsl:template>
-
 
 
 <!--
@@ -361,21 +358,47 @@ or to lower case
 <xsl:value-of select="translate($toconvert,$en-uppercase-letters,$en-lowercase-letters)"/>
 
 -->
+
 <xsl:variable name="en-lowercase-letters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
 <xsl:variable name="en-uppercase-letters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
 
 
+<!--
 
+String replace
 
+USAGE:
 
+	<xsl:call-template name="string-replace">
+		<xsl:with-param name="haystack" select="item" />
+		<xsl:with-param name="search" select="'ab'" />
+		<xsl:with-param name="replace" select="'zz'" />
+	</xsl:call-template>
 
+-->
 
+<xsl:template name="string-replace">
 
+	<xsl:param name="haystack" />
+	<xsl:param name="search" />
+	<xsl:param name="replace" select="''" />
 
+	<xsl:choose>
+		<xsl:when test="contains($haystack, $search)">
+			<xsl:value-of select="substring-before($haystack, $search)" />
+			<xsl:value-of select="$replace" />
+			<xsl:call-template name="string-replace">
+				<xsl:with-param name="haystack" select="substring-after($haystack, $search)" />
+				<xsl:with-param name="search" select="$search" />
+				<xsl:with-param name="replace" select="$replace" />
+			</xsl:call-template>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="$haystack" />
+		</xsl:otherwise>
+	</xsl:choose>
 
-
-
-
+</xsl:template>
 
 
 </xsl:stylesheet>

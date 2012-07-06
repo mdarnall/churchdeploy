@@ -5,25 +5,23 @@
 /* TEAM */
 
   Content Strategist: David Frost
-  Twitter: http://twitter.com/#!/jeffcwheeler
   Location: Portland, OR
 
   Team Lead: Bryn Ritchie
-  Twitter: http://twitter.com/#!/jeffcwheeler
   Location: Portland, OR
-  
+
   Designer/Engineer: Jonathan Simcoe
   Site: http://dtr.mn/
   Location: Portland, OR
-  
+
   Engineer: Kirk Strobeck
-  Site: 
-  Twitter: 
+  Site: http://kirkstrobeck.com/
+  Twitter: http://twitter.com/kirkstrobeck
   Location: Portland, OR
 
   Designer: Jeff Wheeler
   Site: http://dribbble.com/jeffwheeler
-  Twitter: http://twitter.com/#!/jeffcwheeler
+  Twitter: http://twitter.com/jeffcwheeler
   Location: Portland, OR
 
 /* THANKS */

@@ -11,7 +11,7 @@
 		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'yes';
-		public $dsParamREQUIREDPARAM = '$pt4';
+		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -24,15 +24,6 @@
 				'name',
 				'date',
 				'description',
-				'location: name-formal',
-				'location: name-casual',
-				'location: description',
-				'location: address',
-				'location: city',
-				'location: state',
-				'location: zip',
-				'location: latitude',
-				'location: longitude',
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
@@ -54,11 +45,11 @@
 			return array(
 				'name' => 'Events: Entry by ID (preview)',
 				'author' => array(
-					'name' => 'Jonathan Simcoe',
-					'website' => 'http://atheycreek',
-					'email' => 'jdsimcoe@gmail.com'),
+					'name' => 'Kirk Strobeck',
+					'website' => 'http://atheycreek.com',
+					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-06T04:27:17+00:00'
+				'release-date' => '2012-07-06T04:38:09+00:00'
 			);
 		}
 

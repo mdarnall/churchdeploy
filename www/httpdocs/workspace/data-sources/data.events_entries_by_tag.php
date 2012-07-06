@@ -4,6 +4,7 @@
 
 	Class datasourceevents_entries_by_tag extends Datasource{
 
+		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-entries-by-tag';
 		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -11,13 +12,12 @@
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamPARAMOUTPUT = 'location';
 		public $dsParamSORT = 'date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'35' => 'later than {$today}',
+				'35' => 'later than {$today}, {$today}',
 				'137' => '{$pt1:43}',
 				'213' => 'no',
 		);
@@ -26,8 +26,7 @@
 				'system:pagination',
 				'name',
 				'date',
-				'description',
-				'location: name-formal'
+				'description'
 		);
 
 
@@ -41,10 +40,10 @@
 				'name' => 'Events: Entries by tag',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek.com',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-13T23:23:22+00:00'
+				'release-date' => '2012-07-04T17:35:53+00:00'
 			);
 		}
 

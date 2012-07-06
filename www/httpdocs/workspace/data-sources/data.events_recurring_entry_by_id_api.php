@@ -2,9 +2,9 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceevents_recurring_entry_by_id extends Datasource{
+	Class datasourceevents_recurring_entry_by_id_api extends Datasource{
 
-		public $dsParamROOTELEMENT = 'events-recurring-entry-by-id';
+		public $dsParamROOTELEMENT = 'events-recurring-entry-by-id-api';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '1';
@@ -13,7 +13,7 @@
 		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
 				'id' => '{$pt3}',
@@ -41,10 +41,7 @@
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
-				'member-role: member: email',
 				'member-role: member: job-title',
-				'member-role: member: phone-number',
-				'member-role: member: anonymize',
 				'childcare',
 				'type: type'
 		);
@@ -57,13 +54,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Events: Recurring: Entry by ID',
+				'name' => 'Events: Recurring: Entry by ID (api)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-22T19:38:40+00:00'
+				'release-date' => '2012-06-24T03:42:23+00:00'
 			);
 		}
 

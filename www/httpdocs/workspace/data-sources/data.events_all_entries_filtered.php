@@ -4,6 +4,7 @@
 
 	Class datasourceevents_all_entries_filtered extends Datasource{
 
+		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-all-entries-filtered';
 		public $dsParamORDER = 'asc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -15,7 +16,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'35' => 'later than {$today}',
+				'35' => 'later than {$today}, {$today}',
 				'169' => '(if value of ({$pt2}) is (events))',
 				'213' => 'no',
 		);
@@ -24,9 +25,7 @@
 				'system:pagination',
 				'name',
 				'date',
-				'description',
-				'location: name-formal',
-				'location: name-casual'
+				'description'
 		);
 
 
@@ -40,10 +39,10 @@
 				'name' => 'Events: All entries (filtered)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek.com',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-04T02:47:40+00:00'
+				'release-date' => '2012-07-04T17:35:26+00:00'
 			);
 		}
 

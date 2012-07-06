@@ -2,51 +2,44 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceevents_recurring_entry_by_id extends Datasource{
+	Class datasourceteachings_3_latest extends Datasource{
 
-		public $dsParamROOTELEMENT = 'events-recurring-entry-by-id';
+		public $dsParamCACHE = 'null';
+		public $dsParamROOTELEMENT = 'teachings-3-latest';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '1';
+		public $dsParamLIMIT = '3';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'id' => '{$pt3}',
-				'214' => 'no',
+				'192' => 'no',
+				'216' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'name',
-				'frequency',
+				'title',
+				'slug',
+				'filename',
+				'current-id',
+				'book',
+				'chapter',
 				'description',
-				'locations: name-formal',
-				'locations: name-casual',
-				'locations: description',
-				'locations: address',
-				'locations: city',
-				'locations: state',
-				'locations: zip',
-				'locations: latitude',
-				'locations: longitude',
-				'downloads: name',
-				'downloads: file',
-				'images: image',
-				'text: content',
-				'verses: passage',
-				'member-role: member: first-name',
-				'member-role: member: last-name',
-				'member-role: member: photo',
-				'member-role: member: email',
-				'member-role: member: job-title',
-				'member-role: member: phone-number',
-				'member-role: member: anonymize',
-				'childcare',
-				'type: type'
+				'speaker: first-name',
+				'speaker: last-name',
+				'date',
+				'poster',
+				'video: title',
+				'video: description',
+				'video: date',
+				'video: url',
+				'video: player',
+				'video: id',
+				'day',
+				'tags: tag'
 		);
 
 
@@ -57,18 +50,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Events: Recurring: Entry by ID',
+				'name' => 'Teachings: 3 latest',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
 					'website' => 'http://72.10.33.203',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-22T19:38:40+00:00'
+				'release-date' => '2012-06-30T15:36:56+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '21';
+			return '13';
 		}
 
 		public function allowEditorToParse(){

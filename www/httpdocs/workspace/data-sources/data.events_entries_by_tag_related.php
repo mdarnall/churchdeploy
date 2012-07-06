@@ -4,6 +4,7 @@
 
 	Class datasourceevents_entries_by_tag_related extends Datasource{
 
+		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-entries-by-tag-related';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -16,7 +17,7 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'35' => 'later than {$today}',
+				'35' => 'later than {$today}, {$today}',
 				'137' => '{$pt6}',
 				'169' => '(if all of ((if value of ({$pt2}) is (events)), (if value of ({$pt5}) is (related))) is (yes))',
 				'213' => 'no',
@@ -40,10 +41,10 @@
 				'name' => 'Events: Entries by tag (related)',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek.com',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T23:06:30+00:00'
+				'release-date' => '2012-07-04T17:36:14+00:00'
 			);
 		}
 

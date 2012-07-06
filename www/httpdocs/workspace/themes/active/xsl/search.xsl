@@ -8,13 +8,10 @@
 	<xsl:param name="position" />
 	<xsl:param name="entries" />
 
-	<!-- <xsl:if test="count($entries)"> -->
-
 	<div>
 		<xsl:call-template name="class-position">
 			<xsl:with-param name="component" select="$component" />
 		</xsl:call-template>
-
 		<h1>
 			<xsl:choose>
 				<xsl:when test="$url-keywords">
@@ -43,11 +40,9 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</h1>
-
 		<xsl:if test="$url-sections">
 			<p style="text-align:center">Section filtering is <strong>on</strong>, <a href="{$root}/{$pt1}/{$pt2}/?keywords={$url-keywords}">turn it off</a> to see all results</p>
 		</xsl:if>
-
 		<div class="search">
 			<form method="get">
 				<xsl:call-template name="form-search-action"/>
@@ -58,30 +53,23 @@
 			</form>
 			<p>Type and hit enter. You can search our entire site. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span>, <span onclick="$('.search input.keywords').val('Baptism');">Baptism</span> or <span onclick="$('.search input.keywords').val('Wilsonville');">Wilsonville</span>&#160;..</p>
 		</div>
-
 		<xsl:call-template name="pagination-search">
 			<xsl:with-param name="pagination" select="$entries/../pagination" />
 		</xsl:call-template>
-
 		<div class="entries results">
 			<div class="row">
 				<div class="span8">
-
 					<xsl:if test="not(count($entries)) and $url-keywords">
 						<p><strong>Sorry about that!</strong><br />Please, try another search or head to the <a href="{$root}">homepage</a></p>
-
 						<xsl:if test="$url-sections">
 							<br />
 							<p>Try <a href="{$root}/{$pt1}/{$pt2}/?keywords={$url-keywords}">searching everywhere</a></p>
 						</xsl:if>
 					</xsl:if>
-
 					<xsl:for-each select="$entries">
-
 						<xsl:variable name="tag">
 							<xsl:value-of select="tags/item/@id" />
 						</xsl:variable>
-
 						<xsl:choose>
 							<xsl:when test="@section = 'downloads'">
 								<div>
@@ -255,7 +243,6 @@
 								</xsl:for-each>
 							</div>
 						</xsl:if>
-
 						<xsl:if test="
 							not(//alternative-keywords/keyword = $url-keywords) and
 							count(//alternative-keywords/keyword) &gt; 0 and
@@ -270,7 +257,6 @@
 								</xsl:for-each>
 							</div>
 						</xsl:if>
-
 						<div class="filter">
 							<h4>Search sections</h4>
 							<div class="collection">
@@ -291,7 +277,6 @@
 				</xsl:if>
 			</div>
 		</div>
-
 		<xsl:call-template name="pagination-search">
 			<xsl:with-param name="pagination" select="$entries/../pagination" />
 		</xsl:call-template>
@@ -313,6 +298,7 @@
 
 
 <xsl:template name="pagination-search">
+
 	<xsl:param name="pagination" />
 
 	<xsl:call-template name="cd-pagination">
@@ -334,7 +320,6 @@
 			</xsl:if>
 			<xsl:text>&amp;page=</xsl:text>
 			<xsl:value-of select="'$'" />
-
 		</xsl:with-param>
 	</xsl:call-template>
 

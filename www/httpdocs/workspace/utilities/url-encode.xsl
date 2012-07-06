@@ -45,7 +45,7 @@
   </xsl:template>
 
   <xsl:template name="url-encode">
-    <xsl:param name="str" />   
+    <xsl:param name="str" />
     <xsl:if test="$str">
       <xsl:variable name="first-char" select="substring($str,1,1)" />
       <xsl:choose>
