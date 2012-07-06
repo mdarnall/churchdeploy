@@ -102,7 +102,7 @@
 			<meta name="description" content="{//misc-all-entries/entry[name='meta-description']/content}" />
 			<meta name="keywords" content="{//misc-all-entries/entry[name='meta-keywords']/content}" />
 			<meta name="author" content="{$website-name}" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
 			<meta name="application-name" content="{$website-name}" />
 			<meta name="msapplication-tooltip" content="{$page-title}" />
 			<meta name="msapplication-starturl" content="{$root}" />
