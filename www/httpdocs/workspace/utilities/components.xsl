@@ -61,6 +61,11 @@
 			</xsl:call-template>
 		</xsl:if>
 		<xsl:if test=". = 'events'">
+			<xsl:call-template name="component-events">
+				<xsl:with-param name="position" select="name($xpath)" />
+				<xsl:with-param name="entries" select="//events-entry-by-id-preview/entry" />
+				<xsl:with-param name="single" select="true()" />
+			</xsl:call-template>
 			<xsl:choose>
 				<!-- Single ID -->
 				<xsl:when test="count(//events-entry-by-id/entry)">

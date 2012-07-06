@@ -786,7 +786,7 @@ h3 {
 			#font > #tisa > .regular;
 			color: @color-white;
 			margin-left: @base * 2;
-			font-size: 13px;
+			font-size: 14px;
 			// -webkit-mask-image: -webkit-gradient(linear, 95% 0, 100% 0, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.2))); // Safari 4+, Chrome 2+ // Safari 4+, Chrome 2+
 			// -webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 95%, rgba(0,0,0,0.2) 100%); // Safari 5.1+, Chrome 10+;
 
@@ -1085,11 +1085,25 @@ h3 {
 	z-index: 10000;
 	padding: 0;
 	margin: 0;
+	.opacity(50);
 }
 
 // layouts ----------------------------------------------------------
 
 .layout-home {
+	
+	.main-container {
+
+		.component-text {
+
+			.edit {
+				.edit-defaults;
+				position: relative;
+				top: @base * -28;
+				left: 0;
+			}
+		}
+	}
 
 	h3 {
 		margin-bottom: 15px;
@@ -1323,9 +1337,9 @@ h3 {
 					}
 
 					.edit {
-						position: relative;
+						position: absolute;
 						top: @base;
-						left: @base * .5;
+						right: @base;
 					}
 
 					.header {
@@ -1731,7 +1745,7 @@ h3 {
 			.screen {
 				display: none;
 				background: #e9e9e9;
-				opacity: .75;
+				.opacity(75);
 				width: 100%;
 				height: 90px;
 			}
@@ -2153,11 +2167,7 @@ h3 {
 		}
 
 		.icon-book {
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-			filter: alpha(opacity=50);
-			-moz-opacity: 0.5;
-			-khtml-opacity: 0.5;
-			opacity: 0.5;
+			.opacity(50);
 			position: relative;
 			top: 7px;
 			margin-right: 5px;
@@ -2165,7 +2175,6 @@ h3 {
 	}
 
 	.description {
-		padding-right: 60px;
 		margin: 10px 0;
 
 		p {
@@ -3055,7 +3064,7 @@ h3 {
 
 }
 
-// default desktop
+// default desktop 
 
 @media (min-width: 980px)  {
 

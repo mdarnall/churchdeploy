@@ -40,6 +40,13 @@
 
 <xsl:template match="/">
 
+	<xsl:call-template name="master"/>
+
+</xsl:template>
+
+
+<xsl:template name="master">
+
 	<xsl:comment><![CDATA[[if lt IE 7]> <html class="no-js ie6 oldie" lang="en" /> <![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if IE 7]> <html class="no-js ie7 oldie" lang="en" /> <![endif]]]></xsl:comment>
 	<xsl:comment><![CDATA[[if IE 8]> <html class="no-js ie8 oldie" lang="en" /> <![endif]]]></xsl:comment>
