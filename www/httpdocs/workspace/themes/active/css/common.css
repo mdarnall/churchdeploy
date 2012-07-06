@@ -959,7 +959,8 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .layout-home .component-teachings .latest h2{margin-top:0;}
 .layout-home .component-teachings .latest .tags{text-transform:uppercase;}
 .layout-missions .column-right>.component-locations{margin-top:40px;}
-.layout-home-group .meta{font-family:"ff-tisa-web-pro-italic",Georgia,'Times New Roman',Times,serif;font-style:normal;font-weight:normal;color:#303030;font-size:18px;clear:both;margin:0 0 10px 15px;padding:0;}.layout-home-group .meta .icon{color:#878787;font-size:20px;position:relative;top:-1px;}
+.layout-home-group .column-center .entry h2{margin-top:0;margin-bottom:10px;}
+.layout-home-group .meta{font-family:"ff-tisa-web-pro-italic",Georgia,'Times New Roman',Times,serif;font-style:normal;font-weight:normal;color:#303030;font-size:18px;clear:both;margin:0 0 10px 0;padding:0;}.layout-home-group .meta .icon{color:#878787;font-size:20px;position:relative;top:-1px;}
 .column-full-width>.component-text h2{text-transform:uppercase;margin:40px 0 20px 0;}
 .column-center>.component-text h2{text-transform:none;margin:40px 0 20px 0;}
 .column-right>.component-downloads .entry{background:#eeeeee;padding:0 20px;border:none;margin:0;position:relative;}.column-right>.component-downloads .entry a{border:none;background:#eeeeee;padding:30px 0;border-bottom:1px solid #bbbbbb;color:#303030;font-size:14px;}.column-right>.component-downloads .entry a:hover{color:#d83629;border-bottom:1px solid #bbbbbb;}

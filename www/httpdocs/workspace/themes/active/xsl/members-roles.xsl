@@ -34,9 +34,25 @@
 									<xsl:call-template name="members-roles-phone-number-anonymize" />
 								</xsl:variable>
 								<div>
-									<xsl:call-template name="class-rows">
-										<xsl:with-param name="class" select="'span4'" />
-									</xsl:call-template>
+									<xsl:choose>
+										<xsl:when test="count($entries) = 1">
+											<xsl:call-template name="class-rows">
+												<xsl:with-param name="class" select="'span4 offset4'" />
+											</xsl:call-template>
+										</xsl:when>
+										<xsl:when test="count($entries) = 2">
+											<xsl:call-template name="class-rows">
+												<xsl:with-param name="class" select="'span6'" />
+											</xsl:call-template>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:call-template name="class-rows">
+												<xsl:with-param name="class" select="'span4'" />
+											</xsl:call-template>
+										</xsl:otherwise>
+									</xsl:choose>
+
+
 									<xsl:call-template name="members-roles-avatar">
 										<xsl:with-param name="filename" select="member/item/photo/filename" />
 										<xsl:with-param name="height" select="180" />
