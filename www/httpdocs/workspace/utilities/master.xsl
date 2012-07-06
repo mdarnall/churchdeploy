@@ -236,7 +236,7 @@
 	<li>
 		<xsl:attribute name="class">
 			<xsl:text>entry </xsl:text>
-			<xsl:if test="$pt1 = @id">
+			<xsl:if test="$pt1 = @id or //tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id = @id">
 				<xsl:text>active</xsl:text>
 			</xsl:if>
 		</xsl:attribute>
