@@ -1,3 +1,28 @@
+
+
+######################### GZIP FIX - http://my.opera.com/OmegaJunior/blog/google-chrome-and-gzip
+
+
+
+
+<Files *.js.gz>
+ForceType text/javascript
+Header set Content-Encoding: gzip
+</Files>
+<Files *.css.gz>
+ForceType text/css
+Header set Content-Encoding: gzip
+</Files>
+<Files *.html.gz>
+ForceType text/html
+Header set Content-Encoding: gzip
+</Files>
+
+
+
+
+################# BOILERPLATE
+
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
@@ -578,9 +603,9 @@ Options +FollowSymlinks -Indexes
   RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING} [NC,L]
 
   ### LANGUAGE REDIRECT RULES start
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^(en)-?()?\/(.*\/?)$ index.php?language=$1&region=$2&symphony-page=$3&%{QUERY_STRING} [L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(en)-?()?\/(.*\/?)$ index.php?language=$1&region=$2&symphony-page=$3&%{QUERY_STRING} [L]
   ### LANGUAGE REDIRECT RULES end
 
   ### FRONTEND REWRITE - Will ignore files and folders
@@ -590,3 +615,15 @@ Options +FollowSymlinks -Indexes
 
 </IfModule>
 ######
+
+
+<ifModule mod_headers.c>
+    Header set Connection keep-alive
+</ifModule>
+
+<FilesMatch “.(?i:(mp3))$”>
+<IfModule mod_headers.c>
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</IfModule>
+</FilesMatch>

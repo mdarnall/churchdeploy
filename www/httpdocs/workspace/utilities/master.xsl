@@ -102,7 +102,7 @@
 			<meta name="description" content="{//misc-all-entries/entry[name='meta-description']/content}" />
 			<meta name="keywords" content="{//misc-all-entries/entry[name='meta-keywords']/content}" />
 			<meta name="author" content="{$website-name}" />
-			<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<meta name="application-name" content="{$website-name}" />
 			<meta name="msapplication-tooltip" content="{$page-title}" />
 			<meta name="msapplication-starturl" content="{$root}" />
@@ -140,7 +140,7 @@
 					<xsl:text> profile</xsl:text>
 				</xsl:if>
 			</xsl:attribute>
-			<xsl:if test="not($pt1 = 'toolkit')">
+<!-- 			<xsl:if test="not($pt1 = 'toolkit')">
 				<xsl:call-template name="edit-entry">
 					<xsl:with-param name="link">
 						<xsl:choose>
@@ -155,7 +155,7 @@
 					<xsl:with-param name="class" select="'edit-tag'" />
 				</xsl:call-template>
 				<a href="{$root}/symphony/logout/" style="position: absolute; top: 10px; left: 10px; z-index: 1000">Logout</a>
-			</xsl:if>
+			</xsl:if> -->
 			<xsl:call-template name="template-header-outside-container" />
 			<div class="container main-container">
 				<xsl:call-template name="template-header-inside-container" />

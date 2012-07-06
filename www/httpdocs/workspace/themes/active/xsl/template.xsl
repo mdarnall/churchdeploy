@@ -10,7 +10,6 @@
 	/>
 
 <xsl:template name="template-head">
-
 	<link rel="canonical" href="http://atheycreek.com" />
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">

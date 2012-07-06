@@ -2953,11 +2953,15 @@ h3 {
 	}
 }
 
+// iPhone
+// ---------------
+
 @media (max-width: 480px) {
-
-	.header {
-
-		.nav {
+	.navbar {
+		display: none;
+	}
+	.mast {
+		.main {
 			margin-top: 20px;
 			padding: 0 0;
 		}
@@ -2965,6 +2969,14 @@ h3 {
 		.logo {
 			margin-bottom: 0;
 		}
+	}
+
+	.mast .container .row .span12 .main {
+		display: none;
+	}
+
+	.main-container {
+		display: none;
 	}
 
 	.component-teachings {
