@@ -1385,8 +1385,9 @@ h3 {
 					.header {
 						text-transform: none;
 						font-size: 26px;
-						margin: @base 0 0 0;
+						margin: @base 0 @base 0;
 						padding: 0 @base * 1.5 0 @base * 1.5;
+						line-height: 1.1;
 
 						a {
 							text-transform: none;
@@ -1476,7 +1477,7 @@ h3 {
 						}
 
 						.header {
-							margin: 0;
+							margin: 0 0 @base 0;
 						}
 
 						.date {
@@ -2992,15 +2993,9 @@ h3 {
 							a {
 								display: inline-block;
 								padding: 0;
-								margin: 0 5px;
+								margin: 0;
 							}
 
-							&:last-child {
-
-								a {
-									margin: 0;
-								}
-							}
 						}
 					}
 				}

@@ -615,15 +615,3 @@ Options +FollowSymlinks -Indexes
 
 </IfModule>
 ######
-
-
-<ifModule mod_headers.c>
-    Header set Connection keep-alive
-</ifModule>
-
-<FilesMatch “.(?i:(mp3))$”>
-<IfModule mod_headers.c>
-ForceType application/octet-stream
-Header set Content-Disposition attachment
-</IfModule>
-</FilesMatch>
