@@ -458,7 +458,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 					<xsl:value-of select="$class" />
 				</xsl:if>
 			</xsl:attribute>
-			<i class="icon-pencil"></i>
+			<span class="icon">p</span>
 		</a>
 	</xsl:if>
 
