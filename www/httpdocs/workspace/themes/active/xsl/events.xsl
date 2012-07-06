@@ -225,10 +225,10 @@
 														<!-- <a href="{$x}/{$pt1}/{$pt2}/1/5/{$pt5}/{$pt6}/past/" class="link-large">&#8592; Show past events</a> -->
 													</xsl:when>
 													<xsl:otherwise>
-														<a class="link-large">
+<!-- 														<a class="link-large">
 															<xsl:call-template name="url-events-home-past" />
 															<xsl:text>&#8592; Show past events</xsl:text>
-														</a>
+														</a> -->
 													</xsl:otherwise>
 												</xsl:choose>
 											</div>
