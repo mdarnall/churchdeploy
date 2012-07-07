@@ -1095,7 +1095,7 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .audiojs:after{clear:both;}
 .audiojs:before,.audiojs:after{display:table;content:"";}
 .audiojs:after{clear:both;}
-.audiojs .action{display:block;float:left;position:relative;top:7px;margin-right:0 !important;}.audiojs .action .icon{color:#999;margin-right:15px;position:relative;top:2px;}
+.audiojs .action{display:block;float:left;position:relative;top:8px;margin-right:0 !important;}.audiojs .action .icon{color:#999;margin-right:15px;position:relative;top:1px;}
 .audiojs .play-pause{width:25px;padding:4px 6px;margin:0px;float:left;overflow:hidden;}
 .audiojs p{display:none;width:25px;margin:0px;cursor:pointer;}
 .audiojs .play{display:block;}

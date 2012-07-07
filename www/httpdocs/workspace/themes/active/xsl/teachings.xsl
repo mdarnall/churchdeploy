@@ -364,7 +364,7 @@
 		<div class="actions">
 			<xsl:if test="filename">
 				<span class="action">
-					<audio src="{$audio-url}" />
+					<audio src="{$audio-url}" preload="none" />
 					<a href="{$audio-url}" class="download" target="_blank"><span class="icon big">~</span></a>
 				</span>
 			</xsl:if>
