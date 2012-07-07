@@ -43,9 +43,6 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</h3>
-<!-- 							<xsl:call-template name="teachings-pagination">
-								<xsl:with-param name="entries" select="$entries" />
-							</xsl:call-template> -->
 							<xsl:for-each select="$entries">
 								<div class="result">
 									<xsl:call-template name="teaching-entry" />
@@ -77,6 +74,9 @@
 								</h2>
 								<div class="meta">
 									<p>
+										<span class="badge">
+											<xsl:value-of select="filename" />
+										</span>
 										<span class="teacher">
 											<em>by </em>
 											<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
@@ -273,6 +273,9 @@
 				</h2>
 				<div class="meta">
 					<p>
+						<span class="badge">
+							<xsl:value-of select="filename" />
+						</span>
 						<span class="teacher">
 							<em>by </em>
 							<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
@@ -318,6 +321,9 @@
 				</xsl:if>
 				<div class="meta">
 					<p>
+						<span class="badge">
+							<xsl:value-of select="filename" />
+						</span>
 						<span class="teacher">
 							<em>by </em>
 							<xsl:value-of select="speaker/item/first-name" disable-output-escaping="yes" />
