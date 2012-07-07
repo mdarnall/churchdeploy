@@ -615,3 +615,9 @@ Options +FollowSymlinks -Indexes
 
 </IfModule>
 ######
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule (.*.mp3)$ download.php?file=$1
+</IfModule>
