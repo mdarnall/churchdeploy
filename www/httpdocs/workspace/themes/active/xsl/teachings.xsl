@@ -43,9 +43,9 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</h3>
-							<xsl:call-template name="teachings-pagination">
+<!-- 							<xsl:call-template name="teachings-pagination">
 								<xsl:with-param name="entries" select="$entries" />
-							</xsl:call-template>
+							</xsl:call-template> -->
 							<xsl:for-each select="$entries">
 								<div class="result">
 									<xsl:call-template name="teaching-entry" />
