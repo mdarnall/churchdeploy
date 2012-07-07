@@ -868,10 +868,9 @@ h1{font-size:64px;line-height:1.2;text-align:center;width:80%;margin:30px auto;}
 h2{font-size:28px;text-transform:uppercase;letter-spacing:1px;}
 h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px;}
 .main-container ul li{margin:0;}
-.icon{cursor:default;font-family:"Pictos",sans-serif;font-weight:normal;font-style:normal;text-transform:none;-webkit-font-smoothing:antialiased;position:relative;font-size:20px;margin-right:7px;top:1px;}.icon.big{font-size:28px;}
-a.icon,a>.icon,a .icon{cursor:pointer;}
+.icon{font-family:"Pictos",sans-serif;font-weight:normal;font-style:normal;text-transform:none;-webkit-font-smoothing:antialiased;position:relative;font-size:20px;margin-right:7px;top:1px;}.icon.big{font-size:28px;}
 .climacon{font-family:'ClimaconsRegular';font-weight:normal;font-style:normal;text-transform:none !important;position:relative;font-size:20px;margin-right:7px;top:1px;-webkit-font-smoothing:antialiased;}
-.badge{font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;text-transform:uppercase;padding:4px 6px 3px 6px;margin-right:10px;}
+.badge{font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;text-transform:uppercase;padding:4px 6px 3px 6px;margin-right:5px;}
 .divider{margin:0 10px;}
 .mast{background:#9fc9d4;padding:7px 0 15px 0;margin:30px 0 30px 0;}.mast .container .row{margin-left:0;}.mast .container .row .span12{margin-left:0;}.mast .container .row .span12 .logo{position:relative;top:-5px;float:left;z-index:1000;}
 .mast .container .row .span12 .main{font-family:"proxima-nova-regular","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;float:right;position:relative;display:block;text-transform:uppercase;font-size:18px;margin-top:47px;padding-right:0;margin-right:0;letter-spacing:1px;z-index:10;}.mast .container .row .span12 .main li{margin-right:10px;display:inline;}.mast .container .row .span12 .main li.active a{background:none;color:#d83629;}.mast .container .row .span12 .main li.active a:hover{color:#ae2a20;}
@@ -1091,7 +1090,7 @@ a.icon,a>.icon,a .icon{cursor:pointer;}
 .audiojs p{display:none;width:25px;margin:0px;cursor:pointer;}
 .audiojs .action{display:block;float:left;position:relative;top:8px;margin-right:0 !important;}.audiojs .action .icon{color:#999;margin-right:15px;position:relative;top:1px;}.audiojs .action .icon:hover{color:#999;}
 .audiojs .error-message{float:left;display:none;margin:0px 10px;height:36px;width:400px;overflow:hidden;line-height:36px;white-space:nowrap;color:#fff;text-overflow:ellipsis;-o-text-overflow:ellipsis;-icab-text-overflow:ellipsis;-khtml-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;}.audiojs .error-message a{color:#eee;text-decoration:none;padding-bottom:1px;border-bottom:1px solid #999;white-space:wrap;}
-.audiojs .icon{color:#303030;position:relative;top:-2px;left:5px;}.audiojs .icon:hover{color:#d83629;}
+.audiojs .icon{color:#303030;position:relative;top:0px;left:5px;}.audiojs .icon:hover{color:#d83629;}
 .audiojs .loaded{position:absolute;top:0px;left:0px;height:14px;width:0px;background:#999;}
 .audiojs .play{display:block;}
 .audiojs .play-pause{width:25px;padding:4px 6px;margin:0px;float:left;overflow:hidden;}

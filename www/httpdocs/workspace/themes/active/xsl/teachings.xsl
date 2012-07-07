@@ -370,9 +370,39 @@
 		<div class="actions">
 			<xsl:if test="filename">
 				<span class="action">
-					<audio src="{$audio-url}" preload="none" />
-					<a href="{$audio-url}" class="download" target="_blank"><span class="icon big">~</span></a>
-				</span>
+			        <div class="audiojs" classname="audiojs" id="audiojs_wrapper0">
+			            <audio src="{$audio-url}" preload="none"></audio>
+			            <span class="action">
+			            	<span class="icon">m</span>
+			            	<strong class="audio">Audio</strong>
+						</span>
+			            <div class="play-pause">
+			                <p class="play">
+			                    <span class="icon">4</span>
+			                </p>
+			                <p class="pause">
+			                    <span class="icon">5</span>
+			                </p>
+			                <p class="loading">
+			                    <span class="icon">1</span>
+			                </p>
+			                <p class="error">
+			                    <span class="icon">!</span>
+			                </p>
+			            </div>
+			            <div class="scrubber">
+			                <div class="progress"></div>
+			                <div class="loaded"></div>
+			            </div>
+			            <div class="time">
+			                <em class="played">00:00</em>/<strong class="duration">00:00</strong>
+			            </div>
+			            <div class="error-message"></div>
+			        </div>
+			        <a href="{$audio-url}" class="download" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" target="_blank">
+			        	<span class="icon big">~</span>
+			        </a>
+			    </span>
 			</xsl:if>
 <!-- 			<xsl:if test="video/item/@id">
 				<span class="action video">
