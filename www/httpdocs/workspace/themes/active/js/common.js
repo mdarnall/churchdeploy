@@ -57,3 +57,4 @@
 	});
 }(jQuery, window));
 audiojs.events.ready(function(){audiojs.createAll();});
+$(document).ready(function(){$('#download').popover('show')});
