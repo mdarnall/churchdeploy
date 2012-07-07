@@ -1106,6 +1106,7 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .error .error{display:block;}
 .error .error-message{display:block;}
 .error .play-pause p{cursor:auto;}
+.popover .popover-inner .popover-title{margin-bottom:3px;}
 .column-right{margin-top:40px;}
 .layout-home .column-right{margin-top:0;}
 .layout-home-group .column-right{margin-top:0;}
