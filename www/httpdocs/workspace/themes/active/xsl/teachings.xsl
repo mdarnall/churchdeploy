@@ -368,19 +368,6 @@
 					<a href="{$audio-url}" class="download" target="_blank"><span class="icon big">~</span></a>
 				</span>
 			</xsl:if>
-			<xsl:if test="video/item/@id">
-				<span class="action video">
-					<span class="icon">V</span>
-					<strong>Video</strong>
-					<xsl:text> </xsl:text>
-					<a>
-						<xsl:call-template name="url-teachings" />
-						<xsl:text>Watch</xsl:text>
-					</a>
-					<span class="divider">|</span>
-					<a href="{$entry/url}" target="_blank"><span class="icon big">~</span></a>
-				</span>
-			</xsl:if>
 		</div>
 	</div>
 
