@@ -208,15 +208,19 @@
 							</div>
 							<div class="widget filter">
 								<h4>Tags</h4>
-								<div class="search">
+								<div class="inline-search">
+
+
+
 									<form>
 										<xsl:attribute name="action">
 											<xsl:call-template name="url-search-home">
 												<xsl:with-param name="url-only" select="true()" />
 											</xsl:call-template>
 										</xsl:attribute>
+										<label for="keywords"><span class="icon">s</span></label>
 										<input type="hidden" name="sections" value="teachings-tags" />
-										<input name="keywords" placeholder="Search" autocomplete="off" onclick="this.select()" />
+										<input name="keywords" class="keywords" placeholder="Search" autocomplete="off" onclick="this.select()" />
 									</form>
 								</div>
 								<div class="collection">
