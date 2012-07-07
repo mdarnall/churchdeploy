@@ -56,3 +56,4 @@
 		});
 	});
 }(jQuery, window));
+audiojs.events.ready(function(){audiojs.createAll();});
