@@ -1090,7 +1090,7 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .audiojs p{display:none;width:25px;margin:0px;cursor:pointer;}
 .audiojs .action{display:block;float:left;position:relative;top:8px;margin-right:0 !important;}.audiojs .action .icon{color:#999;margin-right:15px;position:relative;top:1px;}.audiojs .action .icon:hover{color:#999;}
 .audiojs .error-message{float:left;display:none;margin:0px 10px;height:36px;width:400px;overflow:hidden;line-height:36px;white-space:nowrap;color:#fff;text-overflow:ellipsis;-o-text-overflow:ellipsis;-icab-text-overflow:ellipsis;-khtml-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;}.audiojs .error-message a{color:#eee;text-decoration:none;padding-bottom:1px;border-bottom:1px solid #999;white-space:wrap;}
-.audiojs .icon{color:#303030;position:relative;top:0px;left:5px;}.audiojs .icon:hover{color:#d83629;}
+.audiojs .icon{color:#303030;position:relative;top:-2px;left:5px;}.audiojs .icon:hover{color:#d83629;}
 .audiojs .loaded{position:absolute;top:0px;left:0px;height:14px;width:0px;background:#999;}
 .audiojs .play{display:block;}
 .audiojs .play-pause{width:25px;padding:4px 6px;margin:0px;float:left;overflow:hidden;}
