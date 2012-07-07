@@ -302,6 +302,10 @@ h3 {
 	font-size: 20px;
 	margin-right: 7px;
 	top: 1px;
+
+	&.big {
+		font-size: 28px;
+	}
 }
 
 .climacon {
@@ -2152,9 +2156,26 @@ h3 {
 		}
 
 		.actions {
-			position: relative;
-			top: -10px;
-			margin: 0;
+			margin-top: -10px;
+
+			.audiojs {
+				margin-left: 20px;
+			}
+
+			.action {
+				.download {
+					position: relative;
+					left: 0;
+				}
+
+				&.video {
+					display: none;
+				}
+
+			}
+
+
+
 		}
 
 		.tags {
@@ -2239,6 +2260,18 @@ h3 {
 
 		.action {
 			margin-right: 20px;
+
+			.download {
+				position: relative;
+				left: @base * -9;
+			}
+
+			&.video {
+				position: relative;
+				left: @base * -8;
+				margin-right: 0;
+			}
+
 		}
 
 		strong {
@@ -2436,7 +2469,7 @@ h3 {
 				background: none;
 				border: none;
 				margin: 0;
-				padding: @base * 0.5 0;
+				padding: 0;
 				font-size: 14px;
 
 				&:focus {
@@ -3170,3 +3203,75 @@ h3 {
 @media (min-width: 980px)  {
 
 }
+
+// AudioJS
+
+.audiojs audio { position: absolute; left: -1px; }
+.audiojs {
+	display: inline;
+	float: left;
+	height: 36px;
+	background: #e9e9e9;
+	overflow: hidden;
+	font-family: monospace;
+	font-size: 12px;
+	position: relative;
+	top: -8px;
+	.box-shadow(none);
+	.clearfix;
+
+	.action {
+		display: block;
+		float: left;
+		position: relative;
+		top: 7px;
+		margin-right: 0 !important;
+
+		.icon {
+			color: #999;
+			margin-right: @base * 1.5;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.play-pause {
+		width: 25px;
+		padding: 4px 6px;
+		margin: 0px; float: left;
+		overflow: hidden;
+	}
+
+	p {
+		display: none;
+		width: 25px;
+		margin: 0px;
+		cursor: pointer;
+	}
+}
+
+.audiojs .play { display: block; }
+.audiojs .scrubber { position: relative; float: left; width: 280px; background: #ccc; height: 14px; margin: 10px; border-left: 0px; border-bottom: 0px; overflow: hidden; }
+.audiojs .progress { position: absolute; top: 0px; left: 0px; height: 14px; width: 0px; background: #ededec; z-index: 1; }
+.audiojs .loaded { position: absolute; top: 0px; left: 0px; height: 14px; width: 0px; background: #999; }
+.audiojs .time { float: left; line-height: 36px; margin: 0; padding: 0; color: #999; }
+.audiojs .time em { padding: 0px 2px 0px 0px; color: #bbb; font-style: normal; }
+.audiojs .time strong { padding: 0px 0px 0px 2px; font-weight: normal; }
+.audiojs .error-message { float: left; display: none; margin: 0px 10px; height: 36px; width: 400px; overflow: hidden; line-height: 36px; white-space: nowrap; color: #fff;           text-overflow: ellipsis; -o-text-overflow: ellipsis; -icab-text-overflow: ellipsis; -khtml-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }
+.audiojs .error-message a { color: #eee; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #999; white-space: wrap; }
+.audiojs {
+	.icon {
+		color: #303030;
+		position: relative;
+		top: -2px;
+		left: 5px;
+	}
+}
+.playing .play, .playing .loading, .playing .error { display: none; }
+.playing .pause { display: block; }
+.loading .play, .loading .pause, .loading .error { display: none; }
+.loading .loading { display: block; }
+.error .time, .error .play, .error .pause, .error .scrubber, .error .loading { display: none; }
+.error .error { display: block; }
+.error .play-pause p { cursor: auto; }
+.error .error-message { display: block; }

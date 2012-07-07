@@ -209,9 +209,6 @@
 							<div class="widget filter">
 								<h4>Tags</h4>
 								<div class="inline-search">
-
-
-
 									<form>
 										<xsl:attribute name="action">
 											<xsl:call-template name="url-search-home">
@@ -367,23 +364,21 @@
 		<div class="actions">
 			<xsl:if test="filename">
 				<span class="action">
-					<span class="icon">m</span>
-					<strong>Audio</strong>
-					<xsl:text> </xsl:text>
-					<a href="{$audio-url}" target="_blank">Listen / Download</a>
+					<audio src="{$audio-url}" />
+					<a href="{$audio-url}" class="download" target="_blank"><span class="icon big">~</span></a>
 				</span>
 			</xsl:if>
 			<xsl:if test="video/item/@id">
-				<span class="action">
+				<span class="action video">
 					<span class="icon">V</span>
 					<strong>Video</strong>
 					<xsl:text> </xsl:text>
 					<a>
 						<xsl:call-template name="url-teachings" />
-						<xsl:text>View</xsl:text>
+						<xsl:text>Watch</xsl:text>
 					</a>
 					<span class="divider">|</span>
-					<a href="{$entry/url}" target="_blank">Download</a>
+					<a href="{$entry/url}" target="_blank"><span class="icon big">~</span></a>
 				</span>
 			</xsl:if>
 		</div>
