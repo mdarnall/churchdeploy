@@ -868,6 +868,7 @@ h1{font-size:64px;line-height:1.2;text-align:center;width:80%;margin:30px auto;}
 h2{font-size:28px;text-transform:uppercase;letter-spacing:1px;}
 h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px;}
 .main-container ul li{margin:0;}
+.red{color:#d83629;}
 .icon{font-family:"Pictos",sans-serif;font-weight:normal;font-style:normal;text-transform:none;-webkit-font-smoothing:antialiased;position:relative;font-size:20px;margin-right:7px;top:1px;}.icon.big{font-size:28px;}
 .climacon{font-family:'ClimaconsRegular';font-weight:normal;font-style:normal;text-transform:none !important;position:relative;font-size:20px;margin-right:7px;top:1px;-webkit-font-smoothing:antialiased;}
 .badge{font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;text-transform:uppercase;padding:4px 6px 3px 6px;margin-right:5px;}
