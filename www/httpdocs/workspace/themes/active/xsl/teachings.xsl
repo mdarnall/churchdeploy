@@ -399,7 +399,7 @@
 			            </div>
 			            <div class="error-message"></div>
 			        </div>
-			        <a href="{$audio-url}" id="download" class="download" rel="popover" data-content="Right-click on this link and use the 'Save As' or 'Download File As' dialog to download teachings." data-original-title="Downloads" target="_blank">
+			        <a href="{$audio-url}" class="download downloadPopover" rel="popover" data-content="Right-click on this link and use the 'Save As' or 'Download File As' dialog to download teachings." data-original-title="Downloads" target="_blank">
 			        	<span class="icon big">~</span>
 			        </a>
 			    </span>
