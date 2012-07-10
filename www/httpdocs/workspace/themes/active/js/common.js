@@ -10,6 +10,12 @@
 
 		$(document).ready(function () {
 
+			audiojs.events.ready(function(){audiojs.createAll();});
+
+			$('.downloadPopover').hover(function(){
+				$(this).popover('toggle');
+			});
+
 			var hostName = location.hostname,
 				links = $("a"),
 				alertLiveCookie = $.cookie("alertLive"),
@@ -53,8 +59,9 @@
 					links[i].setAttribute("target", "_blank");
 				}
 			}
+
 		});
 	});
 }(jQuery, window));
-audiojs.events.ready(function(){audiojs.createAll();});
-$(document).ready(function(){$('.downloadPopover').hover(function(){$(this).popover('toggle');})});
+// audiojs.events.ready(function(){audiojs.createAll();});
+// $(document).ready(function(){$('.downloadPopover').hover(function(){$(this).popover('toggle');})});

@@ -39,6 +39,10 @@
 	//</xsl:comment>
 	</script>
 
+	<script type="text/javascript">
+		window.scrollTo(0, 1);
+	</script>
+
 </xsl:template>
 
 <xsl:template name="template-header-outside-container">
