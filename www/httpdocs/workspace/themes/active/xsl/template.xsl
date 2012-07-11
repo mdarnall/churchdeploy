@@ -354,7 +354,6 @@
 			function downloadJSAtOnload() {
 				var js = {
 					"scripts":[
-						"/workspace/themes/active/js/audio.min.js",
 						"/workspace/themes/active/js/common-ck.js"
 					]
 				};
