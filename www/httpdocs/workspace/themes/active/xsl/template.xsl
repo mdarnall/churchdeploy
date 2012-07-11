@@ -12,7 +12,7 @@
 <xsl:template name="template-head">
 	<link rel="canonical" href="{$current-url}" />
 	<xsl:choose>
-		<xsl:when test="number($pt1) and $pt1 = 20 or number($pt1) and $pt1 = 21">
+		<xsl:when test="number($pt1) and $pt1 = 20 and $pt3 or number($pt1) and $pt1 = 20 and $pt3">
 			<link rel="shorturl" href="http://accf.co/{$pt3}" />
 			<link rel="shortlink" href="http://accf.co/{$pt3}" />
 		</xsl:when>
