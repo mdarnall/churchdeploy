@@ -4,19 +4,19 @@
 
 	Class datasourceteachings_entry_by_id extends Datasource{
 
+		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'teachings-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt3';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'id' => '{$pt3}',
+				'id' => '{$pt1},{$pt3}',
 				'216' => 'no',
 		);
 
@@ -54,10 +54,10 @@
 				'name' => 'Teachings: Entry by ID',
 				'author' => array(
 					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
+					'website' => 'http://atheycreek',
 					'email' => 'kirk@strobeck.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-14T05:52:17+00:00'
+				'release-date' => '2012-07-11T20:19:56+00:00'
 			);
 		}
 

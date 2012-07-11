@@ -53,6 +53,36 @@
 	<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html class="no-js" lang="en"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 		<head>
 			<xsl:comment>AtheyCreek.com is an installation of ChurchDeploy.com — The mission of Church Deploy is to build, as a community, the best church website framework possible and give it away, free of charge.</xsl:comment>
+			<xsl:if test="not($pt2) and number($pt1) and count(//events-entry-by-id/entry)">
+				<meta http-equiv="refresh">
+					<xsl:attribute name="content">
+						<xsl:text>0;url=</xsl:text>
+						<xsl:value-of select="$root" />
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'events']/@id" />
+						<xsl:text>/events/</xsl:text>
+						<xsl:value-of select="$pt1" />
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="//events-entry-by-id/entry/name/@handle" />
+						<xsl:text>/</xsl:text>
+					</xsl:attribute>
+				</meta>
+			</xsl:if>
+			<xsl:if test="not($pt2) and number($pt1) and count(//teachings-entry-by-id/entry)">
+				<meta http-equiv="refresh">
+					<xsl:attribute name="content">
+						<xsl:text>0;url=</xsl:text>
+						<xsl:value-of select="$root" />
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="//tags-all-entries/entry[tag/@handle = 'teachings']/@id" />
+						<xsl:text>/teachings/</xsl:text>
+						<xsl:value-of select="$pt1" />
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="//teachings-entry-by-id/entry/title/@handle" />
+						<xsl:text>/</xsl:text>
+					</xsl:attribute>
+				</meta>
+			</xsl:if>
 			<xsl:if test="not(number($pt1)) and string-length($pt1) and not($pt1 = 'toolkit')">
 				<meta http-equiv="refresh">
 					<xsl:variable name="redirect-id" select="//tags-all-entries/entry[tag/@handle = $pt1]/@id" />
