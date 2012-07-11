@@ -11,7 +11,21 @@
 
 <xsl:template name="template-head">
 	<link rel="canonical" href="{$current-url}" />
-	<link rel="shorturl" href="{$short-url}" />
+	<xsl:choose>
+		<xsl:when test="number($pt1) and $pt1 = 20">
+			<link rel="shorturl" href="http://accf.co/events/{$pt3}" />
+			<link rel="shortlink" href="http://accf.co/events/{$pt3}" />
+		</xsl:when>
+		<xsl:when test="number($pt1) and $pt1 = 21">
+			<link rel="shorturl" href="http://accf.co/teachings/{$pt3}" />
+			<link rel="shortlink" href="http://accf.co/teachings/{$pt3}" />
+		</xsl:when>
+		<xsl:otherwise>
+			<link rel="shorturl" href="http://accf.co/{$pt1}" />
+			<link rel="shortlink" href="http://accf.co/{$pt1}" />
+		</xsl:otherwise>
+	</xsl:choose>
+
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />

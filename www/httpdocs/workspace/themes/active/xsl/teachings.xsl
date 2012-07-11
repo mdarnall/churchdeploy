@@ -420,6 +420,13 @@
 		</div>
 	</div>
 
+	<xsl:if test="number($pt3)">
+		<p class="share">
+			<label for="permalink">Paste link in email or IM</label>
+			<input type="text" name="permalink" class="span4" value="accf.co/teachings/{$pt3}" onclick="this.select()" />
+		</p>
+	</xsl:if>
+
 </xsl:template>
 
 
