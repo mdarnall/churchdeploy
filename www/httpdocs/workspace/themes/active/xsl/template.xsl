@@ -10,7 +10,8 @@
 	/>
 
 <xsl:template name="template-head">
-	<link rel="canonical" href="http://atheycreek.com" />
+	<link rel="canonical" href="{$current-url}" />
+	<link rel="shorturl" href="{$short-url}" />
 	<link rel="dns-prefetch" href="{$root}" />
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
@@ -37,10 +38,6 @@
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 	//</xsl:comment>
-	</script>
-
-	<script type="text/javascript">
-		window.scrollTo(0, 1);
 	</script>
 
 </xsl:template>

@@ -332,6 +332,7 @@
 			$root_page = @array_shift(explode('/', $page['path']));
 			$current_path = explode(dirname($_SERVER['SCRIPT_NAME']), $_SERVER['REQUEST_URI'], 2);
 			$current_path = '/' . ltrim(end($current_path), '/');
+			$short_path = 'http://accf.co';
 
 			// Get max upload size from php and symphony config then choose the smallest
 			$upload_size_php = ini_size_to_bytes(ini_get('upload_max_filesize'));
@@ -356,6 +357,7 @@
 				'current-url' => URL . $current_path,
 				'upload-limit' => min($upload_size_php, $upload_size_sym),
 				'symphony-version' => Symphony::Configuration()->get('version', 'symphony'),
+				'short-url' => $short_path . $current_path,
 			);
 
 			if(is_array($this->_env['url'])){
