@@ -67,6 +67,7 @@
 						<xsl:text>/</xsl:text>
 					</xsl:attribute>
 				</meta>
+				<xsl:call-template name="css-hide-all"/>
 			</xsl:if>
 			<xsl:if test="not($pt2) and number($pt1) and count(//teachings-entry-by-id/entry)">
 				<meta http-equiv="refresh">
@@ -82,6 +83,7 @@
 						<xsl:text>/</xsl:text>
 					</xsl:attribute>
 				</meta>
+				<xsl:call-template name="css-hide-all"/>
 			</xsl:if>
 			<xsl:if test="not(number($pt1)) and string-length($pt1) and not($pt1 = 'toolkit')">
 				<meta http-equiv="refresh">
@@ -114,6 +116,7 @@
 						</xsl:if>
 					</xsl:attribute>
 				</meta>
+				<xsl:call-template name="css-hide-all"/>
 			</xsl:if>
 			<xsl:variable name="page-title">
 				<xsl:if test="string-length($pt1)">
@@ -271,6 +274,15 @@
 			</xsl:for-each>
 		</ul>
 	</xsl:if>
+
+</xsl:template>
+
+
+<xsl:template name="css-hide-all">
+
+	<style type="text/css">
+		* { display: none !important; }
+	</style>
 
 </xsl:template>
 
