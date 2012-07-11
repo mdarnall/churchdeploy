@@ -9,7 +9,9 @@
 	indent="no"
 	/>
 
+
 <xsl:template name="template-head">
+
 	<link rel="canonical" href="{$current-url}" />
 	<xsl:choose>
 		<xsl:when test="number($pt1) and $pt1 = 20 and $pt3 or number($pt1) and $pt1 = 20 and $pt3">
@@ -21,13 +23,12 @@
 			<link rel="shortlink" href="http://accf.co/{$pt1}" />
 		</xsl:otherwise>
 	</xsl:choose>
-
 	<link rel="dns-prefetch" href="{$root}" />
+	<!--
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 		<link rel="prerender" href="{$root}/{@id}/{description/@handle}/" />
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each>
-	<!--
 	<meta http-equiv="x-dns-prefetch-control" content="on" />
 
 	<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
@@ -35,7 +36,6 @@
 		<link rel="prefetch" href="{$root}/{@id}/{description/@handle}/" />
 	</xsl:for-each>
 	-->
-
 	<script type="text/javascript">
 	<xsl:comment>
 	var _gaq = _gaq || [];
@@ -51,6 +51,7 @@
 	</script>
 
 </xsl:template>
+
 
 <xsl:template name="template-header-outside-container">
 
@@ -357,7 +358,6 @@
 						"/workspace/themes/active/js/common-ck.js"
 					]
 				};
-
 				for (var key in js.scripts) {
 					if (js.scripts[key]) {
 						var element=document.createElement("script");
@@ -366,7 +366,6 @@
 					}
 				}
 			}
-
 			if(window.addEventListener) {
 				window.addEventListener("load",downloadJSAtOnload,false);
 			} else if (window.attachEvent) {
