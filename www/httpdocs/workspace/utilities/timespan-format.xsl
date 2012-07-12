@@ -21,13 +21,13 @@ Call using
 	</xsl:call-template>
 
 
-Examples are .. 
+Examples are ..
 
-	- Saturday, Nov. 17  at  10 am
-	- Saturday, Nov. 17  from  1 - 2 pm
-	- Saturday, Nov. 17  from  10 am - 2:30 pm
-	- Saturday, Nov. 17th  at  10 am  -  Monday, the 19th  at  11 am
-	- Saturday, Nov. 17  at  1 pm  -  Sunday, Jul. 29  at  8 am
+	- Saturday, Nov. 17 at 10am
+	- Saturday, Nov. 17 from 1-2pm
+	- Saturday, Nov. 17 from 10am-2:30pm
+	- Saturday, Nov. 17th at 10am - Monday, the 19th at 11am
+	- Saturday, Nov. 17 at 1pm - Sunday, Jul. 29 at 8am
 
 -->
 
@@ -38,77 +38,68 @@ Examples are ..
 	<xsl:for-each select="$date">
 		<xsl:choose>
 			<xsl:when test="start and end">
-
 				<xsl:variable name="start-month">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="start/@iso" />
 						<xsl:with-param name="format" select="'%m;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="end-month">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="end/@iso" />
 						<xsl:with-param name="format" select="'%m;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="start-day">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="start/@iso" />
 						<xsl:with-param name="format" select="'%d;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="end-day">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="end/@iso" />
 						<xsl:with-param name="format" select="'%d;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="start-ampm">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="start/@iso" />
 						<xsl:with-param name="format" select="'#ts;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:variable name="end-ampm">
 					<xsl:call-template name="format-date">
 						<xsl:with-param name="date" select="end/@iso" />
 						<xsl:with-param name="format" select="'#ts;'" />
 					</xsl:call-template>
 				</xsl:variable>
-
 				<xsl:choose>
 					<xsl:when test="$start-day = $end-day">
 						<xsl:call-template name="format-date">
 							<xsl:with-param name="date" select="start/@iso" />
 							<xsl:with-param name="format" select="'%d+;, %m-;. %d;%ds;'" />
 						</xsl:call-template>
-						<xsl:text> &#160;from&#160; </xsl:text>
+						<xsl:text> from </xsl:text>
 						<xsl:call-template name="timespan-format-time">
 							<xsl:with-param name="date" select="start/@iso" />
 						</xsl:call-template>
 						<xsl:if test="not($start-ampm = $end-ampm)">
-							<xsl:text> </xsl:text>
 							<xsl:value-of select="$start-ampm" />
 						</xsl:if>
 						<xsl:if test="end">
-							<xsl:text> - </xsl:text>
+							<xsl:text>-</xsl:text>
 							<xsl:call-template name="timespan-format-time">
 								<xsl:with-param name="date" select="end/@iso" />
 							</xsl:call-template>
 						</xsl:if>
-						<xsl:text> </xsl:text>
 						<xsl:value-of select="$end-ampm" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:call-template name="timespan-format-single-datetime">
 							<xsl:with-param name="date" select="start" />
 						</xsl:call-template>
-						<xsl:text> &#160;-&#160; </xsl:text>
+						<xsl:text> - </xsl:text>
 						<xsl:choose>
 							<xsl:when test="$start-month = $end-month">
 								<xsl:call-template name="timespan-format-single-datetime">
@@ -135,6 +126,7 @@ Examples are ..
 
 </xsl:template>
 
+
 <xsl:template name="timespan-format-single-datetime">
 
 	<xsl:param name="date" /> <!-- start or end -->
@@ -155,7 +147,7 @@ Examples are ..
 				</xsl:call-template>
 			</xsl:otherwise>
 		</xsl:choose>
-		<xsl:text> &#160;at&#160; </xsl:text>
+		<xsl:text> at </xsl:text>
 		<xsl:call-template name="timespan-format-time">
 			<xsl:with-param name="date" select="@iso" />
 		</xsl:call-template>
@@ -167,6 +159,7 @@ Examples are ..
 	</xsl:for-each>
 
 </xsl:template>
+
 
 <xsl:template name="timespan-format-time">
 
@@ -194,5 +187,6 @@ Examples are ..
 	</xsl:choose>
 
 </xsl:template>
+
 
 </xsl:stylesheet>
