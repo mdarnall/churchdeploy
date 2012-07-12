@@ -2,45 +2,33 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceteachings_entry_by_id extends Datasource{
+	Class datasourceitunes_podcast extends Datasource{
 
 		public $dsParamCACHE = '0';
-		public $dsParamROOTELEMENT = 'teachings-entry-by-id';
+		public $dsParamROOTELEMENT = 'itunes-podcast';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '1';
+		public $dsParamLIMIT = '100';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'date';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-		public $dsParamFILTERS = array(
-				'id' => '{$pt1},{$pt3}',
-				'216' => 'no',
-		);
+		
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
-				'slug',
 				'filename',
-				'current-id',
 				'book',
 				'chapter',
-				'description',
+				'description: raw',
 				'speaker: first-name',
 				'speaker: last-name',
 				'date',
 				'poster',
-				'video: title',
-				'video: description',
-				'video: date',
-				'video: url',
-				'video: player',
-				'video: thumbnail',
-				'video: id',
-				'day',
-				'tags: tag'
+				'audio-duration',
+				'audio-filesize'
 		);
 
 
@@ -51,13 +39,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Teachings: Entry by ID',
+				'name' => 'iTunes Podcast',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
+					'name' => 'Jonathan Simcoe',
 					'website' => 'http://atheycreek',
-					'email' => 'kirk@strobeck.com'),
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-11T20:19:56+00:00'
+				'release-date' => '2012-07-12T23:23:15+00:00'
 			);
 		}
 
