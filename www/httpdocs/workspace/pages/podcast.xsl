@@ -16,6 +16,7 @@
 	<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
         <channel>
             <title>Athey Creek | Audio Podcast</title>
+            <itunes:summary>To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</itunes:summary>
             <description>To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</description>
             <link><xsl:value-of select="$root" /></link>
             <itunes:subtitle>Teachings from God's inspired word.</itunes:subtitle>
@@ -55,9 +56,18 @@
                         <xsl:value-of select="chapter" />
                     </itunes:subtitle>
                     <itunes:summary>
+                        <xsl:text>A teaching at Athey Creek Christian Fellowship by</xsl:text>
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:value-of select="speaker/item/first-name" />
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:value-of select="speaker/item/last-name" />
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:text>in</xsl:text>
+                        <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="book/item" />
                         <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="chapter" />
+                        <xsl:text>.</xsl:text>
                     </itunes:summary>
                     <itunes:image>
                         <xsl:attribute name="href">
@@ -103,12 +113,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </itunes:duration>
-<!--                     <itunes:keywords>
-                        <xsl:for-each select="tags/item">
-                            <xsl:value-of select="tag/@handle" />
-                            <xsl:if test="position() != last()">, </xsl:if>
-                        </xsl:for-each>
-                    </itunes:keywords> -->
+                    <itunes:keywords>Brett Meador, Athey Creek, Portland, Wilsonville, Oregon, PDX</itunes:keywords>
                     <itunes:explicit>no</itunes:explicit>
                     <description>
                         <xsl:value-of select="book/item" />
