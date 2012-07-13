@@ -27,11 +27,12 @@
                 <itunes:name><xsl:value-of select="$website-name" /></itunes:name>
                 <itunes:email>info@atheycreek.com</itunes:email>
             </itunes:owner>
-            <image>
-                <url><xsl:value-of select="$root" />/workspace/img/itunes-podcast.jpg</url>
-                <title><xsl:value-of select="$website-name" /></title>
-                <link><xsl:value-of select="$root" /></link>
-            </image>
+            <itunes:image>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="$root" />
+                    <xsl:text>/workspace/img/itunes-podcast.jpg</xsl:text>
+                </xsl:attribute>
+            </itunes:image>
             <!-- iTunes Browse Podcasts Category -->
             <itunes:category text="Religion &amp; Spirituality">
                 <!-- iTunes Browse Podcasts Subcategory -->
@@ -43,11 +44,11 @@
                     <title>
                         <xsl:value-of select="title" />
                     </title>
-                    <author>
+                    <itunes:author>
                         <xsl:value-of select="speaker/item/first-name" />
                         <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="speaker/item/last-name" />
-                    </author>
+                    </itunes:author>
                     <itunes:subtitle>
                         <xsl:value-of select="book/item" />
                         <xsl:text>&#160;</xsl:text>
@@ -58,6 +59,12 @@
                         <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="chapter" />
                     </itunes:summary>
+                    <itunes:image>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="$root" />
+                            <xsl:text>/workspace/img/itunes-podcast.jpg</xsl:text>
+                        </xsl:attribute>
+                    </itunes:image>
                     <enclosure>
                         <xsl:attribute name="url">
                             <xsl:text disable-output-escaping="yes">http://66.147.244.244/~atheycre/teachings/</xsl:text>
@@ -95,8 +102,13 @@
                                 <xsl:text>00:60:00</xsl:text>
                             </xsl:otherwise>
                         </xsl:choose>
-
                     </itunes:duration>
+<!--                     <itunes:keywords>
+                        <xsl:for-each select="tags/item">
+                            <xsl:value-of select="tag/@handle" />
+                            <xsl:if test="position() != last()">, </xsl:if>
+                        </xsl:for-each>
+                    </itunes:keywords> -->
                     <itunes:explicit>no</itunes:explicit>
                     <description>
                         <xsl:value-of select="book/item" />
