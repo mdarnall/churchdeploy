@@ -38,7 +38,7 @@
                 <itunes:category text="Christianity"></itunes:category>
             </itunes:category>
             <!-- Start Sermon Information -->
-            <xsl:for-each select="//itunes-podcast/entry">
+            <xsl:for-each select="//itunes-podcast/entry[hide = 'No']">
                 <item>
                     <title>
                         <xsl:value-of select="title" />
