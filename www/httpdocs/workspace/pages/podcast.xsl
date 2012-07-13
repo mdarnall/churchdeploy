@@ -26,7 +26,7 @@
             <copyright>© 1996-<xsl:value-of select="$this-year"/>. <xsl:value-of select="$website-name" />. All rights reserved.</copyright>
             <itunes:owner>
                 <itunes:name><xsl:value-of select="$website-name" /></itunes:name>
-                <itunes:email>info@atheycreek.com</itunes:email>
+                <itunes:email>web@atheycreek.com</itunes:email>
             </itunes:owner>
             <itunes:image>
                 <xsl:attribute name="href">
@@ -56,17 +56,17 @@
                         <xsl:value-of select="chapter" />
                     </itunes:subtitle>
                     <itunes:summary>
-                        <xsl:text>A teaching at Athey Creek Christian Fellowship by</xsl:text>
-                        <xsl:text>&#160;</xsl:text>
-                        <xsl:value-of select="speaker/item/first-name" />
-                        <xsl:text>&#160;</xsl:text>
-                        <xsl:value-of select="speaker/item/last-name" />
-                        <xsl:text>&#160;</xsl:text>
-                        <xsl:text>in</xsl:text>
+                        <xsl:text>A teaching in</xsl:text>
                         <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="book/item" />
                         <xsl:text>&#160;</xsl:text>
                         <xsl:value-of select="chapter" />
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:text>at Athey Creek Christian Fellowship by</xsl:text>
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:value-of select="speaker/item/first-name" />
+                        <xsl:text>&#160;</xsl:text>
+                        <xsl:value-of select="speaker/item/last-name" />
                         <xsl:text>.</xsl:text>
                     </itunes:summary>
                     <itunes:image>
