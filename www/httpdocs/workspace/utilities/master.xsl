@@ -120,8 +120,10 @@
 			</xsl:if>
 			<xsl:variable name="page-title">
 				<xsl:if test="string-length($pt1)">
-					<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/description" />
-					<xsl:text disable-output-escaping="yes"> | </xsl:text>
+					<xsl:if test="string-length(//tags-all-entries/entry[@id = $pt1]/description)">
+						<xsl:value-of select="//tags-all-entries/entry[@id = $pt1]/description" />
+						<xsl:text disable-output-escaping="yes"> | </xsl:text>
+					</xsl:if>
 				</xsl:if>
 				<xsl:value-of select="//misc-all-entries/entry[name='meta-page-title']/content" />
 			</xsl:variable>
