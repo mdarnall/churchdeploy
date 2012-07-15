@@ -113,7 +113,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </itunes:duration>
-                    <itunes:keywords>Brett Meador, Athey Creek, Portland, Wilsonville, Oregon, PDX</itunes:keywords>
+                    <itunes:keywords>Brett Meador, Athey Creek, Day by Day, Portland, Wilsonville, Oregon, PDX</itunes:keywords>
                     <itunes:explicit>no</itunes:explicit>
                     <description>
                         <xsl:value-of select="book/item" />
