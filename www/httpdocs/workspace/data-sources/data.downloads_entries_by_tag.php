@@ -4,6 +4,7 @@
 
 	Class datasourcedownloads_entries_by_tag extends Datasource{
 
+		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'downloads-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -22,7 +23,8 @@
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'name',
-				'file'
+				'file',
+				'link'
 		);
 
 
@@ -35,11 +37,11 @@
 			return array(
 				'name' => 'Downloads: Entries by tag',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T23:22:04+00:00'
+				'release-date' => '2012-07-16T16:58:12+00:00'
 			);
 		}
 

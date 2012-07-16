@@ -474,7 +474,7 @@
 
 <xsl:template name="years-counter">
 
-	<xsl:param name="howMany">1996</xsl:param>
+	<xsl:param name="howMany">1997</xsl:param>
 
 	<xsl:if test="$howMany &lt; $this-year + 1">
 		<a href="{$root}/{$pt1}/{$pt2}/year/{$howMany}/"><xsl:value-of select="$howMany" /></a>

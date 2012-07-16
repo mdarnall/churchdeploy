@@ -237,12 +237,22 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 
 	<xsl:param name="node" select="." />
 
-	<xsl:attribute name="href">
-		<xsl:value-of select="$workspace" />
-		<xsl:value-of select="$node/file/@path" />
-		<xsl:text>/</xsl:text>
-		<xsl:value-of select="$node/file/filename" />
-	</xsl:attribute>
+	<xsl:choose>
+		<xsl:when test="$node/link">
+			<xsl:attribute name="href">
+				<xsl:value-of select="$node/link" />
+			</xsl:attribute>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:attribute name="href">
+				<xsl:value-of select="$workspace" />
+				<xsl:value-of select="$node/file/@path" />
+				<xsl:text>/</xsl:text>
+				<xsl:value-of select="$node/file/filename" />
+			</xsl:attribute>
+		</xsl:otherwise>
+	</xsl:choose>
+
 
 </xsl:template>
 
