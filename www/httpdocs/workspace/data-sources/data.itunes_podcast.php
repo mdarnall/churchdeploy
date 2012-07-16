@@ -8,7 +8,7 @@
 		public $dsParamROOTELEMENT = 'itunes-podcast';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '30';
+		public $dsParamLIMIT = '200';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
@@ -26,7 +26,6 @@
 				'speaker: first-name',
 				'speaker: last-name',
 				'date',
-				'poster',
 				'audio-duration',
 				'audio-filesize',
 				'hide'
@@ -46,7 +45,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-13T00:49:07+00:00'
+				'release-date' => '2012-07-16T16:49:29+00:00'
 			);
 		}
 
