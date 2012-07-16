@@ -38,7 +38,7 @@
 				'name' => 'Downloads: Entries by tag',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
-					'website' => 'http://atheycreek',
+					'website' => 'http://atheycreek.com',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
 				'release-date' => '2012-07-16T16:58:12+00:00'
@@ -71,7 +71,7 @@
 
 			if($this->_force_empty_result) $result = $this->emptyXMLSet();
 
-			
+
 
 			return $result;
 		}

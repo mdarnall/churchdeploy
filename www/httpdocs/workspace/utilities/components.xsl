@@ -237,6 +237,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 
 	<xsl:param name="node" select="." />
 
+
 	<xsl:choose>
 		<xsl:when test="$node/link">
 			<xsl:attribute name="href">
