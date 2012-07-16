@@ -16,8 +16,8 @@
 	<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
         <channel>
             <title>Athey Creek | Audio Podcast</title>
-            <itunes:summary>To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</itunes:summary>
-            <description>To put it simply, we are a fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</description>
+            <itunes:summary>The Athey Creek Audio Podcast features teachings by Pastor Brett Meador and other leaders at Athey Creek Christian Fellowship. Brett's radio program, Day by Day is featured on radio stations in the Portland area, Southern Oregon and Vanuatu. Athey Creek is fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</itunes:summary>
+            <description>The Athey Creek Audio Podcast features teachings by Pastor Brett Meador and other leaders at Athey Creek Christian Fellowship. Brett's radio program, Day by Day is featured on radio stations in the Portland area, Southern Oregon and Vanuatu. Athey Creek is fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</description>
             <link><xsl:value-of select="$root" /></link>
             <itunes:subtitle>Teachings from God's inspired word.</itunes:subtitle>
             <itunes:author><xsl:value-of select="$website-name" /></itunes:author>
