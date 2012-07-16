@@ -16,12 +16,11 @@
 	<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
         <channel>
             <title>Athey Creek | Audio Podcast</title>
+            <link><xsl:value-of select="$root" /></link>
             <itunes:summary>The Athey Creek Audio Podcast features teachings by Pastor Brett Meador and other leaders at Athey Creek Christian Fellowship. Brett's radio program, Day by Day is featured on radio stations in the Portland area, Southern Oregon and Vanuatu. Athey Creek is fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</itunes:summary>
             <description>The Athey Creek Audio Podcast features teachings by Pastor Brett Meador and other leaders at Athey Creek Christian Fellowship. Brett's radio program, Day by Day is featured on radio stations in the Portland area, Southern Oregon and Vanuatu. Athey Creek is fellowship of believers that strive to worship God, follow Jesus, study the Bible, and serve one another. We believe church is supposed to be like a hospital, a place of healing and refreshment.</description>
-            <link><xsl:value-of select="$root" /></link>
             <itunes:subtitle>Teachings from God's inspired word.</itunes:subtitle>
             <itunes:author><xsl:value-of select="$website-name" /></itunes:author>
-            <itunes:summary>Weekly teachings from <xsl:value-of select="$website-name" /></itunes:summary>
             <language>en-us</language>
             <copyright>© 1996-<xsl:value-of select="$this-year"/>. <xsl:value-of select="$website-name" />. All rights reserved.</copyright>
             <itunes:owner>
@@ -39,6 +38,7 @@
                 <!-- iTunes Browse Podcasts Subcategory -->
                 <itunes:category text="Christianity"></itunes:category>
             </itunes:category>
+            <itunes:keywords>Brett Meador, Athey Creek Christian Fellowship, Athey Creek, Day by Day, Through the Bible, Scripture, Jesus, Portland, Wilsonville, Oregon, PDX</itunes:keywords>
             <!-- Start Sermon Information -->
             <xsl:for-each select="//itunes-podcast/entry[hide = 'No']">
                 <item>
@@ -113,8 +113,6 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </itunes:duration>
-                    <itunes:keywords>Brett Meador, Athey Creek, Day by Day, Portland, Wilsonville, Oregon, PDX</itunes:keywords>
-                    <itunes:explicit>no</itunes:explicit>
                     <description>
                         <xsl:value-of select="book/item" />
                         <xsl:text>&#160;</xsl:text>
