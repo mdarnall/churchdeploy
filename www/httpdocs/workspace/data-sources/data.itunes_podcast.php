@@ -8,7 +8,7 @@
 		public $dsParamROOTELEMENT = 'itunes-podcast';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '200';
+		public $dsParamLIMIT = '20';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
@@ -45,7 +45,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-16T16:49:29+00:00'
+				'release-date' => '2012-07-17T18:16:06+00:00'
 			);
 		}
 
