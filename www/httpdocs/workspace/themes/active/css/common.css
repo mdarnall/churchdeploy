@@ -978,7 +978,7 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .profile .column-full-width .row>.component-events>.entries .entry .header{margin:0 0 10px 0;}
 .profile .column-full-width .row>.component-events>.entries .entry .date{margin:0 0 10px 0;}
 .profile .column-full-width .row>.component-events>.entries .span4{background:none;margin-top:0;padding-top:0;}
-.profile .column-full-width .row>.component-events>.entries .component-members-roles .entry{background:#eee;padding-left:20px;}
+.profile .column-full-width .row>.component-events>.entries .component-members-roles .entry,.profile .column-full-width .row>.component-events>.entries .component-downloads .entry{background:#eee;padding-left:20px;}
 .column-right>.component-events .entries{list-style:none;margin:0 0 20px 0;padding:0;}.column-right>.component-events .entries .entry{background:#eeeeee;position:relative;padding:0 20px;margin:0;}.column-right>.component-events .entries .entry a{display:block;height:100%;padding:15px 10px 15px 0;border-bottom:1px solid #bbbbbb;*zoom:1;*zoom:1;}.column-right>.component-events .entries .entry a:before,.column-right>.component-events .entries .entry a:after{display:table;content:"";}
 .column-right>.component-events .entries .entry a:after{clear:both;}
 .column-right>.component-events .entries .entry a:before,.column-right>.component-events .entries .entry a:after{display:table;content:"";}
