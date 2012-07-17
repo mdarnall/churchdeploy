@@ -31,6 +31,9 @@
 				'member-role: member: phone-number',
 				'member-role: member: anonymize',
 				'member-role: role: role',
+				'downloads: name',
+				'downloads: file',
+				'downloads: link',
 				'childcare'
 		);
 
@@ -44,11 +47,11 @@
 			return array(
 				'name' => 'Events: Entry by ID',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
+					'name' => 'Jonathan Simcoe',
 					'website' => 'http://atheycreek',
-					'email' => 'kirk@strobeck.com'),
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-11T20:18:50+00:00'
+				'release-date' => '2012-07-17T17:08:47+00:00'
 			);
 		}
 

@@ -100,8 +100,11 @@
                         </xsl:attribute>
                     </enclosure>
                     <guid>
+                        <xsl:variable name="en-lowercase-letters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
+                        <xsl:variable name="en-uppercase-letters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
                         <xsl:text disable-output-escaping="yes">http://66.147.244.244/~atheycre/teachings/</xsl:text>
-                        <xsl:value-of select="filename"/>
+                        <xsl:value-of select="translate(filename,$en-uppercase-letters,$en-lowercase-letters)"/>
+                        <!-- <xsl:value-of select="filename"/> -->
                         <xsl:text>.mp3</xsl:text>
                     </guid>
                     <pubDate>
@@ -117,11 +120,6 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </itunes:duration>
-<!--                     <description>
-                        <xsl:value-of select="book/item" />
-                        <xsl:text>&#160;</xsl:text>
-                        <xsl:value-of select="chapter" />
-                    </description> -->
                 </item>
             </xsl:for-each>
 
