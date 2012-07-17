@@ -4,6 +4,7 @@
 
 	Class datasourceevents_recurring_entry_by_id extends Datasource{
 
+		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'events-recurring-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -35,6 +36,7 @@
 				'locations: longitude',
 				'downloads: name',
 				'downloads: file',
+				'downloads: link',
 				'images: image',
 				'text: content',
 				'verses: passage',
@@ -59,11 +61,11 @@
 			return array(
 				'name' => 'Events: Recurring: Entry by ID',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-22T19:38:40+00:00'
+				'release-date' => '2012-07-17T20:51:47+00:00'
 			);
 		}
 

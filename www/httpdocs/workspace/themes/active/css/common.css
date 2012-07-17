@@ -886,9 +886,8 @@ h3{font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px
 .mast .row .span4 blockquote{border:none;padding:13px 15px 0 15px;font-family:"ff-tisa-web-pro-regular",Georgia,'Times New Roman',Times,serif;font-style:normal;font-weight:normal;font-size:16px;line-height:1.7;color:#303030;margin-bottom:20px;font-family:"ff-tisa-web-pro-italic",Georgia,'Times New Roman',Times,serif;font-style:normal;font-weight:normal;margin-bottom:0;}
 .mast .row .span4 cite{font-family:"proxima-nova-regular","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;display:block;font-size:12px;text-transform:uppercase;margin:10px 0;color:#999;color:#fff;display:block;margin-top:10px;padding:0 15px 5px 15px;}.mast .row .span4 cite .verse{color:#d83629;}
 .modalLive{width:630px !important;}
-.alert{-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);border:1px solid #8ac38b;letter-spacing:1px;line-height:1.2;}.alert.alertLive{margin-top:30px;}
-.alert strong{font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;display:inline-block;text-transform:uppercase;padding-top:7px;margin-right:10px;}
-.alert .btn{margin-bottom:2px;}
+.alert{font-family:"ff-tisa-web-pro-regular",Georgia,'Times New Roman',Times,serif;font-style:normal;font-weight:normal;margin:20px 0;}.alert.alertLive{margin-top:30px;}
+.alert strong{font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;text-transform:uppercase;}
 .navbar.navbar-fixed-top{position:absolute;}
 .navbar .navbar-inner{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;font-family:"proxima-nova-bold","Helvetica Neue",Arial,Helvetica,sans-serif;font-style:normal;font-weight:normal;background:#96bac4;filter:none;text-transform:uppercase;letter-spacing:1px;font-size:12px;}.navbar .navbar-inner ul.nav li.last a{padding-right:0;}
 .navbar .navbar-inner ul.nav li a{color:#71939c;text-shadow:none;}.navbar .navbar-inner ul.nav li a:hover{color:#fff;}

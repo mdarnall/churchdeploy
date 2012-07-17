@@ -4,6 +4,7 @@
 
 	Class datasourcealerts_global extends Datasource{
 
+		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'alerts-global';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -22,7 +23,8 @@
 		public $dsParamINCLUDEDELEMENTS = array(
 				'url',
 				'content: formatted',
-				'can-be-closed'
+				'can-be-closed',
+				'show-everywhere'
 		);
 
 
@@ -35,11 +37,11 @@
 			return array(
 				'name' => 'Alerts: Global',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-25T00:39:55+00:00'
+				'release-date' => '2012-07-17T21:33:53+00:00'
 			);
 		}
 

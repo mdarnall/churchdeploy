@@ -11,6 +11,7 @@
 <xsl:include href="../themes/active/xsl/spacer.xsl" />
 <xsl:include href="../themes/active/xsl/teachings.xsl" />
 <xsl:include href="../themes/active/xsl/text.xsl" />
+<xsl:include href="../themes/active/xsl/alerts.xsl" />
 <xsl:include href="../themes/active/xsl/verses.xsl" />
 <xsl:include href="../themes/active/xsl/videos.xsl" />
 
@@ -207,6 +208,12 @@
 			<xsl:call-template name="component-text">
 				<xsl:with-param name="position" select="name($xpath)" />
 				<xsl:with-param name="entries" select="//text-entries-by-tag/entry" />
+			</xsl:call-template>
+		</xsl:if>
+		<xsl:if test=". = 'alerts'">
+			<xsl:call-template name="component-alerts">
+<!--  				<xsl:with-param name="position" select="name($xpath)" /> -->
+				<xsl:with-param name="entries" select="//alerts-entries-by-tag/entry" />
 			</xsl:call-template>
 		</xsl:if>
 		<xsl:if test=". = 'verses'">
