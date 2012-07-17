@@ -203,7 +203,7 @@
 											<xsl:with-param name="position" select="'column-right'" />
 											<xsl:with-param name="entries" select="member-role/item" />
 										</xsl:call-template>
-										<xsl:call-template name="component-members-roles">
+										<xsl:call-template name="component-downloads">
 											<xsl:with-param name="position" select="'column-right'" />
 											<xsl:with-param name="entries" select="downloads/item" />
 										</xsl:call-template>

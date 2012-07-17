@@ -104,7 +104,6 @@
                         <xsl:variable name="en-uppercase-letters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
                         <xsl:text disable-output-escaping="yes">http://66.147.244.244/~atheycre/teachings/</xsl:text>
                         <xsl:value-of select="translate(filename,$en-uppercase-letters,$en-lowercase-letters)"/>
-                        <!-- <xsl:value-of select="filename"/> -->
                         <xsl:text>.mp3</xsl:text>
                     </guid>
                     <pubDate>
