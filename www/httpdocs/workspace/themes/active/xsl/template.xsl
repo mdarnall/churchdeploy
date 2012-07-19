@@ -55,7 +55,7 @@
 
 <xsl:template name="template-header-outside-container">
 
-	<div class="navbar navbar-fixed-top hidden-phone">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<div>
