@@ -15,7 +15,7 @@
 // @import "../../../bootstrap/less/responsive-1200px-min.less";
 @import "../../../bootstrap/less/responsive-navbar.less";
 
-
+//Font imports
 
 @import 'pictos.less';
 @import 'webfonts.less';
@@ -54,7 +54,7 @@
 		}
 
 		.bold() {
-			font-family: "proxima-nova-bold", "Helvetica Neue", Arial, Helvetica, sans-sprif;
+			font-family: "proxima-nova-bold", "Helvetica Neue", Arial, Helvetica, sans-serif;
 			font-style: normal;
 			font-weight: normal;
 		}
@@ -292,10 +292,6 @@ h3 {
 
 // classes
 
-.red {
-	color: @color-accent;
-}
-
 .icon {
 	font-family: @icons;
 	font-weight: normal;
@@ -306,13 +302,7 @@ h3 {
 	font-size: 20px;
 	margin-right: 7px;
 	top: 1px;
-
-	&.big {
-		font-size: 28px;
-	}
 }
-
-
 
 .climacon {
 	#font > #climacons;
@@ -327,40 +317,11 @@ h3 {
 	#font > #proxima > .bold;
 	text-transform: uppercase;
 	padding: 4px 6px 3px 6px;
-	margin-right: 5px;
+	margin-right: @base;
 }
 
 .divider {
 	margin: 0 10px;
-}
-
-.share {
-	border-top: 1px solid #e9e9e9;
-	margin-top: 15px;
-	padding-top: @base;
-
-	label,
-	input {
-		display: inline;
-	}
-
-	label {
-		#font > #proxima > .bold;
-		color: #ccc;
-		text-transform: uppercase;
-		margin-right: 10px;
-	}
-
-	input {
-		#font > #proxima > .regular;
-		display: inline;
-		font-size: 14px;
-		padding: 5px;
-
-		&.span4 {
-			margin-top: @base;
-		}
-	}
 }
 
 .mast {
@@ -512,20 +473,26 @@ h3 {
 }
 
 .alert {
-		#font > #tisa > .regular;
-		margin: @base * 2 0;
+	.box-shadow(0 1px 2px rgba(0,0,0,0.1));
+
+	border: 1px solid lighten(#468847, 25%);
+	letter-spacing: 1px;
+	line-height: 1.2;
 
 	&.alertLive {
 		margin-top: @base * 3;
 	}
 
-	span {
+	strong {
 		#font > #proxima > .bold;
+		display: inline-block;
 		text-transform: uppercase;
+		padding-top: 7px;
+		margin-right: @base;
 	}
 
 	.btn {
-		#font > #proxima > .regular;
+		margin-bottom: 2px;
 	}
 }
 
@@ -594,16 +561,6 @@ h3 {
 	.edit-defaults;
 	top: @base;
 	right: @base;
-}
-
-.edit {
-	color: #303030 !important;
-
-	.icon {
-		font-size: 16px;
-		margin-right: 0;
-		top: 0;
-	}
 }
 
 .subnav {
@@ -829,7 +786,7 @@ h3 {
 			#font > #tisa > .regular;
 			color: @color-white;
 			margin-left: @base * 2;
-			font-size: 14px;
+			font-size: 13px;
 			// -webkit-mask-image: -webkit-gradient(linear, 95% 0, 100% 0, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.2))); // Safari 4+, Chrome 2+ // Safari 4+, Chrome 2+
 			// -webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 95%, rgba(0,0,0,0.2) 100%); // Safari 5.1+, Chrome 10+;
 
@@ -1128,25 +1085,11 @@ h3 {
 	z-index: 10000;
 	padding: 0;
 	margin: 0;
-	.opacity(50);
 }
 
 // layouts ----------------------------------------------------------
 
 .layout-home {
-
-	.main-container {
-
-		.component-text {
-
-			.edit {
-				.edit-defaults;
-				position: relative;
-				top: @base * -28;
-				left: 0;
-			}
-		}
-	}
 
 	h3 {
 		margin-bottom: 15px;
@@ -1193,40 +1136,6 @@ h3 {
 
 		> .component-locations {
 			margin-top: @base * 4;
-		}
-	}
-}
-
-.layout-home-group {
-
-	.column-center {
-
-		.entry {
-
-			h2 {
-				margin-top: 0;
-				margin-bottom: @base;
-			}
-		}
-	}
-
-	.meta {
-		#font > #tisa > .italic;
-		color: #303030;
-		font-size: 18px;
-		clear: both;
-		margin: 0 0 @base 0;
-		padding: 0;
-
-		.icon {
-			color: #878787;
-			font-size: 20px;
-			position: relative;
-			top: -1px;
-		}
-
-		&.last {
-			margin-bottom: @base * 2;
 		}
 	}
 }
@@ -1409,22 +1318,21 @@ h3 {
 						padding: 0 @base * 1.5;
 
 						p {
-							margin-top: @base * 1.5;
+							margin-top: @base;
 						}
 					}
 
 					.edit {
-						position: absolute;
+						position: relative;
 						top: @base;
-						right: @base;
+						left: @base * .5;
 					}
 
 					.header {
 						text-transform: none;
 						font-size: 26px;
-						margin: @base 0 @base 0;
+						margin: @base 0 0 0;
 						padding: 0 @base * 1.5 0 @base * 1.5;
-						line-height: 1.1;
 
 						a {
 							text-transform: none;
@@ -1452,6 +1360,34 @@ h3 {
 						text-shadow: none;
 					}
 
+					.share {
+						border-top: 1px solid #e9e9e9;
+						margin-top: 15px;
+						padding-top: @base;
+
+						label,
+						input {
+							display: inline;
+						}
+
+						label {
+							#font > #proxima > .bold;
+							color: #ccc;
+							text-transform: uppercase;
+							margin-right: 10px;
+						}
+
+						input {
+							#font > #proxima > .regular;
+							display: inline;
+							font-size: 14px;
+							padding: 5px;
+
+							&.span4 {
+								margin-top: @base;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1486,7 +1422,7 @@ h3 {
 						}
 
 						.header {
-							margin: 0 0 @base 0;
+							margin: 0;
 						}
 
 						.date {
@@ -1499,7 +1435,7 @@ h3 {
 						padding-top: 0;
 					}
 
-					.component-members-roles, .component-downloads {
+					.component-members-roles {
 
 						.entry {
 							background: #eee;
@@ -1785,17 +1721,17 @@ h3 {
 				}
 			}
 
-			.screen {
+			.screen,
+			address {
 				position: absolute;
 				bottom: 0px;
 				left: 0;
 			}
 
-
 			.screen {
 				display: none;
 				background: #e9e9e9;
-				.opacity(75);
+				opacity: .75;
 				width: 100%;
 				height: 90px;
 			}
@@ -1823,10 +1759,6 @@ h3 {
 		.entry {
 			text-align: center;
 			margin-bottom: @base * 3;
-
-			p {
-				text-align: left;
-			}
 
 			img {
 				margin: @base auto @base auto;
@@ -1871,6 +1803,8 @@ h3 {
 
 		.edit {
 			margin-left: @base;
+			position: relative;
+			top: 7px;
 		}
 	}
 }
@@ -1928,7 +1862,7 @@ h3 {
 						margin-bottom: @base * .125;
 						vertical-align: center;
 						font-size: 18px;
-						line-height: 1.2;
+						line-height: 1.3;
 					}
 
 					.icon {
@@ -2157,22 +2091,9 @@ h3 {
 		}
 
 		.actions {
-			margin-top: -10px;
-
-			.audiojs {
-				margin-left: 20px;
-			}
-
-			.action {
-				.download {
-					position: relative;
-					left: 0;
-				}
-
-			}
-
-
-
+			position: relative;
+			top: -10px;
+			margin: 0;
 		}
 
 		.tags {
@@ -2232,7 +2153,11 @@ h3 {
 		}
 
 		.icon-book {
-			.opacity(50);
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+			filter: alpha(opacity=50);
+			-moz-opacity: 0.5;
+			-khtml-opacity: 0.5;
+			opacity: 0.5;
 			position: relative;
 			top: 7px;
 			margin-right: 5px;
@@ -2240,6 +2165,7 @@ h3 {
 	}
 
 	.description {
+		padding-right: 60px;
 		margin: 10px 0;
 
 		p {
@@ -2257,11 +2183,6 @@ h3 {
 
 		.action {
 			margin-right: 20px;
-
-			.download {
-				position: relative;
-				left: @base * -18;
-			}
 		}
 
 		strong {
@@ -2373,22 +2294,11 @@ h3 {
 				font-size: 12px;
 				border-color: #e9e9e9;
 				border-bottom: none;
-				padding: @base @base 0 @base;
+				padding: @base @base @base @base;
 			}
 
-			.entry {
-				position: relative;
-				bottom: -5px;
-			}
 			.actions {
-
-				.action {
-
-					.download {
-						position: relative;
-						left: -10px;
-					}
-				}
+				margin: 0;
 			}
 		}
 	}
@@ -2451,26 +2361,19 @@ h3 {
 			}
 		}
 
-		.inline-search {
-			margin: 0 @base;
-			padding: @base 0 @base * 0.5 0;
-			border-bottom: 2px solid #e9e9e9;
+		.search {
+			margin: 0;
+			padding: 0 0 0 0;
 
-			label {
-				display: inline;
-
-				.icon {
-					color: #999;
-				}
-			}
-
-			.keywords {
+			input {
 				#font > #proxima > .regular;
-				color: #777;
-				background: none;
+				color: darken(desaturate(@color-mast, 20%), 40%);
+				background: lighten(desaturate(@color-mast, 10%), 20%);
+				position: relative;
 				border: none;
 				margin: 0;
-				padding: 0;
+				.border-radius(0 0 0 0);
+				padding: 0 @base * 4.4 0 @base;
 				font-size: 14px;
 
 				&:focus {
@@ -2480,20 +2383,16 @@ h3 {
 				}
 
 				&::-webkit-input-placeholder  {
-					color: #ccc;
+					color: darken(desaturate(@color-mast, 20%), 20%);
 					#font > #proxima > .regular;
 					text-transform: uppercase;
 				}
 
 				&:-moz-placeholder {
-					color: #ccc;
+					color: darken(desaturate(@color-mast, 20%), 20%);
 					#font > #proxima > .regular;
 					text-transform: uppercase;
 				}
-			}
-
-			&:focus {
-				border-color: @color-accent;
 			}
 		}
 	}
@@ -2564,218 +2463,6 @@ h3 {
 	}
 }
 
-// audioJS styles -----------------------------------------------------
-
-.audiojs {
-	display: inline;
-	float: left;
-	height: 36px;
-	background: #e9e9e9;
-	overflow: hidden;
-	font-family: monospace;
-	font-size: 12px;
-	position: relative;
-	top: -8px;
-	.box-shadow(none);
-	.clearfix;
-
-	audio {
-		position: absolute;
-		left: -1px;
-	}
-
-	p {
-		display: none;
-		width: 25px;
-		margin: 0px;
-		cursor: pointer;
-	}
-
-	.action {
-		display: block;
-		float: left;
-		position: relative;
-		top: 8px;
-		margin-right: 0 !important;
-
-		.icon {
-			color: #999;
-			margin-right: @base * 1.5;
-			position: relative;
-			top: 1px;
-
-			&:hover {
-				color: #999;
-			}
-		}
-	}
-
-	.error-message {
-		float: left;
-		display: none;
-		margin: 0px 10px;
-		height: 36px;
-		width: 400px;
-		overflow: hidden;
-		line-height: 36px;
-		white-space: nowrap;
-		color: #fff;
-		text-overflow: ellipsis;
-		-o-text-overflow: ellipsis;
-		-icab-text-overflow: ellipsis;
-		-khtml-text-overflow: ellipsis;
-		-moz-text-overflow: ellipsis;
-		-webkit-text-overflow: ellipsis;
-
-		a {
-			color: #eee;
-			text-decoration: none;
-			padding-bottom: 1px;
-			border-bottom: 1px solid #999;
-			white-space: wrap;
-		}
-
-	}
-
-	.icon {
-		color: #303030;
-		position: relative;
-		top: -2px;
-		left: 5px;
-
-		&:hover {
-			color: @color-accent;
-		}
-	}
-
-	.loaded {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		height: 14px;
-		width: 0px;
-		background: #999;
-	}
-
-	.play {
-		display: block;
-	}
-
-	.play-pause {
-		width: 25px;
-		padding: 4px 6px;
-		margin: 0px; float: left;
-		overflow: hidden;
-	}
-
-	.progress {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		height: 14px;
-		width: 0px;
-		background: #ededec;
-		z-index: 1;
-	}
-
-	.scrubber {
-		position: relative;
-		float: left;
-		width: 280px;
-		background: #ccc;
-		height: 14px;
-		margin: 10px;
-		border-left: 0px;
-		border-bottom: 0px;
-		overflow: hidden;
-	}
-
-	.time {
-		float: left;
-		line-height: 36px;
-		margin: 0;
-		padding: 0;
-		color: #999;
-
-		em {
-			padding: 0px 2px 0px 0px;
-			color: #bbb;
-			font-style: normal;
-			#font > #proxima > .regular;
-		}
-
-		strong {
-			padding: 0px 0px 0px 2px;
-			font-weight: normal;
-		}
-	}
-
-}
-
-.playing {
-
-	.play,
-	.loading,
-	.error {
-		display: none;
-	}
-
-	.pause {
-		display: block;
-	}
-}
-
-.loading {
-
-	.play,
-	.pause,
-	.error {
-		display: none;
-	}
-
-	.loading {
-		display: block;
-	}
-}
-
-.error {
-
-	.time,
-	.play,
-	.pause,
-	.scrubber,
-	.loading {
-		display: none;
-	}
-
-	.error {
-		display: block;
-	}
-
-	.error-message {
-		display: block;
-	}
-
-	.play-pause {
-
-		p {
-			cursor: auto;
-		}
-	}
-}
-
-// popover styles -----------------------------------------------------
-
-.popover {
-
-	.popover-inner {
-
-		.popover-title {
-			margin-bottom: 3px;
-		}
-	}
-}
-
 // site cleanup -------------------------------------------------------
 
 .column-right {
@@ -2828,6 +2515,15 @@ h3 {
 	}
 }
 
+// .layout-events {
+
+// 	&.profile {
+
+// 		.row + .row {
+// 			display: none;
+// 		}
+// 	}
+// }
 
 // media queries ---------------------------------------------------------
 
@@ -2873,15 +2569,6 @@ h3 {
 			text-align: center;
 			padding: 5px 0
 		}
-	}
-
-	.audiojs {
-		margin: 0;
-
-		.scrubber {
-			width: 155px;
-		}
-
 	}
 }
 
@@ -3002,6 +2689,7 @@ h3 {
 					.main {
 						margin-top: @base * 2;
 						margin-bottom: 0;
+						padding: 0 0;
 						text-align: center;
 						display: block;
 						float: none;
@@ -3118,66 +2806,6 @@ h3 {
 			}
 		}
 	}
-
-	.audiojs {
-		margin: 0;
-
-		.scrubber {
-			width: 200px;
-		}
-
-	}
-
-	.component-teachings,
-	.component-series {
-
-		.latest {
-
-			.actions {
-
-				.audiojs {
-					margin-left: 0;
-				}
-
-				.download {
-					position: relative;
-					margin-right: -40px;
-				}
-			}
-		}
-
-		.results {
-
-			.actions {
-
-				.action {
-
-					.audiojs {
-						.scrubber {
-							width: 150px;
-						}
-					}
-
-					.download {
-						position: relative;
-						left: -40px;
-					}
-				}
-			}
-		}
-	}
-
-
-
-	.component-teachings {
-
-		.search {
-
-			.keywords {
-				width: 65%;
-			}
-		}
-	}
 }
 
 // PORTRAIT TABLET TO DEFAULT DESKTOP
@@ -3221,36 +2849,28 @@ h3 {
 		}
 	}
 
-	.column-right {
+	.layout-ministry,
+	.layout-events {
 
-		> .component-members-roles {
+	   .column-center, .span8 {
+		   float:none;
+		   width: 98%;
+	   }
 
-			.entry {
+		.column-right {
+			float: none;
+			width: 98%;
+			margin-left: 0;
 
-				.pull-left {
-					float: none;
-					text-align: center;
-					margin: 0;
-					padding: @base 0 0 0;
+			.component-member-roles {
+				display: block;
+			}
 
-					img {
-						margin-right: 0;
-					}
-
-				}
-
-				.mailto {
-					display: block;
-					float: none;
-					height: auto;
-					margin: 0;
-					text-align: center;
-				}
+			.component-locations {
+				display: block;
 			}
 		}
 	}
-
-
 }
 
 // DEFAULT DESKTOP
@@ -3291,53 +2911,17 @@ h3 {
 	}
 }
 
-// iPhone
-// ---------------
-
 @media (max-width: 480px) {
 
-	.mast {
-		padding: @base * 10 0 0 0;
+	.header {
 
-		.container {
+		.nav {
+			margin-top: 20px;
+			padding: 0 0;
+		}
 
-			.row {
-				margin-top: 0;
-
-				&.introduction {
-					margin: 40px 0;
-				}
-
-				.span12 {
-
-					.logo {
-						margin-bottom: 0;
-
-					}
-
-					.main {
-						margin-top: @base * 2;
-						margin-bottom: 0;
-						padding: 0;
-						text-align: center;
-						display: block;
-						float: none;
-
-						li {
-							float: none;
-							display: inline;
-							line-height: 2;
-
-							a {
-								display: inline-block;
-								padding: 0;
-								margin: 0;
-							}
-
-						}
-					}
-				}
-			}
+		.logo {
+			margin-bottom: 0;
 		}
 	}
 
@@ -3350,61 +2934,6 @@ h3 {
 				height: 198px !important;
 			}
 		}
-
-		.actions {
-
-			.action {
-
-				.audio {
-					display: none;
-				}
-			}
-		}
-
-		.results {
-
-			.result {
-				h4 {
-					font-size: 14px;
-				}
-			}
-
-			.actions {
-
-				.action {
-
-					.audiojs {
-						.scrubber {
-							width: 60px;
-						}
-					}
-
-					.download {
-						position: relative;
-						left: -100px;
-					}
-				}
-			}
-		}
-
-		.pagination {
-			* {
-				font-size: 14px;
-			}
-
-			a {
-				padding: 0 9px;
-			}
-		}
-	}
-
-	.audiojs {
-		margin: 0;
-
-		.scrubber {
-			width: 120px;
-		}
-
 	}
 }
 

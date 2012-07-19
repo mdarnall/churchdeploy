@@ -14,10 +14,6 @@
 		</div>
 	</xsl:if>
 
-    <xsl:call-template name="component-alerts">
-        <xsl:with-param name="entries" select="//alerts-entries-by-tag/entry" />
-    </xsl:call-template>
-
 </xsl:template>
 
 </xsl:stylesheet>

@@ -10,14 +10,13 @@
     <xsl:if test="count($entries)">
 
         <div class="alert">
-            <xsl:call-template name="class-rows" />
 
             <xsl:for-each select="$entries">
-                <xsl:if test="can-be-closed">
+                <xsl:if test="content">
                     <a class="close" data-dismiss="alert">×</a>
                 </xsl:if>
 
-                <xsl:value-of select="content" disable-output-escaping="yes" />
+                <xsl:value-of select="normalize-space(content)"  />
 
             </xsl:for-each>
 
