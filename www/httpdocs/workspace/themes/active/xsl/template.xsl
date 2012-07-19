@@ -121,7 +121,7 @@
 	</div>
 	<div class="header mast" id="overview">
 		<div class="container">
-			<!-- <xsl:call-template name="alerts" /> -->
+			<xsl:call-template name="alerts" />
 			<!-- =<xsl:call-template name="component-alerts" /> -->
 			<div class="row">
 				<div class="span12">
