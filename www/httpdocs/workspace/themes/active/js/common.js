@@ -19,12 +19,19 @@
 			var hostName = location.hostname,
 				links = $("a"),
 				alertLiveCookie = $.cookie("alertLive"),
+				alertCookie = $.cookie("alert"),
 				i = 0;
 
 			if (alertLiveCookie !== "hidden") {
 				$(".alertLive").removeClass("hidden");
 				$(".alertLive .close").click(function () {
 					$.cookie("alertLive", "hidden", { expires: 1, path: "/" });
+				});
+			}
+
+			if (alertCookie !== "hidden") {
+				$(".alert .close").click(function () {
+					$.cookie("alert", "hidden", { expires: 1, path: "/" });
 				});
 			}
 
@@ -63,5 +70,3 @@
 		});
 	});
 }(jQuery, window));
-// audiojs.events.ready(function(){audiojs.createAll();});
-// $(document).ready(function(){$('.downloadPopover').hover(function(){$(this).popover('toggle');})});
