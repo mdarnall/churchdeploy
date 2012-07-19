@@ -4,6 +4,7 @@
 
 	Class datasourcealerts_entries_by_tag extends Datasource{
 
+		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'alerts-entries-by-tag';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -16,15 +17,16 @@
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'227' => 'no',
 				'205' => '{$pt1:43}',
+				'227' => 'no',
 				'221' => 'no',
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'url',
 				'content: formatted',
-				'can-be-closed'
+				'can-be-closed',
+				'type'
 		);
 
 
@@ -37,11 +39,11 @@
 			return array(
 				'name' => 'Alerts: Entries by tag',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T23:13:39+00:00'
+				'release-date' => '2012-07-19T18:45:03+00:00'
 			);
 		}
 
