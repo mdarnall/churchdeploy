@@ -15,18 +15,17 @@
 
     <xsl:if test="//alerts-entries-by-tag">
 
-        <div class="alert">
 
-            <xsl:for-each select="entry">
-                <xsl:if test="content">
-                    <a class="close" data-dismiss="alert">×</a>
-                </xsl:if>
+        <xsl:for-each select="//alerts-entries-by-tag/entry">
+            <div class="alert">
+            <xsl:if test="content">
+                <a class="close" data-dismiss="alert">×</a>
+            </xsl:if>
 
-                <xsl:value-of select="normalize-space(content)"  />
+            <xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
+            </div>
+        </xsl:for-each>
 
-            </xsl:for-each>
-
-        </div>
 
     </xsl:if>
 
