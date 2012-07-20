@@ -58,8 +58,13 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<div>
-					<ul class="nav left">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav hidden-phone">
 						<li class="top-search">
 							<a>
 								<xsl:call-template name="url-search-home" />
@@ -71,6 +76,15 @@
 							</form>
 						</li>
 					</ul>
+					<ul class="nav visible-phone">
+						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
+							<xsl:call-template name="subnav-entry" />
+						</xsl:for-each>
+					</ul>
+					<form action="get" class="navbar-search pull-left visible-phone">
+						<xsl:call-template name="form-search-action"/>
+						<input type="text" class="search-query" name="keywords" placeholder="Search" autocomplete="off" onclick="this.select()" />
+					</form>
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>
@@ -122,13 +136,12 @@
 	<div class="header mast" id="overview">
 		<div class="container">
 			<xsl:call-template name="alerts" />
-			<!-- =<xsl:call-template name="component-alerts" /> -->
 			<div class="row">
-				<div class="span12">
+				<div class="span12 hidden-phone">
 					<a href="{$root}" class="logo">
 						<img src="/workspace/themes/active/img/logo-big.png" width="120" height="120" />
 					</a>
-					<ul class="main nav nav-pills">
+					<ul class="main nav nav-pills hidden-phone">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 							<xsl:call-template name="subnav-entry" />
 						</xsl:for-each>

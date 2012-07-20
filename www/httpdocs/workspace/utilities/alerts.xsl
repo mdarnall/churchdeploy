@@ -45,9 +45,9 @@
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
-                <xsl:if test="can-be-closed = 'Yes'">
+<!--                 <xsl:if test="can-be-closed = 'Yes'">
                     <a class="close" data-dismiss="alert">×</a>
-                </xsl:if>
+                </xsl:if> -->
 
 
                 <xsl:if test="url">
@@ -149,12 +149,14 @@
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
-                <xsl:if test="can-be-closed = 'Yes'">
+<!--                 <xsl:if test="can-be-closed = 'Yes'">
                     <a class="close" data-dismiss="alert">×</a>
-                </xsl:if>
+                </xsl:if> -->
 
 
-                <xsl:if test="url">
+                <xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
+
+                                <xsl:if test="url">
                     <a>
                         <xsl:choose>
                             <xsl:when test="//alerts-entries-by-tag/entry/type = 'warning'">
@@ -162,10 +164,6 @@
                                     <xsl:text>btn</xsl:text>
                                     <xsl:text> </xsl:text>
                                     <xsl:text>btn-danger</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>pull-right</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>clearfix</xsl:text>
                                 </xsl:attribute>
                             </xsl:when>
                             <xsl:when test="//alerts-entries-by-tag/entry/type = 'success'">
@@ -173,10 +171,6 @@
                                     <xsl:text>btn</xsl:text>
                                     <xsl:text> </xsl:text>
                                     <xsl:text>btn-success</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>pull-right</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>clearfix</xsl:text>
                                 </xsl:attribute>
                             </xsl:when>
                             <xsl:when test="//alerts-entries-by-tag/entry/type = 'info'">
@@ -184,10 +178,6 @@
                                     <xsl:text>btn</xsl:text>
                                     <xsl:text> </xsl:text>
                                     <xsl:text>btn-info</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>pull-right</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>clearfix</xsl:text>
                                 </xsl:attribute>
                             </xsl:when>
                             <xsl:otherwise>
@@ -195,10 +185,6 @@
                                     <xsl:text>btn</xsl:text>
                                     <xsl:text> </xsl:text>
                                     <xsl:text>btn-warning</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>pull-right</xsl:text>
-                                    <xsl:text> </xsl:text>
-                                    <xsl:text>clearfix</xsl:text>
                                 </xsl:attribute>
                             </xsl:otherwise>
                         </xsl:choose>
@@ -212,8 +198,6 @@
                     </a>
 
                 </xsl:if>
-
-                <xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 
             </div>
         </xsl:for-each>

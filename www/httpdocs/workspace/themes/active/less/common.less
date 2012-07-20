@@ -16,6 +16,12 @@
 @import "../../../bootstrap/less/responsive-navbar.less";
 
 
+// @import "../../../bootstrap/less/bootstrap.min.less";
+// @import "../../../bootstrap/less/bootstrap-responsive.less";
+// @import "../../../bootstrap/less/docs.less";
+
+// @import "../../../bootstrap/less/mixins.less";
+// @import "../../../bootstrap/less/responsive-utilities.less";
 
 @import 'pictos.less';
 @import 'webfonts.less';
@@ -41,7 +47,7 @@
 	}
 }
 
-// less modules
+// less modules & defaults
 
 #font {
 
@@ -104,6 +110,22 @@
 			background: darken(@color-mast, 10%);
 		}
 	}
+}
+
+.entry-defaults {
+	background: #fff;
+	margin: @base 0 @base * 3 0;
+	position: relative;
+}
+
+.edit-defaults {
+	position: absolute;
+	border: none !important;
+	background: none;
+	z-index: 10000;
+	padding: 0;
+	margin: 0;
+	.opacity(50);
 }
 
 // styles
@@ -277,7 +299,6 @@ h3 {
 	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-bottom: @base * 1.5;
 }
 
 .main-container {
@@ -1126,24 +1147,6 @@ h3 {
 // components--------------------------------------------------------
 //-------------------------------------------------------------------
 
-// defaults ---------------------------------------------------------
-
-.entry-defaults {
-	background: #fff;
-	margin: @base 0 @base * 3 0;
-	position: relative;
-}
-
-.edit-defaults {
-	position: absolute;
-	border: none !important;
-	background: none;
-	z-index: 10000;
-	padding: 0;
-	margin: 0;
-	.opacity(50);
-}
-
 // layouts ----------------------------------------------------------
 
 .layout-home {
@@ -1159,10 +1162,6 @@ h3 {
 				left: 0;
 			}
 		}
-	}
-
-	h3 {
-		margin-bottom: 15px;
 	}
 
 	.column-right {
@@ -2898,12 +2897,6 @@ h3 {
 	}
 }
 
-// TABLETS & SMALL DESKTOPS ONLY
-// -----------------------------
-
-@media (min-width: 768px) and (max-width: 979px) {
-
-}
 
 // UP TO LANDSCAPE PHONE
 // ---------------------
@@ -3271,26 +3264,6 @@ h3 {
 
 @media (min-width: 980px) {
 
-	.mast {
-
-		.main {
-			text-align: right;
-			display: block;
-			float: none;
-
-			li {
-				float: none;
-				display: inline;
-
-				a {
-					display: inline-block;
-					padding: 15px 0;
-					margin: 0 5px;
-				}
-			}
-		}
-	}
-
 	.twitter {
 
 		span {
@@ -3309,50 +3282,50 @@ h3 {
 
 @media (max-width: 480px) {
 
-	.mast {
-		padding: @base * 10 0 0 0;
+	// .mast {
+	// 	padding: @base * 10 0 0 0;
 
-		.container {
+	// 	.container {
 
-			.row {
-				margin-top: 0;
+	// 		.row {
+	// 			margin-top: 0;
 
-				&.introduction {
-					margin: 40px 0;
-				}
+	// 			&.introduction {
+	// 				margin: 40px 0;
+	// 			}
 
-				.span12 {
+	// 			.span12 {
 
-					.logo {
-						margin-bottom: 0;
+	// 				.logo {
+	// 					margin-bottom: 0;
 
-					}
+	// 				}
 
-					.main {
-						margin-top: @base * 2;
-						margin-bottom: 0;
-						padding: 0;
-						text-align: center;
-						display: block;
-						float: none;
+	// 				.main {
+	// 					margin-top: @base * 2;
+	// 					margin-bottom: 0;
+	// 					padding: 0;
+	// 					text-align: center;
+	// 					display: block;
+	// 					float: none;
 
-						li {
-							float: none;
-							display: inline;
-							line-height: 2;
+	// 					li {
+	// 						float: none;
+	// 						display: inline;
+	// 						line-height: 2;
 
-							a {
-								display: inline-block;
-								padding: 0;
-								margin: 0;
-							}
+	// 						a {
+	// 							display: inline-block;
+	// 							padding: 0;
+	// 							margin: 0;
+	// 						}
 
-						}
-					}
-				}
-			}
-		}
-	}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	.component-teachings {
 
@@ -3419,13 +3392,6 @@ h3 {
 		}
 
 	}
-}
-
-// LARGE DESKTOP & UP
-// ------------------
-
-@media (min-width: 1200px) {
-
 }
 
 // RESPONSIVE IMAGES
@@ -3534,22 +3500,4 @@ h3 {
 			}
 		}
 	}
-}
-
-// landscape phone to small desktop & portrait tablet
-
-@media (max-width: 767px)  {
-
-}
-
-// portait tablet to default desktop
-
-@media (min-width: 768px) and (max-width: 979px)  {
-
-}
-
-// default desktop
-
-@media (min-width: 980px)  {
-
 }
