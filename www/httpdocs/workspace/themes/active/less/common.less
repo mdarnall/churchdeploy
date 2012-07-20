@@ -334,7 +334,6 @@ h3 {
 }
 
 
-
 .climacon {
 	#font > #climacons;
 	position: relative;
@@ -533,8 +532,8 @@ h3 {
 }
 
 .alert {
-		#font > #tisa > .regular;
-		margin: @base * 2 0;
+	#font > #tisa > .regular;
+	margin: @base * 3 0;
 
 
 	&.alertLive {
@@ -3282,50 +3281,65 @@ h3 {
 
 @media (max-width: 480px) {
 
-	// .mast {
-	// 	padding: @base * 10 0 0 0;
+	.mast {
+		padding: @base * 10 0 0 0;
 
-	// 	.container {
+		.container {
 
-	// 		.row {
-	// 			margin-top: 0;
+			.row {
+				margin-top: 0;
 
-	// 			&.introduction {
-	// 				margin: 40px 0;
-	// 			}
+				&.introduction {
+					margin: 40px 0;
+				}
 
-	// 			.span12 {
+				.span12 {
 
-	// 				.logo {
-	// 					margin-bottom: 0;
+					.logo {
+						margin-bottom: 0;
 
-	// 				}
+					}
 
-	// 				.main {
-	// 					margin-top: @base * 2;
-	// 					margin-bottom: 0;
-	// 					padding: 0;
-	// 					text-align: center;
-	// 					display: block;
-	// 					float: none;
+					.main {
+						margin-top: @base * 2;
+						margin-bottom: 0;
+						padding: 0;
+						text-align: center;
+						display: block;
+						float: none;
 
-	// 					li {
-	// 						float: none;
-	// 						display: inline;
-	// 						line-height: 2;
+						li {
+							float: none;
+							display: inline;
+							line-height: 2;
 
-	// 						a {
-	// 							display: inline-block;
-	// 							padding: 0;
-	// 							margin: 0;
-	// 						}
+							a {
+								display: inline-block;
+								padding: 0;
+								margin: 0;
+							}
 
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.layout-home {
+
+		.component-teachings {
+
+			.latest {
+
+				.video {
+					width: 280px !important;
+					height: 158px !important;
+				}
+
+			}
+		}
+	}
 
 	.component-teachings {
 
@@ -3344,6 +3358,13 @@ h3 {
 				.audio {
 					display: none;
 				}
+			}
+		}
+
+		.meta {
+
+			p {
+				line-height: 1.6;
 			}
 		}
 
@@ -3474,8 +3495,8 @@ h3 {
 	.component-series {
 
 		img {
-			width: 352px !important;
-			height: 235px !important;
+			width: 280px !important;
+			height: 187px !important;
 		}
 	}
 
@@ -3484,8 +3505,8 @@ h3 {
 		.component-images {
 
 			img {
-				width: 352px !important;
-				height: 141px !important;
+				width: 280px !important;
+				height: 112px !important;
 			}
 		}
 	}
@@ -3495,8 +3516,8 @@ h3 {
 		.component-images {
 
 			img {
-				width: 352px !important;
-				height: 198px !important;
+				width: 280px !important;
+				height: 158px !important;
 			}
 		}
 	}

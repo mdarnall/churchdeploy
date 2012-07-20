@@ -19,7 +19,6 @@
 			var hostName = location.hostname,
 				links = $("a"),
 				alertLiveCookie = $.cookie("alertLive"),
-				alertCookie = $.cookie("alert"),
 				i = 0;
 
 			if (alertLiveCookie !== "hidden") {
@@ -29,15 +28,9 @@
 				});
 			}
 
-			if (alertCookie !== "hidden") {
-				$(".alert .close").click(function () {
-					$.cookie("alert", "hidden", { expires: 1, path: "/" });
-				});
-			}
-
-			if ($("layout-search")) {
-				$(".search input.keywords").focus();
-			}
+			// if ($("layout-search")) {
+			// 	$(".search input.keywords").focus();
+			// }
 
 			$(".modalLiveLink").click(function (e) {
 				e.preventDefault();

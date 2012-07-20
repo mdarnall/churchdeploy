@@ -7402,7 +7402,7 @@ h3 {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .alert.alertLive {
   margin-top: 30px;
@@ -9704,12 +9704,49 @@ h3 {
   }
 }
 @media (max-width: 480px) {
+  .mast {
+    padding: 100px 0 0 0;
+  }
+  .mast .container .row {
+    margin-top: 0;
+  }
+  .mast .container .row.introduction {
+    margin: 40px 0;
+  }
+  .mast .container .row .span12 .logo {
+    margin-bottom: 0;
+  }
+  .mast .container .row .span12 .main {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    float: none;
+  }
+  .mast .container .row .span12 .main li {
+    float: none;
+    display: inline;
+    line-height: 2;
+  }
+  .mast .container .row .span12 .main li a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .layout-home .component-teachings .latest .video {
+    width: 280px !important;
+    height: 158px !important;
+  }
   .component-teachings .latest .video {
     width: 352px !important;
     height: 198px !important;
   }
   .component-teachings .actions .action .audio {
     display: none;
+  }
+  .component-teachings .meta p {
+    line-height: 1.6;
   }
   .component-teachings .results .result h4 {
     font-size: 14px;
@@ -9768,15 +9805,15 @@ h3 {
   .featured img,
   .component-teachings img,
   .component-series img {
-    width: 352px !important;
-    height: 235px !important;
+    width: 280px !important;
+    height: 187px !important;
   }
   .layout-ministry .component-images img {
-    width: 352px !important;
-    height: 141px !important;
+    width: 280px !important;
+    height: 112px !important;
   }
   .layout-missions .component-images img {
-    width: 352px !important;
-    height: 198px !important;
+    width: 280px !important;
+    height: 158px !important;
   }
 }
