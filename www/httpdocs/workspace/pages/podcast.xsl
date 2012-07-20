@@ -21,7 +21,7 @@
             <itunes:subtitle>Teachings from God's inspired word.</itunes:subtitle>
             <itunes:author><xsl:value-of select="$website-name" /></itunes:author>
             <language>en-us</language>
-            <copyright>© 1996-<xsl:value-of select="$this-year"/>. <xsl:value-of select="$website-name" />. All rights reserved.</copyright>
+            <copyright>©1996-<xsl:value-of select="$this-year"/>. <xsl:value-of select="$website-name" />. All rights reserved.</copyright>
             <itunes:owner>
                 <itunes:name><xsl:value-of select="$website-name" /></itunes:name>
                 <itunes:email>web@atheycreek.com</itunes:email>
