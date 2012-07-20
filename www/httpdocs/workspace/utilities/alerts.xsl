@@ -195,10 +195,7 @@
 
                 </xsl:if>
 
-                <div class="alert-content pull-left">
-                    <xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
-                </div>
-
+                <xsl:value-of select="normalize-space(content)" disable-output-escaping="yes" />
 
             </div>
         </xsl:for-each>
