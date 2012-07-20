@@ -107,7 +107,10 @@
                         <xsl:text>.mp3</xsl:text>
                     </guid>
                     <pubDate>
-                        <xsl:value-of select="date/date/start/@iso"/>
+                        <xsl:call-template name="format-date">
+                            <xsl:with-param name="date" select="date/date/start/@iso" />
+                            <xsl:with-param name="format" select="'%0m;/%0d;/%y+;'" />
+                        </xsl:call-template>
                     </pubDate>
                     <itunes:duration>
                         <xsl:choose>
