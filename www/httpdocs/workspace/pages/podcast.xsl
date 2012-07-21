@@ -109,7 +109,7 @@
                     <pubDate>
                         <xsl:call-template name="format-date">
                             <xsl:with-param name="date" select="date/date/start/@iso" />
-                            <xsl:with-param name="format" select="'%0m;/%0d;/%y+;'" />
+                            <xsl:with-param name="format" select="'%d-;, %d; %m+; %y+; #0h;:#0m;:#0s; -0700'" />
                         </xsl:call-template>
                     </pubDate>
                     <itunes:duration>
