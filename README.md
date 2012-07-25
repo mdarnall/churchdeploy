@@ -9,26 +9,18 @@
 - In *Terminal* type `cd ` and then drag and drop the folder you just created into the *Terminal* window, hit return.
 - All you have to do is run this single command
 
-	    git clone --recursive https://github.com/atheycreek/churchdeploy.git
+	    git clone https://github.com/atheycreek/churchdeploy.git
 
-- or if you have an older version of git, run the following
-
-	   	git clone https://github.com/atheycreek/churchdeploy.git
-		cd churchdeploy
-		git submodule update --init
-		cd www/httpdocs/extensions/datetime
-		git submodule update --init
-
-- Use `http://churchdeploy/` as your local hosting environment 
+- Use `http://churchdeploy/` as your local hosting environment
 	- Have the root pointing to *httpdocs*
     - We recommend [MAMP PRO](http://www.shareit.com/programs.html?productid=300169372)
 - Setup a database named `churchdeploy` with the both the username and password set to `root`
     - database encoding should be `UTF-8`
 - The default admin account credentials for `http://churchdeploy/symphony/`
-    - **User:** admin  
+    - **User:** admin
     - **Password:** k42j3b42kjb
 - Be sure to set all files to read/write, we recommend using [BatChMod](http://www.lagentesoft.com/batchmod/index.html) (Check all checkboxes once you have the selected directory, see [example](http://see.weareinto.com/9Q73))
-- We recommend using [Espresso](http://macrabbit.com/espresso/) for code editing. `.esproj` files may be in some areas of the project, and this will help to have settings already in place.
+- We recommend using [Sublime Text 2](http://www.sublimetext.com/2) for code editing.
 
 ## Prerequisites
 
