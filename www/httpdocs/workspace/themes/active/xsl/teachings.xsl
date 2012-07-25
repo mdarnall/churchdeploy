@@ -107,8 +107,38 @@
 							</div>
 						</xsl:for-each>
 						<div class="span8">
-							<h3>Recent</h3>
 							<xsl:variable name="items-per-row" select="2" />
+							<div class="component-series">
+								<h3>Recent Series</h3>
+								<xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
+									<div class="row">
+										<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
+											<div class="span4 series">
+												<a>
+													<xsl:call-template name="url-teachings-series" />
+													<xsl:call-template name="teaching-poster-or-default">
+														<xsl:with-param name="poster" select="poster" />
+													</xsl:call-template>
+												</a>
+												<div class="info">
+													<a>
+														<xsl:call-template name="url-teachings-series" />
+														<h4>
+															<xsl:value-of select="title" disable-output-escaping="yes" />
+															<span class="meta">
+																<xsl:text> (</xsl:text>
+																<xsl:value-of select="teachings/@items" />
+																<xsl:text>&#160;teachings)</xsl:text>
+															</span>
+														</h4>
+													</a>
+												</div>
+											</div>
+										</xsl:for-each>
+									</div>
+								</xsl:for-each>
+							</div>
+							<h3>Recent Teachings</h3>
 							<xsl:for-each select="//teachings-3-latest/entry[position() mod $items-per-row = 1 and position() &lt; 3]">
 								<div class="row">
 									<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
@@ -142,36 +172,6 @@
 									</xsl:for-each>
 								</div>
 							</xsl:for-each>
-							<div class="component-series">
-								<h3>Series</h3>
-								<xsl:for-each select="//teachings-series-entries-filtered/entry[position() mod $items-per-row = 1 and position() &lt; 5]">
-									<div class="row">
-										<xsl:for-each select=". | following-sibling::*[not(position() >= $items-per-row)]">
-											<div class="span4 series">
-												<a>
-													<xsl:call-template name="url-teachings-series" />
-													<xsl:call-template name="teaching-poster-or-default">
-														<xsl:with-param name="poster" select="poster" />
-													</xsl:call-template>
-												</a>
-												<div class="info">
-													<a>
-														<xsl:call-template name="url-teachings-series" />
-														<h4>
-															<xsl:value-of select="title" disable-output-escaping="yes" />
-															<span class="meta">
-																<xsl:text> (</xsl:text>
-																<xsl:value-of select="teachings/@items" />
-																<xsl:text>&#160;teachings)</xsl:text>
-															</span>
-														</h4>
-													</a>
-												</div>
-											</div>
-										</xsl:for-each>
-									</div>
-								</xsl:for-each>
-							</div>
 						</div>
 					</xsl:otherwise>
 				</xsl:choose>

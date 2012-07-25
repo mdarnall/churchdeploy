@@ -7980,8 +7980,11 @@ h3 {
 .layout-home .column-right > .component-events .entry.last {
   padding-bottom: 62px;
 }
+.layout-home .component-series {
+  margin: 20px 0;
+}
 .layout-home .component-teachings {
-  padding-bottom: 20px;
+  margin: 40px 0 20px 0;
 }
 .layout-home .component-teachings .latest {
   margin-top: 0;
@@ -8865,6 +8868,7 @@ h3 {
 .component-series .series img,
 .component-teachings .recent img,
 .component-series .recent img {
+  margin-top: 10px;
   width: 300px;
   height: 200px;
 }
@@ -9147,7 +9151,7 @@ h3 {
 .component-series .widget .inline-search {
   margin: 0 10px;
   padding: 10px 0 5px 0;
-  border-bottom: 2px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
 }
 .component-teachings .widget .inline-search label,
 .component-series .widget .inline-search label {
@@ -9210,6 +9214,9 @@ h3 {
 .column-full-width > .component-teachings .individual .tags {
   margin: 20px 0;
   text-transform: uppercase;
+}
+.component-series {
+  margin-bottom: 30px;
 }
 .component-verses blockquote {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
@@ -9794,11 +9801,14 @@ h3 {
     width: 120px;
   }
 }
-.featured img,
+.featured img {
+  width: 300px !important;
+  height: 200px !important;
+}
 .component-teachings img,
 .component-series img {
   width: 300px !important;
-  height: 200px !important;
+  height: 169px !important;
 }
 .layout-ministry .component-images img {
   width: 940px !important;
@@ -9809,11 +9819,14 @@ h3 {
   height: 529px !important;
 }
 @media (max-width: 979px) {
-  .featured img,
+  .featured img {
+    width: 228px !important;
+    height: 152px !important;
+  }
   .component-teachings img,
   .component-series img {
     width: 228px !important;
-    height: 152px !important;
+    height: 128px !important;
   }
   .layout-ministry .component-images img {
     width: 724px !important;
@@ -9825,15 +9838,18 @@ h3 {
   }
 }
 @media (max-width: 480px) {
-  .featured img,
-  .component-teachings img,
-  .component-series img {
+  .featured img {
     width: 280px !important;
     height: 187px !important;
   }
+  .component-teachings img,
+  .component-series img {
+    width: 280px !important;
+    height: 113px !important;
+  }
   .layout-ministry .component-images img {
     width: 280px !important;
-    height: 112px !important;
+    height: 113px !important;
   }
   .layout-missions .component-images img {
     width: 280px !important;

@@ -202,6 +202,37 @@
 <xsl:template name="template-footer-inside-container">
 
 	<xsl:if test="not($pt1) or $pt1 = 43">
+		<div class="component-series">
+			<h3>Recent Series</h3>
+			<div class="row">
+			    <xsl:for-each select="//teachings-series-home-filtered/entry">
+	            	<div class="span4 series">
+						<a>
+							<xsl:call-template name="url-teachings-series" />
+							<xsl:call-template name="teaching-poster-or-default">
+								<xsl:with-param name="poster" select="poster" />
+							</xsl:call-template>
+						</a>
+<!--
+						<a>
+							<xsl:call-template name="url-teachings-series" />
+							<h4>
+								<xsl:value-of select="title" disable-output-escaping="yes" />
+								<span class="meta">
+									<xsl:text> (</xsl:text>
+									<xsl:value-of select="teachings/@items" />
+									<xsl:text>&#160;teachings)</xsl:text>
+								</span>
+							</h4>
+						</a>
+-->
+					</div>
+				</xsl:for-each>
+			</div>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="not($pt1) or $pt1 = 43">
 		<div class="component-teachings">
 			<h3>Recent teachings</h3>
 			<div class="row teachings-front">
@@ -237,34 +268,7 @@
 			</div>
 		</div>
 	</xsl:if>
-	<xsl:if test="not($pt1) or $pt1 = 43">
-		<div class="component-series">
-			<h3>Series</h3>
-			<div class="row">
-			    <xsl:for-each select="//teachings-series-home-filtered/entry">
-	            	<div class="span4 series">
-						<a>
-							<xsl:call-template name="url-teachings-series" />
-							<xsl:call-template name="teaching-poster-or-default">
-								<xsl:with-param name="poster" select="poster" />
-							</xsl:call-template>
-						</a>
-						<a>
-							<xsl:call-template name="url-teachings-series" />
-							<h4>
-								<xsl:value-of select="title" disable-output-escaping="yes" />
-								<span class="meta">
-									<xsl:text> (</xsl:text>
-									<xsl:value-of select="teachings/@items" />
-									<xsl:text>&#160;teachings)</xsl:text>
-								</span>
-							</h4>
-						</a>
-					</div>
-				</xsl:for-each>
-			</div>
-		</div>
-	</xsl:if>
+
 	<div class="row to-top">
 		<p class="pull-right"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
 	</div>
