@@ -213,25 +213,12 @@
 								<xsl:with-param name="poster" select="poster" />
 							</xsl:call-template>
 						</a>
-<!--
-						<a>
-							<xsl:call-template name="url-teachings-series" />
-							<h4>
-								<xsl:value-of select="title" disable-output-escaping="yes" />
-								<span class="meta">
-									<xsl:text> (</xsl:text>
-									<xsl:value-of select="teachings/@items" />
-									<xsl:text>&#160;teachings)</xsl:text>
-								</span>
-							</h4>
-						</a>
--->
 					</div>
 				</xsl:for-each>
 			</div>
 		</div>
 	</xsl:if>
-	
+
 	<xsl:if test="not($pt1) or $pt1 = 43">
 		<div class="component-teachings">
 			<h3>Recent teachings</h3>
