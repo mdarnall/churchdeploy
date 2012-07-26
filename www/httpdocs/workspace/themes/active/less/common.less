@@ -16,13 +16,6 @@
 @import "../../../bootstrap/less/responsive-navbar.less";
 
 
-// @import "../../../bootstrap/less/bootstrap.min.less";
-// @import "../../../bootstrap/less/bootstrap-responsive.less";
-// @import "../../../bootstrap/less/docs.less";
-
-// @import "../../../bootstrap/less/mixins.less";
-// @import "../../../bootstrap/less/responsive-utilities.less";
-
 @import 'pictos.less';
 @import 'webfonts.less';
 
@@ -1176,13 +1169,16 @@ h3 {
 			}
 		}
 	}
-	
+
 	.component-series {
 		margin: @base * 2 0;
 	}
 
 	.component-teachings {
-		margin: @base * 4 0 @base * 2 0;
+
+		&.recent {
+			margin: @base * 4 0 @base * 2 0;
+		}
 
 		.latest {
 			margin-top: 0;
@@ -3501,7 +3497,7 @@ h3 {
 			height: 152px !important;
 		}
 	}
-	
+
 	.component-teachings,
 	.component-series {
 
@@ -3545,7 +3541,7 @@ h3 {
 			height: 187px !important;
 		}
 	}
-	
+
 	.component-teachings,
 	.component-series {
 

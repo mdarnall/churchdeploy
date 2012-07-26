@@ -220,7 +220,7 @@
 	</xsl:if>
 
 	<xsl:if test="not($pt1) or $pt1 = 43">
-		<div class="component-teachings">
+		<div class="component-teachings recent">
 			<h3>Recent teachings</h3>
 			<div class="row teachings-front">
 			    <xsl:for-each select="//teachings-3-latest/entry">

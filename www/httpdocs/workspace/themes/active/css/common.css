@@ -7983,7 +7983,7 @@ h3 {
 .layout-home .component-series {
   margin: 20px 0;
 }
-.layout-home .component-teachings {
+.layout-home .component-teachings.recent {
   margin: 40px 0 20px 0;
 }
 .layout-home .component-teachings .latest {
