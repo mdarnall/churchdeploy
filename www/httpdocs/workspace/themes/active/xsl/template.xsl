@@ -125,7 +125,6 @@
 			<div class="row">
 				<div class="span12">
 					<a href="{$root}" class="logo">
-						<!-- <img src="/image/2/240/240/5/0/uploads/images/leaderboards/logo-big-new-5011bffad01b1.png" /> -->
 						<img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" />
 					</a>
 					<ul class="main nav nav-pills">
