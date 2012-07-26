@@ -125,7 +125,8 @@
 			<div class="row">
 				<div class="span12">
 					<a href="{$root}" class="logo">
-						<img src="/workspace/themes/active/img/logo-big.png" width="120" height="120" />
+						<!-- <img src="/image/2/240/240/5/0/uploads/images/leaderboards/logo-big-new-5011bffad01b1.png" /> -->
+						<img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" />
 					</a>
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">

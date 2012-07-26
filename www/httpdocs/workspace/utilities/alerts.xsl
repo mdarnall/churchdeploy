@@ -4,13 +4,13 @@
 <xsl:template name="alerts">
 
 	<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
-		<div class="alert alert-success alertLive hidden">
-			<a class="close" data-dismiss="alert">×</a>
-			<strong>We're broadcasting live right now!</strong>
-			<a class="btn btn-success modalLiveLink">
-				<xsl:text> Watch the broadcast »</xsl:text>
-			</a>
-		</div>
+        <div class="alert alert-success alertLive hidden">
+            <a class="close" data-dismiss="alert" href="#">×</a>
+            <a class="btn btn-success modalLiveLink pull-right" href="http://apple.com">Watch Live »</a>
+            <p>
+                <strong>Live Broadcast!</strong> Click the button to watch our services live.
+            </p>
+        </div>
 	</xsl:if>
 
      <xsl:if test="//alerts-global">
@@ -46,7 +46,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
 <!--                 <xsl:if test="can-be-closed = 'Yes'">
-                    <a class="close" data-dismiss="alert">×</a>
+                    <a class="close" data-dismiss="alert" href="#">×</a>
                 </xsl:if> -->
 
                 <xsl:if test="url">
@@ -95,7 +95,7 @@
                         <xsl:attribute name="target">
                             <xsl:text>_blank</xsl:text>
                         </xsl:attribute>
-                        <xsl:text>More Info</xsl:text>
+                        <xsl:text>More Info »</xsl:text>
                     </a>
 
                 </xsl:if>
@@ -141,7 +141,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
 <!--                 <xsl:if test="can-be-closed = 'Yes'">
-                    <a class="close" data-dismiss="alert">×</a>
+                    <a class="close" data-dismiss="alert" href="#">×</a>
                 </xsl:if> -->
 
                 <xsl:if test="url">
@@ -190,7 +190,7 @@
                         <xsl:attribute name="target">
                             <xsl:text>_blank</xsl:text>
                         </xsl:attribute>
-                        <xsl:text>More Info</xsl:text>
+                        <xsl:text>More Info »</xsl:text>
                     </a>
 
                 </xsl:if>

@@ -7265,6 +7265,14 @@ h3 {
   top: -5px;
   float: left;
   z-index: 1000;
+  height: 120px;
+  width: 120px;
+}
+.mast .container .row .span12 .logo img {
+  background: transparent;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+  zoom: 1;
 }
 .mast .container .row .span12 .main {
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
