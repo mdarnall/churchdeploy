@@ -257,7 +257,7 @@
 	</xsl:if>
 
 	<div class="row to-top">
-		<p class="pull-right"><a href="#">Back to top &#160;&#160;&#8613;</a></p>
+		<p class="pull-right"><a href="#">Back to top <span class="icon">{</span></a></p>
 	</div>
 	<div class="footer">
 		<div class="twitter">
