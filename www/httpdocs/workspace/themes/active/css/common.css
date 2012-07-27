@@ -7094,6 +7094,12 @@ a.badge:hover {
   color: #303030;
   margin-bottom: 20px;
 }
+p strong {
+  font-family: "ff-tisa-web-pro-bold", Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: normal;
+}
 .nav-tabs.nav-stacked > li > a {
   border: none;
 }
@@ -7634,7 +7640,7 @@ h3 {
 .to-top a .icon {
   position: relative;
   top: -1px;
-  left: 3px;
+  left: px;
   font-size: 12px;
 }
 .normal {
@@ -9817,6 +9823,9 @@ h3 {
   }
 }
 @media (max-width: 320px) {
+  h1 {
+    font-size: 48px;
+  }
   .layout-home .component-teachings .latest .video {
     width: 280px !important;
     height: 158px !important;
