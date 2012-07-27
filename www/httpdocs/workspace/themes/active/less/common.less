@@ -2911,37 +2911,6 @@ h3 {
 	}
 }
 
-
-// UP TO LANDSCAPE PHONE
-// ---------------------
-
-@media (max-width: 480px) {
-
-	.column-full-width {
-
-		.columns-2 {
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-			-o-column-count: 1;
-			column-count: 1;
-		}
-
-		.columns-3 {
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-			-o-column-count: 1;
-			column-count: 1;
-		}
-
-		.columns-4 {
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-			-o-column-count: 1;
-			column-count: 1;
-		}
-	}
-}
-
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
 // --------------------------------------------------
 
@@ -3316,6 +3285,34 @@ h3 {
 
 @media (max-width: 480px) {
 
+	.modalLive {
+		width: 280px !important;
+	}
+
+	.column-full-width {
+
+		.columns-2 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+
+		.columns-3 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+
+		.columns-4 {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+	}
+
 	.mast {
 		padding: @base * 10 0 0 0;
 
@@ -3372,8 +3369,8 @@ h3 {
 			.latest {
 
 				.video {
-					width: 280px !important;
-					height: 158px !important;
+					width: 440px !important;
+					height: 248px !important;
 				}
 
 			}
@@ -3385,8 +3382,8 @@ h3 {
 		.latest {
 
 			.video {
-				width: 352px !important;
-				height: 198px !important;
+				width: 440px !important;
+				height: 248px !important;
 			}
 		}
 
@@ -3452,6 +3449,38 @@ h3 {
 		}
 
 	}
+}
+
+// iPhone Portrait
+
+@media (max-width: 320px) {
+
+	.layout-home {
+
+		.component-teachings {
+
+			.latest {
+
+				.video {
+					width: 280px !important;
+					height: 158px !important;
+				}
+
+			}
+		}
+	}
+
+	.component-teachings {
+
+		.latest {
+
+			.video {
+				width: 280px !important;
+				height: 158px !important;
+			}
+		}
+	}
+
 }
 
 // RESPONSIVE IMAGES
@@ -3546,6 +3575,48 @@ h3 {
 	.featured {
 
 		img {
+			width: 440px !important;
+			height: 294px !important;
+		}
+	}
+
+	.component-teachings,
+	.component-series {
+
+		img {
+			width: 440px !important;
+			height: 248px !important;
+		}
+	}
+
+	.layout-ministry {
+
+		.component-images {
+
+			img {
+				width: 440px !important;
+				height: 248px !important;
+			}
+		}
+	}
+
+	.layout-missions {
+
+		.component-images {
+
+			img {
+				width: 440px !important;
+				height: 248px !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+
+	.featured {
+
+		img {
 			width: 280px !important;
 			height: 187px !important;
 		}
@@ -3556,7 +3627,7 @@ h3 {
 
 		img {
 			width: 280px !important;
-			height: 113px !important;
+			height: 158px !important;
 		}
 	}
 
@@ -3566,7 +3637,7 @@ h3 {
 
 			img {
 				width: 280px !important;
-				height: 113px !important;
+				height: 158px !important;
 			}
 		}
 	}
@@ -3581,4 +3652,5 @@ h3 {
 			}
 		}
 	}
+
 }

@@ -9511,26 +9511,6 @@ h3 {
     width: 155px;
   }
 }
-@media (max-width: 480px) {
-  .column-full-width .columns-2 {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -o-column-count: 1;
-    column-count: 1;
-  }
-  .column-full-width .columns-3 {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -o-column-count: 1;
-    column-count: 1;
-  }
-  .column-full-width .columns-4 {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -o-column-count: 1;
-    column-count: 1;
-  }
-}
 @media (max-width: 767px) {
   .component-teachings .latest .video {
     width: 450px !important;
@@ -9739,6 +9719,27 @@ h3 {
   }
 }
 @media (max-width: 480px) {
+  .modalLive {
+    width: 280px !important;
+  }
+  .column-full-width .columns-2 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
+  .column-full-width .columns-3 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
+  .column-full-width .columns-4 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
   .mast {
     padding: 100px 0 0 0;
   }
@@ -9773,12 +9774,12 @@ h3 {
     margin-top: 0;
   }
   .layout-home .component-teachings .latest .video {
-    width: 280px !important;
-    height: 158px !important;
+    width: 440px !important;
+    height: 248px !important;
   }
   .component-teachings .latest .video {
-    width: 352px !important;
-    height: 198px !important;
+    width: 440px !important;
+    height: 248px !important;
   }
   .component-teachings .actions .action .audio {
     display: none;
@@ -9807,6 +9808,16 @@ h3 {
   }
   .audiojs .scrubber {
     width: 120px;
+  }
+}
+@media (max-width: 320px) {
+  .layout-home .component-teachings .latest .video {
+    width: 280px !important;
+    height: 158px !important;
+  }
+  .component-teachings .latest .video {
+    width: 280px !important;
+    height: 158px !important;
   }
 }
 .featured img {
@@ -9847,17 +9858,36 @@ h3 {
 }
 @media (max-width: 480px) {
   .featured img {
+    width: 440px !important;
+    height: 294px !important;
+  }
+  .component-teachings img,
+  .component-series img {
+    width: 440px !important;
+    height: 248px !important;
+  }
+  .layout-ministry .component-images img {
+    width: 440px !important;
+    height: 248px !important;
+  }
+  .layout-missions .component-images img {
+    width: 440px !important;
+    height: 248px !important;
+  }
+}
+@media (max-width: 320px) {
+  .featured img {
     width: 280px !important;
     height: 187px !important;
   }
   .component-teachings img,
   .component-series img {
     width: 280px !important;
-    height: 113px !important;
+    height: 158px !important;
   }
   .layout-ministry .component-images img {
     width: 280px !important;
-    height: 113px !important;
+    height: 158px !important;
   }
   .layout-missions .component-images img {
     width: 280px !important;
