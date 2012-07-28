@@ -84,7 +84,7 @@
 											<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
 										</span>
 										<span class="verse">
-											<i class="icon-book"></i>
+											<span class="icon">u</span>
 											<xsl:text> </xsl:text>
 											<xsl:value-of select="book/item" />
 											<xsl:text> </xsl:text>
@@ -283,7 +283,7 @@
 							<xsl:value-of select="speaker/item/last-name" disable-output-escaping="yes" />
 						</span>
 						<span class="verse">
-							<i class="icon-book"></i>
+							<span class="icon">u</span>
 							<xsl:text> </xsl:text>
 							<xsl:value-of select="book/item" />
 							<xsl:text> </xsl:text>
