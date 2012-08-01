@@ -76,7 +76,7 @@
 						<li class="divider-vertical"></li>
 						<li class="last">
 							<a href="{$root}/20/events/12962/tuesday-sunrise-worship/">
-								<span class="climacon">m</span>
+								<span class="icon">Z</span>
 								<span class="worship">Sunrise Worship - </span>
 								<xsl:value-of select="//misc-all-entries/entry[name='sunrise-worship']/content" disable-output-escaping="yes" />
 							</a>
@@ -125,7 +125,9 @@
 			<div class="row">
 				<div class="span12">
 					<a href="{$root}" class="logo">
-						<img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" />
+						<!-- <img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" /> -->
+						<span class="icon" style="font-size: 140px;">2</span>
+						<span class="white">&#160;</span>
 					</a>
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
