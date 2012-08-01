@@ -398,7 +398,7 @@ h3 {
 
 				.logo {
 					position: relative;
-					top: @base * 4;
+					top: @base * 4.5;
 					float: left;
 					z-index: 1000;
 					height: 120px;
@@ -406,22 +406,14 @@ h3 {
 
 					.icon {
 						z-index: 30;
+						font-size: 140px;
 					}
 
-					// img {
-					// 	background: transparent;
-     				//  -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
-    				//  filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
-    				// 	zoom: 1;
-					// }
-
 					.white {
+						color: #fff;
 						position: absolute;
-						top: -15px;
-						left: 25px;
-						background: #fff;
-						width: 80px;
-						height: 50px;
+						top: 0;
+						left: 0;
 						z-index: 20;
 					}
 
@@ -2026,6 +2018,11 @@ h3 {
 
 .component-search {
 
+	.intro {
+		padding-bottom: @base * 2;
+		border-bottom: 2px solid #e9e9e9;
+	}
+
 	.filters {
 
 		* {
@@ -2086,7 +2083,7 @@ h3 {
 	}
 
 	.entries {
-		margin: @base * 4 0;
+		margin: @base * 2 0;
 
 		.span8 {
 			padding-top: @base;

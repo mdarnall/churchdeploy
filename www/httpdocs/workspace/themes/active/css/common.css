@@ -38,9 +38,6 @@ a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 a:hover,
 a:active {
@@ -119,7 +116,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: 0/0 a;
+  font: a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -129,10 +126,6 @@ textarea {
   display: block;
   width: 100%;
   min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -156,7 +149,6 @@ a:hover {
 }
 .row {
   margin-left: -20px;
-  *zoom: 1;
   *zoom: 1;
 }
 .row:before,
@@ -258,7 +250,6 @@ a:hover {
 }
 .row {
   margin-left: -20px;
-  *zoom: 1;
   *zoom: 1;
 }
 .row:before,
@@ -361,7 +352,6 @@ a:hover {
 .row-fluid {
   width: 100%;
   *zoom: 1;
-  *zoom: 1;
 }
 .row-fluid:before,
 .row-fluid:after {
@@ -383,21 +373,6 @@ a:hover {
   display: block;
   width: 100%;
   min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -460,7 +435,6 @@ a:hover {
 .row-fluid {
   width: 100%;
   *zoom: 1;
-  *zoom: 1;
 }
 .row-fluid:before,
 .row-fluid:after {
@@ -482,21 +456,6 @@ a:hover {
   display: block;
   width: 100%;
   min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -560,11 +519,6 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
   *zoom: 1;
-  *zoom: 1;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-  *zoom: 1;
 }
 .container:before,
 .container:after {
@@ -601,7 +555,6 @@ a:hover {
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
-  *zoom: 1;
   *zoom: 1;
 }
 .container-fluid:before,
@@ -749,9 +702,6 @@ dd {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .dl-horizontal dd {
   margin-left: 130px;
@@ -786,9 +736,6 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22.5px;
   font-size: 16px;
   font-weight: 300;
   line-height: 22.5px;
@@ -834,12 +781,8 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
   color: #333333;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -863,9 +806,6 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -911,9 +851,6 @@ input,
 button,
 select,
 textarea {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
@@ -981,20 +918,9 @@ input[type="color"],
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
   -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
@@ -1022,9 +948,6 @@ input[type="color"]:focus,
   outline: thin dotted \9;
   /* IE6-9 */
 
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
@@ -1071,9 +994,6 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -1260,9 +1180,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #dbc59e;
   -moz-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
-  box-shadow: 0 0 6px #dbc59e;
 }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
@@ -1292,9 +1209,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #dbc59e;
   -moz-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
-  box-shadow: 0 0 6px #dbc59e;
 }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
@@ -1324,9 +1238,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
 }
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
@@ -1356,9 +1267,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
 }
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
@@ -1388,9 +1296,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
-  box-shadow: 0 0 6px #7aba7b;
 }
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
@@ -1420,9 +1325,6 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
-  box-shadow: 0 0 6px #7aba7b;
 }
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
@@ -1443,9 +1345,6 @@ select:focus:required:invalid:focus {
   -webkit-box-shadow: 0 0 6px #f8b9b7;
   -moz-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-  -moz-box-shadow: 0 0 6px #f8b9b7;
-  box-shadow: 0 0 6px #f8b9b7;
 }
 .form-actions {
   padding: 17px 20px 18px;
@@ -1453,7 +1352,6 @@ select:focus:required:invalid:focus {
   margin-bottom: 18px;
   background-color: #f5f5f5;
   border-top: 1px solid #e5e5e5;
-  *zoom: 1;
   *zoom: 1;
 }
 .form-actions:before,
@@ -1478,9 +1376,6 @@ select:focus:required:invalid:focus {
   cursor: not-allowed;
   background-color: #ffffff;
   border-color: #eee;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
@@ -1517,10 +1412,6 @@ select:focus:required:invalid:focus {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
   vertical-align: middle;
   padding-left: 5px;
 }
@@ -1538,9 +1429,6 @@ select:focus:required:invalid:focus {
   margin-bottom: 0;
   *margin-left: 0;
   vertical-align: middle;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
@@ -1580,9 +1468,6 @@ select:focus:required:invalid:focus {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
 }
 .input-prepend .active,
 .input-append .active {
@@ -1598,16 +1483,10 @@ select:focus:required:invalid:focus {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
 }
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
@@ -1621,16 +1500,10 @@ select:focus:required:invalid:focus {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
 }
 .input-prepend.input-append input,
 .input-prepend.input-append select,
 .input-prepend.input-append .uneditable-input {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1641,16 +1514,10 @@ select:focus:required:invalid:focus {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
 }
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
@@ -1663,9 +1530,6 @@ select:focus:required:invalid:focus {
   /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
   margin-bottom: 0;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  border-radius: 14px;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   border-radius: 14px;
@@ -1692,10 +1556,6 @@ select:focus:required:invalid:focus {
 .form-inline .input-append,
 .form-horizontal .input-append {
   display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
   *display: inline;
   /* IE7 inline-block hack */
 
@@ -1742,7 +1602,6 @@ legend + .control-group {
 }
 .form-horizontal .control-group {
   margin-bottom: 18px;
-  *zoom: 1;
   *zoom: 1;
 }
 .form-horizontal .control-group:before,
@@ -1830,9 +1689,6 @@ table {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 .table-bordered th,
 .table-bordered td {
@@ -1866,9 +1722,6 @@ table {
   -webkit-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
-  -webkit-border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  border-radius: 0 0 0 4px;
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -1891,14 +1744,8 @@ table .span1 {
   float: none;
   width: 44px;
   margin-left: 0;
-  float: none;
-  width: 44px;
-  margin-left: 0;
 }
 table .span2 {
-  float: none;
-  width: 124px;
-  margin-left: 0;
   float: none;
   width: 124px;
   margin-left: 0;
@@ -1907,14 +1754,8 @@ table .span3 {
   float: none;
   width: 204px;
   margin-left: 0;
-  float: none;
-  width: 204px;
-  margin-left: 0;
 }
 table .span4 {
-  float: none;
-  width: 284px;
-  margin-left: 0;
   float: none;
   width: 284px;
   margin-left: 0;
@@ -1923,14 +1764,8 @@ table .span5 {
   float: none;
   width: 364px;
   margin-left: 0;
-  float: none;
-  width: 364px;
-  margin-left: 0;
 }
 table .span6 {
-  float: none;
-  width: 444px;
-  margin-left: 0;
   float: none;
   width: 444px;
   margin-left: 0;
@@ -1939,14 +1774,8 @@ table .span7 {
   float: none;
   width: 524px;
   margin-left: 0;
-  float: none;
-  width: 524px;
-  margin-left: 0;
 }
 table .span8 {
-  float: none;
-  width: 604px;
-  margin-left: 0;
   float: none;
   width: 604px;
   margin-left: 0;
@@ -1955,14 +1784,8 @@ table .span9 {
   float: none;
   width: 684px;
   margin-left: 0;
-  float: none;
-  width: 684px;
-  margin-left: 0;
 }
 table .span10 {
-  float: none;
-  width: 764px;
-  margin-left: 0;
   float: none;
   width: 764px;
   margin-left: 0;
@@ -1971,14 +1794,8 @@ table .span11 {
   float: none;
   width: 844px;
   margin-left: 0;
-  float: none;
-  width: 844px;
-  margin-left: 0;
 }
 table .span12 {
-  float: none;
-  width: 924px;
-  margin-left: 0;
   float: none;
   width: 924px;
   margin-left: 0;
@@ -1987,14 +1804,8 @@ table .span13 {
   float: none;
   width: 1004px;
   margin-left: 0;
-  float: none;
-  width: 1004px;
-  margin-left: 0;
 }
 table .span14 {
-  float: none;
-  width: 1084px;
-  margin-left: 0;
   float: none;
   width: 1084px;
   margin-left: 0;
@@ -2003,14 +1814,8 @@ table .span15 {
   float: none;
   width: 1164px;
   margin-left: 0;
-  float: none;
-  width: 1164px;
-  margin-left: 0;
 }
 table .span16 {
-  float: none;
-  width: 1244px;
-  margin-left: 0;
   float: none;
   width: 1244px;
   margin-left: 0;
@@ -2019,14 +1824,8 @@ table .span17 {
   float: none;
   width: 1324px;
   margin-left: 0;
-  float: none;
-  width: 1324px;
-  margin-left: 0;
 }
 table .span18 {
-  float: none;
-  width: 1404px;
-  margin-left: 0;
   float: none;
   width: 1404px;
   margin-left: 0;
@@ -2035,14 +1834,8 @@ table .span19 {
   float: none;
   width: 1484px;
   margin-left: 0;
-  float: none;
-  width: 1484px;
-  margin-left: 0;
 }
 table .span20 {
-  float: none;
-  width: 1564px;
-  margin-left: 0;
   float: none;
   width: 1564px;
   margin-left: 0;
@@ -2051,14 +1844,8 @@ table .span21 {
   float: none;
   width: 1644px;
   margin-left: 0;
-  float: none;
-  width: 1644px;
-  margin-left: 0;
 }
 table .span22 {
-  float: none;
-  width: 1724px;
-  margin-left: 0;
   float: none;
   width: 1724px;
   margin-left: 0;
@@ -2067,14 +1854,8 @@ table .span23 {
   float: none;
   width: 1804px;
   margin-left: 0;
-  float: none;
-  width: 1804px;
-  margin-left: 0;
 }
 table .span24 {
-  float: none;
-  width: 1884px;
-  margin-left: 0;
   float: none;
   width: 1884px;
   margin-left: 0;
@@ -2084,7 +1865,6 @@ table .span24 {
   display: inline-block;
   width: 14px;
   height: 14px;
-  *margin-right: .3em;
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
@@ -2545,8 +2325,6 @@ table .span24 {
   content: "";
   opacity: 0.3;
   filter: alpha(opacity=30);
-  opacity: 0.3;
-  filter: alpha(opacity=30);
 }
 .dropdown .caret {
   margin-top: 8px;
@@ -2554,8 +2332,6 @@ table .span24 {
 }
 .dropdown:hover .caret,
 .open .caret {
-  opacity: 1;
-  filter: alpha(opacity=100);
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -2578,12 +2354,6 @@ table .span24 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -2596,13 +2366,6 @@ table .span24 {
   left: auto;
 }
 .dropdown-menu .divider {
-  *width: 100%;
-  height: 1px;
-  margin: 8px 1px;
-  *margin: -5px 0 5px;
-  overflow: hidden;
-  background-color: #e5e5e5;
-  border-bottom: 1px solid #ffffff;
   *width: 100%;
   height: 1px;
   margin: 8px 1px;
@@ -2630,7 +2393,7 @@ table .span24 {
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -2654,9 +2417,6 @@ table .span24 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 .well {
   min-height: 20px;
@@ -2668,12 +2428,6 @@ table .span24 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -2687,26 +2441,15 @@ table .span24 {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
 }
 .well-small {
   padding: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -moz-transition: opacity 0.15s linear;
-  -ms-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
   -webkit-transition: opacity 0.15s linear;
   -moz-transition: opacity 0.15s linear;
   -ms-transition: opacity 0.15s linear;
@@ -2725,11 +2468,6 @@ table .span24 {
   -ms-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -ms-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
 }
 .collapse.in {
   height: auto;
@@ -2743,15 +2481,11 @@ table .span24 {
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
-  opacity: 0.2;
-  filter: alpha(opacity=20);
 }
 .close:hover {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
@@ -2764,10 +2498,6 @@ button.close {
 }
 .btn {
   display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
   *display: inline;
   /* IE7 inline-block hack */
 
@@ -2791,86 +2521,11 @@ button.close {
   background-image: linear-gradient(top, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #e6e6e6;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #e6e6e6;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid #cccccc;
   *border: 0;
@@ -2878,14 +2533,7 @@ button.close {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   *margin-left: .3em;
-  *margin-left: .3em;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
@@ -2933,16 +2581,8 @@ button.close {
   -ms-transition: background-position 0.1s linear;
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -ms-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
 }
 .btn:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -2956,9 +2596,6 @@ button.close {
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
 }
 .btn.disabled,
 .btn[disabled] {
@@ -2967,11 +2604,6 @@ button.close {
   background-image: none;
   opacity: 0.65;
   filter: alpha(opacity=65);
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -2980,9 +2612,6 @@ button.close {
   padding: 9px 14px;
   font-size: 15px;
   line-height: normal;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -3040,86 +2669,11 @@ button.close {
   background-image: linear-gradient(top, #0088cc, #0055cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  border-color: #0055cc #0055cc #003580;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
   border-color: #0055cc #0055cc #003580;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #0055cc;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  border-color: #0055cc #0055cc #003580;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  background-color: #0074cc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-  background-image: linear-gradient(top, #0088cc, #0055cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-  border-color: #0055cc #0055cc #003580;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0055cc;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-primary:hover,
@@ -3156,86 +2710,11 @@ button.close {
   background-image: linear-gradient(top, #fbb450, #f89406);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f89406;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #f89406;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-warning:hover,
@@ -3272,86 +2751,11 @@ button.close {
   background-image: linear-gradient(top, #ee5f5b, #bd362f);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #bd362f;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #bd362f;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-danger:hover,
@@ -3388,86 +2792,11 @@ button.close {
   background-image: linear-gradient(top, #62c462, #51a351);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #51a351;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  background-color: #5bb75b;
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #51a351;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-success:hover,
@@ -3504,86 +2833,11 @@ button.close {
   background-image: linear-gradient(top, #5bc0de, #2f96b4);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
   border-color: #2f96b4 #2f96b4 #1f6377;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #2f96b4;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  background-color: #49afcd;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(top, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #2f96b4;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-info:hover,
@@ -3620,86 +2874,11 @@ button.close {
   background-image: linear-gradient(top, #555555, #222222);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
   border-color: #222222 #222222 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #222222;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  background-color: #414141;
-  background-image: -moz-linear-gradient(top, #555555, #222222);
-  background-image: -ms-linear-gradient(top, #555555, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-  background-image: -webkit-linear-gradient(top, #555555, #222222);
-  background-image: -o-linear-gradient(top, #555555, #222222);
-  background-image: linear-gradient(top, #555555, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #222222;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-inverse:hover,
@@ -3754,8 +2933,6 @@ input[type="submit"].btn.btn-mini {
 .btn-group {
   position: relative;
   *zoom: 1;
-  *zoom: 1;
-  *margin-left: .3em;
   *margin-left: .3em;
 }
 .btn-group:before,
@@ -3793,18 +2970,11 @@ input[type="submit"].btn.btn-mini {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
 }
 .btn-group > .btn {
   position: relative;
   float: left;
   margin-left: -1px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -3861,9 +3031,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   *padding-top: 4px;
   *padding-bottom: 4px;
 }
@@ -3881,9 +3048,6 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-group.open .dropdown-toggle {
   background-image: none;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
@@ -3917,8 +3081,6 @@ input[type="submit"].btn.btn-mini {
 .open.btn-group .caret {
   opacity: 1;
   filter: alpha(opacity=100);
-  opacity: 1;
-  filter: alpha(opacity=100);
 }
 .btn-mini .caret {
   margin-top: 5px;
@@ -3946,8 +3108,6 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #ffffff;
   opacity: 0.75;
   filter: alpha(opacity=75);
-  opacity: 0.75;
-  filter: alpha(opacity=75);
 }
 .alert {
   padding: 8px 35px 8px 14px;
@@ -3955,9 +3115,6 @@ input[type="submit"].btn.btn-mini {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4058,17 +3215,9 @@ input[type="submit"].btn.btn-mini {
   overflow: hidden;
   background-color: #e5e5e5;
   border-bottom: 1px solid #ffffff;
-  *width: 100%;
-  height: 1px;
-  margin: 8px 1px;
-  *margin: -5px 0 5px;
-  overflow: hidden;
-  background-color: #e5e5e5;
-  border-bottom: 1px solid #ffffff;
 }
 .nav-tabs,
 .nav-pills {
-  *zoom: 1;
   *zoom: 1;
 }
 .nav-tabs:before,
@@ -4118,9 +3267,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
@@ -4138,9 +3284,6 @@ input[type="submit"].btn.btn-mini {
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -4164,22 +3307,13 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
 }
 .nav-tabs.nav-stacked > li:first-child > a {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
 }
 .nav-tabs.nav-stacked > li:last-child > a {
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
@@ -4198,14 +3332,8 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
 }
 .nav-pills .dropdown-menu {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4244,14 +3372,11 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #ffffff;
   opacity: 1;
   filter: alpha(opacity=100);
-  opacity: 1;
-  filter: alpha(opacity=100);
 }
 .tabs-stacked .open > a:hover {
   border-color: #999999;
 }
 .tabbable {
-  *zoom: 1;
   *zoom: 1;
 }
 .tabbable:before,
@@ -4297,9 +3422,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
 }
 .tabs-below > .nav-tabs > li > a:hover {
   border-bottom-color: transparent;
@@ -4329,9 +3451,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
 }
 .tabs-left > .nav-tabs > li > a:hover {
   border-color: #eeeeee #dddddd #eeeeee #eeeeee;
@@ -4348,9 +3467,6 @@ input[type="submit"].btn.btn-mini {
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  -webkit-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
@@ -4382,24 +3498,9 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(top, #333333, #222222);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-  box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
@@ -4439,14 +3540,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn,
 .navbar .btn-group {
   margin-top: 5px;
-  margin-top: 5px;
 }
 .navbar .btn-group .btn {
   margin: 0;
 }
 .navbar-form {
   margin-bottom: 0;
-  *zoom: 1;
   *zoom: 1;
 }
 .navbar-form:before,
@@ -4469,7 +3568,6 @@ input[type="submit"].btn.btn-mini {
 .navbar-form select,
 .navbar-form .radio,
 .navbar-form .checkbox {
-  margin-top: 5px;
   margin-top: 5px;
 }
 .navbar-form input,
@@ -4495,24 +3593,11 @@ input[type="submit"].btn.btn-mini {
   position: relative;
   float: left;
   margin-top: 6px;
-  margin-top: 6px;
   margin-bottom: 0;
 }
 .navbar-search .search-query {
   padding: 4px 9px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 1;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 1;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 1;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -4522,14 +3607,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -4564,9 +3641,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
 .navbar-fixed-top,
@@ -4584,13 +3658,9 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
 }
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
   width: 940px;
 }
 .navbar-fixed-top {
@@ -4669,90 +3739,12 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(top, #333333, #222222);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
   border-color: #222222 #222222 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #222222;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #222222;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
@@ -4789,12 +3781,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
@@ -4844,8 +3830,6 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.active .caret {
   opacity: 1;
   filter: alpha(opacity=100);
-  opacity: 1;
-  filter: alpha(opacity=100);
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
@@ -4883,35 +3867,16 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(top, #ffffff, #f5f5f5);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
-  background-color: #fbfbfb;
-  background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
-  background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));
-  background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
-  background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
-  background-image: linear-gradient(top, #ffffff, #f5f5f5);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 #ffffff;
-  -moz-box-shadow: inset 0 1px 0 #ffffff;
-  box-shadow: inset 0 1px 0 #ffffff;
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
 }
 .breadcrumb li {
   display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
   *display: inline;
   /* IE7 inline-block hack */
 
@@ -4935,21 +3900,11 @@ input[type="submit"].btn.btn-mini {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -4985,14 +3940,8 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
 }
 .pagination li:last-child a {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
@@ -5008,7 +3957,6 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 18px;
   list-style: none;
   text-align: center;
-  *zoom: 1;
   *zoom: 1;
 }
 .pager:before,
@@ -5035,9 +3983,6 @@ input[type="submit"].btn.btn-mini {
   padding: 5px 14px;
   background-color: #fff;
   border: 1px solid #ddd;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -5086,8 +4031,6 @@ input[type="submit"].btn.btn-mini {
 .modal-backdrop.fade.in {
   opacity: 0.8;
   filter: alpha(opacity=80);
-  opacity: 0.8;
-  filter: alpha(opacity=80);
 }
 .modal {
   position: fixed;
@@ -5106,28 +4049,14 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
 }
 .modal.fade {
-  -webkit-transition: opacity .3s linear, top .3s ease-out;
-  -moz-transition: opacity .3s linear, top .3s ease-out;
-  -ms-transition: opacity .3s linear, top .3s ease-out;
-  -o-transition: opacity .3s linear, top .3s ease-out;
-  transition: opacity .3s linear, top .3s ease-out;
   -webkit-transition: opacity .3s linear, top .3s ease-out;
   -moz-transition: opacity .3s linear, top .3s ease-out;
   -ms-transition: opacity .3s linear, top .3s ease-out;
@@ -5162,16 +4091,9 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
-  -webkit-box-shadow: inset 0 1px 0 #ffffff;
-  -moz-box-shadow: inset 0 1px 0 #ffffff;
-  box-shadow: inset 0 1px 0 #ffffff;
-  *zoom: 1;
   *zoom: 1;
 }
 .modal-footer:before,
@@ -5206,12 +4128,8 @@ input[type="submit"].btn.btn-mini {
   font-size: 11px;
   opacity: 0;
   filter: alpha(opacity=0);
-  opacity: 0;
-  filter: alpha(opacity=0);
 }
 .tooltip.in {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
@@ -5234,20 +4152,8 @@ input[type="submit"].btn.btn-mini {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #000000;
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #000000;
 }
 .tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #000000;
   top: 50%;
   right: 0;
   margin-top: -5px;
@@ -5262,20 +4168,8 @@ input[type="submit"].btn.btn-mini {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid #000000;
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #000000;
 }
 .tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid #000000;
   top: 50%;
   left: 0;
   margin-top: -5px;
@@ -5290,9 +4184,6 @@ input[type="submit"].btn.btn-mini {
   text-align: center;
   text-decoration: none;
   background-color: #000000;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -5329,20 +4220,8 @@ input[type="submit"].btn.btn-mini {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #000000;
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #000000;
 }
 .popover.right .arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid #000000;
   top: 50%;
   left: 0;
   margin-top: -5px;
@@ -5357,20 +4236,8 @@ input[type="submit"].btn.btn-mini {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid #000000;
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #000000;
 }
 .popover.left .arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #000000;
   top: 50%;
   right: 0;
   margin-top: -5px;
@@ -5392,12 +4259,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -5410,9 +4271,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
 }
 .popover-content {
   padding: 14px;
@@ -5420,12 +4278,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
@@ -5438,7 +4290,6 @@ input[type="submit"].btn.btn-mini {
 .thumbnails {
   margin-left: -20px;
   list-style: none;
-  *zoom: 1;
   *zoom: 1;
 }
 .thumbnails:before,
@@ -5473,21 +4324,12 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 a.thumbnail:hover {
   border-color: #0088cc;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-  -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -5517,15 +4359,9 @@ a.thumbnail:hover {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 .badge {
   padding: 1px 9px 2px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
@@ -5629,24 +4465,9 @@ a.badge:hover {
   background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
-  background-color: #f7f7f7;
-  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
-  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -5667,18 +4488,6 @@ a.badge:hover {
   background-image: linear-gradient(top, #149bdf, #0480be);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
-  background-color: #0e90d2;
-  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
-  background-image: -ms-linear-gradient(top, #149bdf, #0480be);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
-  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
-  background-image: -o-linear-gradient(top, #149bdf, #0480be);
-  background-image: linear-gradient(top, #149bdf, #0480be);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -5686,15 +4495,6 @@ a.badge:hover {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: width 0.6s ease;
-  -moz-transition: width 0.6s ease;
-  -ms-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
   -webkit-transition: width 0.6s ease;
   -moz-transition: width 0.6s ease;
   -ms-transition: width 0.6s ease;
@@ -5709,17 +4509,6 @@ a.badge:hover {
   background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-color: #149bdf;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -webkit-background-size: 40px 40px;
-  -moz-background-size: 40px 40px;
-  -o-background-size: 40px 40px;
-  background-size: 40px 40px;
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   -o-background-size: 40px 40px;
@@ -5742,24 +4531,8 @@ a.badge:hover {
   background-image: linear-gradient(top, #ee5f5b, #c43c35);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
-  background-color: #dd514c;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: linear-gradient(top, #ee5f5b, #c43c35);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#c43c35', GradientType=0);
 }
 .progress-danger.progress-striped .bar {
-  background-color: #ee5f5b;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-color: #ee5f5b;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5778,24 +4551,8 @@ a.badge:hover {
   background-image: linear-gradient(top, #62c462, #57a957);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
-  background-color: #5eb95e;
-  background-image: -moz-linear-gradient(top, #62c462, #57a957);
-  background-image: -ms-linear-gradient(top, #62c462, #57a957);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
-  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
-  background-image: -o-linear-gradient(top, #62c462, #57a957);
-  background-image: linear-gradient(top, #62c462, #57a957);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
 }
 .progress-success.progress-striped .bar {
-  background-color: #62c462;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-color: #62c462;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5814,24 +4571,8 @@ a.badge:hover {
   background-image: linear-gradient(top, #5bc0de, #339bb9);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
-  background-color: #4bb1cf;
-  background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: linear-gradient(top, #5bc0de, #339bb9);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#339bb9', GradientType=0);
 }
 .progress-info.progress-striped .bar {
-  background-color: #5bc0de;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-color: #5bc0de;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5850,24 +4591,8 @@ a.badge:hover {
   background-image: linear-gradient(top, #fbb450, #f89406);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(top, #fbb450, #f89406);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
 }
 .progress-warning.progress-striped .bar {
-  background-color: #fbb450;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-color: #fbb450;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5882,9 +4607,6 @@ a.badge:hover {
 .accordion-group {
   margin-bottom: 2px;
   border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -5916,11 +4638,6 @@ a.badge:hover {
 .carousel .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -moz-transition: 0.6s ease-in-out left;
-  -ms-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
   -webkit-transition: 0.6s ease-in-out left;
   -moz-transition: 0.6s ease-in-out left;
   -ms-transition: 0.6s ease-in-out left;
@@ -5978,11 +4695,6 @@ a.badge:hover {
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
-  -webkit-border-radius: 23px;
-  -moz-border-radius: 23px;
-  border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -5993,8 +4705,6 @@ a.badge:hover {
 .carousel-control:hover {
   color: #ffffff;
   text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -6015,9 +4725,6 @@ a.badge:hover {
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -6062,7 +4769,7 @@ a.badge:hover {
   clear: both;
 }
 .hide-text {
-  font: 0/0 a;
+  font: a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -6072,10 +4779,6 @@ a.badge:hover {
   display: block;
   width: 100%;
   min-height: 28px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -6222,21 +4925,6 @@ a.badge:hover {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    min-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
   }
   .input-prepend input,
   .input-append input,
@@ -6249,7 +4937,6 @@ a.badge:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
-    *zoom: 1;
     *zoom: 1;
   }
   .row:before,
@@ -6351,7 +5038,6 @@ a.badge:hover {
   }
   .row {
     margin-left: -20px;
-    *zoom: 1;
     *zoom: 1;
   }
   .row:before,
@@ -6454,7 +5140,6 @@ a.badge:hover {
   .row-fluid {
     width: 100%;
     *zoom: 1;
-    *zoom: 1;
   }
   .row-fluid:before,
   .row-fluid:after {
@@ -6476,21 +5161,6 @@ a.badge:hover {
     display: block;
     width: 100%;
     min-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    min-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -6553,7 +5223,6 @@ a.badge:hover {
   .row-fluid {
     width: 100%;
     *zoom: 1;
-    *zoom: 1;
   }
   .row-fluid:before,
   .row-fluid:after {
@@ -6575,21 +5244,6 @@ a.badge:hover {
     display: block;
     width: 100%;
     min-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    min-height: 28px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -6787,16 +5441,10 @@ a.badge:hover {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
   }
   .nav-collapse .btn {
     padding: 4px 10px 4px;
     font-weight: normal;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -6826,12 +5474,6 @@ a.badge:hover {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -6850,9 +5492,6 @@ a.badge:hover {
     margin: 9px 0;
     border-top: 1px solid #222222;
     border-bottom: 1px solid #222222;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
@@ -6894,7 +5533,7 @@ a.badge:hover {
 @font-face {
   font-family: 'Pictos';
   src: url('../fonts/pictos-web.eot');
-  src: local('☺'), url(data:application/x-font-woff;charset=utf-8;base64,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) format('truetype'), url('../fonts/pictos-web.svg#PictosRegular') format('svg');
+  src: local('☺'), url(data:application/x-font-woff;charset=utf-8;base64,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) format('truetype'), url('../fonts/pictos-web.svg#PictosRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6985,8 +5624,6 @@ a.badge:hover {
 }
 #link .large {
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   display: block;
   font-size: 12px;
   text-transform: uppercase;
@@ -7016,8 +5653,6 @@ a.badge:hover {
   z-index: 10000;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -7091,7 +5726,6 @@ p strong {
   font-family: "ff-tisa-web-pro-bold", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
-  font-weight: normal;
 }
 .nav-tabs.nav-stacked > li > a {
   border: none;
@@ -7102,9 +5736,6 @@ p strong {
 .mast .nav-pills > li > a {
   padding: 5px 0;
   margin: 0 0 0 25px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -7261,7 +5892,7 @@ h3 {
 }
 .mast .container .row .span12 .logo {
   position: relative;
-  top: 40px;
+  top: 45px;
   float: left;
   z-index: 1000;
   height: 120px;
@@ -7269,14 +5900,13 @@ h3 {
 }
 .mast .container .row .span12 .logo .icon {
   z-index: 30;
+  font-size: 140px;
 }
 .mast .container .row .span12 .logo .white {
+  color: #fff;
   position: absolute;
-  top: -15px;
-  left: 25px;
-  background: #fff;
-  width: 80px;
-  height: 50px;
+  top: 0;
+  left: 0;
   z-index: 20;
 }
 .mast .container .row .span12 .logo:hover {
@@ -7362,8 +5992,6 @@ h3 {
 }
 .mast .row .span4 .link-bar a {
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   display: block;
   font-size: 12px;
   text-transform: uppercase;
@@ -7383,8 +6011,6 @@ h3 {
   border: none;
   padding: 13px 15px 0 15px;
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.7;
   color: #303030;
@@ -7398,7 +6024,6 @@ h3 {
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  display: block;
   font-size: 12px;
   text-transform: uppercase;
   margin: 10px 0;
@@ -7419,9 +6044,6 @@ h3 {
   font-style: normal;
   font-weight: normal;
   margin: 30px 0;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -7459,9 +6081,6 @@ h3 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   font-family: "proxima-nova-bold", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -7485,9 +6104,6 @@ h3 {
   -webkit-border-radius: 0%;
   -moz-border-radius: 0%;
   border-radius: 0%;
-  -webkit-border-radius: 0%;
-  -moz-border-radius: 0%;
-  border-radius: 0%;
   background: #659aa8;
   background-image: none;
   filter: none;
@@ -7498,8 +6114,6 @@ h3 {
 }
 .link-large {
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   display: block;
   font-size: 12px;
   text-transform: uppercase;
@@ -7527,8 +6141,6 @@ h3 {
   z-index: 10000;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
   top: 10px;
@@ -7567,9 +6179,6 @@ h3 {
   color: #d83629;
   background-image: none;
   background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -7843,9 +6452,6 @@ h3 {
   -webkit-border-radius: 0 0 0 0;
   -moz-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
-  -webkit-border-radius: 0 0 0 0;
-  -moz-border-radius: 0 0 0 0;
-  border-radius: 0 0 0 0;
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -7993,8 +6599,6 @@ h3 {
   margin: 0;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   position: relative;
   top: -280px;
   left: 0;
@@ -8115,8 +6719,6 @@ h3 {
   margin: 0;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   top: 10px;
   right: 10px;
 }
@@ -8155,9 +6757,6 @@ h3 {
 }
 .column-full-width .row > .component-events .entries .entry a,
 .column-center .row > .component-events .entries .entry a {
-  -webkit-border-radius: 0 0 0 0;
-  -moz-border-radius: 0 0 0 0;
-  border-radius: 0 0 0 0;
   -webkit-border-radius: 0 0 0 0;
   -moz-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
@@ -8227,9 +6826,6 @@ h3 {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   text-shadow: none;
 }
 .profile .column-full-width .row {
@@ -8282,7 +6878,6 @@ h3 {
   padding: 15px 10px 15px 0;
   border-bottom: 1px solid #bbbbbb;
   *zoom: 1;
-  *zoom: 1;
 }
 .column-right > .component-events .entries .entry a:before,
 .column-right > .component-events .entries .entry a:after {
@@ -8332,7 +6927,6 @@ h3 {
 .column-right > .component-events .entries .entry a .info {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 1.3;
   font-weight: normal;
@@ -8366,8 +6960,6 @@ h3 {
   z-index: 10000;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
   top: 10px;
@@ -8416,7 +7008,6 @@ h3 {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.7;
-  color: #303030;
   margin-bottom: 20px;
   color: #303030;
   margin-bottom: 0;
@@ -8453,8 +7044,6 @@ h3 {
   z-index: 10000;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
   top: 10px;
@@ -8530,8 +7119,6 @@ h3 {
   background: #e9e9e9;
   opacity: 0.75;
   filter: alpha(opacity=75);
-  opacity: 0.75;
-  filter: alpha(opacity=75);
   width: 100%;
   height: 90px;
 }
@@ -8542,8 +7129,6 @@ h3 {
   z-index: 10000;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
   bottom: 10px;
@@ -8565,14 +7150,10 @@ h3 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
 }
 .column-full-width > .component-members-roles .entry h3 {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
-  font-weight: normal;
   margin: 40px 0;
   color: #303030;
   font-size: 16px;
@@ -8647,9 +7228,6 @@ h3 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
   width: 75px;
   height: 75px;
 }
@@ -8703,10 +7281,12 @@ h3 {
   margin: 0;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   bottom: 10px;
   right: 10px;
+}
+.component-search .intro {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9e9e9;
 }
 .component-search .filters * {
   font-size: 14px;
@@ -8760,7 +7340,7 @@ h3 {
   margin: 10px;
 }
 .component-search .entries {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 .component-search .entries .span8 {
   padding-top: 10px;
@@ -8936,8 +7516,6 @@ h3 {
 }
 .component-teachings .meta .icon-book,
 .component-series .meta .icon-book {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
   position: relative;
@@ -9246,7 +7824,6 @@ h3 {
   font-weight: normal;
   margin: 40px 0;
   color: #303030;
-  font-size: 16px;
   text-align: center;
   border: none;
   font-size: 16px;
@@ -9285,10 +7862,6 @@ h3 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  *zoom: 1;
   *zoom: 1;
 }
 .audiojs:before,
@@ -9414,7 +7987,6 @@ h3 {
 .audiojs .time em {
   padding: 0px 2px 0px 0px;
   color: #bbb;
-  font-style: normal;
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;

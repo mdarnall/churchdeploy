@@ -12,7 +12,7 @@
 		<xsl:call-template name="class-position">
 			<xsl:with-param name="component" select="$component" />
 		</xsl:call-template>
-		<h1>
+<!-- 		<h1>
 			<xsl:choose>
 				<xsl:when test="$url-keywords">
 					<xsl:choose>
@@ -39,23 +39,55 @@
 					<xsl:text>Search</xsl:text>
 				</xsl:otherwise>
 			</xsl:choose>
-		</h1>
+		</h1> -->
 		<xsl:if test="$url-sections">
 			<p style="text-align:center">Section filtering is <strong>on</strong>, <a href="{$root}/{$pt1}/{$pt2}/?keywords={$url-keywords}">turn it off</a> to see all results</p>
 		</xsl:if>
-		<div class="search">
-			<form method="get">
-				<xsl:call-template name="form-search-action"/>
-				<xsl:if test="$url-sections">
-					<input type="hidden" name="sections" value="{$url-sections}" />
-				</xsl:if>
-				<input name="keywords" class="keywords" value="{$url-keywords}" onclick="this.select()" autocomplete="off" />
-			</form>
-			<p>Type and hit enter. You can search our entire site. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span>, <span onclick="$('.search input.keywords').val('Baptism');">Baptism</span> or <span onclick="$('.search input.keywords').val('Wilsonville');">Wilsonville</span>&#160;..</p>
+		<div class="row">
+			<div class="span8 offset2">
+				<div class="search">
+					<form method="get">
+						<xsl:call-template name="form-search-action"/>
+						<xsl:if test="$url-sections">
+							<input type="hidden" name="sections" value="{$url-sections}" />
+						</xsl:if>
+						<input name="keywords" class="keywords" value="{$url-keywords}" onclick="this.select()" autocomplete="off" />
+					</form>
+					<p>Type and hit enter. You can search our entire site. Try <span onclick="$('.search input.keywords').val('Jesus');">Jesus</span>, <span onclick="$('.search input.keywords').val('Baptism');">Baptism</span> or <span onclick="$('.search input.keywords').val('Wilsonville');">Wilsonville</span>&#160;..</p>
+				</div>
+			</div>
 		</div>
-		<xsl:call-template name="pagination-search">
-			<xsl:with-param name="pagination" select="$entries/../pagination" />
-		</xsl:call-template>
+		<p>
+		<span class="intro">
+			<xsl:choose>
+				<xsl:when test="$url-keywords">
+					<xsl:choose>
+						<xsl:when test="$entries/../pagination/@total-entries">
+							<xsl:value-of select="$entries/../pagination/@total-entries" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text>No</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:text> </xsl:text>
+					<xsl:call-template name="pluralize">
+						<xsl:with-param name="singular" select="'result'" />
+						<xsl:with-param name="plural" select="'results'" />
+						<xsl:with-param name="xpath" select="$entries/../pagination/@total-entries" />
+					</xsl:call-template>
+					<xsl:text> for </xsl:text>
+					<xsl:text>“</xsl:text>
+					<strong>
+						<xsl:value-of select="$url-keywords" disable-output-escaping="yes" />
+					</strong>
+					<xsl:text>”</xsl:text>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text>Search</xsl:text>
+				</xsl:otherwise>
+			</xsl:choose>
+		</span>
+		</p>
 		<div class="entries results">
 			<div class="row">
 				<div class="span8">
@@ -77,7 +109,7 @@
 									<h3>
 										<a target="_blank">
 											<xsl:call-template name="url-downloads" />
-											<i class="icon-download-alt"></i>
+											<span class="icon">e</span>
 											<xsl:value-of select="name" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -93,7 +125,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-events-recurring" />
-											<i class="icon-calendar"></i>
+											<span class="icon">/</span>
 											<xsl:value-of select="name" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -124,7 +156,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-tags" />
-											<i class="icon-bookmark"></i>
+											<span class="icon">N</span>
 											<xsl:value-of select="tag" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -140,7 +172,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings" />
-											<i class="icon-book"></i>
+											<span class="icon">u</span>
 											<xsl:value-of select="title" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -170,7 +202,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings-series" />
-											<i class="icon-th"></i>
+											<span class="icon">b</span>
 											<xsl:value-of select="title" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -188,7 +220,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-teachings-tags" />
-											<i class="icon-tag"></i>
+											<span class="icon">z</span>
 											<xsl:value-of select="tag" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
@@ -206,7 +238,7 @@
 											<xsl:call-template name="url-tags-by-text">
 												<xsl:with-param name="tag" select="$tag"/>
 											</xsl:call-template>
-											<i class="icon-align-justify"></i>
+											<span class="icon">F</span>
 											<xsl:value-of select="//tags-all-entries/entry[@id = $tag]/tag" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">
