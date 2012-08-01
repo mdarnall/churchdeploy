@@ -124,10 +124,12 @@
 			<xsl:call-template name="alerts" />
 			<div class="row">
 				<div class="span12">
-					<a href="{$root}" class="logo">
-						<!-- <img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" /> -->
-						<span class="icon" style="font-size: 140px;">2</span>
+					<a href="{$root}" class="logo standard">
+						<span class="icon">2</span>
 						<span class="icon white">,</span>
+					</a>
+					<a href="{$root}" class="logo mobile">
+						<img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" />
 					</a>
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
@@ -291,6 +293,10 @@
 					<div class="span2">
 						<ul class="nav nav-list">
 							<li class="nav-header">
+								<xsl:attribute name="id">
+									<xsl:text>page</xsl:text>
+									<xsl:value-of select="@id" />
+								</xsl:attribute>
 								<a href="{$root}/{@id}/{description/@handle}/">
 									<xsl:call-template name="url-tags" />
 									<xsl:value-of select="tag" />
@@ -314,12 +320,14 @@
 							<a href="https://www.facebook.com/pages/Athey-Creek-Christian-Fellowship/138279749547289" class="pull-right">Visit us on Facebook</a>
 						</span>
 						<div class="copyright">
-					       <a href="{$root}/13563/our-website/"><strong>Built with Church Deploy</strong></a>
-					       <span class="divider">|</span>
-					       <a href="{$root}/13667/api/"><strong>API</strong></a>
-					       <span class="divider">|</span>
-					       <a href="mailto:web@atheycreek.com?subject=ACCF Web Support"><strong>Website Support</strong></a>
-						   <br />
+						   <span class="dev">
+						       <a href="{$root}/13563/our-website/"><strong>Built with Church Deploy</strong></a>
+						       <span class="divider">|</span>
+						       <a href="{$root}/13667/api/"><strong>API</strong></a>
+						       <span class="divider">|</span>
+						       <a href="mailto:web@atheycreek.com?subject=ACCF Web Support"><strong>Website Support</strong></a>
+							   <br />
+						   </span>
 							<xsl:text>© </xsl:text>
 							<xsl:value-of select="$this-year" />
 							<xsl:text>. </xsl:text>

@@ -404,6 +404,23 @@ h3 {
 					height: 120px;
 					width: 120px;
 
+					&.mobile {
+						display: none;
+						position: relative;
+						top: -5px;
+						float: left;
+						z-index: 1000;
+						height: 120px;
+						width: 120px;
+
+						img {
+							background: transparent;
+	                        -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+	    					filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+	    					zoom: 1;
+						}
+					}
+
 					.icon {
 						z-index: 30;
 						font-size: 140px;
@@ -3005,16 +3022,35 @@ h3 {
 
 				&.introduction {
 					margin: 40px 0;
+
+					h2 {
+						text-align: center;
+					}
+
+					p {
+						text-align: center;
+					}
+
+					.span4 {
+						margin-top: @base * 3;
+					}
 				}
 
 				.span12 {
 
 					.logo {
-						display: block;
-						float: none;
-						margin: 0 auto 30px auto;
-						width: 120px;
-						height: 120px;
+
+						&.mobile {
+							display: block;
+							float: none;
+							margin: 0 auto 30px auto;
+							width: 120px;
+							height: 120px;
+						}
+
+						&.standard {
+							display: none;
+						}
 					}
 
 					.main {
@@ -3408,7 +3444,7 @@ h3 {
 
 	.component-teachings {
 
-		.latest {
+		.latest, .individual {
 
 			.video {
 				width: 440px !important;
@@ -3447,13 +3483,13 @@ h3 {
 
 					.audiojs {
 						.scrubber {
-							width: 60px;
+							width: 110px;
 						}
 					}
 
 					.download {
 						position: relative;
-						left: -100px;
+						left: 0;
 					}
 				}
 			}
@@ -3471,12 +3507,63 @@ h3 {
 	}
 
 	.audiojs {
-		margin: 0;
 
 		.scrubber {
-			width: 120px;
+			width: 200px;
 		}
 
+		.duration,
+		.time {
+			display: none;
+		}
+
+	}
+
+	.component-teachings,
+	.component-series {
+
+		.actions {
+
+			.action {
+
+				.action {
+					display: none;
+				}
+
+				.download {
+					display: inline;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.footer {
+
+		.dev {
+			display: none;
+		}
+
+		.nav {
+
+			#page18 {
+				display: block;
+				padding: @base * 2 0;
+				border-bottom: 1px solid #ccc;
+			}
+
+			.entry {
+				display: none;
+			}
+		}
+
+		.span3 {
+			margin-top: @base * 2;
+		}
+
+		.span3 + .span3 {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -3505,13 +3592,28 @@ h3 {
 
 	.component-teachings {
 
-		.latest {
+		.latest,
+		.individual {
 
 			.video {
 				width: 280px !important;
 				height: 158px !important;
 			}
 		}
+
+	}
+
+	.audiojs {
+
+		.scrubber {
+			width: 140px;
+		}
+
+		.duration,
+		.time {
+			display: none;
+		}
+
 	}
 
 }
