@@ -400,7 +400,7 @@
 			            <div class="error-message"></div>
 			        </div>
 			        <a href="{$audio-url}" class="download downloadPopover" rel="popover" data-content="Right-click on this link and use the 'Save As' or 'Download File As' dialog to download teachings." data-original-title="Downloads" target="_blank">
-			        	<span class="icon big">~</span>
+			        	<span class="icon big">d</span>
 			        </a>
 			    </span>
 			</xsl:if>
@@ -414,7 +414,7 @@
 						<xsl:text>Watch</xsl:text>
 					</a>
 					<span class="divider">|</span>
-					<a href="{$entry/url}" target="_blank"><span class="icon big">~</span></a>
+					<a href="{$entry/url}" target="_blank"><span class="icon big">d</span></a>
 				</span>
 			</xsl:if> -->
 		</div>
