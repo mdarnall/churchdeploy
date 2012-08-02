@@ -52,7 +52,6 @@
 
 </xsl:template>
 
-
 <xsl:template name="template-header-outside-container">
 
 	<div class="navbar navbar-fixed-top">

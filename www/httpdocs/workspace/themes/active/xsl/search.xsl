@@ -12,34 +12,6 @@
 		<xsl:call-template name="class-position">
 			<xsl:with-param name="component" select="$component" />
 		</xsl:call-template>
-<!-- 		<h1>
-			<xsl:choose>
-				<xsl:when test="$url-keywords">
-					<xsl:choose>
-						<xsl:when test="$entries/../pagination/@total-entries">
-							<xsl:value-of select="$entries/../pagination/@total-entries" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:text>No</xsl:text>
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:text> </xsl:text>
-					<xsl:call-template name="pluralize">
-						<xsl:with-param name="singular" select="'result'" />
-						<xsl:with-param name="plural" select="'results'" />
-						<xsl:with-param name="xpath" select="$entries/../pagination/@total-entries" />
-					</xsl:call-template>
-					<xsl:text> for</xsl:text>
-					<br />
-					<xsl:text>“</xsl:text>
-					<xsl:value-of select="$url-keywords" disable-output-escaping="yes" />
-					<xsl:text>”</xsl:text>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:text>Search</xsl:text>
-				</xsl:otherwise>
-			</xsl:choose>
-		</h1> -->
 		<xsl:if test="$url-sections">
 			<p style="text-align:center">Section filtering is <strong>on</strong>, <a href="{$root}/{$pt1}/{$pt2}/?keywords={$url-keywords}">turn it off</a> to see all results</p>
 		</xsl:if>
@@ -125,7 +97,7 @@
 									<h3>
 										<a>
 											<xsl:call-template name="url-events-recurring" />
-											<span class="icon">/</span>
+											<span class="icon">\</span>
 											<xsl:value-of select="name" disable-output-escaping="yes" />
 											<span class="hyphen">—</span>
 											<span class="meta">

@@ -6,7 +6,7 @@
 	<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
         <div class="alert alert-success alertLive hidden">
             <a class="close" data-dismiss="alert" href="#">×</a>
-            <a class="btn btn-success modalLiveLink pull-right" href="http://apple.com">Watch Live »</a>
+            <a class="btn btn-success modalLiveLink pull-right">Watch Live »</a>
             <p>
                 <strong>Live Broadcast!</strong> Click the button to watch our services live.
             </p>
