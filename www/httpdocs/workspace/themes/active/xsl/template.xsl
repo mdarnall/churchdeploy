@@ -127,9 +127,6 @@
 						<span class="icon">2</span>
 						<span class="icon white">,</span>
 					</a>
-					<a href="{$root}" class="logo mobile">
-						<img data-responsimage="logo-big-new-5011bffad01b1.png" style="width: 120px; height: 120px;" class="inline" data-responsimage-anchor="5" />
-					</a>
 					<ul class="main nav nav-pills">
 						<xsl:for-each select="//tags-all-entries/entry[ not(parent/item) and not(hide-from-header = 'Yes') ]">
 							<xsl:call-template name="subnav-entry" />
