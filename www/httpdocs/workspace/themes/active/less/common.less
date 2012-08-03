@@ -2888,9 +2888,26 @@ h3 {
 	margin-top: @base * 4;
 }
 
-.layout-home {
-	.column-right {
+.layout-home,
+.layout-events {
+	.column-right,
+	& + .column-right {
 		margin-top: 0;
+
+		ul {
+			margin-top: 15px;
+		}
+	}
+
+	.component-teachings {
+		margin-top: 15px;
+	}
+
+	.component-events {
+
+		.entries {
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -2899,10 +2916,6 @@ h3 {
 	.column-right {
 		margin-top: 0;
 	}
-}
-
-.component-events + .column-right {
-	margin-top: 0;
 }
 
 .layout-meetings {

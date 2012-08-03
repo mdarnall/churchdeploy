@@ -7574,13 +7574,27 @@ h3 {
 .column-right {
   margin-top: 40px;
 }
-.layout-home .column-right {
+.layout-home .column-right,
+.layout-events .column-right,
+.layout-home + .column-right,
+.layout-events + .column-right {
   margin-top: 0;
+}
+.layout-home .column-right ul,
+.layout-events .column-right ul,
+.layout-home + .column-right ul,
+.layout-events + .column-right ul {
+  margin-top: 15px;
+}
+.layout-home .component-teachings,
+.layout-events .component-teachings {
+  margin-top: 15px;
+}
+.layout-home .component-events .entries,
+.layout-events .component-events .entries {
+  margin-top: 15px;
 }
 .layout-home-group .column-right {
-  margin-top: 0;
-}
-.component-events + .column-right {
   margin-top: 0;
 }
 .layout-meetings .column-center > .component-text h2 {
