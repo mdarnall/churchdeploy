@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="email_newsletter_manager" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Email Newsletter Manager</name>
+	<description>Powerful email newsletters from within Symphony.</description>
+	<repo type="github">https://github.com/creativedutchmen/email_newsletter_manager</repo>
+	<url type="discuss">http://symphony-cms.com/discuss/thread/82064/</url>
+	<types>
+		<type>Email</type>
+	</types>
+	<authors>
+		<author>
+			<name github="creativedutchmen" symphony="creativedutchmen">Huib Keemink</name>
+			<website>http://www.creativedutchmen.com</website>
+		</author>
+		<author>
+			<name github="michael-e" symphony="michael-e">Michael Eichelsdoerfer</name>
+			<website>http://www.michael-eichelsdoerfer.de</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0.1" date="2012-05-28" min="2.2.5" max="2.2.x">
+			<![CDATA[
+- Bugfix: Using the ENM field's parameter output breaks pages and ETM layouts if there is no sender.
+			]]>
+		</release>
+		<release version="1.0" date="2012-05-24" min="2.2.5" max="2.2.x" />
+		<release version="1.0 Beta2" date="2012-02-19" min="2.2.5" max="2.2.x" />
+	</releases>
+</extension>

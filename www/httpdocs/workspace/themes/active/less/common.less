@@ -2889,7 +2889,8 @@ h3 {
 }
 
 .layout-home,
-.layout-events {
+.layout-events,
+.layout-meetings {
 	.column-right,
 	& + .column-right {
 		margin-top: 0;
@@ -2906,6 +2907,16 @@ h3 {
 	.component-events {
 
 		.entries {
+			margin-top: 15px;
+		}
+	}
+}
+
+.layout-default {
+
+	.column-right {
+
+		ul {
 			margin-top: 15px;
 		}
 	}
@@ -2928,6 +2939,10 @@ h3 {
 				margin-bottom: 0;
 			}
 		}
+	}
+
+	.column-right {
+		margin-top: @base * 4;
 	}
 
 	.date {
