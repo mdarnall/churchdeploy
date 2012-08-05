@@ -5353,6 +5353,9 @@ h3 {
 .main-container ul li {
   margin: 0;
 }
+.center {
+  text-align: center;
+}
 .red {
   color: #d83629;
 }

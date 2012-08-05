@@ -269,6 +269,7 @@
 			<xsl:call-template name="url-tags" />
 			<xsl:value-of select="tag" disable-output-escaping="yes" />
 		</a>
+
 	</li>
 
 </xsl:template>
