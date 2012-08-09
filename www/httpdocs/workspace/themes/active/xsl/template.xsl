@@ -60,13 +60,10 @@
 				<div>
 					<ul class="nav pull-left">
 						<li class="top-search">
-							<a>
-								<xsl:call-template name="url-search-home" />
-								<span class="icon">s</span>
-							</a>
 							<form action="get">
-								<xsl:call-template name="form-search-action"/>
-								<input name="keywords" placeholder="SEARCH" autocomplete="off" onclick="this.select()" />
+								<xsl:call-template name="form-search-action" />
+								<label for="keywords"><span class="icon">s</span></label>
+								<input name="keywords" class="keywords" placeholder="SEARCH" autocomplete="off" onclick="this.select()" />
 							</form>
 						</li>
 					</ul>

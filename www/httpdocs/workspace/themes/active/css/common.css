@@ -5432,7 +5432,7 @@ h3 {
 }
 .mast .container .row .span12 .logo {
   position: relative;
-  top: 45px;
+  top: 35px;
   float: left;
   z-index: 1000;
   height: 120px;
@@ -5673,6 +5673,15 @@ h3 {
 }
 .link-large .icon {
   color: #346673;
+}
+.link-large.give {
+  border: 3px solid #4b95a8;
+  display: block;
+  font-size: 24px;
+  margin: 40px 0 0 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
 }
 .edit-tag {
   position: absolute;
@@ -5970,20 +5979,14 @@ h3 {
 .top-search {
   line-height: 40px;
   color: #445c63;
+  background: #96bac4;
 }
 .top-search * {
   float: left;
 }
-.top-search a {
-  width: auto;
-  float: left !important;
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-}
 .top-search .icon {
   position: relative;
-  top: 1px;
+  top: 9px;
 }
 .top-search span {
   color: #71939c;
@@ -6003,11 +6006,13 @@ h3 {
   padding: 12px 6px;
 }
 .top-search input:focus {
+  background: #96bac4;
   border-bottom: 2px solid #71939c;
   outline: none;
   border: none;
 }
 .top-search input::-webkit-input-placeholder {
+  background: #96bac4;
   color: #71939c;
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -6015,6 +6020,7 @@ h3 {
   text-transform: uppercase;
 }
 .top-search input:-moz-placeholder {
+  background: #96bac4;
   color: #71939c;
   font-family: "proxima-nova-regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -7757,6 +7763,7 @@ h3 {
     display: block;
     width: 100%;
     padding-right: 20px;
+    z-index: 20;
   }
   .navbar-inner .nav .top-search .icon {
     color: #445c63;
@@ -7880,6 +7887,7 @@ h3 {
 @media (max-width: 480px) {
   .modalLive {
     width: 440px !important;
+    z-index: 10;
   }
   .modalLive .ustream-embed {
     width: 420px !important;
@@ -8008,6 +8016,7 @@ h3 {
 @media (max-width: 320px) {
   .modalLive {
     width: 280px !important;
+    z-index: 10;
   }
   .modalLive .ustream-embed {
     width: 240px !important;

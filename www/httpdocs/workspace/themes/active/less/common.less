@@ -454,7 +454,7 @@ h3 {
 
 				.logo {
 					position: relative;
-					top: @base * 4.5;
+					top: @base * 3.5;
 					float: left;
 					z-index: 1000;
 					height: 120px;
@@ -696,6 +696,16 @@ h3 {
 
 	.icon {
 		color: darken(@color-mast, 40%);
+	}
+
+	&.give {
+		border: 3px solid darken(@color-mast, 25%);
+		display: block;
+		font-size: 24px;
+		margin: @base * 4 0 0 0;
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
 	}
 }
 
@@ -1051,22 +1061,15 @@ h3 {
 .top-search {
 	line-height: 40px;
 	color: darken(desaturate(@color-mast, 20%), 40%);
+	background: darken(desaturate(@color-mast, 10%), 5%);
 
 	* {
 		float: left;
 	}
 
-	a {
-		width: auto;
-		float: left !important;
-		padding-right: 0 !important;
-		margin-right: 0 !important;
-		padding-left: 0 !important;
-	}
-
 	.icon {
 		position: relative;
-		top: 1px;
+		top: 9px;
 	}
 
 	span {
@@ -1085,18 +1088,21 @@ h3 {
 		padding: 12px 6px;
 
 		&:focus {
+			background: darken(desaturate(@color-mast, 10%), 5%);
 			border-bottom: 2px solid darken(desaturate(@color-mast, 20%), 20%);
 			outline: none;
 			border:none;
 		}
 
 		&::-webkit-input-placeholder  {
+			background: darken(desaturate(@color-mast, 10%), 5%);
 			color: darken(desaturate(@color-mast, 20%), 20%);
 			#font > #proxima > .regular;
 			text-transform: uppercase;
 		}
 
 		&:-moz-placeholder {
+			background: darken(desaturate(@color-mast, 10%), 5%);
 			color: darken(desaturate(@color-mast, 20%), 20%);
 			#font > #proxima > .regular;
 			text-transform: uppercase;
@@ -3175,6 +3181,7 @@ h3 {
 				display: block;
 				width: 100%;
 				padding-right: @base * 2;
+				z-index: 20;
 
 				.icon {
 					color: darken(desaturate(@color-mast, 20%), 40%);
@@ -3410,6 +3417,7 @@ h3 {
 
 	.modalLive {
 		width: 440px !important;
+		z-index: 10;
 
 		.ustream-embed {
 			width: 420px !important;
@@ -3641,6 +3649,7 @@ h3 {
 
 	.modalLive {
 		width: 280px !important;
+		z-index: 10;
 
 		.ustream-embed {
 			width: 240px !important;
