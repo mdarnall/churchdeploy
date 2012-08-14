@@ -7153,7 +7153,7 @@ h3 {
 .component-series .span8 .result {
   border: 10px solid #e9e9e9;
   border-bottom: none;
-  margin: 0 0 30px 0;
+  margin: 10px 0 20px 0;
 }
 .component-teachings .span8 .result h4,
 .component-series .span8 .result h4 {
@@ -7774,9 +7774,11 @@ h3 {
     color: #fff;
   }
   .navbar-inner .nav .top-search input:-moz-placeholder {
+    background: #71939c;
     color: #fff;
   }
   .navbar-inner .nav .top-search input::-webkit-input-placeholder {
+    background: #71939c;
     color: #fff;
   }
   .component-locations {
