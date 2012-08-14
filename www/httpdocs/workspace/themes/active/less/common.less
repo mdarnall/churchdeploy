@@ -2,66 +2,66 @@
 // ================
 
 // CSS Reset
-@import "../../../bootstrap/less/reset.less";
+@import "../../../bootstrap2.1/less/reset.less";
 
 // Core variables and mixins
-@import "../../../bootstrap/less/variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "../../../bootstrap/less/mixins.less";
+@import "../../../bootstrap2.1/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../bootstrap2.1/less/mixins.less";
 
 // Grid system and page structure
-@import "../../../bootstrap/less/scaffolding.less";
-@import "../../../bootstrap/less/grid.less";
-@import "../../../bootstrap/less/layouts.less";
+@import "../../../bootstrap2.1/less/scaffolding.less";
+@import "../../../bootstrap2.1/less/grid.less";
+@import "../../../bootstrap2.1/less/layouts.less";
 
 // Base CSS
-@import "../../../bootstrap/less/type.less";
-@import "../../../bootstrap/less/code.less";
-@import "../../../bootstrap/less/forms.less";
-@import "../../../bootstrap/less/tables.less";
+@import "../../../bootstrap2.1/less/type.less";
+@import "../../../bootstrap2.1/less/code.less";
+@import "../../../bootstrap2.1/less/forms.less";
+@import "../../../bootstrap2.1/less/tables.less";
 
 // Components: common
-// @import "../../../bootstrap/less/sprites.less";
-@import "../../../bootstrap/less/dropdowns.less";
-@import "../../../bootstrap/less/wells.less";
-@import "../../../bootstrap/less/component-animations.less";
-@import "../../../bootstrap/less/close.less";
+// @import "../../../bootstrap2.1/less/sprites.less";
+@import "../../../bootstrap2.1/less/dropdowns.less";
+@import "../../../bootstrap2.1/less/wells.less";
+@import "../../../bootstrap2.1/less/component-animations.less";
+@import "../../../bootstrap2.1/less/close.less";
 
 // Components: Buttons & Alerts
-@import "../../../bootstrap/less/buttons.less";
-@import "../../../bootstrap/less/button-groups.less";
-@import "../../../bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "../../../bootstrap2.1/less/buttons.less";
+@import "../../../bootstrap2.1/less/button-groups.less";
+@import "../../../bootstrap2.1/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "../../../bootstrap/less/navs.less";
-@import "../../../bootstrap/less/navbar.less";
-@import "../../../bootstrap/less/breadcrumbs.less";
-@import "../../../bootstrap/less/pagination.less";
-@import "../../../bootstrap/less/pager.less";
+@import "../../../bootstrap2.1/less/navs.less";
+@import "../../../bootstrap2.1/less/navbar.less";
+@import "../../../bootstrap2.1/less/breadcrumbs.less";
+@import "../../../bootstrap2.1/less/pagination.less";
+@import "../../../bootstrap2.1/less/pager.less";
 
 // Components: Popovers
-@import "../../../bootstrap/less/modals.less";
-@import "../../../bootstrap/less/tooltip.less";
-@import "../../../bootstrap/less/popovers.less";
+@import "../../../bootstrap2.1/less/modals.less";
+@import "../../../bootstrap2.1/less/tooltip.less";
+@import "../../../bootstrap2.1/less/popovers.less";
 
 // Components: Misc
-@import "../../../bootstrap/less/thumbnails.less";
-@import "../../../bootstrap/less/labels-badges.less";
-@import "../../../bootstrap/less/progress-bars.less";
-@import "../../../bootstrap/less/accordion.less";
-@import "../../../bootstrap/less/carousel.less";
-@import "../../../bootstrap/less/hero-unit.less";
+@import "../../../bootstrap2.1/less/thumbnails.less";
+@import "../../../bootstrap2.1/less/labels-badges.less";
+@import "../../../bootstrap2.1/less/progress-bars.less";
+@import "../../../bootstrap2.1/less/accordion.less";
+@import "../../../bootstrap2.1/less/carousel.less";
+@import "../../../bootstrap2.1/less/hero-unit.less";
 
 // Utility classes
-@import "../../../bootstrap/less/utilities.less"; // Has to be last to override when necessary
+@import "../../../bootstrap2.1/less/utilities.less"; // Has to be last to override when necessary
 
 // Custom Responsive
-@import "../../../bootstrap/less/variables.less";
-@import "../../../bootstrap/less/mixins.less";
-@import "../../../bootstrap/less/responsive-utilities.less";
-@import "../../../bootstrap/less/responsive-767px-max.less";
-@import "../../../bootstrap/less/responsive-768px-979px.less";
-// @import "../../../bootstrap/less/responsive-1200px-min.less";
-@import "../../../bootstrap/less/responsive-navbar.less";
+@import "../../../bootstrap2.1/less/variables.less";
+@import "../../../bootstrap2.1/less/mixins.less";
+@import "../../../bootstrap2.1/less/responsive-utilities.less";
+// @import "../../../bootstrap2.1/less/responsive-1200px-min.less";
+@import "../../../bootstrap2.1/less/responsive-768px-979px.less";
+@import "../../../bootstrap2.1/less/responsive-767px-max.less";
+@import "../../../bootstrap2.1/less/responsive-navbar.less";
 
 
 // Custom Icons & Fonts
@@ -278,6 +278,7 @@ p {
 
 	.divider-vertical {
 		background: transparent;
+		border-left: 1px solid darken(desaturate(@color-mast, 20%), 15%);
 		border-right: 1px solid darken(desaturate(@color-mast, 20%), 15%);
 		height: 20px;
 		margin: 10px 5px 5px 5px;
@@ -645,7 +646,8 @@ h3 {
 	}
 
 	.navbar-inner {
-		.box-shadow(none);
+		.box-shadow(inset 0 0 5px darken(desaturate(@color-mast, 10%), 10%));
+		border: none;
 
 		#font > #proxima > .bold;
 		background: darken(desaturate(@color-mast, 10%), 5%);
@@ -1061,7 +1063,7 @@ h3 {
 .top-search {
 	line-height: 40px;
 	color: darken(desaturate(@color-mast, 20%), 40%);
-	background: darken(desaturate(@color-mast, 10%), 5%);
+	background: transparent;
 
 	* {
 		float: left;
@@ -1081,7 +1083,7 @@ h3 {
 
 		#font > #proxima > .regular;
 		color: darken(desaturate(@color-mast, 20%), 40%);
-		background: darken(desaturate(@color-mast, 10%), 5%);
+		background: transparent;
 		position: relative;
 		border: none;
 		margin: 0 0 0 0;
@@ -1089,7 +1091,6 @@ h3 {
 
 		&:focus {
 			background: darken(desaturate(@color-mast, 10%), 5%);
-			border-bottom: 2px solid darken(desaturate(@color-mast, 20%), 20%);
 			outline: none;
 			border:none;
 		}

@@ -4,7 +4,6 @@
 
 	Class datasourceteachings_entry_by_id extends Datasource{
 
-		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'teachings-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -53,11 +52,11 @@
 			return array(
 				'name' => 'Teachings: Entry by ID',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
+					'name' => 'Jonathan Simcoe',
 					'website' => 'http://atheycreek',
-					'email' => 'kirk@strobeck.com'),
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-11T20:19:56+00:00'
+				'release-date' => '2012-08-14T17:05:36+00:00'
 			);
 		}
 
