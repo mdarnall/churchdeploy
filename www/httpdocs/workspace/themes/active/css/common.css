@@ -8294,7 +8294,7 @@ h3 {
   font-family: monospace;
   font-size: 12px;
   position: relative;
-  top: -8px;
+  top: -7px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -8406,6 +8406,7 @@ h3 {
 }
 .audiojs .scrubber {
   position: relative;
+  top: 3px;
   float: left;
   width: 280px;
   background: #ccc;
@@ -8416,6 +8417,8 @@ h3 {
   overflow: hidden;
 }
 .audiojs .time {
+  position: relative;
+  top: 3px;
   float: left;
   line-height: 36px;
   margin: 0;
