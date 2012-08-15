@@ -4,7 +4,6 @@
 
 	Class datasourceevents_entry_by_id extends Datasource{
 
-		public $dsParamCACHE = 'null';
 		public $dsParamROOTELEMENT = 'events-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'no';
@@ -23,6 +22,15 @@
 				'name',
 				'date',
 				'description',
+				'locations: name-formal',
+				'locations: name-casual',
+				'locations: description',
+				'locations: address',
+				'locations: city',
+				'locations: state',
+				'locations: zip',
+				'locations: latitude',
+				'locations: longitude',
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
@@ -51,7 +59,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-17T17:08:47+00:00'
+				'release-date' => '2012-08-15T17:49:30+00:00'
 			);
 		}
 

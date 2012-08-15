@@ -189,7 +189,7 @@
 									<xsl:if test="$single">
 										<p class="share">
 											<label for="permalink">Paste link in email or IM</label>
-											<input type="text" name="permalink" class="span4" value="http://accf.co/{$pt3}" onclick="this.select()" />
+											<input type="text" name="permalink" value="http://accf.co/{$pt3}" onclick="this.select()" />
 										</p>
 									</xsl:if>
 								</div>

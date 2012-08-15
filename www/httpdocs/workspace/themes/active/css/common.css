@@ -6146,7 +6146,8 @@ a.badge:hover {
   color: #303030;
   margin-bottom: 20px;
 }
-p strong {
+p strong,
+li strong {
   font-family: "ff-tisa-web-pro-bold", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
@@ -6302,7 +6303,7 @@ h3 {
   font-weight: normal;
   display: inline;
   font-size: 14px;
-  padding: 5px;
+  padding: 4px 4px 2px 4px;
 }
 .share input.span4 {
   margin-top: 10px;
@@ -7284,6 +7285,7 @@ h3 {
 }
 .profile .column-full-width .row > .component-events > .entries .entry .date {
   margin: 0 0 10px 0;
+  line-height: 1.4;
 }
 .profile .column-full-width .row > .component-events > .entries .span4 {
   background: none;
@@ -7543,12 +7545,6 @@ h3 {
 .component-locations .entry .map address h4 {
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 5px;
-}
-.component-locations .entry .map .screen {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
 }
 .component-locations .entry .map .screen {
   display: none;
@@ -7556,7 +7552,10 @@ h3 {
   opacity: 0.75;
   filter: alpha(opacity=75);
   width: 100%;
-  height: 90px;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }
 .component-locations .entry .edit {
   position: absolute;
@@ -8680,6 +8679,12 @@ h3 {
     width: 300px;
     margin: 0 auto;
   }
+  .component-locations .entry .map .screen {
+    display: block;
+  }
+  .component-locations .entry .map address {
+    display: block;
+  }
   .column-full-width .nav-box .row {
     margin-bottom: 0px;
   }
@@ -8756,6 +8761,35 @@ h3 {
     height: auto;
     margin: 0;
     text-align: center;
+  }
+  .column-right > .component-locations {
+    width: 228px;
+  }
+  .column-right > .component-locations .entry {
+    width: 228px;
+  }
+  .column-right > .component-locations .entry .map {
+    width: 208px;
+    height: 208px;
+  }
+  .column-right > .component-locations .entry .map img {
+    width: 208px;
+    height: 208px;
+  }
+  .column-right > .component-locations .entry .map .screen {
+    width: 208px;
+  }
+  .column-right > .component-locations .entry .map address {
+    width: 208px;
+    left: 7.5px;
+    bottom: 10px;
+  }
+  .column-right > .component-locations .entry .map address h4 {
+    font-size: 12px;
+    margin: 0;
+  }
+  .column-right > .component-locations .entry .more {
+    width: 228px;
   }
 }
 @media (min-width: 980px) {
@@ -8844,6 +8878,7 @@ h3 {
   }
   .alert {
     margin-top: 0;
+    margin-bottom: 40px;
   }
   .layout-home .component-teachings .latest .video {
     width: 440px !important;
@@ -8875,6 +8910,9 @@ h3 {
   }
   .component-teachings .pagination a {
     padding: 0 9px;
+  }
+  .profile .column-full-width .row {
+    padding-left: 0;
   }
   .audiojs .scrubber {
     width: 200px;
@@ -8929,6 +8967,15 @@ h3 {
   .layout-home .component-teachings .latest .video {
     width: 280px !important;
     height: 158px !important;
+  }
+  .component-locations .entry .map {
+    border: none;
+  }
+  .component-locations .entry .map .screen {
+    width: 280px;
+  }
+  .component-locations .entry .more {
+    width: 280px;
   }
   .component-teachings .latest .video,
   .component-teachings .individual .video {
