@@ -7581,6 +7581,8 @@ h3 {
   text-align: left;
 }
 .column-full-width > .component-members-roles .entry img {
+  width: 180px !important;
+  height: 180px !important;
   margin: 10px auto 10px auto;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
