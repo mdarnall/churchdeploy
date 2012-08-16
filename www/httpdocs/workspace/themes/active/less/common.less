@@ -610,7 +610,7 @@ h3 {
 
 .alert {
 	#font > #tisa > .regular;
-	margin: @base * 3 0 @base * 2 0;
+	margin: @base * 3 0 @base * 3 0;
 	.box-shadow(0px 1px 3px rgba(0,0,0,0.2));
 
 
@@ -3030,12 +3030,6 @@ h3 {
 		}
 
 	}
-}
-
-// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
-// --------------------------------------------------
-
-@media (max-width: 767px) {
 
 	.component-teachings {
 
@@ -3048,6 +3042,7 @@ h3 {
 		}
 	}
 }
+
 
 // TABLETS AND BELOW
 // -----------------
@@ -3316,6 +3311,10 @@ h3 {
 			}
 		}
 	}
+
+	.alert {
+		margin-top: 0;
+	}
 }
 
 // PORTRAIT TABLET TO DEFAULT DESKTOP
@@ -3526,7 +3525,6 @@ h3 {
 
 					.logo {
 						margin-bottom: 0;
-
 					}
 
 					.main {
@@ -3744,6 +3742,23 @@ h3 {
 					height: 158px !important;
 				}
 
+			}
+		}
+	}
+
+	.mast {
+
+		.container {
+
+			.row {
+
+				.span12 {
+
+					.logo {
+						position: relative;
+						left: -5px;
+					}
+				}
 			}
 		}
 	}

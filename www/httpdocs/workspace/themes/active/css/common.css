@@ -6472,7 +6472,7 @@ h3 {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
-  margin: 30px 0 20px 0;
+  margin: 30px 0 30px 0;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -8562,8 +8562,6 @@ h3 {
   .audiojs .scrubber {
     width: 155px;
   }
-}
-@media (max-width: 767px) {
   .component-teachings .latest .video {
     width: 450px !important;
     height: 253px !important;
@@ -8725,6 +8723,9 @@ h3 {
   }
   .component-teachings .search .keywords {
     width: 65%;
+  }
+  .alert {
+    margin-top: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -8967,6 +8968,10 @@ h3 {
   .layout-home .component-teachings .latest .video {
     width: 280px !important;
     height: 158px !important;
+  }
+  .mast .container .row .span12 .logo {
+    position: relative;
+    left: -5px;
   }
   .component-locations .entry .map {
     border: none;
