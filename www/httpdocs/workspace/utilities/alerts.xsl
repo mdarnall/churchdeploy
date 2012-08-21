@@ -116,7 +116,7 @@
         <xsl:for-each select="//alerts-entries-by-tag/entry">
             <div>
                 <xsl:attribute name="id">
-                    <xsl:value-of select="id"/>
+                    <xsl:value-of select="@id"/>
                 </xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="type = 'warning'">
