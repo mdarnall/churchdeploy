@@ -17,6 +17,9 @@
 
         <xsl:for-each select="//alerts-global/entry">
             <div>
+                <xsl:attribute name="id">
+                    <xsl:value-of select="@id"/>
+                </xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="type = 'warning'">
                         <xsl:attribute name="class">
@@ -45,9 +48,9 @@
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
-<!--                 <xsl:if test="can-be-closed = 'Yes'">
+                <xsl:if test="can-be-closed = 'Yes'">
                     <a class="close" data-dismiss="alert" href="#">×</a>
-                </xsl:if> -->
+                </xsl:if>
 
                 <xsl:if test="url">
                     <a>
@@ -112,6 +115,9 @@
 
         <xsl:for-each select="//alerts-entries-by-tag/entry">
             <div>
+                <xsl:attribute name="id">
+                    <xsl:value-of select="id"/>
+                </xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="type = 'warning'">
                         <xsl:attribute name="class">
@@ -140,9 +146,9 @@
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
-<!--                 <xsl:if test="can-be-closed = 'Yes'">
+                <xsl:if test="can-be-closed = 'Yes'">
                     <a class="close" data-dismiss="alert" href="#">×</a>
-                </xsl:if> -->
+                </xsl:if>
 
                 <xsl:if test="url">
                     <a>
