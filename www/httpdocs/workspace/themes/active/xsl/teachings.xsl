@@ -311,7 +311,6 @@
 							<xsl:call-template name="url-teachings" />
 							<xsl:value-of select="title" disable-output-escaping="yes" />
 							<span class="verse">
-								<xsl:text> </xsl:text>
 								<xsl:value-of select="book/item" />
 								<xsl:text> </xsl:text>
 								<xsl:value-of select="chapter" />

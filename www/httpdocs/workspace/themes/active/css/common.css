@@ -8100,6 +8100,33 @@ h3 {
   background: none;
   color: #d83629;
   text-shadow: none;
+  text-align: right;
+  width: 150px;
+  *zoom: 1;
+}
+.component-teachings .span8 .result h4 .verse:before,
+.component-series .span8 .result h4 .verse:before,
+.component-teachings .span8 .result h4 .verse:after,
+.component-series .span8 .result h4 .verse:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.component-teachings .span8 .result h4 .verse:after,
+.component-series .span8 .result h4 .verse:after {
+  clear: both;
+}
+.component-teachings .span8 .result h4 .verse:before,
+.component-series .span8 .result h4 .verse:before,
+.component-teachings .span8 .result h4 .verse:after,
+.component-series .span8 .result h4 .verse:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.component-teachings .span8 .result h4 .verse:after,
+.component-series .span8 .result h4 .verse:after {
+  clear: both;
 }
 .component-teachings .span8 .result h4 a,
 .component-series .span8 .result h4 a {
