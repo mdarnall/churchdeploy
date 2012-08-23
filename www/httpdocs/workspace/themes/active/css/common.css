@@ -7752,7 +7752,6 @@ h3 {
 .column-right > .component-members-roles .entry .mailto .info {
   position: relative;
   left: -15px;
-  padding-top: 5px;
 }
 .column-right > .component-members-roles .entry .mailto .info h4 {
   font-family: "ff-tisa-web-pro-regular", Georgia, 'Times New Roman', Times, serif;
@@ -7760,6 +7759,7 @@ h3 {
   font-weight: normal;
   padding: 2.5px 0 0 0;
   margin-bottom: 1.25px;
+  margin-top: 5px;
   vertical-align: center;
   font-size: 18px;
   line-height: 1.2;
