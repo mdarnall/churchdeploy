@@ -5,7 +5,7 @@
 
 	<xsl:if test="//status-all-entries/entry[name = 'ustream-status']/content = 'live'">
         <div class="alert alert-success alertLive hidden">
-            <a class="close" data-dismiss="alert" href="#">×</a>
+            <button type="button" class="close" data-dismiss="alert">×</button>
             <a class="btn btn-success modalLiveLink pull-right">Watch Live »</a>
             <p>
                 <strong>Live Broadcast!</strong> Click the button to watch our services live.
@@ -49,7 +49,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:if test="can-be-closed = 'Yes'">
-                    <a class="close" data-dismiss="alert" href="#">×</a>
+                    <button type="button" class="close" data-dismiss="alert">×</button>
                 </xsl:if>
 
                 <xsl:if test="url">
@@ -147,7 +147,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:if test="can-be-closed = 'Yes'">
-                    <a class="close" data-dismiss="alert" href="#">×</a>
+                    <button type="button" class="close" data-dismiss="alert">×</button>
                 </xsl:if>
 
                 <xsl:if test="url">
