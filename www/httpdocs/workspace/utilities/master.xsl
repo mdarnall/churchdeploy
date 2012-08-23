@@ -257,6 +257,10 @@
 <xsl:template name="subnav-entry">
 
 	<xsl:variable name="active-parent" select="//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id" />
+	<xsl:variable name="child" select="//tags-all-entries/entry/parent/item/@id" />
+	<xsl:variable name="has-children" select="child::*" />
+	<xsl:variable name="realID" select="@id" />
+	<xsl:variable name="node" select="." />
 
 	<li>
 		<xsl:attribute name="class">
@@ -269,6 +273,19 @@
 			<xsl:call-template name="url-tags" />
 			<xsl:value-of select="tag" disable-output-escaping="yes" />
 		</a>
+
+		<xsl:if test="//tags-all-entries/entry[@id]/parent[@items != 0]/item/@id = @id">
+			<ul class="dropdown-menu">
+				<xsl:for-each select="//tags-all-entries/entry[parent/item/@id = $realID]">
+					<li>
+						<a>
+							<xsl:call-template name="url-tags" />
+							<xsl:value-of select="tag" disable-output-escaping="yes" />
+						</a>
+					</li>
+				</xsl:for-each>
+			</ul>
+		</xsl:if>
 
 	</li>
 

@@ -6202,7 +6202,7 @@ li strong {
   border-radius: 0;
 }
 .mast .nav-pills .active * {
-  background: none !important;
+  background: none;
 }
 .navbar .divider-vertical {
   background: transparent;
@@ -6394,10 +6394,10 @@ h3 {
 }
 .mast .container .row .span12 .main li {
   margin-right: 10px;
+  position: relative;
   display: inline;
 }
 .mast .container .row .span12 .main li.active a {
-  background: none;
   color: #d83629;
 }
 .mast .container .row .span12 .main li.active a:hover {
@@ -6416,6 +6416,51 @@ h3 {
 .mast .container .row .span12 .main li a:hover {
   background: none;
   color: #3c7685;
+}
+.mast .container .row .span12 .main li:hover .dropdown-menu {
+  display: block;
+}
+.mast .container .row .span12 .main li .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+  font-family: "proxima-nova-bold", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+.mast .container .row .span12 .main li .dropdown-menu li {
+  display: block;
+  padding: 5px 10px;
+}
+.mast .container .row .span12 .main li .dropdown-menu li a {
+  color: #999;
+}
+.mast .container .row .span12 .main li .dropdown-menu li a:hover {
+  color: #303030;
+}
+.mast .container .row .span12 .main li .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 9px;
+}
+.mast .container .row .span12 .main li .dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 10px;
 }
 .mast .row {
   margin: 40px auto 10px auto;

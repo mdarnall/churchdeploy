@@ -269,7 +269,7 @@ li {
 		.active {
 
 			* {
-				background: none !important;
+				background: none;
 			}
 		}
 	}
@@ -495,12 +495,12 @@ h3 {
 
 					li {
 						margin-right: 10px;
+						position: relative;
 						display: inline;
 
 						&.active {
 
 							a {
-								background: none;
 								color: @color-accent;
 
 								&:hover {
@@ -526,6 +526,57 @@ h3 {
 								color: darken(@color-mast, 35%);
 							}
 						}
+
+						&:hover .dropdown-menu {
+							display: block;
+						}
+
+						.dropdown-menu {
+							background-color: @dropdownBackground;
+							border: 1px solid #ccc; // Fallback for IE7-8
+							border: 1px solid @dropdownBorder;
+							margin-top: @base;
+							text-align: center;
+							#font > #proxima > .bold;
+							font-size: 14px;
+
+							li {
+								display: block;
+								padding: 5px 10px;
+
+								a {
+									color: #999;
+
+									&:hover {
+										color: #303030;
+									}
+								}
+							}
+
+							&:before {
+								content: '';
+							    display: inline-block;
+							    border-left:   7px solid transparent;
+							    border-right:  7px solid transparent;
+							    border-bottom: 7px solid #ccc;
+							    border-bottom-color: @dropdownBorder;
+							    position: absolute;
+							    top: -7px;
+							    left: 9px;
+							}
+
+							&:after {
+								content: '';
+							    display: inline-block;
+							    border-left:   6px solid transparent;
+							    border-right:  6px solid transparent;
+							    border-bottom: 6px solid @dropdownBackground;
+							    position: absolute;
+							    top: -6px;
+							    left: 10px;
+							}
+						}
+
 					}
 				}
 			}
