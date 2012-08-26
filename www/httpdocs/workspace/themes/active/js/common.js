@@ -1,22 +1,23 @@
-(function ($, document, window) {
+(function ($, document, window, audiojs) {
 
 	"use strict";
 
 	$(function () {
 
-		jQuery.fn.exists = function () {
-			return jQuery(this).length > 0;
+		$.fn.exists = function () {
+			return $(this).length > 0;
 		};
 
 		$(document).ready(function () {
 
+      //debugger;
 			audiojs.events.ready(function(){audiojs.createAll();});
 
 			$('.downloadPopover').hover(function(){
 				$(this).popover('toggle');
 			});
 
-			var hostName = location.hostname,
+			var hostName = window.location.hostname,
 				links = $("a"),
 				alertLiveCookie = $.cookie("alertLive"),
 				i = 0;
@@ -27,10 +28,6 @@
 					$.cookie("alertLive", "hidden", { expires: 1, path: "/" });
 				});
 			}
-
-			// if ($("layout-search")) {
-			// 	$(".search input.keywords").focus();
-			// }
 
 			$(".modalLiveLink").click(function (e) {
 				e.preventDefault();
