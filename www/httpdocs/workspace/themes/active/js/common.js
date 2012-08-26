@@ -10,7 +10,6 @@
 
 		$(document).ready(function () {
 
-      //debugger;
 			audiojs.events.ready(function(){audiojs.createAll();});
 
 			$('.downloadPopover').hover(function(){
@@ -59,4 +58,4 @@
 
 		});
 	});
-}(jQuery, window));
+}(jQuery, document, window, audiojs));

@@ -143,7 +143,6 @@ setVolume:function(b){this.element.volume=b},trackEnded:function(){this.skipTo.a
 
 		$(document).ready(function () {
 
-      //debugger;
 			audiojs.events.ready(function(){audiojs.createAll();});
 
 			$('.downloadPopover').hover(function(){
@@ -192,4 +191,4 @@ setVolume:function(b){this.element.volume=b},trackEnded:function(){this.skipTo.a
 
 		});
 	});
-}(jQuery, window));
+}(jQuery, document, window, audiojs));
