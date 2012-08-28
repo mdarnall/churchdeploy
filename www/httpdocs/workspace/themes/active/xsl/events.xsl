@@ -186,7 +186,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</div>
-									<xsl:if test="$single">
+									<xsl:if test="$single and not($is-recurring)">
 										<p class="share">
 											<label for="permalink">Paste link in email or IM</label>
 											<input type="text" name="permalink" value="http://accf.co/{$pt3}" onclick="this.select()" />
