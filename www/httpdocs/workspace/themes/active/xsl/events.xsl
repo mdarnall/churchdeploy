@@ -121,6 +121,22 @@
 										<xsl:with-param name="second" select="$today" />
 									</xsl:call-template>
 								</xsl:variable>
+
+								<xsl:if test="$single and $is-recurring">
+									<div class="row">
+										<div class="span12">
+											<xsl:call-template name="component-images">
+												<xsl:with-param name="position" select="'column-full-width'" />
+												<xsl:with-param name="entries" select="images/item" />
+											</xsl:call-template>
+											<xsl:call-template name="component-verses">
+												<xsl:with-param name="position" select="'column-full-width'" />
+												<xsl:with-param name="entries" select="verses/item" />
+											</xsl:call-template>
+										</div>
+									</div>
+								</xsl:if>
+
 								<div>
 									<xsl:choose>
 										<xsl:when test="$single">
