@@ -13,12 +13,12 @@
 			<xsl:call-template name="class-position">
 				<xsl:with-param name="component" select="$component" />
 			</xsl:call-template>
-			<xsl:for-each select="//images-entries-by-tag/entry">
+			<xsl:for-each select="$entries">
 				<div>
 					<xsl:call-template name="class-rows">
 						<xsl:with-param name="class" select="'image'" />
 					</xsl:call-template>
-					<img width="100%" height="378">
+					<img width="100%">
 						<xsl:attribute name="data-responsimage">
 							<xsl:value-of select="image/filename" />
 						</xsl:attribute>

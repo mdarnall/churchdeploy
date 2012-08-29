@@ -1,62 +1,38 @@
-// Bootstrap Import
-// ================
 
-// CSS Reset
 @import "../../../bootstrap/less/reset.less";
-
-// Core variables and mixins
-@import "../../../bootstrap/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../bootstrap/less/variables.less";
 @import "../../../bootstrap/less/mixins.less";
-
-// Grid system and page structure
 @import "../../../bootstrap/less/scaffolding.less";
 @import "../../../bootstrap/less/grid.less";
 @import "../../../bootstrap/less/layouts.less";
-
-// Base CSS
 @import "../../../bootstrap/less/type.less";
 @import "../../../bootstrap/less/code.less";
 @import "../../../bootstrap/less/forms.less";
 @import "../../../bootstrap/less/tables.less";
-
-// Components: common
 // @import "../../../bootstrap/less/sprites.less";
 @import "../../../bootstrap/less/dropdowns.less";
 @import "../../../bootstrap/less/wells.less";
 @import "../../../bootstrap/less/component-animations.less";
 @import "../../../bootstrap/less/close.less";
-
-// Components: Buttons & Alerts
 @import "../../../bootstrap/less/buttons.less";
 @import "../../../bootstrap/less/button-groups.less";
-@import "../../../bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
-
-// Components: Nav
+@import "../../../bootstrap/less/alerts.less";
 @import "../../../bootstrap/less/navs.less";
 @import "../../../bootstrap/less/navbar.less";
 @import "../../../bootstrap/less/breadcrumbs.less";
 @import "../../../bootstrap/less/pagination.less";
 @import "../../../bootstrap/less/pager.less";
-
-// Components: Popovers
 @import "../../../bootstrap/less/modals.less";
 @import "../../../bootstrap/less/tooltip.less";
 @import "../../../bootstrap/less/popovers.less";
-
-// Components: Misc
 @import "../../../bootstrap/less/thumbnails.less";
 @import "../../../bootstrap/less/labels-badges.less";
 @import "../../../bootstrap/less/progress-bars.less";
 @import "../../../bootstrap/less/accordion.less";
 @import "../../../bootstrap/less/carousel.less";
 @import "../../../bootstrap/less/hero-unit.less";
-
-// Utility classes
-@import "../../../bootstrap/less/utilities.less"; // Has to be last to override when necessary
-
-// Custom Responsive
-@import "../../../bootstrap/less/variables.less";
-@import "../../../bootstrap/less/mixins.less";
+@import "../../../bootstrap/less/utilities.less";
+@import "../../../bootstrap/less/easing.less";
 @import "../../../bootstrap/less/responsive-utilities.less";
 // @import "../../../bootstrap/less/responsive-1200px-min.less";
 @import "../../../bootstrap/less/responsive-768px-979px.less";
@@ -536,16 +512,18 @@ h3 {
 							border: 1px solid #ccc; // Fallback for IE7-8
 							border: 1px solid @dropdownBorder;
 							margin-top: @base;
-							text-align: center;
-							#font > #proxima > .bold;
+							text-align: left;
+							#font > #proxima > .regular;
+							text-transform: none;
 							font-size: 14px;
 
 							li {
 								display: block;
-								padding: 5px 10px;
 
 								a {
+									display: block;
 									color: #999;
+									padding: 5px 10px;
 
 									&:hover {
 										color: #303030;
@@ -690,7 +668,6 @@ h3 {
 		margin-top: 1px;
 	}
 }
-
 .navbar {
 
 	&.navbar-fixed-top {
@@ -708,6 +685,10 @@ h3 {
 		letter-spacing: 1px;
 		font-size: 12px;
 
+		.btn-group {
+			top: 0;
+			z-index: 1040;
+		}
 		ul.nav {
 
 			li {

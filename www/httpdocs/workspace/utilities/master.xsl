@@ -139,11 +139,8 @@
 			<title>
 				<xsl:value-of select="$page-title" />
 			</title>
-			<!-- <link rel="stylesheet" href="{$workspace}/bootstrap/css/bootstrap-combined.min.css" /> -->
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-			<meta http-equiv="imagetoolbar" content="false" /> -->
 			<meta name="description" content="{//misc-all-entries/entry[name='meta-description']/content}" />
 			<meta name="keywords" content="{//misc-all-entries/entry[name='meta-keywords']/content}" />
 			<meta name="author" content="{$website-name}" />
