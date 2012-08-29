@@ -38,6 +38,7 @@
 				'images: image',
 				'text: content',
 				'verses: passage',
+				'verses: tags: description',
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
@@ -56,11 +57,11 @@
 			return array(
 				'name' => 'Events: Recurring: Entry by ID (api)',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-24T03:42:23+00:00'
+				'release-date' => '2012-08-29T19:39:25+00:00'
 			);
 		}
 

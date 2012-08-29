@@ -254,8 +254,6 @@
 <xsl:template name="subnav-entry">
 
 	<xsl:variable name="active-parent" select="//tags-all-entries/entry[ @id = $pt1 ]/parent/item/@id" />
-	<xsl:variable name="child" select="//tags-all-entries/entry/parent/item/@id" />
-	<xsl:variable name="has-children" select="child::*" />
 	<xsl:variable name="realID" select="@id" />
 	<xsl:variable name="node" select="." />
 
@@ -265,7 +263,43 @@
 			<xsl:if test="$pt1 = @id or $active-parent = @id or //tags-all-entries/entry[ @id = $active-parent ]/parent/item/@id = @id">
 				<xsl:text>active</xsl:text>
 			</xsl:if>
+			<xsl:if test="//tags-all-entries/entry[@id]/parent[@items != 0]/item/@id = @id">
+				<xsl:text> sub</xsl:text>
+			</xsl:if>
+
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 0">
+					<xsl:text> even</xsl:text>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text> odd</xsl:text>
+				</xsl:otherwise>
+			</xsl:choose>
+			<xsl:if test="position() = 1">
+				<xsl:text> first</xsl:text>
+			</xsl:if>
+			<xsl:if test="position() &gt; 1 and position() &lt; last()">
+				<xsl:text> middle</xsl:text>
+			</xsl:if>
+			<xsl:if test="position() = last()">
+				<xsl:text> last</xsl:text>
+			</xsl:if>
+			<xsl:for-each select="tags/item">
+				<xsl:text> category-</xsl:text>
+				<xsl:value-of select="@id" />
+			</xsl:for-each>
+			<xsl:if test="file">
+				<xsl:choose>
+					<xsl:when test="file/@type = 'application/pdf'">
+						<xsl:text> pdf</xsl:text>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:text> unknown</xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:if>
 		</xsl:attribute>
+
 		<a>
 			<xsl:call-template name="url-tags" />
 			<xsl:value-of select="tag" disable-output-escaping="yes" />
