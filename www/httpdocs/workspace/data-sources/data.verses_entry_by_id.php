@@ -2,22 +2,20 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceverses_entries_by_tag extends Datasource{
+	Class datasourceverses_entry_by_id extends Datasource{
 
-		public $dsParamROOTELEMENT = 'verses-entries-by-tag';
+		public $dsParamROOTELEMENT = 'verses-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamREQUIREDPARAM = '$pt1:43';
-		public $dsParamPARAMOUTPUT = 'passage';
 		public $dsParamSORT = 'system:id';
 		public $dsParamHTMLENCODE = 'yes';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
 		public $dsParamFILTERS = array(
-				'149' => '{$pt1:43}',
+				'id' => '{$pt1:43}',
 				'211' => 'no',
 		);
 
@@ -34,13 +32,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Verses: Entries by tag',
+				'name' => 'Verses: Entry by ID',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
 					'website' => 'http://atheycreek',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-08-29T21:38:43+00:00'
+				'release-date' => '2012-08-29T21:52:45+00:00'
 			);
 		}
 

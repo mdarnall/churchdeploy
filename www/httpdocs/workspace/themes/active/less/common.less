@@ -506,11 +506,15 @@ h3 {
 
 						&.sub, &.sub.active {
 
+							* {
+								letter-spacing: 0;
+							}
+
 							&:hover {
 								color: darken(@color-mast, 35%);
 								background: @dropdownBackground;
 								.border-radius(1px 1px 0 0);
-								.box-shadow(0 5px 10px rgba(0,0,0,.2));
+								.box-shadow(0 4px 8px rgba(0,0,0,.1));
 
 								a {
 									color: darken(@color-mast, 35%) !important;
@@ -546,6 +550,7 @@ h3 {
 
 						&:hover .dropdown-menu {
 							display: block;
+							.box-shadow(0);
 						}
 
 						.dropdown-menu {
@@ -558,9 +563,11 @@ h3 {
 							text-transform: none;
 							font-size: 14px;
 							width: 200px;
+							.box-shadow(0 4px 8px rgba(0,0,0,.1));
 
 							li {
 								display: block;
+								padding: 5px 10px;
 
 								> a {
 									display: block;
