@@ -23,11 +23,11 @@
 			return array(
 				'name' => 'XML: api.biblia.com',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-03-14T03:49:32+00:00'
+				'release-date' => '2012-08-29T17:25:45+00:00'
 			);
 		}
 

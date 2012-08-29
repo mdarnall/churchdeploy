@@ -688,6 +688,49 @@ h3 {
 		.btn-group {
 			top: 0;
 			z-index: 1040;
+			.border-radius(1px);
+			background: darken(desaturate(@color-mast, 10%), 5%);
+
+			.btn {
+				.border-radius(1px);
+				background: darken(desaturate(@color-mast, 10%), 5%);
+
+				a {
+					color: darken(desaturate(@color-mast, 20%), 30%);
+					text-shadow: 0 1px 1px lighten(desaturate(@color-mast, 20%), 10%);
+
+					&:hover {
+						color: #fff;
+						text-shadow: 0 1px 1px darken(desaturate(@color-mast, 20%), 30%);
+					}
+				}
+			}
+
+			.caret {
+				border-top-color: darken(desaturate(@color-mast, 20%), 30%);
+			}
+
+			.dropdown-menu {
+				text-align: left;
+				#font > #proxima > .regular;
+				text-transform: none;
+				font-size: 14px;
+
+				li {
+					display: block;
+
+					a {
+						background: none;
+						display: block;
+						color: #999;
+						padding: 5px 10px;
+
+						&:hover {
+							color: #303030;
+						}
+					}
+				}
+			}
 		}
 		ul.nav {
 

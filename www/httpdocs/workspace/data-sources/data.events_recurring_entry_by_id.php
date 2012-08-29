@@ -4,7 +4,6 @@
 
 	Class datasourceevents_recurring_entry_by_id extends Datasource{
 
-		public $dsParamCACHE = '0';
 		public $dsParamROOTELEMENT = 'events-recurring-entry-by-id';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
@@ -40,6 +39,7 @@
 				'images: image',
 				'text: content',
 				'verses: passage',
+				'verses: tags: description',
 				'member-role: member: first-name',
 				'member-role: member: last-name',
 				'member-role: member: photo',
@@ -65,7 +65,7 @@
 					'website' => 'http://atheycreek',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-07-17T20:51:47+00:00'
+				'release-date' => '2012-08-29T16:38:53+00:00'
 			);
 		}
 

@@ -74,7 +74,7 @@
 						  </button>
 						  <ul class="dropdown-menu">
 						    <li>
-						    	<a href="/?debug">Debug</a>
+						    	<a href="?debug">Debug</a>
 						    </li>
 						    <li>
 						    	<a href="{$root}/symphony/logout/">Logout</a>
