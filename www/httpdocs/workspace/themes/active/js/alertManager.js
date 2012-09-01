@@ -1,16 +1,28 @@
 (function($, window){
   "use strict";
 
+  $.cookie.json = true;
+
   var alertManager = {
+    alertCookieName : "alerts",
+
+    getHiddenAlerts : function (){
+      return $.cookie(this.alertCookieName) || [] ;
+    },
+    saveHiddenAlerts : function(alerts) {
+      $.cookie(this.alertCookieName, alerts, { json: true, expires: 365, path : "/" });
+    },
 
     shouldAlertShow : function (id){
       window.console.log('shouldAlertShow');
-      return true;
-      
+      var alerts = this.getHiddenAlerts();
+      return (alerts.indexOf(id) < 0);
     }, 
     markAlertHidden : function (id) {
       window.console.log('markAlertHidden ' + id);
-      // todo:
+      var alerts = this.getHiddenAlerts();
+      alerts.push(id);
+      this.saveHiddenAlerts(alerts);
     }
   };
 
