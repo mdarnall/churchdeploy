@@ -245,7 +245,7 @@ URL helpers  ///////////////////////////////////////////////////////////////////
 
 
 	<xsl:choose>
-		<xsl:when test="$node/link">
+		<xsl:when test="$node/link != ''">
 			<xsl:attribute name="href">
 				<xsl:value-of select="$node/link" />
 			</xsl:attribute>

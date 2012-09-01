@@ -9,7 +9,6 @@
 	indent="no"
 	/>
 
-
 <xsl:template name="template-head">
 
 	<link rel="canonical" href="{$current-url}" />
@@ -67,6 +66,22 @@
 							</form>
 						</li>
 					</ul>
+					<xsl:if test="$cookie-username">
+						<div class="btn-group pull-right">
+						  <button class="btn"><a href="/symphony/">Symphony</a></button>
+						  <button class="btn dropdown-toggle" data-toggle="dropdown">
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li>
+						    	<a href="?debug">Debug</a>
+						    </li>
+						    <li>
+						    	<a href="{$root}/symphony/logout/">Logout</a>
+						    </li>
+						  </ul>
+						</div>
+					</xsl:if>
 					<ul class="nav pull-right">
 						<li><a href="{$root}/24/give/"><span class="icon">&#160;</span>Give</a></li>
 						<li class="divider-vertical"></li>

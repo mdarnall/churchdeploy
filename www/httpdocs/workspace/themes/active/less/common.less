@@ -1,62 +1,38 @@
-// Bootstrap Import
-// ================
 
-// CSS Reset
 @import "../../../bootstrap/less/reset.less";
-
-// Core variables and mixins
-@import "../../../bootstrap/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../../bootstrap/less/variables.less";
 @import "../../../bootstrap/less/mixins.less";
-
-// Grid system and page structure
 @import "../../../bootstrap/less/scaffolding.less";
 @import "../../../bootstrap/less/grid.less";
 @import "../../../bootstrap/less/layouts.less";
-
-// Base CSS
 @import "../../../bootstrap/less/type.less";
 @import "../../../bootstrap/less/code.less";
 @import "../../../bootstrap/less/forms.less";
 @import "../../../bootstrap/less/tables.less";
-
-// Components: common
 // @import "../../../bootstrap/less/sprites.less";
 @import "../../../bootstrap/less/dropdowns.less";
 @import "../../../bootstrap/less/wells.less";
 @import "../../../bootstrap/less/component-animations.less";
 @import "../../../bootstrap/less/close.less";
-
-// Components: Buttons & Alerts
 @import "../../../bootstrap/less/buttons.less";
 @import "../../../bootstrap/less/button-groups.less";
-@import "../../../bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
-
-// Components: Nav
+@import "../../../bootstrap/less/alerts.less";
 @import "../../../bootstrap/less/navs.less";
 @import "../../../bootstrap/less/navbar.less";
 @import "../../../bootstrap/less/breadcrumbs.less";
 @import "../../../bootstrap/less/pagination.less";
 @import "../../../bootstrap/less/pager.less";
-
-// Components: Popovers
 @import "../../../bootstrap/less/modals.less";
 @import "../../../bootstrap/less/tooltip.less";
 @import "../../../bootstrap/less/popovers.less";
-
-// Components: Misc
 @import "../../../bootstrap/less/thumbnails.less";
 @import "../../../bootstrap/less/labels-badges.less";
 @import "../../../bootstrap/less/progress-bars.less";
 @import "../../../bootstrap/less/accordion.less";
 @import "../../../bootstrap/less/carousel.less";
 @import "../../../bootstrap/less/hero-unit.less";
-
-// Utility classes
-@import "../../../bootstrap/less/utilities.less"; // Has to be last to override when necessary
-
-// Custom Responsive
-@import "../../../bootstrap/less/variables.less";
-@import "../../../bootstrap/less/mixins.less";
+@import "../../../bootstrap/less/utilities.less";
+@import "../../../bootstrap/less/easing.less";
 @import "../../../bootstrap/less/responsive-utilities.less";
 // @import "../../../bootstrap/less/responsive-1200px-min.less";
 @import "../../../bootstrap/less/responsive-768px-979px.less";
@@ -484,19 +460,20 @@ h3 {
 					#font > #proxima > .regular;
 					float: right;
 					position: relative;
+					right: -10px;
 					display: block;
 					text-transform: uppercase;
 					font-size: 18px;
-					margin-top: 47px;
+					margin: 47px 0 0 0;
 					padding-right:  0;
 					margin-right: 0;
 					letter-spacing: 1px;
 					z-index: 10;
 
 					li {
-						margin-right: 10px;
 						position: relative;
-						display: inline;
+						padding: 10px;
+						margin: 0;
 
 						&.active {
 
@@ -510,7 +487,6 @@ h3 {
 						}
 
 						&.last {
-							margin-right: 0;
 
 							a {
 								margin-right: 0;
@@ -520,6 +496,7 @@ h3 {
 						a {
 							display: inline;
 							color: #ffffff;
+							padding: 0;
 
 							&:hover {
 								background: none;
@@ -527,53 +504,81 @@ h3 {
 							}
 						}
 
+						&.sub, &.sub.active {
+
+							* {
+								letter-spacing: 0;
+							}
+
+							&:hover {
+								color: darken(@color-mast, 35%);
+								background: @dropdownBackground;
+								.border-radius(1px 1px 0 0);
+								.box-shadow(0 4px 8px rgba(0,0,0,.1));
+
+								a {
+									color: darken(@color-mast, 35%) !important;
+								}
+
+								.dropdown-menu {
+
+									a {
+										color: #999 !important;
+
+										&:hover {
+											color: #303030 !important;
+										}
+									}
+								}
+							}
+
+						}
+
+
+
+						&.sub.active {
+
+							&:hover {
+
+								a {
+									color: @color-accent !important;
+								}
+
+							}
+						}
+
+
 						&:hover .dropdown-menu {
 							display: block;
+							.box-shadow(0);
 						}
 
 						.dropdown-menu {
+							.border-radius(0 1px 1px 1px);
 							background-color: @dropdownBackground;
-							border: 1px solid #ccc; // Fallback for IE7-8
-							border: 1px solid @dropdownBorder;
-							margin-top: @base;
-							text-align: center;
-							#font > #proxima > .bold;
+							border: none !important;
+							margin-top: 0;
+							text-align: left;
+							#font > #proxima > .regular;
+							text-transform: none;
 							font-size: 14px;
+							width: 200px;
+							.box-shadow(0 4px 8px rgba(0,0,0,.1));
 
 							li {
 								display: block;
 								padding: 5px 10px;
 
-								a {
-									color: #999;
+								> a {
+									display: block;
+									color: #999 !important;
 
 									&:hover {
-										color: #303030;
+										background-color: none;
+										.border-radius(0);
+										.box-shadow(0);
 									}
 								}
-							}
-
-							&:before {
-								content: '';
-							    display: inline-block;
-							    border-left:   7px solid transparent;
-							    border-right:  7px solid transparent;
-							    border-bottom: 7px solid #ccc;
-							    border-bottom-color: @dropdownBorder;
-							    position: absolute;
-							    top: -7px;
-							    left: 9px;
-							}
-
-							&:after {
-								content: '';
-							    display: inline-block;
-							    border-left:   6px solid transparent;
-							    border-right:  6px solid transparent;
-							    border-bottom: 6px solid @dropdownBackground;
-							    position: absolute;
-							    top: -6px;
-							    left: 10px;
 							}
 						}
 
@@ -690,7 +695,6 @@ h3 {
 		margin-top: 1px;
 	}
 }
-
 .navbar {
 
 	&.navbar-fixed-top {
@@ -708,6 +712,56 @@ h3 {
 		letter-spacing: 1px;
 		font-size: 12px;
 
+		.btn-group {
+			top: 0;
+			z-index: 1040;
+			.border-radius(0);
+			background: darken(desaturate(@color-mast, 10%), 5%);
+
+			.btn {
+				.border-radius(1px);
+				background: darken(desaturate(@color-mast, 10%), 5%);
+
+				a {
+					color: darken(desaturate(@color-mast, 20%), 30%);
+					text-shadow: 0 1px 1px lighten(desaturate(@color-mast, 20%), 10%);
+
+					&:hover {
+						color: #fff;
+						text-shadow: 0 1px 1px darken(desaturate(@color-mast, 20%), 30%);
+					}
+				}
+			}
+
+			.caret {
+				border-top-color: darken(desaturate(@color-mast, 20%), 30%);
+			}
+
+			.dropdown-menu {
+				text-align: left;
+				#font > #proxima > .regular;
+				text-transform: none;
+				font-size: 14px;
+				border: none;
+				margin-top: 0;
+				.border-radius(1px);
+
+				li {
+					display: block;
+
+					a {
+						background: none;
+						display: block;
+						color: #999;
+						padding: 5px 10px;
+
+						&:hover {
+							color: #303030;
+						}
+					}
+				}
+			}
+		}
 		ul.nav {
 
 			li {

@@ -121,6 +121,18 @@
 										<xsl:with-param name="second" select="$today" />
 									</xsl:call-template>
 								</xsl:variable>
+
+								<xsl:if test="$single and $is-recurring">
+									<xsl:call-template name="component-images">
+										<xsl:with-param name="position" select="'column-full-width'"/>
+										<xsl:with-param name="entries" select="images/item" />
+									</xsl:call-template>
+									<xsl:call-template name="component-verses">
+										<xsl:with-param name="position" select="'column-full-width'" />
+										<xsl:with-param name="entries" select="verses/item" />
+									</xsl:call-template>
+								</xsl:if>
+
 								<div>
 									<xsl:choose>
 										<xsl:when test="$single">
@@ -136,6 +148,7 @@
 										<xsl:text> </xsl:text>
 										<div class="label label-warning">This occured in the past</div>
 									</xsl:if>
+
 									<div class="events-header">
 										<h2 class="header">
 											<xsl:choose>
@@ -186,7 +199,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 									</div>
-									<xsl:if test="$single">
+									<xsl:if test="$single and not($is-recurring)">
 										<p class="share">
 											<label for="permalink">Paste link in email or IM</label>
 											<input type="text" name="permalink" value="http://accf.co/{$pt3}" onclick="this.select()" />

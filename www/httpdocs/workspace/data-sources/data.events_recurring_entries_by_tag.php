@@ -25,7 +25,9 @@
 				'frequency',
 				'description',
 				'locations: name-formal',
-				'locations: name-casual'
+				'locations: name-casual',
+				'verses: passage',
+				'verses: tags: description'
 		);
 
 
@@ -38,11 +40,11 @@
 			return array(
 				'name' => 'Events: Recurring: Entries by tag',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-06-22T19:37:59+00:00'
+				'release-date' => '2012-08-29T19:25:40+00:00'
 			);
 		}
 

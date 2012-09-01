@@ -22,7 +22,8 @@
 		);
 
 		public $dsParamINCLUDEDELEMENTS = array(
-				'passage'
+				'passage',
+				'tags: description'
 		);
 
 
@@ -35,11 +36,11 @@
 			return array(
 				'name' => 'Verses: Entries by tag',
 				'author' => array(
-					'name' => 'Kirk Strobeck',
-					'website' => 'http://72.10.33.203',
-					'email' => 'kirk@strobeck.com'),
+					'name' => 'Jonathan Simcoe',
+					'website' => 'http://atheycreek',
+					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.2.5',
-				'release-date' => '2012-05-24T21:10:36+00:00'
+				'release-date' => '2012-08-29T21:38:43+00:00'
 			);
 		}
 
