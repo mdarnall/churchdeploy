@@ -26,6 +26,8 @@
                             <xsl:text>alert</xsl:text>
                             <xsl:text> </xsl:text>
                             <xsl:text>alert-error</xsl:text>
+                            <xsl:text> </xsl:text>
+                            <xsl:text>hidden</xsl:text>
                         </xsl:attribute>
                     </xsl:when>
                     <xsl:when test="type = 'success'">
@@ -33,6 +35,8 @@
                             <xsl:text>alert</xsl:text>
                             <xsl:text> </xsl:text>
                             <xsl:text>alert-success</xsl:text>
+                            <xsl:text> </xsl:text>
+                            <xsl:text>hidden</xsl:text>
                         </xsl:attribute>
                     </xsl:when>
                     <xsl:when test="type = 'info'">
@@ -40,11 +44,15 @@
                             <xsl:text>alert</xsl:text>
                             <xsl:text> </xsl:text>
                             <xsl:text>alert-info</xsl:text>
+                            <xsl:text> </xsl:text>
+                            <xsl:text>hidden</xsl:text>
                         </xsl:attribute>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:attribute name="class">
                             <xsl:text>alert</xsl:text>
+                            <xsl:text> </xsl:text>
+                            <xsl:text>hidden</xsl:text>
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
