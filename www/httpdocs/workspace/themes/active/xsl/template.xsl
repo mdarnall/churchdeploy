@@ -365,7 +365,13 @@
 					"scripts":[
 						"/workspace/themes/active/js/common-ck.js"
 					]
-				};
+				}; 
+        var supportsJson = (!!window.JSON &amp;&amp; !!JSON.parse);
+
+        if(!supportsJson){
+          js.scripts.push("/workspace/js/json2.min.js");
+        }
+
 				for (var key in js.scripts) {
 					if (js.scripts[key]) {
 						var element=document.createElement("script");
