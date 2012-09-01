@@ -8,16 +8,20 @@ module.exports = function (grunt) {
     watch : {
       scripts: {
         files: '<config:lint.all>',
-        tasks: 'lint concat'
+        tasks: 'concat'
       }
     },
     concat : {
       dist: {
         src : ['js/*.js',
+          'bootstrap/docs/assets/js/bootstrap.min.js',
           'themes/active/js/audio.min.js', 
           '<config:lint.all>'],
         dest: 'themes/active/js/common-ck.js'
       }
     }
   });
+  // Default task.
+  grunt.registerTask('default', 'lint concat');
+  
 };
