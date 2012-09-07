@@ -1,4 +1,4 @@
-(function($, window){
+(function($, window, _){
   "use strict";
 
   $.cookie.json = true;
@@ -15,7 +15,7 @@
 
     shouldAlertShow : function (id){
       var alerts = this.getHiddenAlerts();
-      return (alerts.indexOf(id) < 0);
+      return !_.contains(alerts, id);
     }, 
     markAlertHidden : function (id) {
       var alerts = this.getHiddenAlerts();
@@ -38,4 +38,4 @@
       alertManager.markAlertHidden(id);
     });
   });
-})(jQuery, window);
+})(jQuery, window, _);
